@@ -1,0 +1,32 @@
+
+state={
+	id=42
+	name="STATE_42"
+	resources={
+		steel=50.000
+		aluminium=14.000
+	}
+
+	history={
+		owner = RCO
+		victory_points = {
+			11547 2
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+
+		}
+		add_core_of = RCO
+		set_demilitarized_zone = yes
+
+	}
+
+	provinces={
+		563 3423 3558 11547 11560 
+	}
+	manpower=1427739
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}
