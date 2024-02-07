@@ -1,0 +1,3818 @@
+﻿focus_tree = {
+	id = ukr_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10000
+			original_tag = UKR
+		}
+	}
+
+	continuous_focus_position = { x = 55 y = 1500 }
+	
+	default = no
+
+
+
+	focus = {
+		id = UKR_the_only_bulwark_against_russian_imperialism
+		icon = GFX_goal_the_once_bulwark
+		x = 10
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.075
+			add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = UKR_the_vmsu
+		icon = GFX_goal_the_vmsu
+		x = -33
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_only_bulwark_against_russian_imperialism}
+		relative_position_id = UKR_the_only_bulwark_against_russian_imperialism
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				category = naval_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+	focus = {
+		id = UKR_modernize_our_fleet
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_vmsu}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			navy_experience = 150
+		}
+	}
+	focus = {
+		id = UKR_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 1
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_modernize_our_fleet}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = UKR_subamrines
+		icon = GFX_goal_generic_navy_submarine
+		x = 3
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_modernize_our_fleet}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = UKR_increase_naval_production
+		icon = GFX_goal_generic_navy_cruiser
+		x = -2
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_vmsu}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			add_ideas = the_vmsu
+		}
+	}
+	focus = {
+		id = UKR_odessa_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -3
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 192
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_increase_naval_production}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			192 = {
+				add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+           type = dockyard
+           level = 4
+           instant_build = yes
+         } 
+		 }
+		}
+	}
+	focus = {
+		id = UKR_sebastopol_dockyards
+		icon = GFX_focus_generic_refit_civilian_ships
+		x = -1
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 137
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_increase_naval_production}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			137 = {
+				add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+           type = dockyard
+           level = 6
+           instant_build = yes
+         } 
+		 }
+		}
+	}
+	focus = {
+		id = UKR_supremacy_on_black_sea
+		icon = GFX_focus_generic_black_sea_focus
+		x = 0
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = UKR_increase_naval_production
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_subamrines focus = UKR_destroyers focus = UKR_odessa_dockyards focus = UKR_sebastopol_dockyards}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_vmsu
+				add_idea = the_vmsu2
+			}
+		}
+	}
+	focus = {
+		id = UKR_protect_the_trade
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 1
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_supremacy_on_black_sea}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_vmsu2
+				add_idea = the_vmsu3
+			}
+		}
+	}
+	focus = {
+		id = UKR_the_fleet_that_no_one_saw_grow
+		icon = GFX_goal_the_vmsu_idea_max
+		x = 0
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_protect_the_trade}
+		prerequisite = {focus = UKR_make_the_production_heavier}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_vmsu3
+				add_idea = the_vmsu4
+			}
+		}
+	}
+	focus = {
+		id = UKR_make_the_production_heavier
+		icon = GFX_focus_generic_cruiser2
+		x = -1
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_supremacy_on_black_sea}
+		relative_position_id = UKR_the_vmsu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = cl_tech
+			}
+		}
+	}
+	focus = {
+		id = UKR_the_psu
+		icon = GFX_goal_the_psu
+		x = -27
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_only_bulwark_against_russian_imperialism}
+		relative_position_id = UKR_the_only_bulwark_against_russian_imperialism
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				category = air_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+	focus = {
+		id = UKR_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = -1
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_psu}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = UKR_cas_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_psu}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = UKR_air_control
+		icon = GFX_goal_psu_air_superiority
+		x = 0
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_cas_bombers focus = UKR_fighters}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			add_ideas = the_psu
+		}
+	}
+	focus = {
+		id = UKR_new_airbases
+		icon = GFX_goal_generic_air_doctrine
+		x = -1
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 197
+			controls_state = 226
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_air_control}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			197 = {
+			add_building_construction = {
+           type = air_base
+           level = 10
+           instant_build = yes
+         } 
+		 }
+		 226 = {
+			add_building_construction = {
+           type = air_base
+           level = 7
+           instant_build = yes
+         } 
+		 }
+		}
+	}
+	focus = {
+		id = UKR_defence_against_the_ennemies
+		icon = GFX_goal_generic_construct_military
+		x = 1
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 197
+			controls_state = 226
+			controls_state = 202
+			controls_state = 203
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_air_control}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			197 = {
+			add_building_construction = {
+           type = anti_air_building
+           level = 5
+           instant_build = yes
+         } 
+		 }
+			226 = {
+			add_building_construction = {
+           type = anti_air_building
+           level = 5
+           instant_build = yes
+         } 
+		 }
+		 202 = {
+			add_building_construction = {
+           type = anti_air_building
+           level = 5
+           instant_build = yes
+         } 
+		 }
+		 203 = {
+			add_building_construction = {
+           type = anti_air_building
+           level = 5
+           instant_build = yes
+         } 
+		 }
+		}
+	}
+	focus = {
+		id = UKR_increase_the_production_of_aircraft
+		icon = GFX_goal_increase_aircraft_production
+		x = 0
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_air_control}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			add_ideas = ROM_local_development
+		}
+	}
+	focus = {
+		id = UKR_dominate_the_russian_sky
+		icon = GFX_goal_dominate_russian_sky
+		x = 0
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_increase_the_production_of_aircraft}
+		relative_position_id = UKR_the_psu
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_psu
+				add_idea = the_psu2
+			}
+		}
+	}
+	focus = {
+		id = UKR_the_zsu
+		icon = GFX_goal_the_zsu
+		x = -20
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_only_bulwark_against_russian_imperialism}
+		relative_position_id = UKR_the_only_bulwark_against_russian_imperialism
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				category = land_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+	focus = {
+		id = UKR_rearmament_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			threat > 0.15
+			has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_zsu}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = rearmament_plan
+				days = 500
+			}
+		}
+	}
+	focus = {
+		id = UKR_expand_our_arsenal
+		icon = GFX_focus_generic_tank_air_support
+		x = 1
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			threat > 0.2
+			has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_rearmament_focus}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UKR_fill_in_the_gaps
+		icon = GFX_goal_generic_army_artillery
+		x = 3
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			threat > 0.2
+			has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_rearmament_focus}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UKR_reinforce_our_tactics
+		icon = GFX_focus_generic_military_mission
+		x = -2
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_zsu}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			army_experience = 150
+			add_doctrine_cost_reduction = {
+				name = FRA_methodical_battle
+				category = land_doctrine
+				uses = 2
+				cost_reduction = 0.5
+			}
+		}
+	}
+	focus = {
+		id = UKR_firepower_kills
+		icon = GFX_goal_generic_army_artillery2
+		x = -3
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_reinforce_our_tactics}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = UKR_new_guns
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = -1
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_reinforce_our_tactics}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = UKR_quality_over_quantity
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 0
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_new_guns focus = UKR_firepower_kills focus = UKR_expand_our_arsenal focus = UKR_fill_in_the_gaps}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			add_ideas = the_zsu
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = UKR_contain_russian_offensives
+		icon = GFX_goal_antirussian
+		x = 1
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_war_with = SOv
+			has_war_with = USR
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_quality_over_quantity}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_zsu
+				add_idea = the_zsu2
+			}
+		}
+	}
+	focus = {
+		id = UKR_get_them_out
+		icon = GFX_goal_cross_the_river
+		x = 0
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_war_with = SOv
+			has_war_with = USR
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_contain_russian_offensives}
+		prerequisite = {focus = UKR_mobilize_the_economy}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_zsu2
+				add_idea = the_zsu3
+			}
+		}
+	}
+	focus = {
+		id = UKR_mobilize_the_economy
+		icon = GFX_goal_mobilize_the_economy
+		x = -1
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+			has_idea = war_economy
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_quality_over_quantity}
+		relative_position_id = UKR_the_zsu
+
+		completion_reward = {
+			add_war_support = 0.1
+			IF = {
+				limit = {
+					has_idea = civilian_economy
+				}
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = low_economic_mobilisation
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = partial_economic_mobilisation
+				add_idea = war_economy
+			}
+			}
+		}
+	}
+	focus = {
+		id = UKR_a_rural_country
+		icon = GFX_focus_generic_land_reclamation
+		x = -10
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_only_bulwark_against_russian_imperialism}
+		relative_position_id = UKR_the_only_bulwark_against_russian_imperialism
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = UKR_urbanization_of_the_the_country
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_a_rural_country}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = urbanization_of_the_country
+		}
+	}
+	focus = {
+		id = UKR_centralize_industries_in_our_capital
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 202
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_urbanization_of_the_the_country}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			202 = {
+				add_extra_state_shared_building_slots = 2
+               add_building_construction = {
+              type = industrial_complex
+              level = 2
+              instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = UKR_develop_the_countryside
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		x = 1
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 198
+			controls_state = 203
+			controls_state = 834
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_centralize_industries_in_our_capital}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			198 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = industrial_complex
+              level = 1
+              instant_build = yes
+             }
+			}
+			203 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = industrial_complex
+              level = 1
+              instant_build = yes
+             }
+			}
+			834 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = industrial_complex
+              level = 1
+              instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = UKR_electrification_of_the_country
+		icon = GFX_focus_generic_hydroelectric_energy
+		x = 1
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 197
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_develop_the_countryside}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			197 = {
+				add_extra_state_shared_building_slots = 3
+               add_building_construction = {
+              type = industrial_complex
+              level = 3
+              instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = UKR_the_birth_of_the_ukrainian_economy
+		icon = GFX_goal_the_birth_of_ukrainian_economy
+		x = 0
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_factories > 30
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_electrification_of_the_country focus = UKR_eastern_development}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = ukrainian_economy
+		}
+	}
+	focus = {
+		id = UKR_infrastructure_constrution
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 192
+			controls_state = 834
+			controls_state = 197
+			controls_state = 226
+			controls_state = 198
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_urbanization_of_the_the_country}
+		relative_position_id = UKR_urbanization_of_the_the_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			192 = {
+				add_extra_state_shared_building_slots = 2
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			834 = {
+				add_extra_state_shared_building_slots = 2
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			197 = {
+				add_extra_state_shared_building_slots = 2
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			226 = {
+				add_extra_state_shared_building_slots = 2
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			198 = {
+				add_extra_state_shared_building_slots = 2
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = UKR_connect_mykolaiv
+		icon = GFX_focus_generic_railroad
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 197
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_infrastructure_constrution}
+		relative_position_id = UKR_urbanization_of_the_the_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			build_railway = {
+            level = 3
+            controller_priority = {
+            base = 1
+             modifier = {
+              tag = UKR
+              add = 2
+             }
+            }
+            path = { 11546 }
+            start_province = 6597
+            target_province = 11683
+            }
+			197 = {
+				add_building_construction = {
+              type = supply_node
+              level = 1
+              instant_build = yes
+              province = 2999
+             }
+			}
+		}
+	}
+	focus = {
+		id = UKR_eastern_development
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 200
+			controls_state = 196
+			controls_state = 227
+			controls_state = 911
+			controls_state = 228
+			controls_state = 259
+			controls_state = 193
+			controls_state = 225
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_connect_mykolaiv}
+		relative_position_id = UKR_urbanization_of_the_the_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			200 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			196 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			227 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			911 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			228 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			259 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			193 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+			225 = {
+				add_extra_state_shared_building_slots = 1
+               add_building_construction = {
+              type = infrastructure
+              level = 1
+              instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = UKR_excavation_focus
+		icon = GFX_goal_generic_construction2
+		x = -4
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_a_rural_country}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = excavation_focus
+		}
+	}
+	focus = {
+		id = UKR_ukrainian_oil
+		icon = GFX_goal_generic_oil_refinery
+		x = -5
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 202
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_excavation_focus}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_resource = {
+				state = 202
+				type = oil 
+				amount = 22
+			}
+		}
+	}
+	focus = {
+		id = UKR_kherson_chromium
+		icon = GFX_goal_generic_construction2
+		x = -5
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 196
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_ukrainian_oil}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_resource = {
+				state = 196
+				type = chromium 
+				amount = 22
+			}
+		}
+	}
+	focus = {
+		id = UKR_a_diversified_production
+		icon = GFX_focus_generic_national_security
+		x = -4
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 196
+			controls_state = 202
+			controls_state = 221
+			has_tech = excavation4
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_kherson_chromium focus = UKR_in_the_meantime_we_must_import focus = UKR_kharkiv_steel}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_resource = {
+				state = 196
+				type = chromium 
+				amount = 10
+			}
+			add_resource = {
+				state = 202
+				type = oil 
+				amount = 10
+			}
+			add_resource = {
+				state = 202
+				type = aluminium 
+				amount = 10
+			}
+			add_resource = {
+				state = 221
+				type = steel 
+				amount = 25
+			}
+		}
+	}
+	focus = {
+		id = UKR_in_the_meantime_we_must_import
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -4
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_excavation_focus}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = in_the_meantime_we_must_import
+		}
+	}
+	focus = {
+		id = UKR_kiev_aluminium
+		icon = GFX_focus_generic_aluminum
+		x = -3
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 202
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_excavation_focus}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_resource = {
+				state = 202
+				type = aluminium 
+				amount = 15
+			}
+		}
+	}
+	focus = {
+		id = UKR_kharkiv_steel
+		icon = GFX_focus_generic_steel
+		x = -3
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 221
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_kiev_aluminium}
+		relative_position_id = UKR_a_rural_country
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_resource = {
+				state = 221
+				type = steel 
+				amount = 35
+			}
+		}
+	}
+	focus = {
+		id = UKR_restore_elections
+		icon = GFX_goal_ukrainian_elections
+		x = 3
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_only_bulwark_against_russian_imperialism}
+		relative_position_id = UKR_the_only_bulwark_against_russian_imperialism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = ukr.1
+			hidden_effect = {
+			country_event = {
+				id = ukr.5
+				days = 10
+			}
+			}
+		}
+	}
+	focus = {
+		id = UKR_nationalist_victory
+		icon = GFX_goal_nationalist_victory
+		x = 8
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = nationalist_victory
+			NOT = {
+				has_country_flag = anarchists_launch_dnipro_uprising
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_restore_elections}
+		relative_position_id = UKR_restore_elections
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UKR_oun_coup
+		icon = GFX_focus_ITA_banda_carita
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = nationalist_victory
+			NOT = {
+				has_country_flag = anarchists_launch_dnipro_uprising
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_nationalist_victory}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = UKR_hunt_the_leftists
+		icon = GFX_goal_hunt_the_leftists
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = nationalist_victory
+			NOT = {
+				has_country_flag = anarchists_launch_dnipro_uprising
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_nationalist_victory}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = hunt_the_leftists
+				days = 165
+			}
+		}
+	}
+	focus = {
+		id = UKR_bandera_and_the_great_ukrnian_dream
+		icon = GFX_goal_bandera_greater_ukraine
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = nationalist_victory
+			NOT = {
+				has_country_flag = anarchists_launch_dnipro_uprising
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_hunt_the_leftists}
+		prerequisite = {focus = UKR_oun_coup}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = civil_war
+			add_country_leader_trait = greater_ukraine_dream
+		}
+	}
+	focus = {
+		id = UKR_work_fight_or_perish
+		icon = GFX_goal_work_fight_or_perish_oun
+		x = 3
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = nationalist_victory
+			NOT = {
+				has_country_flag = anarchists_launch_dnipro_uprising
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_hunt_the_leftists}
+		prerequisite = {focus = UKR_oun_coup}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = work_fight_or_perish_idea
+		}
+	}
+	focus = {
+		id = UKR_no_time_for_diplomacy
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 1
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = UKR_bandera_and_the_great_ukrnian_dream
+				has_idea = nationalist_cooperation
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_bandera_and_the_great_ukrnian_dream focus = UKR_second_legislative_elections}
+		relative_position_id = UKR_nationalist_victory
+		mutually_exclusive = {focus = UKR_the_intemarium_dream}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = UKR_claim_greater_ukraine
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_no_time_for_diplomacy}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_state_core = 240
+			add_state_core = 220
+			add_state_core = 260
+			add_state_core = 265
+			add_state_core = 245
+			add_state_core = 218
+			add_state_core = 137
+			add_state_core = 234
+			add_state_core = 235
+			add_state_core = 217
+			add_state_core = 829
+			add_state_core = 233
+			add_state_core = 827
+			add_state_core = 828
+		}
+	}
+	focus = {
+		id = UKR_operation_thunderstorm
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 3
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+			OR = {
+			has_war_with = SOV
+			NOT = {
+				country_exists = SOV
+			}
+			}
+			OR = {
+			has_war_with = USR
+			NOT = {
+				country_exists = USR
+			}
+			}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_claim_greater_ukraine}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = operation_thunderstorm
+				days = 100
+			}
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+			declare_war_on = {
+				type = take_state_focus
+				target = SOV
+			}
+			}
+			IF = {
+				limit = {
+					country_exists = USR
+				}
+			declare_war_on = {
+				type = take_state_focus
+				target = USR
+			}
+			}
+		}
+	}
+	focus = {
+		id = UKR_strike_transcaucasia
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = UKR_operation_thunderstorm
+		}
+		
+		bypass = {
+			OR = {
+			has_war_with = GEO
+			NOT = {
+				country_exists = GEO
+			}
+			}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_claim_greater_ukraine}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GEO
+			}
+		}
+	}
+	focus = {
+		id = UKR_stir_ukrainian_nationalism
+		icon = GFX_goal_greater_ukraine_focus
+		x = 1
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = UKR_operation_thunderstorm
+		}
+		
+		bypass = {
+			OR = {
+			has_war_with = GEO
+			NOT = {
+				country_exists = GEO
+			}
+			}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_strike_transcaucasia}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = a_disunited_nation
+				add_idea = greater_ukraine
+			}
+		}
+	}
+	focus = {
+		id = UKR_strike_west
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = UKR_operation_thunderstorm
+		}
+		
+		bypass = {
+			OR = {
+			has_war_with = POL
+			NOT = {
+				country_exists = POL
+			}
+			}
+			OR = {
+			has_war_with = ROM
+			NOT = {
+				country_exists = ROM
+			}
+			}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_claim_greater_ukraine}
+		relative_position_id = UKR_nationalist_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = POL
+			}
+		}
+	}
+	focus = {
+		id = UKR_political_crisis
+		icon = GFX_focus_generic_improve_the_administration
+		x = 3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = no_clear_majority
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_restore_elections}
+		relative_position_id = UKR_restore_elections
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = -75
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UKR_communist_question
+		icon = GFX_focus_generic_join_comintern
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_political_crisis}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = ukr.15
+		}
+	}
+	focus = {
+		id = UKR_compromise_with_the_puv
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_political_crisis}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = ukr.16
+		}
+	}
+	focus = {
+		id = UKR_the_oun
+		icon = GFX_focus_generic_fascist_troops
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_political_crisis}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = ukr.17
+		}
+	}
+	focus = {
+		id = UKR_second_legislative_elections
+		icon = GFX_goal_end_the_crisis
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_oun}
+		prerequisite = {focus = UKR_compromise_with_the_puv}
+		prerequisite = {focus = UKR_communist_question}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = nationalist_cooperation
+				}
+			 country_event = ukr.18
+			}
+			else = {
+			country_event = ukr.19
+			}
+		}
+	}
+	focus = {
+		id = UKR_the_intemarium_dream
+		icon = GFX_focus_POL_consolidate_sanation_government
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_second_legislative_elections focus = UKR_bread_and_roses}
+		mutually_exclusive = {focus = UKR_no_time_for_diplomacy}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				end_puppet = UKR
+				IF = {
+					limit = {
+						NOT = {
+							is_in_faction = yes
+						}
+					}
+				country_event = {
+					id = ukr.20
+					days = 2
+				}
+				}
+			}
+		}
+	}
+	focus = {
+		id = UKR_defend_the_land
+		icon = GFX_focus_generic_women_in_military
+		x = 0
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_intemarium_dream}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = for_the_country
+		}
+	}
+	focus = {
+		id = UKR_eastern_theater
+		icon = GFX_goal_cross_the_river
+		x = 2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+			OR = {
+			has_war_with = SOV
+			NOT = {
+				country_exists = SOV
+			}
+			}
+			OR = {
+			has_war_with = USR
+			NOT = {
+				country_exists = USR
+			}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_intemarium_dream}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+			}
+			}
+			IF = {
+				limit = {
+					country_exists = USR
+				}
+			create_wargoal = {
+				type = take_state_focus
+				target = USR
+			}
+			}
+		}
+	}
+	focus = {
+		id = UKR_bessarabia_and_polish_ukraine
+		icon = GFX_focus_SWI_issue_war_bonds
+		x = -2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_intemarium_dream}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = ukr.21
+					days = 2
+				}
+			}
+			ROM = {
+				country_event = {
+					id = ukr.24
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = UKR_slava_ukraini
+		icon = GFX_goal_slava_ukrainyi
+		x = 0
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 228
+			controls_state = 227
+			controls_state = 225
+			controls_state = 78
+			controls_state = 89
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_bessarabia_and_polish_ukraine}
+		prerequisite = {focus = UKR_eastern_theater}
+		relative_position_id = UKR_political_crisis
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = a_disunited_nation
+				add_idea = slava_ukrainyi_idea
+			}
+		}
+	}
+	focus = {
+		id = UKR_popular_front_victory
+		icon = GFX_goal_popular_front_victory_in_ukraine
+		x = -3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = popular_front_victory
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_restore_elections}
+		relative_position_id = UKR_restore_elections
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = UKR_ban_the_oun
+		icon = GFX_goal_ban_the_oun
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_popular_front_victory}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.1
+			remove_ideas = nationalist_rise
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.2 
+			}
+		}
+	}
+	focus = {
+		id = UKR_united_front_against_the_puv
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_popular_front_victory}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.2 
+			}
+		}
+	}
+	focus = {
+		id = UKR_bread_and_roses
+		icon = GFX_focus_por_workers_of_iberia
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_united_front_against_the_puv}
+		prerequisite = {focus = UKR_ban_the_oun}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = UKR_the_road_to_socialism
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = UKR_bread_and_roses
+				has_government = democratic
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_bread_and_roses focus = UKR_second_legislative_elections}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = the_road_to_socialism
+		}
+	}
+	focus = {
+		id = UKR_40_hours_a_week
+		icon = GFX_goal_40_hours_a_week
+		x = -2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_road_to_socialism}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = 40_hours_a_week
+		}
+	}
+	focus = {
+		id = UKR_great_works
+		icon = GFX_goal_great_works
+		x = -1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_road_to_socialism}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = great_works
+		}
+	}
+	focus = {
+		id = UKR_freedom_of_press
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_road_to_socialism}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = UKR_the_president_of_change
+		icon = GFX_goal_president_kost
+		x = 0
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_freedom_of_press}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = the_president_of_change
+		}
+	}
+	focus = {
+		id = UKR_decrease_on_unemployment
+		icon = GFX_focus_SOV_organize_wreckers
+		x = 1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_road_to_socialism}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = each_person_a_job
+		}
+	}
+	focus = {
+		id = UKR_decentralized_power
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_road_to_socialism}
+		relative_position_id = UKR_popular_front_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = UKR_anarkhiya_mama_za_nas
+		icon = GFX_goal_anarkhiya_mama_za_nas
+		x = -8
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = anarchists_launch_dnipro_uprising
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_restore_elections}
+		relative_position_id = UKR_restore_elections
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = UKR_tachanka
+		icon = GFX_focus_SOV_the_road_of_life
+		x = -1
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_anarkhiya_mama_za_nas}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = ukrainian_tachanka
+			add_stability = -0.05
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = UKR_raise_peasants_militias
+		icon = GFX_focus_ITA_peasants_rise
+		x = 1
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_anarkhiya_mama_za_nas}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			226 = {
+			create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  create_unit = {
+           division = "name = \"Kavaleriyska dyviziya\" division_template = \"Kavaleriyska dyviziya\" start_experience_factor = 0.5"
+           owner = UKR
+          }
+		  }
+		}
+	}
+	focus = {
+		id = UKR_the_guns_of_the_revolution
+		icon = GFX_goal_guns_of_the_revolution
+		x = 0
+		y = 2
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_tachanka focus = UKR_raise_peasants_militias}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 5000
+            producer = UKR
+           }
+		}
+	}
+	focus = {
+		id = UKR_the_free_territory_of_ukraine
+		icon = GFX_goal_the_free_territory_of_ukraine
+		x = 0
+		y = 3
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_civil_war = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_guns_of_the_revolution}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = UKR_break_the_ties
+		icon = GFX_goal_break_free_from_poland
+		x = -1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_free_territory_of_ukraine}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			news_event = news.3045
+			POL = {
+			set_autonomy = {
+            target = UKR
+            autonomy_state = autonomy_free
+            }
+			}
+			add_timed_idea = {
+				idea = economic_crash
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = UKR_destroy_the_remains_of_the_past
+		icon = GFX_focus_spr_class_war
+		x = 1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_free_territory_of_ukraine}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = 0.5
+			}
+			remove_ideas = nationalist_rise
+		}
+	}
+	focus = {
+		id = UKR_the_workers_paradise
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_destroy_the_remains_of_the_past focus = UKR_break_the_ties}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = civil_war
+			add_country_leader_trait = the_workers_paradise
+		}
+	}
+	focus = {
+		id = UKR_the_revolution_abroad
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = -2
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_workers_paradise}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = UKR_no_place_for_nationalism
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = -2
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_revolution_abroad}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = a_disunited_nation
+		}
+	}
+	focus = {
+		id = UKR_revenge_on_1919
+		icon = GFX_focus_ger_strike_at_the_source
+		x = -1
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = {
+				size > 500000
+			}
+		}
+		
+		bypass = {
+			OR = {
+			has_war_with = SOV
+			NOT = {
+				country_exists = SOV
+			}
+			}
+			OR = {
+			has_war_with = USR
+			NOT = {
+				country_exists = USR
+			}
+			}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_no_place_for_nationalism}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = USR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = USR
+				}
+			}
+		}
+	}
+	focus = {
+		id = UKR_really_a_bastion_of_democracy
+		icon = GFX_focus_POL_sanation_left
+		x = -3
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = {
+				size > 500000
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_no_place_for_nationalism}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = POL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = POL
+				}
+			}
+		}
+	}
+	focus = {
+		id = UKR_the_free_territory_of_the_world
+		icon = GFX_goal_free_world_territory
+		x = -2
+		y = 9
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_really_a_bastion_of_democracy focus = UKR_revenge_on_1919}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_cosmetic_tag = MAK_WOR
+			add_stability = 0.1
+			add_war_support = 0.1
+			every_state = {
+				add_claim_by = UKR
+			}
+		}
+	}
+	focus = {
+		id = UKR_mother_anarchy_loves_her_sons
+		icon = GFX_goal_mother_anarchy_loves_her_sons
+		x = 0
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_free_territory_of_the_world focus = UKR_neo_makhnovism}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = world_revolution
+		}
+	}
+	focus = {
+		id = UKR_the_social_revolution
+		icon = GFX_goal_social_revolution
+		x = 2
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_workers_paradise}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.3
+		}
+	}
+	focus = {
+		id = UKR_smash_the_patriarchy
+		icon = GFX_goal_smash_the_patriarchy
+		x = 0
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_social_revolution}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = women_volunteers
+		}
+	}
+	focus = {
+		id = UKR_expropriate_the_landlord
+		icon = GFX_focus_generic_annex_country
+		x = 1
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_social_revolution}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = collective_farms
+		}
+	}
+	focus = {
+		id = UKR_lgbt_rights
+		icon = GFX_goal_lgbtia_rights
+		x = 2
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_social_revolution}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = lgbt_rights
+		}
+	}
+	focus = {
+		id = UKR_promote_anarcho_syndicalism
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = 3
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_social_revolution}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = soviet_in_entreprise
+		}
+	}
+	focus = {
+		id = UKR_a_society_free_of_validism
+		icon = GFX_goal_generic_neutrality_focus
+		x = 4
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_the_social_revolution}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = a_society_free_of_validism
+		}
+	}
+	focus = {
+		id = UKR_neo_makhnovism
+		icon = GFX_goal_neo_makhnovism_focus
+		x = 2
+		y = 9
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = UKR_a_society_free_of_validism
+			has_completed_focus = UKR_smash_the_patriarchy
+			has_completed_focus = UKR_lgbt_rights
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = UKR_expropriate_the_landlord}
+		prerequisite = {focus = UKR_promote_anarcho_syndicalism}
+		relative_position_id = UKR_anarkhiya_mama_za_nas
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = NEOMAK
+			add_ideas = neo_makhnovism
+			hidden_effect = {
+				remove_ideas = a_society_free_of_validism
+				remove_ideas = women_volunteers
+				remove_ideas = lgbt_rights
+				remove_ideas = soviet_in_entreprise
+				remove_ideas = collective_farms
+			}
+		}
+	}
+}

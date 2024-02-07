@@ -1,0 +1,192 @@
+﻿focus_tree = {
+	id = saar_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = SPF
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = SPF_the_referendum
+		icon = GFX_goal_generic_forceful_treaty
+		x = 5
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 20
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = saarland.1
+		}
+	}
+	focus = {
+		id = SPF_the_91th_province
+		icon = GFX_focus_fra_french_union
+		x = 0
+		y = 1
+		prerequisite = {focus = SPF_the_referendum}
+		mutually_exclusive = {focus = SPF_limited_autonomy}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = has_chosen_to_integrate_france
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 FRA = {
+			add_state_core = 943
+			annex_country = {
+				target = SPF
+			}
+		 }
+		}
+	}
+	focus = {
+		id = SPF_limited_autonomy
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 10
+		y = 1
+		prerequisite = {focus = SPF_the_referendum}
+		mutually_exclusive = {focus = SPF_the_91th_province}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = has_chosen_independance
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.075
+		}
+	}
+	focus = {
+		id = SPF_saarland_industry
+		icon = GFX_focus_generic_industry_3
+		x = 10
+		y = 2
+		prerequisite = {focus = SPF_limited_autonomy}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPF_saarland_armament
+		icon = GFX_focus_generic_combined_arms
+		x = 12
+		y = 2
+		prerequisite = {focus = SPF_limited_autonomy}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

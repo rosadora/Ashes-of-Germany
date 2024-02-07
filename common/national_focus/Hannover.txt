@@ -1,0 +1,3974 @@
+﻿focus_tree = {
+	id = hanovre_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = HAN
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = HAN_hanover_in_turmoil
+		icon = GFX_goal_generic_neutrality_focus
+		x = 20
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 75
+		}
+	}
+	focus = {
+		id = HAN_trust_in_democracy
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 15
+		y = 1
+		prerequisite = {focus = HAN_hanover_in_turmoil}
+		mutually_exclusive = {focus = HAN_the_rise_of_monarchism }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.075
+		 add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = ultra_nationalism
+			popularity = -0.05
+		 }
+		}
+	}
+	focus = {
+		id = HAN_socialist_victory
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 12
+		y = 2
+		prerequisite = {focus = HAN_trust_in_democracy}
+		mutually_exclusive = {focus = HAN_the_government_wins_the_majority }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3023
+		 add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		 }
+		 add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.02
+		 }
+		}
+	}
+	focus = {
+		id = HAN_peaceful_diplomacy
+		icon = GFX_goal_generic_national_unity
+		x = 8
+		y = 3
+		prerequisite = {focus = HAN_socialist_victory}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = HAN_industries_of_peace
+		icon = GFX_focus_generic_industry_3
+		x = 4
+		y = 3
+		prerequisite = {focus = HAN_socialist_victory}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_new_roads_new_railways
+		icon = GFX_focus_generic_railroad
+		x = 3
+		y = 4
+		prerequisite = {focus = HAN_industries_of_peace}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_si_vis_pacem_para_pacem
+		icon = GFX_focus_generic_league_of_nations
+		x = 5
+		y = 4
+		prerequisite = {focus = HAN_industries_of_peace}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = si_vis_pacem_para_pacem
+		}
+	}
+	focus = {
+		id = HAN_research_budget_act
+		icon = GFX_focus_research2
+		x = 4
+		y = 5
+		prerequisite = {focus = HAN_industries_of_peace}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_research_slot = 1
+		}
+	}
+	focus = {
+		id = HAN_the_social_republic
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 8
+		y = 6
+		prerequisite = {focus = HAN_research_budget_act}
+		prerequisite = {focus = HAN_prevent_scavengers}
+		prerequisite = {focus = HAN_ban_paramilitary_organizations}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = unstable_republic
+		}
+	}
+	focus = {
+		id = HAN_prevent_scavengers
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 8
+		y = 5
+		prerequisite = {focus = HAN_peaceful_diplomacy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 give_guarantee = WUR
+		 give_guarantee = BAY
+		 give_guarantee = SAX
+		 give_guarantee = PRS
+		 give_guarantee = MEK
+		 give_guarantee = SHL
+		}
+	}
+	focus = {
+		id = HAN_haven_of_peace
+		icon = GFX_focus_por_workers_of_iberia
+		x = 7
+		y = 4
+		prerequisite = {focus = HAN_peaceful_diplomacy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+		 create_faction = haven_of_peace
+		}
+	}
+	focus = {
+		id = HAN_defend_the_fatherland
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 9
+		y = 4
+		prerequisite = {focus = HAN_peaceful_diplomacy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = defend_the_fatherland
+		}
+	}
+	focus = {
+		id = HAN_concessions_to_communists
+		icon = GFX_focus_spr_class_war
+		x = 12
+		y = 3
+		prerequisite = {focus = HAN_socialist_victory}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		}
+	}
+	focus = {
+		id = HAN_8_hour_a_day
+		icon = GFX_focus_SOV_organize_wreckers
+		x = 11
+		y = 4
+		prerequisite = {focus = HAN_concessions_to_communists}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = improved_worker_conditions
+		}
+	}
+	focus = {
+		id = HAN_decrease_on_unemployment
+		icon = GFX_goal_generic_soviet_construction
+		x = 13
+		y = 4
+		prerequisite = {focus = HAN_concessions_to_communists}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = each_person_a_job
+		}
+	}
+	focus = {
+		id = HAN_ban_paramilitary_organizations
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = 12
+		y = 5
+		prerequisite = {focus = HAN_concessions_to_communists}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = radicalization_of_the_political_scene
+			add_ideas = workers_militias
+			add_stability = 0.075
+			add_war_support = -0.125
+		 add_popularity = {
+			ideology = fascism
+			popularity = -0.25
+		 }
+		}
+	}
+	focus = {
+		id = HAN_the_government_wins_the_majority
+		icon = GFX_focus_generic_treaty
+		x = 18
+		y = 2
+		prerequisite = {focus = HAN_trust_in_democracy}
+		mutually_exclusive = {focus = HAN_socialist_victory }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3024
+		 add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		 }
+		}
+	}
+	focus = {
+		id = HAN_government_reforms
+		icon = GFX_goal_generic_improve_relations
+		x = 17
+		y = 3
+		prerequisite = {focus = HAN_the_government_wins_the_majority}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		 add_popularity = {
+			ideology = democratic
+			popularity = 0.075
+		 }
+		}
+	}
+	focus = {
+		id = HAN_the_future_of_the_country
+		icon = GFX_focus_generic_support_the_left_right
+		x = 15
+		y = 5
+		prerequisite = {focus = HAN_the_government_wins_the_majority}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_war_support = 0.075
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = HAN_si_vis_pace_para_bellum
+		icon = GFX_focus_generic_manpower
+		x = 13
+		y = 6
+		prerequisite = {focus = HAN_the_future_of_the_country}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_defence_against_prussia
+		icon = GFX_goal_generic_defence
+		x = 15
+		y = 6
+		prerequisite = {focus = HAN_the_future_of_the_country}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 FRA = {
+			country_event = {
+			id = hanover.3
+			days = 2
+			}
+		 }
+		}
+	}
+	focus = {
+		id = HAN_strike_netherlands
+		icon = GFX_focus_hol_oranje_boven
+		x = 16
+		y = 7
+		prerequisite = {focus = HAN_defence_against_prussia}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+              type = annex_everything
+              target = HOL
+            }
+		  add_state_core = 35
+		  add_state_core = 36
+		  add_state_core = 7
+		}
+	}
+	focus = {
+		id = HAN_the_united_plain
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 16
+		y = 8
+		prerequisite = {focus = HAN_strike_netherlands}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+              type = annex_everything
+              target = BEL
+            }
+		 create_wargoal = {
+              type = annex_everything
+              target = LUX
+            }
+		  add_state_core = 6
+		  add_state_core = 34
+		  add_state_core = 8
+		}
+	}
+	focus = {
+		id = HAN_the_republic_of_european_plain
+		icon = GFX_focus_generic_improve_the_administration
+		x = 15
+		y = 9
+		prerequisite = {focus = HAN_the_united_plain}
+		prerequisite = {focus = HAN_secure_the_south}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 set_cosmetic_tag = HAN_HOL
+		 remove_ideas = unstable_republic
+		}
+	}
+	focus = {
+		id = HAN_secure_the_eastern_border
+		icon = GFX_goal_generic_political_pressure
+		x = 14
+		y = 7
+		prerequisite = {focus = HAN_defence_against_prussia}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+              type = annex_everything
+              target = PRS
+            }
+		 create_wargoal = {
+              type = annex_everything
+              target = SHL
+            }
+		 create_wargoal = {
+              type = annex_everything
+              target = MEK
+            }
+		 create_wargoal = {
+              type = annex_everything
+              target = SAX
+            }
+		}
+	}
+	focus = {
+		id = HAN_secure_the_south
+		icon = GFX_goal_generic_position_armies
+		x = 14
+		y = 8
+		prerequisite = {focus = HAN_secure_the_eastern_border}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+              type = annex_everything
+              target = BAY
+            }
+		 create_wargoal = {
+              type = annex_everything
+              target = WUR
+            }
+		}
+	}
+	focus = {
+		id = HAN_defend_the_country
+		icon = GFX_goal_generic_small_arms
+		x = 12
+		y = 7
+		prerequisite = {focus = HAN_si_vis_pace_para_bellum}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = defend_the_fatherland
+		}
+	}
+	focus = {
+		id = HAN_the_republic_call
+		icon = GFX_goal_generic_propaganda
+		x = 12
+		y = 8
+		prerequisite = {focus = HAN_defend_the_country}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+	focus = {
+		id = HAN_supervise_paramilitary_organizations
+		icon = GFX_focus_POL_beck_ribbentrop
+		x = 17
+		y = 4
+		prerequisite = {focus = HAN_government_reforms}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+			remove_idea = radicalization_of_the_political_scene
+			add_idea = controlled_paramilitaries
+		 }
+		 add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = ultra_nationalism
+			popularity = -0.02
+		 }
+		}
+	}
+	focus = {
+		id = HAN_divide_monarchist_factions
+		icon = GFX_focus_rom_abdicate
+		x = 17
+		y = 5
+		prerequisite = {focus = HAN_supervise_paramilitary_organizations}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		 add_popularity = {
+			ideology = neutrality
+			popularity = -0.15
+		 }
+		}
+	}
+	focus = {
+		id = HAN_the_rise_of_monarchism
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 25
+		y = 1
+		prerequisite = {focus = HAN_hanover_in_turmoil}
+		mutually_exclusive = {focus = HAN_trust_in_democracy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.075
+		 add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		 }
+		}
+	}
+	focus = {
+		id = HAN_under_willikens
+		icon = GFX_goal_under_willikens
+		x = 30
+		y = 2
+		prerequisite = {focus = HAN_the_rise_of_monarchism}
+		mutually_exclusive = {focus = HAN_under_the_kaiser}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3027
+		 add_stability = 0.075
+		 remove_ideas = unstable_republic
+		 set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		 }
+        }
+	}
+	focus = {
+		id = HAN_shock_strategy
+		icon = GFX_focus_generic_national_security
+		x = 30
+		y = 3
+		prerequisite = {focus = HAN_under_willikens}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+          add_timed_idea = {
+		   days = 400
+		   idea = shock_strategy
+		 }
+		 custom_effect_tooltip = HAN_shock_strategy_tooltip
+		 unlock_decision_category_tooltip = HAN_shock_strategy_decision
+        }
+	}
+	focus = {
+		id = HAN_military_focus
+		icon = GFX_goal_generic_small_arms
+		x = 30
+		y = 4
+		prerequisite = {focus = HAN_shock_strategy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+          random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+        }
+	}
+	focus = {
+		id = HAN_raise_the_militias
+		icon = GFX_focus_generic_fascist_troops
+		x = 28
+		y = 4
+		prerequisite = {focus = HAN_shock_strategy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+          add_manpower = 300000
+        }
+	}
+	focus = {
+		id = HAN_strengthen_the_moral
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 32
+		y = 4
+		prerequisite = {focus = HAN_shock_strategy}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+          add_ideas = moral_strengthened
+        }
+	}
+	focus = {
+		id = HAN_renew_our_tactics
+		icon = GFX_focus_generic_tank_air_support
+		x = 30
+		y = 5
+		prerequisite = {focus = HAN_raise_the_militias}
+		prerequisite = {focus = HAN_strengthen_the_moral}
+		prerequisite = {focus = HAN_military_focus}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+          add_tech_bonus = {
+			category = land_doctrine
+			uses = 2
+			bonus = 2
+		  }
+        }
+	}
+	focus = {
+		id = HAN_cross_the_rhine
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 32
+		y = 6
+		prerequisite = {focus = HAN_renew_our_tactics}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = RCO
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = SPF
+            }
+			add_state_core = 909
+			add_state_core = 910
+			add_state_core = 51
+			add_state_core = 42
+        }
+	}
+	focus = {
+		id = HAN_heil_deutschland
+		icon = GFX_focus_ger_reichskommisariats
+		x = 30
+		y = 7
+		prerequisite = {focus = HAN_cross_the_rhine}
+		prerequisite = {focus = HAN_strike_east_fascism}
+		prerequisite = {focus = HAN_strike_south_fascist}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 909
+			controls_state = 910
+			controls_state = 51
+			controls_state = 42
+			controls_state = 55
+			controls_state = 53
+			controls_state = 54
+			controls_state = 52
+			controls_state = 50
+			controls_state = 60
+			controls_state = 65
+			controls_state = 58
+			controls_state = 61
+			controls_state = 64
+			controls_state = 5
+            controls_state = 63
+			controls_state = 68
+			controls_state = 66
+			controls_state = 67
+			controls_state = 763
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = WGD
+			remove_ideas = radicalization_of_the_political_scene
+			add_stability = 0.15
+			add_war_support = 0.15
+        }
+	}
+	focus = {
+		id = HAN_revenge_on_1919
+		icon = GFX_focus_attack_france
+		x = 29
+		y = 8
+		prerequisite = {focus = HAN_heil_deutschland}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 28
+			add_state_core = 8
+			create_wargoal = {
+              type = annex_everything
+              target = FRA
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = HOL
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = BEL
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = LUX
+            }
+        }
+	}
+	focus = {
+		id = HAN_recover_german_lands
+		icon = GFX_focus_SWI_embrace_panoramaheim
+		x = 31
+		y = 8
+		prerequisite = {focus = HAN_heil_deutschland}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 848
+			add_state_core = 153
+			add_state_core = 152
+			add_state_core = 4
+			add_state_core = 69
+			add_state_core = 74
+			add_state_core = 762
+			add_state_core = 86
+			add_state_core = 807
+			add_state_core = 85
+			add_state_core = 188
+			create_wargoal = {
+              type = annex_everything
+              target = AUS
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = CZE
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = POL
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = LIT
+            }
+        }
+	}
+	focus = {
+		id = HAN_destroy_bolshevism
+		icon = GFX_focus_attack_soviet
+		x = 30
+		y = 9
+		prerequisite = {focus = HAN_heil_deutschland}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = LAT
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = EST
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = SOV
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = USR
+            }
+        }
+	}
+	focus = {
+		id = HAN_strike_south_fascist
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 30
+		y = 6
+		prerequisite = {focus = HAN_renew_our_tactics}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 55
+			add_state_core = 53
+			add_state_core = 54
+			add_state_core = 52
+			add_state_core = 50
+			add_state_core = 935
+          create_wargoal = {
+              type = annex_everything
+              target = WUR
+            }
+		  create_wargoal = {
+              type = annex_everything
+              target = BAY
+            }
+        }
+	}
+	focus = {
+		id = HAN_strike_east_fascism
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 28
+		y = 6
+		prerequisite = {focus = HAN_renew_our_tactics}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 60
+			add_state_core = 65
+			add_state_core = 58
+			add_state_core = 61
+			add_state_core = 64
+			add_state_core = 5
+
+			add_state_core = 63
+			add_state_core = 68
+			add_state_core = 66
+			add_state_core = 67
+			add_state_core = 763
+			add_state_core = 936
+
+          create_wargoal = {
+              type = annex_everything
+              target = PRS
+            }
+		  create_wargoal = {
+              type = annex_everything
+              target = MEK
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = SHL
+            }
+		  create_wargoal = {
+              type = annex_everything
+              target = SAX
+            }
+        }
+	}
+	focus = {
+		id = HAN_under_the_kaiser
+		icon = GFX_goal_under_the_kaiser
+		x = 25
+		y = 2
+		prerequisite = {focus = HAN_the_rise_of_monarchism}
+		mutually_exclusive = {focus = HAN_under_willikens}
+		cost = 8
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = hanover.100
+		 add_stability = 0.075
+		 remove_ideas = unstable_republic
+		 set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		 }
+		 create_country_leader = {
+          name = "Wilhelm II"
+          desc = ""
+          picture = "gfx/leaders/Wilhelm_II.dds"
+          expire = "1965.1.1"
+          ideology = despotism
+          traits = {
+        
+          }
+         }
+		}
+	}
+	focus = {
+		id = HAN_prussians_ties
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = {focus = HAN_under_the_kaiser}
+		mutually_exclusive = {focus = HAN_the_rise_of_hanover}
+
+		allow_branch = {
+		}
+
+
+		x = 25
+		y = 3
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		 news_event = news.3025
+		 remove_ideas = radicalization_of_the_political_scene
+		 add_opinion_modifier = {
+           target = PRS
+           modifier = huge_increase
+          }
+		 PRS = {
+			add_opinion_modifier = {
+           target = HAN
+           modifier = huge_increase
+          }
+		 }
+        }
+	}
+	focus = {
+		id = HAN_kaisers_protection
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = {focus = HAN_prussians_ties}
+
+		allow_branch = {
+		}
+
+
+		x = 24
+		y = 4
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		 PRS = {
+			set_autonomy = {
+           target = HAN
+           autonomy_state = autonomy_dominion
+           end_wars = no
+           end_civil_wars = no
+          }
+		 }
+        }
+	}
+	focus = {
+		id = HAN_imperial_industries
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = {focus = HAN_prussians_ties}
+
+		allow_branch = {
+		}
+
+
+		x = 26
+		y = 4
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+	}
+	focus = {
+		id = HAN_the_kingdom_of_western_germany
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = {focus = HAN_kaisers_protection}
+		prerequisite = {focus = HAN_imperial_industries}
+
+		allow_branch = {
+		}
+
+
+		x = 25
+		y = 5
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		 set_cosmetic_tag = HAN_PRS
+		 add_war_support = 0.075
+        }
+	}
+	focus = {
+		id = HAN_bavarian_expansion
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {focus = HAN_the_kingdom_of_western_germany}
+
+		allow_branch = {
+		}
+
+
+		x = 24
+		y = 6
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_state_core = 55
+		 declare_war_on = {
+          target = BAY
+          type = annex_everything
+         }
+        }
+	}
+	focus = {
+		id = HAN_secure_the_rhineland
+		icon = GFX_focus_generic_little_entente
+		prerequisite = {focus = HAN_the_kingdom_of_western_germany}
+
+		allow_branch = {
+		}
+
+
+		x = 26
+		y = 6
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_state_core = 910
+			add_state_core = 909
+			add_state_core = 51
+			add_state_core = 42
+		 declare_war_on = {
+          target = RCO
+          type = annex_everything
+         }
+		 declare_war_on = {
+          target = SPF
+          type = annex_everything
+         }
+        }
+	}
+	focus = {
+		id = HAN_the_pearl_of_the_west
+		icon = GFX_focus_spa_save_the_alcazar
+		prerequisite = {focus = HAN_secure_the_rhineland}
+		prerequisite = {focus = HAN_bavarian_expansion}
+
+		allow_branch = {
+		}
+
+
+		x = 25
+		y = 7
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_country_leader_trait = the_kaisers_residence
+        }
+	}
+	focus = {
+		id = HAN_reichsautobahn
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = {focus = HAN_the_pearl_of_the_west}
+
+		allow_branch = {
+		}
+
+
+		x = 25
+		y = 8
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+	}
+	focus = {
+		id = HAN_increase_in_power
+		icon = GFX_goal_generic_production
+		prerequisite = {focus = HAN_the_pearl_of_the_west}
+
+		allow_branch = {
+		}
+
+
+		x = 23
+		y = 8
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+	}
+	focus = {
+		id = HAN_the_new_hochseeflotte
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = {focus = HAN_the_pearl_of_the_west}
+
+		allow_branch = {
+		}
+
+
+		x = 27
+		y = 8
+
+		cost = 8
+		ai_will_do= {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+        }
+	}
+	focus = {
+		id = HAN_the_rise_of_hanover
+		icon = GFX_goal_the_rise_of_hanover
+		prerequisite = {focus = HAN_under_the_kaiser}
+		mutually_exclusive = {focus = HAN_prussians_ties}
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 20
+		y = 3
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = personal_union_enabled
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			news_event = news.3026
+		 add_stability = 0.075
+		 remove_ideas = radicalization_of_the_political_scene
+        }
+	}
+	focus = {
+		id = HAN_stirring_up_monarchist_spirits_in_england
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = {focus = HAN_the_rise_of_hanover}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = -1
+		y = 1
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ENG = {
+		 add_ideas = hanoverian_influence
+		 }
+        }
+	}
+	focus = {
+		id = HAN_raise_the_royal_guard
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		prerequisite = {focus = HAN_the_rise_of_hanover}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 1
+		y = 1
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_manpower = 100000
+			59 = {
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+			create_unit = {
+            division = "name = \"National Garde\" division_template = \"National Garde\" start_experience_factor = 2"
+            owner = HAN
+            }
+		   }
+        }
+	}
+	focus = {
+		id = HAN_prepare_the_landing
+		icon = GFX_goal_generic_position_armies
+		prerequisite = {focus = HAN_raise_the_royal_guard}
+		prerequisite = {focus = HAN_stirring_up_monarchist_spirits_in_england}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 0
+		y = 2
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.15
+			add_timed_idea = {
+				days = 200
+				idea = preparation_for_landing
+			}
+        }
+	}
+	focus = {
+		id = HAN_restore_the_union
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = {focus = HAN_prepare_the_landing}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 0
+		y = 3
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			ENG = {
+				neutrality > 0.35
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = hanover.2
+        }
+	}
+	focus = {
+		id = HAN_the_union_restored
+		icon = GFX_focus_generic_annex_country
+		prerequisite = {focus = HAN_restore_the_union}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = -1
+		y = 4
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			ENG = {
+				has_civil_war = no
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ENG = {
+			add_ideas = hanoverian_leadership
+			}
+        }
+	}
+	focus = {
+		id = HAN_god_save_the_king
+		icon = GFX_goal_god_save_the_king
+		prerequisite = {focus = HAN_restore_the_union}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 1
+		y = 4
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			ENG = {
+				has_civil_war = no
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_country_leader_trait = god_save_the_king
+        }
+	}
+	focus = {
+		id = HAN_union_diplomacy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = {focus = HAN_the_union_restored}
+		prerequisite = {focus = HAN_god_save_the_king}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 0
+		y = 5
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = etablish_a_new_world_order
+        }
+	}
+	focus = {
+		id = HAN_united_front_against_france
+		icon = GFX_goal_tripartite_pact
+		prerequisite = {focus = HAN_union_diplomacy}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 0
+		y = 6
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_faction = united_front_against_french_domination
+        }
+	}
+	focus = {
+		id = HAN_united_the_lowlands
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = {focus = HAN_united_front_against_france}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = -2
+		y = 7
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = HOL
+            }
+			add_state_core = 36
+			add_state_core = 35
+			add_state_core = 7
+        }
+	}
+	focus = {
+		id = HAN_the_southern_threat
+		icon = GFX_goal_generic_major_war
+		prerequisite = {focus = HAN_united_front_against_france}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 0
+		y = 7
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = BAY
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = SAX
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = WUR
+            }
+        }
+	}
+	focus = {
+		id = HAN_a_new_march_on_paris
+		icon = GFX_goal_generic_major_war
+		prerequisite = {focus = HAN_united_front_against_france}
+		relative_position_id = HAN_the_rise_of_hanover
+
+		allow_branch = {
+			has_country_flag = personal_union_enabled
+		}
+
+
+		x = 2
+		y = 7
+
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = BEL
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = RCO
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = FRA
+            }
+        }
+	}
+	focus = {
+		id = HAN_strengthen_the_army
+		icon = GFX_focus_generic_little_entente
+		x = 50
+		y = 0
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = land_doctrine
+			uses = 2
+			bonus = 1
+		 }
+		}
+	}
+	focus = {
+		id = HAN_the_airforce
+		icon = GFX_focus_generic_aircraft_production
+		x = 55
+		y = 1
+		prerequisite = {focus = HAN_strengthen_the_army}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 air_experience = 150
+		}
+	}
+	focus = {
+		id = HAN_tactical_bomber
+		icon = GFX_goal_generic_occupy_start_war
+		x = 55
+		y = 3
+		prerequisite = {focus = HAN_the_airforce}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = tactical_bomber
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_strategic_bomber
+		icon = GFX_goal_generic_air_bomber
+		x = 55
+		y = 5
+		prerequisite = {focus = HAN_tactical_bomber}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = cat_strategic_bomber
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_naval_bomber
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 56
+		y = 2
+		prerequisite = {focus = HAN_the_airforce}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = naval_bomber
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_cas
+		icon = GFX_goal_generic_occupy_start_war
+		x = 56
+		y = 4
+		prerequisite = {focus = HAN_naval_bomber}
+		mutually_exclusive = { }
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = cas_bomber
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_new_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 54
+		y = 2
+		prerequisite = {focus = HAN_the_airforce}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = light_fighter
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_heavy_fighers
+		icon = GFX_goal_generic_build_airforce
+		x = 54
+		y = 4
+		prerequisite = {focus = HAN_new_fighters}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = cat_heavy_fighter
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_the_army_of_hanover
+		icon = GFX_goal_rhineland
+		x = 50
+		y = 1
+		prerequisite = {focus = HAN_strengthen_the_army}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 army_experience = 150
+		}
+	}
+	focus = {
+		id = HAN_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 48
+		y = 2
+		prerequisite = {focus = HAN_the_army_of_hanover}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = artillery
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_we_need_better_guns
+		icon = GFX_focus_secret_rearmament
+		x = 50
+		y = 2
+		prerequisite = {focus = HAN_the_army_of_hanover}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = infantry_weapons
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_new_tanks
+		icon = GFX_focus_generic_tank_production
+		x = 52
+		y = 2
+		prerequisite = {focus = HAN_the_army_of_hanover}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = armor
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_army_of_hanover
+		icon = GFX_focus_generic_military_mission
+		x = 50
+		y = 3
+		prerequisite = {focus = HAN_we_need_better_guns}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		prerequisite = {focus = HAN_new_tanks}
+		prerequisite = {focus = HAN_artillery}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = army_of_hanover
+		}
+	}
+	focus = {
+		id = HAN_etablish_the_eh
+		icon = GFX_goal_reichsautobahn
+		x = 40
+		y = 0
+		prerequisite = {}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = industry
+			uses = 2
+			bonus = 1
+		 }
+		}
+	}
+	focus = {
+		id = HAN_continue_the_development
+		icon = GFX_focus_generic_truck
+		x = 3
+		y = 1
+		prerequisite = {focus = HAN_etablish_the_eh}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = continue_the_development
+		}
+	}
+	focus = {
+		id = HAN_create_an_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 6
+		y = 2
+		prerequisite = {focus = HAN_continue_the_development}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_expand_our_arsenal
+		icon = GFX_goal_generic_army_artillery
+		x = 6
+		y = 3
+		prerequisite = {focus = HAN_create_an_arsenal}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_hanoverian_industry
+		icon = GFX_focus_generic_self_propelled_gun
+		x = 6
+		y = 4
+		prerequisite = {focus = HAN_expand_our_arsenal}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_steel_deposits
+		icon = GFX_focus_generic_steel
+		x = 3
+		y = 2
+		prerequisite = {focus = HAN_continue_the_development}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+           type = steel
+           amount = 15
+           state = 59
+         }
+		}
+	}
+	focus = {
+		id = HAN_expand_new_mines
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 4
+		y = 3
+		prerequisite = {focus = HAN_steel_deposits}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+           type = steel
+           amount = 30
+           state = 59
+         }
+		}
+	}
+	focus = {
+		id = HAN_tungsten
+		icon = GFX_focus_generic_tungsten
+		x = 4
+		y = 4
+		prerequisite = {focus = HAN_expand_new_mines}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+           type = tungsten
+           amount = 20
+           state = 57
+         }
+		}
+	}
+	focus = {
+		id = HAN_expand_oil_field
+		icon = GFX_goal_generic_oil_refinery
+		x = 2
+		y = 3
+		prerequisite = {focus = HAN_steel_deposits}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+           type = oil
+           amount = 20
+           state = 59
+         }
+		}
+	}
+	focus = {
+		id = HAN_aluminium
+		icon = GFX_focus_generic_aluminum
+		x = 2
+		y = 4
+		prerequisite = {focus = HAN_expand_oil_field}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+           type = aluminium
+           amount = 20
+           state = 56
+         }
+		}
+	}
+	focus = {
+		id = HAN_the_final_industrialiazation
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 2
+		prerequisite = {focus = HAN_continue_the_development}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_raffinery_technologies
+		icon = GFX_focus_generic_stockpile_fuel
+		x = 0
+		y = 3
+		prerequisite = {focus = HAN_the_final_industrialiazation}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = synthetic_refinery
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = synthetic_refinery
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				category = cat_synth_oil
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = HAN_synthetic_rubber
+		icon = GFX_focus_generic_improve_roads
+		x = 0
+		y = 4
+		prerequisite = {focus = HAN_raffinery_technologies}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_synth_rubber
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = HAN_bremen_research_institute
+		icon = GFX_focus_research2
+		x = -1
+		y = 5
+		prerequisite = {focus = HAN_synthetic_rubber focus = HAN_invest_in_dortmund}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 59
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = HAN_industrial_complex_of_hanover
+		icon = GFX_focus_generic_industry_2
+		x = -2
+		y = 3
+		prerequisite = {focus = HAN_the_final_industrialiazation}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 59
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			59 = {
+		 add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_invest_in_dortmund
+		icon = GFX_goal_generic_construction2
+		x = -2
+		y = 4
+		prerequisite = {focus = HAN_industrial_complex_of_hanover}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = HAN_etablish_the_eh
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 57
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			57 = {
+		 add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_hanoverian_fleet
+		icon = GFX_focus_generic_destroyer
+		x = -5
+		y = 1
+		prerequisite = {focus = HAN_etablish_the_eh}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_cruisers
+		icon = GFX_focus_generic_cruiser2
+		x = -6
+		y = 2
+		prerequisite = {focus = HAN_hanoverian_fleet}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = cl_tech
+			uses = 1
+			bonus = 0.75
+		 }
+		 add_tech_bonus = {
+			category = ca_tech
+			uses = 1
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		x = -6
+		y = 4
+		prerequisite = {focus = HAN_cruisers}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = bb_tech
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_a_regional_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		x = -5
+		y = 5
+		prerequisite = {focus = HAN_battleships}
+		prerequisite = {focus = HAN_submarines}
+		prerequisite = {focus = HAN_expand_the_fleet}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = a_regional_fleet
+		}
+	}
+	focus = {
+		id = HAN_destroyers
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -4
+		y = 2
+		prerequisite = {focus = HAN_hanoverian_fleet}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = dd_tech
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = -4
+		y = 4
+		prerequisite = {focus = HAN_destroyers}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = ss_tech
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = HAN_expand_the_fleet
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -5
+		y = 3
+		prerequisite = {focus = HAN_hanoverian_fleet}
+		relative_position_id = HAN_etablish_the_eh
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HAN_prepare_for_the_storm
+		icon = GFX_goal_generic_military_sphere
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_defensive_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.15
+		 add_political_power = 200
+		}
+	}
+	focus = {
+		id = HAN_the_beythien_line
+		icon = GFX_goal_fortify_the_westwall
+		x = 0
+		y = 1
+		prerequisite = {focus = HAN_prepare_for_the_storm}
+		mutually_exclusive = { }
+		relative_position_id = HAN_prepare_for_the_storm
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_defensive_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 59 = {
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 6299
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 6263
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 6377
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3395
+        }
+		}
+		}
+	}
+	focus = {
+		id = HAN_wesser_fallback_line
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 2
+		prerequisite = {focus = HAN_the_beythien_line}
+		mutually_exclusive = { }
+		relative_position_id = HAN_prepare_for_the_storm
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_defensive_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 57 = {
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 405
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3355
+        }
+		}
+		 56 = {
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3234
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3326
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 309
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 341
+        }
+		}
+		}
+	}
+}

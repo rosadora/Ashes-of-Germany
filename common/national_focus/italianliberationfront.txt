@@ -1,0 +1,2721 @@
+﻿focus_tree = {
+	id = ilf_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = ILF
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = ILF_a_call_from_the_poor_south
+		icon = GFX_focus_generic_italy_propaganda
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ILF_kick_them_out_of_italy
+		icon = GFX_focus_ITA_the_social_republic_prevails
+		x = 0
+		y = 2
+		prerequisite = {focus = ILF_a_call_from_the_poor_south}
+		mutually_exclusive = { }
+		relative_position_id = ILF_a_call_from_the_poor_south
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			117 = {
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ILF
+                }
+			}
+		}
+	}
+	focus = {
+		id = ILF_sacred_union
+		icon = GFX_focus_ETH_invite_italian_settlers
+		x = -1
+		y = 1
+		prerequisite = {focus = ILF_a_call_from_the_poor_south}
+		mutually_exclusive = { }
+		relative_position_id = ILF_a_call_from_the_poor_south
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = sacred_union
+		}
+	}
+	focus = {
+		id = ILF_we_shall_never_surrender
+		icon = GFX_focus_SWE_lottakoren
+		x = -2
+		y = 2
+		prerequisite = {focus = ILF_sacred_union}
+		mutually_exclusive = { }
+		relative_position_id = ILF_a_call_from_the_poor_south
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = struggle_for_democracy
+		}
+	}
+	focus = {
+		id = ILF_mobilize_the_south
+		icon = GFX_focus_generic_reorient_production
+		x = 1
+		y = 1
+		prerequisite = {focus = ILF_a_call_from_the_poor_south}
+		mutually_exclusive = { }
+		relative_position_id = ILF_a_call_from_the_poor_south
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stabilty = -0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_raise_the_volunteers
+		icon = GFX_focus_generic_manpower
+		x = 2
+		y = 2
+		prerequisite = {focus = ILF_mobilize_the_south}
+		mutually_exclusive = { }
+		relative_position_id = ILF_a_call_from_the_poor_south
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_manpower = 50000
+		}
+		
+	}
+	focus = {
+		id = ILF_lessons_of_war
+		icon = GFX_focus_ITA_moschettieri_del_duce
+		x = 0
+		y = 3
+		prerequisite = {focus = ILF_raise_the_volunteers}
+		prerequisite = {focus = ILF_kick_them_out_of_italy}
+		prerequisite = {focus = ILF_we_shall_never_surrender}
+		mutually_exclusive = { }
+		relative_position_id = ILF_a_call_from_the_poor_south
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		   swap_ideas = {
+			remove_idea = esercito_dei_non_idonei
+			add_idea = italian_democratic_army
+		   }
+		}
+		
+	}
+	focus = {
+		id = ILF_defence_of_the_cities
+		icon = GFX_goal_fortify_the_westwall
+		x = -3
+		y = 1
+		prerequisite = {focus = ILF_lessons_of_war}
+		mutually_exclusive = { }
+		relative_position_id = ILF_lessons_of_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		   117 = {
+			add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 819
+                }
+		   }
+		   849 = {
+			add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 883
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 9784
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 11837
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 11998
+                }
+		   }
+		   156 = {
+			add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 9990
+                }
+		   }
+		}
+	}
+	focus = {
+		id = ILF_take_advantage_of_the_terrain
+		icon = GFX_focus_SWE_varnplikt
+		x = -1
+		y = 1
+		prerequisite = {focus = ILF_lessons_of_war}
+		mutually_exclusive = { }
+		relative_position_id = ILF_lessons_of_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		   add_ideas = warriors_from_the_moutains
+		}
+	}
+	focus = {
+		id = ILF_the_last_delivery
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 1
+		y = 1
+		prerequisite = {focus = ILF_lessons_of_war}
+		mutually_exclusive = { }
+		relative_position_id = ILF_lessons_of_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+		   add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = 10000
+              producer = ILF
+            }
+		}
+	}
+	focus = {
+		id = ILF_reach_the_eternal_city
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_lessons_of_war}
+		mutually_exclusive = { }
+		relative_position_id = ILF_lessons_of_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = reach_the_eternal_city
+		}
+	}
+	focus = {
+		id = ILF_the_referundum
+		icon = GFX_focus_hun_elect_a_king
+		x = 25
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = ILF_ref_campaign
+			unlock_decision_category_tooltip = ILF_the_referendum_category
+			set_variable = {
+               var = var_ilf_republican_sentiment
+               value = 42
+            }
+			set_variable = {
+               var = var_ilf_monarchist_sentiment
+               value = 34
+            }
+			set_variable = {
+               var = var_ilf_abstention
+               value = 24
+            }
+		}
+	}
+	focus = {
+		id = ILF_assert_independance
+		icon = GFX_focus_attack_italy
+		x = -5
+		y = 1
+		prerequisite = {focus = ILF_the_referundum}
+		mutually_exclusive = {focus = ILF_republicca_italiana}
+		relative_position_id = ILF_the_referundum
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = monarchist_victory
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			set_cosmetic_tag = ILF_two_sicilies
+			retire_ideology_leader = social_democracy
+			retire_ideology_leader = classical_liberalism
+			retire_ideology_leader = social_liberalism
+			add_country_leader_role = {
+              character = ILF_Ferdinand_Pius
+              promote_leader = yes
+             country_leader = {
+              ideology = classical_liberalism_category
+              expire = "1965.1.1.1"
+              traits = { king_of_two_sicilies }
+             }
+            }
+			add_country_leader_role = {
+              character = ILF_Ferdinand_Pius
+              promote_leader = yes
+             country_leader = {
+              ideology = social_liberalism_category
+              expire = "1965.1.1.1"
+              traits = { king_of_two_sicilies }
+             }
+            }
+			add_country_leader_role = {
+              character = ILF_Ferdinand_Pius
+              promote_leader = yes
+             country_leader = {
+              ideology = social_democracy_category
+              expire = "1965.1.1.1"
+              traits = { king_of_two_sicilies }
+             }
+            }
+			add_popularity = {
+				popularity = 0.025
+				ideology = democratic
+			}
+			add_popularity = {
+				popularity = 0.05
+				ideology = neutrality
+			}
+			country_event = {
+				id = ilf.3
+				days = 10
+			}
+			country_event = {
+				id = ilf.4
+				days = 20
+			}
+			country_event = {
+				id = ilf.5
+				days = 25
+			}
+			country_event = {
+				id = ilf.6
+				days = 30
+			}
+			country_event = {
+				id = ilf.7
+				days = 35
+			}
+		}
+	}
+	focus = {
+		id = ILF_strengthen_independantist_spirit
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_assert_independance}
+		relative_position_id = ILF_assert_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = indipendenza_o_morte
+		}
+	}
+	focus = {
+		id = ILF_partition_of_italy
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = -3
+		y = 1
+		prerequisite = {focus = ILF_assert_independance}
+		relative_position_id = ILF_assert_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		    has_global_flag = italian_civil_war_over
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = ilf.9
+				days = 1
+			}
+			release_puppet = LBV
+			release_puppet = SPM
+			release_puppet = PAP
+			release_puppet = TOS
+			hidden_effect = {
+				transfer_state = 114
+			}
+		}
+	}
+	focus = {
+		id = ILF_secure_a_french_alliance
+		icon = GFX_focus_chi_reach_out_to_france
+		x = -3
+		y = 1
+		prerequisite = {focus = ILF_partition_of_italy}
+		relative_position_id = ILF_partition_of_italy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		    country_exists = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			FRA = {
+			country_event = {
+				id = ilf.10
+				days = 1
+			}
+			}
+		}
+	}
+	focus = {
+		id = ILF_avenge_1458
+		icon = GFX_goal_attack_nationalist_spain
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_partition_of_italy}
+		relative_position_id = ILF_partition_of_italy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		    country_exists = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 165
+			add_state_core = 794
+			add_state_core = 167
+			add_state_core = 177
+			create_wargoal = {
+             type = take_state_focus
+             target = SPR
+            }
+		}
+	}
+	focus = {
+		id = ILF_our_little_place_under_the_sun
+		icon = GFX_focus_generic_attack_ethiopia
+		x = 2
+		y = 1
+		prerequisite = {focus = ILF_partition_of_italy}
+		relative_position_id = ILF_partition_of_italy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		    country_exists = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 550
+			add_state_claim = 559
+			add_state_claim = 844
+			add_state_claim = 835
+			add_state_claim = 836
+			add_state_claim = 837
+			add_state_claim = 838
+			add_state_claim = 839
+			add_state_claim = 840
+			add_state_claim = 841
+			add_state_claim = 842
+			add_state_claim = 843
+			add_state_claim = 271
+			add_state_claim = 908
+			create_wargoal = {
+             type = take_state_focus
+             target = ETH
+            }
+		}
+	}
+	focus = {
+		id = ILF_king_of_spain_aragon_italy_and_two_sicilies
+		icon = GFX_goal_king_of_everything
+		x = -1
+		y = 2
+		prerequisite = {focus = ILF_avenge_1458}
+		prerequisite = {focus = ILF_secure_a_french_alliance}
+		relative_position_id = ILF_partition_of_italy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		    country_exists = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = king_of_aragon
+			add_country_leader_trait = king_of_spain
+		}
+	}
+	focus = {
+		id = ILF_republicca_italiana
+		icon = GFX_focus_ITA_the_italian_republic
+		x = 5
+		y = 1
+		prerequisite = {focus = ILF_the_referundum}
+		mutually_exclusive = {focus = ILF_assert_independance}
+		relative_position_id = ILF_the_referundum
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = republican_victory
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = ilf.3
+				days = 10
+			}
+			country_event = {
+				id = ilf.4
+				days = 20
+			}
+			country_event = {
+				id = ilf.5
+				days = 25
+			}
+			country_event = {
+				id = ilf.6
+				days = 30
+			}
+			country_event = {
+				id = ilf.7
+				days = 35
+			}
+		}
+	}
+	focus = {
+		id = ILF_italia_viva
+		icon = GFX_focus_ITA_cavalry_charge
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_republicca_italiana}
+		relative_position_id = ILF_republicca_italiana
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = italia_viva
+		}
+	}
+	focus = {
+		id = ILF_proclamation_of_unity
+		icon = GFX_focus_generic_italy_propaganda
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_republicca_italiana}
+		relative_position_id = ILF_republicca_italiana
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = italian_civil_war_over
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = ILF_italia
+			set_capital = {state = 2}
+			add_state_core = 2
+			add_state_core = 157
+			add_state_core = 162
+			add_state_core = 161
+			add_state_core = 158
+			add_state_core = 159
+			add_state_core = 160
+			add_state_core = 39
+			add_state_core = 850
+			add_state_core = 736
+			add_state_core = 852
+		}
+	}
+	focus = {
+		id = ILF_declaration_on_liberty
+		icon = GFX_focus_generic_league_of_nations
+		x = -2
+		y = 1
+		prerequisite = {focus = ILF_proclamation_of_unity}
+		relative_position_id = ILF_proclamation_of_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = axis_of_freedom
+			release_puppet = LBA
+			CRO = {
+				transfer_state = 163
+			}
+			news_event = news.3062
+		}
+	}
+	focus = {
+		id = ILF_enforce_the_treaties
+		icon = GFX_focus_generic_court
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_proclamation_of_unity}
+		relative_position_id = ILF_proclamation_of_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				AUS = {
+					NOT = {
+						has_idea = saint_germain_en_laye_treaty
+					}
+				}
+				HUN = {
+					NOT = {
+						has_idea = HUN_treaty_of_triannon
+					}
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+		      type = topple_government
+		      target = AUS
+	        }
+			create_wargoal = {
+		      type = topple_government
+		      target = HUN
+	        }
+		}
+	}
+	focus = {
+		id = ILF_italian_intervention
+		icon = GFX_focus_attack_italy
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_proclamation_of_unity}
+		relative_position_id = ILF_proclamation_of_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FRA = {
+				has_war_with = PRS
+				surrender_progress > 0.1
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+		      type = topple_government
+		      target = PRS
+	        }
+		}
+	}
+	focus = {
+		id = ILF_missione_decolonizzatrice
+		icon = GFX_focus_generic_africa_liberation
+		x = 1
+		y = 2
+		prerequisite = {focus = ILF_italian_intervention focus = ILF_enforce_the_treaties}
+		relative_position_id = ILF_proclamation_of_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.4
+			has_army_manpower = {
+				size > 800000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 10
+			create_wargoal = {
+		      type = topple_government
+		      target = FRA
+	        }
+			create_wargoal = {
+		      type = topple_government
+		      target = ENG
+	        }
+		}
+	}
+	focus = {
+		id = ILF_elect_first_national_assembly
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		x = -5
+		y = 1
+		prerequisite = {focus = ILF_republicca_italiana focus = ILF_assert_independance}
+		relative_position_id = ILF_republicca_italiana
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = italian_civil_war_over
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			set_variable = {
+             var = ldcri_pop
+             value = party_popularity@classical_marxism
+			}
+			add_to_variable = {
+             var = ldcri_pop
+             value = party_popularity@communism
+			}
+			add_to_variable = {
+             var = ldcri_pop
+             value = party_popularity@libertarian_socialism
+			}
+
+			set_variable = {
+             var = fsi_pop
+             value = party_popularity@social_democracy
+			}
+
+			set_variable = {
+             var = bl_pop
+             value = party_popularity@classical_liberalism
+			}
+			add_to_variable = {
+             var = bl_pop
+             value = party_popularity@social_liberalism
+			}
+
+			set_variable = {
+             var = prdds_pop
+             value = party_popularity@democratic
+			}
+			add_to_variable = {
+             var = prdds_pop
+             value = party_popularity@neutrality
+			}
+
+			set_variable = {
+             var = msi_pop
+             value = party_popularity@fascism
+			}
+			add_to_variable = {
+             var = msi_pop
+             value = party_popularity@ultra_nationalism
+			}
+
+			custom_effect_tooltip = ILF_elect_campaign
+			unlock_decision_category_tooltip = ILF_first_national_assembly
+		}
+	}
+	focus = {
+		id = ILF_yellow_rose_majority
+		icon = GFX_goal_social_progressivism
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_elect_first_national_assembly}
+		relative_position_id = ILF_elect_first_national_assembly
+		mutually_exclusive = {focus = ILF_monarchist_majority}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_active_mission = ILF_first_national_assembly_election_day
+			}
+			custom_trigger_tooltip = {
+				tooltip = ILF_liberal_socialist_majority_trigger_tt
+				set_temp_variable = { PRS_democratic_coalition_support = party_popularity@classical_liberalism }
+				add_to_temp_variable = { PRS_democratic_coalition_support = party_popularity@social_liberalism }
+				add_to_temp_variable = { PRS_democratic_coalition_support = party_popularity@social_democracy }
+				check_variable = { PRS_democratic_coalition_support > 0.5 }
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = unione_precaria
+		}
+	}
+	focus = {
+		id = ILF_keynesian_recovery
+		icon = GFX_focus_DEN_no_regulations
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_yellow_rose_majority}
+		relative_position_id = ILF_yellow_rose_majority
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = keynesian_politics
+				days = 300
+			}
+		}
+	}
+	focus = {
+		id = ILF_great_works
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_keynesian_recovery}
+		relative_position_id = ILF_keynesian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = great_works
+		}
+	}
+	focus = {
+		id = ILF_mass_nationalization
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 2
+		y = 1
+		prerequisite = {focus = ILF_keynesian_recovery}
+		relative_position_id = ILF_keynesian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.075
+			add_ideas = nationalized_major_compagnies
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_urbanization_of_the_country
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 1
+		prerequisite = {focus = ILF_keynesian_recovery}
+		relative_position_id = ILF_keynesian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = urbanization_of_the_country
+			
+		}
+	}
+	focus = {
+		id = ILF_the_italian_miracle
+		icon = GFX_focus_generic_railroad
+		x = 2
+		y = 2
+		prerequisite = {focus = ILF_mass_nationalization}
+		prerequisite = {focus = ILF_urbanization_of_the_country}
+		prerequisite = {focus = ILF_great_works}
+		relative_position_id = ILF_keynesian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_a_professional_army
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_yellow_rose_majority}
+		relative_position_id = ILF_yellow_rose_majority
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = italian_democratic_army
+				add_idea = italian_democratic_army2
+			}
+		}
+	}
+	focus = {
+		id = ILF_purge_the_army
+		icon = GFX_focus_generic_conspiracy
+		x = -1
+		y = 1
+		prerequisite = {focus = ILF_a_professional_army}
+		relative_position_id = ILF_a_professional_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			retire_character = ILF_Giovanni_de_Lorenzo
+		}
+	}
+	focus = {
+		id = ILF_every_democrat_a_gun
+		icon = GFX_focus_SWE_lottakoren
+		x = 1
+		y = 1
+		prerequisite = {focus = ILF_a_professional_army}
+		relative_position_id = ILF_a_professional_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = every_democrat_a_gun
+		}
+	}
+	focus = {
+		id = ILF_quality_above_all
+		icon = GFX_focus_NORDIC_com_selector_army
+		x = 0
+		y = 2
+		prerequisite = {focus = ILF_purge_the_army}
+		prerequisite = {focus = ILF_every_democrat_a_gun}
+		relative_position_id = ILF_a_professional_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = italian_democratic_army2
+				add_idea = italian_democratic_army3
+			}
+		}
+	}
+	focus = {
+		id = ILF_war_is_coming
+		icon = GFX_focus_generic_italy_propaganda
+		x = 2
+		y = 2
+		prerequisite = {focus = ILF_purge_the_army}
+		prerequisite = {focus = ILF_every_democrat_a_gun}
+		relative_position_id = ILF_a_professional_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.2
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = ILF_monarchist_majority
+		icon = GFX_focus_generic_monarchy_1
+		x = -3
+		y = 1
+		prerequisite = {focus = ILF_elect_first_national_assembly}
+		relative_position_id = ILF_elect_first_national_assembly
+		mutually_exclusive = {focus = ILF_yellow_rose_majority}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_active_mission = ILF_first_national_assembly_election_day
+			}
+			custom_trigger_tooltip = {
+				tooltip = ILF_monarchist_majority_trigger_tt
+				set_temp_variable = { ILF_monarchist_majority_support = party_popularity@democratic }
+				add_to_temp_variable = { ILF_monarchist_majority_support = party_popularity@neutrality }
+				add_to_temp_variable = { ILF_monarchist_majority_support = party_popularity@ultra_nationalism }
+				add_to_temp_variable = { ILF_monarchist_majority_support = party_popularity@fascism }
+				check_variable = { ILF_monarchist_majority_support > 0.5 }
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = unione_precaria
+			set_politics = {
+	         ruling_party = neutrality
+			}
+		}
+	}
+	focus = {
+		id = ILF_reconstruction_in_austerity
+		icon = GFX_goal_end_the_crisis
+		x = -3
+		y = 1
+		prerequisite = {focus = ILF_monarchist_majority}
+		relative_position_id = ILF_monarchist_majority
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = austerity_mesures
+				days = 300
+			}
+		}
+	}
+	focus = {
+		id = ILF_nationalization_of_key_sectors
+		icon = GFX_focus_DEN_limited_regulations
+		x = -2
+		y = 1
+		prerequisite = {focus = ILF_reconstruction_in_austerity}
+		relative_position_id = ILF_reconstruction_in_austerity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = nationalized_major_compagnies
+		}
+	}
+	focus = {
+		id = ILF_reduce_unemployment
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_reconstruction_in_austerity}
+		relative_position_id = ILF_reconstruction_in_austerity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = ILF_deregulate_the_market
+		icon = GFX_focus_generic_industry_3
+		x = -4
+		y = 1
+		prerequisite = {focus = ILF_reconstruction_in_austerity}
+		relative_position_id = ILF_reconstruction_in_austerity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_towards_a_strong_economy
+		icon = GFX_focus_SWE_landsverk
+		x = -2
+		y = 2
+		prerequisite = {focus = ILF_reduce_unemployment}
+		prerequisite = {focus = ILF_deregulate_the_market}
+		prerequisite = {focus = ILF_nationalization_of_key_sectors}
+		relative_position_id = ILF_reconstruction_in_austerity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_militarisation_of_the_society
+		icon = GFX_goal_patriotism
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_monarchist_majority}
+		relative_position_id = ILF_monarchist_majority
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = ILF_patriotic_education
+		icon = GFX_focus_FIN_chaplains
+		x = -1
+		y = 1
+		prerequisite = {focus = ILF_militarisation_of_the_society}
+		relative_position_id = ILF_militarisation_of_the_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = patriotic_education
+		}
+	}
+	focus = {
+		id = ILF_cultural_war_against_liberalism
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = -2
+		y = 2
+		prerequisite = {focus = ILF_patriotic_education}
+		relative_position_id = ILF_militarisation_of_the_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = ILF_increase_the_budget
+		icon = GFX_focus_mex_privatisation
+		x = 1
+		y = 1
+		prerequisite = {focus = ILF_militarisation_of_the_society}
+		relative_position_id = ILF_militarisation_of_the_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_army_reorganization
+		icon = GFX_focus_generic_manpower
+		x = 0
+		y = 2
+		prerequisite = {focus = ILF_patriotic_education}
+		prerequisite = {focus = ILF_increase_the_budget}
+		relative_position_id = ILF_militarisation_of_the_society
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = italian_democratic_army
+		}
+	}
+	focus = {
+		id = ILF_anti_communist_focus
+		icon = GFX_goal_hunt_the_leftists
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_monarchist_majority focus = ILF_yellow_rose_majority}
+		relative_position_id = ILF_monarchist_majority
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = ILF_open_new_mines
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_anti_communist_focus}
+		relative_position_id = ILF_anti_communist_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			117 = {
+				add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_resource = {
+				type = steel 
+				amount = 25
+			}
+			add_resource = {
+				type = aluminium 
+				amount = 15
+			}
+			}
+		}
+	}
+	focus = {
+		id = ILF_refinery_construction
+		icon = GFX_goal_generic_oil_refinery
+		x = -1
+		y = 2
+		prerequisite = {focus = ILF_open_new_mines}
+		relative_position_id = ILF_anti_communist_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_protect_our_sky
+		icon = GFX_focus_SWE_let_fly_all_guns
+		x = 1
+		y = 2
+		prerequisite = {focus = ILF_open_new_mines}
+		relative_position_id = ILF_anti_communist_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = ILF_assert_independance
+				}
+				every_owned_state = {
+				limit = {
+					is_controlled_by = ILF
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			}
+			IF = {
+				limit = {
+					has_completed_focus = ILF_republicca_italiana
+				}
+				every_owned_state = {
+				limit = {
+					is_controlled_by = ILF
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+		}
+	}
+	focus = {
+		id = ILF_forze_armate
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 40
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		dynamic = yes
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = italian_civil_war_over
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = ILF_la_nostra_aeronotica
+		icon = GFX_goal_generic_build_airforce
+		x = 3
+		y = 1
+		prerequisite = {focus = ILF_forze_armate}
+		mutually_exclusive = { }
+		relative_position_id = ILF_forze_armate
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_invest_on_planes_research
+		icon = GFX_goal_generic_air_fighter
+		x = -2
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_aeronotica}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_aeronotica
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = light_air
+			uses = 3
+			bonus = 0.5
+		 }
+		}
+	}
+	focus = {
+		id = ILF_increase_aircraft_production
+		icon = GFX_focus_SWE_marauder_bombers
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_aeronotica}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_aeronotica
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = cheap_planes
+		}
+	}
+	focus = {
+		id = ILF_rethink_the_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		x = 2
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_aeronotica}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_aeronotica
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 3
+	         category = air_doctrine
+            }
+		}
+	}
+	focus = {
+		id = ILF_la_nostra_marina
+		icon = GFX_goal_generic_navy_cruiser
+		x = -3
+		y = 1
+		prerequisite = {focus = ILF_forze_armate}
+		mutually_exclusive = { }
+		relative_position_id = ILF_forze_armate
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_meditteranean_sea_hulls
+		icon = GFX_focus_generic_adriatic_sea_focus
+		x = -2
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_marina}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_marina
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+			category = ss_tech
+			uses = 2
+			bonus = 0.5
+		 }
+		 add_tech_bonus = {
+			category = dd_tech
+			uses = 2
+			bonus = 0.5
+		 }
+		 add_tech_bonus = {
+			category = cl_tech
+			uses = 2
+			bonus = 0.5
+		 }
+		}
+	}
+	focus = {
+		id = ILF_review_of_the_tactics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_marina}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_marina
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 3
+	         category = naval_doctrine
+            }
+		}
+	}
+	focus = {
+		id = ILF_expand_sicilian_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_marina}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_marina
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 115
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			115 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_la_nostra_armata
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 3
+		prerequisite = {focus = ILF_forze_armate}
+		mutually_exclusive = { }
+		relative_position_id = ILF_forze_armate
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ILF
+					is_controlled_by = ILF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_firepower
+		icon = GFX_goal_generic_army_artillery
+		x = -1
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_armata}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_armata
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = artillery
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = ILF_and_quickness
+		icon = GFX_goal_generic_army_tanks
+		x = 1
+		y = 1
+		prerequisite = {focus = ILF_la_nostra_armata}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_armata
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			category = armor
+			uses = 2
+			bonus = 0.75
+		 }
+		}
+	}
+	focus = {
+		id = ILF_a_new_generation_of_scientists
+		icon = GFX_focus_SWE_education_reform
+		x = 0
+		y = 2
+		prerequisite = {focus = ILF_and_quickness}
+		prerequisite = {focus = ILF_firepower}
+		mutually_exclusive = { }
+		relative_position_id = ILF_la_nostra_armata
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_research_slot = 1
+		}
+	}
+}

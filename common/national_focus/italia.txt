@@ -1,0 +1,2411 @@
+focus_tree = {
+	id = ita_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = ITA
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = ITA_il_duce
+		icon = GFX_focus_ITA_culto_del_duce
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = ITA_strengthen_the_camicie_nere
+		icon = GFX_focus_ITA_blackshirts
+		x = 0
+		y = 1
+		prerequisite = {focus = ITA_il_duce}
+		relative_position_id = ITA_il_duce
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = camicie_nere
+		}
+	}
+	focus = {
+		id = ITA_raid_the_cells
+		icon = GFX_focus_ITA_banda_carita
+		x = -3
+		y = 1
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_global_flag = italian_civil_war
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.025
+			add_popularity = {
+				popularity = -0.02
+				ideology = libertarian_socialism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = communism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = classical_marxism
+			}
+		}
+	}
+	focus = {
+		id = ITA_convince_industrialists_to_move_their_factories
+		icon = GFX_focus_ITA_northern_industry
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_global_flag = italian_civil_war
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			158 = {
+				remove_building = {
+                 type = arms_factory
+                 level = 1
+               }
+			   remove_building = {
+                 type = industrial_complex
+                 level = 1
+               }
+			}
+			159 = {
+				remove_building = {
+                 type = arms_factory
+                 level = 1
+               }
+			   remove_building = {
+                 type = industrial_complex
+                 level = 1
+               }
+			}
+			160 = {
+				remove_building = {
+                 type = arms_factory
+                 level = 1
+               }
+			   remove_building = {
+                 type = industrial_complex
+                 level = 1
+               }
+			}
+			2 = {
+				add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+               }
+			   add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+               }
+			}
+			162 = {
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+               }
+			   add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+               }
+			}
+		}
+	}
+	focus = {
+		id = ITA_purge_the_administration
+		icon = GFX_focus_generic_court
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_global_flag = italian_civil_war
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = -0.02
+				ideology = democratic
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = social_liberalism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = social_democracy
+			}
+		}
+	}
+	focus = {
+		id = ITA_warn_the_military_staff
+		icon = GFX_focus_generic_fascist_troops
+		x = 3
+		y = 1
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_global_flag = italian_civil_war
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = ITA_camicie_nere_supremacy
+		icon = GFX_focus_generic_fascist_propaganda
+		x = -2
+		y = 2
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = ITA_viva_il_duce
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = camicie_nere2
+				add_idea = camicie_nere3
+			}
+		}
+	}
+	focus = {
+		id = ITA_reinforce_the_state_security
+		icon = GFX_focus_ICE_state_corporatism
+		x = -3
+		y = 3
+		prerequisite = {focus = ITA_camicie_nere_supremacy}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = ITA_viva_il_duce
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_our_mortal_ennemies
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 2
+		y = 2
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = ITA_viva_il_duce
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = anti_communist_focus_ita
+		}
+	}
+	focus = {
+		id = ITA_stir_the_nationalism
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 3
+		y = 3
+		prerequisite = {focus = ITA_our_mortal_ennemies}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = ITA_viva_il_duce
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = ITA_consolidation_of_power
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		x = 0
+		y = 3
+		prerequisite = {focus = ITA_strengthen_the_camicie_nere}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_strengthen_the_camicie_nere
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = democratic
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = social_liberalism
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = social_democracy
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = classical_marxism
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = libertarian_socialism
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = ITA_gather_ou_remaning_army
+		icon = GFX_focus_ETH_invite_italian_settlers
+		x = 0
+		y = 2
+		prerequisite = {focus = ITA_consolidation_of_power}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_consolidation_of_power
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			2 = {
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = ITA
+                }
+			}
+		}
+	}
+	focus = {
+		id = ITA_giovinezza
+		icon = GFX_focus_ITA_to_live_as_a_lion
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_consolidation_of_power}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_consolidation_of_power
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 30000
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = 3000
+              producer = ITA
+            }
+			hidden_effect = {
+			play_song = "giovinezza"
+			}
+		}
+	}
+	focus = {
+		id = ITA_awake_the_society
+		icon = GFX_focus_generic_workers
+		x = -2
+		y = 2
+		prerequisite = {focus = ITA_giovinezza}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_consolidation_of_power
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+			   idea = awake_the_society
+			   days = 200
+			}
+		}
+	}
+	focus = {
+		id = ITA_the_war_of_militias
+		icon = GFX_focus_SWE_lottakoren
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_consolidation_of_power}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_consolidation_of_power
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = camicie_nere
+				add_idea = camicie_nere2
+			}
+		}
+	}
+	focus = {
+		id = ITA_defend_roma
+		icon = GFX_focus_FIN_weapon_caches
+		x = 2
+		y = 2
+		prerequisite = {focus = ITA_the_war_of_militias}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_consolidation_of_power
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			2 = {
+				add_building_construction = {
+                   type = bunker
+                   level = 5
+                   instant_build = yes
+                   province = 9904
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 11751
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 11846
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 11882
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 2
+                   instant_build = yes
+                   province = 9794
+                }
+			}
+		}
+	}
+	focus = {
+		id = ITA_viva_il_duce
+		icon = GFX_focus_ITA_capo_supremo
+		x = 0
+		y = 3
+		prerequisite = {focus = ITA_gather_ou_remaning_army}
+		prerequisite = {focus = ITA_awake_the_society}
+		prerequisite = {focus = ITA_defend_roma}
+		allow_branch = {has_global_flag = italian_civil_war}
+		relative_position_id = ITA_consolidation_of_power
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = esercito_dei_non_idonei
+				add_idea = armata_del_duce
+			}
+		}
+	}
+	focus = {
+		id = ITA_mare_nostrum
+		icon = GFX_focus_generic_mediterranean_sea_focus
+		x = -10
+		y = 0
+		prerequisite = {}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_army_manpower = {
+				size > 700000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_coastal = yes
+				}
+			 add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				limit = {
+					is_coastal = yes
+				}
+			 add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				limit = {
+					is_coastal = yes
+				}
+			 add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				limit = {
+					is_coastal = yes
+				}
+			 add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				limit = {
+					is_coastal = yes
+				}
+			 add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				limit = {
+					is_coastal = yes
+				}
+			 add_building_construction = {
+                type = dockyard
+                level = 1
+                instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = ITA_third_war_in_ethiopia
+		icon = GFX_focus_generic_attack_ethiopia
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_mare_nostrum}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_mare_nostrum
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				country_exists = ETH
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+             type = annex_everything
+             target = ETH
+            }
+			add_state_claim = 550
+			add_state_claim = 559
+			add_state_claim = 844
+			add_state_claim = 835
+			add_state_claim = 836
+			add_state_claim = 837
+			add_state_claim = 271
+			add_state_claim = 838
+			add_state_claim = 839
+			add_state_claim = 840
+			add_state_claim = 841
+			add_state_claim = 842
+			add_state_claim = 843
+			add_state_claim = 908
+		}
+	}
+	focus = {
+		id = ITA_prepare_the_italian_expansion
+		icon = GFX_focus_generic_fascist_troops
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_mare_nostrum}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_mare_nostrum
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = ITA_the_eagle_rise
+		icon = GFX_focus_ITA_italian_hegemony
+		x = 0
+		y = 2
+		prerequisite = {focus = ITA_prepare_the_italian_expansion}
+		prerequisite = {focus = ITA_third_war_in_ethiopia}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_mare_nostrum
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = the_eagle_rise_trait
+		}
+	}
+	focus = {
+		id = ITA_annex_albania
+		icon = GFX_focus_ITA_albanian_irredentism
+		x = 3
+		y = 1
+		prerequisite = {focus = ITA_the_eagle_rise}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_the_eagle_rise
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 44
+			add_state_claim = 934
+			add_state_claim = 805
+			if = {
+				limit = {
+					ALB = { has_war = no }
+				}
+				ALB = { country_event = { id = italy.3 hours = 1 } }
+			}
+			else = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ALB
+					generator = { 44 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_strike_greece
+		icon = GFX_focus_generic_attack_greece
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_annex_albania}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 47
+			add_state_claim = 185
+			add_state_claim = 186
+			add_state_claim = 731
+			add_state_claim = 184
+			add_state_claim = 187
+			add_state_claim = 182
+			create_wargoal = {
+				type = annex_everything
+				target = GRE
+			}
+		}
+	}
+	focus = {
+		id = ITA_recover_the_second_rome
+		icon = GFX_focus_generic_attack_turkey
+		x = 1
+		y = 2
+		prerequisite = {focus = ITA_strike_greece}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 341
+			add_state_claim = 797
+			add_state_claim = 347
+			add_state_claim = 340
+			add_state_claim = 339
+			add_state_claim = 343
+			add_state_claim = 342
+			add_state_claim = 356
+			add_state_claim = 49
+			add_state_claim = 346
+			add_state_claim = 345
+			add_state_claim = 348
+			add_state_claim = 798
+			add_state_claim = 353
+			add_state_claim = 354
+			add_state_claim = 355
+			add_state_claim = 800
+			add_state_claim = 352
+			add_state_claim = 350
+			add_state_claim = 344
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+		}
+	}
+	focus = {
+		id = ITA_secure_the_straits
+		icon = GFX_focus_ITA_subdue_the_sentinels
+		x = -2
+		y = 3
+		prerequisite = {focus = ITA_gauls_campaign}
+		prerequisite = {focus = ITA_recover_the_second_rome}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 118
+			add_state_claim = 116
+			add_state_claim = 183
+			add_state_claim = 452
+			add_state_claim = 447
+			add_state_claim = 552
+			add_state_claim = 907
+			add_state_claim = 456
+			add_state_claim = 457
+			add_state_claim = 446
+			add_state_claim = 453
+			add_state_claim = 454
+			add_state_claim = 455
+			add_state_claim = 675
+			add_state_claim = 291
+			add_state_claim = 676
+			add_state_claim = 656
+			add_state_claim = 765
+			add_state_claim = 658
+			add_state_claim = 659
+
+			add_state_claim = 123
+			add_state_claim = 127
+			add_state_claim = 126
+			add_state_claim = 338
+			add_state_claim = 125
+			add_state_claim = 129
+			add_state_claim = 128
+			add_state_claim = 122
+			add_state_claim = 132
+			add_state_claim = 130
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+		}
+	}
+	focus = {
+		id = ITA_restitution_of_illyria
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_annex_albania}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 44
+			controls_state = 934
+			controls_state = 805
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 104
+			add_state_claim = 105
+			add_state_claim = 106
+			add_state_claim = 107
+			add_state_claim = 108
+			add_state_claim = 109
+			add_state_claim = 102
+			add_state_claim = 853
+			add_state_claim = 804
+			add_state_claim = 45
+			add_state_claim = 764
+			add_state_claim = 802
+			add_state_claim = 803
+			create_wargoal = {
+				type = annex_everything
+				target = YUG
+			}
+		}
+	}
+	focus = {
+		id = ITA_gauls_campaign
+		icon = GFX_focus_attack_france
+		x = -3
+		y = 1
+		prerequisite = {focus = ITA_annex_albania}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			hidden_effect = {
+			add_state_claim = 1
+			add_state_claim = 735
+			add_state_claim = 851
+			add_state_claim = 21
+			add_state_claim = 32
+			add_state_claim = 20
+			add_state_claim = 22
+			add_state_claim = 31
+			add_state_claim = 25
+			add_state_claim = 26
+			add_state_claim = 33
+			add_state_claim = 806
+			add_state_claim = 19
+
+			add_state_claim = 23
+			add_state_claim = 30
+			add_state_claim = 14
+			add_state_claim = 15
+			add_state_claim = 16
+			add_state_claim = 24
+			add_state_claim = 27
+			add_state_claim = 17
+			add_state_claim = 28
+			add_state_claim = 943
+			add_state_claim = 945
+			add_state_claim = 946
+			add_state_claim = 947
+
+			add_state_claim = 948
+			add_state_claim = 949
+			add_state_claim = 950
+			add_state_claim = 951
+			add_state_claim = 952
+			add_state_claim = 18
+			add_state_claim = 785
+			add_state_claim = 29
+			add_state_claim = 6
+			add_state_claim = 34
+			add_state_claim = 8
+			add_state_claim = 51
+			add_state_claim = 42
+
+			add_state_claim = 35
+			add_state_claim = 665
+			add_state_claim = 458
+			add_state_claim = 460
+			add_state_claim = 459
+			add_state_claim = 513
+			add_state_claim = 514
+			add_state_claim = 461
+			add_state_claim = 462
+			add_state_claim = 799
+			add_state_claim = 553
+			add_state_claim = 554
+			add_state_claim = 677
+
+			add_state_claim = 80
+			}
+
+			custom_effect_tooltip = ITA_conquest_of_gaul_focus
+
+			create_wargoal = {
+				type = take_state_focus
+				target = FRA
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = BEL
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LUX
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = HOL
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = RCO
+			}
+		}
+	}
+	focus = {
+		id = ITA_create_new_provinces
+		icon = GFX_focus_ITA_imperial_recognition
+		x = -4
+		y = 2
+		prerequisite = {focus = ITA_gauls_campaign}
+		prerequisite = {focus = ITA_divide_and_conquer}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = {focus = ITA_iberian_unity_under_italian_rule}
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = ITA_mare_nostrum_integrate_spain
+			unlock_decision_tooltip = ITA_mare_nostrum_integrate_portugal
+			unlock_decision_tooltip = ITA_mare_nostrum_integrate_romania
+
+			add_state_claim = 165
+			add_state_claim = 794
+			add_state_claim = 167
+			add_state_claim = 168
+			add_state_claim = 166
+			add_state_claim = 793
+			add_state_claim = 177
+			add_state_claim = 176
+			add_state_claim = 172
+			add_state_claim = 790
+			add_state_claim = 791
+			add_state_claim = 792
+			add_state_claim = 171
+
+			add_state_claim = 174
+			add_state_claim = 788
+			add_state_claim = 41
+			add_state_claim = 175
+			add_state_claim = 169
+			add_state_claim = 170
+			add_state_claim = 789
+			add_state_claim = 173
+			add_state_claim = 290
+			add_state_claim = 180
+			add_state_claim = 181
+			add_state_claim = 112
+			add_state_claim = 795
+
+			add_state_claim = 179
+			add_state_claim = 698
+			add_state_claim = 697
+
+			add_state_claim = 46
+			add_state_claim = 81
+			add_state_claim = 77
+		}
+	}
+	focus = {
+		id = ITA_iberian_unity_under_italian_rule
+		icon = GFX_focus_por_iberian_summit
+		x = -6
+		y = 2
+		prerequisite = {focus = ITA_secure_interest_allies}
+		prerequisite = {focus = ITA_gauls_campaign}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = {focus = ITA_create_new_provinces}
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SPR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = POR
+			}
+
+			add_state_claim = 165
+			add_state_claim = 794
+			add_state_claim = 167
+			add_state_claim = 168
+			add_state_claim = 166
+			add_state_claim = 793
+			add_state_claim = 177
+			add_state_claim = 176
+			add_state_claim = 172
+			add_state_claim = 790
+			add_state_claim = 791
+			add_state_claim = 792
+			add_state_claim = 171
+
+			add_state_claim = 174
+			add_state_claim = 788
+			add_state_claim = 41
+			add_state_claim = 175
+			add_state_claim = 169
+			add_state_claim = 170
+			add_state_claim = 789
+			add_state_claim = 173
+			add_state_claim = 290
+			add_state_claim = 180
+			add_state_claim = 181
+			add_state_claim = 112
+			add_state_claim = 795
+
+			add_state_claim = 179
+			add_state_claim = 698
+			add_state_claim = 697
+		}
+	}
+	focus = {
+		id = ITA_the_empire_needs_your_oil
+		icon = GFX_goal_the_empire_needs_your_oil
+		x = -6
+		y = 3
+		prerequisite = {focus = ITA_iberian_unity_under_italian_rule}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_annex_albania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+			}
+
+			add_state_claim = 46
+			add_state_claim = 81
+			add_state_claim = 77
+		}
+	}
+	focus = {
+		id = ITA_find_new_allies
+		icon = GFX_focus_befriend_italy
+		x = -3
+		y = 1
+		prerequisite = {focus = ITA_the_eagle_rise}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		relative_position_id = ITA_the_eagle_rise
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = ITA_divide_and_conquer
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_find_new_allies}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = {focus = ITA_secure_interest_allies}
+		relative_position_id = ITA_find_new_allies
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_faction = axis_of_roma
+			SPR = {
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 500
+				}
+			}
+			POR = {
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 500
+				}
+			}
+			ROM = {
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 500
+				}
+			}
+			HUN = {
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 500
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_secure_interest_allies
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_find_new_allies}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = {focus = ITA_divide_and_conquer}
+		relative_position_id = ITA_find_new_allies
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = JAP
+			JAP = {
+				OR = {
+				has_government = fascism 
+				has_government = neutrality 
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					JAP = {
+					OR = {
+					has_government = fascism 
+					has_government = neutrality 
+					}
+					}
+				}
+				JAP = {
+					country_event = italia.5
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_salve_o_patria_immortale
+		icon = GFX_focus_ITA_cavalry_charge
+		x = 3
+		y = 0
+		prerequisite = {}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = ITA_learn_from_the_civil_war
+		icon = GFX_focus_generic_national_security
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_salve_o_patria_immortale}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_salve_o_patria_immortale
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = armata_del_duce
+				add_idea = armata_del_duce2
+			}
+		}
+	}
+	focus = {
+		id = ITA_involvements_in_tactics
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_learn_from_the_civil_war}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_learn_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = ITA_avoid_all_weaknesses
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 2
+		prerequisite = {focus = ITA_involvements_in_tactics}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_learn_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+              bonus = 0.75
+              uses = 2
+              category = infantry_weapons
+            }
+			add_tech_bonus = {
+              bonus = 0.75
+              uses = 2
+              category = artillery
+            }
+			add_tech_bonus = {
+              bonus = 0.75
+              uses = 2
+              category = light_air
+            }
+		}
+	}
+	focus = {
+		id = ITA_italy_can_use_tanks
+		icon = GFX_goal_generic_army_tanks
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_learn_from_the_civil_war}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_learn_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+              bonus = 0.75
+              uses = 2
+              category = armor
+            }
+		}
+	}
+	focus = {
+		id = ITA_the_armed_support_of_the_state
+		icon = GFX_focus_ITA_moschettieri_del_duce
+		x = -2
+		y = 2
+		prerequisite = {focus = ITA_italy_can_use_tanks}
+		prerequisite = {focus = ITA_capo_supremo}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_learn_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = camicie_nere3
+				add_idea = camicie_nere4
+			}
+		}
+	}
+	focus = {
+		id = ITA_armata_del_duce
+		icon = GFX_goal_armata_del_duce
+		x = 0
+		y = 3
+		prerequisite = {focus = ITA_the_armed_support_of_the_state}
+		prerequisite = {focus = ITA_avoid_all_weaknesses}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_learn_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = armata_del_duce2
+				add_idea = armata_del_duce3
+			}
+		}
+	}
+	focus = {
+		id = ITA_recover_from_the_civil_war
+		icon = GFX_focus_ICE_state_corporatism
+		x = -3
+		y = 1
+		prerequisite = {focus = ITA_salve_o_patria_immortale}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_salve_o_patria_immortale
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = civil_war_recovering
+				days = 300
+			}
+		}
+	}
+	focus = {
+		id = ITA_capo_supremo
+		icon = GFX_focus_ITA_capo_supremo
+		x = 0
+		y = 1
+		prerequisite = {focus = ITA_recover_from_the_civil_war}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_recover_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = capo_supremo2
+		}
+	}
+	focus = {
+		id = ITA_destroy_the_remains_of_resistance
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 0
+		y = 1
+		prerequisite = {focus = ITA_capo_supremo}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_capo_supremo
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = classical_liberalism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.2
+			}
+		}
+	}
+	focus = {
+		id = ITA_towards_the_new_man
+		icon = GFX_goal_new_man_cult
+		x = 0
+		y = 2
+		prerequisite = {focus = ITA_destroy_the_remains_of_resistance}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_capo_supremo
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = cult_of_the_new_man
+		}
+	}
+	focus = {
+		id = ITA_revive_the_iri
+		icon = GFX_goal_stop_printing_money
+		x = -2
+		y = 1
+		prerequisite = {focus = ITA_plan_volpi focus = ITA_capo_supremo}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_capo_supremo
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = the_iri
+		}
+	}
+	focus = {
+		id = ITA_nationalize_key_industries
+		icon = GFX_goal_compagnies_fail
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_revive_the_iri}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_revive_the_iri
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_iri
+				add_idea = the_iri2
+			}
+		}
+	}
+	focus = {
+		id = ITA_corporatism
+		icon = GFX_focus_ICE_state_corporatism
+		x = 1
+		y = 1
+		prerequisite = {focus = ITA_nationalize_key_industries}
+		prerequisite = {focus = ITA_towards_the_new_man}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_nationalize_key_industries
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = corporatism
+		}
+	}
+	focus = {
+		id = ITA_revitalize_the_industrial_north
+		icon = GFX_focus_ITA_northern_industry
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_nationalize_key_industries}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_nationalize_key_industries
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			158 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			159 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			160 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			161 = {
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	focus = {
+		id = ITA_piemont_rich_soil
+		icon = GFX_goal_generic_construction2
+		x = -2
+		y = 2
+		prerequisite = {focus = ITA_revitalize_the_industrial_north}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_nationalize_key_industries
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			158 = {
+			 add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+             }
+			 add_resource = {
+               type = steel
+               amount = 20
+             }
+			 add_resource = {
+               type = aluminium
+               amount = 12
+             }
+			 add_resource = {
+               type = tungsten
+               amount = 7
+             }
+			 add_resource = {
+               type = chromium
+               amount = 5
+             }
+			}
+		}
+	}
+	focus = {
+		id = ITA_promises_from_confindustria
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 2
+		prerequisite = {focus = ITA_revitalize_the_industrial_north}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_nationalize_key_industries
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			158 = {
+				add_extra_state_shared_building_slots = 2
+			 add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+             }
+			}
+			159 = {
+				add_extra_state_shared_building_slots = 2
+			 add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+             }
+			}
+			160 = {
+				add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+             }
+			}
+			161 = {
+				add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = ITA_plan_volpi
+		icon = GFX_goal_plan_volpi
+		x = -3
+		y = 1
+		prerequisite = {focus = ITA_recover_from_the_civil_war}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_recover_from_the_civil_war
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ITA_Giuseppe_Volpi
+			add_political_power = -75
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = ITA_reti_meridionali
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		prerequisite = {focus = ITA_plan_volpi}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_plan_volpi
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			157 = {
+			 add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+             }
+			}
+			157 = {
+			 add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+             }
+			}
+			117 = {
+			 add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+             }
+			 add_resource = {
+               type = steel
+               amount = 12
+             }
+			 add_resource = {
+               type = aluminium
+               amount = 5
+             }
+			}
+			849 = {
+			 add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+             }
+			}
+			156 = {
+			 add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+             }
+			}
+			115 = {
+			 add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = ITA_efficient_workers
+		icon = GFX_focus_NORDIC_com_selector_civilian
+		x = 2
+		y = 1
+		prerequisite = {focus = ITA_towards_the_new_man}
+		prerequisite = {focus = ITA_armata_del_duce}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_towards_the_new_man
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = cult_of_the_new_man
+				add_idea = cult_of_the_new_man2
+			}
+		}
+	}
+	focus = {
+		id = ITA_invest_in_military_research
+		icon = GFX_focus_generic_university_3
+		x = 0
+		y = 1
+		prerequisite = {focus = ITA_armata_del_duce}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_armata_del_duce
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ITA_invest_in_sport_infrastructure
+		icon = GFX_goal_sportive_men_fascist
+		x = 0
+		y = 2
+		prerequisite = {focus = ITA_invest_in_military_research}
+		prerequisite = {focus = ITA_efficient_workers}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_armata_del_duce
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = cult_of_the_new_man2
+				add_idea = cult_of_the_new_man3
+			}
+		}
+	}
+	focus = {
+		id = ITA_trigger_the_italian_war_machine
+		icon = GFX_focus_SWE_let_fly_all_guns
+		x = 2
+		y = 2
+		prerequisite = {focus = ITA_invest_in_military_research}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_armata_del_duce
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = ITA_la_battaglia_per_le_nascite
+		icon = GFX_focus_generic_population_growth
+		x = 0
+		y = 1
+		prerequisite = {focus = ITA_towards_the_new_man}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_towards_the_new_man
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = natalist_policies
+		}
+	}
+	focus = {
+		id = ITA_disciplined_youth
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 2
+		prerequisite = {focus = ITA_la_battaglia_per_le_nascite}
+		allow_branch = {has_global_flag = italian_civil_war_over}
+		relative_position_id = ITA_towards_the_new_man
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = fascist_education
+		}
+	}
+}

@@ -1,0 +1,1665 @@
+﻿focus_tree = {
+	id = prussian_commune_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = PRL
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = HAN_plan_uprising
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = planned_uprisings
+		}
+	}
+	focus = {
+		id = HAN_uprising_in_hannover
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 1
+		prerequisite = {focus = HAN_plan_uprising}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		custom_effect_tooltip = PRL_Hannover_Uprising
+			hidden_effect = {
+		 declare_war_on = {
+         target = HAN
+         type = annex_everything
+		 }
+		 load_oob = PRL_hannover
+		 }
+		}
+	}
+	focus = {
+		id = HAN_siege_of_kiel
+		icon = GFX_goal_generic_army_artillery2
+		x = -1
+		y = 1
+		prerequisite = {focus = HAN_plan_uprising}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		custom_effect_tooltip = PRL_kiel_uprising
+			hidden_effect = {
+		 declare_war_on = {
+         target = SHL
+         type = annex_everything
+		 }
+		 load_oob = PRL_kiel
+		 }
+		}
+	}
+	focus = {
+		id = HAN_lubeck_uprising
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		prerequisite = {focus = HAN_plan_uprising}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		custom_effect_tooltip = PRL_lubeck_uprising
+			hidden_effect = {
+		 declare_war_on = {
+         target = MEK
+         type = annex_everything
+		 }
+		 load_oob = PRL_lubeck
+		 }
+		}
+	}
+	focus = {
+		id = HAN_strike_south
+		icon = GFX_goal_poland_goal
+		x = 3
+		y = 1
+		prerequisite = {focus = HAN_plan_uprising}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		custom_effect_tooltip = PRL_silesia
+			hidden_effect = {
+		 declare_war_on = {
+         target = SAX
+         type = annex_everything
+		 }
+		 load_oob = PRL_silesia
+		 }
+		}
+	}
+	focus = {
+		id = HAN_increase_the_moral
+		icon = GFX_goal_generic_military_sphere
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = HAN_anticipate_the_counter_attack
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		prerequisite = {focus = HAN_increase_the_moral}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+			remove_idea = national_liberation_war
+			add_idea = national_liberation_war2
+		 }
+		}
+	}
+	focus = {
+		id = HAN_union_of_the_left
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 1
+		prerequisite = {focus = HAN_increase_the_moral}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.25
+		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = HAN_integrate_the_kingdoms
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 2
+		prerequisite = {focus = HAN_union_of_the_left}
+		prerequisite = {focus = HAN_anticipate_the_counter_attack}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				country_exists = HAN
+				country_exists = MEK
+				country_exists = SAX
+				country_exists = SHL
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = planned_uprisings
+		 remove_ideas = national_liberation_war2
+		 add_state_core = 65
+		 add_state_core = 59
+		 add_state_core = 61
+		 add_state_core = 58
+		}
+	}
+	focus = {
+		id = PRL_organize_elections
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 3
+		prerequisite = {focus = HAN_integrate_the_kingdoms}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = prussia.125
+		}
+	}
+	focus = {
+		id = PRL_luxemburg_line
+		icon = GFX_goal_fortify_the_westwall
+		x = 14
+		y = 4
+		prerequisite = {focus = PRL_organize_elections}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 59
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  59 = {
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3326
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3271
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 3395
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 11493
+        }
+		set_building_level = {
+        type = bunker
+        level = 3
+        province = 6513
+        }
+		}
+		}
+	}
+	focus = {
+		id = PRL_prepare_the_frontline
+		icon = GFX_goal_generic_construct_civilian
+		x = -1
+		y = 1
+		prerequisite = {focus = PRL_luxemburg_line}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 59
+			has_full_control_of_state = 60
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  59 = {
+		set_building_level = {
+        type = air_base
+        level = 8
+        }
+		set_building_level = {
+        type = anti_air_building
+        level = 5
+        }
+		}
+		60 = {
+		set_building_level = {
+        type = air_base
+        level = 8
+        }
+		set_building_level = {
+        type = anti_air_building
+        level = 5
+        }
+		}
+		}
+	}
+	focus = {
+		id = PRL_improve_our_tactics
+		icon = GFX_focus_generic_women_in_military
+		x = 1
+		y = 1
+		prerequisite = {focus = PRL_luxemburg_line}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+         bonus = 3
+         uses = 2
+         category = land_doctrine
+         }
+		}
+	}
+	focus = {
+		id = PRL_start_the_great_fight
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 0
+		y = 2
+		prerequisite = {focus = PRL_prepare_the_frontline}
+		prerequisite = {focus = PRL_improve_our_tactics}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_army_manpower = {
+        size > 500000
+        }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = suprise_attack
+			days = 40
+		 }
+		 declare_war_on = {
+         target = RCO
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_world_revolution
+		icon = GFX_focus_spr_class_war
+		x = 0
+		y = 5
+		prerequisite = {focus = PRL_start_the_great_fight}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = world_revolution
+		}
+	}
+	focus = {
+		id = PRL_memories_of_the_commune
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = 1
+		y = 3
+		prerequisite = {focus = PRL_start_the_great_fight}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			NOT = {
+			country_exists = FRA
+			}
+			has_war_with = FRA
+			}
+			OR = {
+			NOT = {
+			country_exists = HOL
+			}
+			has_war_with = HOL
+			}
+			OR = {
+			NOT = {
+			country_exists = BEL
+			}
+			has_war_with = BEL
+			}
+			OR = {
+			NOT = {
+			country_exists = LUX
+			}
+			has_war_with = LUX
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+         target = FRA
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = HOL
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = BEL
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = LUX
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_strike_fascist_government
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 2
+		y = 4
+		prerequisite = {focus = PRL_memories_of_the_commune}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			NOT = {
+			country_exists = POR
+			}
+			has_war_with = POR
+			}
+			OR = {
+			NOT = {
+			country_exists = SPR
+			}
+			has_war_with = SPR
+			}
+			OR = {
+			NOT = {
+			country_exists = ITA
+			}
+			has_war_with = ITA
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+         target = POR
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = SPR
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = ITA
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_cross_the_channel
+		icon = GFX_focus_attack_britain
+		x = 3
+		y = 5
+		prerequisite = {focus = PRL_strike_fascist_government}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			NOT = {
+			country_exists = ENG
+			}
+			has_war_with = ENG
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+         target = ENG
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_rosas_land
+		icon = GFX_focus_POL_ban_nazi_party
+		x = -1
+		y = 3
+		prerequisite = {focus = PRL_start_the_great_fight}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			NOT = {
+			country_exists = POL
+			}
+			has_war_with = POL
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+         target = POL
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_baltics
+		icon = GFX_focus_generic_forest_brothers
+		x = -2
+		y = 4
+		prerequisite = {focus = PRL_rosas_land}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			NOT = {
+			country_exists = LIT
+			}
+			has_war_with = LIT
+			}
+			OR = {
+			NOT = {
+			country_exists = EST
+			}
+			has_war_with = EST
+			}
+			OR = {
+			NOT = {
+			country_exists = LAT
+			}
+			has_war_with = LAT
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+         target = EST
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = LAT
+         type = annex_everything
+		 }
+		 declare_war_on = {
+         target = LIT
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_you_arent_communists
+		icon = GFX_focus_attack_soviet
+		x = -3
+		y = 5
+		prerequisite = {focus = PRL_baltics}
+		relative_position_id = PRL_luxemburg_line
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			NOT = {
+			country_exists = SOV
+			}
+			has_war_with = SOV
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+         target = SOV
+         type = annex_everything
+		 }
+		}
+	}
+	focus = {
+		id = PRL_appease_the_country
+		icon = GFX_goal_generic_neutrality_focus
+		x = 6
+		y = 4
+		prerequisite = {focus = PRL_organize_elections}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = PRL_the_true_democracy
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 2
+		prerequisite = {focus = PRL_appease_the_country}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		 add_popularity = {
+			popularity = 0.075
+			ideology = communism
+		 }
+		 remove_ideas = opposition_rebuilding
+		}
+	}
+	focus = {
+		id = PRL_revolutionnary_science
+		icon = GFX_focus_generic_socialist_science
+		x = 1
+		y = 3
+		prerequisite = {focus = PRL_the_true_democracy}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PRL_for_the_revolution
+		icon = GFX_focus_spr_unify_the_london_bureau
+		x = 1
+		y = 4
+		prerequisite = {focus = PRL_revolutionnary_science}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.25
+		}
+	}
+	focus = {
+		id = PRL_the_legitimate_government
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 5
+		prerequisite = {focus = PRL_for_the_revolution}
+		prerequisite = {focus = PRL_you_have_to_pay}
+		prerequisite = {focus = PRL_complete_freedom_of_expression}
+		prerequisite = {focus = PRL_local_elections}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = cahos_generalise5
+		}
+	}
+	focus = {
+		id = PRL_the_representative
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 3
+		prerequisite = {focus = PRL_the_true_democracy}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_country_leader_trait = the_representative
+		}
+	}
+	focus = {
+		id = PRL_complete_freedom_of_expression
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 4
+		prerequisite = {focus = PRL_the_representative}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.15
+		}
+	}
+	focus = {
+		id = PRL_increase_workers_conditions
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		prerequisite = {focus = PRL_appease_the_country}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = improved_worker_conditions
+		}
+	}
+	focus = {
+		id = PRL_collective_production
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 2
+		y = 2
+		prerequisite = {focus = PRL_increase_workers_conditions}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+		 remove_idea = improved_worker_conditions
+		 add_idea = soviet_in_entreprise
+		 }
+		}
+	}
+	focus = {
+		id = PRL_defend_the_revolution
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 3
+		y = 3
+		prerequisite = {focus = PRL_collective_production}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = do_not_be_shaken
+		}
+	}
+	focus = {
+		id = PRL_you_have_to_pay
+		icon = GFX_focus_mex_privatisation
+		x = 3
+		y = 4
+		prerequisite = {focus = PRL_defend_the_revolution}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = you_have_to_pay
+		}
+	}
+	focus = {
+		id = PRL_reintroduce_public_services
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -1
+		y = 1
+		prerequisite = {focus = PRL_appease_the_country}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+			remove_idea = cahos_generalise
+			add_idea = cahos_generalise2
+		 }
+		}
+	}
+	focus = {
+		id = PRL_etablish_local_anti_fascist_militias
+		icon = GFX_focus_prc_infiltration
+		x = -2
+		y = 2
+		prerequisite = {focus = PRL_reintroduce_public_services}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.1
+		 swap_ideas = {
+			remove_idea = cahos_generalise2
+			add_idea = cahos_generalise3
+		 }
+		}
+	}
+	focus = {
+		id = PRL_direct_democracy
+		icon = GFX_focus_generic_the_giant_wakes
+		x = -3
+		y = 3
+		prerequisite = {focus = PRL_etablish_local_anti_fascist_militias}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 75
+		 swap_ideas = {
+			remove_idea = cahos_generalise3
+			add_idea = cahos_generalise4
+		 }
+		}
+	}
+	focus = {
+		id = PRL_local_elections
+		icon = GFX_focus_generic_soviet_politics
+		x = -3
+		y = 4
+		prerequisite = {focus = PRL_direct_democracy}
+		relative_position_id = PRL_appease_the_country
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 100
+		 swap_ideas = {
+			remove_idea = cahos_generalise4
+			add_idea = cahos_generalise5
+		 }
+		}
+	}
+	focus = {
+		id = PRL_the_industrial_race
+		icon = GFX_goal_generic_production
+		x = -2
+		y = 4
+		prerequisite = {focus = PRL_organize_elections}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = the_industrial_race
+		}
+	}
+	focus = {
+		id = PRL_arm_the_revolution
+		icon = GFX_goal_generic_small_arms
+		x = 1
+		y = 1
+		prerequisite = {focus = PRL_the_industrial_race}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+         bonus = 2
+         uses = 2
+         category = industry
+         }
+		}
+	}
+	focus = {
+		id = PRL_arm_the_revolution2
+		icon = GFX_goal_generic_army_artillery2
+		x = 3
+		y = 2
+		prerequisite = {focus = PRL_arm_the_revolution}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = arm_the_revolution
+		}
+	}
+	focus = {
+		id = PRL_berlin_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 3
+		y = 3
+		prerequisite = {focus = PRL_arm_the_revolution2}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 64
+			has_full_control_of_state = 68
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 64 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = arms_factory
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 68 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = arms_factory
+         level = 3
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_saxony_arsenal
+		icon = GFX_goal_generic_production2
+		x = 3
+		y = 4
+		prerequisite = {focus = PRL_berlin_arsenal}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 65
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 65 = {
+		 add_extra_state_shared_building_slots = 6
+		 add_building_construction = {
+         type = arms_factory
+         level = 6
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_construct_the_red_fleet
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 2
+		prerequisite = {focus = PRL_arm_the_revolution}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = construct_red_fleet
+		}
+	}
+	focus = {
+		id = PRL_focus_on_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 3
+		prerequisite = {focus = PRL_construct_the_red_fleet}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 58
+			has_full_control_of_state = 59
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 58 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = dockyard
+         level = 4
+         instant_build = yes
+         }
+		 }
+		 59 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = dockyard
+         level = 4
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_expand_the_red_fleet
+		icon = GFX_goal_generic_navy_carrier
+		x = 1
+		y = 4
+		prerequisite = {focus = PRL_focus_on_dockyard}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 62
+			has_full_control_of_state = 63
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 62 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = dockyard
+         level = 4
+         instant_build = yes
+         }
+		 }
+		 63 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = dockyard
+         level = 4
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_great_works
+		icon = GFX_goal_generic_construction2
+		x = -1
+		y = 1
+		prerequisite = {focus = PRL_the_industrial_race}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = greatworks
+		}
+	}
+	focus = {
+		id = PRL_comissioner_of_plans
+		icon = GFX_focus_SOV_merge_plants
+		x = -3
+		y = 2
+		prerequisite = {focus = PRL_great_works}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = comissioner_of_plans
+		}
+	}
+	focus = {
+		id = PRL_develop_konigsberg
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -3
+		y = 3
+		prerequisite = {focus = PRL_comissioner_of_plans}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 763
+			has_full_control_of_state = 5
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 763 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = industrial_complex
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 5 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = industrial_complex
+         level = 3
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_revitalize_silesia
+		icon = GFX_focus_generic_industry_3
+		x = -3
+		y = 4
+		prerequisite = {focus = PRL_develop_konigsberg}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 66
+			has_full_control_of_state = 67
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 66 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = industrial_complex
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 67 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = industrial_complex
+         level = 3
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_create_the_german_transport_collective
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 2
+		prerequisite = {focus = PRL_great_works}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = german_transport_collective
+		}
+	}
+	focus = {
+		id = PRL_develop_infratsructure
+		icon = GFX_goal_reichsautobahn
+		x = -1
+		y = 3
+		prerequisite = {focus = PRL_create_the_german_transport_collective}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 64
+			has_full_control_of_state = 65
+			has_full_control_of_state = 66
+			has_full_control_of_state = 67
+			has_full_control_of_state = 68
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 66 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 65 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 67 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 68 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 64 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_develop_infratsructure2
+		icon = GFX_goal_generic_construction
+		x = -1
+		y = 4
+		prerequisite = {focus = PRL_develop_infratsructure}
+		relative_position_id = PRL_the_industrial_race
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 58
+			has_full_control_of_state = 59
+			has_full_control_of_state = 60
+			has_full_control_of_state = 61
+			has_full_control_of_state = 62
+			has_full_control_of_state = 63
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 60 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 59 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 58 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 61 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 62 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		 63 = {
+		 add_extra_state_shared_building_slots = 3
+		 add_building_construction = {
+         type = infrastructure
+         level = 3
+         instant_build = yes
+         }
+		 }
+		}
+	}
+	focus = {
+		id = PRL_end_the_race
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 9
+		prerequisite = {focus = PRL_saxony_arsenal}
+		prerequisite = {focus = PRL_expand_the_red_fleet}
+		prerequisite = {focus = PRL_revitalize_silesia}
+		prerequisite = {focus = PRL_develop_infratsructure2}
+		relative_position_id = HAN_increase_the_moral
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = the_industrial_race
+		}
+	}
+}

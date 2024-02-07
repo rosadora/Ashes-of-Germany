@@ -1,0 +1,512 @@
+﻿focus_tree = {
+	id = nlc_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = NLC
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = ILF_la_liberta_portiamo
+		icon = GFX_focus_ITA_il_sol_dell_avvenire
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = ILF_brigata_garibaldi
+		icon = GFX_focus_FIN_strengthen_military_administration
+		x = 0
+		y = 2
+		prerequisite = {focus = ILF_la_liberta_portiamo}
+		relative_position_id = ILF_la_liberta_portiamo
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			159 = {
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
+                  owner = NLC
+                }
+			}
+		}
+	}
+	focus = {
+		id = ILF_gruppi_di_difesa_della_donna
+		icon = GFX_focus_SOV_womens_fascist_movement
+		x = 1
+		y = 1
+		prerequisite = {focus = ILF_la_liberta_portiamo}
+		relative_position_id = ILF_la_liberta_portiamo
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = gruppi_di_difesa_della_donna
+		}
+	}
+	focus = {
+		id = ILF_hold_the_line
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 2
+		y = 2
+		prerequisite = {focus = ILF_gruppi_di_difesa_della_donna}
+		relative_position_id = ILF_la_liberta_portiamo
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 161
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			161 = {
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 9752
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 6606
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 6793
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 3773
+                }
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 6790
+                }
+			}
+			158 = {
+				add_building_construction = {
+                   type = bunker
+                   level = 3
+                   instant_build = yes
+                   province = 6788
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILF_resistance_leadership
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -1
+		y = 1
+		prerequisite = {focus = ILF_la_liberta_portiamo}
+		relative_position_id = ILF_la_liberta_portiamo
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				popularity = -0.03
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = social_liberalism
+			}
+			add_popularity = {
+				popularity = -0.1
+				ideology = social_democracy
+			}
+		}
+	}
+	focus = {
+		id = ILF_pilot_the_industry
+		icon = GFX_focus_SWE_the_beast_stirs
+		x = -2
+		y = 2
+		prerequisite = {focus = ILF_resistance_leadership}
+		relative_position_id = ILF_la_liberta_portiamo
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = kickstart_the_industry
+		}
+	}
+	focus = {
+		id = NLC_avanti_popolo_alla_riscossa
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 3
+		prerequisite = {focus = ILF_pilot_the_industry}
+		prerequisite = {focus = ILF_brigata_garibaldi}
+		prerequisite = {focus = ILF_hold_the_line}
+		relative_position_id = ILF_la_liberta_portiamo
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = esercito_dei_non_idonei
+				add_idea = armata_rossa
+			}
+		}
+	}
+	focus = {
+		id = NLC_help_from_bavaria
+		icon = GFX_goal_generic_national_unity
+		x = -3
+		y = 1
+		prerequisite = {focus = NLC_avanti_popolo_alla_riscossa}
+		relative_position_id = NLC_avanti_popolo_alla_riscossa
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			BAY = {
+				add_opinion_modifier = {
+             target = NLC
+             modifier = huge_increase
+             }
+			}
+			add_opinion_modifier = {
+            target = BAY
+            modifier = huge_increase
+          }
+		  BAY = {
+		  IF = {
+			limit = {
+				NOT = {
+					has_idea = german_volunteers
+				}
+			}
+			add_ideas = german_volunteers
+		  }
+		  }
+		}
+	}
+	focus = {
+		id = NLC_pioveranno_bombe
+		icon = GFX_focus_generic_torpedo_production
+		x = -1
+		y = 1
+		prerequisite = {focus = NLC_avanti_popolo_alla_riscossa}
+		relative_position_id = NLC_avanti_popolo_alla_riscossa
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NLC_recreate_the_stocks
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 1
+		prerequisite = {focus = NLC_avanti_popolo_alla_riscossa}
+		relative_position_id = NLC_avanti_popolo_alla_riscossa
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = 5000
+              producer = NLC
+            }
+		}
+	}
+	focus = {
+		id = NLC_andiamo
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		x = 3
+		y = 1
+		prerequisite = {focus = NLC_avanti_popolo_alla_riscossa}
+		relative_position_id = NLC_avanti_popolo_alla_riscossa
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_stability = 0.05
+		}
+	}
+}

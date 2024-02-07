@@ -1,0 +1,3698 @@
+﻿focus_tree = {
+	id = bayern_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = BAY
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = BAY_the_red_spring_begins
+		icon = GFX_goal_red_spring
+		x = 35
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_army_manpower = {
+				size > 250000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = BAY_a_stable_revolution
+		icon = GFX_goal_generic_neutrality_focus
+		x = 3
+		y = 1
+		prerequisite = {focus = BAY_the_red_spring_begins}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = BAY_raise_the_red_guards
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 3
+		y = 2
+		prerequisite = {focus = BAY_a_stable_revolution}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			52 = {
+			create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+		   create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+		   create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+			}
+			53 = {
+			create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+		   create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+		   create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+			}
+			54 = {
+			create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+		   create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+		   create_unit = {
+             division = "name = \"Revolutionäre Abteilung\" division_template = \"Revolutionäre Abteilung\" start_experience_factor = 2"
+             owner = BAY
+           }
+			}
+		}
+	}
+	focus = {
+		id = BAY_mobilize_every_revolutionary
+		icon = GFX_goal_freedom_of_speech
+		x = 0
+		y = 1
+		prerequisite = {focus = BAY_the_red_spring_begins}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+	focus = {
+		id = BAY_reinforce_revolutionary_spirit
+		icon = GFX_goal_cheka
+		x = -1
+		y = 2
+		prerequisite = {focus = BAY_mobilize_every_revolutionary}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = memories_of_the_battle_of_munich
+				add_idea = memories_of_the_battle_of_munich2
+			}
+		}
+	}
+	focus = {
+		id = BAY_prepare_the_country_for_war
+		icon = GFX_goal_integration
+		x = 1
+		y = 2
+		prerequisite = {focus = BAY_mobilize_every_revolutionary}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = production_boost
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = BAY_reinforce_wurttembergian_border
+		icon = GFX_goal_generic_construct_military
+		x = -3
+		y = 1
+		prerequisite = {focus = BAY_the_red_spring_begins}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 52
+			has_full_control_of_state = 54
+			has_full_control_of_state = 55
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			52 = {
+			add_building_construction = {
+				type = bunker 
+				province = 11638
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 9668
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 708
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 6540
+				level = 2
+				instant_build = yes
+			}
+			}
+			54 = {
+			add_building_construction = {
+				type = bunker 
+				province = 11529
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 9557
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 6594
+				level = 2
+				instant_build = yes
+			}
+			}
+			55 = {
+			add_building_construction = {
+				type = bunker 
+				province = 3574
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 589
+				level = 2
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = BAY_strike_the_weak_neighbour
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -3
+		y = 2
+		prerequisite = {focus = BAY_reinforce_wurttembergian_border}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 50
+			add_state_core = 935
+			create_wargoal = {
+				type = annex_everything
+				target = WUR
+			}
+		}
+	}
+	focus = {
+		id = BAY_the_south_german_confederation
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = 0
+		y = 3
+		prerequisite = {focus = BAY_reinforce_revolutionary_spirit}
+		prerequisite = {focus = BAY_prepare_the_country_for_war}
+		prerequisite = {focus = BAY_raise_the_red_guards}
+		prerequisite = {focus = BAY_strike_the_weak_neighbour}
+		relative_position_id = BAY_the_red_spring_begins
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = SGC_BAY
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = BAY_fulda_werra_line
+		icon = GFX_goal_generic_military_sphere
+		x = -1
+		y = 1
+		prerequisite = {focus = BAY_the_south_german_confederation}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 54
+			has_full_control_of_state = 55
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			54 = {
+			add_building_construction = {
+				type = bunker 
+				province = 11404
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 3474
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 6421
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 13116
+				level = 2
+				instant_build = yes
+			}
+			}
+			55 = {
+			add_building_construction = {
+				type = bunker 
+				province = 11445
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 9524
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 564
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 11533
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 3524
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker 
+				province = 9547
+				level = 2
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = BAY_defense_of_cities
+		icon = GFX_goal_generic_fortify_city
+		x = 1
+		y = 1
+		prerequisite = {focus = BAY_the_south_german_confederation}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 54
+			controls_state = 55
+			controls_state = 53
+			controls_state = 52
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			54 = {
+			add_building_construction = {
+				type = bunker 
+				province = 11544
+				level = 2
+				instant_build = yes
+			}
+			}
+			55 = {
+			add_building_construction = {
+				type = bunker 
+				province = 6488
+				level = 5
+				instant_build = yes
+			}
+			}
+			53 = {
+			add_building_construction = {
+				type = bunker 
+				province = 9515
+				level = 5
+				instant_build = yes
+			}
+			}
+			52 = {
+			add_building_construction = {
+				type = bunker 
+				province = 692
+				level = 5
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = BAY_end_the_monarchy
+		icon = GFX_goal_strike_the_monarchy
+		x = 0
+		y = 2
+		prerequisite = {focus = BAY_defense_of_cities}
+		prerequisite = {focus = BAY_fulda_werra_line}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = anti_monarchist_sentiment
+			create_wargoal = {
+				type = annex_everything
+				target = PRS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SHL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SAX
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MEK
+			}
+			PRS = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			HAN = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			SHL = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			SAX = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			MEK = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_return_in_berlin
+		icon = GFX_goal_return_in_berlin
+		x = 0
+		y = 3
+		prerequisite = {focus = BAY_end_the_monarchy}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 64
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_capital = {state = 64}
+			set_cosmetic_tag = GER_BAY
+			add_stability = 0.1
+			set_country_flag = BAY_germany_under_red_banner
+		}
+	}
+	focus = {
+		id = BAY_1941_Congress_of_BP
+		icon = GFX_goal_communist_congress
+		x = 4
+		y = 4
+		prerequisite = {focus = BAY_return_in_berlin}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1941.01.01
+			has_government = communism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = bavaria.9
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = BAY_moderate_progressivism
+		icon = GFX_goal_defend_the_land
+		x = 1
+		y = 5
+		prerequisite = {focus = BAY_1941_Congress_of_BP}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = FRA_womens_suffrage
+		}
+	}
+	focus = {
+		id = BAY_purge_the_party
+		icon = GFX_goal_bavarian_kpd_coup
+		x = 1
+		y = 6
+		prerequisite = {focus = BAY_moderate_progressivism}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.075
+			add_ideas = one_party_state
+		}
+	}
+	focus = {
+		id = BAY_create_the_stasi
+		icon = GFX_focus_SOV_the_last_purge
+		x = 7
+		y = 5
+		prerequisite = {focus = BAY_1941_Congress_of_BP}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = stasi
+			create_intelligence_agency = {
+         name = "Stasi"
+         icon = GFX_intelligence_agency_logo_generic_9
+         }
+		 upgrade_intelligence_agency = upgrade_anti_partisan
+		}
+	}
+	focus = {
+		id = BAY_arrest_the_kulaks
+		icon = GFX_goal_collective_farms
+		x = 7
+		y = 6
+		prerequisite = {focus = BAY_create_the_stasi}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = kulaks
+		}
+	}
+	focus = {
+		id = BAY_socialism_with_german_characteristics
+		icon = GFX_goal_support_communism
+		x = 4
+		y = 5
+		prerequisite = {focus = BAY_1941_Congress_of_BP}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = socialism_with_german_characteristics
+		}
+	}
+	focus = {
+		id = BAY_defence_of_the_revolution
+		icon = GFX_goal_socialist_militarisation
+		x = 3
+		y = 6
+		prerequisite = {focus = BAY_socialism_with_german_characteristics}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = socialism_with_german_characteristics
+				add_idea = socialism_with_german_characteristics2
+			}
+		}
+	}
+	focus = {
+		id = BAY_socialism_in_one_country
+		icon = GFX_focus_generic_national_security
+		x = 4
+		y = 7
+		prerequisite = {focus = BAY_defence_of_the_revolution}
+		prerequisite = {focus = BAY_the_revolution_of_order}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = reactionary_offensive
+			swap_ideas = {
+				remove_idea = socialism_with_german_characteristics2
+				add_idea = socialism_with_german_characteristics3
+			}
+		}
+	}
+	focus = {
+		id = BAY_socialist_pan_germanism
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 4
+		y = 8
+		prerequisite = {focus = BAY_socialism_in_one_country}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 848
+			add_state_core = 153
+			add_state_core = 152
+			add_state_core = 4
+			add_state_core = 102
+			add_state_core = 853
+			add_state_core = 151
+			add_state_core = 3
+			add_state_core = 847
+			add_state_core = 69
+			add_state_core = 74
+			create_wargoal = {
+				type = annex_everything
+				target = SWI
+			}
+		}
+	}
+	focus = {
+		id = BAY_claim_sudetenland
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 9
+		prerequisite = {focus = BAY_socialist_pan_germanism}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CZE
+			}
+		}
+	}
+	focus = {
+		id = BAY_end_revisionism
+		icon = GFX_goal_anti_comintern_pact
+		x = 5
+		y = 9
+		prerequisite = {focus = BAY_socialist_pan_germanism}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HUN
+			}
+		}
+	}
+	focus = {
+		id = BAY_cross_the_rhine
+		icon = GFX_goal_red_schlieffen
+		x = 2
+		y = 8
+		prerequisite = {focus = BAY_socialism_in_one_country}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 910
+			add_state_core = 51
+			add_state_core = 42
+			add_state_core = 909
+			add_state_core = 28
+			add_state_core = 8
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = RCO
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LUX
+			}
+		}
+	}
+	focus = {
+		id = BAY_strike_east
+		icon = GFX_focus_generic_conspiracy
+		x = 6
+		y = 8
+		prerequisite = {focus = BAY_socialism_in_one_country}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 86
+			add_state_core = 807
+			add_state_core = 762
+			add_state_core = 85
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BLR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = UKR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = USR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LAT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EST
+			}
+		}
+	}
+	focus = {
+		id = BAY_the_revolution_of_order
+		icon = GFX_goal_generic_neutrality_focus
+		x = 5
+		y = 6
+		prerequisite = {focus = BAY_socialism_with_german_characteristics}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = BAY_1941_Congress_of_BB
+		icon = GFX_goal_anarchist_congress
+		x = -4
+		y = 4
+		prerequisite = {focus = BAY_return_in_berlin}
+		relative_position_id = BAY_the_south_german_confederation
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1941.01.01
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = bavaria.8
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = BAY_womens_rights
+		icon = GFX_goal_womens_rights
+		x = -3
+		y = 1
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_ideas = women_volunteers
+		}
+	}
+	focus = {
+		id = BAY_lgbtia_rights
+		icon = GFX_goal_lgbtia_rights
+		x = -2
+		y = 2
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = lgbt_rights
+		}
+	}
+	focus = {
+		id = BAY_all_power_to_unions
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -1
+		y = 1
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = soviet_in_entreprise
+		}
+	}
+	focus = {
+		id = BAY_reject_german_pannationalism
+		icon = GFX_focus_ITA_liberation_or_death
+		x = 1
+		y = 1
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			remove_ideas = reactionary_offensive
+			add_popularity = {
+				popularity = -0.15
+				ideology = fascism
+			}
+		}
+	}
+	focus = {
+		id = BAY_contact_rosa_luxemburg
+		icon = GFX_goal_contact_rosa_luxemburg
+		x = 2
+		y = 2
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			recruit_character = BAY_Rosa_Luxemburg
+		}
+	}
+	focus = {
+		id = BAY_expropriation_of_junkers
+		icon = GFX_focus_ITA_peasants_rise
+		x = 3
+		y = 1
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = collective_farms
+		}
+	}
+	focus = {
+		id = BAY_abolish_the_police
+		icon = GFX_focus_generic_court
+		x = 0
+		y = 2
+		prerequisite = {focus = BAY_1941_Congress_of_BB}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = revolutionary_safety
+		}
+	}
+	focus = {
+		id = BAY_the_anarchist_revolution_around_the_world
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = 0
+		y = 3
+		prerequisite = {focus = BAY_abolish_the_police}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = world_revolution
+		}
+	}
+	focus = {
+		id = BAY_a_red_schlieffen
+		icon = GFX_goal_red_schlieffen
+		x = -1
+		y = 4
+		prerequisite = {focus = BAY_the_anarchist_revolution_around_the_world}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 943
+			add_state_core = 51
+			add_state_core = 42
+			add_state_core = 944
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = RCO
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LUX
+			}
+		}
+	}
+	focus = {
+		id = BAY_strike_poland
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 1
+		y = 4
+		prerequisite = {focus = BAY_the_anarchist_revolution_around_the_world}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = UKR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BLR
+			}
+		}
+	}
+	focus = {
+		id = BAY_end_imperialism
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 5
+		prerequisite = {focus = BAY_strike_poland}
+		prerequisite = {focus = BAY_a_red_schlieffen}
+		relative_position_id = BAY_1941_Congress_of_BB
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = USA
+			}
+		}
+	}
+	focus = {
+		id = BAY_an_agrarian_economy
+		icon = GFX_goal_agrarian_economy
+		x = 22
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_idea = tension_on_the_left
+				has_idea = tension_on_the_left2
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry 
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BAY_industrialisation
+		icon = GFX_goal_industrialisation
+		x = 3
+		y = 1
+		prerequisite = {focus = BAY_an_agrarian_economy}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRA_ban_the_bb
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = agrarian_economy
+				add_idea = industrialisation_from_agrarian
+			}
+		}
+	}
+	focus = {
+		id = BAY_force_farmers_into_factories
+		icon = GFX_goal_force_farmers_into_factories
+		x = 3
+		y = 2
+		prerequisite = {focus = BAY_industrialisation}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = industrialisation_from_agrarian
+				add_idea = industrialisation_from_agrarian2
+			}
+		}
+	}
+	focus = {
+		id = BAY_production_quotas
+		icon = GFX_goal_controlled_workers
+		x = 2
+		y = 3
+		prerequisite = {focus = BAY_force_farmers_into_factories}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = quotas_of_production
+		}
+	}
+	focus = {
+		id = BAY_rapid_industrialisation
+		icon = GFX_focus_generic_aircraft_production
+		x = 4
+		y = 3
+		prerequisite = {focus = BAY_force_farmers_into_factories}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_great_works
+		icon = GFX_goal_generic_soviet_construction
+		x = 4
+		y = 4
+		prerequisite = {focus = BAY_production_quotas}
+		prerequisite = {focus = BAY_rapid_industrialisation}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = great_works
+		}
+	}
+	focus = {
+		id = BAY_five_years_plan
+		icon = GFX_goal_five_years_plan
+		x = 6
+		y = 5
+		prerequisite = {focus = BAY_great_works}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = five_years_plan
+				days = 1825
+			}
+		}
+	}
+	focus = {
+		id = BAY_bavarian_industry
+		icon = GFX_goal_bavarian_economy
+		x = 2
+		y = 5
+		prerequisite = {focus = BAY_great_works}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = industrialisation_from_agrarian2
+				add_idea = bavarian_industry
+			}
+		}
+	}
+	focus = {
+		id = BAY_rapid_militarisation
+		icon = GFX_goal_socialist_militarisation
+		x = 4
+		y = 5
+		prerequisite = {focus = BAY_great_works}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_socialist_economic_boom
+		icon = GFX_goal_reorganize_the_production
+		x = 4
+		y = 6
+		prerequisite = {focus = BAY_rapid_militarisation}
+		prerequisite = {focus = BAY_five_years_plan}
+		prerequisite = {focus = BAY_bavarian_industry}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.15
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_preserve_the_agrarian_model
+		icon = GFX_goal_agrarian_society
+		x = -3
+		y = 1
+		prerequisite = {focus = BAY_an_agrarian_economy}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRA_secure_workers_support
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = agrarian_economy
+				add_idea = agrarian_economy_pushed
+			}
+		}
+	}
+	focus = {
+		id = BAY_modern_agriculture
+		icon = GFX_goal_social_progressivism
+		x = -3
+		y = 2
+		prerequisite = {focus = BAY_preserve_the_agrarian_model}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = invest_in_development
+				days = 100
+			}
+			swap_ideas = {
+				remove_idea = agrarian_economy_pushed
+				add_idea = agrarian_economy_pushed2
+			}
+		}
+	}
+	focus = {
+		id = BAY_expand_our_fields
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		x = -4
+		y = 3
+		prerequisite = {focus = BAY_modern_agriculture}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			every_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = BAY_expand_industrial_complex
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -2
+		y = 3
+		prerequisite = {focus = BAY_modern_agriculture}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 52
+			controls_state = 55
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			52 = {
+			add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			55 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_investment_in_infrastructures
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -4
+		y = 4
+		prerequisite = {focus = BAY_expand_industrial_complex}
+		prerequisite = {focus = BAY_expand_our_fields}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 52
+			controls_state = 55
+			controls_state = 53
+			controls_state = 54
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			52 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			55 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			53 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			54 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_invest_in_development
+		icon = GFX_goal_foreign_investments
+		x = -6
+		y = 5
+		prerequisite = {focus = BAY_investment_in_infrastructures}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = synthetic_refinery
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = synthetic_refinery
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_increase_on_arms_production
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -4
+		y = 5
+		prerequisite = {focus = BAY_investment_in_infrastructures}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_railways_anywhere_anytime
+		icon = GFX_focus_generic_railroad
+		x = -2
+		y = 5
+		prerequisite = {focus = BAY_investment_in_infrastructures}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = railways_anywhere_anytime
+		}
+	}
+	focus = {
+		id = BAY_agrarian_utopia
+		icon = GFX_goal_agrarian_utopia
+		x = -4
+		y = 6
+		prerequisite = {focus = BAY_railways_anywhere_anytime}
+		prerequisite = {focus = BAY_increase_on_arms_production}
+		prerequisite = {focus = BAY_invest_in_development}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = agrarian_economy_pushed2
+				add_idea = agrarian_economy_pushed3
+			}
+		}
+	}
+	focus = {
+		id = BAY_socialist_research
+		icon = GFX_focus_generic_socialist_science
+		x = 0
+		y = 7
+		prerequisite = {focus = BAY_agrarian_utopia focus = BAY_socialist_economic_boom}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BAY_republiksautobahn
+		icon = GFX_goal_socialist_railroad
+		x = -2
+		y = 1
+		prerequisite = {focus = BAY_socialist_research}
+		relative_position_id = BAY_socialist_research
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = BAY_germany_under_red_banner
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_autobahn_tt
+			hidden_effect = {
+				64 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				59 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				60 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				54 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_develop_the_capital
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 1
+		prerequisite = {focus = BAY_socialist_research}
+		relative_position_id = BAY_socialist_research
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 64
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+	          province = 6521
+	          value = 10
+            }
+		}
+	}
+	focus = {
+		id = BAY_deutsch_qualitat
+		icon = GFX_focus_research2
+		x = 2
+		y = 1
+		prerequisite = {focus = BAY_socialist_research}
+		relative_position_id = BAY_socialist_research
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 64
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = deutsch_qualitat
+		}
+	}
+	focus = {
+		id = BAY_a_resource_poor_country
+		icon = GFX_focus_generic_concessions
+		x = 0
+		y = 1
+		prerequisite = {focus = BAY_an_agrarian_economy}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = excavation_tech 
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BAY_exploit_our_aluminium
+		icon = GFX_focus_generic_aluminum
+		x = -1
+		y = 2
+		prerequisite = {focus = BAY_a_resource_poor_country}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				type = aluminium 
+				state = 52
+				amount = 20
+			}
+		}
+	}
+	focus = {
+		id = BAY_extract_the_bare_minimum
+		icon = GFX_focus_generic_steel
+		x = 1
+		y = 2
+		prerequisite = {focus = BAY_a_resource_poor_country}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				type = steel 
+				state = 53
+				amount = 15
+			}
+		}
+	}
+	focus = {
+		id = BAY_synthetic_rubber
+		icon = GFX_focus_generic_stockpile_fuel
+		x = 0
+		y = 3
+		prerequisite = {focus = BAY_a_resource_poor_country}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = synth_resources 
+				uses = 2
+				bonus = 0.75
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = synthetic_refinery
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = synthetic_refinery
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BAY_german_oil
+		icon = GFX_goal_generic_oil_refinery
+		x = -1
+		y = 4
+		prerequisite = {focus = BAY_synthetic_rubber}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 59
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				type = oil 
+				state = 59
+				amount = 22
+			}
+		}
+	}
+	focus = {
+		id = BAY_expansion_of_mines
+		icon = GFX_focus_generic_tungsten
+		x = 1
+		y = 4
+		prerequisite = {focus = BAY_synthetic_rubber}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 60
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				type = tungsten 
+				state = 60
+				amount = 11
+			}
+			add_resource = {
+				type = chromium 
+				state = 60
+				amount = 9
+			}
+		}
+	}
+	focus = {
+		id = BAY_autarky
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 5
+		prerequisite = {focus = BAY_synthetic_rubber}
+		relative_position_id = BAY_an_agrarian_economy
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = autarky
+		}
+	}
+	focus = {
+		id = FRA_purge_the_stalinists
+		icon = GFX_goal_socialist_congress
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = bavaria.1
+		}
+	}
+	focus = {
+		id = FRA_authoritarian_takeover
+		icon = GFX_goal_leninist_victory
+		x = 13
+		y = 1
+		prerequisite = {focus = FRA_purge_the_stalinists}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_country_flag = BAY_marxist_takeover
+			AND = {
+				has_country_flag = BAY_marxist_coup
+			    has_country_flag = BAY_anarchist_take_over
+			}
+			}
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			set_politics = {
+				ruling_party = communism 
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = FRA_anti_anarchist_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		prerequisite = {focus = FRA_authoritarian_takeover}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.125
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = FRA_expand_bp_influence_over_unions
+		icon = GFX_goal_industries_under_the_state
+		x = 0
+		y = 1
+		prerequisite = {focus = FRA_authoritarian_takeover}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = FRA_spread_militaristic_spirit
+		icon = GFX_goal_stand_up_and_fight
+		x = -2
+		y = 1
+		prerequisite = {focus = FRA_authoritarian_takeover}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = FRA_purge_the_dissents
+		icon = GFX_goal_cheka
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_spread_militaristic_spirit}
+		prerequisite = {focus = FRA_expand_bp_influence_over_unions}
+		prerequisite = {focus = FRA_anti_anarchist_propaganda}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = -50
+			create_country_leader = {
+	          name = "Eugen Leviné"
+	          desc = "POLITICS_OTTO_WELS_DESC"
+	          picture = "gfx/leaders/Eugen_Levine.dds"
+	          expire = "1960.1.16"
+	          ideology = leninism
+	          traits = {
+	          }
+            }
+		}
+	}
+	focus = {
+		id = FRA_dissolve_the_soviets
+		icon = GFX_goal_end_the_crisis
+		x = -1
+		y = 3
+		prerequisite = {focus = FRA_purge_the_dissents}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -100
+			add_popularity = {
+				popularity = -0.05
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = FRA_offensive_on_reactionary_peasants
+		icon = GFX_goal_collective_farms
+		x = 1
+		y = 3
+		prerequisite = {focus = FRA_purge_the_dissents}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = kulaks
+			add_stability = 0.1
+			add_popularity = {
+				popularity = 0.15
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = FRA_ban_the_bb
+		icon = GFX_goal_arrest_political_leaders
+		x = 0
+		y = 4
+		prerequisite = {focus = FRA_offensive_on_reactionary_peasants}
+		prerequisite = {focus = FRA_dissolve_the_soviets}
+		relative_position_id = FRA_authoritarian_takeover
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_anarchist_trevolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = bavaria.7
+		}
+	}
+	focus = {
+		id = FRA_anarchist_majority
+		icon = GFX_goal_agrarianist_victory
+		x = 7
+		y = 1
+		prerequisite = {focus = FRA_purge_the_stalinists}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_country_flag = BAY_anarchist_take_over
+			AND = {
+				has_country_flag = BAY_marxist_takeover
+			    has_country_flag = BAY_anarchist_trevolution
+			}
+			}
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = libertarian_socialism 
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = FRA_anarchist_rallies
+		icon = GFX_goal_anarchist_rallies
+		x = -2
+		y = 1
+		prerequisite = {focus = FRA_anarchist_majority}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.125
+				ideology = libertarian_socialism
+			}
+		}
+	}
+	focus = {
+		id = FRA_reinforce_workers_self_management
+		icon = GFX_goal_improved_workers_conditions
+		x = 0
+		y = 1
+		prerequisite = {focus = FRA_anarchist_majority}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = worker_support_for_agrarian_movement
+		}
+	}
+	focus = {
+		id = FRA_anarchist_unity
+		icon = GFX_goal_contacts
+		x = 2
+		y = 1
+		prerequisite = {focus = FRA_anarchist_majority}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = FRA_buy_time
+		icon = GFX_goal_buy_time
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_anarchist_unity}
+		prerequisite = {focus = FRA_anarchist_rallies}
+		prerequisite = {focus = FRA_reinforce_workers_self_management}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = FRA_no_opposition_between_farmers_and_workers
+		icon = GFX_goal_all_the_proletariat
+		x = -1
+		y = 3
+		prerequisite = {focus = FRA_buy_time}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = worker_support_for_agrarian_movement
+				add_idea = worker_support_for_agrarian_movement2
+			}
+		}
+	}
+	focus = {
+		id = FRA_secure_faud_support
+		icon = GFX_goal_support_from_unions
+		x = 1
+		y = 3
+		prerequisite = {focus = FRA_buy_time}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = general_strikes
+				add_idea = scattered_strikes
+			}
+		}
+	}
+	focus = {
+		id = FRA_secure_workers_support
+		icon = GFX_goal_the_free_territory_of_ukraine
+		x = 0
+		y = 4
+		prerequisite = {focus = FRA_secure_faud_support}
+		prerequisite = {focus = FRA_no_opposition_between_farmers_and_workers}
+		relative_position_id = FRA_anarchist_majority
+		mutually_exclusive = { }
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = BAY_marxist_coup
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+			id = bavaria.6
+			days = 1
+			}
+		}
+	}
+	focus = {
+		id = BAY_the_bavarian_army
+		icon = GFX_goal_bavarian_army
+		x = 18
+		y = 10
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_idea = tension_on_the_left
+				has_idea = tension_on_the_left2
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	focus = {
+		id = BAY_revolutionary_militias
+		icon = GFX_goal_mother_anarchy_loves_her_sons
+		x = -2
+		y = 1
+		prerequisite = {focus = BAY_the_bavarian_army}
+		relative_position_id = BAY_the_bavarian_army
+		mutually_exclusive = { focus = BAY_create_the_bavarian_army}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bavarian_army_militias
+				add_idea = bayern_militias2
+			}
+		}
+	}
+	focus = {
+		id = BAY_trained_militias
+		icon = GFX_focus_generic_military_mission
+		x = -2
+		y = 2
+		prerequisite = {focus = BAY_revolutionary_militias}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_militias2
+				add_idea = bayern_militias3
+			}
+		}
+	}
+	focus = {
+		id = BAY_achtung_tachanka
+		icon = GFX_goal_anarkhiya_mama_za_nas
+		x = -3
+		y = 3
+		prerequisite = {focus = BAY_trained_militias}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_militias3
+				add_idea = bayern_militias4
+			}
+		}
+	}
+	focus = {
+		id = BAY_guerilla_warfare
+		icon = GFX_goal_guns_of_the_revolution
+		x = -3
+		y = 4
+		prerequisite = {focus = BAY_achtung_tachanka}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_militias4
+				add_idea = bayern_militias5
+			}
+		}
+	}
+	focus = {
+		id = BAY_every_citizen_a_revolutionary
+		icon = GFX_goal_resistance
+		x = -1
+		y = 5
+		prerequisite = {focus = BAY_guerilla_warfare}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = libertarian_socialism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_militias5
+				add_idea = bayern_militias6
+			}
+		}
+	}
+	focus = {
+		id = BAY_modernisation_of_tactics
+		icon = GFX_goal_modernization_of_equipment
+		x = 0
+		y = 2
+		prerequisite = {focus = BAY_revolutionary_militias focus = BAY_create_the_bavarian_army}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = BAY_increase_on_firepower
+		icon = GFX_goal_generic_army_artillery2
+		x = 1
+		y = 3
+		prerequisite = {focus = BAY_modernisation_of_tactics}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+	         bonus = 1
+	         uses = 2
+	         category = artillery
+            }
+		}
+	}
+	focus = {
+		id = BAY_modernization_of_guns
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 3
+		prerequisite = {focus = BAY_modernisation_of_tactics}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+	         bonus = 1
+	         uses = 2
+	         category = infantry_weapons
+            }
+		}
+	}
+	focus = {
+		id = BAY_tanks
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 4
+		prerequisite = {focus = BAY_increase_on_firepower}
+		prerequisite = {focus = BAY_modernization_of_guns}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+	         bonus = 1
+	         uses = 2
+	         category = armor
+            }
+		}
+	}
+	focus = {
+		id = BAY_create_the_bavarian_army
+		icon = GFX_focus_generic_little_entente
+		x = 2
+		y = 1
+		prerequisite = {focus = BAY_the_bavarian_army}
+		relative_position_id = BAY_the_bavarian_army
+		mutually_exclusive = { focus = BAY_revolutionary_militias}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bavarian_army_militias
+				add_idea = bayern_army
+			}
+		}
+	}
+	focus = {
+		id = BAY_integrate_militias_into_the_army
+		icon = GFX_focus_generic_military_dictatorship
+		x = 2
+		y = 2
+		prerequisite = {focus = BAY_create_the_bavarian_army}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = bayern_army
+				add_idea = bayern_army2
+			}
+		}
+	}
+	focus = {
+		id = BAY_the_offensive_is_the_best_defence
+		icon = GFX_focus_SWI_helvetic_junta
+		x = 3
+		y = 3
+		prerequisite = {focus = BAY_integrate_militias_into_the_army}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_army2
+				add_idea = bayern_army3
+			}
+		}
+	}
+	focus = {
+		id = BAY_not_a_step_back
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 3
+		y = 4
+		prerequisite = {focus = BAY_the_offensive_is_the_best_defence}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_army3
+				add_idea = bayern_army4
+			}
+		}
+	}
+	focus = {
+		id = BAY_socialist_discipline
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 5
+		prerequisite = {focus = BAY_not_a_step_back}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = bayern_army4
+				add_idea = bayern_army5
+			}
+		}
+	}
+	focus = {
+		id = BAY_military_research
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 6
+		prerequisite = {focus = BAY_socialist_discipline focus = BAY_every_citizen_a_revolutionary}
+		prerequisite = {focus = BAY_tanks}
+		relative_position_id = BAY_the_bavarian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+}

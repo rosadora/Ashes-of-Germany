@@ -1,0 +1,2280 @@
+﻿focus_tree = {
+	id = communard_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10000
+			tag = FRC
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = FRC_linsurge_se_dresse_le_fusil_charge
+		icon = GFX_goal_linsurge
+		x = 5
+		y = 0
+		prerequisite = {}
+		cost = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = FRC_elect_the_executive_comission
+		icon = GFX_goal_communist_vote
+		x = -4
+		y = 1
+		prerequisite = {focus = FRC_linsurge_se_dresse_le_fusil_charge}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 2.9
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = francenew.35
+		}
+	}
+	focus = {
+		id = FRC_a_moderate_cabinet
+		icon = GFX_goal_socialdemocrat_compromise
+		x = -1
+		y = 2
+		prerequisite = {focus = FRC_elect_the_executive_comission}
+		mutually_exclusive = {focus = FRC_marxist_leninist_cabinet}
+		mutually_exclusive = {focus = FRC_left_wing_unity}
+		mutually_exclusive = {focus = FRC_anarchist_breath}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democracy
+				elections_allowed = yes
+			}
+			create_country_leader = {
+	        name = "Marcel Cachin"
+	        desc = "POLITICS_OTTO_WELS_DESC"
+	        picture = "gfx/leaders/Marcel_Cachin.dds"
+	        expire = "1960.1.16"
+	        ideology = social_democracy_category
+	        traits = {
+	       }
+          }
+		}
+	}
+	focus = {
+		id = FRC_marginalize_the_radical_wing
+		icon = GFX_goal_anarchist_rallies
+		x = -1
+		y = 1
+		prerequisite = {focus = FRC_a_moderate_cabinet}
+		relative_position_id = FRC_a_moderate_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_et_sa_prunelle_decidee
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = generalized_chaos2
+				add_idea = generalized_chaos3
+			}
+		}
+	}
+	focus = {
+		id = FRC_democracy_in_compagnies
+		icon = GFX_goal_support_from_unions
+		x = 1
+		y = 1
+		prerequisite = {focus = FRC_a_moderate_cabinet}
+		relative_position_id = FRC_a_moderate_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = soviet_in_entreprise
+		}
+	}
+	focus = {
+		id = FRC_support_from_medium_classes
+		icon = GFX_goal_freedom_of_speech
+		x = 1
+		y = 2
+		prerequisite = {focus = FRC_democracy_in_compagnies focus = FRC_marginalize_the_radical_wing}
+		relative_position_id = FRC_a_moderate_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_marginalize_the_radical_wing
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = generalized_chaos3
+				add_idea = generalized_chaos4
+			}
+		}
+	}
+	focus = {
+		id = FRC_reject_sfio_right_wing
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 2
+		prerequisite = {focus = FRC_democracy_in_compagnies focus = FRC_marginalize_the_radical_wing}
+		relative_position_id = FRC_a_moderate_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = -0.075
+			}
+		}
+	}
+	focus = {
+		id = FRC_a_pacifist_left
+		icon = GFX_goal_colombe
+		x = 0
+		y = 3
+		prerequisite = {focus = FRC_reject_sfio_right_wing}
+		prerequisite = {focus = FRC_support_from_medium_classes}
+		relative_position_id = FRC_a_moderate_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = si_vis_pacem_para_pacem
+			remove_ideas = generalized_chaos4
+		}
+	}
+	focus = {
+		id = FRC_marxist_leninist_cabinet
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		x = -7
+		y = 2
+		prerequisite = {focus = FRC_elect_the_executive_comission}
+		mutually_exclusive = {focus = FRC_a_moderate_cabinet}
+		mutually_exclusive = {focus = FRC_left_wing_unity}
+		mutually_exclusive = {focus = FRC_anarchist_breath}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			create_country_leader = {
+	        name = "Jacques Duclos"
+	        desc = "POLITICS_OTTO_WELS_DESC"
+	        picture = "gfx/leaders/Jacques_Duclos.dds"
+	        expire = "1960.1.16"
+	        ideology = leninism
+	        traits = {
+	       }
+          }
+		}
+	}
+	focus = {
+		id = FRC_state_enterprises
+		icon = GFX_goal_industries_under_the_state
+		x = 1
+		y = 1
+		prerequisite = {focus = FRC_marxist_leninist_cabinet}
+		relative_position_id = FRC_marxist_leninist_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = state_enterprises
+		}
+	}
+	focus = {
+		id = FRC_crackdown_on_opposition
+		icon = GFX_goal_arrest_political_leaders
+		x = -1
+		y = 1
+		prerequisite = {focus = FRC_marxist_leninist_cabinet}
+		relative_position_id = FRC_marxist_leninist_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_et_sa_prunelle_decidee
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generalized_chaos2
+				add_idea = generalized_chaos3
+			}
+			add_popularity = {
+				popularity = -0.15
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.15
+				ideology = social_democracy
+			}
+			add_popularity = {
+				popularity = -0.15
+				ideology = libertarian_socialism
+			}
+			add_popularity = {
+				popularity = -0.15
+				ideology = classical_marxism
+			}
+		}
+	}
+	focus = {
+		id = FRC_socialism_in_one_country
+		icon = GFX_goal_socialist_militarisation
+		x = -1
+		y = 2
+		prerequisite = {focus = FRC_crackdown_on_opposition focus = FRC_state_enterprises}
+		relative_position_id = FRC_marxist_leninist_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRC_ties_with_cgt
+		icon = GFX_goal_contacts
+		x = 1
+		y = 2
+		prerequisite = {focus = FRC_crackdown_on_opposition focus = FRC_state_enterprises}
+		relative_position_id = FRC_marxist_leninist_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_et_sa_prunelle_decidee
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.075
+				ideology = communism
+			}
+			swap_ideas = {
+				remove_idea = generalized_chaos3
+				add_idea = generalized_chaos4
+			}
+		}
+	}
+	focus = {
+		id = FRC_peoples_commune
+		icon = GFX_goal_reorganize_the_production
+		x = 0
+		y = 3
+		prerequisite = {focus = FRC_ties_with_cgt}
+		prerequisite = {focus = FRC_socialism_in_one_country}
+		relative_position_id = FRC_marxist_leninist_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 75
+			remove_ideas = generalized_chaos4
+		}
+	}
+	focus = {
+		id = FRC_reinstate_the_national_guard
+		icon = GFX_goal_garde_nationale
+		x = 3
+		y = 1
+		prerequisite = {focus = FRC_marxist_leninist_cabinet focus = FRC_a_moderate_cabinet}
+		relative_position_id = FRC_marxist_leninist_cabinet
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = national_guard
+		}
+	}
+	focus = {
+		id = FRC_left_wing_unity
+		icon = GFX_goal_socialist_congress
+		x = -12
+		y = 2
+		prerequisite = {focus = FRC_elect_the_executive_comission}
+		mutually_exclusive = {focus = FRC_a_moderate_cabinet}
+		mutually_exclusive = {focus = FRC_marxist_leninist_cabinet}
+		mutually_exclusive = {focus = FRC_anarchist_breath}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = classical_marxism
+				elections_allowed = yes
+			}
+			create_country_leader = {
+	        name = "Colette Peignot"
+	        desc = "POLITICS_OTTO_WELS_DESC"
+	        picture = "gfx/leaders/Colette_Peignot.dds"
+	        expire = "1960.1.16"
+	        ideology = classical_marxism_category
+	        traits = {
+	       }
+          }
+		}
+	}
+	focus = {
+		id = FRC_internationalism
+		icon = GFX_goal_onwards
+		x = -3
+		y = 1
+		prerequisite = {focus = FRC_left_wing_unity focus = FRC_anarchist_breath}
+		relative_position_id = FRC_left_wing_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = world_revolution
+		}
+	}
+	focus = {
+		id = FRC_the_third_internationale
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		x = 1
+		y = 1
+		prerequisite = {focus = FRC_left_wing_unity}
+		relative_position_id = FRC_left_wing_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					BAY = {
+						is_faction_leader = yes
+						has_government = communism
+					}
+				}
+				BAY = {
+					country_event = {
+						id = francenew.37
+						days = 2
+					}
+				}
+			}
+			IF = {
+				limit = {
+					HUN = {
+						is_faction_leader = yes
+						has_government = communism
+					}
+				}
+				HUN = {
+					country_event = {
+						id = francenew.37
+						days = 2
+					}
+				}
+			}
+			IF = {
+				limit = {
+					AUS = {
+						is_faction_leader = yes
+						has_government = communism
+					}
+				}
+				AUS = {
+					country_event = {
+						id = francenew.37
+						days = 2
+					}
+				}
+			}
+			IF = {
+				limit = {
+					USR = {
+						is_faction_leader = yes
+						has_government = communism
+					}
+				}
+				USR = {
+					country_event = {
+						id = francenew.37
+						days = 2
+					}
+				}
+			}
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+	focus = {
+		id = FRC_united_under_radical_socialism
+		icon = GFX_goal_communist_congress
+		x = -1
+		y = 1
+		prerequisite = {focus = FRC_left_wing_unity}
+		relative_position_id = FRC_left_wing_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_et_sa_prunelle_decidee
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = generalized_chaos2
+				add_idea = generalized_chaos3
+			}
+		}
+	}
+	focus = {
+		id = FRC_reorganize_the_society
+		icon = GFX_goal_ideological_communist_immigration
+		x = 1
+		y = 2
+		prerequisite = {focus = FRC_united_under_radical_socialism focus = FRC_the_third_internationale}
+		relative_position_id = FRC_left_wing_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_et_sa_prunelle_decidee
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = generalized_chaos3
+				add_idea = generalized_chaos4
+			}
+		}
+	}
+	focus = {
+		id = FRC_class_war
+		icon = GFX_focus_spr_class_war
+		x = -1
+		y = 2
+		prerequisite = {focus = FRC_united_under_radical_socialism focus = FRC_the_third_internationale}
+		relative_position_id = FRC_left_wing_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = SPR_class_war_1
+		}
+	}
+	focus = {
+		id = FRC_unexpected_unity
+		icon = GFX_focus_spr_unify_the_london_bureau
+		x = 0
+		y = 3
+		prerequisite = {focus = FRC_reorganize_the_society}
+		prerequisite = {focus = FRC_class_war}
+		relative_position_id = FRC_left_wing_unity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_reorganize_the_society
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = generalized_chaos4
+		}
+	}
+	focus = {
+		id = FRC_anarchist_breath
+		icon = GFX_goal_social_revolution
+		x = -18
+		y = 2
+		prerequisite = {focus = FRC_elect_the_executive_comission}
+		mutually_exclusive = {focus = FRC_a_moderate_cabinet}
+		mutually_exclusive = {focus = FRC_marxist_leninist_cabinet}
+		mutually_exclusive = {focus = FRC_left_wing_unity}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = SPR_anarchist_society_1
+			set_politics = {
+				ruling_party = libertarian_socialism
+				elections_allowed = yes
+			}
+			create_country_leader = {
+	        name = "Conseil de Défense de la Commune"
+	        desc = "POLITICS_OTTO_WELS_DESC"
+	        picture = "gfx/leaders/anarchist_commune.dds"
+	        expire = "1960.1.16"
+	        ideology = libertarian_socialism_category
+	        traits = {
+	       }
+          }
+		}
+	}
+	focus = {
+		id = FRC_celebrate_the_commune
+		icon = GFX_goal_commemorate_the_commune
+		x = -1
+		y = 1
+		prerequisite = {focus = FRC_anarchist_breath}
+		relative_position_id = FRC_anarchist_breath
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_et_sa_prunelle_decidee
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = generalized_chaos2
+				add_idea = generalized_chaos3
+			}
+		}
+	}
+	focus = {
+		id = FRC_smash_authoritarian_left
+		icon = GFX_goal_agrarianist_victory
+		x = 1
+		y = 1
+		prerequisite = {focus = FRC_anarchist_breath}
+		relative_position_id = FRC_anarchist_breath
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = FRC_collectivist_society
+		icon = GFX_focus_por_workers_of_iberia
+		x = 1
+		y = 2
+		prerequisite = {focus = FRC_smash_authoritarian_left focus = FRC_celebrate_the_commune}
+		relative_position_id = FRC_anarchist_breath
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = civilian_economy
+				}
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = SPR_collectivized_society
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = low_economic_mobilisation
+				add_idea = SPR_collectivized_society
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = partial_economic_mobilisation
+				add_idea = SPR_collectivized_society
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = war_economy
+				}
+			swap_ideas = {
+				remove_idea = war_economy
+				add_idea = SPR_collectivized_society
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = tot_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = tot_economic_mobilisation
+				add_idea = SPR_collectivized_society
+			}
+			}
+		}
+	}
+	focus = {
+		id = FRC_antifascist_militias
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = -1
+		y = 2
+		prerequisite = {focus = FRC_celebrate_the_commune focus = FRC_smash_authoritarian_left}
+		relative_position_id = FRC_anarchist_breath
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_celebrate_the_commune
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generalized_chaos3
+				add_idea = generalized_chaos4
+			}
+			add_ideas = antifascist_militias
+		}
+	}
+	focus = {
+		id = FRC_nos_drapeaux_sont_noirs_dans_le_vent
+		icon = GFX_goal_guns_of_the_revolution
+		x = 0
+		y = 3
+		prerequisite = {focus = FRC_antifascist_militias}
+		prerequisite = {focus = FRC_collectivist_society}
+		relative_position_id = FRC_anarchist_breath
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRC_celebrate_the_commune
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = generalized_chaos4
+			every_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = FRC_brest_mutineers
+		icon = GFX_goal_red_mutiny
+		x = 0
+		y = 1
+		prerequisite = {focus = FRC_linsurge_se_dresse_le_fusil_charge}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			any_state = {
+          is_controlled_by = FRC
+          is_on_continent = europe
+          is_coastal = yes
+         }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = frc_mutineers
+			hidden_effect = {
+			FRA = {
+			transfer_units_fraction= {
+	        target = FRC
+	        navy_ratio = 0.4
+            }
+			}
+			}
+		}
+	}
+	focus = {
+		id = FRC_on_peut_le_voir_aux_barricades
+		icon = GFX_goal_barricades_communist
+		x = 4
+		y = 1
+		prerequisite = {focus = FRC_linsurge_se_dresse_le_fusil_charge}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			927 = {
+				add_building_construction = {
+					type = bunker 
+					province = 11506
+					level = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_descendra_avec_les_camarades
+		icon = GFX_goal_more_militias
+		x = 1
+		y = 2
+		prerequisite = {focus = FRC_on_peut_le_voir_aux_barricades}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			948 = {
+			create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 }
+		}
+	}
+	focus = {
+		id = FRC_riant_blaguant_risquant_sa_peau
+		icon = GFX_goal_red_army_choir
+		x = 3
+		y = 2
+		prerequisite = {focus = FRC_on_peut_le_voir_aux_barricades}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = FRC_et_sa_prunelle_decidee
+		icon = GFX_goal_womens_rights
+		x = 5
+		y = 2
+		prerequisite = {focus = FRC_on_peut_le_voir_aux_barricades}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generalized_chaos
+				add_idea = generalized_chaos2
+			}
+		}
+	}
+	focus = {
+		id = FRC_dsallume_aux_splendeurs_de_lidee
+		icon = GFX_goal_all_the_proletariat
+		x = 7
+		y = 2
+		prerequisite = {focus = FRC_on_peut_le_voir_aux_barricades}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = revolutionary_army
+				add_idea = revolutionary_army2
+			}
+		}
+	}
+	focus = {
+		id = FRC_aux_reflets_pourpres_du_drapeau
+		icon = GFX_goal_communist_offensive
+		x = 4
+		y = 3
+		prerequisite = {focus = FRC_et_sa_prunelle_decidee}
+		prerequisite = {focus = FRC_dsallume_aux_splendeurs_de_lidee}
+		prerequisite = {focus = FRC_riant_blaguant_risquant_sa_peau}
+		prerequisite = {focus = FRC_descendra_avec_les_camarades}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = revolutionary_army2
+				add_idea = revolutionary_army3
+			}
+		}
+	}
+	focus = {
+		id = FRC_revolution_needs_every_weapons
+		icon = GFX_goal_guns_of_the_revolution
+		x = 3
+		y = 4
+		prerequisite = {focus = FRC_aux_reflets_pourpres_du_drapeau}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_equipment_to_stockpile = {
+             type = infantry_equipment_1
+             amount = 5000
+            }
+		}
+	}
+	focus = {
+		id = FRC_our_right_to_revolt
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = 5
+		y = 4
+		prerequisite = {focus = FRC_aux_reflets_pourpres_du_drapeau}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 0.8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = revolutionary_army3
+				add_idea = revolutionary_army4
+			}
+		}
+	}
+	focus = {
+		id = FRC_non_la_commune_nest_pas_morte_et_elle_nest_pas_seule
+		icon = GFX_goal_strike_the_monarchy
+		x = 4
+		y = 5
+		prerequisite = {focus = FRC_our_right_to_revolt}
+		prerequisite = {focus = FRC_revolution_needs_every_weapons}
+		relative_position_id = FRC_linsurge_se_dresse_le_fusil_charge
+		cost = 8.6
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			transfer_state = 21
+			transfer_state = 31
+			transfer_state = 14
+			21 = {
+				create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+           }
+		   create_unit = {
+            division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+             owner = FRC
+            }
+			create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+			}
+			31 = {
+				create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+           }
+		   create_unit = {
+            division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+             owner = FRC
+            }
+			create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+			}
+			14 = {
+				create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+           }
+		   create_unit = {
+            division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+             owner = FRC
+            }
+			create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+		 create_unit = {
+          division = "name = \"Milice Révolutionnaire\" division_template = \"Milice Révolutionnaire\" start_experience_factor = 0.5"
+          owner = FRC
+         }
+			}
+		}
+	}
+	focus = {
+		id = FRC_war_reparations
+		icon = GFX_focus_mex_privatisation
+		x = 27
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = commune_victory_in_french_civil_war
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = war_reparations 
+				days = 120
+			}
+			PRS = {
+			 add_timed_idea = {
+				idea = war_reparations_from_france
+				days = 120
+			 }
+			}
+		}
+	}
+	focus = {
+		id = FRC_reims_treaty
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = {focus = FRC_war_reparations}
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			NOT = {
+				has_idea = war_reparations
+			}
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = francenew.38
+				days = 2
+			}
+			hidden_effect = {
+			news_event = {
+				id = news.3059
+				days = 3
+			}
+			}
+		}
+	}
+	focus = {
+		id = FRC_operations_in_the_shadow
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 2
+		prerequisite = {focus = FRC_reims_treaty}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = military_ramp_up
+				days = 300
+			}
+		}
+	}
+	focus = {
+		id = FRC_beyond_differences
+		icon = GFX_goal_contacts
+		x = 2
+		y = 2
+		prerequisite = {focus = FRC_reims_treaty}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				USR = {
+					has_war_with = SOV
+				}
+			}
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_faction = united_front_against_germany
+			IF = {
+				limit = {
+					country_exists = USR 
+					NOT = {
+						country_exists = SOV
+					}
+				}
+				USR = {
+					country_event = {
+						id = francenew.39
+						days = 2
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = SOV 
+					NOT = {
+						country_exists = USR
+					}
+				}
+				SOV = {
+					country_event = {
+						id = francenew.39
+						days = 2
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_revolutionary_shield
+		icon = GFX_goal_revolutionary_shield
+		x = -1
+		y = 3
+		prerequisite = {focus = FRC_operations_in_the_shadow focus = FRC_beyond_differences}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			17 = {
+				add_building_construction = {
+					type = bunker 
+					province = 698
+					level = 3
+				}
+			}
+			931 = {
+				add_building_construction = {
+					type = bunker 
+					province = 11642
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 11488
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 5291
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 3560
+					level = 3
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = bunker 
+					province = 9472
+					level = 3
+				}
+			}
+			931 = {
+				add_building_construction = {
+					type = bunker 
+					province = 3447
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 3402
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 454
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 11420
+					level = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_defence_of_the_cities
+		icon = GFX_goal_surrounded
+		x = 1
+		y = 3
+		prerequisite = {focus = FRC_operations_in_the_shadow focus = FRC_beyond_differences}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			928 = {
+				add_building_construction = {
+					type = bunker 
+					province = 6949
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 11518
+					level = 3
+				}
+				add_building_construction = {
+					type = bunker 
+					province = 9534
+					level = 3
+				}
+			}
+			927 = {
+				add_building_construction = {
+					type = bunker 
+					province = 11506
+					level = 3
+				}
+			}
+			14 = {
+				add_building_construction = {
+					type = bunker 
+					province = 3552
+					level = 3
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = bunker 
+					province = 13011
+					level = 3
+				}
+			}
+			20 = {
+				add_building_construction = {
+					type = bunker 
+					province = 6613
+					level = 3
+				}
+			}
+			21 = {
+				add_building_construction = {
+					type = bunker 
+					province = 11834
+					level = 3
+				}
+			}
+			851 = {
+				add_building_construction = {
+					type = bunker 
+					province = 911
+					level = 3
+				}
+			}
+			735 = {
+				add_building_construction = {
+					type = bunker 
+					province = 9909
+					level = 3
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = bunker 
+					province = 9737
+					level = 3
+				}
+			}
+			31 = {
+				add_building_construction = {
+					type = bunker 
+					province = 6766
+					level = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_communard_spirit
+		icon = GFX_goal_communard_spirit
+		x = 3
+		y = 3
+		prerequisite = {focus = FRC_operations_in_the_shadow focus = FRC_beyond_differences}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = communard_spirit
+		}
+	}
+	focus = {
+		id = FRC_ah_zut_a_ton_armistice
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = 1
+		y = 4
+		prerequisite = {focus = FRC_communard_spirit focus = FRC_defence_of_the_cities focus = FRC_revolutionary_shield}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		relative_position_id = FRC_war_reparations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = PRS
+			}
+		}
+	}
+	focus = {
+		id = FRC_sous_la_vapeur_en_action
+		icon = GFX_goal_support_from_unions
+		x = 22
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = commune_victory_in_french_civil_war
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRC_industry
+		icon = GFX_goal_modernization_of_equipment
+		x = 22
+		y = 1
+		prerequisite = {focus = FRC_sous_la_vapeur_en_action}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = FRC_modernization_of_transports
+		icon = GFX_goal_advanced_transports
+		x = 21
+		y = 2
+		prerequisite = {focus = FRC_industry}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = motorized_equipment 
+				bonus = 0.75
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = train_tech 
+				bonus = 0.75
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = FRC_refineries
+		icon = GFX_focus_generic_stockpile_fuel
+		x = 23
+		y = 2
+		prerequisite = {focus = FRC_industry}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = synth_resources 
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = FRC_keystone_of_the_commune
+		icon = GFX_focus_generic_rubber
+		x = 22
+		y = 3
+		prerequisite = {focus = FRC_refineries}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_towards_autarky
+		icon = GFX_goal_generic_construction2
+		x = 24
+		y = 3
+		prerequisite = {focus = FRC_refineries}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = autarky
+		}
+	}
+	focus = {
+		id = FRC_great_industrial_reborn
+		icon = GFX_goal_great_industrial_reborn
+		x = 17
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = commune_victory_in_french_civil_war
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = great_industrial_reborn
+			activate_mission_tooltip = FRC_great_industrial_reborn_first_year
+		}
+	}
+	focus = {
+		id = FRC_centralized_planification
+		icon = GFX_goal_centralized_management
+		x = 2
+		y = 1
+		prerequisite = {focus = FRC_great_industrial_reborn}
+		mutually_exclusive = {focus = FRC_give_power_to_local_soviets}
+		relative_position_id = FRC_great_industrial_reborn
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_completed_focus = FRC_marxist_leninist_cabinet
+			has_completed_focus = FRC_a_moderate_cabinet
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+			idea = 	five_years_plan
+			days = 1825
+			}
+		}
+	}
+	focus = {
+		id = FRC_give_power_to_local_soviets
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 1
+		prerequisite = {focus = FRC_great_industrial_reborn}
+		mutually_exclusive = {focus = FRC_centralized_planification}
+		relative_position_id = FRC_great_industrial_reborn
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_completed_focus = FRC_left_wing_unity
+			has_completed_focus = FRC_anarchist_breath
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = decentralization
+		}
+	}
+	focus = {
+		id = FRC_great_works
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 2
+		prerequisite = {focus = FRC_great_industrial_reborn}
+		relative_position_id = FRC_great_industrial_reborn
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = great_works
+		}
+	}
+	focus = {
+		id = FRC_sncf
+		icon = GFX_goal_sncf
+		x = 3
+		y = 1
+		prerequisite = {focus = FRC_great_works focus = FRC_modernization_of_transports}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = scnf
+		}
+	}
+	focus = {
+		id = FRC_plan_souvarine
+		icon = GFX_goal_socialist_dev
+		x = 1
+		y = 1
+		prerequisite = {focus = FRC_great_works}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 19
+			controls_state = 14
+			controls_state = 21
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			19 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			14 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			21 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_urban_centers
+		icon = GFX_goal_urban_research
+		x = 2
+		y = 2
+		prerequisite = {focus = FRC_sncf}
+		prerequisite = {focus = FRC_plan_souvarine}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = FRC_urbanize_the_rural_south
+		icon = GFX_goal_industrialisation
+		x = -1
+		y = 1
+		prerequisite = {focus = FRC_great_works}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 25
+			controls_state = 26
+			controls_state = 33
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			25 = {
+				set_state_category = city
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			26 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			33 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_southern_fields
+		icon = GFX_focus_generic_land_reclamation
+		x = -3
+		y = 1
+		prerequisite = {focus = FRC_great_works}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 31
+			controls_state = 806
+			controls_state = 22
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			31 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			806 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = southern_fields
+		}
+	}
+	focus = {
+		id = FRC_connect_the_countryside
+		icon = GFX_goal_socialist_railroad
+		x = -2
+		y = 2
+		prerequisite = {focus = FRC_southern_fields}
+		prerequisite = {focus = FRC_urbanize_the_rural_south}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRC_ils_savent_que_la_terre_est_une
+		icon = GFX_goal_agrarian_society
+		x = 0
+		y = 3
+		prerequisite = {focus = FRC_connect_the_countryside focus = FRC_urban_centers}
+		prerequisite = {}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 19
+			controls_state = 14
+			controls_state = 21
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = collective_farms
+		}
+	}
+	focus = {
+		id = FRC_revolutionary_arsenal
+		icon = GFX_focus_generic_socialist_science
+		x = 0
+		y = 4
+		prerequisite = {focus = FRC_ils_savent_que_la_terre_est_une}
+		prerequisite = {}
+		relative_position_id = FRC_great_works
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 150
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = great_industrial_reborn
+				add_idea = great_industrial_reborn2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

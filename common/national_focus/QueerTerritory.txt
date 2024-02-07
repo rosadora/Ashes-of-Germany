@@ -1,0 +1,390 @@
+﻿focus_tree = {
+	id = qtt_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10000
+			tag = QTT
+		}
+	}
+
+	continuous_focus_position = { x = 55 y = 1500 }
+	
+	default = no
+
+	focus = {
+		id = QTT_struggle_with_groza
+		icon = GFX_goal_struggle_for_transylvania
+		x = 5
+		y = 0
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = QTT_raise_militias
+		icon = GFX_goal_guns_of_the_revolution
+		x = -3
+		y = 1
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			916 = {
+			create_unit = {
+            division = "name = \"Divizia Queer\" division_template = \"Divizia Queer\" start_experience_factor = 0.5"
+            owner = QTT
+         }
+		 }
+		 916 = {
+			create_unit = {
+            division = "name = \"Divizia Queer\" division_template = \"Divizia Queer\" start_experience_factor = 0.5"
+            owner = QTT
+         }
+		 }
+		 916 = {
+			create_unit = {
+            division = "name = \"Divizia Queer\" division_template = \"Divizia Queer\" start_experience_factor = 0.5"
+            owner = QTT
+         }
+		 }
+		 916 = {
+			create_unit = {
+            division = "name = \"Divizia Queer\" division_template = \"Divizia Queer\" start_experience_factor = 0.5"
+            owner = QTT
+         }
+		 }
+		}
+	}
+	focus = {
+		id = QTT_defend_our_fiefdom
+		icon = GFX_goal_defend_the_fiefdom_queer
+		x = -2
+		y = 2
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 916
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			916 = {
+			add_building_construction = {
+				    province = 711
+					type = bunker
+					level = 3
+					instant_build = yes
+			}
+			add_building_construction = {
+				    province = 9668
+					type = bunker
+					level = 2
+					instant_build = yes
+			}
+			add_building_construction = {
+				    province = 3689
+					type = bunker
+					level = 2
+			    	instant_build = yes
+			}
+		  }
+		}
+	}
+	focus = {
+		id = QTT_prepare_for_a_long_war
+		icon = GFX_goal_modernization_of_equipment
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 916
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			916 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = QTT_all_iron_against_the_ennemy
+		icon = GFX_focus_generic_steel
+		x = 0
+		y = 2
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 916
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			add_resource = {
+             type = steel
+             amount = 6
+             state = 916
+            }
+		}
+	}
+	focus = {
+		id = QTT_anti_authoritarian_struggle
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 1
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = anti_authoritarian_struggle
+				days = 250
+			}
+		}
+	}
+	focus = {
+		id = QTT_improve_infrastructures
+		icon = GFX_goal_infrastructures_in_moutain
+		x = 2
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 916
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			916 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = QTT_attract_sympathy
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_struggle_with_groza}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = QTT_by_the_mountains_and_by_the_plains
+		icon = GFX_goal_stand_up_and_fight
+		x = 0
+		y = 3
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+		prerequisite = {focus = QTT_all_iron_against_the_ennemy}
+		prerequisite = {focus = QTT_raise_militias}
+		prerequisite = {focus = QTT_anti_authoritarian_struggle}
+		prerequisite = {focus = QTT_attract_sympathy}
+		prerequisite = {focus = QTT_prepare_for_a_long_war}
+		prerequisite = {focus = QTT_improve_infrastructures}
+		prerequisite = {focus = QTT_defend_our_fiefdom}
+
+		completion_reward = {
+			add_timed_idea = {
+			idea = grozas_debacle
+			days = 150
+			}
+		}
+	}
+	focus = {
+		id = QTT_trans_ylvania_united_or_almost
+		icon = GFX_goal_queer_population
+		x = 0
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = QTT_struggle_with_groza
+
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = civil_war
+			remove_ideas = all_queer_uprising
+		}
+	}
+}

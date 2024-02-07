@@ -1,0 +1,3780 @@
+﻿focus_tree = {
+	id = prussian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = PRS
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = PRS_prussian_recovery
+		icon = GFX_goal_generic_production
+		x = 34
+		y = 7
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_hyperinflation_trigger_tt
+				NOT = {
+					has_idea = hyperinflation
+					has_idea = hyperinflation1
+					has_idea = hyperinflation2
+					has_idea = hyperinflation3
+					has_idea = hyperinflation4
+					has_idea = hyperinflation5
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = PRS_focus_on_excavation
+		icon = GFX_goal_generic_construction2
+		x = -2
+		y = 1
+		prerequisite = {focus = PRS_prussian_recovery}
+		relative_position_id = PRS_prussian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = excavation_tech
+			}
+		}
+	}
+	focus = {
+		id = PRS_silesian_production
+		icon = GFX_focus_generic_steel
+		x = -3
+		y = 2
+		prerequisite = {focus = PRS_focus_on_excavation}
+		relative_position_id = PRS_prussian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				state = 66
+				type = steel 
+				amount = 15
+			}
+			add_resource = {
+				state = 66
+				type = aluminium 
+				amount = 10
+			}
+			add_resource = {
+				state = 67
+				type = steel 
+				amount = 12
+			}
+			add_resource = {
+				state = 67
+				type = aluminium 
+				amount = 6
+			}
+		}
+	}
+	focus = {
+		id = PRS_western_germany_resources
+		icon = GFX_focus_generic_tungsten
+		x = -1
+		y = 2
+		prerequisite = {focus = PRS_focus_on_excavation}
+		relative_position_id = PRS_prussian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 60
+			controls_state = 59
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				state = 59
+				type = oil 
+				amount = 10
+			}
+			add_resource = {
+				state = 60
+				type = tungsten 
+				amount = 6
+			}
+			add_resource = {
+				state = 60
+				type = chromium 
+				amount = 6
+			}
+		}
+	}
+	focus = {
+		id = PRS_kaisersautobahn
+		icon = GFX_goal_generic_construct_civilian
+		x = 2
+		y = 1
+		prerequisite = {focus = PRS_prussian_recovery}
+		relative_position_id = PRS_prussian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_state_compagnies
+		icon = GFX_focus_generic_industry_3
+		x = 1
+		y = 2
+		prerequisite = {focus = PRS_kaisersautobahn}
+		relative_position_id = PRS_prussian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_new_compagnies
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 3
+		y = 2
+		prerequisite = {focus = PRS_kaisersautobahn}
+		relative_position_id = PRS_prussian_recovery
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_face_the_crisis
+		icon = GFX_goal_dealing_with_economic_crisis
+		x = 40
+		y = 7
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hyperinflation
+				add_idea = hyperinflation1
+			}
+		}
+	}
+	focus = {
+		id = FRA_side_with_small_and_medium_compagnies
+		icon = GFX_goal_centralized_management
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_face_the_crisis}
+		mutually_exclusive = {focus = FRA_let_the_compagnies_fail}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = economic_aid_to_small_compagnies
+				days = 50
+			}
+		}
+	}
+	focus = {
+		id = FRA_let_the_compagnies_fail
+		icon = GFX_goal_compagnies_fail
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_face_the_crisis}
+		mutually_exclusive = {focus = FRA_side_with_small_and_medium_compagnies}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+			64 = {
+				remove_building = {
+                 type = arms_factory
+                 level = 1
+                }
+			}
+			63 = {
+				remove_building = {
+                 type = industrial_complex
+                 level = 1
+                }
+			}
+		}
+	}
+	focus = {
+		id = FRA_stop_printing_money
+		icon = GFX_goal_stop_printing_money
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_let_the_compagnies_fail focus = FRA_side_with_small_and_medium_compagnies}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_idea = economic_aid_to_small_compagnies
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = hyperinflation1
+				add_idea = hyperinflation2
+			}
+		}
+	}
+	focus = {
+		id = FRA_raise_interest_rate
+		icon = GFX_focus_mex_privatisation
+		x = -2
+		y = 3
+		prerequisite = {focus = FRA_stop_printing_money}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hyperinflation2
+				add_idea = hyperinflation3
+			}
+			64 = {
+				remove_building = {
+                 type = arms_factory
+                 level = 1
+                }
+				remove_building = {
+                 type = industrial_complex
+                 level = 1
+                }
+			}
+		}
+	}
+	focus = {
+		id = FRA_support_soup_kitchens
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 3
+		prerequisite = {focus = FRA_stop_printing_money}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = FRA_support_the_farmers
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		x = 2
+		y = 3
+		prerequisite = {focus = FRA_stop_printing_money}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = PRS_austerity_mesures
+		icon = GFX_focus_ETH_adopt_the_lira
+		x = 0
+		y = 4
+		prerequisite = {focus = FRA_raise_interest_rate}
+		prerequisite = {focus = FRA_support_the_farmers}
+		prerequisite = {focus = FRA_support_soup_kitchens}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hyperinflation3
+				add_idea = hyperinflation4
+			}
+		}
+	}
+	focus = {
+		id = PRS_cuts_in_education
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 5
+		prerequisite = {focus = PRS_austerity_mesures}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = cuts_in_education
+				days = 300
+			}
+		}
+	}
+	focus = {
+		id = PRS_cuts_in_military
+		icon = GFX_focus_POL_sanation_right
+		x = 1
+		y = 5
+		prerequisite = {focus = PRS_austerity_mesures}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = cuts_in_military
+				days = 300
+			}
+		}
+	}
+	focus = {
+		id = PRS_cuts_in_welfare
+		icon = GFX_focus_generic_population_growth
+		x = 0
+		y = 6
+		prerequisite = {focus = PRS_cuts_in_military}
+		prerequisite = {focus = PRS_cuts_in_education}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hyperinflation4
+				add_idea = hyperinflation5
+			}
+		}
+	}
+	focus = {
+		id = PRS_crisis_solved
+		icon = GFX_goal_advanced_transports
+		x = 0
+		y = 7
+		prerequisite = {focus = PRS_cuts_in_welfare}
+		relative_position_id = FRA_face_the_crisis
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = hyperinflation5
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = FRA_rebuild_the_luftstreitkrafte
+		icon = GFX_goal_luftwaffe
+		x = 48
+		y = 4
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_hyperinflation_trigger_tt
+				NOT = {
+					has_idea = hyperinflation
+					has_idea = hyperinflation1
+					has_idea = hyperinflation2
+					has_idea = hyperinflation3
+					has_idea = hyperinflation4
+					has_idea = hyperinflation5
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+	focus = {
+		id = FRA_from_the_sky
+		icon = GFX_goal_generic_air_fighter
+		x = 3
+		y = 1
+		prerequisite = {focus = FRA_rebuild_the_luftstreitkrafte}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = light_air
+			}
+		}
+	}
+	focus = {
+		id = FRA_heavy_aircraft
+		icon = GFX_goal_generic_air_bomber
+		x = 4
+		y = 2
+		prerequisite = {focus = FRA_from_the_sky}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = medium_air
+			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = heavy_air
+			}
+		}
+	}
+	focus = {
+		id = FRA_modernization_of_tactics
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		prerequisite = {focus = FRA_rebuild_the_luftstreitkrafte}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	     cost_reduction = 0.75
+	      uses = 2
+	      category = air_doctrine
+         }
+		}
+	}
+	focus = {
+		id = FRA_expansion_of_the_airforce
+		icon = GFX_goal_generic_CAS
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_modernization_of_tactics}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = luftstreitkrafte
+		}
+	}
+	focus = {
+		id = FRA_manoeuvers_in_baltic_sea
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		x = -2
+		y = 2
+		prerequisite = {focus = FRA_modernization_of_tactics}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 75
+			add_doctrine_cost_reduction = {
+	     cost_reduction = 0.75
+	      uses = 2
+	      category = air_doctrine
+         }
+		}
+	}
+	focus = {
+		id = FRA_womens_in_airforce
+		icon = GFX_focus_SOV_women_in_aviation
+		x = 2
+		y = 2
+		prerequisite = {focus = FRA_modernization_of_tactics}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 75
+			set_rule = {
+			can_generate_female_aces = yes
+			}
+		}
+	}
+	focus = {
+		id = FRA_expand_airbase
+		icon = GFX_focus_generic_license_production
+		x = -3
+		y = 1
+		prerequisite = {focus = FRA_rebuild_the_luftstreitkrafte}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 64
+			controls_state = 66
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_continue_the_airbase_program
+		icon = GFX_focus_generic_aircraft_production
+		x = -4
+		y = 2
+		prerequisite = {focus = FRA_expand_airbase}
+		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 63
+			controls_state = 773
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			63 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_rebuild_the_deutsches_heer
+		icon = GFX_goal_deutsches_heer
+		x = 48
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_hyperinflation_trigger_tt
+				NOT = {
+					has_idea = hyperinflation
+					has_idea = hyperinflation1
+					has_idea = hyperinflation2
+					has_idea = hyperinflation3
+					has_idea = hyperinflation4
+					has_idea = hyperinflation5
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 50
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_begin_the_rearmament
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -3
+		y = 1
+		prerequisite = {focus = FRA_rebuild_the_deutsches_heer}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_continue_the_rearmament
+		icon = GFX_goal_generic_military_sphere
+		x = -4
+		y = 2
+		prerequisite = {focus = FRA_begin_the_rearmament}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_modernization_of_weapons
+		icon = GFX_goal_modernization_of_equipment
+		x = 3
+		y = 1
+		prerequisite = {focus = FRA_rebuild_the_deutsches_heer}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = FRA_modernization_of_means
+		icon = GFX_goal_generic_army_tanks
+		x = 4
+		y = 2
+		prerequisite = {focus = FRA_modernization_of_weapons}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = armor
+			}
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = FRA_quality_before_quantity
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = {focus = FRA_rebuild_the_deutsches_heer}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = deutsches_heer
+		}
+	}
+	focus = {
+		id = FRA_undefeatable
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = 2
+		y = 2
+		prerequisite = {focus = FRA_quality_before_quantity}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = deutsches_heer
+				add_idea = deutsches_heer1
+			}
+		}
+	}
+	focus = {
+		id = FRA_invest_in_military_research
+		icon = GFX_focus_research
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_quality_before_quantity}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = FRA_chefs_surprise
+		icon = GFX_focus_wonderweapons
+		x = -2
+		y = 2
+		prerequisite = {focus = FRA_quality_before_quantity}
+		relative_position_id = FRA_rebuild_the_deutsches_heer
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = FRA_rebuild_thekaiserliche_marine
+		icon = GFX_goal_kaiserliche_marine
+		x = 37
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_hyperinflation_trigger_tt
+				NOT = {
+					has_idea = hyperinflation
+					has_idea = hyperinflation1
+					has_idea = hyperinflation2
+					has_idea = hyperinflation3
+					has_idea = hyperinflation4
+					has_idea = hyperinflation5
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 50
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_massification
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 3
+		y = 1
+		prerequisite = {focus = FRA_rebuild_thekaiserliche_marine}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_expansion_of_dockyards
+		icon = GFX_focus_generic_refit_civilian_ships
+		x = 1
+		y = 2
+		prerequisite = {focus = FRA_massification}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_increase_dockyards_efficiency
+		icon = GFX_goal_generic_navy_cruiser
+		x = 3
+		y = 2
+		prerequisite = {focus = FRA_massification}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = kaiserliche_marine
+						has_idea = kaiserliche_marine1
+					}
+				}
+				add_ideas = kaiserliche_marine
+			}
+			IF = {
+				limit = {
+					has_idea = kaiserliche_marine1
+				}
+				swap_ideas = {
+					remove_idea = kaiserliche_marine1
+					add_idea = kaiserliche_marine2
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_direct_the_production
+		icon = GFX_goal_generic_amphibious_assault
+		x = 5
+		y = 2
+		prerequisite = {focus = FRA_massification}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = kaiserliche_marine
+					}
+				}
+				add_ideas = kaiserliche_marine1
+			}
+			IF = {
+				limit = {
+					has_idea = kaiserliche_marine
+				}
+				swap_ideas = {
+					remove_idea = kaiserliche_marine
+					add_idea = kaiserliche_marine2
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_modernization
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		x = -3
+		y = 1
+		prerequisite = {focus = FRA_rebuild_thekaiserliche_marine}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 4
+				bonus = 0.75
+				category = ship_modules_tech
+			}
+		}
+	}
+	focus = {
+		id = FRA_trade_interdiction_tactics
+		icon = GFX_goal_generic_navy_submarine
+		x = -5
+		y = 2
+		prerequisite = {focus = FRA_modernization}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = FRA_cruisers
+		icon = GFX_focus_generic_cruiser2
+		x = -3
+		y = 2
+		prerequisite = {focus = FRA_modernization}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = ca_tech
+			}
+		}
+	}
+	focus = {
+		id = FRA_renew_the_hoscheeflotte
+		icon = GFX_focus_generic_navy_battleship2
+		x = -1
+		y = 2
+		prerequisite = {focus = FRA_modernization}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = ca_tech
+			}
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = bb_tech
+			}
+		}
+	}
+	focus = {
+		id = FRA_one_nation_one_kaiser
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = 30
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = FRA_a_democratic_empire}
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_hyperinflation_trigger_tt
+				NOT = {
+					has_idea = hyperinflation
+					has_idea = hyperinflation1
+					has_idea = hyperinflation2
+					has_idea = hyperinflation3
+					has_idea = hyperinflation4
+					has_idea = hyperinflation5
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				popularity =  0.02
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity =  0.01
+				ideology = democratic
+			}
+		}
+	}
+	focus = {
+		id = FRA_silence_the_opposition
+		icon = GFX_goal_no_democracy_in_germany
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_one_nation_one_kaiser}
+		mutually_exclusive = {}
+		relative_position_id = FRA_one_nation_one_kaiser
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				popularity =  -0.03
+				ideology = social_liberalism
+			}
+			add_popularity = {
+				popularity =  -0.02
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity =  -0.01
+				ideology = social_democracy
+			}
+		}
+	}
+	focus = {
+		id = FRA_cooperation_with_nationalists
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_one_nation_one_kaiser}
+		mutually_exclusive = {}
+		relative_position_id = FRA_one_nation_one_kaiser
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				popularity =  0.04
+				ideology = ultra_nationalism
+			}
+		}
+	}
+	focus = {
+		id = FRA_crackdown_on_socialist_opposition
+		icon = GFX_goal_end_the_crisis
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_silence_the_opposition}
+		prerequisite = {focus = FRA_cooperation_with_nationalists}
+		mutually_exclusive = {}
+		relative_position_id = FRA_one_nation_one_kaiser
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spartakist_threat
+				add_idea = spartakist_threat0
+			}
+		}
+	}
+	focus = {
+		id = FRA_blood_and_iron
+		icon = GFX_goal_solider_flames
+		x = 2
+		y = 1
+		prerequisite = {focus = FRA_crackdown_on_socialist_opposition}
+		mutually_exclusive = {}
+		relative_position_id = FRA_crackdown_on_socialist_opposition
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -20
+			add_popularity = {
+				popularity =  -0.02
+				ideology = communism
+			}
+			add_popularity = {
+				popularity =  -0.01
+				ideology = libertarian_socialism
+			}
+			add_popularity = {
+				popularity =  -0.01
+				ideology = classical_marxism
+			}
+		}
+	}
+	focus = {
+		id = FRA_conservative_agenda
+		icon = GFX_goal_defend_the_land
+		x = 10
+		y = 1
+		prerequisite = {focus = FRA_crackdown_on_socialist_opposition}
+		mutually_exclusive = {}
+		relative_position_id = FRA_crackdown_on_socialist_opposition
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_conservative_agenda_trigger_tt
+				set_temp_variable = { PRS_conservative_coalition_support = party_popularity@democratic }
+				add_to_temp_variable = { PRS_conservative_coalition_support = party_popularity@neutrality }
+				add_to_temp_variable = { PRS_conservative_coalition_support = party_popularity@ultra_nationalism }
+				check_variable = { PRS_conservative_coalition_support > 0.45 }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = conservative_agenda
+		}
+	}
+	focus = {
+		id = FRA_school_reform
+		icon = GFX_focus_generic_military_academy
+		x = 2
+		y = 1
+		prerequisite = {focus = FRA_conservative_agenda}
+		mutually_exclusive = {}
+		relative_position_id = FRA_conservative_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = FRA_adress_the_nation
+		icon = GFX_goal_adres_the_nation
+		x = 1
+		y = 2
+		prerequisite = {focus = FRA_conservative_agenda}
+		mutually_exclusive = {}
+		relative_position_id = FRA_conservative_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.125
+		}
+	}
+	focus = {
+		id = FRA_increase_on_efficiency
+		icon = GFX_goal_generic_production2
+		x = -2
+		y = 1
+		prerequisite = {focus = FRA_conservative_agenda}
+		mutually_exclusive = {}
+		relative_position_id = FRA_conservative_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = increase_in_efficiency
+		}
+	}
+	focus = {
+		id = FRA_kaiserreich_arsenals
+		icon = GFX_goal_imperial_factories
+		x = -1
+		y = 2
+		prerequisite = {focus = FRA_conservative_agenda}
+		mutually_exclusive = {}
+		relative_position_id = FRA_conservative_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_increase_length_of_military_service
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		prerequisite = {focus = FRA_conservative_agenda}
+		mutually_exclusive = {}
+		relative_position_id = FRA_conservative_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ultra_militarized_society
+				add_idea = ultra_militarized_society5
+			}
+		}
+	}
+	focus = {
+		id = FRA_german_quality
+		icon = GFX_goal_rhineland
+		x = 0
+		y = 3
+		prerequisite = {focus = FRA_increase_length_of_military_service}
+		mutually_exclusive = {}
+		relative_position_id = FRA_conservative_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = german_quality
+		}
+	}
+	focus = {
+		id = FRA_stir_militarist_spirit
+		icon = GFX_goal_stand_up_and_fight
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_blood_and_iron}
+		mutually_exclusive = {}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = FRA_bolster_german_nationalism
+		icon = GFX_focus_generic_support_the_left_right
+		x = 4
+		y = 3
+		prerequisite = {focus = FRA_blood_and_iron}
+		mutually_exclusive = {focus = FRA_moderate_nationalism}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+			add_popularity = {
+				popularity =  0.07
+				ideology = ultra_nationalism
+			}
+			set_politics = {
+				ruling_party = ultra_nationalism
+			}
+		}
+	}
+	focus = {
+		id = FRA_freikorps_support
+		icon = GFX_focus_POL_beck_ribbentrop
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_blood_and_iron}
+		mutually_exclusive = {}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = freikorps_support
+		}
+	}
+	focus = {
+		id = FRA_reinforce_kaisers_authority
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_blood_and_iron}
+		mutually_exclusive = {}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = wilhelm_ii_the_magnificent
+		}
+	}
+	focus = {
+		id = FRA_destroy_spartakist_resistance
+		icon = GFX_focus_spr_crush_the_revolution
+		x = -2
+		y = 3
+		prerequisite = {focus = FRA_reinforce_kaisers_authority}
+		mutually_exclusive = {}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			NOT = {
+				country_exists = BAY
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = spartakist_threat0
+		}
+	}
+	focus = {
+		id = FRA_moderate_nationalism
+		icon = GFX_goal_contacts
+		x = 2
+		y = 3
+		prerequisite = {focus = FRA_reinforce_kaisers_authority}
+		mutually_exclusive = {focus = FRA_bolster_german_nationalism}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				popularity =  0.07
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = FRA_francophobia
+		icon = GFX_goal_elite_corps
+		x = 0
+		y = 3
+		prerequisite = {focus = FRA_reinforce_kaisers_authority}
+		mutually_exclusive = {}
+		relative_position_id = FRA_blood_and_iron
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = francophobia
+			add_opinion_modifier = {
+             target = FRA
+             modifier = francophobia
+            }
+			FRA = {
+				add_opinion_modifier = {
+             target = PRS
+             modifier = francophobia
+            }
+			}
+		}
+	}
+	focus = {
+		id = FRA_a_democratic_empire
+		icon = GFX_goal_democratic_empire
+		x = 20
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_hyperinflation_trigger_tt
+				NOT = {
+					has_idea = hyperinflation
+					has_idea = hyperinflation1
+					has_idea = hyperinflation2
+					has_idea = hyperinflation3
+					has_idea = hyperinflation4
+					has_idea = hyperinflation5
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity =  0.01
+				ideology = social_liberalism
+			}
+			add_popularity = {
+				popularity =  0.02
+				ideology = classical_liberalism
+			}
+		}
+	}
+	focus = {
+		id = FRA_zentrum_spd_axis
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 1
+		y = 1
+		prerequisite = {focus = FRA_a_democratic_empire}
+		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = the_pact
+		}
+	}
+	focus = {
+		id = FRA_warn_kaiser_from_extremism
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = -1
+		y = 1
+		prerequisite = {focus = FRA_a_democratic_empire}
+		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				popularity =  -0.03
+				ideology = fascism
+			}
+			add_popularity = {
+				popularity =  -0.03
+				ideology = ultra_nationalism
+			}
+			add_popularity = {
+				popularity =  -0.05
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = PRS_the_electoral_campaign
+		icon = GFX_goal_modification_of_vote
+		x = 0
+		y = 2
+		prerequisite = {focus = FRA_warn_kaiser_from_extremism}
+		prerequisite = {focus = FRA_zentrum_spd_axis}
+		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = prussia.132
+				days = 2
+			}
+		}
+	}
+	focus = {
+		id = PRS_governments_reforms
+		icon = GFX_focus_generic_railroad
+		x = -10
+		y = 3
+		prerequisite = {focus = PRS_the_electoral_campaign}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRS_governments_reforms_trigger_tt
+				set_temp_variable = { PRS_liberal_coalition_support = party_popularity@social_liberalism }
+				add_to_temp_variable = { PRS_liberal_coalition_support = party_popularity@classical_liberalism }
+				check_variable = { PRS_liberal_coalition_support > 0.3 }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = liberal_agenda
+		}
+	}
+	focus = {
+		id = PRS_land_reform
+		icon = GFX_focus_generic_land_reclamation
+		x = 2
+		y = 1
+		prerequisite = {focus = PRS_governments_reforms}
+		relative_position_id = PRS_governments_reforms
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.02
+			}
+			every_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = PRS_attract_foreign_investors
+		icon = GFX_focus_ITA_devaluate_the_lire
+		x = 1
+		y = 2
+		prerequisite = {focus = PRS_governments_reforms}
+		relative_position_id = PRS_governments_reforms
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.02
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_womens_suffrage
+		icon = GFX_goal_womens_rights
+		x = -2
+		y = 1
+		prerequisite = {focus = PRS_governments_reforms}
+		relative_position_id = PRS_governments_reforms
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = FRA_womens_suffrage
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = PRS_war_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 2
+		prerequisite = {focus = PRS_governments_reforms}
+		relative_position_id = PRS_governments_reforms
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = PRS_towards_balanced_military
+		icon = GFX_goal_dealing_with_economic_crisis
+		x = 0
+		y = 1
+		prerequisite = {focus = PRS_governments_reforms}
+		relative_position_id = PRS_governments_reforms
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ultra_militarized_society
+				add_idea = ultra_militarized_society2
+			}
+		}
+	}
+	focus = {
+		id = PRS_economy_serves_the_army
+		icon = GFX_goal_economy_serves_army
+		x = 0
+		y = 3
+		prerequisite = {focus = PRS_towards_balanced_military}
+		relative_position_id = PRS_governments_reforms
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = ultra_militarized_society2
+		}
+	}
+	focus = {
+		id = PRS_reasonable_left
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 3
+		prerequisite = {focus = PRS_the_electoral_campaign}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = spartakist_threat
+		}
+	}
+	focus = {
+		id = PRS_sacred_liberalism
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 1
+		y = 1
+		prerequisite = {focus = PRS_reasonable_left}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = the_pact
+		}
+	}
+	focus = {
+		id = PRS_defence_of_democracy
+		icon = GFX_focus_generic_coastal_fort
+		x = -1
+		y = 1
+		prerequisite = {focus = PRS_reasonable_left}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = defend_democracy
+		}
+	}
+	focus = {
+		id = PRS_red_threat
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = -4
+		y = 3
+		prerequisite = {focus = PRS_reasonable_left}
+		mutually_exclusive = {focus = PRS_lift_the_ban_on_kpd}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_stability = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.04
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.03
+			}
+		}
+	}
+	focus = {
+		id = PRS_the_guardian_of_democracy
+		icon = GFX_focus_rom_handle_king
+		x = 0
+		y = 2
+		prerequisite = {focus = PRS_reasonable_left}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = democrat_kaiser
+		}
+	}
+	focus = {
+		id = PRS_lift_the_ban_on_kpd
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 3
+		prerequisite = {focus = PRS_the_guardian_of_democracy}
+		mutually_exclusive = {focus = PRS_red_threat}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = PRS_era_of_freedom
+		icon = GFX_focus_generic_horse_studs
+		x = 0
+		y = 3
+		prerequisite = {focus = PRS_the_guardian_of_democracy}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = classical_liberalism 
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.02
+			}
+		}
+	}
+	focus = {
+		id = PRS_a_model_of_democracy
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 2
+		y = 3
+		prerequisite = {focus = PRS_the_guardian_of_democracy}
+		relative_position_id = PRS_reasonable_left
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = a_model_of_democracy
+		}
+	}
+	focus = {
+		id = PRS_the_road_to_world_power
+		icon = GFX_goal_die_wacht_am_rhein
+		x = 2
+		y = 3
+		prerequisite = {focus = PRS_the_electoral_campaign focus = FRA_crackdown_on_socialist_opposition}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_army_manpower = {
+				size > 900000
+			}
+			has_completed_focus = PRS_proclamation_of_the_iii_reich
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		will_lead_to_war_with = FRA 
+		will_lead_to_war_with = RCO
+		completion_reward = {
+			42 = { set_demilitarized_zone = no }
+			51 = { set_demilitarized_zone = no }
+			944 = { set_demilitarized_zone = no }
+			add_state_core = 42
+			add_state_core = 51
+			add_state_core = 944
+			add_state_core = 943
+			custom_effect_tooltip = GER_rhineland_ultimatum
+			add_political_power = 120
+			army_experience = 5
+			add_named_threat = { threat = 5 name = GER_rhineland }
+			FRA = {
+				country_event = prussia.112
+			}
+		}
+	}
+	focus = {
+		id = PRS_plan_east
+		icon = GFX_goal_generic_attack_allies
+		x = 3
+		y = 1
+		prerequisite = {focus = PRS_the_road_to_world_power}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			controls_state = 63
+			controls_state = 68
+			controls_state = 65
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			65 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			63 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			68 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_plan_west
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		prerequisite = {focus = PRS_the_road_to_world_power}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			controls_state = 51
+			controls_state = 42
+			controls_state = 50
+			controls_state = 57
+			controls_state = 56
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			51 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			42 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			50 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			57 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			56 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_enlarge_the_front
+		icon = GFX_focus_hol_oranje_boven
+		x = -2
+		y = 2
+		prerequisite = {focus = PRS_plan_west}
+		relative_position_id = PRS_the_road_to_world_power
+		will_lead_to_war_with = HOL
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_war_with = FRA
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.075
+			add_named_threat = { threat = 5 }
+			IF = {
+				limit = {
+					country_exists = HOL
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_schlieffen_ii
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0
+		y = 2
+		prerequisite = {focus = PRS_plan_west}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		will_lead_to_war_with = LUX 
+		will_lead_to_war_with = BEL
+		will_lead_to_war_with = FRA
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 28
+			add_state_core = 8
+			add_state_core = 945
+			add_state_claim = 946
+			add_named_threat = { threat = 10 }
+			add_timed_idea = {
+				idea = schlieffen_ii 
+				days = 80
+			}
+			IF = {
+				limit = {
+					country_exists = FRA
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = FRA
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = LUX
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = LUX
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = BEL
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = BEL
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_end_the_red_threat
+		icon = GFX_goal_communard_spirit
+		x = 0
+		y = 3
+		prerequisite = {focus = PRS_schlieffen_ii}
+		relative_position_id = PRS_the_road_to_world_power
+		will_lead_to_war_with = FRC
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			country_exists = FRC
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = { threat = 5 }
+			IF = {
+				limit = {
+					country_exists = FRC
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = FRC
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_challenge_the_british_fleet
+		icon = GFX_focus_attack_britain
+		x = 2
+		y = 3
+		prerequisite = {focus = PRS_schlieffen_ii}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		will_lead_to_war_with = ENG
+		completion_reward = {
+			add_named_threat = { threat = 5 }
+			IF = {
+				limit = {
+					country_exists = ENG
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ENG
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_our_place_under_the_sun
+		icon = GFX_goal_our_place_under_the_sun
+		x = 1
+		y = 4
+		prerequisite = {focus = PRS_challenge_the_british_fleet focus = PRS_end_the_red_threat}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 774
+			add_state_claim = 660
+			add_state_claim = 772
+			add_state_claim = 539
+			add_state_claim = 538
+			add_state_claim = 295
+			add_state_claim = 888
+			add_state_claim = 889
+			add_state_claim = 890
+			add_state_claim = 718
+			add_state_claim = 768
+			add_state_claim = 769
+			add_state_claim = 548
+			add_state_claim = 904
+			add_state_claim = 547
+			add_state_claim = 903
+			add_state_claim = 905
+			add_state_claim = 546
+			add_state_claim = 770
+			add_state_claim = 771
+			add_state_claim = 545
+			add_state_claim = 542
+			add_state_claim = 894
+			add_state_claim = 895
+			add_state_claim = 541
+			add_state_claim = 893
+			add_state_claim = 743
+			add_state_claim = 671
+			add_state_claim = 670
+			add_state_claim = 286
+			add_state_claim = 741
+			add_state_claim = 422
+			add_state_claim = 281
+			add_state_claim = 733
+			add_state_claim = 336
+			add_state_claim = 333
+		}
+	}
+	focus = {
+		id = PRS_formation_of_the_reichspakt
+		icon = GFX_goal_reichspakt
+		x = 2
+		y = 2
+		prerequisite = {focus = PRS_plan_east}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			num_subjects > 0
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_faction = Reichspakt
+			set_rule = {
+				can_create_factions = yes
+			}
+			if = {
+				limit = {
+					num_subjects > 0
+					any_country = {
+						is_subject_of = ROOT
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_ideas = kaisers_puppet
+				}
+			}
+			else = {
+				custom_effect_tooltip = PRS_guardians_of_the_balkans_subject_ns_tt
+				effect_tooltip = {
+					add_ideas = kaisers_puppet
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_danzig_or_war
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 2
+		prerequisite = {focus = PRS_plan_east}
+		relative_position_id = PRS_the_road_to_world_power
+		will_lead_to_war_with = POL
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			POL = {
+				controls_state = 807
+				controls_state = 85
+				controls_state = 86
+				controls_state = 762
+			}
+		}
+		bypass = {
+			NOT = {
+			POL = {
+				controls_state = 807
+				controls_state = 85
+				controls_state = 86
+				controls_state = 762
+			}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = { threat = 5 }
+			POL = {
+			country_event = prussia.116
+			}
+			add_state_claim = 807
+			add_state_claim = 85
+			add_state_claim = 86
+			add_state_claim = 762
+		}
+	}
+	focus = {
+		id = PRS_push_imperial_borders
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 4
+		y = 3
+		prerequisite = {focus = PRS_danzig_or_war}
+		relative_position_id = PRS_the_road_to_world_power
+		will_lead_to_war_with = BLR 
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = UKR
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				country_exists = POL 
+				country_exists = BLR 
+				country_exists = UKR 
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = { threat = 5 }
+			IF = {
+				limit = {
+					country_exists = POL
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = POL
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = BLR
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = BLR
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = UKR
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = UKR
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_prevent_russian_intervention
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 3
+		y = 4
+		prerequisite = {focus = PRS_push_imperial_borders}
+		relative_position_id = PRS_the_road_to_world_power
+		will_lead_to_war_with = USR
+		will_lead_to_war_with = SOV
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				country_exists = USR 
+				country_exists = SOV 
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = { threat = 10 }
+			IF = {
+				limit = {
+					country_exists = USR
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = USR
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SOV
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_imperial_glory
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 2
+		y = 5
+		prerequisite = {focus = PRS_prevent_russian_intervention focus = PRS_our_place_under_the_sun}
+		relative_position_id = PRS_the_road_to_world_power
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			126 = {
+			is_controlled_by_ROOT_or_ally = yes
+			}
+			948 = {
+			is_controlled_by_ROOT_or_ally = yes
+			}
+			219 = {
+			is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = nostalgia_of_the_empire2
+				add_idea = imperial_glory
+			}
+		}
+	}
+	focus = {
+		id = PRS_the_great_game
+		icon = GFX_goal_the_great_game
+		x = 8
+		y = 3
+		prerequisite = {focus = PRS_the_electoral_campaign focus = FRA_crackdown_on_socialist_opposition}
+		relative_position_id = FRA_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_army_manpower = {
+				size > 270000
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.125
+		}
+	}
+	focus = {
+		id = PRS_raise_freikorps_volunteers
+		icon = GFX_focus_ger_oppose_hitler
+		x = -1
+		y = 1
+		prerequisite = {focus = PRS_the_great_game}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 120000
+		}
+	}
+	focus = {
+		id = PRS_stir_unificator_spirit
+		icon = GFX_goal_unificator_spirit
+		x = 1
+		y = 1
+		prerequisite = {focus = PRS_the_great_game}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = nostalgia_of_the_empire
+				add_idea = nostalgia_of_the_empire2
+			}
+		}
+	}
+	focus = {
+		id = PRS_the_ultimatum
+		icon = GFX_goal_prussian_telegram
+		x = 0
+		y = 2
+		prerequisite = {focus = PRS_stir_unificator_spirit focus = PRS_raise_freikorps_volunteers}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		will_lead_to_war_with = MEK
+		will_lead_to_war_with = HAN
+		will_lead_to_war_with = SHL
+		will_lead_to_war_with = SAX
+		completion_reward = {
+			add_named_threat = { 
+				threat = 5
+			}
+			add_state_claim = 65
+			add_state_claim = 60
+			add_state_claim = 936
+			add_state_claim = 61
+			add_state_claim = 58
+			add_state_claim = 65
+			add_state_claim = 56
+			add_state_claim = 59
+			add_state_claim = 57
+			MEK = {
+				add_timed_idea = {
+					days = 100
+					idea = war_for_unification
+				}
+				country_event = {
+					id = prussia.127
+					days = 1
+				}
+			}
+			HAN = {
+				add_timed_idea = {
+					days = 100
+					idea = war_for_unification
+				}
+				country_event = {
+					id = prussia.128
+					days = 2
+				}
+			}
+			SHL = {
+				add_timed_idea = {
+					days = 100
+					idea = war_for_unification
+				}
+				country_event = {
+					id = prussia.129
+					days = 2
+				}
+			}
+			SAX = {
+				add_timed_idea = {
+					days = 100
+					idea = war_for_unification
+				}
+				country_event = {
+					id = prussia.130
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_northern_german_confederation
+		icon = GFX_goal_northern_german_confederation
+		x = 0
+		y = 3
+		prerequisite = {focus = PRS_the_ultimatum}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				country_exists = HAN
+				country_exists = SHL
+				country_exists = MEK
+				country_exists = SAX
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = PRA
+			add_state_core = 65
+			add_state_core = 60
+			add_state_core = 917
+			add_state_core = 61
+			add_state_core = 58
+			add_state_core = 65
+			add_state_core = 56
+			add_state_core = 59
+			add_state_core = 57
+			news_event = news.3007
+		}
+	}
+	focus = {
+		id = PRS_use_the_industriak_north
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 4
+		prerequisite = {focus = PRS_northern_german_confederation}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 65
+			controls_state = 61
+			controls_state = 58
+			controls_state = 65
+			controls_state = 56
+			controls_state = 59
+			controls_state = 57
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_strike_south
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 4
+		prerequisite = {focus = PRS_northern_german_confederation}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				country_exists = BAY
+				country_exists = WUR
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = { threat = 5 }
+			create_wargoal = {
+				type = annex_everything
+				target = BAY
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WUR
+			}
+			add_state_claim = 50
+			add_state_claim = 52
+			add_state_claim = 53
+			add_state_claim = 54
+			add_state_claim = 935
+			add_state_claim = 55
+		}
+	}
+	focus = {
+		id = PRS_proclamation_of_the_iii_reich
+		icon = GFX_focus_ger_oppose_hitler
+		x = 0
+		y = 5
+		prerequisite = {focus = PRS_strike_south}
+		prerequisite = {focus = PRS_use_the_industriak_north}
+		relative_position_id = PRS_the_great_game
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 50
+			controls_state = 52
+			controls_state = 53
+			controls_state = 54
+			controls_state = 55
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = {
+				id = news.3008
+				days = 2
+			}
+			add_state_core = 50
+			add_state_core = 52
+			add_state_core = 53
+			add_state_core = 54
+			add_state_core = 55
+			add_state_core = 935
+			set_cosmetic_tag = PRS_GER
+		}
+	}
+}

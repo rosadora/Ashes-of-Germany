@@ -1,0 +1,5281 @@
+﻿focus_tree = {
+	id = bel_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10000
+			tag = BLR
+		}
+	}
+
+	continuous_focus_position = { x = 55 y = 1500 }
+	
+	default = no
+
+	focus = {
+		id = BEL_surrounded
+		icon = GFX_goal_surrounded
+		x = 30
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.1
+			206 = {
+			add_building_construction = {
+				    province = 11370
+					type = bunker
+					level = 5
+					instant_build = yes
+				}
+			}
+			204 = {
+			add_building_construction = {
+				    province = 3350
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+				    province = 11313
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			194 = {
+			add_building_construction = {
+				    province = 6232
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_belarusian_airforce
+		icon = GFX_goal_generic_air_doctrine
+		x = 4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_surrounded}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_doctrine_cost_reduction = {
+				category = air_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+	focus = {
+		id = BEL_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_belarusian_airforce}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = tactical_bomber
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_naval_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 5
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_bombers}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = naval_bomber
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_belarusian_airforce}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = light_fighter
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_cas
+		icon = GFX_goal_generic_occupy_start_war
+		x = 3
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_fighters}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = light_fighter
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_reduction_of_costs
+		icon = GFX_goal_generic_special_forces
+		x = 4
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_belarusian_airforce}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_ideas = ROM_local_development
+		}
+	}
+	focus = {
+		id = BEL_build_the_belarusian_army
+		icon = GFX_goal_belarusian_army
+		x = -3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_surrounded}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_doctrine_cost_reduction = {
+				category = land_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+	focus = {
+		id = BEL_strengthen_belarusian_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_build_the_belarusian_army}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_evolution_of_tactics
+		icon = GFX_goal_generic_army_doctrines
+		x = -5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_build_the_belarusian_army}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            army_experience = 175
+		}
+	}
+	focus = {
+		id = BEL_our_unique_strength
+		icon = GFX_goal_generic_political_pressure
+		x = -5
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_evolution_of_tactics}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_ideas = belarusian_army
+		}
+	}
+	focus = {
+		id = BEL_massification
+		icon = GFX_goal_stand_up_and_fight
+		x = -6
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_our_unique_strength}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_manpower = 100000
+		}
+	}
+	focus = {
+		id = BEL_defend_the_border
+		icon = GFX_goal_defend_the_border
+		x = -4
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_our_unique_strength}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            swap_ideas = {
+				remove_idea = belarusian_army
+				add_idea = belarusian_army2
+			}
+		}
+	}
+	focus = {
+		id = BEL_belarusian_pride
+		icon = GFX_goal_belarusian_pride
+		x = -5
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_defend_the_border}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            swap_ideas = {
+				remove_idea = belarusian_army2
+				add_idea = belarusian_army3
+			}
+		}
+	}
+	focus = {
+		id = BEL_modernization_of_equipment
+		icon = GFX_goal_modernization_of_equipment
+		x = -1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_build_the_belarusian_army}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BEL_focus_on_mobility
+		icon = GFX_goal_generic_army_motorized
+		x = -2
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_modernization_of_equipment}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = motorized_equipment
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_tanks
+		icon = GFX_goal_generic_army_tanks
+		x = -2
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_focus_on_mobility}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = armor
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_new_guns
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_modernization_of_equipment}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = infantry_weapons
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_new_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_new_guns}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = artillery
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_improve_our_support_compagnies
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = BEL_modernization_of_equipment}
+		relative_position_id = BEL_surrounded
+
+		completion_reward = {
+            add_tech_bonus = {
+				category = support_tech
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_belarus_is_not_a_huge_field
+		icon = GFX_goal_belarus_begin_the_industrialisation
+		x = 30
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry 
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_focus_on_western_belarus
+		icon = GFX_goal_generic_production2
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_belarus_is_not_a_huge_field}
+		x = -4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 94
+			controls_state = 95
+			controls_state = 96
+			controls_state = 784
+			controls_state = 97
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			94 = {
+			add_extra_state_shared_building_slots = 2
+			}
+			95 = {
+			add_extra_state_shared_building_slots = 1
+			}
+			96 = {
+			add_extra_state_shared_building_slots = 1
+			}
+			784 = {
+			add_extra_state_shared_building_slots = 1
+			}
+			97 = {
+			add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = BEL_industrialisation_of_western_belarus
+		icon = GFX_goal_generic_construction
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_focus_on_western_belarus}
+		x = -5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 94
+			controls_state = 95
+			controls_state = 96
+			controls_state = 784
+			controls_state = 97
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			94 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			95 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			96 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_urbanization_of_western_belarus
+		icon = GFX_goal_generic_construction2
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_focus_on_western_belarus}
+		x = -3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 94
+			controls_state = 95
+			controls_state = 96
+			controls_state = 784
+			controls_state = 97
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			94 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			95 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			96 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			784 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			97 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_focus_on_excavation
+		icon = GFX_goal_generic_trade
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_belarus_is_not_a_huge_field}
+		x = 4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 206
+			controls_state = 204
+			controls_state = 194
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = excavation_tech
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	focus = {
+		id = BEL_secure_iron_supply
+		icon = GFX_focus_generic_steel
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_focus_on_excavation}
+		x = 3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 206
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_resource = {
+				amount = 15
+				state = 206
+				type = steel
+			}
+		}
+	}
+	focus = {
+		id = BEL_there_are_no_small_economies
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_focus_on_excavation}
+		x = 5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 206
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = there_are_no_small_economies
+		}
+	}
+	focus = {
+		id = BEL_focus_on_central_belarus
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_belarus_is_not_a_huge_field}
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 206
+			controls_state = 204
+			controls_state = 194
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			206 = {
+			add_extra_state_shared_building_slots = 2
+			}
+			204 = {
+			add_extra_state_shared_building_slots = 2
+			}
+			194 = {
+			add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = BEL_industrialize_central_belarus
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_focus_on_central_belarus}
+		x = -1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 206
+			controls_state = 204
+			controls_state = 194
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			206 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			204 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_misnk_research_institute
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_industrialize_central_belarus}
+		prerequisite = {focus = BEL_urbanize_central_belarus}
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BEL_urbanize_central_belarus
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = BEL_belarus_is_not_a_huge_field
+		prerequisite = {focus = BEL_focus_on_central_belarus}
+		x = 1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 206
+			controls_state = 204
+			controls_state = 194
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			206 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			204 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			194 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_the_popular_front_stand
+		icon = GFX_goal_popular_front_belarus
+		mutually_exclusive = {focus = BEL_anti_communist_coup}
+		x = 10
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = BEL_the_path_of_unity
+		icon = GFX_goal_the_path_of_unity
+		prerequisite = {focus = BEL_the_popular_front_stand}
+		x = 15
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = BEL_hardline
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {focus = BEL_the_path_of_unity}
+		mutually_exclusive = {focus = BEL_smoothline}
+		x = 15
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+	focus = {
+		id = BEL_popular_brigades
+		icon = GFX_focus_ITA_peasants_rise
+		prerequisite = {focus = BEL_hardline}
+		x = 13
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = popular_brigades
+		}
+	}
+	focus = {
+		id = BEL_prepare_the_partition_of_poland
+		icon = GFX_goal_generic_military_deal
+		prerequisite = {focus = BEL_hardline}
+		x = 15
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = {
+				size > 120000
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = PRL
+				}
+				PRL = {
+				country_event = {
+					id = blr.1
+					days = 2
+				}
+			 }
+			}
+			IF = {
+				limit = {
+					country_exists = PRS
+				}
+				PRS = {
+				country_event = {
+					id = blr.1
+					days = 2
+				}
+			 }
+			}
+			IF = {
+				limit = {
+					country_exists = UKR
+				}
+				UKR = {
+				country_event = {
+					id = blr.1
+					days = 2
+				}
+			}
+			}
+		}
+	}
+	focus = {
+		id = BEL_the_plan_is_ready
+		icon = GFX_goal_the_plan_is_ready
+		prerequisite = {focus = BEL_prepare_the_partition_of_poland}
+		x = 15
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		  OR = {
+			UKR = {
+				has_country_flag = has_signed_the_pact_of_partition_of_poland
+			}
+			PRL = {
+				has_country_flag = has_signed_the_pact_of_partition_of_poland
+			}
+			PRS = {
+				has_country_flag = has_signed_the_pact_of_partition_of_poland
+			}
+		  }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_state_core = 97
+			news_event = {
+			id = news.3046
+			days = 2
+			}
+			country_event = {
+				id = blr.6
+				days = 2
+			}
+			IF = {
+				limit = {
+					country_exists = PRL
+					PRL = {
+					has_country_flag = has_signed_the_pact_of_partition_of_poland
+					}
+				}
+				PRL = {
+				add_state_core = 86
+				add_state_core = 807
+				add_state_core = 762
+				add_state_core = 85
+				add_state_core = 98
+				add_state_core = 87
+				country_event = {
+					id = blr.6
+					days = 2
+				}
+			 }
+			}
+			IF = {
+				limit = {
+					country_exists = PRS
+					PRS = {
+					has_country_flag = has_signed_the_pact_of_partition_of_poland
+					}
+				}
+				PRS = {
+				country_event = {
+					id = blr.6
+					days = 2
+				}
+			 }
+			}
+			IF = {
+				limit = {
+					country_exists = UKR
+					UKR = {
+					has_country_flag = has_signed_the_pact_of_partition_of_poland
+					}
+				}
+				UKR = {
+				country_event = {
+					id = blr.6
+					days = 2
+				}
+			 }
+			}
+		}
+	}
+	focus = {
+		id = BEL_plan_the_great_operation
+		icon = GFX_goal_planification_of_operation_breakwater
+		prerequisite = {focus = BEL_the_plan_is_ready}
+		x = 15
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = BEL_state_owned_arsenals
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = {focus = BEL_plan_the_great_operation}
+		x = 14
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_anti_tsarist_propaganda
+		icon = GFX_goal_anti_tsarist_propaganda
+		prerequisite = {focus = BEL_plan_the_great_operation}
+		x = 16
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			country_exists = SOV
+			SOV = {
+				OR = {
+					has_government = neutrality 
+					has_government = fascism
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = polish_russian_division_of_belarus
+				add_idea = anti_tsarist_spirit
+			}
+		}
+	}
+	focus = {
+		id = BEL_operation_breakwater
+		icon = GFX_goal_operation_breakwater
+		prerequisite = {focus = BEL_anti_tsarist_propaganda}
+		prerequisite = {focus = BEL_state_owned_arsenals}
+		x = 15
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			country_exists = SOV
+			SOV = {
+				OR = {
+					has_government = neutrality 
+					has_government = fascism
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			unlock_decision_category_tooltip = BLR_operation_breakwater
+		 add_timed_idea = {
+			idea = operation_breakwater
+			days = 300
+		 }
+			SOV = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = SOV
+         }
+		}
+	}
+	focus = {
+		id = BEL_david_defeats_goliath
+		icon = GFX_goal_david_defeats_goliath
+		prerequisite = {focus = BEL_operation_breakwater}
+		x = 15
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 219
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			news_event = news.3047
+			set_cosmetic_tag = USR_USSR
+			SOV = {
+				every_core_state = {
+					add_core_of = BLR
+				}
+			}
+			swap_ideas = {
+				remove_idea = anti_tsarist_spirit
+				add_idea = union_of_soviet_socialist_republics
+			}
+		}
+	}
+	focus = {
+		id = BEL_socialism_in_one_country
+		icon = GFX_focus_SOV_socialism_in_one_country
+		prerequisite = {focus = BEL_david_defeats_goliath}
+		x = 15
+		y = 9
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = BEL_strike_finland
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 11
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			FIN = {
+				every_core_state = {
+					add_core_of = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = FIN
+         }
+		}
+	}
+	focus = {
+		id = BEL_baltics
+		icon = GFX_focus_generic_forest_brothers
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 12
+		y = 11
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			EST = {
+				every_core_state = {
+					add_core_of = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = EST
+         }
+		 LAT = {
+				every_core_state = {
+					add_core_of = LAT
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = LAT
+         }
+		 LIT = {
+				every_core_state = {
+					add_core_of = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = LIT
+         }
+		}
+	}
+	focus = {
+		id = BEL_destroy_poland
+		icon = GFX_focus_POL_the_castle
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 13
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				every_core_state = {
+					add_core_of = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = POL
+         }
+		}
+	}
+	focus = {
+		id = BEL_backstab
+		icon = GFX_goal_generic_major_war
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 14
+		y = 11
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			UKR = {
+				every_core_state = {
+					add_core_of = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = UKR
+         }
+		}
+	}
+	focus = {
+		id = BEL_strike_romania
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 15
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_state_core = 80
+			add_state_core = 766
+			add_state_core = 78
+			ROM = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = ROM
+         }
+		}
+	}
+	focus = {
+		id = BEL_strike_the_german_eagle
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 16
+		y = 11
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+          type = annex_everything
+          target = PRS
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = PRL
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = HAN
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = WUR
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = SAX
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = SHL
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = MEK
+         }
+		 create_wargoal = {
+          type = annex_everything
+          target = BAY
+         }
+		}
+	}
+	focus = {
+		id = BEL_oil_fields
+		icon = GFX_focus_generic_stockpile_fuel
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 17
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			GEO = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = GEO
+         }
+		}
+	}
+	focus = {
+		id = BEL_expedition_in_central_asia
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 18
+		y = 11
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			KAZ = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = KAZ
+         }
+		 UZB = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = UZB
+         }
+		 TMS = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = TMS
+         }
+		 KYR = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = TAJ
+         }
+		 TYR = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = TAJ
+         }
+		 
+		}
+	}
+	focus = {
+		id = BEL_focus_on_asia
+		icon = GFX_focus_attack_japan
+		prerequisite = {focus = BEL_socialism_in_one_country}
+		x = 19
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			FER = {
+				every_core_state = {
+					add_claim_by = BLR
+				}
+			}
+			create_wargoal = {
+          type = annex_everything
+          target = FER
+         }
+			create_wargoal = {
+          type = annex_everything
+          target = MAN
+         }
+
+		 create_wargoal = {
+          type = annex_everything
+          target = JAP
+         }
+
+		  create_wargoal = {
+          type = annex_everything
+          target = TAN
+         }
+
+		  create_wargoal = {
+          type = annex_everything
+          target = MON
+         }
+		 
+		}
+	}
+	focus = {
+		id = BEL_smoothline
+		icon = GFX_goal_generic_national_unity
+		prerequisite = {focus = BEL_the_path_of_unity}
+		mutually_exclusive = {focus = BEL_hardline}
+		x = 20
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = si_vis_pacem_para_pacem
+		}
+	}
+	focus = {
+		id = BEL_trust_in_poland
+		icon = GFX_goal_polish_friendship
+		prerequisite = {focus = BEL_smoothline}
+		x = 20
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				add_opinion_modifier = {
+            target = BLR
+            modifier = huge_increase
+           }
+			}
+			add_opinion_modifier = {
+            target = POL
+            modifier = huge_increase
+           }
+		}
+	}
+	focus = {
+		id = BEL_satisfy_the_separatists
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = {focus = BEL_trust_in_poland}
+		relative_position_id = BEL_trust_in_poland
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = polish_russian_division_of_belarus
+			POL = {
+			 country_event = {
+				id = blr.7 
+				days = 2
+			 }
+			}
+		}
+	}
+	focus = {
+		id = BEL_polish_investments
+		icon = GFX_goal_polish_investments
+		prerequisite = {focus = BEL_satisfy_the_separatists}
+		relative_position_id = BEL_trust_in_poland
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_autonomy_score = {
+            value = -150
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_polish_tactics
+		icon = GFX_goal_polish_tactics
+		prerequisite = {focus = BEL_satisfy_the_separatists}
+		relative_position_id = BEL_trust_in_poland
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_autonomy_score = {
+            value = -150
+            }
+			add_ideas = polish_tactics
+		}
+	}
+	focus = {
+		id = BEL_sovereignty_of_belarus
+		icon = GFX_goal_belarus_sovereignty
+		prerequisite = {focus = BEL_polish_tactics}
+		prerequisite = {focus = BEL_polish_investments}
+		relative_position_id = BEL_trust_in_poland
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				IF = {
+				limit = {
+					NOT = {
+					is_in_faction = yes 
+					}
+				}
+				create_faction = Intermarium
+				add_to_faction = BLR 
+				add_to_faction = UKR
+			 }
+			}
+		}
+	}
+	focus = {
+		id = BEL_defend_our_republic
+		icon = GFX_goal_generic_defence
+		prerequisite = {focus = BEL_sovereignty_of_belarus}
+		relative_position_id = BEL_trust_in_poland
+		x = 2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+	focus = {
+		id = BEL_face_german_imperialism
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = {focus = BEL_defend_our_republic}
+		relative_position_id = BEL_trust_in_poland
+		x = 3
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		    OR = {
+			has_war_with = PRS
+			has_war_with = HAN
+			has_war_with = WUR
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = face_the_german_imperialism
+		}
+	}
+	focus = {
+		id = BEL_integration_rather_repression
+		icon = GFX_goal_integration
+		prerequisite = {focus = BEL_defend_our_republic}
+		relative_position_id = BEL_trust_in_poland
+		x = 1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		   has_war = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = integration_rather_repression
+		}
+	}
+	focus = {
+		id = BEL_russia_isnt_an_enemy
+		icon = GFX_goal_russian_diplomacy
+		prerequisite = {focus = BEL_sovereignty_of_belarus}
+		relative_position_id = BEL_trust_in_poland
+		x = -2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+			SOV = {
+				add_opinion_modifier = {
+            target = BLR
+            modifier = huge_increase
+           }
+			}
+			add_opinion_modifier = {
+            target = SOV
+            modifier = huge_increase
+           }
+		   }
+		   IF = {
+				limit = {
+					country_exists = USR
+				}
+			USR = {
+				add_opinion_modifier = {
+            target = BLR
+            modifier = huge_increase
+           }
+			}
+			add_opinion_modifier = {
+            target = USR
+            modifier = huge_increase
+           }
+		   }
+		}
+	}
+	focus = {
+		id = BEL_treaty_of_mutual_guarantees
+		icon = GFX_goal_mutual_guarantees_russia
+		prerequisite = {focus = BEL_russia_isnt_an_enemy}
+		relative_position_id = BEL_trust_in_poland
+		x = -3
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+				SOV = {
+				country_event = blr.10
+				}
+			
+		    }
+		   IF = {
+				limit = {
+					country_exists = USR
+				}
+				USR = {
+				country_event = blr.10
+				}
+		   }
+		}
+	}
+	focus = {
+		id = BEL_military_joint_training
+		icon = GFX_goal_russian_training
+		prerequisite = {focus = BEL_russia_isnt_an_enemy}
+		relative_position_id = BEL_trust_in_poland
+		x = -1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = russian_training
+		}
+	}
+	focus = {
+		id = BEL_welcome_the_revolutionaries_in_exile
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		prerequisite = {focus = BEL_the_popular_front_stand}
+		x = 6
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BLR_Viatcheslav_Molotov
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BLR_Stalin
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BLR_kalinin
+		}
+	}
+	focus = {
+		id = BEL_intervention_in_spanish_civil_war
+		icon = GFX_focus_spr_no_pasaran
+		prerequisite = {focus = BEL_welcome_the_revolutionaries_in_exile}
+		x = 6
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = volunteers_in_the_spanish_civil_war
+				days = 500
+			}
+		}
+	}
+	focus = {
+		id = BEL_the_people_wait_the_government_does
+		icon = GFX_focus_generic_national_security
+		prerequisite = {focus = BEL_the_popular_front_stand}
+		mutually_exclusive = {focus = BEL_the_belarusian_socialist_republic}
+		x = 10
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = BEL_open_borders
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {focus = BEL_the_people_wait_the_government_does}
+		relative_position_id = BEL_the_people_wait_the_government_does
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = a_land_of_migrations
+				add_idea = a_land_of_migrations2
+			}
+		}
+	}
+	focus = {
+		id = BEL_strengthen_the_popular_front
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = {focus = BEL_the_people_wait_the_government_does}
+		relative_position_id = BEL_the_people_wait_the_government_does
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = belarus_popular_front
+				add_idea = belarus_popular_front2
+			}
+		}
+	}
+	focus = {
+		id = BEL_social_progress
+		icon = GFX_goal_social_progressivism
+		prerequisite = {focus = BEL_strengthen_the_popular_front focus = BEL_open_borders}
+		relative_position_id = BEL_the_people_wait_the_government_does
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = BEL_improve_workers_conditions
+		icon = GFX_goal_improved_workers_conditions
+		prerequisite = {focus = BEL_social_progress}
+		relative_position_id = BEL_social_progress
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = improved_worker_conditions
+		}
+	}
+	focus = {
+		id = BEL_the_road_to_socialism
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = {focus = BEL_social_progress}
+		relative_position_id = BEL_social_progress
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = the_road_to_socialism
+		}
+	}
+	focus = {
+		id = BEL_nationalization_of_major_compagnies
+		icon = GFX_focus_spr_class_war
+		prerequisite = {focus = BEL_the_road_to_socialism}
+		relative_position_id = BEL_social_progress
+		x = 3
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = nationalized_major_compagnies
+		}
+	}
+	focus = {
+		id = BEL_requisition
+		icon = GFX_focus_generic_industry_3
+		prerequisite = {focus = BEL_the_road_to_socialism}
+		relative_position_id = BEL_social_progress
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_civil_rights
+		icon = GFX_focus_generic_treaty
+		prerequisite = {focus = BEL_social_progress}
+		relative_position_id = BEL_social_progress
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = BEL_press_freedom
+		icon = GFX_goal_generic_propaganda
+		prerequisite = {focus = BEL_civil_rights}
+		relative_position_id = BEL_social_progress
+		x = 1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = press_freedom
+		}
+	}
+	focus = {
+		id = BEL_freedom_of_speech
+		icon = GFX_goal_freedom_of_speech
+		prerequisite = {focus = BEL_civil_rights}
+		relative_position_id = BEL_social_progress
+		x = -1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = BEL_40_hours_week
+		icon = GFX_goal_40_hours_a_week
+		prerequisite = {focus = BEL_improve_workers_conditions}
+		relative_position_id = BEL_social_progress
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = 40_hours_a_week
+		}
+	}
+	focus = {
+		id = BEL_union_freedom
+		icon = GFX_goal_union_freedom
+		prerequisite = {focus = BEL_improve_workers_conditions}
+		relative_position_id = BEL_social_progress
+		x = -3
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = BEL_the_belarusian_socialist_republic
+		icon = GFX_focus_SOV_the_supreme_soviet
+		prerequisite = {focus = BEL_the_popular_front_stand}
+		mutually_exclusive = {focus = BEL_the_people_wait_the_government_does}
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.06
+			set_politics = {
+				ruling_party = communism  
+				elections_allowed = yes 
+			}
+		}
+	}
+	focus = {
+		id = BEL_ideological_immigration
+		icon = GFX_goal_ideological_communist_immigration
+		prerequisite = {focus = BEL_the_belarusian_socialist_republic}
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.125
+			swap_ideas = {
+				remove_idea = a_land_of_migrations
+				add_idea = ideological_immigration
+			}
+		}
+	}
+	focus = {
+		id = BEL_etablish_the_cheka
+		icon = GFX_goal_cheka
+		prerequisite = {focus = BEL_the_belarusian_socialist_republic}
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = cheka
+		}
+	}
+	focus = {
+		id = BEL_ponomarenko_comrade
+		icon = GFX_goal_ponomarenko_comrade
+		prerequisite = {focus = BEL_etablish_the_cheka focus = BEL_ideological_immigration}
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = father_of_the_peoples
+		}
+	}
+	focus = {
+		id = BEL_popular_front_yes_but_only_with_one_party
+		icon = GFX_goal_communist_popular_front
+		prerequisite = {focus = BEL_ponomarenko_comrade}
+		x = -2
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = one_party_state
+		}
+	}
+	focus = {
+		id = BEL_destroy_the_far_left
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = {focus = BEL_popular_front_yes_but_only_with_one_party}
+		x = -1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = BEL_arrest_rightists_leaders
+		icon = GFX_goal_arrest_political_leaders
+		prerequisite = {focus = BEL_popular_front_yes_but_only_with_one_party}
+		x = -3
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.25
+			}
+		}
+	}
+	focus = {
+		id = BEL_now_you_can_go_to_the_gulag
+		icon = GFX_focus_SOV_penal_battalions
+		prerequisite = {focus = BEL_arrest_rightists_leaders}
+		prerequisite = {focus = BEL_destroy_the_far_left}
+		x = -2
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = gulags
+		}
+	}
+	focus = {
+		id = BEL_goodbye_socdems
+		icon = GFX_focus_SOV_the_last_purge
+		prerequisite = {focus = BEL_now_you_can_go_to_the_gulag}
+		x = -3
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = -0.15
+			}
+			remove_ideas = belarus_popular_front
+		}
+	}
+	focus = {
+		id = BEL_truly_united_under_the_party
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		prerequisite = {focus = BEL_now_you_can_go_to_the_gulag}
+		x = -1
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = BEL_the_bastion_of_communism
+		icon = GFX_focus_ETH_callout_to_the_world
+		prerequisite = {focus = BEL_goodbye_socdems}
+		prerequisite = {focus = BEL_truly_united_under_the_party}
+		prerequisite = {focus = BEL_industries_under_state_rule}
+		prerequisite = {focus = BEL_communist_arsenal}
+		x = 0
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = triumphant_revolutionary
+			add_ideas = home_of_revolution
+		}
+	}
+	focus = {
+		id = BEL_reorganize_the_production
+		icon = GFX_goal_reorganize_the_production
+		prerequisite = {focus = BEL_ponomarenko_comrade}
+		x = 2
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			206 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			204 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			194 = {
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+	}
+	focus = {
+		id = BEL_quotas_of_production
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = {focus = BEL_reorganize_the_production}
+		x = 1
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = quotas_of_production
+		}
+	}
+	focus = {
+		id = BEL_collective_farms
+		icon = GFX_goal_collective_farms
+		prerequisite = {focus = BEL_reorganize_the_production}
+		x = 3
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = collective_farms
+			add_timed_idea = {
+				idea = kulaks
+				days = 150
+			}
+		}
+	}
+	focus = {
+		id = BEL_five_years_plan
+		icon = GFX_goal_five_years_plan
+		prerequisite = {focus = BEL_collective_farms}
+		prerequisite = {focus = BEL_quotas_of_production}
+		x = 2
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = five_years_plan
+				days = 1825
+			}
+		}
+	}
+	focus = {
+		id = BEL_industries_under_state_rule
+		icon = GFX_goal_industries_under_the_state
+		prerequisite = {focus = BEL_five_years_plan}
+		x = 1
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.15
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = soviet_in_entreprise
+		}
+	}
+	focus = {
+		id = BEL_communist_arsenal
+		icon = GFX_goal_communist_arsenal
+		prerequisite = {focus = BEL_five_years_plan}
+		x = 3
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		relative_position_id = BEL_the_belarusian_socialist_republic
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.15
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_anti_communist_coup
+		icon = GFX_goal_march_on_minsk
+		x = -10
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {focus = BEL_the_popular_front_stand}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = belarus_popular_front
+			add_stability = -0.1
+			set_politics = {
+				ruling_party = fascism 
+				elections_allowed = no 
+			}
+		}
+	}
+	focus = {
+		id = BEL_arsenal_of_the_nation
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_anti_communist_coup}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_pivot_to_the_past
+		icon = GFX_goal_a_pivot_to_the_past
+		x = -5
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_anti_communist_coup}
+		mutually_exclusive = {focus = BEL_peter_ii_proclaim_great_ruthenia}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = BEL_crush_the_resistance
+		icon = GFX_goal_generic_political_pressure
+		x = -6
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_pivot_to_the_past}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = classical_liberalism 
+				popularity = -0.03
+			}
+		}
+	}
+	focus = {
+		id = BEL_stand_up_and_fight
+		icon = GFX_goal_stand_up_and_fight
+		x = -4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_pivot_to_the_past}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.25
+		}
+	}
+	focus = {
+		id = BEL_onwards
+		icon = GFX_goal_onwards
+		x = -5
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_stand_up_and_fight}
+		prerequisite = {focus = BEL_crush_the_resistance}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = BEL_a_nation_in_decline
+		icon = GFX_goal_paganism_decline
+		x = -10
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_onwards}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.125
+			}
+		}
+	}
+	focus = {
+		id = BEL_the_great_thinker
+		icon = GFX_goal_the_great_thinker
+		x = -7
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_a_nation_in_decline}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = the_great_thinker
+		}
+	}
+	focus = {
+		id = BEL_no_immigration_in_kievan_rus
+		icon = GFX_goal_end_immigration
+		x = -9
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_the_great_thinker}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = a_land_of_migrations
+		}
+	}
+	focus = {
+		id = BEL_break_ties_with_decadence
+		icon = GFX_goal_anti_polish_spirit
+		x = -8
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_the_great_thinker}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				end_puppet = BLR
+			}
+		}
+	}
+	focus = {
+		id = BEL_blitz
+		icon = GFX_goal_blitz_neo_paganist
+		x = -7
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_the_great_thinker}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = shock_doctrine
+		}
+	}
+	focus = {
+		id = BEL_corporatism
+		icon = GFX_goal_corporatism
+		x = -6
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_the_great_thinker}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = corporatism
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_segregation
+		icon = GFX_goal_segregation_neo_paganist
+		x = -5
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_the_great_thinker}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = segregation
+			add_timed_idea = {
+				idea = mass_emigration
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = BEL_back_to_the_basics
+		icon = GFX_goal_neo_paganism
+		x = -12
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_a_nation_in_decline}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = neo_paganism
+		}
+	}
+	focus = {
+		id = BEL_strong_men
+		icon = GFX_goal_strong_men_neo_paganism
+		x = -13
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_back_to_the_basics}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = neo_paganism
+				add_idea = neo_paganism2
+			}
+		}
+	}
+	focus = {
+		id = BEL_develop_the_rites
+		icon = GFX_goal_develop_the_rites
+		x = -11
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_back_to_the_basics}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = BEL_viking_combativeness
+		icon = GFX_goal_viking_combativeness
+		x = -12
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_strong_men}
+		prerequisite = {focus = BEL_develop_the_rites}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = neo_paganism2
+				add_idea = neo_paganism3
+			}
+		}
+	}
+	focus = {
+		id = BEL_the_mass
+		icon = GFX_goal_the_mass_neo_paganism
+		x = -11
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_viking_combativeness}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = neo_paganism3
+				add_idea = neo_paganism4
+			}
+		}
+	}
+	focus = {
+		id = BEL_plundering
+		icon = GFX_goal_plundering_neo_paganism
+		x = -13
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_viking_combativeness}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = plundering
+		}
+	}
+	focus = {
+		id = BEL_peter_ii_proclaim_great_ruthenia
+		icon = GFX_goal_restoration_of_ruthenia
+		x = 5
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_anti_communist_coup}
+		mutually_exclusive = {focus = BEL_pivot_to_the_past}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality 
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = neutrality 
+				name = BLR_neutrality_ruthenia
+				name_long = BLR_neutrality_ruthenia_long
+			}
+			create_country_leader = {
+          name = "Peter II of Zhurawetsky"
+          desc = ""
+	      picture = "gfx/leaders/Peter_II_of_Zhurawetsky.dds"
+          expire = "1965.1.1"
+          ideology = despotism
+          traits = {
+           #
+          }
+         }
+		}
+	}
+	focus = {
+		id = BEL_historical_greatness
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_peter_ii_proclaim_great_ruthenia}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = BEL_anti_polish_front
+		icon = GFX_goal_anti_polish_spirit
+		x = 6
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_peter_ii_proclaim_great_ruthenia}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = patriotic_front
+		}
+	}
+	focus = {
+		id = BEL_hail_to_the_tsar
+		icon = GFX_focus_SOV_zemsky_sobor
+		x = 5
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_anti_polish_front}
+		prerequisite = {focus = BEL_historical_greatness}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.125
+		}
+	}
+	focus = {
+		id = BEL_take_the_offensive
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_hail_to_the_tsar focus = BEL_onwards}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_state_core = 201
+			add_state_core = 202
+			add_state_core = 198
+			add_state_core = 199
+			add_state_core = 80
+			add_state_core = 91
+
+			add_state_core = 89
+			add_state_core = 93
+			add_state_core = 97
+			add_state_core = 203
+			add_state_core = 197
+			add_state_core = 226
+
+			add_state_core = 912
+			add_state_core = 193
+			add_state_core = 225
+			add_state_core = 259
+			add_state_core = 220
+			add_state_core = 258
+
+			add_state_core = 254
+			add_state_core = 223
+			add_state_core = 222
+			add_state_core = 224
+			add_state_core = 205
+			add_state_core = 243
+
+			add_state_core = 242
+			add_state_core = 219
+			add_state_core = 253
+			add_state_core = 210
+			add_state_core = 246
+			add_state_core = 247
+
+			add_state_core = 248
+			add_state_core = 351
+			add_state_core = 880
+			add_state_core = 879
+			add_state_core = 214
+			add_state_core = 264
+
+			add_state_core = 244
+			add_state_core = 263
+			add_state_core = 195
+			add_state_core = 208
+			add_state_core = 209
+			add_state_core = 210
+
+			add_state_core = 146
+			add_state_core = 216
+			add_state_core = 215
+			add_state_core = 203
+			add_state_core = 197
+			add_state_core = 226
+		}
+	}
+	focus = {
+		id = BEL_strike_western_decadence
+		icon = GFX_goal_generic_territory_or_war
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				is_subject_of = POL
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_take_the_offensive
+		prerequisite = {focus = BEL_take_the_offensive}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+          create_wargoal = {
+			target = POL 
+			type = take_state_focus
+		  }
+		  create_wargoal = {
+			target = UKR 
+			type = take_state_focus
+		  }
+		}
+	}
+	focus = {
+		id = BEL_strike_the_bear
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				is_subject_of = POL
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_take_the_offensive
+		prerequisite = {focus = BEL_take_the_offensive}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = SOV
+				}
+          create_wargoal = {
+			target = SOV 
+			type = take_state_focus
+		  }
+		  }
+		  IF = {
+				limit = {
+					country_exists = USR
+				}
+          create_wargoal = {
+			target = USR 
+			type = take_state_focus
+		  }
+		  }
+		}
+	}
+	focus = {
+		id = BEL_nordic_ties
+		icon = GFX_focus_generic_attack_finland
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				is_subject_of = POL
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_take_the_offensive
+		prerequisite = {focus = BEL_take_the_offensive}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+          create_wargoal = {
+			target = FIN 
+			type = take_state_focus
+		  }
+		}
+	}
+	focus = {
+		id = BEL_etablish_our_empire
+		icon = GFX_focus_generic_annex_country
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_take_the_offensive
+		prerequisite = {focus = BEL_nordic_ties}
+		prerequisite = {focus = BEL_strike_the_bear}
+		prerequisite = {focus = BEL_strike_western_decadence}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+          add_country_leader_trait = interventionist
+		  remove_ideas = polish_russian_division_of_belarus
+		  set_rule = {
+			can_create_factions = yes
+		  }
+		}
+	}
+	focus = {
+		id = BEL_stabilize_the_country
+		icon = GFX_goal_generic_neutrality_focus
+		x = 4
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_hail_to_the_tsar}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = BEL_modern_monarchy
+		icon = GFX_goal_modern_monarch
+		x = 6
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_stabilize_the_country}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = modern_monarch
+		}
+	}
+	focus = {
+		id = BEL_end_polish_protectorate
+		icon = GFX_goal_break_free_from_poland
+		x = 7
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_modern_monarchy}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				end_puppet = BLR
+			}
+			add_timed_idea = {
+				idea = economic_crash
+				days = 120
+			}
+		}
+	}
+	focus = {
+		id = BEL_mozyr_speech
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = 7
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_end_polish_protectorate}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = BEL_no_socialism_in_ruthenia
+		icon = GFX_goal_anti_comintern_pact
+		x = 6
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_mozyr_speech}
+		prerequisite = {focus = BEL_foreign_investments}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+			ideology = communism 
+			popularity = -0.15
+		   }
+           add_popularity = {
+			ideology = democratic 
+			popularity = -0.15
+		   }
+		}
+	}
+	focus = {
+		id = BEL_the_king_protect_the_nation
+		icon = GFX_goal_the_king_protect_the_nation
+		x = 4
+		y = 9
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_no_socialism_in_ruthenia}
+		prerequisite = {focus = BEL_reintegrate_white_soldiers}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = the_protector
+		}
+	}
+	focus = {
+		id = BEL_plan_the_development
+		icon = GFX_goal_generic_position_armies
+		x = 5
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_modern_monarchy}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = continue_the_development
+		}
+	}
+	focus = {
+		id = BEL_foreign_investments
+		icon = GFX_goal_foreign_investments
+		x = 5
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_plan_the_development}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BEL_everyone_will_do_his_job
+		icon = GFX_goal_controlled_workers
+		x = 2
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_stabilize_the_country}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = everyone_will_do_his_job
+		}
+	}
+	focus = {
+		id = BEL_conservative_values
+		icon = GFX_focus_generic_monarchy_2
+		x = 1
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_everyone_will_do_his_job}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = conservative_values
+		}
+	}
+	focus = {
+		id = BEL_stop_immigration
+		icon = GFX_goal_end_immigration
+		x = 1
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_conservative_values}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = a_land_of_migrations
+		}
+	}
+	focus = {
+		id = BEL_reintegrate_white_soldiers
+		icon = GFX_goal_russian_training
+		x = 2
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_stop_immigration}
+		prerequisite = {focus = BEL_defend_the_land}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+	focus = {
+		id = BEL_amplify_patriotism
+		icon = GFX_goal_patriotism
+		x = 3
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_everyone_will_do_his_job}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = patriotic_front
+				add_idea = patritotism
+			}
+		}
+	}
+	focus = {
+		id = BEL_defend_the_land
+		icon = GFX_goal_defend_the_land
+		x = 3
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = BEL_anti_communist_coup
+		prerequisite = {focus = BEL_amplify_patriotism}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = for_the_country
+		}
+	}
+}

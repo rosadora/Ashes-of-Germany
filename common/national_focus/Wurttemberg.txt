@@ -1,0 +1,5309 @@
+﻿focus_tree = {
+	id = wur_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = WUR
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = WUR_preparations_for_german_unification
+		icon = GFX_goal_generic_military_sphere
+		x = 15
+		y = 11
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = WUR_the_great_revolution
+				has_completed_focus = WUR_seize_royal_property
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 100
+		 add_manpower = 200000
+		}
+	}
+	focus = {
+		id = WUR_call_for_a_peacefull_reunification
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		prerequisite = {focus = WUR_preparations_for_german_unification}
+		mutually_exclusive = { }
+		relative_position_id = WUR_preparations_for_german_unification
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 52
+			add_state_core = 53
+			add_state_core = 54
+		 BAY = {
+			 country_event = wurttemberg.143
+		 }
+		}
+	}
+	focus = {
+		id = WUR_strike_the_north_2
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_call_for_a_peacefull_reunification}
+		mutually_exclusive = { }
+		relative_position_id = WUR_preparations_for_german_unification
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 set_cosmetic_tag = WGD
+		 add_state_core = 944
+		 add_state_core = 943
+		 add_state_core = 909
+		 add_state_core = 42
+		 add_state_core = 51
+		 add_state_core = 55
+		 add_state_core = 60
+		 add_state_core = 56
+		 add_state_core = 57
+		 add_state_core = 59
+		 add_state_core = 58
+		 add_state_core = 61
+		 add_state_core = 64
+		 add_state_core = 65
+		 add_state_core = 62
+		 add_state_core = 63
+		 add_state_core = 68
+		 add_state_core = 65
+		 create_wargoal = {
+        type = annex_everything
+        target = PRS
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = SAX
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = SHL
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = MEK
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = HAN
+        }
+		}
+	}
+	focus = {
+		id = WUR_germany_united
+		icon = GFX_goal_return_in_berlin
+		x = 0
+		y = 1
+		prerequisite = {focus = WUR_strike_the_north_2}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strike_the_north_2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_our_place_in_the_world
+		icon = GFX_goal_onwards
+		x = -5
+		y = 2
+		prerequisite = {focus = WUR_germany_united}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strike_the_north_2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = WUR_federal_industries
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 5
+		y = 2
+		prerequisite = {focus = WUR_germany_united}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strike_the_north_2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			bonus = 0.75
+			uses = 2
+			category = industry
+		 }
+		}
+	}
+	focus = {
+		id = WUR_scientific_research
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		prerequisite = {focus = WUR_federal_industries}
+		mutually_exclusive = { }
+		relative_position_id = WUR_federal_industries
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_bundesrepubliks_autobahn
+		icon = GFX_goal_advanced_transports
+		x = -2
+		y = 1
+		prerequisite = {focus = WUR_federal_industries}
+		mutually_exclusive = { }
+		relative_position_id = WUR_federal_industries
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WUR_weapons_of_liberty
+		icon = GFX_focus_generic_manpower
+		x = 2
+		y = 1
+		prerequisite = {focus = WUR_federal_industries}
+		mutually_exclusive = { }
+		relative_position_id = WUR_federal_industries
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory 
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WUR_army_expansion
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_germany_united}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strike_the_north_2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_doctrine_cost_reduction = {
+	      cost_reduction = 0.5
+	      uses = 2
+	      category = land_doctrine
+         }
+		}
+	}
+	focus = {
+		id = WUR_bundeswher
+		icon = GFX_goal_generic_defence
+		x = -1
+		y = 3
+		prerequisite = {focus = WUR_army_expansion}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strike_the_north_2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = the_bundeswehr
+		}
+	}
+	focus = {
+		id = WUR_prepare_the_blitzkrieg
+		icon = GFX_goal_generic_army_tanks
+		x = 1
+		y = 3
+		prerequisite = {focus = WUR_army_expansion}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strike_the_north_2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+			bonus = 0.75
+			uses = 2
+			category = armor
+		 }
+		}
+	}
+	focus = {
+		id = WUR_side_with_france
+		icon = GFX_focus_chi_reach_out_to_france
+		x = -2
+		y = 1
+		prerequisite = {focus = WUR_our_place_in_the_world}
+		mutually_exclusive = {focus = WUR_a_new_home_of_liberty}
+		relative_position_id = WUR_our_place_in_the_world
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				AND = {
+					has_government = communism
+					OR = {
+					FRA = {
+						has_government = communism
+						has_government = libertarian_socialism
+						has_government = classical_marxism
+					}
+					FRC = {
+						has_government = communism
+						has_government = libertarian_socialism
+						has_government = classical_marxism
+					}
+					}
+				}
+				AND = {
+					has_government = social_democracy
+					OR = {
+					FRA = {
+						has_government = social_democracy
+						has_government = social_liberalism
+						has_government = democratic
+					}
+					FRC = {
+						has_government = social_democracy
+						has_government = social_liberalism
+						has_government = democratic
+					}
+					}
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = {
+			id = wurttemberg.145
+			days = 1
+		 }
+		}
+	}
+	focus = {
+		id = WUR_a_new_home_of_liberty
+		icon = GFX_goal_were_not_done
+		x = 2
+		y = 1
+		prerequisite = {focus = WUR_our_place_in_the_world}
+		mutually_exclusive = {focus = WUR_side_with_france}
+		relative_position_id = WUR_our_place_in_the_world
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 set_rule = {
+			can_create_factions = yes
+		 }
+		 create_faction = democratic_alliance_for_peace
+		}
+	}
+	focus = {
+		id = WUR_is_this_social_democracy
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 20
+		y = 2
+		prerequisite = {focus = WUR_emergency_elections}
+		mutually_exclusive = {focus = WUR_strengthen_the_kingdom }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = social_liberal_revolution
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_those_who_are_betrayed_us
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_is_this_social_democracy}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_popularity = {
+			ideology = democratic
+			popularity = -0.15
+		 }
+		}
+	}
+	focus = {
+		id = WUR_arrest_the_royal_family
+		icon = GFX_focus_rom_abdicate
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_is_this_social_democracy}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_popularity = {
+			ideology = neutrality
+			popularity = -0.2
+		 }
+		}
+	}
+	focus = {
+		id = WUR_seize_royal_property
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_arrest_the_royal_family}
+		prerequisite = {focus = WUR_those_who_are_betrayed_us}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_timed_idea = {
+		 idea = royal_property_seized
+         days = 700
+		 }
+		}
+	}
+	focus = {
+		id = WUR_get_rid_of_the_vestiges_of_the_past
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 3
+		prerequisite = {focus = WUR_seize_royal_property}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_war_support = 0.1
+		 add_political_power = 100
+		 remove_ideas = the_red_threat
+		}
+	}
+	focus = {
+		id = WUR_wurttembergian_red_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 4
+		y = 3
+		prerequisite = {focus = WUR_seize_royal_property}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = wurttembergian_red_army
+		}
+	}
+	focus = {
+		id = WUR_abandon_the_treaty_of_strasbourg
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 5
+		y = 4
+		prerequisite = {focus = WUR_wurttembergian_red_army}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		FRA = {
+			country_event = wurttemberg.138
+		}
+		 remove_ideas = military_restrictions
+		}
+	}
+	focus = {
+		id = WUR_construct_new_research
+		icon = GFX_focus_generic_socialist_science
+		x = 6
+		y = 5
+		prerequisite = {focus = WUR_abandon_the_treaty_of_strasbourg}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_do_not_be_shaken
+		icon = GFX_goal_generic_small_arms
+		x = 7
+		y = 6
+		prerequisite = {focus = WUR_construct_new_research}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = do_not_be_shaken
+		}
+	}
+	focus = {
+		id = WUR_expropriate_landlords
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = -2
+		y = 4
+		prerequisite = {focus = WUR_get_rid_of_the_vestiges_of_the_past}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 150
+		}
+	}
+	focus = {
+		id = WUR_collective_farms
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -3
+		y = 5
+		prerequisite = {focus = WUR_expropriate_landlords}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = collective_farms
+		 add_ideas = kulaks
+		}
+	}
+	focus = {
+		id = WUR_harsh_crackdown_on_the_kulaks
+		icon = GFX_goal_generic_political_pressure
+		x = -4
+		y = 6
+		prerequisite = {focus = WUR_collective_farms}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.1
+		 remove_ideas = kulaks
+		}
+	}
+	focus = {
+		id = WUR_marxist_leninist_government
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		x = 2
+		y = 4
+		prerequisite = {focus = WUR_get_rid_of_the_vestiges_of_the_past}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_stability = 0.15
+		 add_popularity = {
+			 ideology = communism
+			 popularity = 0.2
+		 }
+		}
+	}
+	focus = {
+		id = WUR_centralize_the_power
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = 3
+		y = 5
+		prerequisite = {focus = WUR_marxist_leninist_government}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = centralized_power
+		}
+	}
+	focus = {
+		id = WUR_the_great_chairman
+		icon = GFX_goal_generic_demand_territory
+		x = 4
+		y = 6
+		prerequisite = {focus = WUR_centralize_the_power}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_country_leader_trait = the_great_chairman
+		}
+	}
+	focus = {
+		id = WUR_public_healthcare3
+		icon = GFX_focus_mex_privatisation
+		x = 0
+		y = 4
+		prerequisite = {focus = WUR_get_rid_of_the_vestiges_of_the_past}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = public_healthcare2
+		}
+	}
+	focus = {
+		id = WUR_each_person_a_job
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 5
+		prerequisite = {focus = WUR_public_healthcare3}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = each_person_a_job
+		}
+	}
+	focus = {
+		id = WUR_increase_wages
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = -1
+		y = 6
+		prerequisite = {focus = WUR_each_person_a_job}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = increased_wages
+		}
+	}
+	focus = {
+		id = WUR_improve_worker_conditions
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 5
+		prerequisite = {focus = WUR_public_healthcare3}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = improved_worker_conditions
+		}
+	}
+	focus = {
+		id = WUR_etablish_soviets_in_compagnies
+		icon = GFX_focus_SOV_organize_wreckers
+		x = 1
+		y = 6
+		prerequisite = {focus = WUR_improve_worker_conditions}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+         remove_idea = improved_worker_conditions
+		 add_idea = soviet_in_entreprise
+		 }
+		}
+	}
+	focus = {
+		id = WUR_de_royalise_the_country
+		icon = GFX_focus_rom_handle_king
+		x = -4
+		y = 3
+		prerequisite = {focus = WUR_seize_royal_property}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = de_royalize_the_country
+		}
+	}
+	focus = {
+		id = WUR_kill_von_epp
+		icon = GFX_goal_generic_major_war
+		x = -5
+		y = 4
+		prerequisite = {focus = WUR_de_royalise_the_country}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 kill_ideology_leader = fascism
+		 add_popularity = {
+			 ideology = fascism
+			 popularity = -0.2
+		 }
+		}
+	}
+	focus = {
+		id = WUR_crackdown_on_democrats
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -6
+		y = 5
+		prerequisite = {focus = WUR_kill_von_epp}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_popularity = {
+			 ideology = democratic
+			 popularity = -0.5
+		 }
+		}
+	}
+	focus = {
+		id = WUR_etablish_the_stasi
+		icon = GFX_goal_generic_military_deal
+		x = -7
+		y = 6
+		prerequisite = {focus = WUR_crackdown_on_democrats}
+		relative_position_id = WUR_is_this_social_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = stasi
+		 	
+         create_intelligence_agency = {
+         name = "Stasi"
+         icon = GFX_intelligence_agency_logo_generic_9
+         }
+		 upgrade_intelligence_agency = upgrade_anti_partisan
+		}
+	}
+	focus = {
+		id = WUR_the_fate_of_the_kingdom
+		icon = GFX_focus_generic_home_defense
+		x = 30
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 100
+		 hidden_effect = {
+			country_event = wurttemberg.100
+		 }
+		}
+	}
+	focus = {
+		id = WUR_emergency_elections
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 10
+		y = 1
+		prerequisite = {focus = WUR_the_fate_of_the_kingdom}
+		mutually_exclusive = {focus = WUR_the_great_revolution2 }
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_the_great_revolution2
+		icon = GFX_focus_rom_abdicate
+		x = 50
+		y = 1
+		prerequisite = {focus = WUR_the_fate_of_the_kingdom}
+		mutually_exclusive = {focus = WUR_emergency_elections }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_von_epp_restore_order
+		icon = GFX_goal_demand_sudetenland
+		x = 35
+		y = 2
+		prerequisite = {focus = WUR_the_great_revolution2}
+		mutually_exclusive = {focus = WUR_the_great_revolution }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_von_epp_restore_the_monarchy
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 45
+		y = 3
+		prerequisite = {focus = WUR_von_epp_restore_order}
+		mutually_exclusive = {focus = WUR_von_epp_secures_the_power }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = {
+			 id = wurttemberg.125
+			 days = 20
+		 }
+		 hidden_effect = {
+		  news_event = news.3020
+		 }
+		}
+	}
+	focus = {
+		id = WUR_reassert_the_place_of_the_queen
+		icon = GFX_focus_generic_monarchy_1
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_von_epp_restore_the_monarchy}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		 }
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_wedding_day_gift
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_von_epp_restore_the_monarchy}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		kill_ideology_leader = fascism
+		add_stability = 0.05
+		add_war_support = -0.1
+		 add_popularity = {
+			ideology = fascism
+			popularity = -0.2
+		}
+		}
+	}
+	focus = {
+		id = WUR_the_only_legitimate_queen
+		icon = GFX_focus_generic_home_defense
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_wedding_day_gift}
+		prerequisite = {focus = WUR_reassert_the_place_of_the_queen}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_country_leader_trait = the_queen_of_all_wurttemburgian
+		}
+	}
+	focus = {
+		id = WUR_white_terror
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = 2
+		y = 2
+		prerequisite = {focus = WUR_wedding_day_gift}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_stability = 0.05
+		add_ideas = white_terror
+		}
+	}
+	focus = {
+		id = WUR_a_monarchy_for_the_people
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -2
+		y = 2
+		prerequisite = {focus = WUR_reassert_the_place_of_the_queen}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy
+			add_idea = absolute_monarchy
+		}
+		}
+	}
+	focus = {
+		id = WUR_turn_the_page_on_the_reign_of_the_king_albrecht
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 3
+		prerequisite = {focus = WUR_a_monarchy_for_the_people}
+		prerequisite = {focus = WUR_white_terror}
+		prerequisite = {focus = WUR_the_only_legitimate_queen}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_research_slot = 1
+		swap_ideas = {
+			remove_idea = absolute_monarchy
+			add_idea = absolute_monarchy2
+		}
+		}
+	}
+	focus = {
+		id = WUR_challenge_france
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 4
+		y = 4
+		prerequisite = {focus = WUR_turn_the_page_on_the_reign_of_the_king_albrecht}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  remove_ideas = military_restrictions
+		  FRA = {
+			country_event = wurttemberg.138
+		  }
+		}
+	}
+	focus = {
+		id = WUR_finish_the_polish
+		icon = GFX_focus_POL_prepare_for_the_inevitable
+		x = 5
+		y = 5
+		prerequisite = {focus = WUR_challenge_france}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = WUR_demand_galicia
+		}
+		bypass = {
+			OR = {
+			has_war_with = POL
+			NOT = {
+				country_exists = POL
+			}
+			}
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = POL
+          }
+		}
+	}
+	focus = {
+		id = WUR_romanian_oil
+		icon = GFX_goal_generic_oil_refinery
+		x = 5
+		y = 6
+		prerequisite = {focus = WUR_finish_the_polish}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			has_war_with = ROM
+			NOT = {
+				country_exists = ROM
+			}
+			}
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = ROM
+          }
+		}
+	}
+	focus = {
+		id = WUR_etablish_colonies_in_soviet_union
+		icon = GFX_focus_attack_soviet
+		x = 5
+		y = 7
+		prerequisite = {focus = WUR_romanian_oil}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+			has_war_with = SOV
+			NOT = {
+				country_exists = SOV
+			}
+			}
+			OR = {
+			has_war_with = USR
+			NOT = {
+				country_exists = USR
+			}
+			}
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = SOV
+          }
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = USR
+          }
+		}
+	}
+	focus = {
+		id = WUR_the_northern_threat
+		icon = GFX_focus_POL_reassert_silesian_claims
+		x = 3
+		y = 5
+		prerequisite = {focus = WUR_challenge_france}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+        type = annex_everything
+        target = PRS
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = SAX
+        }
+		add_state_core = 66
+		add_state_core = 67
+		add_state_core = 65
+		}
+	}
+	focus = {
+		id = WUR_recover_benelux
+		icon = GFX_focus_hol_united_netherlands
+		x = 3
+		y = 6
+		prerequisite = {focus = WUR_the_northern_threat}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+        type = annex_everything
+        target = BEL
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = HOL
+        }
+		create_wargoal = {
+        type = annex_everything
+        target = LUX
+        }
+		add_state_core = 8
+		add_state_core = 34
+		add_state_core = 6
+		add_state_core = 35
+		add_state_core = 7
+		add_state_core = 36
+		}
+	}
+	focus = {
+		id = WUR_eastern_france
+		icon = GFX_focus_attack_france
+		x = 3
+		y = 7
+		prerequisite = {focus = WUR_recover_benelux}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+        type = annex_everything
+        target = FRA
+        }
+		add_state_core = 17
+		add_state_core = 28
+		add_state_core = 945
+		add_state_core = 946
+		}
+	}
+	focus = {
+		id = WUR_claim_the_spanish_throne
+		icon = GFX_focus_focus_fra_intervention_spain
+		x = 4
+		y = 8
+		prerequisite = {focus = WUR_eastern_france focus = WUR_etablish_colonies_in_soviet_union}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+        type = puppet_wargoal_focus
+        target = SPR
+        }
+		}
+	}
+	focus = {
+		id = WUR_margheritha_army
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 4
+		prerequisite = {focus = WUR_turn_the_page_on_the_reign_of_the_king_albrecht}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_ideas = imperial_army
+		}
+	}
+	focus = {
+		id = WUR_massive_army
+		icon = GFX_focus_generic_little_entente
+		x = -1
+		y = 5
+		prerequisite = {focus = WUR_margheritha_army}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = imperial_army
+			add_idea = imperial_army2
+		}
+		}
+	}
+	focus = {
+		id = WUR_review_our_tactics
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 5
+		prerequisite = {focus = WUR_margheritha_army}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_tech_bonus = {
+        bonus = 2
+        uses = 2
+        category = land_doctrine
+        }
+		}
+	}
+	focus = {
+		id = WUR_an_agressive_army
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 6
+		prerequisite = {focus = WUR_massive_army}
+		prerequisite = {focus = WUR_review_our_tactics}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = imperial_army2
+			add_idea = imperial_army3
+		}
+		}
+	}
+	focus = {
+		id = WUR_master_of_the_sky
+		icon = GFX_focus_generic_aircraft_production
+		x = 0
+		y = 7
+		prerequisite = {focus = WUR_an_agressive_army}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_tech_bonus = {
+        bonus = 2
+        uses = 2
+        category = light_fighter
+        }
+		add_tech_bonus = {
+        bonus = 2
+        uses = 2
+        category = cas_bomber
+        }
+		add_tech_bonus = {
+        bonus = 2
+        uses = 2
+        category = tactical_bomber
+        }
+		}
+	}
+	focus = {
+		id = WUR_hunt_the_resistance
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 0
+		y = 8
+		prerequisite = {focus = WUR_master_of_the_sky}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = white_terror
+			add_idea = white_terror2
+		}
+		}
+	}
+	focus = {
+		id = WUR_the_great_queen
+		icon = GFX_focus_up_joan_of_arc
+		x = 0
+		y = 9
+		prerequisite = {focus = WUR_hunt_the_resistance}
+		prerequisite = {focus = WUR_claim_the_spanish_throne}
+		prerequisite = {focus = WUR_occupy_venezia}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = absolute_monarchy2
+			add_idea = absolute_monarchy3
+		}
+		swap_ruler_traits = { remove = the_queen_of_all_wurttemburgian add = divine_empress }
+		}
+	}
+	focus = {
+		id = WUR_demand_austrian_throne
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		x = -4
+		y = 4
+		prerequisite = {focus = WUR_turn_the_page_on_the_reign_of_the_king_albrecht}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		AUS = {
+			country_event = wurttemberg.126
+		}
+		}
+	}
+	focus = {
+		id = WUR_crush_bavaria
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 5
+		prerequisite = {focus = WUR_demand_austrian_throne}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+        type = annex_everything
+        target = BAY
+        }
+		add_state_core = 52
+		add_state_core = 53
+		add_state_core = 54
+		}
+	}
+	focus = {
+		id = WUR_integrate_czechoslovakia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -3
+		y = 6
+		prerequisite = {focus = WUR_crush_bavaria}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		CZE = {
+			country_event = wurttemberg.132
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SLO
+		}
+		}
+	}
+	focus = {
+		id = WUR_demand_galicia
+		icon = GFX_focus_generic_polish_deal
+		x = -3
+		y = 7
+		prerequisite = {focus = WUR_integrate_czechoslovakia}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		POL = {
+			country_event = wurttemberg.135
+		}
+		}
+	}
+	focus = {
+		id = WUR_occupy_venezia
+		icon = GFX_focus_attack_italy
+		x = -4
+		y = 8
+		prerequisite = {focus = WUR_demand_galicia}
+		prerequisite = {focus = WUR_to_the_sea}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+        type = puppet_wargoal_focus
+        target = ITA
+        }
+		add_state_core = 163
+		add_state_core = 736
+		add_state_core = 39
+		add_state_core = 160
+		add_state_core = 852
+		}
+	}
+	focus = {
+		id = WUR_recover_hungary
+		icon = GFX_focus_hun_assassinate_horthy
+		x = -5
+		y = 5
+		prerequisite = {focus = WUR_demand_austrian_throne}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+        type = annex_everything
+        target = HUN
+        }
+		add_state_core = 154
+		add_state_core = 155
+		add_state_core = 43
+		add_state_core = 942
+		add_state_core = 45
+		add_state_core = 664
+		add_state_core = 73
+		add_state_core = 955
+		add_state_core = 954
+		add_state_core = 953
+		}
+	}
+	focus = {
+		id = WUR_demand_transylvania
+		icon = GFX_focus_YUG_autonomous_transylvania
+		x = -5
+		y = 6
+		prerequisite = {focus = WUR_recover_hungary}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		TRA = {
+			country_event = wurttemberg.129
+		}
+		}
+	}
+	focus = {
+		id = WUR_to_the_sea
+		icon = GFX_goal_generic_position_armies
+		x = -5
+		y = 7
+		prerequisite = {focus = WUR_demand_transylvania}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = WUR_von_epp_restore_the_monarchy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+        type = annex_everything
+        target = YUG
+        }
+		add_state_core = 102
+		add_state_core = 103
+		add_state_core = 109
+		add_state_core = 104
+		add_state_core = 804
+		add_state_core = 45
+		add_state_core = 764
+		add_state_core = 105
+		}
+	}
+	focus = {
+		id = WUR_von_epp_secures_the_power
+		icon = GFX_focus_generic_military_dictatorship
+		x = 30
+		y = 3
+		prerequisite = {focus = WUR_von_epp_restore_order}
+		mutually_exclusive = {focus = WUR_von_epp_restore_the_monarchy }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_kill_the_royal_family
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_von_epp_secures_the_power}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = neutrality
+			popularity = -0.5
+		 }
+		 add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_suppress_democratic_resistance
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_von_epp_secures_the_power}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.15
+		 add_popularity = {
+			ideology = democratic
+			popularity = -0.5
+		 }
+		 add_popularity = {
+			ideology = communism
+			popularity = -0.5
+		 }
+		}
+	}
+	focus = {
+		id = WUR_crackdown_corps
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 2
+		y = 2
+		prerequisite = {focus = WUR_suppress_democratic_resistance}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = crackdown_corps
+		}
+	}
+	focus = {
+		id = WUR_calm_by_force
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_suppress_democratic_resistance}
+		prerequisite = {focus = WUR_kill_the_royal_family}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.2
+		 add_war_support = -0.1
+		}
+	}
+	focus = {
+		id = WUR_emergency_conscription
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 2
+		prerequisite = {focus = WUR_suppress_democratic_resistance}
+		prerequisite = {focus = WUR_kill_the_royal_family}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_manpower = 200000
+		}
+	}
+	focus = {
+		id = WUR_enact_the_supreme_rule
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 3
+		prerequisite = {focus = WUR_calm_by_force}
+		prerequisite = {focus = WUR_emergency_conscription}
+		prerequisite = {focus = WUR_crackdown_corps}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = weak_monarchy
+		 add_ideas = the_supreme_ruler
+		}
+	}
+	focus = {
+		id = WUR_dreams_of_greater_germany
+		icon = GFX_focus_ger_oppose_hitler
+		x = 0
+		y = 4
+		prerequisite = {focus = WUR_enact_the_supreme_rule}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_country_leader_trait = dreams_of_greater_germany
+		}
+	}
+	focus = {
+		id = WUR_forced_construction
+		icon = GFX_goal_generic_construction
+		x = -1
+		y = 5
+		prerequisite = {focus = WUR_dreams_of_greater_germany}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.05
+		 add_manpower = -5000
+		50 = {
+		 add_building_construction = {
+        type = arms_factory
+        level = 6
+        instant_build = yes
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_open_labor_camps
+		icon = GFX_focus_SOV_penal_battalions
+		x = -1
+		y = 6
+		prerequisite = {focus = WUR_forced_construction}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = labour_camps
+		}
+	}
+	focus = {
+		id = WUR_construct_new_research_centers
+		icon = GFX_focus_CZE_german_puppet
+		x = 1
+		y = 5
+		prerequisite = {focus = WUR_dreams_of_greater_germany}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.05
+		 add_manpower = -10000
+		 add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_birth_promoting_act
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 6
+		prerequisite = {focus = WUR_construct_new_research_centers}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = birth_promoting_act
+		}
+	}
+	focus = {
+		id = WUR_prepare_the_blitz
+		icon = GFX_focus_generic_license_production
+		x = 0
+		y = 7
+		prerequisite = {focus = WUR_birth_promoting_act}
+		prerequisite = {focus = WUR_open_labor_camps}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.2
+		 add_war_support = 0.3
+		}
+	}
+	focus = {
+		id = WUR_end_the_humiliation
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 4
+		y = 8
+		prerequisite = {focus = WUR_prepare_the_blitz}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  remove_ideas = military_restrictions
+		  create_faction = grossdeutschland_axe
+		  FRA = {
+			  country_event = wurttemberg.138
+		  }
+		}
+	}
+	focus = {
+		id = WUR_von_epp_stabilize
+		icon = GFX_goal_generic_neutrality_focus
+		x = 4
+		y = 10
+		prerequisite = {focus = WUR_end_the_humiliation}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_country_leader_trait = von_epp_the_stabiliser
+		}
+	}
+	focus = {
+		id = WUR_detsroy_communism
+		icon = GFX_goal_anti_comintern_pact
+		x = 4
+		y = 12
+		prerequisite = {focus = WUR_von_epp_stabilize}
+		prerequisite = {focus = WUR_recover_danzig}
+		prerequisite = {focus = WUR_increase_production_quotas}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = SOV
+          }
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = USR
+          }
+		}
+	}
+	focus = {
+		id = WUR_no_more_humiliation
+		icon = GFX_focus_attack_france
+		x = 5
+		y = 9
+		prerequisite = {focus = WUR_end_the_humiliation}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = WUR_proclaim_gross_deutschland
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_state_core = 28
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = FRA
+          }
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = BEL
+          }
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = HOL
+          }
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = LUX
+          }
+		}
+	}
+	focus = {
+		id = WUR_recover_danzig
+		icon = GFX_goal_generic_position_armies
+		x = 5
+		y = 11
+		prerequisite = {focus = WUR_no_more_humiliation}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = WUR_proclaim_gross_deutschland
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_state_core = 86
+		  add_state_core = 807
+		  add_state_core = 85
+		  add_state_core = 762
+		  create_wargoal = {
+          type = puppet_wargoal_focus
+          target = POL
+          }
+		}
+	}
+	focus = {
+		id = WUR_state_owned_compagnies
+		icon = GFX_focus_SOV_merge_plants
+		x = 3
+		y = 9
+		prerequisite = {focus = WUR_end_the_humiliation}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_ideas = state_owned_compagnies
+		}
+	}
+	focus = {
+		id = WUR_increase_production_quotas
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 3
+		y = 11
+		prerequisite = {focus = WUR_state_owned_compagnies}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+		  remove_idea = state_owned_compagnies
+		  add_idea = state_owned_compagnies2
+		  }
+		}
+	}
+	focus = {
+		id = WUR_reunification_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 8
+		prerequisite = {focus = WUR_prepare_the_blitz}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.5
+		}
+	}
+	focus = {
+		id = WUR_strike_bavaria
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 9
+		prerequisite = {focus = WUR_reunification_propaganda}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+        type = annex_everything
+        target = BAY
+         }
+		add_state_core = 54 
+		add_state_core = 53
+		add_state_core = 52
+		}
+	}
+	focus = {
+		id = WUR_strike_austria
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 10
+		prerequisite = {focus = WUR_strike_bavaria}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+        type = annex_everything
+        target = AUS
+         }
+		add_state_core = 153 
+		add_state_core = 152
+		add_state_core = 4
+		add_state_core = 848
+		add_state_core = 937
+		add_state_core = 938
+		add_state_core = 939
+		add_state_core = 940
+		add_state_core = 941
+		}
+	}
+	focus = {
+		id = WUR_strike_the_north
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 0
+		y = 11
+		prerequisite = {focus = WUR_strike_austria}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+			country_exists = PRS
+			country_exists = SAX
+			country_exists = HAN
+			country_exists = SHL
+			country_exists = MEK
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+        type = annex_everything
+        target = PRS
+         }
+		 create_wargoal = {
+        type = annex_everything
+        target = SAX
+         }
+		 create_wargoal = {
+        type = annex_everything
+        target = HAN
+         }
+		 create_wargoal = {
+        type = annex_everything
+        target = SHL
+         }
+		create_wargoal = {
+        type = annex_everything
+        target = MEK
+         }
+		 add_state_claim = 943
+		 add_state_claim = 944
+		 add_state_claim = 936
+		 add_state_claim = 42
+		 add_state_claim = 51
+		 add_state_claim = 55
+		 add_state_claim = 60
+		 add_state_claim = 56
+		 add_state_claim = 57
+		 add_state_claim = 59
+		 add_state_claim = 58
+		 add_state_claim = 61
+		 add_state_claim = 64
+		 add_state_claim = 65
+		 add_state_claim = 62
+		 add_state_claim = 63
+		 add_state_claim = 68
+		 add_state_claim = 66
+		 add_state_claim = 67
+		 add_state_claim = 5
+		 add_state_claim = 763
+		 add_state_claim = 65
+		}
+	}
+	focus = {
+		id = WUR_proclaim_gross_deutschland
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 12
+		prerequisite = {focus = WUR_strike_the_north}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+			country_exists = PRS
+			country_exists = SAX
+			country_exists = HAN
+			country_exists = SHL
+			country_exists = MEK
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 set_cosmetic_tag = WGD
+		 add_state_core = 917
+		 add_state_core = 910
+		 add_state_core = 909
+		 add_state_core = 42
+		 add_state_core = 51
+		 add_state_core = 55
+		 add_state_core = 60
+		 add_state_core = 56
+		 add_state_core = 57
+		 add_state_core = 59
+		 add_state_core = 58
+		 add_state_core = 61
+		 add_state_core = 64
+		 add_state_core = 65
+		 add_state_core = 62
+		 add_state_core = 63
+		 add_state_core = 68
+		 add_state_core = 66
+		 add_state_core = 67
+		 add_state_core = 5
+		 add_state_core = 763
+		 add_state_core = 65
+		}
+	}
+	focus = {
+		id = WUR_the_great_supreme_leader
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 13
+		prerequisite = {focus = WUR_proclaim_gross_deutschland}
+		prerequisite = {focus = WUR_detsroy_communism}
+		prerequisite = {focus = WUR_mass_blitz_doctrine}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+			 remove_idea = the_supreme_ruler
+			 add_idea = the_supreme_ruler2
+		 }
+		}
+	}
+	focus = {
+		id = WUR_prepare_the_army
+		icon = GFX_focus_generic_little_entente
+		x = -4
+		y = 8
+		prerequisite = {focus = WUR_prepare_the_blitz}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 army_experience = 300
+		}
+	}
+	focus = {
+		id = WUR_blitz_doctrine
+		icon = GFX_goal_generic_army_tanks
+		x = -4
+		y = 10
+		prerequisite = {focus = WUR_prepare_the_army}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_tech_bonus = {
+        bonus = 3
+        uses = 3
+        category = cat_mobile_warfare
+        }
+		}
+	}
+	focus = {
+		id = WUR_mass_blitz_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = -4
+		y = 12
+		prerequisite = {focus = WUR_overrun_our_ennemies}
+		prerequisite = {focus = WUR_blitz_doctrine}
+		prerequisite = {focus = WUR_human_wave}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_tech_bonus = {
+        bonus = 3
+        uses = 3
+        category = infantry_weapons
+        }
+		add_tech_bonus = {
+        bonus = 3
+        uses = 5
+        category = armor
+        }
+		}
+	}
+	focus = {
+		id = WUR_forced_attack
+		icon = GFX_goal_generic_occupy_start_war
+		x = -5
+		y = 9
+		prerequisite = {focus = WUR_prepare_the_army}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = shock_doctrine
+		}
+	}
+	focus = {
+		id = WUR_overrun_our_ennemies
+		icon = GFX_focus_generic_combined_arms
+		x = -5
+		y = 11
+		prerequisite = {focus = WUR_forced_attack}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+		 remove_idea = shock_doctrine
+		 add_idea = shock_doctrine2
+		 }
+		}
+	}
+	focus = {
+		id = WUR_more_humans
+		icon = GFX_focus_generic_manpower
+		x = -3
+		y = 9
+		prerequisite = {focus = WUR_prepare_the_army}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = supreme_conscription
+		}
+	}
+	focus = {
+		id = WUR_human_wave
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = -3
+		y = 11
+		prerequisite = {focus = WUR_more_humans}
+		relative_position_id = WUR_von_epp_secures_the_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+		 remove_idea = supreme_conscription
+		 add_idea = supreme_conscription2
+		 }
+		}
+	}
+	focus = {
+		id = WUR_the_great_revolution
+		icon = GFX_focus_rom_handle_king
+		x = 60
+		y = 2
+		prerequisite = {focus = WUR_the_great_revolution2}
+		mutually_exclusive = {focus = WUR_von_epp_restore_order }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_destroy_the_wnv
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_the_great_revolution}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.5
+		}
+		add_war_support = -0.3
+		add_stability = 0.15
+		}
+	}
+	focus = {
+		id = WUR_exile_the_royal_family
+		icon = GFX_focus_rom_parties_end
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_the_great_revolution}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.25
+		}
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_organise_the_first_national_elections
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_exile_the_royal_family}
+		prerequisite = {focus = WUR_destroy_the_wnv}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		select_effect = {
+			country_event = {
+            id = wurttemberg.120
+			days = 10
+			}
+		}
+		completion_reward = {
+		add_political_power = 200
+		}
+	}
+	focus = {
+		id = WUR_communists_arent_our_ennemies
+		icon = GFX_focus_generic_join_comintern
+		x = -1
+		y = 3
+		prerequisite = {focus = WUR_organise_the_first_national_elections}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = the_red_threat
+		}
+	}
+	focus = {
+		id = WUR_socialism_in_wurttemberg
+		icon = GFX_focus_por_workers_of_iberia
+		x = 1
+		y = 3
+		prerequisite = {focus = WUR_organise_the_first_national_elections}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_ideas = socialism_in_wurttemberg
+			hidden_effect = {
+				country_event = wurttemberg.124
+			}
+		}
+	}
+	focus = {
+		id = WUR_nationalize_the_banks
+		icon = GFX_focus_mex_privatisation
+		x = 2
+		y = 4
+		prerequisite = {focus = WUR_socialism_in_wurttemberg}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			swap_ideas = {
+				add_idea = socialism_in_wurttemberg
+				remove_idea = socialism_in_wurttemberg2
+			}
+		}
+	}
+	focus = {
+		id = WUR_the_nationalist_threat
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 0
+		y = 4
+		prerequisite = {focus = WUR_socialism_in_wurttemberg}
+		prerequisite = {focus = WUR_communists_arent_our_ennemies}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_war_support = 0.2
+			remove_ideas = military_restrictions
+			FRA = {
+				country_event = wurttemberg.138
+			}
+		}
+	}
+	focus = {
+		id = WUR_organize_workers_militias
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -2
+		y = 4
+		prerequisite = {focus = WUR_communists_arent_our_ennemies}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_ideas = workers_militias
+		}
+	}
+	focus = {
+		id = WUR_womens_right_to_vote
+		icon = GFX_goal_generic_neutrality_focus
+		x = -3
+		y = 5
+		prerequisite = {focus = WUR_organize_workers_militias}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = WUR_public_healthcare
+		icon = GFX_focus_generic_treaty
+		x = -1
+		y = 5
+		prerequisite = {focus = WUR_organize_workers_militias}
+		prerequisite = {focus = WUR_the_nationalist_threat}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_ideas = public_healthcare
+		}
+	}
+	focus = {
+		id = WUR_tax_on_large_wealth
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 5
+		prerequisite = {focus = WUR_nationalize_the_banks}
+		prerequisite = {focus = WUR_the_nationalist_threat}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			swap_ideas = {
+				add_idea = socialism_in_wurttemberg2
+				remove_idea = socialism_in_wurttemberg3
+			}
+		}
+	}
+	focus = {
+		id = WUR_invest_in_public_research
+		icon = GFX_focus_generic_socialist_science
+		x = 3
+		y = 5
+		prerequisite = {focus = WUR_nationalize_the_banks}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_republican_school
+		icon = GFX_focus_research
+		x = 4
+		y = 6
+		prerequisite = {focus = WUR_invest_in_public_research}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_ideas = republican_school
+		}
+	}
+	focus = {
+		id = WUR_directed_production
+		icon = GFX_focus_SOV_merge_plants
+		x = 2
+		y = 6
+		prerequisite = {focus = WUR_invest_in_public_research}
+		prerequisite = {focus = WUR_tax_on_large_wealth}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			swap_ideas = {
+				add_idea = socialism_in_wurttemberg3
+				remove_idea = socialism_in_wurttemberg4
+			}
+		}
+	}
+	focus = {
+		id = WUR_refugiees_of_fascism
+		icon = GFX_focus_generic_manpower
+		x = 0
+		y = 6
+		prerequisite = {focus = WUR_public_healthcare}
+		prerequisite = {focus = WUR_tax_on_large_wealth}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			add_ideas = refugiees_of_fascism
+		}
+	}
+	focus = {
+		id = WUR_true_social_democracy
+		icon = GFX_focus_generic_soviet_politics
+		x = 0
+		y = 7
+		prerequisite = {focus = WUR_defend_the_revolution}
+		prerequisite = {focus = WUR_universal_food_coverage}
+		prerequisite = {focus = WUR_republican_school}
+		prerequisite = {focus = WUR_refugiees_of_fascism}
+		prerequisite = {focus = WUR_directed_production}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			remove_ideas = anti_communist_resistance
+		}
+	}
+	focus = {
+		id = WUR_universal_food_coverage
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -2
+		y = 6
+		prerequisite = {focus = WUR_public_healthcare}
+		prerequisite = {focus = WUR_womens_right_to_vote}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = public_healthcare
+				add_idea = public_healthcare2
+			}
+		}
+	}
+	focus = {
+		id = WUR_defend_the_revolution
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = -4
+		y = 6
+		prerequisite = {focus = WUR_womens_right_to_vote}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = WUR_the_great_revolution
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = workers_militias
+				add_idea = workers_militias2
+			}
+		}
+	}
+	focus = {
+		id = WUR_redynamise_the_country
+		icon = GFX_goal_generic_production
+		x = -20
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus =  WUR_the_fate_of_the_kingdom
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			50 = {
+		add_extra_state_shared_building_slots = 3
+		}
+		935 = {
+		add_extra_state_shared_building_slots = 3
+		}
+		}
+	}
+	focus = {
+		id = WUR_improve_our_research
+		icon = GFX_focus_research
+		x = 0
+		y = 3
+		relative_position_id = WUR_redynamise_the_country
+		prerequisite = {focus = WUR_autarcy}
+		prerequisite = {focus = WUR_fortress_stuttgart}
+		prerequisite = {focus = WUR_industrialize_ulm}
+		prerequisite = {focus = WUR_continue_the_rearmament}
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus =  WUR_strengthen_the_kingdom
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_wurttembergian_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -3
+		y = 1
+		prerequisite = {focus = WUR_redynamise_the_country}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		add_building_construction = {
+        type = arms_factory
+        level = 3
+        instant_build = yes
+        }
+		}
+		935 = {
+		add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_continue_the_rearmament
+		icon = GFX_goal_generic_army_artillery
+		x = -3
+		y = 2
+		prerequisite = {focus = WUR_wurttembergian_arsenal}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		add_building_construction = {
+        type = arms_factory
+        level = 2
+        instant_build = yes
+        }
+		}
+		935 = {
+		add_building_construction = {
+        type = arms_factory
+        level = 2
+        instant_build = yes
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_construct_new_highways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_redynamise_the_country}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		add_extra_state_shared_building_slots = 3
+		add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+        }
+		}
+		935 = {
+		add_extra_state_shared_building_slots = 3
+		add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_autarcy
+		icon = GFX_goal_generic_oil_refinery
+		x = -1
+		y = 2
+		prerequisite = {focus = WUR_construct_new_highways}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_resource = {
+        type = oil
+        amount = 8
+        state = 935
+        }
+		add_resource = {
+        type = aluminium
+        amount = 25
+        state = 50
+        }
+		add_resource = {
+        type = steel
+        amount = 50
+        state = 50
+        }
+		add_resource = {
+        type = tungsten
+        amount = 12
+        state = 935
+        }
+		add_resource = {
+        type = chromium
+        amount = 10
+        state = 50
+        }
+		}
+	}
+	focus = {
+		id = WUR_industrialize_stuttgart
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_redynamise_the_country}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+		}
+		935 = {
+		add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_industrialize_ulm
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 2
+		prerequisite = {focus = WUR_industrialize_stuttgart}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		add_building_construction = {
+        type = industrial_complex
+        level = 3
+        instant_build = yes
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_the_bavarian_line
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 1
+		prerequisite = {focus = WUR_redynamise_the_country}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		set_building_level = {
+        type = bunker
+        level = 4
+        province = 11499
+        }
+		set_building_level = {
+        type = bunker
+        level = 4
+        province = 6581
+        }
+		set_building_level = {
+        type = bunker
+        level = 4
+        province = 6555
+        }
+		set_building_level = {
+        type = bunker
+        level = 4
+        province = 9545
+        }
+		set_building_level = {
+        type = bunker
+        level = 4
+        province = 3690
+        }
+		set_building_level = {
+        type = bunker
+        level = 4
+        province = 9655
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_fortress_stuttgart
+		icon = GFX_goal_generic_fortify_city
+		x = 3
+		y = 2
+		prerequisite = {focus = WUR_the_bavarian_line}
+		relative_position_id = WUR_redynamise_the_country
+		mutually_exclusive = { }
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		50 = {
+		set_building_level = {
+        type = bunker
+        level = 7
+        province = 9517
+        }
+		}
+		}
+	}
+	focus = {
+		id = WUR_the_socialist_kingdom
+		icon = GFX_goal_support_democracy
+		x = 5
+		y = 2
+		prerequisite = {focus = WUR_emergency_elections}
+		mutually_exclusive = {focus = WUR_strengthen_the_kingdom}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_political_power = 100
+		}
+	}
+	focus = {
+		id = WUR_the_true_opposition
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_the_socialist_kingdom}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.15
+		}
+		}
+	}
+	focus = {
+		id = WUR_organize_demonstrations
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_the_socialist_kingdom}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		}
+	}
+	focus = {
+		id = WUR_the_fate_of_the_monarchy
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_organize_demonstrations}
+		prerequisite = {focus = WUR_the_true_opposition}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		country_event = wurttemberg.140
+		}
+	}
+	focus = {
+		id = WUR_demand_guarantees
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 4
+		y = 3
+		prerequisite = {focus = WUR_the_fate_of_the_monarchy}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_completed_focus = WUR_the_great_revolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		FRA = {
+			country_event = wurttemberg.117
+		}
+		}
+	}
+	focus = {
+		id = WUR_rearm_the_nation
+		icon = GFX_focus_generic_license_production
+		x = 3
+		y = 4
+		prerequisite = {focus = WUR_demand_guarantees}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		remove_ideas = military_restrictions
+		}
+	}
+	focus = {
+		id = WUR_memories_of_the_confederation
+		icon = GFX_goal_generic_propaganda
+		x = 5
+		y = 4
+		prerequisite = {focus = WUR_demand_guarantees}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_state_core = 42
+		add_state_core = 51
+		add_state_core = 55
+		add_state_core = 54
+		add_state_core = 53
+		add_state_core = 52
+		add_state_core = 56
+        add_state_core = 57
+		add_state_core = 943
+		add_state_core = 944
+		}
+	}
+	focus = {
+		id = WUR_launch_the_great_operation
+		icon = GFX_goal_generic_major_war
+		x = 5
+		y = 5
+		prerequisite = {focus = WUR_memories_of_the_confederation}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+			NOT = {
+			country_exists = BAY
+			country_exists = PRS
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+          type = annex_everything
+          target = PRS
+          }
+		  create_wargoal = {
+          type = annex_everything
+          target = BAY
+          }
+		}
+	}
+	focus = {
+		id = WUR_push_to_victory
+		icon = GFX_goal_generic_military_sphere
+		x = 5
+		y = 6
+		prerequisite = {focus = WUR_launch_the_great_operation}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = push_to_victory
+		}
+	}
+	focus = {
+		id = WUR_proclaim_the_confederation
+		icon = GFX_goal_anschluss
+		x = 4
+		y = 7
+		prerequisite = {focus = WUR_push_to_victory}
+		prerequisite = {focus = WUR_motivate_the_troops}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		has_full_control_of_state = 42
+		has_full_control_of_state = 51
+		has_full_control_of_state = 55
+		has_full_control_of_state = 54
+		has_full_control_of_state = 53
+		has_full_control_of_state = 52
+		has_full_control_of_state = 56
+        has_full_control_of_state = 57
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_stability = 0.2
+		set_cosmetic_tag = RCF
+		}
+	}
+	focus = {
+		id = WUR_propose_an_alliance
+		icon = GFX_goal_generic_alliance
+		x = 3
+		y = 5
+		prerequisite = {focus = WUR_rearm_the_nation}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		FRA = {
+			country_event = wurttemberg.141
+		}
+		}
+	}
+	focus = {
+		id = WUR_motivate_the_troops
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 6
+		prerequisite = {focus = WUR_propose_an_alliance}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_war_support = 0.25
+		}
+	}
+	focus = {
+		id = WUR_ass_the_situation
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 3
+		prerequisite = {focus = WUR_the_fate_of_the_monarchy}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_completed_focus = WUR_the_great_revolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_defend_the_kigdom
+		icon = GFX_focus_generic_little_entente
+		x = -1
+		y = 4
+		prerequisite = {focus = WUR_ass_the_situation}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+				
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = royal_guard
+		}
+	}
+	focus = {
+		id = WUR_increase_founds_to_research
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -1
+		y = 5
+		prerequisite = {focus = WUR_defend_the_kigdom}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_public_healthcare2
+		icon = GFX_focus_mex_privatisation
+		x = -1
+		y = 6
+		prerequisite = {focus = WUR_increase_founds_to_research}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = public_healthcare
+		}
+	}
+	focus = {
+		id = WUR_a_new_monarchy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 0
+		y = 7
+		prerequisite = {focus = WUR_public_healthcare2}
+		prerequisite = {focus = WUR_reinforce_the_power_of_the_parliament}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_stability = 0.2
+		}
+	}
+	focus = {
+		id = WUR_socialism_and_monarchism
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 0
+		y = 8
+		prerequisite = {focus = WUR_a_new_monarchy}
+		prerequisite = {focus = WUR_the_calm_after_the_storm}
+		prerequisite = {focus = WUR_proclaim_the_confederation}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_country_leader_trait = the_socialist_king
+		}
+	}
+	focus = {
+		id = WUR_write_a_constitution
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 4
+		prerequisite = {focus = WUR_ass_the_situation}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy
+			add_idea = weak_monarchy2
+		}
+		}
+	}
+	focus = {
+		id = WUR_a_symbolic_king
+		icon = GFX_focus_eng_god_save_the_king
+		x = 1
+		y = 5
+		prerequisite = {focus = WUR_write_a_constitution}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {		
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy2
+			add_idea = weak_monarchy3
+		}
+		}
+	}
+	focus = {
+		id = WUR_reinforce_the_power_of_the_parliament
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 6
+		prerequisite = {focus = WUR_a_symbolic_king}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy3
+			add_idea = weak_monarchy4
+		}
+		}
+	}
+	focus = {
+		id = WUR_a_hated_government
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = -4
+		y = 3
+		prerequisite = {focus = WUR_the_fate_of_the_monarchy}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_completed_focus = WUR_the_great_revolution
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_political_power = 100
+		}
+	}
+	focus = {
+		id = WUR_government_with_the_monarchists
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -3
+		y = 4
+		prerequisite = {focus = WUR_a_hated_government}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = government_with_the_monarchists
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_crackdown_of_opposition_demonstrations
+		icon = GFX_goal_demand_sudetenland
+		x = -3
+		y = 5
+		prerequisite = {focus = WUR_government_with_the_monarchists}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		add_stability = -0.1
+		}
+	}
+	focus = {
+		id = WUR_ban_the_kpw
+		icon = GFX_focus_spr_crush_the_revolution
+		x = -3
+		y = 6
+		prerequisite = {focus = WUR_crackdown_of_opposition_demonstrations}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = -0.1
+		}
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_the_calm_after_the_storm
+		icon = GFX_goal_generic_neutrality_focus
+		x = -4
+		y = 7
+		prerequisite = {focus = WUR_ban_the_kpw}
+		prerequisite = {focus = WUR_purge_the_leftist_wing}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		remove_ideas = incomprehension_about_the_saving_of_the_monarchy
+		add_popularity = {
+			ideology = communism
+			popularity = -0.25
+		}
+		}
+	}
+	focus = {
+		id = WUR_denounce_the_far_left
+		icon = GFX_goal_anti_comintern_pact
+		x = -5
+		y = 4
+		prerequisite = {focus = WUR_a_hated_government}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = -0.1
+		}
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_meet_the_king
+		icon = GFX_goal_generic_dangerous_deal
+		x = -5
+		y = 5
+		prerequisite = {focus = WUR_denounce_the_far_left}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.025
+		}
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_purge_the_leftist_wing
+		icon = GFX_goal_generic_war_with_comintern
+		x = -5
+		y = 6
+		prerequisite = {focus = WUR_meet_the_king}
+		relative_position_id = WUR_the_socialist_kingdom
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.025
+		}
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WUR_strengthen_the_kingdom
+		icon = GFX_goal_generic_political_pressure
+		x = -10
+		y = 2
+		prerequisite = {focus = WUR_emergency_elections}
+		mutually_exclusive = {focus = WUR_the_socialist_kingdom}
+		mutually_exclusive = {focus = WUR_is_this_social_democracy}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_political_power = 100
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WUR_extend_the_popularity_of_the_government
+		icon = GFX_goal_generic_national_unity
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_strengthen_the_kingdom}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		}
+	}
+	focus = {
+		id = WUR_break_the_alliance_with_the_fascists
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_strengthen_the_kingdom}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_stability = 0.05
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		}
+	}
+	focus = {
+		id = WUR_a_moderate_government
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 2
+		prerequisite = {focus = WUR_break_the_alliance_with_the_fascists}
+		prerequisite = {focus = WUR_extend_the_popularity_of_the_government}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy
+			add_idea = weak_monarchy2
+		}
+		}
+	}
+	focus = {
+		id = WUR_our_new_ally
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 4
+		y = 3
+		prerequisite = {focus = WUR_a_moderate_government}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		FRA = {
+			country_event = {
+				id = wurttemberg.117
+				days = 2
+			}
+		}
+		}
+	}
+	focus = {
+		id = WUR_create_the_central_european_pact
+		icon = GFX_goal_generic_alliance
+		x = 4
+		y = 4
+		prerequisite = {focus = WUR_our_new_ally}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_faction = confederation_of_alps
+		SWI = {
+			country_event = {
+				id = wurttemberg.118
+				days = 2
+			}
+		}
+		AUS = {
+			country_event = {
+				id = wurttemberg.119
+				days = 2
+			}
+		}
+		}
+	}
+	focus = {
+		id = WUR_economic_common_market
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 4
+		y = 5
+		prerequisite = {focus = WUR_create_the_central_european_pact}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = alpine_economic_market
+		SWI = {
+			add_ideas = alpine_economic_market
+		}
+		AUS = {
+			add_ideas = alpine_economic_market
+		}
+		}
+	}
+	focus = {
+		id = WUR_claim_bavaria
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 6
+		prerequisite = {focus = WUR_economic_common_market}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		create_wargoal = {
+         type = annex_everything
+         target = ROOT
+        }
+		add_state_core = 52
+		add_state_core = 53
+		add_state_core = 54
+		add_state_core = 55
+		add_state_core = 60
+		}
+	}
+	focus = {
+		id = WUR_demand_to_rearm
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 3
+		prerequisite = {focus = WUR_a_moderate_government}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		FRA = {
+		country_event = wurttemberg.110
+		}
+		}
+	}
+	focus = {
+		id = WUR_royal_conscription
+		icon = GFX_goal_rhineland
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_demand_to_rearm}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = royal_conscription
+		}
+	}
+	focus = {
+		id = WUR_command_tanks_france
+		icon = GFX_goal_generic_army_tanks
+		x = 1
+		y = 2
+		prerequisite = {focus = WUR_royal_conscription}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		FRA = {
+			country_event = wurttemberg.114
+		}
+		}
+	}
+	focus = {
+		id = WUR_defend_the_fatherland
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 3
+		prerequisite = {focus = WUR_command_tanks_france}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = defend_the_fatherland
+		}
+	}
+	focus = {
+		id = WUR_the_strategist_king
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 4
+		prerequisite = {focus = WUR_defend_the_fatherland}
+		prerequisite = {focus = WUR_for_the_king}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_country_leader_trait = the_strategist_king
+		}
+	}
+	focus = {
+		id = WUR_create_the_royal_guard
+		icon = GFX_focus_generic_little_entente
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_demand_to_rearm}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = royal_guard
+		}
+	}
+	focus = {
+		id = WUR_royal_institute
+		icon = GFX_focus_research2
+		x = -1
+		y = 2
+		prerequisite = {focus = WUR_create_the_royal_guard}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+	focus = {
+		id = WUR_for_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -1
+		y = 3
+		prerequisite = {focus = WUR_royal_institute}
+		mutually_exclusive = { }
+		relative_position_id = WUR_demand_to_rearm
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = for_the_king
+		}
+	}
+	focus = {
+		id = WUR_calm_the_country
+		icon = GFX_goal_generic_improve_relations
+		x = -4
+		y = 3
+		prerequisite = {focus = WUR_a_moderate_government}
+		mutually_exclusive = { }
+		relative_position_id = WUR_strengthen_the_kingdom
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_timed_idea = {
+			idea = reconciliation_campaign
+			days = 200
+		}
+		}
+	}
+	focus = {
+		id = WUR_prepare_the_country_for_war
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 1
+		prerequisite = {focus = WUR_calm_the_country}
+		mutually_exclusive = { }
+		relative_position_id = WUR_calm_the_country
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = WUR_monarchist_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 2
+		prerequisite = {focus = WUR_prepare_the_country_for_war}
+		mutually_exclusive = { }
+		relative_position_id = WUR_calm_the_country
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.2
+		}
+		}
+	}
+	focus = {
+		id = WUR_the_king_and_the_parliament
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 3
+		prerequisite = {focus = WUR_monarchist_propaganda}
+		prerequisite = {focus = WUR_all_for_the_king}
+		mutually_exclusive = { }
+		relative_position_id = WUR_calm_the_country
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy3
+			add_idea = weak_monarchy4
+		}
+		}
+	}
+	focus = {
+		id = WUR_no_extreme
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		prerequisite = {focus = WUR_calm_the_country}
+		mutually_exclusive = { }
+		relative_position_id = WUR_calm_the_country
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = the_red_threat
+			add_idea = no_extreme
+		}
+
+		}
+	}
+	focus = {
+		id = WUR_all_for_the_king
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = -1
+		y = 2
+		prerequisite = {focus = WUR_no_extreme}
+		mutually_exclusive = { }
+		relative_position_id = WUR_calm_the_country
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = weak_monarchy2
+			add_idea = weak_monarchy3
+		}
+
+		}
+	}
+}

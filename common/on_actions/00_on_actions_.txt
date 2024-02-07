@@ -1,0 +1,826 @@
+on_actions = {
+	on_startup = {
+  effect = {
+    FRA = {
+    country_event = {
+     id = general.2
+    }
+   }
+   every_country = {
+    country_event = {
+     id = general.1
+    }
+   }
+  }
+  effect = {
+			every_possible_country = {
+				#Opinion Modifiers Setup
+				every_possible_country = {
+					limit = { NOT = { tag = PREV } }
+					if = {
+						limit = { has_government = PREV }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = same_ideology
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									has_government = fascism
+									PREV = {
+										has_government = ultra_nationalism
+									}
+								}
+                AND = {
+									has_government = ultra_nationalism
+									PREV = {
+										has_government = fascism
+									}
+								}
+                AND = {
+									has_government = communism
+									PREV = {
+										has_government = classical_marxism
+									}
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = {
+										has_government = communism
+									}
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = social_democracy }
+								}
+                AND = {
+									has_government = social_democracy
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = social_liberalism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology_close
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									has_government = social_democrat
+									PREV = {
+										OR = {
+											has_government = classical_liberalism
+											has_government = democratic
+											has_government = classical_marxism
+										}
+									}
+								}
+								AND = {
+									OR = {
+										has_government = classical_liberalism
+										has_government = democratic
+										has_government = classical_marxism
+									}
+									PREV = { has_government = social_democrat }
+								}
+								AND = {
+									has_government = communism
+									PREV = { has_government = libertarian_socialism }
+								}
+								AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = fascism
+									PREV = { has_government = neutrality }
+								}
+								AND = {
+									has_government = neutrality
+									PREV = { has_government = fascism }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = neutrality }
+								}
+								AND = {
+									has_government = neutrality
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = classical_marxism }
+								}
+                AND = {
+									has_government = communism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = libertarian_socialism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = classical_liberalism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology_distant
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+                AND = {
+									has_government = fascism
+									PREV = { has_government = democratic }
+								}
+								AND = {
+									has_government = democratic
+									PREV = { has_government = fascism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = social_democracy
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = social_democracy }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = communism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = libertarian_socialism }
+								}
+                AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = classical_marxism }
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = { has_government = classical_liberalism }
+								}
+              }
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = different_ideology_close
+						}
+					}
+					else = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = different_ideology
+						}
+					}
+				}
+			}
+    }
+  }
+  on_ruling_party_change = {
+		# temp var old_ideology_token is available for effects
+		effect = {
+			# Opinion Modifiers
+			every_possible_country = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = similar_ideology_close
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = similar_ideology
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = similar_ideology_distant
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = different_ideology_close
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = different_ideology
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = same_ideology
+				}
+				ROOT = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = similar_ideology_close
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = similar_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = similar_ideology_distant
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = different_ideology_close
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = different_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = same_ideology
+					}
+				}
+        ROOT = {
+					limit = { NOT = { tag = PREV } }
+					if = {
+						limit = { has_government = PREV }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = same_ideology
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									has_government = fascism
+									PREV = {
+										has_government = ultra_nationalism
+									}
+								}
+                AND = {
+									has_government = ultra_nationalism
+									PREV = {
+										has_government = fascism
+									}
+								}
+                AND = {
+									has_government = communism
+									PREV = {
+										has_government = classical_marxism
+									}
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = {
+										has_government = communism
+									}
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = social_democracy }
+								}
+                AND = {
+									has_government = social_democracy
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = social_liberalism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology_close
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									has_government = social_democrat
+									PREV = {
+										OR = {
+											has_government = classical_liberalism
+											has_government = democratic
+											has_government = classical_marxism
+										}
+									}
+								}
+								AND = {
+									OR = {
+										has_government = classical_liberalism
+										has_government = democratic
+										has_government = classical_marxism
+									}
+									PREV = { has_government = social_democrat }
+								}
+								AND = {
+									has_government = communism
+									PREV = { has_government = libertarian_socialism }
+								}
+								AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = fascism
+									PREV = { has_government = neutrality }
+								}
+								AND = {
+									has_government = neutrality
+									PREV = { has_government = fascism }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = neutrality }
+								}
+								AND = {
+									has_government = neutrality
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = classical_marxism }
+								}
+                AND = {
+									has_government = communism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = libertarian_socialism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = classical_liberalism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology_distant
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+                AND = {
+									has_government = fascism
+									PREV = { has_government = democratic }
+								}
+								AND = {
+									has_government = democratic
+									PREV = { has_government = fascism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = social_democracy
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = social_democracy }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = communism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = libertarian_socialism }
+								}
+                AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = classical_marxism }
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = { has_government = classical_liberalism }
+								}
+              }
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = different_ideology_close
+						}
+					}
+					else = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = different_ideology
+						}
+					}
+        }
+				if = {
+						limit = { has_government = PREV }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = same_ideology
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									has_government = fascism
+									PREV = {
+										has_government = ultra_nationalism
+									}
+								}
+                AND = {
+									has_government = ultra_nationalism
+									PREV = {
+										has_government = fascism
+									}
+								}
+                AND = {
+									has_government = communism
+									PREV = {
+										has_government = classical_marxism
+									}
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = {
+										has_government = communism
+									}
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = social_democracy }
+								}
+                AND = {
+									has_government = social_democracy
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = social_liberalism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology_close
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									has_government = social_democrat
+									PREV = {
+										OR = {
+											has_government = classical_liberalism
+											has_government = democratic
+											has_government = classical_marxism
+										}
+									}
+								}
+								AND = {
+									OR = {
+										has_government = classical_liberalism
+										has_government = democratic
+										has_government = classical_marxism
+									}
+									PREV = { has_government = social_democrat }
+								}
+								AND = {
+									has_government = communism
+									PREV = { has_government = libertarian_socialism }
+								}
+								AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = fascism
+									PREV = { has_government = neutrality }
+								}
+								AND = {
+									has_government = neutrality
+									PREV = { has_government = fascism }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = neutrality }
+								}
+								AND = {
+									has_government = neutrality
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = democratic
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = democratic }
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = classical_marxism }
+								}
+                AND = {
+									has_government = communism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = social_democracy }
+								}
+								AND = {
+									has_government = social_democracy
+									PREV = { has_government = libertarian_socialism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology_distant
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+                AND = {
+									has_government = fascism
+									PREV = { has_government = democratic }
+								}
+								AND = {
+									has_government = democratic
+									PREV = { has_government = fascism }
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = similar_ideology
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = social_liberalism
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = social_liberalism }
+								}
+                AND = {
+									has_government = social_democracy
+									PREV = { has_government = neutrality }
+								}
+                AND = {
+									has_government = neutrality
+									PREV = { has_government = social_democracy }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = communism }
+								}
+                AND = {
+									has_government = communism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = libertarian_socialism }
+								}
+                AND = {
+									has_government = libertarian_socialism
+									PREV = { has_government = classical_liberalism }
+								}
+                AND = {
+									has_government = classical_liberalism
+									PREV = { has_government = classical_marxism }
+								}
+                AND = {
+									has_government = classical_marxism
+									PREV = { has_government = classical_liberalism }
+								}
+              }
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = different_ideology_close
+						}
+					}
+					else = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = different_ideology
+						}
+					}
+        }
+			}
+		}
+  }

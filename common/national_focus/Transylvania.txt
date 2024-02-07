@@ -1,0 +1,3211 @@
+﻿focus_tree = {
+	id = tra_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10000
+			tag = TRA
+		}
+	}
+
+	continuous_focus_position = { x = 55 y = 1500 }
+	
+	default = no
+
+	focus = {
+		id = TRA_the_worst_is_over
+		icon = GFX_focus_por_workers_of_iberia
+		x = 12
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = TRA_industrial_race
+		icon = GFX_goal_modernization_of_equipment
+		x = 16
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_the_worst_is_over}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = industrial_race
+		}
+	}
+	focus = {
+		id = TRA_urbanize_transylvania
+		icon = GFX_goal_urbanize_transylvania
+		x = 18
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_industrial_race}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			every_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = TRA_develop_the_capital
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 17
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 84
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_urbanize_transylvania}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			84 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_strengthen_the_economy_of_the_countryside
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		x = 19
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_urbanize_transylvania}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_the_work_is_done
+		icon = GFX_goal_controlled_workers
+		x = 16
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_develop_the_capital}
+		prerequisite = {focus = TRA_strengthen_the_economy_of_the_countryside}
+		prerequisite = {focus = TRA_strengthen_the_revolutionary_arsenal}
+		prerequisite = {focus = TRA_rear_factories}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = industrial_race
+			add_stability = 0.2
+		}
+	}
+	focus = {
+		id = TRA_militarize_the_country
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 14
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_industrial_race}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = focus_on_production
+		}
+	}
+	focus = {
+		id = TRA_rear_factories
+		icon = GFX_goal_rear_factories
+		x = 13
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 83
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_militarize_the_country}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			83 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_strengthen_the_revolutionary_arsenal
+		icon = GFX_focus_SWI_issue_war_bonds
+		x = 15
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_militarize_the_country}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_rebuild_the_country
+		icon = GFX_goal_defend_the_land
+		x = 8
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_the_worst_is_over}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = TRA_crackdown_on_anarchists
+		icon = GFX_goal_queer_population
+		x = 10
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_rebuild_the_country}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = TRA_strike_the_center
+		icon = GFX_goal_arrest_political_leaders
+		x = 9
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_crackdown_on_anarchists}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = classical_liberalism 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = TRA_exile_monarchist_figures
+		icon = GFX_goal_exiel_monarchist_figures
+		x = 11
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_crackdown_on_anarchists}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = TRA_grozas_cult
+		icon = GFX_goal_grozas_cult
+		x = 6
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_rebuild_the_country}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = the_tenacious_leader
+		}
+	}
+	focus = {
+		id = TRA_rally_the_people
+		icon = GFX_goal_integration
+		x = 7
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_grozas_cult}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = TRA_hungarian_immigration
+		icon = GFX_goal_hungarian_people
+		x = 5
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_grozas_cult}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			HUN = {
+				add_stability = -0.05
+			}
+			add_stability = -0.05
+			915 = {
+				add_manpower = -300000
+			}
+			76 = {
+				add_manpower = 100000
+			}
+			82 = {
+				add_manpower = 100000
+			}
+			83 = {
+				add_manpower = 100000
+			}
+		}
+	}
+	focus = {
+		id = TRA_vocea_poporului
+		icon = GFX_goal_groza_father_of_people
+		x = 8
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_exile_monarchist_figures}
+		prerequisite = {focus = TRA_strike_the_center}
+		prerequisite = {focus = TRA_rally_the_people}
+		prerequisite = {focus = TRA_hungarian_immigration}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = memories_from_the_civil_war
+			add_country_leader_trait = close_to_the_people
+		}
+	}
+	focus = {
+		id = TRA_its_not_over_yet
+		icon = GFX_goal_its_not_over_yet
+		x = 12
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_the_work_is_done}
+		prerequisite = {focus = TRA_vocea_poporului}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+	focus = {
+		id = TRA_prepare_the_economy
+		icon = GFX_goal_foreign_investments
+		x = 11
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_its_not_over_yet}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = civilian_economy
+				}
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = low_economic_mobilisation
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = partial_economic_mobilisation
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = war_economy
+				}
+			 add_war_support = 0.15
+			}
+		}
+	}
+	focus = {
+		id = TRA_raise_the_red_guard
+		icon = GFX_goal_cheka
+		x = 13
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {focus = TRA_its_not_over_yet}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.1
+			84 = {
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			}
+			76 = {
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			}
+			82 = {
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			}
+			916 = {
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			create_unit = {
+             division = "name = \"Divizia de infanterie\" division_template = \"Divizia de infanterie\" start_experience_factor = 0.5"
+             owner = TRA
+            }
+			}
+		}
+	}
+	focus = {
+		id = TRA_walk_down_to_the_plain
+		icon = GFX_goal_stand_up_and_fight
+		x = 12
+		y = 7
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_raise_the_red_guard}
+		prerequisite = {focus = TRA_prepare_the_economy}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_state_core = 81
+			add_state_core = 46
+			add_state_core = 77
+			add_state_core = 766
+			add_state_core = 79
+			add_state_core = 78
+			add_state_core = 80
+			every_country = {
+				diplomatic_relation = {
+                country = ROM
+                relation = guarantee
+                active = no
+             }
+			}
+			hidden_effect = {
+				add_ideas = civil_war
+				ROM = {
+					add_ideas = civil_war
+				}
+				HUN = {
+					end_puppet = TRA
+				}
+				leave_faction = yes
+			news_event = {
+				days = 1
+				id = news.3048
+			}
+			}
+			add_timed_idea = {
+				days = 70
+				idea = walk_down_to_the_plain
+			}
+			declare_war_on = {
+                target = ROM
+                type = annex_everything
+            }
+		}
+	}
+	focus = {
+		id = TRA_the_romanian_council_republic
+		icon = GFX_goal_romanian_peoples_republic
+		x = 28
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 46
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_struggle_with_queer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_cosmetic_tag = TRA_ROM
+			remove_ideas = unfinished_revolution
+			remove_ideas = civil_war
+			set_capital = {state = 46}
+		}
+	}
+	focus = {
+		id = TRA_HQ_Romania
+		icon = GFX_goal_romanian_army
+		x = 12
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_the_romanian_council_republic}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_the_romanian_council_republic
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = romanian_peoples_army
+		}
+	}
+	focus = {
+		id = TRA_black_sea_fleet
+		icon = GFX_focus_generic_black_sea_focus
+		x = 4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_HQ_Romania}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_HQ_Romania
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			navy_experience = 150
+		}
+	}
+	focus = {
+		id = TRA_submarines
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_black_sea_fleet}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_black_sea_fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = ss_tech
+            }
+		}
+	}
+	focus = {
+		id = TRA_destroyers
+		icon = GFX_focus_generic_coastal_fort
+		x = 4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_black_sea_fleet}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_black_sea_fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = dd_tech
+            }
+		}
+	}
+	focus = {
+		id = TRA_cruisers
+		icon = GFX_goal_generic_navy_battleship
+		x = 3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_destroyers}
+		prerequisite = {focus = TRA_submarines}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_black_sea_fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = cl_tech
+            }
+		}
+	}
+	focus = {
+		id = TRA_marina_militara_romana
+		icon = GFX_goal_marina_militara_romana
+		x = 2
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_cruisers}
+		prerequisite = {focus = TRA_continue_fleet_expansion}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_black_sea_fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = marina_militara_romana
+		}
+	}
+	focus = {
+		id = TRA_start_the_dockyard_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_black_sea_fleet}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_black_sea_fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_continue_fleet_expansion
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_start_the_dockyard_expansion}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_black_sea_fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_fortele_aeriene_romane
+		icon = GFX_goal_fortele_aeriene_romane
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_HQ_Romania}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_HQ_Romania
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			air_experience = 150
+		}
+	}
+	focus = {
+		id = TRA_modernization_of_basic_aviation
+		icon = GFX_goal_generic_air_fighter
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_fortele_aeriene_romane}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = light_fighter
+            }
+		}
+	}
+	focus = {
+		id = TRA_air_artillery
+		icon = GFX_goal_generic_occupy_start_war
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_modernization_of_basic_aviation}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = cas_bomber
+            }
+		}
+	}
+	focus = {
+		id = TRA_strategic_destruction
+		icon = GFX_goal_generic_air_bomber
+		x = 3
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_air_artillery}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = heavy_air
+            }
+		}
+	}
+	focus = {
+		id = TRA_local_development
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_fortele_aeriene_romane}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = ROM_local_development
+		}
+	}
+	focus = {
+		id = TRA_air_dotrine
+		icon = GFX_goal_expand_the_luftwaffe
+		x = 1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_local_development}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	        cost_reduction = 0.5
+	        uses = 2
+	        category = air_doctrine
+         }
+		}
+	}
+	focus = {
+		id = TRA_expand_romanian_airbase
+		icon = GFX_goal_generic_CAS
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 46
+			controls_state = 79
+			controls_state = 78
+			controls_state = 83
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_fortele_aeriene_romane}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			46 = {
+			add_building_construction = {
+				type = air_base
+				level = 5
+				instant_build = yes
+			}
+			}
+			79 = {
+			add_building_construction = {
+				type = air_base
+				level = 5
+				instant_build = yes
+			}
+			}
+			78 = {
+			add_building_construction = {
+				type = air_base
+				level = 5
+				instant_build = yes
+			}
+			}
+			83 = {
+			add_building_construction = {
+				type = air_base
+				level = 5
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = TRA_expand_antiair_systems
+		icon = GFX_goal_fortify_the_westwall
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 46
+			controls_state = 79
+			controls_state = 78
+			controls_state = 83
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_expand_romanian_airbase}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_fortele_aeriene_romane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			46 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+			}
+			79 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+			}
+			78 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+			}
+			83 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = TRA_guardians_of_balkans
+		icon = GFX_goal_guardians_of_balkans
+		x = -4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_HQ_Romania}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_HQ_Romania
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = romanian_peoples_army
+				add_idea = romanian_peoples_army2
+			}
+		}
+	}
+	focus = {
+		id = TRA_reinforce_the_romanian_guard
+		icon = GFX_goal_reinforce_the_romanian_guard
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_guardians_of_balkans}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = romanian_peoples_army2
+				add_idea = romanian_peoples_army3
+			}
+		}
+	}
+	focus = {
+		id = TRA_boost_the_moral
+		icon = GFX_goal_boost_the_romanian_moral
+		x = 1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_reinforce_the_romanian_guard}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = romanian_peoples_army3
+				add_idea = romanian_peoples_army4
+			}
+		}
+	}
+	focus = {
+		id = TRA_tactical_research
+		icon = GFX_goal_modernization_of_equipment
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_guardians_of_balkans}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	        cost_reduction = 0.5
+	        uses = 2
+	        category = land_doctrine
+         }
+		}
+	}
+	focus = {
+		id = TRA_get_ahead
+		icon = GFX_goal_generic_army_doctrines
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_tactical_research}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	        cost_reduction = 0.5
+	        uses = 2
+	        category = land_doctrine
+         }
+		}
+	}
+	focus = {
+		id = TRA_modernization_of_equipment
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_guardians_of_balkans}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 1
+            category = infantry_weapons
+            }
+			add_ideas = modernization_of_equipment
+		}
+	}
+	focus = {
+		id = TRA_increase_in_firepower
+		icon = GFX_goal_generic_army_artillery2
+		x = -2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_modernization_of_equipment}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = artillery
+            }
+		}
+	}
+	focus = {
+		id = TRA_increase_in_speed
+		icon = GFX_goal_generic_army_tanks
+		x = -3
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_increase_in_firepower}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_guardians_of_balkans
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = armor
+            }
+		}
+	}
+	focus = {
+		id = TRA_grozas_leadership
+		icon = GFX_goal_groza_father_of_people
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_the_romanian_council_republic}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_the_romanian_council_republic
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = TRA_dgsp
+		icon = GFX_goal_arrest_political_leaders
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_grozas_leadership}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_grozas_leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_intelligence_agency = {
+             name = "D.G.S.P"
+             icon = GFX_intelligence_agency_logo_agency
+           }
+		}
+	}
+	focus = {
+		id = TRA_disciplina_de_fier
+		icon = GFX_goal_stand_up_and_fight
+		x = 1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_grozas_leadership}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_grozas_leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = disciplina_de_fier
+		}
+	}
+	focus = {
+		id = TRA_shadow_parliament
+		icon = GFX_goal_end_the_crisis
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_grozas_leadership}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_grozas_leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				popularity = 1
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = TRA_proclaim_the_state_of_emergency
+		icon = GFX_goal_cheka
+		x = 0
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_shadow_parliament}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_grozas_leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = dictator
+			news_event = {
+				id = news.3049
+				days = 2
+			}
+		}
+	}
+	focus = {
+		id = TRA_socialist_science
+		icon = GFX_focus_research2
+		x = -1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_grozas_leadership}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_grozas_leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = TRA_socialist_nationalism
+		icon = GFX_goal_freedom_of_speech
+		x = -2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_grozas_leadership}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_grozas_leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = for_the_country
+		}
+	}
+	focus = {
+		id = TRA_country_development
+		icon = GFX_goal_industries_under_the_state
+		x = -4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_the_romanian_council_republic}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_the_romanian_council_republic
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = TRA_progressive_rearmament
+		icon = GFX_goal_communist_arsenal
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_country_development}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_production_quotas
+		icon = GFX_goal_controlled_workers
+		x = 1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_progressive_rearmament}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = quotas_of_production
+		}
+	}
+	focus = {
+		id = TRA_romanian_state_company_of_steel
+		icon = GFX_focus_generic_steel
+		x = 3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 84
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_progressive_rearmament}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_resource = {
+				state = 84
+				amount = 25
+				type = steel
+			}
+		}
+	}
+	focus = {
+		id = TRA_pursue_the_rearmament
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = 2
+		y = 3
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_progressive_rearmament}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_five_years_plan
+		icon = GFX_goal_five_years_plan
+		x = -2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_country_development}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = five_years_plan
+				days = 1825
+			}
+		}
+	}
+	focus = {
+		id = TRA_electrification_of_transylvania
+		icon = GFX_goal_electrification_of_transylvania
+		x = -3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 84
+			controls_state = 76
+			controls_state = 942
+			controls_state = 83
+			controls_state = 82
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_five_years_plan}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			84 = {
+				set_state_category=city
+			}
+			76 = {
+				set_state_category=city
+			}
+			942 = {
+				set_state_category=city
+			}
+			83 = {
+				set_state_category=city
+			}
+			82 = {
+				set_state_category=city
+			}
+		}
+	}
+	focus = {
+		id = TRA_develop_the_capital_buch
+		icon = GFX_focus_generic_industry_3
+		x = -2
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 46
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_five_years_plan}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			46 = {
+				set_state_category=metropolis
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_develop_bessarabia
+		icon = GFX_focus_ITA_peasants_rise
+		x = -1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 78
+			controls_state = 766
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_five_years_plan}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			78 = {
+				set_state_category=city
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			766 = {
+				set_state_category=city
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_bucharest_research_center
+		icon = GFX_focus_generic_socialist_science
+		x = 0
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_factories > 50
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_develop_the_capital_buch}
+		prerequisite = {focus = TRA_pursue_the_rearmament}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_country_development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = TRA_hungaro_romanian_split
+		icon = GFX_goal_romano_hungarian_split
+		x = 25
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 46
+			has_army_manpower = {
+				size > 400000
+			}
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = {
+				id = tra.4 
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = TRA_fake_socialists
+		icon = GFX_goal_hunt_the_leftists
+		x = -4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_hungaro_romanian_split}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_faction = Revolutionaries
+			news_event = news.3050
+		}
+	}
+	focus = {
+		id = TRA_all_transylvanian_under_romanian_flag
+		icon = GFX_goal_transylvanian_ultimatum
+		x = -5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+			NOT = {
+				HUN = {
+					controls_state = 915
+				}
+			}
+		}
+
+		prerequisite = {focus = TRA_fake_socialists}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			HUN = {
+				country_event = {
+					id = tra.6
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = TRA_other_socialists_dissents
+		icon = GFX_goal_contacts
+		x = -3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_fake_socialists}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			unlock_decision_category_tooltip = TRA_make_contacts
+			custom_effect_tooltip = TRA_make_contacts_focus
+		}
+	}
+	focus = {
+		id = TRA_ideological_hegemony
+		icon = GFX_goal_socialist_hegemony
+		x = -4
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_other_socialists_dissents}
+		prerequisite = {focus = TRA_all_transylvanian_under_romanian_flag}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HUN
+			}
+		}
+	}
+	focus = {
+		id = TRA_socialism_in_one_country
+		icon = GFX_goal_defend_the_land
+		x = 4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_hungaro_romanian_split}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = TRA_socialism_in_the_balkans
+		icon = GFX_focus_por_workers_of_iberia
+		x = 3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_socialism_in_one_country}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BUL
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YUG
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ALB
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRE
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TUR
+			}
+		}
+	}
+	focus = {
+		id = TRA_strike_the_polish_threat
+		icon = GFX_goal_generic_major_war
+		x = 5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_socialism_in_one_country}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = POL
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = UKR
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BLR
+			}
+		}
+	}
+	focus = {
+		id = TRA_the_russian_bear
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 4
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_strike_the_polish_threat}
+		prerequisite = {focus = TRA_socialism_in_the_balkans}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
+		}
+	}
+	focus = {
+		id = TRA_anticapitalism
+		icon = GFX_goal_ideological_communist_immigration
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_hungaro_romanian_split}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_opinion_modifier = {
+              target = FRA
+              modifier = anti_capitalist_diplomacy_capitalists
+            }
+
+			add_opinion_modifier = {
+              target = ENG
+              modifier = anti_capitalist_diplomacy_capitalists
+            }
+
+			add_opinion_modifier = {
+              target = USA
+              modifier = anti_capitalist_diplomacy_capitalists
+            }
+
+			add_opinion_modifier = {
+              target = RCO
+              modifier = anti_capitalist_diplomacy_capitalists
+            }
+
+			RCO = {
+				add_opinion_modifier = {
+              target = TRA
+              modifier = anti_capitalist_diplomacy_capitalists
+              }
+			}
+
+			USA = {
+				add_opinion_modifier = {
+              target = TRA
+              modifier = anti_capitalist_diplomacy_capitalists
+              }
+			}
+
+			ENG = {
+				add_opinion_modifier = {
+              target = TRA
+              modifier = anti_capitalist_diplomacy_capitalists
+              }
+			}
+
+			FRA = {
+				add_opinion_modifier = {
+              target = TRA
+              modifier = anti_capitalist_diplomacy_capitalists
+              }
+			}
+		}
+	}
+	focus = {
+		id = TRA_break_french_hegemony
+		icon = GFX_focus_attack_france
+		x = -1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_anticapitalism}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+	}
+	focus = {
+		id = TRA_strike_at_the_source
+		icon = GFX_focus_attack_britain
+		x = 1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_anticapitalism}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+			}
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = USA
+			}
+		}
+	}
+	focus = {
+		id = TRA_antifascist_focus
+		icon = GFX_focus_attack_italy
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_strike_at_the_source}
+		prerequisite = {focus = TRA_break_french_hegemony}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ITA
+			}
+		}
+	}
+	focus = {
+		id = TRA_romania_inainte_mars
+		icon = GFX_goal_romania_inainte_mars
+		x = 0
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {focus = TRA_antifascist_focus}
+		prerequisite = {focus = TRA_ideological_hegemony}
+		prerequisite = {focus = TRA_the_russian_bear}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		relative_position_id = TRA_hungaro_romanian_split
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = liberator
+		}
+	}
+}
