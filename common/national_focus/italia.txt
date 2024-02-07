@@ -661,6 +661,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			has_full_control_of_state = 2
 		}
 		bypass = {
 		}

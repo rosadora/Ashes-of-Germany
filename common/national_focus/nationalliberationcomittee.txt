@@ -138,7 +138,7 @@
 			factor = 1
 		}
 		available = {
-			controls_state = 161
+			has_full_control_of_state = 161
 		}
 		bypass = {
 		}
