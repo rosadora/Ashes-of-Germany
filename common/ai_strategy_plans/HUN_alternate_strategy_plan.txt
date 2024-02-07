@@ -1,0 +1,184 @@
+HUN_bela_kun_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = COMMUNIST_BELA_KUN_LINE
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_continue_the_red_terror
+		HUN_secure_northern_hungary
+		HUN_all_weapons_against_the_nationalists
+		HUN_you_are_a_worker_too
+		HUN_hungarian_industry
+		HUN_the_trial
+		HUN_bela_kun_holds_on
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HUN_garbai_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = COMMUNIST_GARBAI_LINE
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_continue_the_red_terror
+		HUN_secure_the_cities
+		HUN_secure_budapest_garrison
+		HUN_rally_far_left_militias
+		HUN_hungarian_industry
+		HUN_the_trial
+		HUN_sandor_garbai
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HUN_democratic_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = DEMOCRATIC
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_end_the_repression
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HUN_monarchist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = MONARCHY
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_prepare_our_return
+		HUN_increase_army_support
+		HUN_rally_the_countryside
+		HUN_unite_the_nationalists
+		HUN_hungarian_industry
+		HUN_15_years_of_decadence
+		HUN_the_empire_last_heir
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HUN_fascist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = FASCIST
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_prepare_our_return
+		HUN_increase_army_support
+		HUN_rally_the_countryside
+		HUN_unite_the_nationalists
+		HUN_hungarian_industry
+		HUN_15_years_of_decadence
+		HUN_magyar_legacy
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -1,0 +1,602 @@
+characters = {
+	WUR_Wilhelm_Groener={
+		name=WUR_Wilhelm_Groener
+		portraits={
+			army={
+				large="GFX_Wilhelm_Groener"
+				small="GFX_Wilhelm_Groener_smol"
+			}
+			civilian={
+				large="GFX_Wilhelm_Groener"
+				small="GFX_Wilhelm_Groener_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = WUR_Wilhelm_Groener
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				army_infantry_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Wilhelm_Groener2
+			traits = {
+				kings_secretary
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+				has_country_leader = {
+              name = "Albrecht Herzog von Württemberg"
+              ruling_only = yes
+             }
+			}
+			cost = 150
+		}
+		field_marshal ={
+			traits={ war_hero}
+			idea_token = WUR_Wilhelm_Groener_military
+			skill=6
+			attack_skill=5
+			defense_skill=6
+			planning_skill=7
+			logistics_skill=7
+		}
+	}
+	WUR_Berthold_von_Deimling={
+		name=WUR_Berthold_von_Deimling
+		portraits={
+			army={
+				large="GFX_Berthold_von_Deimling"
+				small="GFX_Berthold_von_Deimling_smol"
+			}
+			civilian={
+				large="GFX_Berthold_von_Deimling"
+				small="GFX_Berthold_von_Deimling_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = WUR_Berthold_von_Deimling
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				army_concealment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		field_marshal ={
+			traits={ war_hero }
+			idea_token = WUR_Berthold_von_Deimling_military
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=5
+		}
+	}
+	WUR_Otto_von_Garnier={
+		name=WUR_Otto_von_Garnier
+		portraits={
+			army={
+				large="GFX_Otto_von_Garnier"
+				small="GFX_Otto_von_Garnier_smol"
+			}
+			civilian={
+				large="GFX_Otto_von_Garnier"
+				small="GFX_Otto_von_Garnier_smol"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = WUR_Otto_von_Garnier
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={ war_hero media_personality}
+			idea_token = WUR_Otto_von_Garnier_military
+			skill=4
+			attack_skill=5
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
+	WUR_Karl_Christof_Friedrich_von_Gerok={
+		name=WUR_Karl_Christof_Friedrich_von_Gerok
+		portraits={
+			army={
+				large="GFX_Karl_Christof_Friedrich_von_Gerok"
+				small="GFX_Karl_Christof_Friedrich_von_Gerok_smol"
+			}
+			civilian={
+				large="GFX_Karl_Christof_Friedrich_von_Gerok"
+				small="GFX_Karl_Christof_Friedrich_von_Gerok_smol"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = WUR_Karl_Christof_Friedrich_von_Gerok
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={ war_hero}
+			idea_token = WUR_Karl_Christof_Friedrich_von_Gerok_military
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=4
+		}
+	}
+	WUR_Gerold_von_Gleich={
+		name=WUR_Gerold_von_Gleich
+		portraits={
+			army={
+				large="GFX_Gerold_von_Gleich"
+				small="GFX_Gerold_von_Gleich_smol"
+			}
+			civilian={
+				large="GFX_Gerold_von_Gleich"
+				small="GFX_Gerold_von_Gleich_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = WUR_Gerold_von_Gleich
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				army_logistics_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={ war_hero}
+			idea_token = WUR_Gerold_von_Gleich_military
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+		}
+	}
+	WUR_Heinrich_von_Maur={
+		name=WUR_Heinrich_von_Maur
+		portraits={
+			army={
+				large="GFX_Heinrich_von_Maur"
+				small="GFX_Heinrich_von_Maur_smol"
+			}
+			civilian={
+				large="GFX_Heinrich_von_Maur"
+				small="GFX_Heinrich_von_Maur_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = WUR_Heinrich_von_Maur
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Heinrich_von_Maur2
+			traits = {
+				national_determinist
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism 
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={ war_hero}
+			idea_token = WUR_Heinrich_von_Maur_military
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	WUR_Richard_Ruoff={
+		name=WUR_Richard_Ruoff
+		portraits={
+			army={
+				large="GFX_Richard_Ruoff"
+				small="GFX_Richard_Ruoff_smol"
+			}
+			civilian={
+				large="GFX_Richard_Ruoff"
+				small="GFX_Richard_Ruoff_smol"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = WUR_Richard_Ruoff
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={}
+			idea_token = WUR_Richard_Ruoff_military
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+		}
+	}
+	WUR_Gotthard_Heinrici={
+		name=WUR_Gotthard_Heinrici
+		portraits={
+			army={
+				large="GFX_Gotthard_Heinrici"
+				small="GFX_Gotthard_Heinrici_smol"
+			}
+			civilian={
+				large="GFX_Gotthard_Heinrici"
+				small="GFX_Gotthard_Heinrici_smol"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = WUR_Gotthard_Heinrici
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={}
+			idea_token = WUR_Gotthard_Heinrici_military
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	WUR_Hermann_Frommherz={
+		name=WUR_Hermann_Frommherz
+		portraits={
+			army={
+				large="GFX_Hermann_Frommherz"
+				small="GFX_Hermann_Frommherz_smol"
+			}
+			civilian={
+				large="GFX_Hermann_Frommherz"
+				small="GFX_Hermann_Frommherz_smol"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = WUR_Hermann_Frommherz
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				air_chief_night_operations_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+	}
+	WUR_Theo_Osterkamp={
+		name=WUR_Theo_Osterkamp
+		portraits={
+			army={
+				large="GFX_Theo_Osterkamp"
+				small="GFX_Theo_Osterkamp_smol"
+			}
+			civilian={
+				large="GFX_Theo_Osterkamp"
+				small="GFX_Theo_Osterkamp_smol"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = WUR_Theo_Osterkamp
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				air_air_superiority_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+	}
+	WUR_Hugo_Meurer={
+		name=WUR_Hugo_Meurer
+		portraits={
+			army={
+				large="GFX_Hugo_Meurer"
+				small="GFX_Hugo_Meurer_smol"
+			}
+			civilian={
+				large="GFX_Hugo_Meurer"
+				small="GFX_Hugo_Meurer_smol"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = WUR_Hugo_Meurer
+			ledger = army
+			allowed = {
+				original_tag = WUR
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+	}
+	WUR_Reinhold_Maier={
+		name=WUR_Reinhold_Maier
+		portraits={
+			army={
+				large="GFX_Reinhold_Maier"
+				small="GFX_Reinhold_Maier_smol"
+			}
+			civilian={
+				large="GFX_Reinhold_Maier"
+				small="GFX_Reinhold_Maier_smol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Reinhold_Maier2
+			traits = {
+				liberal_democratic_paragon
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+				OR = {
+					has_government = democratic 
+					has_government = social_liberalism 
+					has_government = neutrality
+					has_government = classical_liberalism
+				}
+			}
+			cost = 150
+		}
+	}
+	WUR_Carl_Diez={
+		name=WUR_Carl_Diez
+		portraits={
+			army={
+				large="GFX_Carl_Diez"
+				small="GFX_Carl_Diez_smol"
+			}
+			civilian={
+				large="GFX_Carl_Diez"
+				small="GFX_Carl_Diez_smol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Carl_Diez2
+			traits = {
+				agricultural_capitalist
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism 
+					has_government = neutrality
+					has_government = democratic
+					has_government = classical_liberalism
+					has_government = social_liberalism
+				}
+			}
+			cost = 150
+		}
+	}
+	WUR_Kurt_Schumacher={
+		name=WUR_Kurt_Schumacher
+		portraits={
+			army={
+				large="GFX_Kurt_Schumacher"
+				small="GFX_Kurt_Schumacher_smol"
+			}
+			civilian={
+				large="GFX_Kurt_Schumacher"
+				small="GFX_Kurt_Schumacher_smol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Kurt_Schumacher2
+			traits = {
+				socialist_reformer
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+				OR = {
+					has_government = social_democracy 
+					has_government = classical_marxism 
+					has_government = libertarian_socialism 
+					has_government = communism 
+					has_government = social_liberalism
+				}
+			}
+			cost = 150
+		}
+	}
+	WUR_Albert_Buchmann={
+		name=WUR_Albert_Buchmann
+		portraits={
+			army={
+				large="GFX_Albert_Buchmann"
+				small="GFX_Albert_Buchmann_smol"
+			}
+			civilian={
+				large="GFX_Albert_Buchmann"
+				small="GFX_Albert_Buchmann_smol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Albert_Buchmann2
+			traits = {
+				communist_orator
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+				OR = {
+					has_government = social_democracy 
+					has_government = classical_marxism 
+					has_government = libertarian_socialism 
+					has_government = communism 
+					has_government = social_liberalism
+				}
+			}
+			cost = 150
+		}
+	}
+	WUR_Eberhard={
+		name=WUR_Eberhard
+		portraits={
+			army={
+				large="GFX_Eberhard"
+				small="GFX_Eberhard_smol"
+			}
+			civilian={
+				large="GFX_Eberhard"
+				small="GFX_Eberhard_smol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Eberhard2
+			traits = {
+				war_industrialist
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+			}
+			cost = 150
+		}
+	}
+	WUR_Wilhelm_Simpfendorfer={
+		name=WUR_Wilhelm_Simpfendorfer
+		portraits={
+			army={
+				large="GFX_Wilhelm_Simpfendorfer"
+				small="GFX_Wilhelm_Simpfendorfer_smol"
+			}
+			civilian={
+				large="GFX_Wilhelm_Simpfendorfer"
+				small="GFX_Wilhelm_Simpfendorfer_smol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = WUR_Wilhelm_Simpfendorfer2
+			traits = {
+				captain_of_industry
+			}
+			allowed = {
+				original_tag = WUR
+			}
+			available = {
+			}
+			cost = 150
+		}
+	}
+}

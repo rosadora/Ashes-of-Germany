@@ -1,0 +1,178 @@
+HAN_socialist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HAN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HAN_ai_behavior
+			option = HAN_SOCIALIST_LINE
+		}
+	}
+
+	ai_national_focuses = {
+		HAN_hanover_in_turmoil
+		HAN_trust_in_democracy
+		HAN_socialist_victory
+	}	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HAN_conservative_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HAN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HAN_ai_behavior
+			option = CONSERVATIVE_HANOVER
+		}
+	}
+
+	ai_national_focuses = {
+		HAN_hanover_in_turmoil
+		HAN_trust_in_democracy
+		HAN_the_government_wins_the_majority
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HAN_fascism_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HAN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HAN_ai_behavior
+			option = FASCIST_HANOVER
+		}
+	}
+
+	ai_national_focuses = {
+		HAN_hanover_in_turmoil
+		HAN_the_rise_of_monarchism
+		HAN_under_willikens
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HUN_monarchist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = MONARCHY
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_prepare_our_return
+		HUN_increase_army_support
+		HUN_rally_the_countryside
+		HUN_unite_the_nationalists
+		HUN_hungarian_industry
+		HUN_15_years_of_decadence
+		HUN_the_empire_last_heir
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+HUN_fascist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = FASCIST
+		}
+	}
+
+	ai_national_focuses = {
+		HUN_prepare_our_return
+		HUN_increase_army_support
+		HUN_rally_the_countryside
+		HUN_unite_the_nationalists
+		HUN_hungarian_industry
+		HUN_15_years_of_decadence
+		HUN_magyar_legacy
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

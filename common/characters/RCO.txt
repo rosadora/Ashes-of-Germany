@@ -1,0 +1,462 @@
+characters = {
+	RCO_Ernest_Louis={
+		name=RCO_Ernest_Louis
+		portraits={
+			army={
+				large="GFX_Ernest_Louis"
+				small="GFX_Ernest_Louis_smol"
+			}
+			civilian={
+				large="GFX_Ernest_Louis"
+				small="GFX_Ernest_Louis_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RCO_Ernest_Louis
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RCO_Ernest_Louis2
+			traits = {
+				military_modernizer
+			}
+			allowed = {
+				original_tag = RCO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		field_marshal ={
+			traits={ war_hero}
+			idea_token = RCO_Ernest_Louis_military
+			skill=6
+			attack_skill=3
+			defense_skill=7
+			planning_skill=6
+			logistics_skill=7
+		}
+	}
+	RCO_Karl_von_Fasbender={
+		name=RCO_Karl_von_Fasbender
+		portraits={
+			army={
+				large="GFX_Karl_von_Fasbender"
+				small="GFX_Karl_von_Fasbender_smol"
+			}
+			civilian={
+				large="GFX_Karl_von_Fasbender"
+				small="GFX_Karl_von_Fasbender_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RCO_Karl_von_Fasbender
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				army_artillery_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={ war_hero }
+			idea_token = RCO_Karl_von_Fasbender_military
+			skill=4
+			attack_skill=6
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+		}
+	}
+	RCO_Georg_Fuchs={
+		name=RCO_Georg_Fuchs
+		portraits={
+			army={
+				large="GFX_Georg_Fuchs"
+				small="GFX_Georg_Fuchs_smol"
+			}
+			civilian={
+				large="GFX_Georg_Fuchs"
+				small="GFX_Georg_Fuchs_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RCO_Georg_Fuchs
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		corps_commander ={
+			traits={ war_hero }
+			idea_token = RCO_Georg_Fuchs_military
+			skill=4
+			attack_skill=5
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+		}
+	}
+	RCO_Paul_von_Hindenburg={
+		name=RCO_Paul_von_Hindenburg
+		portraits={
+			army={
+				large="GFX_Paul_von_Hindenburg"
+				small="GFX_Paul_von_Hindenburg_smol"
+			}
+			civilian={
+				large="GFX_Paul_von_Hindenburg"
+				small="GFX_Paul_von_Hindenburg_smol"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RCO_Paul_von_Hindenburg
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RCO_Paul_von_Hindenburg2
+			traits = {
+				moderate_reformist
+			}
+			allowed = {
+				original_tag = RCO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		field_marshal ={
+			traits={ war_hero}
+			idea_token = RCO_Paul_von_Hindenburg_military
+			skill=6
+			attack_skill=4
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=7
+		}
+	}
+	RCO_Viktor_Kuhne={
+		name=RCO_Viktor_Kuhne
+		portraits={
+			army={
+				large="GFX_Viktor_Kuhne"
+				small="GFX_Viktor_Kuhne_smol"
+			}
+			civilian={
+				large="GFX_Viktor_Kuhne"
+				small="GFX_Viktor_Kuhne_smol"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RCO_Viktor_Kuhne
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				army_chief_entrenchment_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RCO_Viktor_Kuhne2
+			traits = {
+				democratic_firebrand
+			}
+			allowed = {
+				original_tag = RCO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={ war_hero}
+			idea_token = RCO_Viktor_Kuhne_military
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=3
+		}
+	}
+	RCO_Arnold_Lequis={
+		name=RCO_Arnold_Lequis
+		portraits={
+			army={
+				large="GFX_Arnold_Lequis"
+				small="GFX_Arnold_Lequis_smol"
+			}
+			civilian={
+				large="GFX_Arnold_Lequis"
+				small="GFX_Arnold_Lequis_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RCO_Arnold_Lequis
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RCO_Arnold_Lequis2
+			traits = {
+				conservative_nationalist
+			}
+			allowed = {
+				original_tag = RCO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={ war_hero}
+			idea_token = RCO_Arnold_Lequis_military
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
+	RCO_Wilhelm_Heye={
+		name=RCO_Wilhelm_Heye
+		portraits={
+			army={
+				large="GFX_Wilhelm_Heye"
+				small="GFX_Wilhelm_Heye_smol"
+			}
+			civilian={
+				large="GFX_Wilhelm_Heye"
+				small="GFX_Wilhelm_Heye_smol"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = RCO_Wilhelm_Heye
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RCO_Wilhelm_Heye2
+			traits = {
+				veteran_minister
+			}
+			allowed = {
+				original_tag = RCO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={}
+			idea_token = RCO_Wilhelm_Heye_military
+			skill=2
+			attack_skill=2
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	RCO_Hans_von_Seeckt={
+		name=RCO_Hans_von_Seeckt
+		portraits={
+			army={
+				large="GFX_Hans_von_Seeckt"
+				small="GFX_Hans_von_Seeckt_smol"
+			}
+			civilian={
+				large="GFX_Hans_von_Seeckt"
+				small="GFX_Hans_von_Seeckt_smol"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = RCO_Hans_von_Seeckt
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RCO_Hans_von_Seeckt2
+			traits = {
+				war_industrialist
+			}
+			allowed = {
+				original_tag = RCO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={ }
+			idea_token = RCO_Hans_von_Seeckt_military
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	RCO_Josef_Jacobs={
+		name=RCO_Josef_Jacobs
+		portraits={
+			army={
+				large="GFX_Josef_Jacobs"
+				small="GFX_Josef_Jacobs_smol"
+			}
+			civilian={
+				large="GFX_Josef_Jacobs"
+				small="GFX_Josef_Jacobs_smol"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = RCO_Josef_Jacobs
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = RCO_Josef_Jacobs2
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				air_chief_ground_support_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+	}
+	RCO_Paul_Behncke={
+		name=RCO_Paul_Behncke
+		portraits={
+			army={
+				large="GFX_Paul_Behncke"
+				small="GFX_Paul_Behncke_smol"
+			}
+			civilian={
+				large="GFX_Paul_Behncke"
+				small="GFX_Paul_Behncke_smol"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = RCO_Paul_Behncke
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = RCO_Paul_Behncke2
+			ledger = army
+			allowed = {
+				original_tag = RCO
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+	}
+}
