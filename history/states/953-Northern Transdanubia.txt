@@ -1,0 +1,25 @@
+state={
+	id=953
+	name="STATE_953"
+	provinces={
+		686 701 3683 6703 6720 9676 11627 11663 
+	}
+	history={
+		owner = HUN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 1
+
+		}
+		victory_points = {
+			6703 3 
+		}
+		add_core_of = HUN
+
+	}
+	manpower=1000111
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

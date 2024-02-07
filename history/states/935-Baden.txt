@@ -1,0 +1,28 @@
+state={
+	id=935
+	name="STATE_935"
+	provinces={
+		3530 3679 3692 6542 6568 6581 6712 11640 
+	}
+	history={
+		owner = WUR
+		victory_points = {
+			3530 5
+		}
+		victory_points = {
+			6712 7
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 2
+			air_base = 3
+
+		}
+		add_core_of = WUR
+	}
+	manpower=2343210
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

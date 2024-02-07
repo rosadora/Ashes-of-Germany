@@ -1,0 +1,24 @@
+state={
+	id=944
+	name="STATE_944"
+	provinces={
+		529 3512 6469 6570 9482 
+	}
+	history={
+		owner = RCO
+		victory_points = {
+			6469 10 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+
+		}
+		add_core_of = RCO
+		set_demilitarized_zone = yes
+	}
+	manpower=4536252
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

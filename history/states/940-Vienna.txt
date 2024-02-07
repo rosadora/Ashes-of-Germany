@@ -1,0 +1,25 @@
+state={
+	id=940
+	name="STATE_940"
+	provinces={
+		11666 
+	}
+	history={
+		owner = AUS
+		victory_points = {
+			11666 30.0 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = AUS
+
+	}
+	manpower=704565
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,23 @@
+state={
+	id=943
+	name="STATE_943"
+	provinces={
+		9575 11531 
+	}
+	history={
+		owner = SPF
+		victory_points = {
+			11531 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+
+		}
+		add_core_of = SPF
+	}
+	manpower=764553
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

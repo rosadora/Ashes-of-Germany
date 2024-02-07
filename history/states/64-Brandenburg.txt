@@ -1,0 +1,29 @@
+
+state={
+	id=64
+	name="STATE_64"
+
+	history={
+		owner = PRS
+		victory_points = {
+			6521 50 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 4
+			industrial_complex = 2
+			anti_air_building = 2
+			air_base = 6
+
+		}
+		add_core_of = PRS
+	}
+
+	provinces={
+		478 3499 6521 9428 9456 9496 11415 11444 11505 
+	}
+	manpower=5265029
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}
