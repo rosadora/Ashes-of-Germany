@@ -1,0 +1,1330 @@
+#Category only allowed for BAY
+
+AUS_austrian_civil_war = {
+
+	AUS_dollfuss_cross_the_alps = {
+
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			NOT = {
+			ultra_nationalism < 0.4
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 100
+
+		activation = {
+          ultra_nationalism > 0.4
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		  country_event = {
+			id = austria.2
+			days = 1
+		  }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	AUS_anti_fascist_propaganda = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+        allowed = {
+            tag = AUS
+        }
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 10
+		days_remove = 100
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.03
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			add_popularity = {
+				popularity = -0.035
+				ideology = fascism
+			}
+        }
+    }
+	AUS_rally_the_republikanischer_schutzbund = {
+
+		icon = GFX_decision_eng_blackshirt_march
+        allowed = {
+            tag = AUS
+        }
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 10
+		days_remove = 100
+		fire_only_once = yes
+		cost = 50
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        remove_effect = {
+			add_ideas = republikanischer_schutzbund_support
+        }
+    }
+	AUS_republikanischer_schutzbund_campaign = {
+
+		icon = GFX_decision_generic_scorched_earth
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_idea = republikanischer_schutzbund_support
+		}
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 5
+		days_remove = 50
+		cost = 30
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        complete_effect = {
+			add_timed_idea = {
+				days = 50
+				idea = republikanischer_schutzbund_campaign
+			}
+        }
+    }
+	AUS_purge_the_military= {
+
+		icon = GFX_decision_generic_police_action
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			ultra_nationalism < 0.22
+		}
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 3
+		days_remove = 300
+		fire_only_once = yes
+		cost = 75
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				days = 300
+				idea = purged_military
+			}
+		}
+
+        remove_effect = {
+        }
+    }
+	AUS_attack_nationalist_arms_caches= {
+
+		icon = GFX_decision_generic_prepare_civil_war
+        allowed = {
+            tag = AUS
+        }
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 3
+		days_remove = 10
+		cost = 40
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        remove_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = 3000
+            }
+        }
+    }
+	AUS_underground_operations= {
+
+		icon = GFX_decision_spr_political_assassination
+        allowed = {
+            tag = AUS
+        }
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 3
+		days_remove = 300
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        complete_effect = {
+			add_timed_idea = {
+				days = 300
+				idea = political_assassinations
+			}
+        }
+    }
+	AUS_attack_vf_cells= {
+
+		icon = GFX_decision_generic_ignite_civil_war
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_equipment = {
+            infantry_equipment > 1999
+            }
+			ultra_nationalism < 0.2
+			fascism < 0.1
+		}
+        visible = {
+            has_idea = dollfuss_threat
+        }
+        priority = 3
+		days_remove = 20
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -2000
+            }
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			unlock_decision_tooltip = AUS_offensive_in_north_slovenia
+			unlock_decision_tooltip = AUS_offensive_in_carinthia
+			unlock_decision_tooltip = AUS_eliminate_alpine_resistance
+			set_country_flag = has_started_offensive
+        }
+    }
+	AUS_offensive_in_carinthia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_equipment = {
+            infantry_equipment > 1999
+            }
+		}
+        visible = {
+            has_idea = dollfuss_threat
+			has_country_flag = has_started_offensive
+			938 = {
+				is_demilitarized_zone = yes
+			}
+        }
+        priority = 3
+		days_remove = 20
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -2000
+            }
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			random_list = {
+              60 = { 
+				938 = {
+					set_demilitarized_zone = no
+					add_manpower = -2500
+				}
+			  }
+              40 = { 
+			    add_manpower = -2500
+			  }
+            }
+        }
+    }
+	AUS_eliminate_alpine_resistance = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_equipment = {
+            infantry_equipment > 1999
+            }
+		}
+        visible = {
+            has_idea = dollfuss_threat
+			has_country_flag = has_started_offensive
+			153 = {
+				is_demilitarized_zone = yes
+			}
+        }
+        priority = 3
+		days_remove = 20
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -2000
+            }
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			random_list = {
+              60 = { 
+				153 = {
+					set_demilitarized_zone = no
+					add_manpower = -2500
+					unlock_decision_tooltip = AUS_destroy_voralberg_resistance
+				}
+			  }
+              40 = { 
+			    add_manpower = -2500
+			  }
+            }
+        }
+    }
+	AUS_destroy_voralberg_resistance = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_equipment = {
+            infantry_equipment > 1999
+            }
+		}
+        visible = {
+            has_idea = dollfuss_threat
+			has_country_flag = has_started_offensive
+			848 = {
+				is_demilitarized_zone = yes
+			}
+			153 = {
+				is_demilitarized_zone = no
+			}
+        }
+        priority = 3
+		days_remove = 20
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -2000
+            }
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			random_list = {
+              60 = { 
+				848 = {
+					set_demilitarized_zone = no
+					add_manpower = -2500
+				}
+			  }
+              40 = { 
+			    add_manpower = -2500
+			  }
+            }
+        }
+    }
+	AUS_offensive_in_north_slovenia = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_equipment = {
+            infantry_equipment > 1999
+            }
+		}
+        visible = {
+            has_idea = dollfuss_threat
+			has_country_flag = has_started_offensive
+			102 = {
+				is_demilitarized_zone = yes
+			}
+        }
+        priority = 3
+		days_remove = 20
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -2000
+            }
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			random_list = {
+              60 = { 
+				102 = {
+					set_demilitarized_zone = no
+					add_manpower = -2500
+					unlock_decision_tooltip = AUS_undermine_resistance_in_ljubljana
+				}
+			  }
+              40 = { 
+			    add_manpower = -2500
+			  }
+            }
+        }
+    }
+	AUS_undermine_resistance_in_ljubljana = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			has_equipment = {
+            infantry_equipment > 1999
+            }
+		}
+        visible = {
+            has_idea = dollfuss_threat
+			has_country_flag = has_started_offensive
+			853 = {
+				is_demilitarized_zone = yes
+			}
+			102 = {
+				is_demilitarized_zone = no
+			}
+        }
+        priority = 3
+		days_remove = 20
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -2000
+            }
+		}
+
+        remove_effect = {
+			add_popularity = {
+				popularity = -0.03
+				ideology = ultra_nationalism
+			}
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			random_list = {
+              60 = { 
+				853 = {
+					set_demilitarized_zone = no
+					add_manpower = -2500
+				}
+			  }
+              40 = { 
+			    add_manpower = -2500
+			  }
+            }
+        }
+    }
+}
+AUS_salzburg_festival_1940 = {
+
+	AUS_1940_salzburg_festival_organization = {
+
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			date < 1940.06.12
+			date > 1939.10.12
+		}
+        visible = {
+			date < 1940.06.12
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_stability = 0.0025
+			set_country_flag = salzburg_festival_1940
+		}
+    }
+	AUS_invite_foreign_musicians = {
+
+		icon = GFX_decision_hol_attract_foreign_investors
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1940
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 20
+
+		days_remove = 20
+
+		remove_effect = {
+			set_country_flag = has_invited_hungarian_musicians_1940
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+    }
+	AUS_prepare_the_infrastructure = {
+
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1940
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = has_prepared_infrastructure_1940
+        }
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.35
+		}
+    }
+	AUS_resources_for_the_festival = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1940
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = resources_for_the_festival_1940
+        }
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+    }
+	AUS_1940_salzburg_festival = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			has_country_flag = has_invited_hungarian_musicians_1940
+			has_country_flag = has_prepared_infrastructure_1940
+			has_country_flag = resources_for_the_festival_1940
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+          has_country_flag = salzburg_festival_1940
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = salzburg_festival_1940 
+				days = 200
+			}
+			news_event = news.3052
+			set_country_flag = has_completed_1940_salz_festival
+		}
+
+		timeout_effect = {
+			add_stability = -0.05
+			remove_country_flag = salzburg_festival_1940
+			set_country_flag = has_completed_1940_salz_festival
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+AUS_salzburg_festival_1941 = {
+
+	AUS_1941_salzburg_festival_organization = {
+
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			date < 1941.06.12
+			date > 1940.10.12
+		}
+        visible = {
+			date < 1941.06.12
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_stability = 0.0025
+			set_country_flag = salzburg_festival_1941
+		}
+    }
+	AUS_invite_foreign_musicians_1941 = {
+
+		icon = GFX_decision_hol_attract_foreign_investors
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1941
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 20
+
+		days_remove = 20
+
+		remove_effect = {
+			set_country_flag = has_invited_hungarian_musicians_1941
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+    }
+	AUS_prepare_the_infrastructure_1941 = {
+
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1941
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = has_prepared_infrastructure_1941
+        }
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.35
+		}
+    }
+	AUS_resources_for_the_festival_1941 = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1941
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = resources_for_the_festival_1941
+        }
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+    }
+	AUS_1941_salzburg_festival = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			has_country_flag = has_invited_hungarian_musicians_1941
+			has_country_flag = has_prepared_infrastructure_1941
+			has_country_flag = resources_for_the_festival_1941
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+          has_country_flag = salzburg_festival_1941
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = salzburg_festival_1940 
+				days = 200
+			}
+			set_country_flag = has_completed_1941_salz_festival
+		}
+
+		timeout_effect = {
+			add_stability = -0.05
+			set_country_flag = has_completed_1941_salz_festival
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+AUS_salzburg_festival_1942 = {
+
+	AUS_1942_salzburg_festival_organization = {
+
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			date < 1942.06.12
+			date > 1941.10.12
+		}
+        visible = {
+			date < 1942.06.12
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_stability = 0.0025
+			set_country_flag = salzburg_festival_1942
+		}
+    }
+	AUS_invite_foreign_musicians_1942 = {
+
+		icon = GFX_decision_hol_attract_foreign_investors
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1942
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 20
+
+		days_remove = 20
+
+		remove_effect = {
+			set_country_flag = has_invited_hungarian_musicians_1942
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+    }
+	AUS_prepare_the_infrastructure_1942 = {
+
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1942
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = has_prepared_infrastructure_1942
+        }
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.35
+		}
+    }
+	AUS_resources_for_the_festival_1942 = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1942
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = resources_for_the_festival_1942
+        }
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+    }
+	AUS_1942_salzburg_festival = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			has_country_flag = has_invited_hungarian_musicians_1942
+			has_country_flag = has_prepared_infrastructure_1942
+			has_country_flag = resources_for_the_festival_1942
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+          has_country_flag = salzburg_festival_1942
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = salzburg_festival_1940 
+				days = 200
+			}
+			set_country_flag = has_completed_1942_salz_festival
+		}
+
+		timeout_effect = {
+			add_stability = -0.05
+			remove_country_flag = salzburg_festival_1942
+			set_country_flag = has_completed_1942_salz_festival
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+AUS_salzburg_festival_1943 = {
+
+	AUS_1943_salzburg_festival_organization = {
+
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			date < 1943.06.12
+			date > 1942.10.12
+		}
+        visible = {
+			date < 1943.06.12
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_stability = 0.0025
+			set_country_flag = salzburg_festival_1943
+		}
+    }
+	AUS_invite_foreign_musicians_1943 = {
+
+		icon = GFX_decision_hol_attract_foreign_investors
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1943
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 20
+
+		days_remove = 20
+
+		remove_effect = {
+			set_country_flag = has_invited_hungarian_musicians_1943
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+    }
+	AUS_prepare_the_infrastructure_1943 = {
+
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1943
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = has_prepared_infrastructure_1943
+        }
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.35
+		}
+    }
+	AUS_resources_for_the_festival_1943 = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1943
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = resources_for_the_festival_1943
+        }
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+    }
+	AUS_1943_salzburg_festival = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			has_country_flag = has_invited_hungarian_musicians_1943
+			has_country_flag = has_prepared_infrastructure_1943
+			has_country_flag = resources_for_the_festival_1943
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+          has_country_flag = salzburg_festival_1943
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = salzburg_festival_1940 
+				days = 200
+			}
+			set_country_flag = has_completed_1943_salz_festival
+		}
+
+		timeout_effect = {
+			add_stability = -0.05
+			remove_country_flag = salzburg_festival_1943
+			set_country_flag = has_completed_1943_salz_festival
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+AUS_salzburg_festival_1944 = {
+
+	AUS_1944_salzburg_festival_organization = {
+
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			date < 1944.06.12
+			date > 1943.10.12
+		}
+        visible = {
+			date < 1944.06.12
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_stability = 0.0025
+			set_country_flag = salzburg_festival_1944
+		}
+    }
+	AUS_invite_foreign_musicians_1944 = {
+
+		icon = GFX_decision_hol_attract_foreign_investors
+        allowed = {
+            tag = AUS
+        }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1944
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 20
+
+		days_remove = 20
+
+		remove_effect = {
+			set_country_flag = has_invited_hungarian_musicians_1944
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+    }
+	AUS_prepare_the_infrastructure_1944 = {
+
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1944
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = has_prepared_infrastructure_1944
+        }
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.35
+		}
+    }
+	AUS_resources_for_the_festival_1944 = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+        allowed = {
+            tag = AUS
+        }
+		available = {
+		}
+        visible = {
+			has_country_flag = salzburg_festival_1944
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		days_remove = 50
+
+		remove_effect = {
+			set_country_flag = resources_for_the_festival_1944
+        }
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+    }
+	AUS_1944_salzburg_festival = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			has_country_flag = has_invited_hungarian_musicians_1944
+			has_country_flag = has_prepared_infrastructure_1944
+			has_country_flag = resources_for_the_festival_1944
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+          has_country_flag = salzburg_festival_1944
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = salzburg_festival_1940
+			set_country_flag = has_completed_1944_salz_festival
+		}
+
+		timeout_effect = {
+			add_stability = -0.05
+			remove_country_flag = salzburg_festival_1944
+			set_country_flag = has_completed_1944_salz_festival
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

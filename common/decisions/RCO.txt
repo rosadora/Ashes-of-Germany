@@ -1,0 +1,196 @@
+#Category only allowed for GER
+
+RCO_remilitarisation_war = {
+
+	RCO_start_the_remilitarisation_war = {
+
+		icon = GFX_decision_revolt
+        allowed = {
+            tag = RCO
+        }
+        visible = {
+            has_country_flag = treaty_of_koln_maintened
+        }
+        available = {
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+			news_event = news.3029
+            remove_ideas = treaty_of_koln
+			add_threat = 10
+			hidden_effect = {
+			country_lock_all_division_template = no
+			}
+			FRA = {
+			end_puppet = RCO
+			}
+			leave_faction = yes
+			42 = {
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+            }
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+            }
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			}
+			51 = {
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+            }
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+            }
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			}
+			910 = {
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+            }
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+            }
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			create_unit = {
+             division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
+             owner = RCO
+			}
+			}
+			FRA = {
+			declare_war_on = {
+              target = RCO
+              type = annex_everything
+             }
+			}
+			custom_effect_tooltip = RCO_remilitarisation_war_loc
+        }
+    }
+
+	RCO_remilitarisation_war_decision = {
+
+		icon = GFX_decision_generic_scorched_earth
+
+		allowed = {
+			tag = RCO
+		}
+
+		visible = {
+		    has_country_flag = treaty_of_koln_maintened
+        }
+
+		available = {
+			NOT = {
+			controls_state = 51
+			controls_state = 910
+			}
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_war_with = FRA
+			}
+		}
+
+		days_mission_timeout = 200
+		fire_only_once = yes
+
+		activation = {
+          has_war_with = FRA
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+		  set_country_flag = victory_against_france
+		  white_peace = FRA
+		  FRA = {
+			set_autonomy = {
+            target = RCO
+            autonomy_state = autonomy_dominion
+            end_wars = no
+            end_civil_wars = no
+           }
+		  }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	RCO_annex_saarland = {
+
+		icon = GFX_decision_gre_faction_management
+        allowed = {
+            tag = RCO
+        }
+        visible = {
+            has_country_flag = treaty_of_koln_maintened
+			has_war_with =  FRA
+        }
+        available = {
+			controls_state = 909
+        }
+        priority = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+			set_country_flag = victory_against_france
+            add_state_core = 909
+			transfer_state = 909
+			white_peace = FRA
+		  FRA = {
+			set_autonomy = {
+            target = RCO
+            autonomy_state = autonomy_dominion
+            end_wars = no
+            end_civil_wars = no
+           }
+		  }
+        }
+    }
+}

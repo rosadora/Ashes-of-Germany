@@ -1,0 +1,18 @@
+#################
+#### BELARUS ####
+#################
+BLR_operation_breakwater = {
+
+	icon = GFX_decision_category_SOV_civil_puppet_interaction
+
+	picture = GFX_decision_cat_picture_soviet_civil_war
+
+	allowed = {
+		original_tag = BLR
+	}
+
+	visible = {
+		has_completed_focus = BEL_operation_breakwater
+		has_war_with = SOV
+	}
+}

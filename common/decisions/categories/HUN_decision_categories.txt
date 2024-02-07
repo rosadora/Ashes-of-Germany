@@ -1,0 +1,63 @@
+#################
+#### HUNGARY ####
+#################
+HUN_reactionnary_unrest = {
+
+	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	
+	icon = GFX_decision_category_generic_crisis
+
+	allowed = {
+		original_tag = HUN
+	}
+
+	priority = 1000
+
+	visible = {
+		has_completed_focus = HUN_continue_the_red_terror
+	}
+}
+HUN_reactionnary_unrest_natio_side = {
+
+	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	
+	icon = GFX_decision_category_generic_crisis
+
+	allowed = {
+		original_tag = HUN
+	}
+
+	priority = 1000
+
+	visible = {
+		has_completed_focus = HUN_prepare_our_return
+	}
+}
+HUN_communist_insurgency_decision = {
+	
+	icon = GFX_decision_category_SOV_permanent_revolution
+
+	allowed = {
+		original_tag = HUN
+	}
+
+	priority = 1000
+
+	visible = {
+		has_completed_focus = HUN_end_the_repression
+	}
+}
+HUN_fascist_insurgency_decision = {
+	
+	icon = GFX_decision_category_SOV_permanent_revolution
+
+	allowed = {
+		original_tag = HUN
+	}
+
+	priority = 1000
+
+	visible = {
+		has_completed_focus = HUN_end_the_repression
+	}
+}

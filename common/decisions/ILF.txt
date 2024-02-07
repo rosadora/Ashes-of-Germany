@@ -1,0 +1,607 @@
+#Category only allowed for ILF
+
+ILF_the_referendum_category = {
+
+	ILF_the_referendum_day = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			tag = ILF
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 100
+		fire_only_once = yes
+		priority = 10
+
+		activation = {
+          has_completed_focus = ILF_the_referundum
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			hidden_effect = {
+			IF = {
+				limit = {
+					check_variable = { var_ilf_republican_sentiment > var_ilf_monarchist_sentiment }
+				}
+				country_event = ilf.1
+			}
+			IF = {
+				limit = {
+					check_variable = {  var_ilf_monarchist_sentiment > var_ilf_republican_sentiment}
+				}
+				country_event = ilf.2
+			}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ILF_flni_meetings_for_republic = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_completed_focus = ILF_the_referundum
+			has_active_mission = ILF_the_referendum_day
+			check_variable = {
+             var_ilf_abstention > 10
+            }
+        }
+		fire_only_once = yes
+        priority = 5
+		days_remove = 5
+		cost = 25
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			custom_effect_tooltip = ILF_increase_republican_support
+			add_to_variable = {
+             var = var_ilf_republican_sentiment
+             value = 4
+			}
+			add_to_variable = {
+             var = var_ilf_monarchist_sentiment
+             value = -2
+			}
+			add_to_variable = {
+             var = var_ilf_abstention
+             value = -2
+			}
+        }
+    }
+	ILF_rally_the_moderate_socialists = {
+
+		icon = GFX_decision_SWI_consolidate_council_power
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_completed_focus = ILF_the_referundum
+			has_active_mission = ILF_the_referendum_day
+			check_variable = {
+             var_ilf_abstention > 10
+            }
+        }
+		fire_only_once = yes
+        priority = 4
+		days_remove = 5
+		cost = 25
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			custom_effect_tooltip = ILF_increase_republican_support
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = libertarian_socialism
+				popularity = 0.025
+			}
+			add_to_variable = {
+             var = var_ilf_republican_sentiment
+             value = 6
+			}
+			add_to_variable = {
+             var = var_ilf_monarchist_sentiment
+             value = -1
+			}
+			add_to_variable = {
+             var = var_ilf_abstention
+             value = -5
+			}
+        }
+    }
+	ILF_mobilize_against_instability = {
+
+		icon = GFX_decision_generic_political_address
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_completed_focus = ILF_the_referundum
+			has_active_mission = ILF_the_referendum_day
+			check_variable = {
+             var_ilf_abstention > 10
+            }
+        }
+		fire_only_once = yes
+        priority = 3
+		days_remove = 5
+		cost = 25
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			custom_effect_tooltip = ILF_increase_monarchist_support
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.025
+			}
+			add_to_variable = {
+             var = var_ilf_monarchist_sentiment
+             value = 6
+			}
+			add_to_variable = {
+             var = var_ilf_republican_sentiment
+             value = -1
+			}
+			add_to_variable = {
+             var = var_ilf_abstention
+             value = -5
+			}
+        }
+    }
+	ILF_rally_the_liberals = {
+
+		icon = GFX_decision_generic_monarchy
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_completed_focus = ILF_the_referundum
+			has_active_mission = ILF_the_referendum_day
+			check_variable = {
+             var_ilf_abstention > 10
+            }
+        }
+		fire_only_once = yes
+        priority = 2
+		days_remove = 5
+		cost = 25
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			custom_effect_tooltip = ILF_increase_monarchist_support
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.025
+			}
+			add_to_variable = {
+             var = var_ilf_monarchist_sentiment
+             value = 5
+			}
+			add_to_variable = {
+             var = var_ilf_republican_sentiment
+             value = -3
+			}
+			add_to_variable = {
+             var = var_ilf_abstention
+             value = -2
+			}
+        }
+    }
+	ILF_divide_the_far_right = {
+
+		icon = GFX_decision_generic_intelligence_operation
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_completed_focus = ILF_the_referundum
+			has_active_mission = ILF_the_referendum_day
+			check_variable = {
+             var_ilf_abstention > 10
+            }
+        }
+		fire_only_once = yes
+        priority = 1
+		days_remove = 5
+		cost = 25
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			custom_effect_tooltip = ILF_increase_monarchist_support
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+             var = var_ilf_monarchist_sentiment
+             value = 6
+			}
+			add_to_variable = {
+             var = var_ilf_republican_sentiment
+             value = -1
+			}
+			add_to_variable = {
+             var = var_ilf_abstention
+             value = -5
+			}
+        }
+    }
+}
+ILF_first_national_assembly = {
+
+	ILF_first_national_assembly_election_day = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			tag = ILF
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 100
+		fire_only_once = yes
+		priority = 10
+
+		activation = {
+          has_completed_focus = ILF_elect_first_national_assembly
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = ilf.8
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ILF_new_poll = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = ILF
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 2
+		priority = 10
+
+		activation = {
+          has_completed_focus = ILF_elect_first_national_assembly
+		  has_active_mission = ILF_first_national_assembly_election_day
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			clear_variable = ldcri_pop
+			clear_variable = fsi_pop
+			clear_variable = bl_pop
+			clear_variable = prdds_pop
+			clear_variable = msi_pop
+
+			set_variable = {
+             var = ldcri_pop
+             value = party_popularity@classical_marxism
+			}
+			add_to_variable = {
+             var = ldcri_pop
+             value = party_popularity@communism
+			}
+			add_to_variable = {
+             var = ldcri_pop
+             value = party_popularity@libertarian_socialism
+			}
+
+			set_variable = {
+             var = fsi_pop
+             value = party_popularity@social_democracy
+			}
+
+			set_variable = {
+             var = bl_pop
+             value = party_popularity@classical_liberalism
+			}
+			add_to_variable = {
+             var = bl_pop
+             value = party_popularity@social_liberalism
+			}
+
+			set_variable = {
+             var = prdds_pop
+             value = party_popularity@democratic
+			}
+			add_to_variable = {
+             var = prdds_pop
+             value = party_popularity@neutrality
+			}
+
+			set_variable = {
+             var = msi_pop
+             value = party_popularity@fascism
+			}
+			add_to_variable = {
+             var = msi_pop
+             value = party_popularity@ultra_nationalism
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ILF_remember_msis_past = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_active_mission = ILF_first_national_assembly_election_day
+        }
+        priority = 1
+		days_remove = 5
+		cost = 15
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.025
+			}
+        }
+    }
+	ILF_unite_the_right = {
+
+		icon = GFX_decision_hol_war_on_pacifism
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_active_mission = ILF_first_national_assembly_election_day
+        }
+        priority = 1
+		days_remove = 5
+		cost = 15
+
+		ai_will_do = {
+			factor = 400
+		}
+
+        remove_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+        }
+    }
+	ILF_the_last_bastion_of_democracy = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_active_mission = ILF_first_national_assembly_election_day
+        }
+        priority = 1
+		days_remove = 5
+		cost = 15
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.02
+			}
+        }
+    }
+	ILF_open_an_alliance_to_the_left = {
+
+		icon = GFX_decision_bul_legalize_bs
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_active_mission = ILF_first_national_assembly_election_day
+        }
+        priority = 1
+		days_remove = 5
+		cost = 15
+
+		ai_will_do = {
+			factor = 200
+		}
+
+        remove_effect = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = libertarian_socialism
+				popularity = -0.02
+			}
+        }
+    }
+	ILF_anti_extremist_coalition = {
+
+		icon = GFX_decision_generic_coastal_fortification
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            has_active_mission = ILF_first_national_assembly_election_day
+        }
+        priority = 1
+		days_remove = 5
+		cost = 15
+
+		ai_will_do = {
+			factor = 400
+		}
+
+        remove_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = libertarian_socialism
+				popularity = -0.02
+			}
+        }
+    }
+}
+ILF_king_policy = {
+	ILF_secure_the_subjects = {
+
+		icon = GFX_decision_generic_police_action
+        allowed = {
+            tag = ILF
+        }
+        visible = {
+            is_in_faction_with = FRA
+			FRA = {
+				surrender_progress > 0.7
+			}
+        }
+        priority = 1
+		days_remove = 5
+		cost = 50
+
+		ai_will_do = {
+			factor = 20
+		}
+
+        remove_effect = {
+			add_state_core = 2
+			add_state_core = 157
+			add_state_core = 162
+			add_state_core = 161
+			add_state_core = 158
+			add_state_core = 159
+			add_state_core = 160
+			add_state_core = 39
+			add_state_core = 850
+			add_state_core = 852
+			add_state_core = 736
+			annex_country = {
+             target = LBV
+             transfer_troops = yes
+            }
+			annex_country = {
+             target = SPM
+             transfer_troops = yes
+            }
+			annex_country = {
+             target = TOS
+             transfer_troops = yes
+            }
+			annex_country = {
+             target = PAP
+             transfer_troops = yes
+            }
+        }
+    }
+}

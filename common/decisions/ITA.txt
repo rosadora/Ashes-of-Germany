@@ -1,0 +1,90 @@
+ITA_mare_nostrum_category = {
+
+	ITA_mare_nostrum_integrate_spain = {
+
+		icon = GFX_decision_infiltrate_state
+        allowed = {
+            tag = ITA
+        }
+        visible = {
+            tag = ITA
+            SPR = {
+                has_government = fascism
+            }
+        }
+        available = {
+            is_in_faction_with = SPR
+            has_completed_focus = ITA_create_new_provinces
+        }
+        priority = 1000
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+            SPR = {
+                country_event = italia.6
+            }
+        }
+    }
+    ITA_mare_nostrum_integrate_portugal = {
+
+		icon = GFX_decision_infiltrate_state
+        allowed = {
+            tag = ITA
+        }
+        visible = {
+            tag = ITA
+            POR = {
+                has_government = fascism
+            }
+        }
+        available = {
+            is_in_faction_with = POR
+            has_completed_focus = ITA_create_new_provinces
+        }
+        priority = 1000
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+            SPR = {
+                country_event = italia.9
+            }
+        }
+    }
+    ITA_mare_nostrum_integrate_romania = {
+
+		icon = GFX_decision_infiltrate_state
+        allowed = {
+            tag = ITA
+        }
+        visible = {
+            tag = ITA
+            ROM = {
+                has_government = fascism
+            }
+        }
+        available = {
+            is_in_faction_with = ROM
+            has_completed_focus = ITA_create_new_provinces
+        }
+        priority = 1000
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+            SPR = {
+                country_event = italia.12
+            }
+        }
+    }
+}

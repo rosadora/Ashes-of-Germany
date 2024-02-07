@@ -1,0 +1,3380 @@
+USR_expand_the_union = {
+
+	USR_influence_romania {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 ROM = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = ROM
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			ROM = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_romania = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 ROM = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 ROM = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = ROM
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			ROM = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 ROM = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 ROM = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = ROM
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			ROM = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = TUR
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	USR_influence_turkey {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 TUR = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = TUR
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			TUR = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_turkey = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 TUR = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 TUR = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = TUR
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			TUR = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_turkish_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 TUR = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 TUR = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = TUR
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			TUR = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = TUR
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	USR_influence_poland {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 POL = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = POL
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			POL = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_poland = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 POL = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 POL = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = POL
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			POL = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_polish_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 POL = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 POL = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = POL
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			POL = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = POL
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	USR_influence_finland {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 FIN = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = FIN
+		 NOT = {
+			is_puppet_of = FIN
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			FIN = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_finland = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 FIN = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 FIN = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = FIN
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			FIN = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_finnish_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 FIN = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 FIN = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = FIN
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			FIN = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = FIN
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	USR_influence_estonia {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 EST = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = EST
+		 NOT = {
+			is_puppet_of = EST
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			EST = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_estonia = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 EST = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 EST = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = EST
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			EST = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_estonian_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 EST = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 EST = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = EST
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			EST = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = EST
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	USR_influence_latvia {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 LAT = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = LAT
+		 NOT = {
+			is_puppet_of = LAT
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			LAT = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_latvia = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 LAT = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 LAT = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = LAT
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			LAT = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_latvian_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 LAT = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 LAT = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = LAT
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			LAT = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = LAT
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_influence_lithuania {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 LIT = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = LIT
+		 NOT = {
+			is_puppet_of = LIT
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			LIT = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_lithuania = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 LIT = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 LIT = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = LIT
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			LIT = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_lithuanian_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 LIT = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 LIT = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = LIT
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			LIT = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = LIT
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	USR_influence_iran {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = USR
+		 NOT = {
+		 PER = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = PER
+		 NOT = {
+			is_puppet_of = PER
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			PER = {
+				add_timed_idea = {
+					idea = russian_influence
+                    days = 100
+				}
+				country_event = rus.24
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_unlimited_strike_in_iran = {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 PER = {
+			communism > 0.4
+		 }
+		 NOT = {
+		 PER = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = PER
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			PER = {
+				add_ideas = unlimited_strike
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_overthrow_the_iranian_government = {
+
+		icon = GFX_decision_generic_assassination
+
+		available = {
+		 tag = USR
+		 PER = {
+			communism > 0.5
+			has_stability < 0.35
+		 }
+		 NOT = {
+		 PER = {
+				has_country_flag = has_eliminated_communists
+			}
+			}
+		}
+
+		visible = {
+		 has_completed_focus = USR_expand_the_union
+		 country_exists = PER
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+		
+		complete_effect = {
+			PER = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			}
+			set_autonomy = {
+         target = PER
+         autonomy_state = autonomy_integrated_puppet
+	     }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+ROM_counter_propaganda = {
+
+	ROM_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = ROM
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	ROM_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = ROM
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	ROM_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = ROM
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+TUR_counter_propaganda = {
+
+	TUR_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = TUR
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	TUR_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = TUR
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	TUR_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = TUR
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+
+POL_counter_propaganda = {
+
+	POL_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = POL
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	POL_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = POL
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	POL_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = POL
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+
+FIN_counter_propaganda = {
+
+	FIN_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = FIN
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	FIN_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = FIN
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	FIN_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = FIN
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+EST_counter_propaganda = {
+
+	EST_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = EST
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	EST_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = EST
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	EST_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = EST
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+LAT_counter_propaganda = {
+
+	LAT_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = LAT
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	LAT_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = LAT
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	LAT_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = LAT
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+LIT_counter_propaganda = {
+
+	LIT_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = LIT
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	LIT_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = LIT
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	LIT_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = LIT
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+PER_counter_propaganda = {
+
+	PER_counter_propaganda1 {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		available = {
+		 tag = PER
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_timed_idea = {
+			idea = counter_propaganda
+			days = 100 
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	PER_strike_communist_cells {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+		 tag = PER
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 75
+
+		days_remove = 100
+		
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+           ideology = communism
+           popularity = -0.1
+	      }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	PER_eliminate_soviet_presence {
+
+		icon = GFX_decision_generic_independence
+
+		available = {
+		 tag = PER
+		 communism < 0.001
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_expand_the_union
+		 }
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 NOT = {
+			has_country_flag = has_eliminated_communists
+		 }
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		
+		complete_effect = {
+			add_stability = 0.25
+			set_country_flag = has_eliminated_communists
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+
+USR_the_formation_of_soviet_union = {
+
+	USR_uprising_in_ukraine {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 UKR = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 UKR = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = ukraine_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			UKR = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_belarus {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 BLR = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 BLR = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = belarus_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			BLR = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_georgia {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 GEO = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 GEO = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = georgia_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			GEO = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_armenia {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 ARM = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 ARM = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = armenia_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			ARM = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_far_east {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 FER = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 FER = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = far_east_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			FER = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_manchuria {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 MAN = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 MAN = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = manchuria_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			MAN = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_kazakhstan {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 KAZ = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 KAZ = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = kazakhstan_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			KAZ = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_uzbekistan {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 UZB = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 UZB = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = uzbekistan_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			UZB = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_khiva {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 KHI = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 KHI = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = khiva_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			KHI = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_turkmenistan {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 TMS = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 TMS = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = turkmenistan_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			TMS = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_bukhara {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 BUK = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 BUK = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = bukhara_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			BUK = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_uprising_in_khirgizstan {
+
+		icon = GFX_decision_revolt
+
+		available = {
+		 tag = USR
+		 KYR = {
+			communism > 0.6
+		 }
+		}
+
+		visible = {
+		 USR = {
+		 has_completed_focus = USR_influence_our_neighbors
+		 }
+		 KYR = {
+		 NOT = {
+			is_puppet_of = USR
+		 }
+		 }
+		 NOT = {
+			has_country_flag = kirghizstan_has_eliminated_our_presence
+		 }
+		}
+
+		fire_only_once = no
+
+		cost = 50
+
+		days_remove = 100
+		
+		complete_effect = {
+			KYR = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+}
+RUS_civil_war = {
+
+	RUS_recover_the_reserves {
+
+		icon = GFX_decision_eng_blackshirt_speech
+
+		available = {
+		surrender_progress > 0.35
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.2
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 35000
+
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+
+	RUS_winter_counter_offensive {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+		 date < 1937.03.21
+		 date > 1936.12.21
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = winter_offensive_civ
+				days = 60
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_summer_offensive {
+
+		icon = GFX_decision_gre_faction_management
+
+		available = {
+		 date > 1937.07.21
+		 date < 1937.09.21
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = summer_offensive
+				days = 60
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_winter_counter_offensive_1938 {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+		 date < 1938.03.21
+		 date > 1937.12.21
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = winter_offensive_civ
+				days = 60
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_summer_offensive_1938 {
+
+		icon = GFX_decision_gre_faction_management
+
+		available = {
+		 date > 1938.07.21
+		 date < 1938.09.21
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = summer_offensive
+				days = 60
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_raise_cossacks {
+
+		icon = GFX_decision_generic_cavalry
+
+		available = {
+		surrender_progress > 0.3
+		controls_state = 653
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			653 = {
+				create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Kazachya diviziya\" division_template = \"Kazachya diviziya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_horror_and_despair {
+
+		icon = GFX_decision_generic_scorched_earth
+
+		available = {
+		surrender_progress > 0.5
+		NOT = {
+			controls_state = 217
+		}
+		controls_state = 572
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			572 = {
+				create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+		  create_unit = {
+           division = "name = \"Tsarskaya Militsiya\" division_template = \"Tsarskaya Militsiya\" start_experience_factor = 0.5"
+           owner = SOV
+          }
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_we_will_hold {
+
+		icon = GFX_decision_eng_blackshirt_speech
+
+		available = {
+		surrender_progress > 0.5
+		controls_state = 572
+		controls_state = 653
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			572 = {
+				add_extra_state_shared_building_slots = 2
+			 add_building_construction = {
+             type = arms_factory
+             level = 2
+             instant_build = yes
+             }
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_last_stand {
+
+		icon = GFX_decision_generic_mountain_fortification
+
+		available = {
+		surrender_progress > 0.6
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = last_stand
+				days = 100
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	RUS_our_only_opportunity {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		surrender_progress > 0.6
+		date > 1938.12.1
+		}
+
+		visible = {
+		 has_country_flag = second_russian_civil_war
+		 has_war_with = USR
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = the_last_battle
+				days = 150
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}
+USR_civil_war = {
+
+	USR_spring_offensive {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+		 date > 1937.03.21
+		 date < 1937.06.21
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = spring_offensive
+				days = 60
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_autumn_offensive {
+
+		icon = GFX_decision_generic_scorched_earth
+
+		available = {
+		 date > 1937.09.21
+		 date < 1937.11.21
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = autumn_offensive
+				days = 60
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_disrupt_the_tsarists {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+
+		available = {
+		 date < 1936.12.31
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 50
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = disrupt_the_tsarists
+				days = 50
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_reach_volgograd {
+
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+		 date > 1938.1.1
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = reach_volgograd
+				days = 100
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_the_final_offensive {
+
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		available = {
+		 date > 1938.8.1
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_timed_idea = {
+				idea = the_final_offensive
+				days = 120
+			}
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_smolensk {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 207
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			207 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_kursk {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 220
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			220 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_voronezh {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 260
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			260 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_kharkov {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 221
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			221 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_luhansk {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 227
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			227 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_alexandrovka {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 228
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			228 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_rostov {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 218
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			218 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_saratov {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 239
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			239 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_gorky {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 252
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			252 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+	USR_looting_of_kazan {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+		 controls_state = 249
+		}
+
+		visible = {
+		 has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		days_remove = 60
+		
+		complete_effect = {
+			add_stability = -0.05
+			249 = {
+			damage_building = {
+             type = infrastructure
+             damage = 2
+             }
+			}
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 5000
+         }
+        }
+
+		ai_will_do = {
+         factor = 100
+        }
+	}
+}

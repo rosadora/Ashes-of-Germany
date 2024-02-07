@@ -1,0 +1,815 @@
+#Category only allowed for BLR
+
+BLR_operation_breakwater = {
+
+	BLR_moscow_liberation = {
+
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			tag = BLR
+		}
+
+		available = {
+			controls_state = 219
+		}
+
+		cancel_trigger = {
+			controls_state = 219
+		}
+
+		days_mission_timeout = 100
+		fire_only_once = yes
+
+		activation = {
+			has_war_with = SOV
+          NOT = {
+			controls_state = 219
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		 remove_ideas = operation_breakwater
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BLR_st_petersburg_liberation = {
+
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			tag = BLR
+		}
+
+		available = {
+			controls_state = 195
+		}
+
+		cancel_trigger = {
+			controls_state = 195
+		}
+
+		days_mission_timeout = 170
+		fire_only_once = yes
+
+		activation = {
+			has_war_with = SOV
+          NOT = {
+			controls_state = 195
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		 remove_ideas = operation_breakwater
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BLR_volgograd_liberation = {
+
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			tag = BLR
+		}
+
+		available = {
+			controls_state = 217
+		}
+
+		cancel_trigger = {
+			controls_state = 217
+		}
+
+		days_mission_timeout = 300
+		fire_only_once = yes
+
+		activation = {
+			has_war_with = SOV
+          NOT = {
+			controls_state = 217
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		 remove_ideas = operation_breakwater
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BLR_vitebsk_is_ours {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 207
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			207 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_gomel_is_recover {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 207
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			241 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_bryansk_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 224
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			224 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_kharkov_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 221
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			221 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_kursk_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 220
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			220 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_orel_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 222
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			222 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_tula_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 223
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			223 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_moscow_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 219
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			219 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_smolensk_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 242
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			242 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_rzhev_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 246
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			246 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_tver_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 247
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			247 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_st_petersburg_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 195
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			195 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_gorky_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 252
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			252 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+	BLR_yaroslav_is_taken {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+		controls_state = 248
+		}
+
+		allowed = {
+			tag = BLR
+		}
+
+		visible = {
+		has_war_with = SOV
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			add_war_support = 0.05
+			248 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = BLR
+          }
+		  }
+        }
+	}
+}

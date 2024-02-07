@@ -1,0 +1,16 @@
+#################
+#### FRANCE ####
+#################
+FRC_great_industrial_reborn_category = {
+
+	icon = GFX_decision_category_generic_industry
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = FRC
+	}
+
+	visible = {
+		has_completed_focus = FRC_great_industrial_reborn
+	}
+}

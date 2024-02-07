@@ -1,0 +1,14 @@
+#################
+#### GERMANY ####
+#################
+HAN_shock_strategy_decision = {
+
+	icon = GFX_decision_category_gre_paying_ifc_debt
+
+	allowed = {
+		original_tag = HAN
+	}
+
+	visible = {
+	}
+}

@@ -1,0 +1,98 @@
+#################
+#### AUSTRIA ####
+#################
+AUS_austrian_civil_war = {
+
+	picture = GFX_decision_cat_picture_spr_civil_war_offensives
+	icon = GFX_decision_revolt
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	priority = 1000
+
+	visible = {
+		has_idea = dollfuss_threat
+		has_completed_focus = AUS_the_civil_war_isnt_over
+	}
+}
+
+AUS_salzburg_festival_1940 = {
+
+	icon = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	priority = 100
+
+	visible = {
+		has_completed_focus = AUS_welcome_to_the_salzburg_festival
+	}
+}
+
+AUS_salzburg_festival_1941 = {
+
+	icon = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	priority = 100
+
+	visible = {
+		has_completed_focus = AUS_welcome_to_the_salzburg_festival
+		has_country_flag = has_completed_1940_salz_festival
+	}
+}
+
+AUS_salzburg_festival_1942 = {
+
+	icon = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	priority = 100
+
+	visible = {
+		has_completed_focus = AUS_welcome_to_the_salzburg_festival
+		has_country_flag = has_completed_1941_salz_festival
+	}
+}
+
+AUS_salzburg_festival_1943 = {
+
+	icon = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	priority = 100
+
+	visible = {
+		has_completed_focus = AUS_welcome_to_the_salzburg_festival
+		has_country_flag = has_completed_1942_salz_festival
+	}
+}
+
+AUS_salzburg_festival_1944 = {
+
+	icon = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	priority = 100
+
+	visible = {
+		has_completed_focus = AUS_welcome_to_the_salzburg_festival
+		has_country_flag = has_completed_1943_salz_festival
+	}
+}

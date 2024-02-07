@@ -1,0 +1,16 @@
+#################
+#### GERMANY ####
+#################
+ETH_triumph_over_mussolini = {
+
+	icon = GFX_decision_category_ETH_italo_ethiopian_war
+
+	allowed = {
+		original_tag = ETH
+	}
+
+	priority = 1000
+
+	visible = {
+	}
+}

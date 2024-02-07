@@ -1,0 +1,89 @@
+#Category only allowed for BLR
+
+TRA_queer_insurgency = {
+
+	TRA_queer_uprising = {
+
+		icon = GFX_decision_revolt
+
+		allowed = {
+			tag = TRA
+		}
+
+		available = {
+			has_stability > 0.6
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 2
+		fire_only_once = yes
+
+		activation = {
+			has_stability < 0.35
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		 country_event = tra.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+TRA_make_contacts = {
+
+	TRA_invite_bavaria = {
+
+		icon = GFX_decision_generic_political_discourse
+
+        visible = {
+
+        }
+        available = {
+			BAY = {
+				has_completed_focus = FRA_bavarian_kpd_coup
+			}
+        }
+        priority = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+			BAY = {
+				country_event = tra.9
+			}
+        }
+    }
+	TRA_invite_belarus = {
+
+		icon = GFX_decision_generic_political_discourse
+
+        visible = {
+
+        }
+        available = {
+			BLR = {
+				has_completed_focus = BLR_the_belarusian_socialist_republic
+			}
+        }
+        priority = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+        complete_effect = {
+			BLR = {
+				country_event = tra.9
+			}
+        }
+    }
+}

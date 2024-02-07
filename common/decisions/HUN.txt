@@ -1,0 +1,507 @@
+#Category only allowed for HUN
+
+HUN_reactionnary_unrest = {
+
+	HUN_unification_oppositions = {
+
+		icon = GFX_decision_generic_form_nation
+
+		allowed = {
+			tag = HUN
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 50
+
+		fire_only_once = yes
+
+		activation = {
+          has_completed_focus = HUN_continue_the_red_terror
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = hun.1
+		  add_popularity = {
+			ideology = fascism 
+			popularity = -1
+		  }
+		  add_popularity = {
+			ideology = neutrality 
+			popularity = 0.1
+		  }
+		  swap_ideas = {
+			remove_idea = weakened_reactionnary_opposition
+			add_idea = united_reactionnary_opposition
+		  }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_rallying_of_the_countryside_by_nationalists = {
+
+		icon = GFX_decision_POL_organize_strike_two
+
+		allowed = {
+			tag = HUN
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 50
+
+		activation = {
+          has_idea = united_reactionnary_opposition
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		timeout_effect = {
+		  swap_ideas = {
+			remove_idea = united_reactionnary_opposition
+			add_idea = growing_reactionnary_opposition
+		  }
+		  swap_ideas = {
+			remove_idea = low_support_in_the_countryside
+			add_idea = hostile_countryside
+		  }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_large_far_right_unrest = {
+
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = HUN
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 50
+
+		activation = {
+          has_idea = growing_reactionnary_opposition
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		timeout_effect = {
+		  remove_ideas = growing_reactionnary_opposition
+		  news_event = news.3054
+		  end_puppet = TRA
+		  end_puppet = SLO
+		  end_puppet = CRO
+		  end_puppet = SER
+		  leave_faction = yes
+		  hidden_effect = {
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_secure_northern_hungary
+			}
+		  start_civil_war = {
+           ruling_party = communism
+           ideology = neutrality
+           size = 0.5
+           states = {
+            155 955 45 154 942 73
+           }
+           }
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_secure_the_cities
+				NOT = {
+					has_completed_focus = HUN_all_weapons_against_the_nationalists
+				}
+			}
+		  start_civil_war = {
+           ruling_party = communism
+           ideology = neutrality
+           size = 0.5
+           states = {
+            155 955 45 154 942 73 955 953
+           }
+           }
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_secure_the_cities
+				has_completed_focus = HUN_all_weapons_against_the_nationalists
+			}
+		  start_civil_war = {
+           ruling_party = communism
+           ideology = neutrality
+           size = 0.4
+           states = {
+            155 955 45 154 942 73 955 953
+           }
+           }
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_rally_far_left_militias
+			}
+			43 = {
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_secure_budapest_garrison
+			}
+			43 = {
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_steal_army_guns
+			}
+			add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = 3000
+			 producer = HUN
+            }
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_all_communist_government
+			}
+			add_stability = 0.15
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_you_are_a_worker_too
+			}
+			73 = {
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+			923 = {
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+		   }
+
+		   IF = {
+			limit = {
+				has_completed_focus = HUN_defence_of_the_revolution
+			}
+			add_timed_idea = {
+				idea = to_the_barricades
+				days = 100
+			}
+		   }
+
+		   IF = {
+			limit = {
+				has_completed_focus = HUN_provide_the_frontline
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+		   }
+		  }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+HUN_reactionnary_unrest_natio_side = {
+
+	HUN_the_coup = {
+
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			tag = HUN
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = yes
+
+		activation = {
+          has_completed_focus = HUN_prepare_our_return
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		 news_event = news.3054
+		 leave_faction = yes
+		 remove_ideas = home_of_the_revolution
+		 remove_ideas = weakened_reactionnary_opposition
+		  IF = {
+			limit = {
+				has_completed_focus = HUN_unite_the_nationalists
+			}
+			add_popularity = {
+				popularity = -0.15
+				ideology = fascism
+			}
+			start_civil_war = {
+           ruling_party = neutrality
+           ideology = communism
+           size = 0.4
+           states = {
+            953 43 664 954 73
+           }
+           }
+		 }
+		 IF = {
+			limit = {
+				NOT = {
+				has_completed_focus = HUN_unite_the_nationalists
+				}
+			}
+			start_civil_war = {
+           ruling_party = neutrality
+           ideology = communism
+           size = 0.5
+           states = {
+            953 43 664 954 73
+           }
+           }
+		 }
+		 IF = {
+			limit = {
+				has_completed_focus = HUN_stir_anticommunist_spirit
+			}
+			add_stability = 0.1
+		 }
+		 IF = {
+			limit = {
+				has_completed_focus = HUN_rally_the_countryside
+			}
+			154 = {
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+			15 = {
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+			155 = {
+			create_unit = {
+              division = "name = \"Huszár Dandár\" division_template = \"Huszár Dandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+		 }
+		 IF = {
+			limit = {
+				has_completed_focus = HUN_nationalist_propaganda
+			}
+			add_war_support = 0.1
+		 }
+		
+		 IF = {
+			limit = {
+				has_completed_focus = HUN_raise_volunteers_bataillon
+			}
+			add_manpower = 50000
+		 }
+		 IF = {
+			limit = {
+				has_completed_focus = HUN_increase_army_support
+			}
+			955 = {
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+			73 = {
+			create_unit = {
+              division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.8"
+              owner = HUN
+            }
+			}
+		 }
+		 IF = {
+			limit = {
+				has_completed_focus = HUN_plan_the_civil_war
+			}
+			add_timed_idea = {
+				idea = nationalist_offensive
+				days = 100
+			}
+		 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+HUN_communist_insurgency_decision = {
+
+	HUN_communist_uprising_decision = {
+
+		icon = GFX_decision_SOV_the_workers_dictatorship
+
+		allowed = {
+			tag = HUN
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+			has_completed_focus = HUN_the_elections
+		}
+
+		days_mission_timeout = 300
+
+		fire_only_once = yes
+
+		activation = {
+          has_completed_focus = HUN_end_the_repression
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			add_stability = -0.1
+			add_political_power = -200
+			start_civil_war = {
+           ruling_party = democratic
+           ideology = communism
+           size = 0.4
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+HUN_fascist_insurgency_decision = {
+
+	HUN_fascist_uprising_decision = {
+
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			tag = HUN
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+			has_completed_focus = HUN_the_elections
+			
+		}
+
+		days_mission_timeout = 300
+
+		fire_only_once = yes
+
+		activation = {
+          has_completed_focus = HUN_end_the_repression
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			add_stability = -0.1
+			add_political_power = -200
+			start_civil_war = {
+           ruling_party = democratic
+           ideology = fascism
+           size = 0.4
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

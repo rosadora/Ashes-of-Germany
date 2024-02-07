@@ -1,0 +1,46 @@
+#################
+#### GERMANY ####
+#################
+ILF_the_referendum_category = {
+
+	icon = GFX_decision_category_power_struggle
+
+	picture = GFX_decision_cat_picture_chi_political_support
+
+	priority = 50
+
+	allowed = {
+		original_tag = ILF
+	}
+
+	visible = {
+	}
+}
+ILF_first_national_assembly = {
+
+	icon = GFX_decision_category_SOV_propaganda
+
+	picture = GFX_decision_cat_picture_NOR_rousing_proletariat
+
+	priority = 50
+
+	allowed = {
+		original_tag = ILF
+	}
+
+	visible = {
+	}
+}
+ILF_king_policy = {
+
+	icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+
+	priority = 50
+
+	allowed = {
+		original_tag = ILF
+	}
+
+	visible = {
+	}
+}
