@@ -1,0 +1,225 @@
+﻿####### Division Templates #######
+
+division_template = { 
+	name = "Camicie Rosse" 
+	division_names_group = ITA_INF_01 
+	is_locked = yes
+	force_allow_recruiting = yes
+
+	regiments = { 
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+	support = { 
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	priority = 10
+}
+units = {
+    division = { #bologna
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6606 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+    division = { #bologna
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6606 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+    division = { #ferrara
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6793 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+    division = { #parma
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 9752 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #genova
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6788 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #genova
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6788 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #torino
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6780
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #torino
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6780 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #milano
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 3780 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #milano
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 3780 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #brescia
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 773 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #verona
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 603 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #trento
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 9598 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #bolzano
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 11598 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #padova
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 3604 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #trieste
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6626 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #rijeka
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 11564 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #venezia
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 11584 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = { #venezia
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 11584 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	 division = { #bologna
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		} 
+		location = 6606 
+		division_template = "Camicie Rosse"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

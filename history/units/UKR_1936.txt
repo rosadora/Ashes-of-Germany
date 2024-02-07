@@ -1,0 +1,262 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Vyzvolna dyviziya"			# Rifle Division
+	division_names_group = UKR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Motoryzovana dyviziya"		# Motor Rifle Division
+	division_names_group = UKR_MOT_01
+											# Note: only represents Moscow Proletariat Division in 1936; after 1938-40, Motor Rifle Divisions had +1 mot regiment (3 bns) 
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		#engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyska dyviziya" 	# Cavalry Division
+	division_names_group = UKR_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Tankova dyviziya" 				# Represents regular mechanized corps (4 existed in 1935-38); 
+	division_names_group = UKR_MEC_01
+												# Also represents groups of independent tank, mech brigades of the time, though groups are best represented by tank bge 
+													# (2x M/L tank + 1x mot), and 2x mech bge (2x L tank + 1x mot)
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }		
+		light_armor = { x = 1 y = 1 }		
+		light_armor = { x = 1 y = 2 }		
+		motorized = { x = 2 y = 0 }		
+		motorized = { x = 2 y = 1 }	
+		motorized = { x = 2 y = 2 }		
+		motorized = { x = 2 y = 3 }		
+	}
+}
+division_template = {
+	name = "Parashutna dyviziya"			# Airborne Brigade
+	division_names_group = UKR_PAR_01
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+	}
+}
+
+### Note: OOB abstracts away the following:
+#	Marine Brigade (3x marine bn), 2 Brigades: Leningrad, Sevastopol
+#	Airborne Brigade (3x paratrooper bn), 1 Brigade: Moscow
+
+
+##### OOB #####
+units = {
+	# 19ya Strelkoviy Korpus		
+	division= {	# "1ya Vyzvolna dyviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 525
+		division_template = "Vyzvolna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {	# "2ya Vyzvolna dyviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 56
+		}
+		location = 11561
+		division_template = "Vyzvolna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {	# "3ya Vyzvolna dyviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 11437
+		division_template = "Vyzvolna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "4ya Vyzvolna dyviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 11670
+		division_template = "Vyzvolna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "5ya Vyzvolna dyviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 476
+		division_template = "Vyzvolna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "6ya Vyzvolna dyviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 6593
+		division_template = "Vyzvolna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "1ya Kavaleriyska dyviziya"		
+		location = 11490
+		division_template = "Kavaleriyska dyviziya"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "2ya Kavaleriyska dyviziya"		
+		location = 11409
+		division_template = "Kavaleriyska dyviziya"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "3ya Kavaleriyska dyviziya"		
+		location = 9573
+		division_template = "Kavaleriyska dyviziya"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "4ya Kavaleriyska dyviziya"		
+		location = 574
+		division_template = "Kavaleriyska dyviziya"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "1ya Motoryzovana dyviziya"		
+		location = 525
+		division_template = "Motoryzovana dyviziya"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "2ya Motoryzovana dyviziya"		
+		location = 11561
+		division_template = "Motoryzovana dyviziya"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+}					
+
+
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 7
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "UKR" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "UKR" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "UKR" 
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "UKR" 
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 50
+	}
+}
+	#####################
