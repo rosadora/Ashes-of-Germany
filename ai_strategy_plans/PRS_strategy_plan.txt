@@ -1,0 +1,64 @@
+PRS_liberal_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = PRS
+	}
+	enable = {
+		has_game_rule = {
+			rule = PRS_ai_behavior
+			option = LIBERAL_PRUSSIA
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_a_democratic_empire
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+PRS_conservative_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = PRS
+	}
+	enable = {
+		has_game_rule = {
+			rule = PRS_ai_behavior
+			option = CONSERVATIVE_PRUSSIA
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_one_nation_one_kaiser
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -1,0 +1,111 @@
+FRA_napoleonic_plan = {
+	name = "France Napolonic plan: Napoleon VI takes power in France"
+	desc = "After a coup d'état by Pétain, the empire is proclaimed and the emperor of the French is back."
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = NAPOLEONIC
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_coup_detat_of_general_de_gaulle
+		FRA_guarantees_for_radicals
+		FRA_draft_a_new_constitution
+		FRA_lift_the_law_of_exil
+		FRA_tfrench_aggressiveness
+		FRA_imperial_industries
+		FRA_mobilisation_generale
+		FRA_urbanization_of_the_country
+		FRA_invest_in_new_methods
+		FRA_kickstart_war_industry
+		FRA_continue_the_expansion_of_military
+		FRA_no_limit_to_armament
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+FRA_blum_plan = {
+	name = "France Blum plan: SFIO and PCF take power in France"
+	desc = "The IA of France will save the Third French Republic, and thus, put a coalition of social democrats and communists in the government headed by Leon Blum."
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = BLUM
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_save_the_republic
+		FRA_blum_government
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+FRA_fourth_republic_plan = {
+	name = "The Fourth Republic is proclaimed in France"
+	desc = "The IA of France will end the Third French Republic, and thus, put a conservative government."
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = FOURTH_REPUBLIC
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_coup_detat_of_general_de_gaulle
+		FRA_rally_the_moderates
+		FRA_draft_a_new_constitution
+		FRA_proclamation_of_the_fourth_republic
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

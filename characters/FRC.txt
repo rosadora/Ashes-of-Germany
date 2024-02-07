@@ -1,0 +1,164 @@
+characters = {
+    FRC_Boris_Souvarine={
+		name=FRC_Boris_Souvarine
+		portraits={
+			army={
+				large="GFX_Boris_Souvarine"
+				small="GFX_Boris_Souvarine_smol"
+			}
+			civilian={
+				large="GFX_Boris_Souvarine"
+				small="GFX_Boris_Souvarine_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRC_Boris_Souvarine
+			ledger = army
+			allowed = {
+				original_tag = FRC
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = souvarine_theorist
+			ledger = army
+			allowed = {
+				original_tag = FRC
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRC_Boris_Souvarine2
+			traits = {
+				secretaire_federal_a_la_planification
+			}
+			allowed = {
+				original_tag = FRC
+			}
+			available = {
+			}
+			cost = 150
+		}
+		field_marshal ={
+			traits={ }
+			idea_token = FRC_Boris_Souvarine_military
+			skill=5
+			attack_skill=4
+			defense_skill=6
+			planning_skill=6
+			logistics_skill=4
+		}
+	}
+    FRC_Ludovic_Oscar_Frossard={
+		name=FRC_Ludovic_Oscar_Frossard
+		portraits={
+			army={
+				large="GFX_Ludovic_Oscar_Frossard"
+				small="GFX_Ludovic_Oscar_Frossard_smol"
+			}
+			civilian={
+				large="GFX_Ludovic_Oscar_Frossard"
+				small="GFX_Ludovic_Oscar_Frossard_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRC_Ludovic_Oscar_Frossard
+			ledger = army
+			allowed = {
+				original_tag = FRC
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRC_Ludovic_Oscar_Frossard2
+			traits = {
+				militant_socialist
+			}
+			allowed = {
+				original_tag = FRC
+			}
+			available = {
+			}
+			cost = 150
+		}
+		field_marshal ={
+			traits={}
+			idea_token = FRC_Ludovic_Oscar_Frossard_military
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=5
+		}
+	}
+    FRC_Jean_Moulin={
+		name=FRC_Jean_Moulin
+		portraits={
+			army={
+				large="GFX_Jean_Moulin"
+				small="GFX_Jean_Moulin_smol"
+			}
+			civilian={
+				large="GFX_Jean_Moulin"
+				small="GFX_Jean_Moulin_smol"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRC_Jean_Moulin
+			ledger = army
+			allowed = {
+				original_tag = FRC
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRC_Jean_Moulin2
+			traits = {
+				partisans_organizer
+			}
+			allowed = {
+				original_tag = FRC
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={ panzer_leader}
+			idea_token = FRC_Jean_Moulin_military
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+}

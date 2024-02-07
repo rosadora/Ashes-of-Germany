@@ -1,0 +1,68 @@
+RCO_independant_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = RCO
+	}
+	enable = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = INDEPENDENT_LINE
+		}
+	}
+
+	ai_national_focuses = {
+		RCO_democracy_in_deutschland
+		RCO_ensure_our_sovereignty
+		RCO_saarbrucken_conference
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+RCO_under_the_french_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = RCO
+	}
+	enable = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = UNDER_THE_FRENCH
+		}
+	}
+
+	ai_national_focuses = {
+		RCO_democracy_in_deutschland
+		RCO_the_rhineland_under_the_french_flag
+		RCO_abandon_the_dream_of_a_unified_germany
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
