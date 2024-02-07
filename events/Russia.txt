@@ -1,0 +1,439 @@
+﻿###########################
+# russia Events
+###########################
+add_namespace = russia
+
+country_event = {
+	id = russia.1
+	title = russia.1.t
+	desc = russia.1.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.1.a
+		ai_chance = {
+			base = 30
+		}
+		add_stability = 0.05
+		set_country_flag = the_second_russian_revolution_flag
+		news_event = news.3042
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+	}
+
+	option = {
+		name = russia.1.b
+		ai_chance = {
+			base = 70
+		}
+		add_stability = -0.1
+		custom_effect_tooltip = RUS_move_into_civil_war
+		set_country_flag = the_tsar_consolidate_his_power
+		hidden_effect = {
+		country_event = {
+			id = russia.2
+			days = 30
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.2
+	title = russia.2.t
+	desc = russia.2.d
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.2.a
+		ai_chance = {
+			base = 50
+		}
+		add_stability = -0.05
+		hidden_effect = {
+		country_event = {
+			id = russia.3
+			days = 30
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.3
+	title = russia.3.t
+	desc = russia.3.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.3.a
+		ai_chance = {
+			base = 50
+		}
+		add_stability = -0.05
+		hidden_effect = {
+		country_event = {
+			id = russia.4
+			days = 30
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.4
+	title = russia.4.t
+	desc = russia.4.d
+	picture = GFX_report_event_communist_leader
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.4.a
+		ai_chance = {
+			base = 50
+		}
+		add_stability = -0.05
+		hidden_effect = {
+		country_event = {
+			id = russia.5
+			days = 30
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.5
+	title = russia.5.t
+	desc = russia.5.d
+	picture = GFX_report_event_europe_funeral
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.5.a
+		ai_chance = {
+			base = 50
+		}
+		add_stability = -0.1
+		kill_country_leader = yes
+		create_country_leader = {
+	    name = "Provisional Government"
+	    desc = ""
+	    picture = "gfx/leaders/provisionary_government.dds"
+	    expire = "1980.1.1"
+	    ideology = despotism
+	    traits = {
+	    }
+        }
+		hidden_effect = {
+		country_event = {
+			id = russia.6
+			days = 10
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.6
+	title = russia.6.t
+	desc = russia.6.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.6.a
+		ai_chance = {
+			base = 50
+		}
+		add_stability = -0.1
+		hidden_effect = {
+		country_event = {
+			id = russia.7
+			days = 5
+		}
+		country_event = {
+			id = russia.8
+			days = 4
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.7
+	title = russia.7.t
+	desc = russia.7.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.7.a
+		ai_chance = {
+			base = 50
+		}
+		delete_unit = {
+         template = "Strelkovaya Diviziya"
+        }
+		delete_unit = {
+         template = "Gornostrelkovaya Diviziya"
+        }
+		delete_unit = {
+         template = "Motostrelkovaya Diviziya"
+        }
+		delete_unit = {
+         template = "Kavaleriyskaya Diviziya"
+        }
+		delete_unit = {
+         template = "NKVD Pogranichnaya Diviziya"
+        }
+		delete_unit = {
+         template = "Mekhanizirovaniy Korpus"
+        }
+		delete_unit = {
+         template = "Vozdushno-Desantnaya Brigada"
+        }
+		add_stability = -0.1
+	}
+}
+country_event = {
+	id = russia.8
+	title = russia.8.t
+	desc = russia.8.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.8.a
+		ai_chance = {
+			base = 50
+		}
+		add_stability = -0.05
+		add_manpower = -20000
+		hidden_effect = {
+		country_event = {
+			id = russia.9
+			days = 5
+		}
+		}
+	}
+}
+country_event = {
+	id = russia.9
+	title = russia.9.t
+	desc = russia.9.d
+	picture = GFX_report_event_canada_ronnie
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.9.a
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			remove_ideas = memories_of_the_civil_war1
+		country_event = {
+			id = russia.10
+			days = 25
+		}
+		}
+		SOV = {
+			every_core_state = {
+				add_core_of = USR
+			}
+		}
+		news_event = news.3041
+		set_country_flag = second_russian_civil_war
+		USR = {
+			transfer_state = 219
+			transfer_state = 205
+			transfer_state = 223
+			transfer_state = 242
+			transfer_state = 243
+			transfer_state = 263
+			transfer_state = 264
+			transfer_state = 244
+			transfer_state = 208
+			transfer_state = 195
+			transfer_state = 254
+			transfer_state = 253
+			transfer_state = 248
+			transfer_state = 247
+			transfer_state = 246
+			load_oob = USR_civil_war
+			add_ideas = second_russian_civil_war
+			add_timed_idea = {
+				idea = revolutionary_furiousness
+				days = 300
+			}
+		}
+		add_ideas = second_russian_civil_war
+		load_oob = SOV_civil_war
+		declare_war_on = {
+        target = USR
+        type = annex_everything
+        }
+		
+	}
+	option = {
+		name = russia.9.b
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			remove_ideas = memories_of_the_civil_war1
+		country_event = {
+			id = russia.10
+			days = 25
+		}
+		}
+		SOV = {
+			every_core_state = {
+				add_core_of = USR
+			}
+		}
+		news_event = news.3041
+		set_country_flag = second_russian_civil_war
+		USR = {
+			add_ideas = second_russian_civil_war
+			transfer_state = 219
+			transfer_state = 205
+			transfer_state = 223
+			transfer_state = 242
+			transfer_state = 243
+			transfer_state = 263
+			transfer_state = 264
+			transfer_state = 244
+			transfer_state = 208
+			transfer_state = 195
+			transfer_state = 254
+			transfer_state = 253
+			transfer_state = 248
+			transfer_state = 247
+			transfer_state = 246
+			load_oob = USR_civil_war
+			add_timed_idea = {
+				idea = revolutionary_furiousness
+				days = 300
+			}
+		}
+		add_ideas = second_russian_civil_war
+		load_oob = SOV_civil_war
+		declare_war_on = {
+        target = USR
+        type = annex_everything
+        }
+		USR = {change_tag_from = SOV}
+	}
+}
+country_event = {
+	id = russia.10
+	title = russia.10.t
+	desc = russia.10.d
+	picture = GFX_report_event_SOV_military_offensive
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.10.a
+		ai_chance = {
+			base = 50
+		}
+		create_country_leader = {
+	    name = "Anton Denikin"
+	    desc = ""
+	    picture = "gfx/leaders/Anton_Denikin.dds"
+	    expire = "1980.1.1"
+	    ideology = despotism
+	    traits = {
+			iron_hand
+	    }
+        }
+		add_stability = 0.075
+		add_manpower = 200000
+	}
+}
+country_event = {
+	id = russia.11
+	title = russia.11.t
+	desc = russia.11.d
+	picture = GFX_report_event_crowd_in_prague
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.11.a
+		ai_chance = {
+			base = 50
+		}
+		set_rule = {
+			can_create_factions = yes
+		}
+	}
+}
+country_event = {
+	id = russia.12
+	title = russia.12.t
+	desc = russia.12.d
+	picture = GFX_report_event_second_vienna_award_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.12.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = SOV
+	}
+	option = {
+		name = russia.12.b
+		ai_chance = {
+			base = 0
+		}
+		SOV = {
+			country_event = {
+				id = russia.13
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = russia.13
+	title = russia.13.t
+	desc = russia.13.d
+	picture = GFX_report_event_second_vienna_award_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.13.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = russia.14
+	title = russia.14.t
+	desc = russia.14.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.14.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

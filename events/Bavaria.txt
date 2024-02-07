@@ -1,0 +1,222 @@
+﻿###########################
+# German Events
+###########################
+add_namespace = bavaria
+
+country_event = {
+	id = bavaria.1
+	title = bavaria.1.t
+	desc = bavaria.1.d
+	picture = GFX_report_event_sanation_left_victory
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.1.a
+		ai_chance = {
+			base = 30
+		}
+		swap_ideas = {
+			remove_idea = tension_on_the_left
+			add_idea = tension_on_the_left2
+		}
+		set_country_flag = BAY_anarchist_take_over
+	}
+	option = {
+		name = bavaria.1.c
+		ai_chance = {
+			base = 30
+		}
+		set_country_flag = BAY_marxist_takeover
+	}
+}
+country_event = {
+	id = bavaria.2
+	title = bavaria.2.t
+	desc = bavaria.2.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.2.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = general_strikes
+	}
+
+	option = {
+		name = bavaria.2.b
+		ai_chance = {
+			base = 10
+		}
+		swap_ideas = {
+			remove_idea = tension_on_the_left2
+			add_idea = tension_on_the_left
+		}
+		set_politics = {
+			ruling_party = communism 
+			elections_allowed = no
+		}
+		remove_ideas = general_strikes
+		set_country_flag = BAY_marxist_coup
+	}
+}
+country_event = {
+	id = bavaria.3
+	title = bavaria.3.t
+	desc = bavaria.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.3.a
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = bavaria.3.b
+		ai_chance = {
+			base = 10
+		}
+		swap_ideas = {
+			remove_idea = tension_on_the_left2
+			add_idea = tension_on_the_left
+		}
+		set_politics = {
+			ruling_party = communism 
+			elections_allowed = no
+		}
+		remove_ideas = general_strikes
+		set_country_flag = BAY_marxist_coup
+	}
+}
+country_event = {
+	id = bavaria.4
+	title = bavaria.4.t
+	desc = bavaria.4.d
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.4.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.075
+		}
+	}
+
+	option = {
+		name = bavaria.4.b
+		ai_chance = {
+			base = 10
+		}
+		swap_ideas = {
+			remove_idea = tension_on_the_left2
+			add_idea = tension_on_the_left
+		}
+		set_politics = {
+			ruling_party = communism 
+			elections_allowed = no
+		}
+		remove_ideas = general_strikes
+		set_country_flag = BAY_marxist_coup
+	}
+}
+country_event = {
+	id = bavaria.5
+	title = bavaria.5.t
+	desc = bavaria.5.d
+	picture = GFX_report_event_spr_anarchists2
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.5.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = {
+	id = bavaria.6
+	title = bavaria.6.t
+	desc = bavaria.6.d
+	picture = GFX_report_event_spr_anarchist_success
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.6.a
+		ai_chance = {
+			base = 100
+		}
+		retire_character = BAY_Eugen_Levine
+		add_stability = 0.1
+		remove_ideas = tension_on_the_left2
+		remove_ideas = scattered_strikes
+		remove_ideas = worker_support_for_agrarian_movement2
+	}
+}
+country_event = {
+	id = bavaria.8
+	title = bavaria.8.t
+	desc = bavaria.8.d
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.8.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = reactionary_offensive
+	}
+}
+country_event = {
+	id = bavaria.9
+	title = bavaria.9.t
+	desc = bavaria.9.d
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.9.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = reactionary_offensive
+	}
+}
+country_event = {
+	id = bavaria.7
+	title = bavaria.7.t
+	desc = bavaria.7.d
+	picture = GFX_report_event_gre_city_devastated
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.7.a
+		ai_chance = {
+			base = 100
+		}
+		remove_ideas = tension_on_the_left
+		remove_ideas = tension_on_the_left2
+		start_civil_war = {
+        ideology = libertarian_socialism
+        size = 0.3
+        states = 52
+	    }
+	}
+}

@@ -1,0 +1,1005 @@
+﻿###########################
+# German Events
+###########################
+add_namespace = prussia
+
+country_event = {
+	id = prussia.100
+	title = prussia.100.t
+	desc = prussia.100.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.100.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+			country_event = {
+              id = prussia.101
+			  days = 1
+			}
+		}
+	}
+
+	option = {
+		name = prussia.100.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+			country_event = {
+              id = prussia.102
+			  days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = prussia.101
+	title = prussia.101.t
+	desc = prussia.100.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.101.a
+		add_to_faction = HAN
+	}
+}
+
+country_event = {
+	id = prussia.102
+	title = prussia.102.t
+	desc = prussia.102.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.102.a
+	}
+}
+
+country_event = {
+	id = prussia.103
+	title = prussia.103.t
+	desc = prussia.103.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.103.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+			country_event = {
+              id = prussia.104
+			  days = 1
+			}
+		}
+	}
+
+	option = {
+		name = prussia.103.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+			country_event = {
+              id = prussia.105
+			  days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = prussia.104
+	title = prussia.104.t
+	desc = prussia.104.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.104.a
+		add_to_faction = MEK
+	}
+}
+
+country_event = {
+	id = prussia.105
+	title = prussia.105.t
+	desc = prussia.105.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.105.a
+	}
+}
+
+country_event = {
+	id = prussia.106
+	title = prussia.106.t
+	desc = prussia.106.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.106.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+			country_event = {
+              id = prussia.107
+			  days = 1
+			}
+		}
+	}
+
+	option = {
+		name = prussia.106.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+			country_event = {
+              id = prussia.108
+			  days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = prussia.107
+	title = prussia.107.t
+	desc = prussia.107.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.107.a
+		add_to_faction = SAX
+	}
+}
+
+country_event = {
+	id = prussia.108
+	title = prussia.108.t
+	desc = prussia.108.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.105.a
+	}
+}
+
+country_event = {
+	id = prussia.109
+	title = prussia.109.t
+	desc = prussia.109.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.109.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+			country_event = {
+              id = prussia.110
+			  days = 1
+			}
+		}
+	}
+
+	option = {
+		name = prussia.109.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+			country_event = {
+              id = prussia.111
+			  days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = prussia.110
+	title = prussia.110.t
+	desc = prussia.110.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.110.a
+		add_to_faction = SHL
+	}
+}
+
+country_event = {
+	id = prussia.111
+	title = prussia.111.t
+	desc = prussia.111.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.111.a
+	}
+}
+
+country_event = {
+	id = prussia.112
+	title = prussia.112.t
+	desc = prussia.112.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.112.a
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = -100
+		add_war_support = -0.05
+		RCO = {
+			country_event = {
+			id = rco.12
+			days = 2
+			}
+		}
+		IF = {
+
+		limit = {
+			NOT = {
+				tag = FRA
+			}
+		}
+		}
+	}
+
+	option = {
+		name = prussia.112.b
+		ai_chance = {
+			base = 60
+		}
+		add_war_support = -0.075
+		add_stability = -0.2
+		RCO = {
+			country_event = {
+				id = prussia.131
+				days = 1
+			}
+		}
+		IF = {
+
+		limit = {
+			NOT = {
+				tag = FRA
+				tag = PRS
+			}
+		}
+		}
+    }
+}
+
+country_event = {
+	id = prussia.113
+	title = prussia.113.t
+	desc = prussia.113.d
+	picture = GFX_report_event_soldiers_in_france
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.113.a
+		ai_chance = {
+			base = 100
+		}
+	PRS = {
+		annex_country = {
+    target = WUR
+    transfer_troops = yes
+    }
+	}
+	}
+
+	option = {
+		name = prussia.113.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+		declare_war_on = {
+        target = WUR
+        type = annex_everything
+		}
+		}
+    }
+}
+
+country_event = {
+	id = prussia.114
+	title = prussia.114.t
+	desc = prussia.114.d
+	picture = GFX_report_event_soldiers_in_france
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.114.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+			annex_country = {
+    target = BAY
+    transfer_troops = yes
+    }
+	}
+	}
+
+	option = {
+		name = prussia.114.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+		declare_war_on = {
+        target = BAY
+        type = annex_everything
+		}
+		}
+    }
+}
+
+country_event = {
+	id = prussia.115
+	title = prussia.115.t
+	desc = prussia.115.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.115.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+		transfer_state = 188
+		add_state_core = 188
+		}
+	}
+
+	option = {
+		name = prussia.115.b
+		ai_chance = {
+			base = 0
+		}
+		PRS = {
+		declare_war_on = {
+        target = LIT
+        type = annex_everything
+		}
+		add_state_core = 188
+		}
+    }
+}
+
+country_event = {
+	id = prussia.116
+	title = prussia.116.t
+	desc = prussia.116.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.116.a
+		ai_chance = {
+			base = 50
+		}
+		PRS = {
+		transfer_state = 807
+		transfer_state = 85
+		transfer_state = 86
+		transfer_state = 762
+		add_state_core = 807
+		add_state_core = 85
+		add_state_core = 86
+		add_state_core = 762
+		}
+	}
+
+	option = {
+		name = prussia.116.b
+		ai_chance = {
+			base = 50
+		}
+		PRS = {
+		declare_war_on = {
+        target = POL
+        type = annex_everything
+		}
+		add_state_core = 807
+		add_state_core = 85
+		add_state_core = 86
+		add_state_core = 762
+		}
+    }
+}
+
+country_event = {
+	id = prussia.117
+	title = prussia.117.t
+	desc = prussia.117.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.117.a
+		ai_chance = {
+			base = 90
+		}
+		PRS = {
+		transfer_state = 4
+		transfer_state = 152
+		transfer_state = 153
+		transfer_state = 848
+		transfer_state = 921
+		transfer_state = 920
+		transfer_state = 922
+		transfer_state = 919
+		transfer_state = 918
+		}
+		every_core_state = {
+			add_core_of = PRS
+		}
+		news_event = news.3009
+	}
+
+	option = {
+		name = prussia.117.b
+		ai_chance = {
+			base = 10
+		}
+		PRS = {
+		declare_war_on = {
+        target = AUS
+        type = annex_everything
+		}
+		AUS = {
+			every_core_state = {
+				add_core_of = PRS
+			}
+		}
+		}
+    }
+}
+
+country_event = {
+	id = prussia.118
+	title = prussia.118.t
+	desc = prussia.118.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.118.a
+		ai_chance = {
+			base = 70
+		}
+		PRS = {
+		transfer_state = 69
+		transfer_state = 74
+		add_state_core = 69
+		add_state_core = 74
+		}
+		news_event = news.3010
+	}
+
+	option = {
+		name = prussia.118.b
+		ai_chance = {
+			base = 30
+		}
+		PRS = {
+		declare_war_on = {
+        target = CZE
+        type = annex_everything
+		}
+		add_state_core = 69
+		add_state_core = 74
+		}
+    }
+}
+
+country_event = {
+	id = prussia.119
+	title = prussia.119.t
+	desc = prussia.119.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.119.a
+		ai_chance = {
+			base = 95
+		}
+		PRS = {
+		transfer_state = 9
+		transfer_state = 75
+		add_state_core = 9
+		add_state_core = 75
+		transfer_state = 72
+		add_state_core = 72
+		}
+	}
+
+	option = {
+		name = prussia.119.b
+		ai_chance = {
+			base = 5
+		}
+		PRS = {
+		declare_war_on = {
+        target = CZE
+        type = annex_everything
+		}
+		add_state_core = 9
+		add_state_core = 75
+		add_state_core = 72
+		}
+    }
+}
+
+country_event = {
+	id = prussia.120
+	title = prussia.120.t
+	desc = prussia.120.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.120.a
+		ai_chance = {
+			base = 20
+		}
+		PRS = {
+		transfer_state = 28
+		add_state_core = 28
+		}
+	}
+
+	option = {
+		name = prussia.120.b
+		ai_chance = {
+			base = 80
+		}
+		PRS = {
+		declare_war_on = {
+        target = FRA
+        type = annex_everything
+		}
+		add_state_core = 28
+		}
+    }
+}
+country_event = {
+	id = prussia.121
+	title = prussia.121.t
+	desc = prussia.121.d
+	picture = GFX_report_event_portugal_navy_mutiny_prisoners
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.121.a
+		ai_chance = {
+			base = 20
+		}
+		swap_ideas = {
+			remove_idea = spartakist_threat
+			add_idea = spartakist_threat2
+		}
+	}
+}
+country_event = {
+	id = prussia.122
+	title = prussia.122.t
+	desc = prussia.122.d
+	picture = GFX_report_event_crowd_in_prague
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.122.a
+		ai_chance = {
+			base = 20
+		}
+		swap_ideas = {
+			remove_idea = spartakist_threat2
+			add_idea = spartakist_threat3
+		}
+	}
+}
+country_event = {
+	id = prussia.123
+	title = prussia.123.t
+	desc = prussia.123.d
+	picture = GFX_report_event_spr_anarchist_uprising2
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.123.a
+		ai_chance = {
+			base = 20
+		}
+		hidden_effect = {
+		add_popularity = {
+        ideology = communism
+        popularity = -0.6
+        }
+		PRL = {
+		add_state_claim = 59
+		add_state_claim = 56
+		add_state_claim = 57
+		add_state_claim = 58
+		add_state_claim = 61
+		add_state_claim = 60
+		add_state_claim = 65
+		transfer_state = 62
+		transfer_state = 63
+		transfer_state = 763
+		transfer_state = 5
+		add_state_core = 917
+		add_state_core = 62
+		add_state_core = 63
+		add_state_core = 763
+		add_state_core = 5
+		add_state_core = 64
+		add_state_core = 68
+		add_state_core = 66
+		add_state_core = 67
+		add_state_core = 60
+		add_state_core = 55
+		add_state_core = 51
+		add_state_core = 42
+		add_state_core = 909
+		add_state_core = 910
+		load_oob = PRL_civil_war
+		declare_war_on = {
+        target = PRS
+        type = annex_everything
+		}
+		}
+		}
+	}
+	option = {
+		name = prussia.123.b
+		ai_chance = {
+			base = 20
+		}
+		PRL = { change_tag_from = PRS }
+		hidden_effect = {
+		add_popularity = {
+        ideology = communism
+        popularity = -0.6
+        }
+		PRL = {
+		add_state_claim = 59
+		add_state_claim = 56
+		add_state_claim = 57
+		add_state_claim = 58
+		add_state_claim = 61
+		add_state_claim = 60
+		add_state_claim = 65
+		transfer_state = 62
+		transfer_state = 63
+		transfer_state = 763
+		transfer_state = 5
+		add_state_core = 917
+		add_state_core = 62
+		add_state_core = 63
+		add_state_core = 763
+		add_state_core = 5
+		add_state_core = 64
+		add_state_core = 68
+		add_state_core = 66
+		add_state_core = 67
+		add_state_core = 60
+		add_state_core = 55
+		add_state_core = 51
+		add_state_core = 42
+		add_state_core = 909
+		add_state_core = 910
+		load_oob = PRL_civil_war
+		declare_war_on = {
+        target = PRS
+        type = annex_everything
+		}
+		}
+		}
+	}
+}
+country_event = {
+	id = prussia.124
+	title = prussia.124.t
+	desc = prussia.124.d
+	picture = GFX_report_event_fighters
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.124.a
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {
+	id = prussia.125
+	title = prussia.125.t
+	desc = prussia.125.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.125.a
+		ai_chance = {
+			base = 20
+		}
+		set_popularities = {
+	    democratic = 26
+	    neutrality = 16
+	    fascism = 6
+	    communism = 52
+        }
+	}
+}
+country_event = {
+	id = prussia.126
+	title = prussia.126.t
+	desc = prussia.126.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.126.a
+		ai_chance = {
+			base = 20
+		}
+		set_popularities = {
+	    democratic = 20
+	    neutrality = 27
+	    fascism = 34
+	    communism = 19
+        }
+	}
+}
+country_event = {
+	id = prussia.127
+	title = prussia.127.t
+	desc = prussia.127.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.127.a
+		ai_chance = {
+			base = 50
+		}
+		PRS = {
+		annex_country = {
+        target = MEK
+        transfer_troops = yes
+        }
+		}
+	}
+	option = {
+		name = prussia.127.b
+		ai_chance = {
+			base = 50
+		}
+		leave_faction = yes
+		remove_ideas = joint_defence_planning
+		remove_ideas = german_economic_market
+		PRS = {
+			create_wargoal = {
+				type = annex_everything
+				target = MEK
+			}
+		}
+	}
+}
+country_event = {
+	id = prussia.128
+	title = prussia.128.t
+	desc = prussia.128.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.128.a
+		ai_chance = {
+			base = 50
+		}
+		PRS = {
+		annex_country = {
+        target = HAN
+        transfer_troops = yes
+        }
+		}
+	}
+	option = {
+		name = prussia.128.b
+		ai_chance = {
+			base = 50
+		}
+		leave_faction = yes
+		remove_ideas = joint_defence_planning
+		remove_ideas = german_economic_market
+		PRS = {
+			create_wargoal = {
+				type = annex_everything
+				target = HAN
+			}
+		}
+	}
+}
+country_event = {
+	id = prussia.129
+	title = prussia.129.t
+	desc = prussia.129.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.129.a
+		ai_chance = {
+			base = 100
+		}
+		PRS = {
+		annex_country = {
+        target = SHL
+        transfer_troops = yes
+        }
+		}
+	}
+	option = {
+		name = prussia.129.b
+		ai_chance = {
+			base = 0
+		}
+		leave_faction = yes
+		remove_ideas = joint_defence_planning
+		remove_ideas = german_economic_market
+		PRS = {
+			create_wargoal = {
+				type = annex_everything
+				target = SHL
+			}
+		}
+	}
+}
+country_event = {
+	id = prussia.130
+	title = prussia.130.t
+	desc = prussia.130.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.130.a
+		ai_chance = {
+			base = 50
+		}
+		PRS = {
+		annex_country = {
+        target = SAX
+        transfer_troops = yes
+        }
+		}
+	}
+	option = {
+		name = prussia.130.b
+		ai_chance = {
+			base = 50
+		}
+		leave_faction = yes
+		remove_ideas = joint_defence_planning
+		remove_ideas = german_economic_market
+		PRS = {
+			create_wargoal = {
+				type = annex_everything
+				target = SAX
+			}
+		}
+	}
+}
+country_event = {
+	id = prussia.131
+	title = prussia.131.t
+	desc = prussia.131.d
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.131.a
+		ai_chance = {
+			base = 100
+		}
+		add_war_support = 0.15
+		FRA = {
+			end_puppet = RCO
+		}
+		leave_faction = yes 
+		add_ideas = freedom_or_death
+		PRS = {
+			create_wargoal = {
+				type = annex_everything
+				target = RCO
+			}
+		}
+		news_event = {
+			id = news.3057
+			days = 2
+		}
+	}
+}
+country_event = {
+	id = prussia.132
+	title = prussia.132.t
+	desc = prussia.132.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.132.a
+		ai_chance = {
+			base = 100
+		}
+		
+        set_politics = {
+	      ruling_party = social_liberalism
+        } 
+	}
+}

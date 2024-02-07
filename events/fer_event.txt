@@ -1,0 +1,261 @@
+﻿###########################
+# FER Events
+###########################
+
+add_namespace = fer
+
+country_event = {
+	id = fer.1
+	title = fer.1.t
+	desc = fer.1.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = fer.1.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		 country_event = {
+			id = fer.2
+			days = 2
+		 }
+		}
+	}
+}
+country_event = {
+	id = fer.2
+	title = fer.2.t
+	desc = fer.2.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = fer.2.a
+		ai_chance = {
+			factor = 75
+		}
+		set_faction_name = vladivostok_pact
+		news_event = news.1011
+		hidden_effect = {
+			FER = {
+		 country_event = {
+			id = fer.3
+			days = 2
+		 }
+		 }
+		}
+	}
+	option = { 
+		name = fer.2.b
+		ai_chance = {
+			factor = 25
+		}
+		dismantle_faction = yes
+		news_event = news.1012
+		hidden_effect = {
+			FER = {
+		 country_event = {
+			id = fer.3
+			days = 2
+		 }
+		 }
+		}
+	}
+}
+country_event = {
+	id = fer.3
+	title = fer.3.t
+	desc = fer.3.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = fer.3.a
+		ai_chance = {
+			factor = 100
+		}
+		add_state_core = 717
+		add_state_core = 714
+		add_state_core = 761
+		add_state_core = 527
+		add_state_core = 328
+		annex_country = {
+		  target = MAN
+        }
+	}
+	option = { 
+		name = fer.3.b
+		add_state_core = 717
+		add_state_core = 714
+		add_state_core = 761
+		add_state_core = 527
+		add_state_core = 328
+		transfer_state = 717
+		transfer_state = 714
+		transfer_state = 761
+		transfer_state = 527
+		transfer_state = 328
+		puppet = MAN
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { 
+		name = fer.3.c
+		ai_chance = {
+			factor = 100
+		}
+		add_state_core = 717
+		add_state_core = 714
+		add_state_core = 761
+		add_state_core = 527
+		add_state_core = 328
+		transfer_state = 717
+		transfer_state = 714
+		transfer_state = 761
+		transfer_state = 527
+		transfer_state = 328
+		CHI = {
+		annex_country = {
+		  target = MAN
+        }
+		}
+	}
+}
+country_event = {
+	id = fer.4
+	title = fer.4.t
+	desc = fer.4.d
+	picture = GFX_report_event_gre_trial
+
+    is_triggered_only = yes
+
+	option = { 
+		name = fer.4.a
+		ai_chance = {
+			factor = 100
+		}
+		FER = { add_to_faction = USR }
+		news_event = news.1017
+		hidden_effect = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		UKR = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		BLR = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		GER = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		AZR = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		ARM = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		KAZ = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		UZB = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		TMS = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		KYR = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		BUK = {
+		every_core_state = {
+			remove_core_of = SOV
+		}
+		}
+		every_core_state = {
+			remove_core_of = USR
+		}
+		UKR = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		BLR = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		GER = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		AZR = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		ARM = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		KAZ = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		UZB = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		TMS = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		KYR = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		BUK = {
+		every_core_state = {
+			remove_core_of = USR
+		}
+		}
+		}
+	}
+	option = { 
+		name = fer.4.b
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,119 @@
+﻿###########################
+# German Events
+###########################
+add_namespace = hanover
+
+country_event = {
+	id = hanover.100
+	title = hanover.100.t
+	desc = hanover.100.d
+	picture = GFX_report_event_spr_spanish_civil_war2
+
+	is_triggered_only = yes
+
+	option = {
+		name = hanover.100.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = personal_union_enabled
+		mark_focus_tree_layout_dirty = yes
+		create_country_leader = {
+     name = "Ernest Augustus III"
+     desc = ""
+     picture = "gfx/leaders/Ernest_Auguste_III.dds"
+     expire = "1965.1.1"
+     ideology = despotism
+     traits = {
+     }
+     }
+	}
+	option = {
+		name = hanover.100.b
+		ai_chance = {
+			base = 100
+		}
+		start_civil_war = {
+        ruling_party = neutrality
+        ideology = neutrality
+        size = 0.4
+        keep_political_leader = yes
+        keep_political_party_members = yes
+        }
+	}
+}
+country_event = {
+	id = hanover.2
+	title = hanover.2.t
+	desc = hanover.2.d
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+
+	option = {
+		name = hanover.2.a
+		ai_chance = {
+			base = 100
+		}
+		news_event = news.3022
+		add_threat = 50
+		ENG = {
+			transfer_navy = {
+             target = HAN
+            }
+			start_civil_war = {
+          ruling_party = neutrality
+          ideology = democratic
+          size = 0.8
+		  states = {
+          126 127 125 123 338 132 128
+          }
+          keep_political_leader = yes
+          keep_political_party_members = yes
+          }
+		  create_country_leader = {
+         name = "Ernest Augustus III"
+         desc = ""
+         picture = "gfx/leaders/Ernest_Auguste_III.dds"
+         expire = "1965.1.1"
+         ideology = despotism
+         traits = {
+          }
+         }  
+		}
+		puppet = {
+         target = ENG
+         end_wars = no
+		 end_civil_wars = no
+        }
+		set_autonomy = {
+        target = ENG
+        autonomy_state = autonomy_personal_union
+        end_wars = no
+        end_civil_wars = no
+        }
+	}
+}
+country_event = {
+	id = hanover.3
+	title = hanover.3.t
+	desc = hanover.3.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = hanover.3.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = HAN
+	}
+	option = {
+		name = hanover.3.b
+		ai_chance = {
+			base = 0
+		}
+		
+	}
+}

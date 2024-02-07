@@ -1,0 +1,322 @@
+﻿###########################
+# france Events
+###########################
+add_namespace = ilf
+
+country_event = { #Referendum : Republican Victory
+	id = ilf.1
+	title = ilf.1.t
+	desc = ilf.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.1.a
+		ai_chance = {
+			base = 80
+		}
+		set_country_flag = republican_victory
+	}
+}
+country_event = { #Referendum : Monarchist Victory
+	id = ilf.2
+	title = ilf.2.t
+	desc = ilf.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.2.a
+		ai_chance = {
+			base = 80
+		}
+		set_country_flag = monarchist_victory
+	}
+}
+country_event = { #Socdems leave the FLNI
+	id = ilf.3
+	title = ilf.3.t
+	desc = ilf.3.d
+	picture = GFX_report_event_FIN_svinhufvud_speech
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.3.a
+		ai_chance = {
+			base = 80
+		}
+		add_stability = -0.025
+		retire_ideology_leader = social_democracy
+		recruit_character = ILF_Emilio_Lussu
+		set_party_name = {
+          ideology = social_democracy
+          long_name = ILF_social_democracy_fsi_party_long
+          name = ILF_social_democracy_fsi_party
+        }
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #MSI announces his participation
+	id = ilf.4
+	title = ilf.4.t
+	desc = ilf.4.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.4.a
+		ai_chance = {
+			base = 80
+		}
+		add_stability = -0.025
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = 0.01
+		}
+	}
+}
+country_event = { #Formation of "Blocco Liberale"
+	id = ilf.5
+	title = ilf.5.t
+	desc = ilf.5.d
+	picture = GFX_report_event_SWE_defense_act
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.5.a
+		ai_chance = {
+			base = 80
+		}
+		add_stability = 0.025
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.02
+		}
+		set_party_name = {
+          ideology = classical_liberalism
+          long_name = ILF_blocco_liberale_party_long
+          name = ILF_blocco_liberale_party
+        }
+		set_party_name = {
+          ideology = social_liberalism
+          long_name = ILF_blocco_liberale_party_long
+          name = ILF_blocco_liberale_party
+        }
+	}
+}
+country_event = { #Birth of the Lega dei Comunisti Rivoluzionari Italiani
+	id = ilf.6
+	title = ilf.6.t
+	desc = ilf.6.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.6.a
+		ai_chance = {
+			base = 80
+		}
+		add_stability = -0.025
+		add_popularity = {
+			ideology = communism
+			popularity = 0.07
+		}
+		add_popularity = {
+			ideology = classical_marxism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = libertarian_socialism
+			popularity = 0.02
+		}
+		set_party_name = {
+          ideology = communism
+          long_name = ILF_ldcri_party_long
+          name = ILF_ldcri_party
+        }
+		set_party_name = {
+          ideology = classical_marxism
+          long_name = ILF_ldcri_party_long
+          name = ILF_ldcri_party
+        }
+		set_party_name = {
+          ideology = libertarian_socialism
+          long_name = ILF_ldcri_party_long
+          name = ILF_ldcri_party
+        }
+	}
+}
+country_event = { #Powerful Reactionary Forces
+	id = ilf.7
+	title = ilf.7.t
+	desc = ilf.7.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.7.a
+		ai_chance = {
+			base = 80
+		}
+		add_stability = -0.025
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+	}
+}
+country_event = { #Results of the Election
+	id = ilf.8
+	title = ilf.8.t
+	desc = ilf.8.d
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.8.a
+		ai_chance = {
+			base = 80
+		}
+		add_stability = 0.025
+		remove_ideas = unione_precaria
+	}
+}
+country_event = { #Sicilian Domination over Italy
+	id = ilf.9
+	title = ilf.9.t
+	desc = ilf.9.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.9.a
+		ai_chance = {
+			base = 80
+		}
+		add_country_leader_trait = supreme_ruler_of_italy
+	}
+}
+country_event = { #French Alliance? Request.
+	id = ilf.10
+	title = ilf.10.t
+	desc = ilf.10.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.10.a
+		ai_chance = {
+			base = 80
+		}
+		add_to_faction = ILF
+		ILF = {
+			country_event = {
+				id = ilf.11
+				days 1
+			}
+		}
+	}
+	option = {
+		name = ilf.10.b
+		ai_chance = {
+			base = 0
+		}
+		ILF = {
+			country_event = {
+				id = ilf.12
+				days 1
+			}
+		}
+	}
+}
+country_event = { #French Alliance? Positive Answer.
+	id = ilf.11
+	title = ilf.11.t
+	desc = ilf.11.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.11.a
+		ai_chance = {
+			base = 80
+		}
+	}
+}
+country_event = { #French Alliance? Negative Answer.
+	id = ilf.12
+	title = ilf.12.t
+	desc = ilf.12.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ilf.12.a
+		ai_chance = {
+			base = 80
+		}
+	}
+}

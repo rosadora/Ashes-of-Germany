@@ -1,0 +1,147 @@
+﻿###########################
+# RUS Events
+###########################
+
+add_namespace = rus
+
+country_event = {
+	id = rus.14
+	title = rus.14.t
+	desc = rus.14.d
+	picture = GFX_report_event_sanation_left_victory
+
+	is_triggered_only = yes
+
+	option = { 
+		name = rus.14.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.1
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+		hidden_effect = {
+		country_event = {
+			id = rus.15
+			days = 15
+		}
+		}
+	}
+	option = { 
+		name = rus.14.b
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = classical_marxism
+			elections_allowed = yes
+		}
+		 create_country_leader = {
+	      name = "Nikolai Bukharin"
+	      desc = "POLITICS_NIKOLAI_BUKHARIN_DESC"
+	      picture = "gfx/leaders/Nikolai_Bukharin.dds"
+	      expire = "1980.1.1"
+	      ideology = classical_marxism_category
+	      traits = {
+	      }
+        }
+		
+		hidden_effect = {
+		country_event = {
+			id = rus.15
+			days = 15
+		}
+		}
+	}
+}
+country_event = {
+	id = rus.22
+	title = rus.22.t
+	desc = rus.22.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+    immediate = {
+	}
+
+	option = { 
+		name = rus.22.a
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = kulaks
+	}
+}
+country_event = {
+	id = rus.23
+	title = rus.23.t
+	desc = rus.23.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+    immediate = {
+	}
+
+	option = { 
+		name = rus.23.a
+		ai_chance = {
+			factor = 100
+		}
+		remove_ideas = an_alternative_way
+		set_politics = {
+	   ruling_party = democratic
+       elections_allowed = yes
+       last_election = "1935.12.17"
+       election_frequency = 48
+       }
+	}
+}
+country_event = {
+	id = rus.24
+	title = rus.24.t
+	desc = rus.24.d
+	picture = GFX_report_event_generic_communist_congress
+
+	is_triggered_only = yes
+
+    immediate = {
+	}
+
+	option = { 
+		name = rus.24.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+country_event = {
+	id = rus.25
+	title = rus.25.t
+	desc = rus.25.d
+	picture = GFX_report_event_generic_communist_congress
+
+	is_triggered_only = yes
+
+    immediate = {
+	}
+
+	option = { 
+		name = rus.25.a
+		ai_chance = {
+			factor = 100
+		}
+		GER = {add_to_faction = USR}
+	}
+	option = { 
+		name = rus.25.b
+		ai_chance = {
+			factor = 0
+		}
+		
+	}
+}

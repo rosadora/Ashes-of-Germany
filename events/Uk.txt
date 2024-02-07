@@ -1,0 +1,30 @@
+﻿###########################
+# eng Events
+###########################
+add_namespace = eng
+
+country_event = {
+	id = eng.1
+	title = eng.1.t
+	desc = eng.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.1.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			add_to_faction = FROM
+		}
+	}
+	option = {
+		name = eng.1.b
+		ai_chance = {
+			base = 0
+		}
+
+	}
+}

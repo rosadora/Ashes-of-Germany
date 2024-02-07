@@ -1,0 +1,445 @@
+﻿###########################
+# rco Events
+###########################
+add_namespace = rco
+
+country_event = {
+	id = rco.1
+	title = rco.1.t
+	desc = rco.1.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.1.a
+		ai_chance = {
+			base = 80
+		}
+		RCO = {
+			set_country_flag = treaty_of_koln_abolished
+			country_event = rco.2
+		}
+	}
+
+	option = {
+		name = rco.1.b
+		ai_chance = {
+			base = 20
+		}
+		RCO = {
+			set_country_flag = treaty_of_koln_maintened
+			country_event = rco.3
+		}
+	}
+}
+country_event = {
+	id = rco.2
+	title = rco.2.t
+	desc = rco.2.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.2.a
+		ai_chance = {
+			base = 100
+		}
+		944 = {
+		set_demilitarized_zone = no
+		}
+		51 = {
+		set_demilitarized_zone = no
+		}
+		42 = {
+		set_demilitarized_zone = no
+		}
+		country_lock_all_division_template = no
+		remove_ideas = treaty_of_koln
+	}
+}
+country_event = {
+	id = rco.3
+	title = rco.3.t
+	desc = rco.3.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.3.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+country_event = {
+	id = rco.4
+	title = rco.4.t
+	desc = rco.4.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.4.a
+		ai_chance = {
+			base = 50
+		}
+		RCO = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+            type = annex_everything
+            target = RCO
+        }
+		news_event = news.3031
+	}
+
+	option = {
+		name = rco.4.b
+		ai_chance = {
+			base = 50
+		}
+		news_event = news.3032
+	}
+}
+country_event = {
+	id = rco.5
+	title = rco.5.t
+	desc = rco.5.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.5.a
+		ai_chance = {
+			base = 80
+		}
+		BEL = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = BEL
+			}
+		}
+	}
+
+	option = {
+		name = rco.5.b
+		ai_chance = {
+			base = 20
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = BEL
+        }
+		}
+		BEL = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.6
+	title = rco.6.t
+	desc = rco.6.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.6.a
+		ai_chance = {
+			base = 80
+		}
+		HOL = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = HOL
+			}
+		}
+	}
+
+	option = {
+		name = rco.6.b
+		ai_chance = {
+			base = 20
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = HOL
+        }
+		}
+		HOL = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.7
+	title = rco.7.t
+	desc = rco.7.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.7.a
+		ai_chance = {
+			base = 80
+		}
+		LUX = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = LUX
+			}
+		}
+	}
+
+	option = {
+		name = rco.7.b
+		ai_chance = {
+			base = 20
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = LUX
+        }
+		}
+		LUX = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.8
+	title = rco.8.t
+	desc = rco.8.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.8.a
+		ai_chance = {
+			base = 50
+		}
+		POL = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = POL
+			}
+		}
+	}
+
+	option = {
+		name = rco.8.b
+		ai_chance = {
+			base = 50
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = POL
+        }
+		}
+		POL = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.9
+	title = rco.9.t
+	desc = rco.9.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.9.a
+		ai_chance = {
+			base = 50
+		}
+		CZE = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = CZE
+			}
+		}
+	}
+
+	option = {
+		name = rco.9.b
+		ai_chance = {
+			base = 50
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = CZE
+        }
+		}
+		CZE = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.10
+	title = rco.10.t
+	desc = rco.10.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.10.a
+		ai_chance = {
+			base = 50
+		}
+		AUS = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = AUS
+			}
+		}
+	}
+
+	option = {
+		name = rco.10.b
+		ai_chance = {
+			base = 50
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = AUS
+        }
+		}
+		AUS = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.11
+	title = rco.11.t
+	desc = rco.11.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.11.a
+		ai_chance = {
+			base = 50
+		}
+		SWI = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+		RCO = {
+			annex_country = {
+				target = SWI
+			}
+		}
+	}
+
+	option = {
+		name = rco.11.b
+		ai_chance = {
+			base = 50
+		}
+		RCO = {
+		create_wargoal = {
+            type = annex_everything
+            target = SWI
+        }
+		}
+		SWI = {
+			every_core_state = {
+				add_claim_by = RCO
+			}
+		}
+	}
+}
+country_event = {
+	id = rco.12
+	title = rco.12.t
+	desc = rco.12.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = rco.12.a
+		ai_chance = {
+			base = 80
+		}
+		PRS = {
+		declare_war_on = {
+        target = RCO
+        type = puppet_wargoal_focus
+		}
+		}
+		add_ideas = freedom_or_death
+		news_event = news.3006
+	}
+
+	option = {
+		name = rco.12.b
+		ai_chance = {
+			base = 20
+		}
+		PRS = {
+			annex_country = {
+				target = RCO
+			}
+		}
+		news_event = news.3005
+	}
+}

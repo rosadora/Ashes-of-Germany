@@ -1,0 +1,342 @@
+﻿###########################
+# belarus Events
+###########################
+add_namespace = blr
+
+country_event = {
+	id = blr.1
+	title = blr.1.t
+	desc = blr.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.1.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = has_signed_the_pact_of_partition_of_poland
+		IF = {
+			limit = {
+				OR = {
+				 tag = PRS
+				 tag = PRL
+				}
+			}
+		BLR = {
+			country_event = blr.4
+		}
+		}
+		IF = {
+			limit = {
+				OR = {
+				 tag = UKR
+				}
+			}
+		BLR = {
+			country_event = blr.5
+		}	
+		}
+	}
+	option = {
+		name = blr.1.b
+		ai_chance = {
+			base = 0
+		}
+		IF = {
+			limit = {
+				OR = {
+				 tag = PRS
+				 tag = PRL
+				}
+			}
+		BLR = {
+			country_event = blr.2
+		}
+		}
+		IF = {
+			limit = {
+				OR = {
+				 tag = UKR
+				}
+			}
+		BLR = {
+			country_event = blr.3
+		}
+		}
+	}
+}
+country_event = {
+	id = blr.2
+	title = blr.2.t
+	desc = blr.2.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.2.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = blr.3
+	title = blr.3.t
+	desc = blr.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.3.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = blr.3
+	title = blr.3.t
+	desc = blr.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.3.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = blr.4
+	title = blr.4.t
+	desc = blr.4.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.4.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = blr.5
+	title = blr.5.t
+	desc = blr.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.5.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = blr.6
+	title = blr.6.t
+	desc = blr.6.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.6.a
+		ai_chance = {
+			base = 100
+		}
+		POL = {
+			end_puppet = BLR
+			end_puppet = UKR
+		}
+		declare_war_on = {
+            target = POL
+            type = annex_everything
+        }
+	}
+}
+country_event = {
+	id = blr.7
+	title = blr.7.t
+	desc = blr.7.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.7.a
+		ai_chance = {
+			base = 100
+		}
+		BLR = {
+			country_event = {
+				id = blr.8 
+				days = 1
+			}
+			transfer_state = 96
+		    transfer_state = 784
+		    transfer_state = 95
+		    transfer_state = 94
+			transfer_state = 97
+		}
+		UKR = {
+			country_event = {
+				id = blr.8 
+				days = 1
+			}
+			transfer_state = 93
+		    transfer_state = 91
+		    transfer_state = 89
+		}
+		add_state_core = 5
+		add_state_core = 763
+		add_state_core = 63
+		add_state_core = 68
+		add_state_core = 66
+		add_state_core = 67
+		remove_state_core = 96
+		remove_state_core = 784
+		remove_state_core = 95
+		remove_state_core = 94
+		remove_state_core = 93
+		remove_state_core = 91
+		remove_state_core = 89
+		remove_state_core = 97
+	}
+	option = {
+		name = blr.7.b
+		ai_chance = {
+			base = 0
+		}
+		BLR = {
+			country_event = {
+				id = blr.9
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = blr.8
+	title = blr.8.t
+	desc = blr.8.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.8.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+country_event = {
+	id = blr.9
+	title = blr.9.t
+	desc = blr.9.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.9.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+country_event = {
+	id = blr.10
+	title = blr.10.t
+	desc = blr.10.d
+	picture = GFX_report_event_molotov_signing_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.10.a
+		ai_chance = {
+			base = 100
+		}
+		BLR = {
+			country_event = {
+				id = blr.11
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = blr.10.b
+		ai_chance = {
+			base = 0
+		}
+		BLR = {
+			country_event = {
+				id = blr.12
+				days = 2
+			}
+		}
+	}
+}
+country_event = {
+	id = blr.11
+	title = blr.11.t
+	desc = blr.11.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.11.a
+		ai_chance = {
+			base = 100
+		}
+		IF = {
+			limit = {
+				country_exists = SOV
+			}
+			SOV = {
+				give_guarantee = BLR
+			}
+		give_guarantee = SOV
+		}
+		IF = {
+			limit = {
+				country_exists = USR
+			}
+			USR = {
+				give_guarantee = BLR
+			}
+		give_guarantee = USR
+		}
+	}
+}
+country_event = {
+	id = blr.12
+	title = blr.12.t
+	desc = blr.12.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = blr.12.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}

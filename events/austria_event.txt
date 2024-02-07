@@ -1,0 +1,235 @@
+﻿###########################
+# German Events
+###########################
+add_namespace = austria
+
+country_event = {
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.d
+	picture = GFX_report_event_sanation_left_victory
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.1.a
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 100
+		add_stability = 0.075
+	}
+}
+country_event = {
+	id = austria.2
+	title = austria.2.t
+	desc = austria.2.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		ai_chance = {
+			base = 30
+		}
+		remove_ideas = dollfuss_threat
+		create_country_leader = {
+	 name = "Engelbert Dollfuss"
+	 desc = "POLITICS_Engelbet_Dollfuss_DESC"
+	 picture = "gfx/leaders/Engelbet_Dollfuss.dds"
+	 expire = "1960.1.16"
+	 ideology = despotism
+	 traits = {
+	 }
+     }
+	 set_politics = {
+	    ruling_party = neutrality
+        elections_allowed = no
+      }
+	}
+}
+country_event = {
+	id = austria.3
+	title = austria.3.t
+	desc = austria.3.d
+	picture = GFX_report_event_SOV_national_academy_of_sciences
+
+	trigger = {
+    tag = AUS
+	853 = {
+		is_demilitarized_zone = no
+	}
+	102 = {
+		is_demilitarized_zone = no
+	}
+	921 = {
+		is_demilitarized_zone = no
+	}
+	153 = {
+		is_demilitarized_zone = no
+	}
+	848 = {
+		is_demilitarized_zone = no
+	}
+    }
+
+	fire_only_once = yes
+
+	option = {
+		name = austria.3.a
+		ai_chance = {
+			base = 30
+		}
+		remove_ideas = dollfuss_threat
+		news_event = news.3051
+	}
+}
+country_event = {
+	id = austria.4
+	title = austria.4.t
+	desc = austria.4.d
+	picture = GFX_report_orchestra_event
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.4.a
+		ai_chance = {
+			base = 30
+		}
+		swap_ideas = {
+			remove_idea = austrian_ministry_of_culture
+			add_idea = lento
+		}
+	}
+}
+country_event = {
+	id = austria.5
+	title = austria.5.t
+	desc = austria.5.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.5.a
+		ai_chance = {
+			base = 30
+		}
+		add_ideas = red_army_choir
+	}
+}
+country_event = {
+	id = austria.6
+	title = austria.6.t
+	desc = austria.6.d
+	picture = GFX_report_orchestra_event
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.6.a
+		ai_chance = {
+			base = 30
+		}
+		swap_ideas = {
+			remove_idea = lento
+			add_idea = moderato
+		}
+	}
+}
+country_event = {
+	id = austria.7
+	title = austria.7.t
+	desc = austria.7.d
+	picture = GFX_report_event_soviet_purge_trial
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.7.a
+		ai_chance = {
+			base = 30
+		}
+		remove_ideas = slovenian_resistance
+		add_state_core = 102
+		add_state_core = 853
+		add_stability = -0.15
+		add_political_power = -100
+	}
+	option = {
+		name = austria.7.b
+		ai_chance = {
+			base = 30
+		}
+		remove_ideas = slovenian_resistance
+		release_puppet = SLV
+	}
+}
+country_event = {
+	id = austria.8
+	title = austria.8.t
+	desc = austria.8.d
+	picture = GFX_report_orchestra_event
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.8.a
+		ai_chance = {
+			base = 30
+		}
+		swap_ideas = {
+			remove_idea = moderato
+			add_idea = allegro
+		}
+	}
+}
+country_event = {
+	id = austria.9
+	title = austria.9.t
+	desc = austria.9.d
+	picture = GFX_report_orchestra_event
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.9.a
+		ai_chance = {
+			base = 30
+		}
+		swap_ideas = {
+			remove_idea = allegro
+			add_idea = prestissimo
+		}
+	}
+}
+country_event = {
+	id = austria.10
+	title = austria.10.t
+	desc = austria.10.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria.10.a
+		ai_chance = {
+			base = 30
+		}
+		declare_war_on = {
+            target = AUS
+            type = take_state_focus
+            generator = { 39 }
+        }
+	}
+	option = {
+		name = austria.10.b
+		ai_chance = {
+			base = 30
+		}
+		add_stability = -0.05
+		add_war_support = -0.1
+	}
+}

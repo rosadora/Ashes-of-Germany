@@ -1,0 +1,35 @@
+﻿###########################
+# German Events
+###########################
+add_namespace = general
+
+country_event = {
+	id = general.1
+	title = general.1.t
+	desc = general.1.d
+	picture = GFX_report_event_canada_ronnie
+
+	is_triggered_only = yes
+
+	option = {
+		name = general.1.a
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+country_event = {
+	id = general.2
+	title = general.2.t
+	desc = general.2.d
+	picture = GFX_report_event_french_british_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = general.2.a
+		ai_chance = {
+			base = 30
+		}
+	}
+}

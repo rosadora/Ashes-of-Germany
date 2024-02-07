@@ -1,0 +1,29 @@
+﻿###########################
+# saarland Events
+###########################
+add_namespace = saarland
+
+country_event = {
+	id = saarland.1
+	title = saarland.1.t
+	desc = saarland.1.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = saarland.1.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = has_chosen_to_integrate_france
+	}
+
+	option = {
+		name = saarland.1.b
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = has_chosen_independance
+	}
+}

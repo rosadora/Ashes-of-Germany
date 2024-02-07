@@ -1,0 +1,767 @@
+﻿###########################
+# ukraine Events
+###########################
+add_namespace = ukr
+
+country_event = {
+	id = ukr.1
+	title = ukr.1.t
+	desc = ukr.1.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.1.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+	  ruling_party = democratic
+      elections_allowed = yes
+      last_election = "1936.12.17"
+      election_frequency = 48
+     }
+	}
+}
+country_event = {
+	id = ukr.2
+	title = ukr.2.t
+	desc = ukr.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.2.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = popular_front_victory
+		add_stability = 0.05
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+	}
+}
+country_event = {
+	id = ukr.3
+	title = ukr.3.t
+	desc = ukr.3.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.3.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		set_country_flag = no_clear_majority
+	}
+}
+country_event = {
+	id = ukr.4
+	title = ukr.4.t
+	desc = ukr.4.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.4.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		set_country_flag = nationalist_victory
+		set_politics = {
+			ruling_party = neutrality 
+			elections_allowed = no
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.13
+			days = 30
+		}
+		}
+	}
+}
+country_event = {
+	id = ukr.5
+	title = ukr.5.t
+	desc = ukr.5.d
+	picture = GFX_report_event_long_march
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.5.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_ideas = popular_front
+		hidden_effect = {
+		country_event = {
+			id = ukr.7
+			days = 10
+		}
+		}
+	}
+	option = {
+		name = ukr.5.b
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.6
+			days = 10
+		}
+		}
+	}
+}
+country_event = {
+	id = ukr.6
+	title = ukr.6.t
+	desc = ukr.6.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.6.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		hidden_effect = {
+		country_event = {
+			id = ukr.3
+			days = 10
+		}
+		}
+	}
+	option = {
+		name = ukr.6.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.1
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = neutrality 
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.03
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.10
+			days = 10
+		}
+		}
+	}
+}
+country_event = {
+	id = ukr.7
+	title = ukr.7.t
+	desc = ukr.7.d
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.7.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.025
+		add_political_power = -50
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.05
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.8
+			days = 10
+		}
+		}
+
+	}
+}
+country_event = {
+	id = ukr.8
+	title = ukr.8.t
+	desc = ukr.8.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.8.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.04
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.9
+			days = 10
+		}
+		}
+
+	}
+}
+country_event = {
+	id = ukr.9
+	title = ukr.9.t
+	desc = ukr.9.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.9.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.07
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.2
+			days = 10
+		}
+		}
+
+	}
+}
+country_event = {
+	id = ukr.10
+	title = ukr.10.t
+	desc = ukr.10.d
+	picture = GFX_report_event_german_volunteers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.10.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = neutrality 
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.01
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.11
+			days = 10
+		}
+		}
+
+	}
+}
+country_event = {
+	id = ukr.11
+	title = ukr.11.t
+	desc = ukr.11.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.11.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.1
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = neutrality 
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.02
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.12
+			days = 10
+		}
+		}
+
+	}
+}
+country_event = {
+	id = ukr.12
+	title = ukr.12.t
+	desc = ukr.12.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.12.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.075
+		add_popularity = {
+			ideology = neutrality 
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.02
+		}
+		hidden_effect = {
+		country_event = {
+			id = ukr.4
+			days = 10
+		}
+		}
+
+	}
+}
+country_event = {
+	id = ukr.13
+	title = ukr.13.t
+	desc = ukr.13.d
+	picture = GFX_report_event_yugoslavia_partisans
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.13.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.15
+		hidden_effect = {
+		country_event = {
+			id = ukr.14
+			days = 10
+		}
+		}
+	}
+}
+country_event = {
+	id = ukr.14
+	title = ukr.14.t
+	desc = ukr.14.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.14.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.1
+		add_ideas = civil_war
+		start_civil_war = {
+      ruling_party = libertarian_socialism
+      ideology = fascism
+      size = 0.4
+      capital = 202
+      states = {
+        197 203 192 834 198 203 202 201 199
+      }
+     }
+	 create_country_leader = {
+	 name = "Anarchist Commune"
+	 desc = ""
+	 picture = "gfx/leaders/anarchist_commune.dds"
+	 expire = "1953.3.1"
+	 ideology = libertarian_socialism_category
+	 traits = {	
+	 }
+	 }
+	 set_cosmetic_tag = UKR_MAK
+	 set_party_name = {
+       ideology = libertarian_socialism
+       long_name = UKR_neutrality_mak_kaiserreich_long
+       name = UKR_neutrality_mak_kaiserreich
+      }
+	  set_country_flag = anarchists_launch_dnipro_uprising
+	}
+	option = {
+		name = ukr.14.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.1
+		create_country_leader = {
+	 name = "Anarchist Commune"
+	 desc = ""
+	 picture = "gfx/leaders/anarchist_commune.dds"
+	 expire = "1953.3.1"
+	 ideology = libertarian_socialism_category
+	 traits = {	
+	 }
+	 }
+	 set_party_name = {
+       ideology = libertarian_socialism
+       long_name = UKR_neutrality_mak_kaiserreich_long
+       name = UKR_neutrality_mak_kaiserreich
+      }
+		add_ideas = civil_war
+		start_civil_war = {
+      ruling_party = fascism
+      ideology = libertarian_socialism
+      size = 0.4
+      states = {
+        226
+      }
+	  set_cosmetic_tag = UKR_MAK
+	  set_country_flag = anarchists_launch_dnipro_uprising
+     }	
+	}
+}
+country_event = {
+	id = ukr.15
+	title = ukr.15.t
+	desc = ukr.15.d
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.15.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.075
+		add_ideas = FRA_communism_banned
+		set_country_flag = communism_banned
+	}
+	option = {
+		name = ukr.15.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.075
+		}
+	}
+}
+country_event = {
+	id = ukr.16
+	title = ukr.16.t
+	desc = ukr.16.d
+	picture = GFX_report_event_communist_leader
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.16.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.075
+		add_ideas = national_unity_government
+	}
+	option = {
+		name = ukr.16.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.025
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.05
+		}
+	}
+}
+country_event = {
+	id = ukr.17
+	title = ukr.17.t
+	desc = ukr.17.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.17.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.075
+		remove_ideas = nationalist_rise
+	}
+	option = {
+		name = ukr.17.b
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = cooperation_with_nationalists
+		swap_ideas = {
+			remove_idea = nationalist_rise
+			add_idea = nationalist_cooperation
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+country_event = {
+	id = ukr.18
+	title = ukr.18.t
+	desc = ukr.18.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.18.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.15
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			name = UKR_democratic_nationalist
+			long_name = UKR_democratic_nationalist_long
+		}
+	}
+}
+country_event = {
+	id = ukr.19
+	title = ukr.19.t
+	desc = ukr.19.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.19.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.15
+	}
+}
+country_event = {
+	id = ukr.20
+	title = ukr.20.t
+	desc = ukr.20.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.20.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		create_faction = Intermarium
+		add_to_faction = UKR
+	}
+}
+country_event = {
+	id = ukr.21
+	title = ukr.21.t
+	desc = ukr.21.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.21.a
+		ai_chance = {
+			base = 0
+		}
+		UKR = {
+		country_event = ukr.23
+		create_wargoal = {
+				type = take_state_focus
+				target = POL
+		}
+		}
+	}
+	option = {
+		name = ukr.21.b
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = purchased_territory
+			days = 300
+		}
+		UKR = {
+			add_timed_idea = {
+			idea = purchase_territory
+			days = 300
+		    }
+			transfer_state = 93
+			transfer_state = 91
+			transfer_state = 89
+			country_event = ukr.22
+		}
+	}
+}
+country_event = {
+	id = ukr.22
+	title = ukr.22.t
+	desc = ukr.22.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.22.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = ukr.23
+	title = ukr.23.t
+	desc = ukr.23.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.23.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = ukr.24
+	title = ukr.24.t
+	desc = ukr.24.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.24.a
+		ai_chance = {
+			base = 0
+		}
+		UKR = {
+		country_event = ukr.26
+		create_wargoal = {
+				type = take_state_focus
+				target = ROM
+		}
+		}
+	}
+	option = {
+		name = ukr.24.b
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = purchased_territory
+			days = 300
+		}
+		UKR = {
+			add_timed_idea = {
+			idea = purchase_territory
+			days = 300
+		    }
+			transfer_state = 80
+			transfer_state = 78
+			transfer_state = 766
+			country_event = ukr.25
+		}
+	}
+}
+country_event = {
+	id = ukr.25
+	title = ukr.25.t
+	desc = ukr.25.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.25.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = ukr.26
+	title = ukr.26.t
+	desc = ukr.26.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = ukr.26.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

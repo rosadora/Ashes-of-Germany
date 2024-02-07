@@ -1,0 +1,470 @@
+﻿###########################
+# france Events
+###########################
+add_namespace = italia
+
+country_event = { #The Civil War Starts
+	id = italia.1
+	title = italia.1.t
+	desc = italia.1.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	trigger = {
+		tag = ITA
+		custom_trigger_tooltip = {
+			set_temp_variable = { ITA_fascist_support = party_popularity@fascism }
+			add_to_temp_variable = { ITA_fascist_support = party_popularity@ultra_nationalism }
+			check_variable = { ITA_fascist_support < 0.55 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = italian_civil_war
+			delete_unit = {}
+        every_core_state = {
+			add_claim_by = ILF
+		}
+		ILF = { 
+			transfer_state = 117
+			transfer_state = 849
+			transfer_state = 156
+			transfer_state = 115
+			transfer_state = 114
+			add_state_core = 117
+			add_state_core = 849
+			add_state_core = 156
+			add_state_core = 115
+			add_state_core = 114
+			inherit_technology = ITA
+			load_oob = ILF_civil_war
+		}
+		transfer_units_fraction= {
+	     target = ILF
+	     navy_ratio = 0.4
+		 air_ratio = 0.3
+		}
+		declare_war_on = {
+            target = ILF
+            type = annex_everything
+        }
+
+		every_core_state = {
+			add_core_of = NLC
+		}
+		NLC = {
+			transfer_state = 158
+			transfer_state = 159
+			transfer_state = 160
+			transfer_state = 39
+			transfer_state = 850
+			transfer_state = 736
+			transfer_state = 852
+			transfer_state = 161
+			inherit_technology = ITA
+			declare_war_on = {
+            target = ILF
+            type = annex_everything
+            }
+			load_oob = NLC_template
+		}
+		transfer_units_fraction= {
+	     target = NLC
+	     navy_ratio = 0.4
+		 air_ratio = 0.3
+		}
+		declare_war_on = {
+            target = NLC
+            type = annex_everything
+        }
+		load_oob = ITA_fascist_side_civil_war
+		mark_focus_tree_layout_dirty = yes
+		remove_ideas = resistanza_moderata
+		remove_ideas = azione_antifascista
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = italia.1.a
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = italia.1.b
+		ai_chance = {
+			base = 80
+		}
+		ILF = {
+		change_tag_from = ITA
+		}
+	}
+	option = {
+		name = italia.1.c
+		ai_chance = {
+			base = 80
+		}
+		NLC = {
+		change_tag_from = ITA
+		}
+	}
+}
+country_event = { #Italian Civil War Is Over
+	id = italia.2
+	title = italia.2.t
+	desc = italia.2.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	trigger = {
+		tag = ITA
+		has_global_flag = italian_civil_war
+		NOT = {
+			country_exists = NLC
+			country_exists = ILF
+		}
+	}
+
+	immediate = {
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = italia.2.a
+		ai_chance = {
+			base = 80
+		}
+		set_global_flag = italian_civil_war_over
+		remove_ideas = anti_communist_focus_ita
+		delete_unit_template_and_units = {
+           division_template = "Camicie Nere"
+           disband = yes #will refund equipment and manpower
+        }
+	}
+}
+country_event = { #Italian Civil War Is Over
+	id = italia.3
+	title = italia.3.t
+	desc = italia.3.d
+	picture = GFX_report_event_latvian_legion
+
+	trigger = {
+		tag = ILF
+		has_global_flag = italian_civil_war
+		NOT = {
+			country_exists = NLC
+			country_exists = ITA
+		}
+	}
+
+	immediate = {
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = italia.3.a
+		ai_chance = {
+			base = 80
+		}
+		set_global_flag = italian_civil_war_over
+		delete_unit_template_and_units = {
+           division_template = "Brigata della Resistenza"
+           disband = yes #will refund equipment and manpower
+        }
+	}
+}
+country_event = { #Italian Civil War Is Over
+	id = italia.4
+	title = italia.4.t
+	desc = italia.4.d
+	picture = GFX_report_event_crowd_in_prague
+
+	trigger = {
+		tag = NLC
+		has_global_flag = italian_civil_war
+		NOT = {
+			country_exists = ILF
+			country_exists = ITA
+		}
+	}
+
+	immediate = {
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = italia.4.a
+		ai_chance = {
+			base = 80
+		}
+		set_global_flag = italian_civil_war_over
+		delete_unit_template_and_units = {
+           division_template = "Camicie Rosse"
+           disband = yes #will refund equipment and manpower
+        }
+	}
+}
+country_event = { #Invitation to Japan
+	id = italia.5
+	title = italia.5.t
+	desc = italia.5.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = italia.5.a
+		ai_chance = {
+			base = 80
+		}
+		add_to_faction = ITA
+	}
+
+	option = {
+		name = italia.5.b
+		ai_chance = {
+			base = 0
+		}
+		set_global_flag = italian_civil_war_over
+	}
+}
+country_event = { #Spain in the Empire #Question
+	id = italia.6
+	title = italia.6.t
+	desc = italia.6.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.6.a
+		ai_chance = {
+			base = 80
+		}
+		ITA = {
+		country_event = {
+			days = 1
+			id = italia.7
+		}
+		}
+	}
+
+	option = {
+		name = italia.6.b
+		ai_chance = {
+			base = 20
+		}
+		ITA = {
+		country_event = {
+			days = 1
+			id = italia.8
+		}
+		}
+	}
+}
+country_event = { #Spain in the Empire #Positive Answer
+	id = italia.7
+	title = italia.7.t
+	desc = italia.7.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.7.a
+		ai_chance = {
+			base = 80
+		}
+		ITA = {
+	 annex_country = {
+       target = SPR 
+       transfer_troops = yes
+     }
+		}
+	}
+}
+country_event = { #Spain in the Empire #Negative Answer
+	id = italia.8
+	title = italia.8.t
+	desc = italia.8.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.8.a
+		ai_chance = {
+			base = 80
+		}
+		SPR = {
+			leave_faction = yes
+		}
+	 create_wargoal = {
+		type = take_state_focus
+		target = SPR
+	 }
+	}
+}
+country_event = { #Portugal in the Empire #Question
+	id = italia.9
+	title = italia.9.t
+	desc = italia.9.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.9.a
+		ai_chance = {
+			base = 80
+		}
+		ITA = {
+		country_event = {
+			days = 1
+			id = italia.10
+		}
+		}
+	}
+
+	option = {
+		name = italia.9.b
+		ai_chance = {
+			base = 20
+		}
+		ITA = {
+		country_event = {
+			days = 1
+			id = italia.11
+		}
+		}
+	}
+}
+country_event = { #Portugal in the Empire #Positive Answer Suuuuuuuuuuuuuuuuuuuuuuuuui
+	id = italia.10
+	title = italia.10.t
+	desc = italia.10.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.10.a
+		ai_chance = {
+			base = 80
+		}
+		ITA = {
+	 annex_country = {
+       target = POR 
+       transfer_troops = yes
+     }
+		}
+	}
+}
+country_event = { #Portugal in the Empire #Negative Answer
+	id = italia.11
+	title = italia.11.t
+	desc = italia.11.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.11.a
+		ai_chance = {
+			base = 80
+		}
+		POR = {
+			leave_faction = yes
+		}
+	 create_wargoal = {
+		type = take_state_focus
+		target = POR
+	 }
+	}
+}
+country_event = { #Romania in the Empire #Question
+	id = italia.12
+	title = italia.12.t
+	desc = italia.12.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.12.a
+		ai_chance = {
+			base = 80
+		}
+		ITA = {
+		country_event = {
+			days = 1
+			id = italia.13
+		}
+		}
+	}
+
+	option = {
+		name = italia.12.b
+		ai_chance = {
+			base = 20
+		}
+		ITA = {
+		country_event = {
+			days = 1
+			id = italia.14
+		}
+		}
+	}
+}
+country_event = { #Romania in the Empire #Positive Answer
+	id = italia.13
+	title = italia.13.t
+	desc = italia.13.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.13.a
+		ai_chance = {
+			base = 80
+		}
+		ITA = {
+	 annex_country = {
+       target = ROM 
+       transfer_troops = yes
+     }
+	 }
+	}
+}
+country_event = { #Portugal in the Empire #Negative Answer
+	id = italia.14
+	title = italia.14.t
+	desc = italia.14.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.14.a
+		ai_chance = {
+			base = 80
+		}
+		ROM = {
+			leave_faction = yes
+		}
+	 create_wargoal = {
+		type = take_state_focus
+		target = ROM
+	 }
+	}
+}
