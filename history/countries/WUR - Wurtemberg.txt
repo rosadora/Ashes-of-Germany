@@ -1,0 +1,409 @@
+﻿capital = 50
+
+air_experience = 50
+navy_experience = 50
+
+oob = "WUR_1936"
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+}
+
+recruit_character = WUR_Wilhelm_Groener
+recruit_character = WUR_Berthold_von_Deimling
+recruit_character = WUR_Otto_von_Garnier
+recruit_character = WUR_Karl_Christof_Friedrich_von_Gerok
+recruit_character = WUR_Gerold_von_Gleich
+recruit_character = WUR_Heinrich_von_Maur
+recruit_character = WUR_Richard_Ruoff
+recruit_character = WUR_Gotthard_Heinrici
+recruit_character = WUR_Hermann_Frommherz
+recruit_character = WUR_Theo_Osterkamp
+recruit_character = WUR_Hugo_Meurer
+recruit_character = WUR_Reinhold_Maier
+recruit_character = WUR_Carl_Diez
+recruit_character = WUR_Kurt_Schumacher
+recruit_character = WUR_Eberhard
+recruit_character = WUR_Albert_Buchmann
+recruit_character = WUR_Wilhelm_Simpfendorfer
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	oil_processing = 1
+	fuel_refining = 1
+	
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_war_support = 0.1
+	else = {
+		set_war_support = 0.15
+	}
+}
+else = {
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+		}
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		panzerschiffe = 1
+		pre_dreadnoughts = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		sonar = 1
+		basic_cruiser_armor_scheme = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+
+
+
+set_research_slots = 3
+set_convoys = 0
+set_stability = 0.6
+
+1939.1.1 = {
+
+	add_political_power = 1197
+	add_command_power = 100
+	
+
+	#BUILDINGS
+	
+
+	set_technology = {
+		improved_light_tank = 1 
+		basic_medium_tank = 1 
+		CAS2 = 1
+		heavy_fighter1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+
+		#doctrines
+		delay = 1
+		elastic_defence = 1
+		armored_spearhead = 1
+		schwerpunk = 1
+		blitzkrieg = 1
+		convoy_interdiction_ti = 1
+		unrestricted_submarine_warfare = 1
+		raider_patrols = 1
+		#air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		dispersed_industry4 = 1
+
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+set_popularities = {
+	fascism = 8
+	ultra_nationalism = 12
+	neutrality = 25
+	democratic = 5
+	classical_liberalism = 5
+	social_liberalism = 11
+	social_democracy = 19
+	communism = 9
+	classical_marxism = 4
+	libertarian_socialism = 2
+}
+
+add_ideas = {
+	weak_monarchy
+	the_red_threat
+	military_restrictions
+	general_staff
+}
+
+create_equipment_variant = {
+	name = "Ju 86"
+	type = tac_bomber_equipment_0
+	upgrades = {
+		plane_tac_bomb_upgrade = 5
+		plane_range_upgrade = 5
+		plane_engine_upgrade = 5
+		plane_reliability_upgrade = 5
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Do 17"
+	type = tac_bomber_equipment_0
+	upgrades = {
+		plane_tac_bomb_upgrade = 5
+		plane_range_upgrade = 1
+		plane_engine_upgrade = 1
+		plane_reliability_upgrade = 5
+	}
+	obsolete = yes
+}
+
+
+create_country_leader = {
+	name = "Albrecht Herzog von Württemberg"
+	desc = ""
+	picture = "gfx/leaders/Albrecht_Herzog.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+
+create_country_leader = {
+	name = "Wilhelm Keil"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "gfx/leaders/Wilhelm_Keil.dds"
+	expire = "1965.1.16"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm Keil"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "gfx/leaders/Wilhelm_Keil.dds"
+	expire = "1965.1.16"
+	ideology = social_democracy_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm Keil"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "gfx/leaders/Wilhelm_Keil.dds"
+	expire = "1965.1.16"
+	ideology = social_liberalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm Keil"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "gfx/leaders/Wilhelm_Keil.dds"
+	expire = "1965.1.16"
+	ideology = classical_liberalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Paul Schrek"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "gfx/leaders/Paul_Schrek.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		assassination_survivor
+		stalins_puppet
+	}
+}
+
+create_country_leader = {
+	name = "Paul Schrek"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "gfx/leaders/Paul_Schrek.dds"
+	expire = "1965.1.1"
+	ideology = classical_marxism_category
+	traits = {
+		assassination_survivor
+		stalins_puppet
+	}
+}
+
+create_country_leader = {
+	name = "Paul Schrek"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "gfx/leaders/Paul_Schrek.dds"
+	expire = "1965.1.1"
+	ideology = libertarian_socialism_category
+	traits = {
+		assassination_survivor
+		stalins_puppet
+	}
+}
+
+create_country_leader = {
+	name = "Franz Von Epp"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "gfx/leaders/Franz_Von_Epp.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		exiled
+	}
+}
+
+create_country_leader = {
+	name = "Franz Von Epp"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "gfx/leaders/Franz_Von_Epp.dds"
+	expire = "1965.1.1"
+	ideology = ultra_nationalism
+	traits = {
+		exiled
+	}
+}
+
+

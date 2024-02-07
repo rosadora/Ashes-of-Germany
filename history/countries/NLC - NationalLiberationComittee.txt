@@ -1,0 +1,49 @@
+﻿capital = 159
+
+set_oob = "NLC_template"
+
+set_research_slots = 3
+
+add_ideas = {
+	esercito_dei_non_idonei
+	revolutionary_defence
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+	service_by_requirement
+}
+
+create_country_leader = {
+	name = "Comitato di Liberazione Nazionale"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "gfx/leaders/NLC/portrait_ITA_cln.dds"
+	expire = "1960.1.16"
+	ideology = classical_marxism_category
+	traits = {
+	}
+}
+
+
+
+set_politics = {
+	ruling_party = classical_marxism
+	last_election = "1936.11.9"
+	election_frequency = 12
+	elections_allowed = yes
+}
+
+set_popularities = {
+	fascism = 2
+	ultra_nationalism = 1
+	neutrality = 2
+	democratic = 22
+	classical_liberalism = 7
+	social_liberalism = 3
+	social_democracy = 23
+	classical_marxism = 27
+	libertarian_socialism = 5
+	communism = 8
+}
+
+set_stability = 0.5
+set_war_support = 0.5

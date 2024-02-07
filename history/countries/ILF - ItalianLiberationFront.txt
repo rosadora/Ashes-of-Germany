@@ -1,0 +1,52 @@
+﻿capital = 117
+
+set_research_slots = 3
+
+add_ideas = {
+	esercito_dei_non_idonei
+	unione_precaria
+	limited_exports
+	service_by_requirement
+	partial_economic_mobilisation
+}
+
+recruit_character = ILF_Ivanoe_Bonomi
+recruit_character = ILF_Ferdinand_Pius
+recruit_character = ILF_Attilio_Teruzzi
+recruit_character = ILF_comitato_di_liberazione_nazionale
+recruit_character = ILF_Enrico_Mattei
+recruit_character = ILF_Teresio_Olivelli
+recruit_character = ILF_Mario_Simonazzi
+recruit_character = ILF_Elsa_Oliva
+recruit_character = ILF_Giovanni_Carli
+recruit_character = ILF_Dionigi_Superti
+recruit_character = ILF_Lionello_Levi_Sandri
+recruit_character = ILF_Oddo_Biasini
+recruit_character = ILF_Pietro_Ferreira
+recruit_character = ILF_Osvaldo_Abbondanza
+recruit_character = ILF_Francesco_Zaltron
+recruit_character = ILF_Giovanni_de_Lorenzo
+recruit_character = ILF_Edgardo_Sogno
+
+set_politics = {
+	ruling_party = classical_liberalism
+	last_election = "1936.11.9"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	fascism = 12
+	ultra_nationalism = 8
+	neutrality = 20
+	democratic = 7
+	classical_liberalism = 23
+	social_liberalism = 10
+	social_democracy = 12
+	classical_marxism = 5
+	libertarian_socialism = 2
+	communism = 1
+}
+
+set_stability = 0.5
+set_war_support = 0.5
