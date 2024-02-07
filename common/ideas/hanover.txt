@@ -1,0 +1,283 @@
+ideas = {
+
+	country = {
+		radicalization_of_the_political_scene = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_a_change_in_course
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.0025
+				war_support_weekly = -0.0025
+				democratic_drift = -0.02
+				classical_liberalism_drift = -0.02
+				social_liberalism_drift = -0.02
+			}
+		}
+		unstable_republic = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				
+			}
+		}
+		hanoverian_influence = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.15
+				stability_weekly = -0.005
+			}
+		}
+		preparation_for_landing = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_preparing_the_second_front
+
+			removal_cost = -1
+			
+			modifier = {
+				naval_invasion_capacity = 10
+				amphibious_invasion = 0.5
+			}
+		}
+		hanoverian_leadership = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.2	
+				conscription = 0.03		
+			}
+		}
+		etablish_a_new_world_order = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_intel_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.075
+				justify_war_goal_time = -0.5
+				generate_wargoal_tension = -0.3
+			}
+		}
+		shock_strategy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation5
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.35
+				production_speed_buildings_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.75
+				industrial_capacity_factory = 0.85
+				industrial_capacity_dockyard = 0.85
+			}
+		}
+		collapse = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.8
+				production_speed_buildings_factor = -0.95
+				production_factory_efficiency_gain_factor = -0.95
+				industrial_capacity_factory = -0.95
+				industrial_capacity_dockyard = -0.95
+			}
+		}
+		moral_strengthened = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.12
+				army_attack_factor = 0.15
+			}
+		}
+		si_vis_pacem_para_pacem = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWI_spirit_of_helvetia_defensive_peace
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.6
+				production_speed_buildings_factor = 0.15
+				party_popularity_stability_factor = 0.2
+				offensive_war_stability_factor = -0.2
+				defensive_war_stability_factor = 0.3
+			}
+		}
+		controlled_paramilitaries = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.01
+				ultra_nationalism_drift = 0.01
+				conscription = 0.02
+				army_org_factor = 0.075
+			}
+		}
+		a_regional_fleet = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = liberty_ships_focus
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				ship_hull_submarine = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		continue_the_development = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.5
+			}
+		}
+
+		army_of_hanover = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CZE_planning_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				army_org_factor = 0.075
+			}
+		}
+	}
+}

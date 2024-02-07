@@ -1,0 +1,1732 @@
+ideas = {
+
+	country = {
+		memories_of_the_civil_war1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.35
+				war_support_factor = -0.5
+				communism_drift = 0.04
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+			}
+		}
+		the_second_russian_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.25
+				war_support_factor = -0.35
+				communism_drift = 0.075
+				social_democracy_drift = 0.05
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+			}
+		}
+		the_second_russian_revolution2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.1
+				war_support_factor = -0.15
+				communism_drift = 0.05
+				social_democracy_drift = 0.05
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+			}
+		}
+		the_second_russian_revolution3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.15
+				war_support_factor = -0.2
+				communism_drift = 0.05
+				social_democracy_drift = 0.05
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+				fascism_drift = -0.02
+			}
+		}
+		the_second_russian_revolution4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				communism_drift = 0.05
+				social_democracy_drift = 0.05
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+				fascism_drift = -0.02
+			}
+		}
+		defend_the_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.075
+				conscription = 0.03
+			}
+		}
+		increase_taxes = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_factor = -0.075
+
+				
+			}
+		}
+		slow_industrialisation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.5 
+				global_building_slots_factor = -0.6
+			}
+		}
+		slow_industrialisation1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.4
+				global_building_slots_factor = -0.4
+			}
+		}
+		slow_industrialisation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.2
+				global_building_slots_factor = -0.1
+			}
+		}
+		famines = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = raj_risk_of_famine
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				conscription = -0.01
+				monthly_population = -0.8
+			}
+		}
+		industrialisation_phase_1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_reform
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.25
+				consumer_goods_factor = -0.05
+			}
+		}
+		industrialisation_phase_2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.25
+				consumer_goods_factor = -0.05
+			}
+		}
+		industrialisation_phase_3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation5
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				industrial_capacity_factory = 0.175
+			}
+		}
+		mechanization_of_agriculture = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.075
+			}
+		}
+		discontent_of_small_farmers = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_the_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.25
+			}
+		}
+		revolutionary_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				social_democracy_drift = 0.02
+				communism_drift = 0.04
+				classical_marxism_drift =  0.02
+				classical_marxism_drift =  0.02
+			}
+		}
+		army_of_the_old_days = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.25
+				army_morale_factor = -0.25
+				experience_gain_army_factor = -0.35
+				supply_factor = -0.2
+			}
+		}
+		army_of_the_old_days2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.25
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.15
+				conscription = 0.025
+				supply_factor = -0.2
+			}
+		}
+		army_of_the_old_days3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.025
+				experience_gain_army_factor = -0.1
+				conscription = 0.025
+				supply_factor = -0.2
+			}
+		}
+		army_of_the_old_days4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.25
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.15
+				conscription = 0.025
+			}
+		}
+		army_of_the_old_days5 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.025
+				experience_gain_army_factor = -0.1
+				conscription = 0.025
+			}
+		}
+		army_of_the_old_days6 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.15
+				training_time_factor = 0.15
+				experience_gain_army_factor = -0.35
+				supply_factor = -0.2
+			}
+		}
+		army_of_the_old_days7 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.025
+				army_morale_factor = -0.05
+				training_time_factor = 0.15
+				experience_gain_army_factor = 0.06
+				conscription_factor = -0.25
+				supply_factor = -0.2
+			}
+		}
+		army_of_the_old_days8 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.025
+				army_morale_factor = -0.05
+				training_time_factor = 0.15
+				experience_gain_army_factor = 0.06
+				conscription_factor = -0.25
+			}
+		}
+		army_of_the_old_days9 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.15
+				training_time_factor = 0.15
+				experience_gain_army_factor = -0.35
+			}
+		}
+		army_of_the_old_days10 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_the_true_tsars
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				training_time_factor = 0.15
+				experience_gain_army_factor = 0.15
+				conscription_factor = -0.25
+			}
+		}
+		army_of_the_old_days11 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_the_true_tsars
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				army_morale_factor = 0.1
+				experience_gain_army_factor = -0.1
+				conscription = 0.05
+			}
+		}
+		the_red_army_professionalize_the_red_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.25
+				experience_gain_army_factor = -0.25
+				supply_factor = -0.2
+			}
+		}
+		the_red_army_professionalize_the_red_army1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.075
+				army_morale_factor = -0.15
+				experience_gain_army_factor = -0.05
+				supply_factor = -0.2
+			}
+		}
+		the_red_army_professionalize_the_red_army2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.2
+				army_org_factor = 0.125
+				experience_gain_army_factor = 0.15
+			}
+		}
+		the_red_army_professionalize_the_red_army3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.25
+				training_time_factor = 0.15
+				army_org_factor = 0.2
+				experience_gain_army_factor = 0.25
+			}
+		}
+		the_red_army_era_of_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.25
+				army_morale_factor = -0.15
+				army_core_defence_factor = 0.15
+				experience_gain_army_factor = -0.35
+				supply_factor = -0.2
+			}
+		}
+		the_red_army_era_of_resistance1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.15
+				experience_gain_army_factor = -0.35
+				supply_factor = -0.2
+			}
+		}
+		the_red_army_era_of_resistance2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.15
+				experience_gain_army_factor = -0.25
+				training_time_factor = -0.3
+				supply_factor = -0.2
+			}
+		}
+		the_red_army_era_of_resistance3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.15
+				experience_gain_army_factor = -0.25
+				training_time_factor = -0.3
+				out_of_supply_factor = -0.2
+				no_supply_grace = 360
+				attrition = -0.15
+			}
+		}
+		hunt_the_tsar = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot_purged
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.075
+				army_org_factor = 0.15
+				army_morale_factor = 0.25
+				army_core_attack_factor = 0.15
+				army_attack_speed_factor = 0.35
+				experience_gain_army_factor = 0.35
+				supply_factor = 0.75
+			}
+		}
+		tachanka_attack = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_the_road_of_life
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.1
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+				cavalry_attack_factor = 0.5
+				supply_factor = 0.75
+				surrender_limit = 0.2
+			}
+		}
+		winter_offensive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army_2
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.25
+				breakthrough_factor = 0.5
+			}
+		}
+		victory_is_at_hand = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army_2
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.0025
+				army_org_regain = 0.3
+			}
+		}
+
+		german_volunteers = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+
+			removal_cost = -1
+
+			
+			modifier = {
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 7
+				send_volunteers_tension = -1
+			}
+		}
+
+		anti_communist_focus = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+
+			
+			targeted_modifier = {
+				tag = USR
+				attack_bonus_against = 0.35
+				defense_bonus_against = 0.35
+			}
+		}
+		strike_separatist_in_central_asia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_intel_bonus
+
+			removal_cost = -1
+
+			
+			targeted_modifier = {
+				tag = KAZ
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = KYZ
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = UZB
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = KHI
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = TMS
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = BUK
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+		}
+		strike_west = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CZE_planning_bonus
+
+			removal_cost = -1
+
+			
+			targeted_modifier = {
+				tag = UKR
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = MAK
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = BLR
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = GEO
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = ARM
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+
+			targeted_modifier = {
+				tag = AZR
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+		}
+		save_manchuria = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			
+			targeted_modifier = {
+				tag = FER
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+		the_white_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fascist_womens_movement
+
+			removal_cost = -1
+
+			
+			modifier = {
+				conscription = 0.02
+				army_org_factor = 0.05
+				army_morale_factor = 0.1
+				winter_attrition_factor  = -0.35
+			}
+		}
+		rapid_industrialization = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_weekly = -0.003
+                consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.35
+			}
+		}
+		kulaks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.25
+			}
+		}
+		arrestation_of_the_kulaks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_classify_aliens
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.25
+				political_power_factor = -0.95
+			}
+		}
+		socialist_economy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = -0.075
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		an_alternative_way = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_a_change_in_course
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_weekly = -0.001
+				democratic_drift = 0.08
+				classical_liberalism_drift = 0.08
+				social_liberalism_drift = 0.08
+				social_democracy_drift = 0.08
+			}
+		}
+		cheka = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = officers_purged
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_weekly = 0.002
+				communism_drift = 0.02
+				consumer_goods_factor = 0.02
+			}
+		}
+		urbanization = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_stakhanovite_movement
+
+			removal_cost = -1
+
+			
+			modifier = {
+				global_building_slots_factor = 0.2
+				production_speed_buildings_factor = 0.12
+			}
+		}
+		coexistence_with_kulaks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = LIT_invested_in_farms
+
+			removal_cost = -1
+
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		rapid_population_growth = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+
+			
+			modifier = {
+				monthly_population = 0.75
+			}
+		}
+		socialist_market_economy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+
+			
+			modifier = {
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		socialist_union = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot_purged
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = 0.15
+				neutrality_drift = -0.05
+				ultra_nationalism_drift = -0.05
+				fascism_drift = -0.05
+				drift_defence_factor = 0.8
+			}
+		}
+		russian_influence = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_soviet_hegemony
+
+			removal_cost = -1
+
+			
+			modifier = {
+				communism_drift = 0.25
+				war_support_factor = 0.2
+				stability_factor = 0.2
+				political_power_factor = 0.25
+			}
+		}
+		economic_aid_to_speratists = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		economic_aid_from_russia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				communism_drift = 0.1
+			}
+		}
+		military_development_program = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				communism_drift = 0.1
+			}
+		}
+		union_of_soviet_socialist_republics = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_stakhanovite_movement
+
+			removal_cost = -1
+
+			
+			modifier = {
+				political_power_factor = 0.15
+				army_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		unlimited_strike = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			
+			modifier = {
+				political_power_factor = -1
+				stability_weekly = -0.01
+			}
+		}
+		counter_propaganda = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+
+			
+			modifier = {
+				communism_drift = -0.15
+				stability_weekly = -0.005
+			}
+		}
+		second_russian_civil_war = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_factionalism_modifier
+
+			removal_cost = -1
+
+			rule = {
+				can_join_factions = no
+			}
+
+			
+			modifier = {
+				industrial_capacity_factory = 0.25	
+				ai_focus_aggressive_factor = 10
+				winter_attrition = -0.8
+				supply_consumption_factor = -0.5
+			}
+		}
+		revolutionary_furiousness = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.25
+				army_attack_factor = 0.15
+				winter_attrition_factor = -0.75
+				ai_focus_aggressive_factor = 10
+				ai_focus_war_production_factor = 10
+			}
+		}
+		the_nation_and_the_tsar = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_the_true_tsars
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = 0.15
+				defensive_war_stability_factor = 0.35
+				neutrality_drift = 0.075
+			}
+		}
+		the_nation_and_the_tsar2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_the_true_tsars
+
+			removal_cost = -1
+
+			
+			modifier = {
+				conscription = 0.02
+				consumer_goods_factor = 0.02
+				army_morale_factor = 0.1
+				defensive_war_stability_factor = 0.35
+				neutrality_drift = 0.075
+			}
+		}
+		denikin_plan = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation5
+
+			removal_cost = -1
+
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.3
+			}
+		}
+		womens_of_the_shadows = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_imperial_conscription
+
+			removal_cost = -1
+
+			
+			modifier = {
+				industrial_capacity_factory = 0.075
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		siberian_training = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_the_road_of_life
+
+			removal_cost = -1
+
+			
+			modifier = {
+				winter_attrition_factor = -0.3
+				acclimatization_cold_climate_gain_factor = 0.25
+			}
+		}
+		rebuild_our_fleet = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_coastal_defense_ships2
+
+			removal_cost = -1
+
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		winter_offensive_civ = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_sub_zero_survival_training
+
+			removal_cost = -1
+
+			
+			modifier = {
+				winter_attrition_factor = -0.5
+				army_attack_factor = 0.25
+				ai_focus_aggressive_factor = 1
+			}
+		}
+		summer_offensive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_aircraft_support
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_attack_factor = 0.25
+				army_attack_speed_factor = 0.15
+				ai_focus_aggressive_factor = 1
+			}
+		}
+		spring_offensive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_purged_junior_army_officers
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.35
+				army_attack_factor = 0.2
+				army_attack_speed_factor = 0.2
+				ai_focus_aggressive_factor = 1
+			}
+		}
+		autumn_offensive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_purged_junior_army_officers
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.35
+				army_attack_factor = 0.2
+				army_attack_speed_factor = 0.2
+				ai_focus_aggressive_factor = 1
+			}
+		}
+		the_final_offensive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.5
+				army_attack_factor = 0.5
+				army_attack_speed_factor = 0.35
+				enemy_army_bonus_air_superiority_factor = -1
+				ai_focus_aggressive_factor = 1
+			}
+		}
+		reach_volgograd = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_attack_factor = 0.35
+				army_org_factor = 0.3
+				army_attack_speed_factor = 0.35
+				army_speed_factor = 0.5
+				ai_focus_aggressive_factor = 10
+			}
+		}
+		disrupt_the_tsarists = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_opiate_of_the_masses
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.6
+				army_attack_factor = 0.5
+				army_speed_factor = 0.3
+				army_attack_speed_factor = 0.4
+				army_speed_factor = 0.5
+				ai_focus_aggressive_factor = 10
+			}
+		}
+		last_stand = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_a_church_of_the_catacombs
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.25
+				army_defence_factor = 0.25
+				dig_in_speed_factor = 0.35
+				max_dig_in = 20
+				ai_focus_defense_factor = 1
+				production_speed_bunker_factor = 0.5
+			}
+		}
+		the_last_battle = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_a_church_of_the_catacombs
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = 0.5
+				army_attack_factor = 0.3
+				army_speed_factor = 0.3
+				ai_focus_defense_factor = 1
+				ai_focus_aggressive_factor = 10
+			}
+		}
+		collapse_of_the_revolutionary_front = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_org_factor = -0.75
+				industrial_capacity_factory = -1
+			}
+		}
+	}
+}

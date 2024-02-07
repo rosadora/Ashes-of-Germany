@@ -1,0 +1,752 @@
+ideas = {
+
+	country = {
+		a_threatened_border = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_naval_auxiliary_patrol
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				army_defence_factor = 0.1
+				ai_desired_divisions_factor = 2.5
+			}
+		}
+		la_perfide_albion = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_the_sun_never_sets
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+                attack_bonus_against = 0.15
+			}
+		}
+		la_perfide_albion1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_the_sun_never_sets
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+                attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+		}
+		la_perfide_albion2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_the_sun_never_sets
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+                attack_bonus_against = 0.2
+				defense_bonus_against = 0.15
+			}
+		}
+		priority_to_the_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = -0.3
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+
+			}
+		}
+		abandonned_fleet = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = -0.3
+
+			}
+		}
+		abandonned_fleet1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = -0.2
+
+			}
+		}
+		abandonned_fleet2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = -0.1
+
+			}
+		}
+		abandonned_fleet3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+
+			}
+		}
+		not_another_trafalgar = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+				critical_receive_chance = -0.5
+				naval_accidents_chance = -0.25
+				naval_coordination = 0.1
+
+			}
+		}
+		the_fear_of_decline = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ENG_the_war_to_end_all_wars
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				neutrality_drift = 0.02
+				ultra_nationalism_drift = 0.02
+				war_support_factor = 0.075
+				stability_factor = -0.1
+			}
+		}
+		napoleonic_revenge = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_la_deluge
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				ultra_nationalism_drift = 0.02
+				neutrality_drift = 0.1
+				war_support_factor = 0.25
+				stability_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
+		la_grande_armee = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.15
+				conscription = 0.04
+			}
+		}
+		training_of_colonial_troops = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			modifier = {
+				heat_attrition_factor = -0.25
+				supply_consumption_factor = -0.1
+			}
+		}
+		the_language_of_diplomacy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_deal_with_the_devil2
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_justify_war_goal_time = 0.3
+				faction_trade_opinion_factor = 0.5
+				opinion_gain_monthly_factor = 0.5
+				annex_cost_factor = -0.1
+				guarantee_tension = -0.3
+			}
+		}
+		urbanization_of_the_country = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_build_infrastructure
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots_factor = 0.2
+			}
+		}
+		a_renewed_industry = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots_factor = 0.35
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		invest_in_development = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		invest_in_development_high = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation4
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		travail = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.125
+			}
+		}
+		famille = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_battaglie_per_la_nascite
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.5
+				stability_factor = 0.15
+			}
+		}
+		nous_reviendrons = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tfv_can_conscription_crisis
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				war_support_factor = 0.075
+			}
+		}
+		milices_nationales = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = por_volunteers_in_the_war3
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_target = -0.2
+				local_factories = 0.25
+				compliance_gain = -0.05
+			}
+		}
+		expansionism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_oppression
+
+			removal_cost = -1
+
+			modifier = {
+				justify_war_goal_time = -0.33
+				offensive_war_stability_factor = 0.15
+				ai_desired_divisions_factor = 0.5
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+		stimulated_consumption = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.075
+				industrial_capacity_factory = 0.1
+			}
+		}
+		for_the_country = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hol_liberation
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.35
+				army_core_defence_factor = 0.25
+			}
+		}
+		vive_la_france = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_undividable
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.075
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		french_tactics = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_undividable
+
+			removal_cost = -1
+
+			modifier = {
+				max_dig_in = 10
+				army_org_factor = 0.075
+			} 
+		}
+		defend_democracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				army_org_factor = 0.075
+			} 
+		}
+		maxmium_on_bread_price = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				monthly_population = 0.5
+				stability_factor = 0.15
+			} 
+		}
+		antifascist_militias = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_international_brigades
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.04
+				fascism_drift = -0.01
+				neutrality_drift = -0.01
+			} 
+		}
+		nationalized_major_compagnies = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+				consumer_goods_factor = -0.03
+			} 
+		}
+		40_hours_a_week = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fourth_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.125
+			} 
+		}
+		volunteers_in_the_spanish_civil_war = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_size = 5
+				send_volunteers_tension = -1
+			} 
+		}
+		radicalization_of_minds = {
+			
+			allowed = {
+				has_war_with = PRS
+			}
+
+			allowed_civil_war = {
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.005
+				communism_drift = 0.125
+			} 
+		}
+		army_desorganization = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+			}
+
+			picture = tfv_can_conscription_crisis
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.45
+				army_morale_factor = -0.15
+				surrender_limit = 1
+			} 
+		}
+		elite_corps = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+			}
+
+			picture = eng_service_overseas
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.15
+				breakthrough_factor = 0.125
+			}
+		}
+		national_reborn = {
+			
+			allowed = {
+				has_war_with = PRS
+			}
+
+			allowed_civil_war = {
+			}
+
+			picture = FRA_undividable
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.075
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.075
+			}
+		}
+		la_liberte_guide_nos_pas = {
+			
+			allowed = {
+				has_war_with = PRS
+			}
+
+			allowed_civil_war = {
+			}
+
+			picture = eng_preparing_the_second_front
+
+			removal_cost = -1
+
+			modifier = {
+				naval_invasion_penalty = -0.5
+				naval_invasion_capacity = 10
+				invasion_preparation = -0.3
+			}
+
+			targeted_modifier = {
+				tag = FRC 
+				attack_bonus_against = 0.35
+				defense_bonus_against = 0.1
+			}
+		}
+    }
+}

@@ -1,0 +1,763 @@
+ideas = {
+
+	country = {
+		home_of_the_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = home_of_revolution
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.75
+				party_popularity_stability_factor = 0.225
+			}
+			rule = {
+            can_create_factions = yes
+	        }
+		}
+		weakened_reactionnary_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				fascism_drift = -0.01
+				neutrality_drift = -0.01
+				ultra_nationalism_drift = -0.01
+			}
+		}
+		united_reactionnary_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance2
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				war_support_weekly = -0.005
+				neutrality_drift = 0.03
+				ultra_nationalism_drift = 0.02
+			}
+		}
+		growing_reactionnary_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.3
+				war_support_weekly = -0.01
+				neutrality_drift = 0.04
+				ultra_nationalism_drift = 0.04
+			}
+		}
+		impending_reactionary_uprising = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -1
+				stability_factor = -0.5
+				war_support_weekly = -0.01
+				neutrality_drift = 0.8
+				ultra_nationalism_drift = 0.07
+			}
+		}
+		moderate_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.075
+				stability_factor = -0.15
+				democratic_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+			}
+		}
+		SZDP_KMP_coalition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_the_popular_front
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.075
+				communism_drift = 0.02
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.01
+				social_democracy_drift = 0.03
+			}
+		}
+		low_support_in_the_countryside = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.075
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		hostile_countryside = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.25
+				consumer_goods_factor = 0.25
+			}
+		}
+		to_the_barricades = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_international_brigades
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.15
+				weekly_manpower = 1000
+				ai_focus_aggressive_factor = 3
+			}
+		}
+		red_terror = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = terror
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				communism_drift = 0.02
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.01
+				stability_factor = -0.15
+				conscription_factor = -0.35
+				war_support_factor = -0.1
+			}
+		}
+		red_terror2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = terror
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				communism_drift = 0.05
+				classical_marxism_drift = 0.03
+				libertarian_socialism_drift = 0.01
+				stability_factor = -0.25
+				conscription_factor = -0.25
+				war_support_factor = -0.1
+				army_org_factor = 0.05
+			}
+		}
+		red_terror3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = terror
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.05
+				classical_marxism_drift = 0.03
+				libertarian_socialism_drift = 0.01
+				neutrality_drift = -0.1
+				fascism_drift = -0.1
+				stability_factor = -0.15
+				war_support_factor = 0.075
+				army_org_factor = 0.15
+			}
+		}
+		workers_councils = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				communism_drift = 0.01
+				classical_marxism_drift = 0.02
+				stability_factor = 0.075
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		hungarian_red_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = saf_soviet_advisers
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.075
+				army_attack_speed_factor = 0.15
+			}
+		}
+		economic_cooperation = {
+			
+			allowed = {
+				NOT = {
+					has_war_with = HUN
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		military_cooperation = {
+			
+			allowed = {
+				NOT = {
+					has_war_with = HUN
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.075
+				conscription_factor = 0.15
+				experience_gain_army = 0.1
+			}
+		}
+		hungarian_industry = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hungarian_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		hungarian_industry2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hungarian_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.25
+				stability_factor = 0.15
+				consumer_goods_factor = 0.075
+			}
+		}
+		hungarian_industry3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hungarian_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.25
+				industrial_capacity_factory = 0.125
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_max_efficiency_factor = 0.1
+				stability_factor = 0.15
+				consumer_goods_factor = 0.075
+			}
+		}
+		magyar_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hun_army
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		magyar_army2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hun_army
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.25
+				army_morale_factor = 0.05
+			}
+		}
+		adriatic_fleet = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+			}
+		}
+		regulated_markets = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.075
+			}
+		}
+		memories_from_the_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot_purged
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				war_support_factor = 0.075
+				stability_factor = 0.075
+				communism_drift = 0.03
+			}
+		}
+		republican_guard = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = republican_guard_hungary
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+				army_core_defence_factor = 0.25
+				conscription = 0.02
+			}
+		}
+		imposed_hungarian = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		patriotic_education = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				conscription_factor = 0.33
+				army_attack_factor = 0.1
+			}
+		}
+		traditional_family = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.75
+				stability_factor = 0.075
+				war_support_factor = 0.1
+			}
+		}
+		arms_against_tyranny = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.25
+				resistance_growth_on_our_occupied_states = 0.5
+			}
+		}
+		nationalist_offensive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_support_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.35
+				army_attack_factor = 0.1
+				ai_focus_aggressive_factor = 3
+			}
+		}
+		patriotic_youth = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.03
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+		ethnic_nation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.5
+				army_org_factor = 0.1
+				army_attack_factor = 0.05
+				fascism_drift = 0.05
+			}
+		}
+		steppes_warriors = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = steppes_warriors
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.15
+				cavalry_attack_factor = 0.25
+			}
+		}
+		imperial_guard = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = imperial_guard_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.075
+				conscription = 0.02
+			}
+		}
+		for_the_empire = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = for_the_empire
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		multiethnic_empire = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_hungarian_monarchy_habsburg
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.075
+				political_power_factor = -0.1
+				army_morale_factor = 0.1
+				conscription = 0.03
+				neutrality_drift = 0.05
+			}
+		}
+		decentralization = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_local_self_management
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.05
+				army_morale_factor = 0.1
+				classical_liberalism_drift = 0.03
+				democratic_drift = 0.02
+			}
+		}
+	}
+}

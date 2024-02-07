@@ -1,0 +1,374 @@
+ideas = {
+
+	country = {
+		treaty_of_koln = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -1
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+				disabled_ideas = 1
+			}
+		}
+		rise_of_nationalism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_political_violence
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.02
+				stability_weekly = -0.002
+				war_support_weekly = 0.002
+			}
+		}
+		rise_of_nationalism1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_political_violence
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.01
+				stability_weekly = -0.001
+				war_support_weekly = 0.002
+			}
+		}
+		the_industrial_heart_of_germany = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.25
+			}
+		}
+		the_industrial_heart_of_germany1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.5
+			}
+		}
+		adenauer_program = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_arms_factory_factor = 0.4
+				production_speed_industrial_complex_factor = -0.4
+			}
+		}
+		reinische_eisenbahngesellschaft = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rail_way_factor = 0.35
+			}
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+		}
+		the_bundeswehr = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.1
+			}
+		}
+		the_bundeswehr1 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.1
+				max_dig_in = 15
+				experience_loss_factor = -0.3
+			}
+		}
+		the_bundeswehr2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.1
+				max_dig_in = 15
+				experience_loss_factor = -0.3
+				conscription = 0.05
+			}
+		}
+		the_breath_of_freedom = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		the_natural_frontier = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.25
+				conscription = 0.075
+			}
+		}
+		build_a_new_europe = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.35
+				conscription = 0.1
+			}
+		}
+		rhenish_grande_armee = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_la_deluge
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.2
+				conscription = 0.05
+			}
+		}
+		fairer_taxes = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = neutrality_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		call_to_reason = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+		because_we_must = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		freedom_or_death = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = freedom_or_death
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.35
+				dig_in_speed_factor = 0.75
+				resistance_target_on_our_occupied_states = 0.5
+				ai_desired_divisions_factor = 3
+				ai_get_ally_desire_factor = -0.5
+				surrender_limit = -0.2
+			}
+		}
+		freedom_or_death2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = freedom_or_death
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.35
+				dig_in_speed_factor = 0.75
+				resistance_target_on_our_occupied_states = 0.5
+				ai_desired_divisions_factor = 3
+				ai_get_ally_desire_factor = -0.5
+				cas_damage_reduction = 0.5
+				air_close_air_support_org_damage_factor = 0.35
+				conscription = 0.08
+				surrender_limit = -0.2
+			}
+		}
+	}
+
+}

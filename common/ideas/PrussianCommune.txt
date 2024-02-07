@@ -1,0 +1,395 @@
+ideas = {
+
+	country = {
+		national_liberation_war = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_masters_of_our_own_fate
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.5
+				army_org_factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+		national_liberation_war2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_masters_of_our_own_fate
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.5
+				army_org_factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.15
+			}
+		}
+		cahos_generalise = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance2
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.5
+			}
+		}
+		cahos_generalise2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance2
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.4
+				stability_factor = -0.4
+			}
+		}
+		cahos_generalise3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance2
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.3
+			}
+		}
+		cahos_generalise4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance2
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+		cahos_generalise5 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance2
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+		opposition_rebuilding = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_factionalism_modifier
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.04
+				neutrality_drift = 0.03
+				fascism_drift = 0.01
+			}
+		}
+		the_industrial_race = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+			}
+		}
+		the_industrial_race2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.3
+				industrial_capacity_dockyard = 0.3
+			}
+		}
+		the_industrial_race3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = 0.5
+				industrial_capacity_dockyard = 0.5
+			}
+		}
+		greatworks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.3
+			}
+		}
+		german_transport_collective = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_infrastructure_factor = 0.25
+			production_speed_supply_node_factor = 0.25
+			production_speed_rail_way_factor = 0.25
+			}
+		}
+		comissioner_of_plans = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_etatism
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			}
+		}
+		construct_red_fleet = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_coastal_defense_ships
+
+			removal_cost = -1
+			
+			modifier = {
+			industrial_capacity_dockyard = 0.25
+			production_speed_dockyard_factor = 0.3
+			}
+		}
+		arm_the_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan_military
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_arms_factory_factor = 0.2
+			}
+		}
+		you_have_to_pay = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.075
+			}
+		}
+		world_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_ideology_drift_defence
+
+			removal_cost = -1
+			
+			modifier = {
+			justify_war_goal_time = -0.75
+			non_core_manpower = 0.25
+			}
+		}
+		planned_uprisings = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ger_the_great_red_menace
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = HAN
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = MEK
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = SHL
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = SAX
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.25
+			}
+		}
+		suprise_attack = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CZE_planning_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.25
+				army_org_factor = 0.15
+			}
+			
+			targeted_modifier = {
+				tag = RCO
+				attack_bonus_against = 0.2
+			}
+		}
+	}
+
+
+
+
+}

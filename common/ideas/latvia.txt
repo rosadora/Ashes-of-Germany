@@ -1,0 +1,102 @@
+ideas = {
+
+	country = {
+		lithuanian_neighbor = {
+			
+			allowed = {
+				country_exists = LIT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_the_lion_of_the_north
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_core_defence_factor = 0.075
+				stability_factor = -0.05
+				research_speed_factor = -0.05
+				classical_liberalism = 0.01
+				social_liberalism = 0.01
+				social_democracy = 0.01
+			} 
+		}
+		the_latvian_sun_in_the_sky = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = LAT_the_sun_shines_equally
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.075
+				conscription = 0.03
+			} 
+		}
+		guardian_of_konigsberg = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWI_spirit_of_helvetia_defensive_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_core_defence_factor = 0.075
+				conscription = 0.03
+				stability_factor = -0.1
+			} 
+
+			targeted_modifier = { 
+				tag = PRS
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = BAY
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			} 
+			targeted_modifier = { 
+				tag = WUR
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			} 
+			targeted_modifier = { 
+				tag = HAN
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = SHL
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = SAX
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = MEK
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+		}
+	}
+}

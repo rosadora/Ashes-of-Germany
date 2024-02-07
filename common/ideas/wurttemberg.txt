@@ -1,0 +1,1126 @@
+ideas = {
+
+	country = {
+		incomprehension_about_the_saving_of_the_monarchy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.5
+				communism_drift = 0.1
+				democratic_drift = -0.02
+			}
+		}
+		government_with_the_monarchists = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				neutrality_drift = 0.05
+				democratic_drift = 0.02
+			}
+		}
+		push_to_victory = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		royal_property_seized = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				stability_factor = -0.1
+			}
+		}
+		de_royalize_the_country = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_king_handled
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = -0.1
+			}
+		}
+		each_person_a_job = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.075
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		improved_worker_conditions = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		soviet_in_entreprise = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+		increased_wages = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.2
+			}
+		}
+		stasi = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_secret_police
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				resistance_damage_to_garrison = -0.2
+				resistance_target = -0.1
+			}
+		}
+		collective_farms = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = LIT_invested_in_farms
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.075
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+		kulaks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				consumer_goods_factor = 0.1
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		centralized_power = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = home_of_revolution
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.2
+				war_support_factor = 0.1
+			}
+		}
+		wurttembergian_red_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.3
+				army_attack_factor = 0.1
+			}
+		}
+		do_not_be_shaken = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = saf_soviet_advisers
+
+			removal_cost = -1
+			
+			modifier = {
+             defensive_war_stability_factor = 0.4
+			 offensive_war_stability_factor = 0.25
+			}
+		}
+		public_healthcare2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.3
+				monthly_population = 0.5
+				experience_loss_factor = -0.3
+			}
+		}
+		weak_monarchy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.3
+				war_support_factor = -0.2
+			}
+		}
+		weak_monarchy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		weak_monarchy3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.1
+			}
+		}
+		weak_monarchy4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		absolute_monarchy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.2
+				war_support_factor = -0.15
+			}
+		}
+		absolute_monarchy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.1
+				war_support_factor = -0.05
+			}
+		}
+		absolute_monarchy3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = -0.1
+				war_support_factor = 0.25
+			}
+		}
+		royal_guard = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_defence_factor = 0.1
+			}
+		}
+		imperial_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		imperial_army2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.3
+				army_org_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		imperial_army3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.3
+				army_org_factor = 0.2
+				army_attack_factor = 0.2
+				breakthrough_factor = 0.2
+			}
+		}
+		for_the_king = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		socialism_in_wurttemberg = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hol_haven_of_tolerance
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				democratic_drift = 0.02
+				communism_drift = 0.02
+			}
+		}
+		socialism_in_wurttemberg2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hol_haven_of_tolerance
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				democratic_drift = 0.02
+				communism_drift = 0.02
+			}
+		}
+		socialism_in_wurttemberg3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hol_haven_of_tolerance
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.1
+				democratic_drift = 0.02
+				communism_drift = 0.02
+			}
+		}
+		socialism_in_wurttemberg4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hol_haven_of_tolerance
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				consumer_goods_factor = -0.1
+				democratic_drift = 0.02
+				communism_drift = 0.02
+			}
+		}
+		refugiees_of_fascism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.75
+			}
+		}
+		republican_school = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_atomic_bomb_project
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		white_terror = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_purge
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.05
+				democratic_drift = -0.02
+			}
+		}
+		white_terror2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_purge
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.05
+				democratic_drift = -0.02
+				resistance_decay = 0.3
+				resistance_damage_to_garrison = -0.15
+				resistance_target = 0.1
+			}
+		}
+		crackdown_corps = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_purge
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_decay = 0.5
+				resistance_damage_to_garrison = -0.4
+				resistance_target = 0.25
+			}
+		}
+		the_supreme_ruler = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.2
+			}
+		}
+		the_supreme_ruler2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.4
+				stability_factor = 0.2
+				army_attack_factor = 0.1
+				industrial_capacity_factory = 0.3
+			}
+		}
+		labour_camps = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				weekly_manpower = -100
+			}
+		}
+		birth_promoting_act = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = 2
+			}
+		}
+		supreme_conscription = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.07
+				army_org_factor = -0.05
+			}
+		}
+		supreme_conscription2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.3
+				army_org_factor = -0.15
+			}
+		}
+		shock_doctrine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.25
+			}
+		}
+		state_owned_compagnies = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		state_owned_compagnies2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		shock_doctrine2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.25
+				army_speed_factor = 0.2
+			}
+		}
+		workers_militias = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				army_org_factor = -0.05
+			}
+		}
+		workers_militias2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				army_org_factor = 0.1
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+			}
+		}
+		public_healthcare = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.15
+				experience_loss_factor = -0.2
+			}
+		}
+		anti_communist_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ger_bulwark_against_bolshevism
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				neutrality_drift = 0.03
+			}
+		}
+		royal_conscription = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				conscription_factor = 0.3
+			}
+		}
+		defend_the_fatherland = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_wall_line
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.25
+			}
+		}
+		alpine_economic_market = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		sale_of_tanks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				war_support_weekly = -0.002
+			}
+		}
+		purchases_of_tanks = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				war_support_weekly = 0.002
+			}
+		}
+		the_red_threat = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_acceptance = -50
+				neutrality_acceptance = 50
+				fascism_acceptance = 50
+			}
+		}
+		no_extreme = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_acceptance = -50
+				neutrality_acceptance = 50
+				democratic_acceptance = 50
+				fascism_acceptance = -50
+			}
+		}
+		military_restrictions = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tfv_can_conscription_crisis
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
+		reconciliation_campaign = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+	}
+
+
+
+
+}

@@ -1,0 +1,78 @@
+ideas = {
+
+	country = {
+		memories_from_the_1926_coup = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_wargames
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.05
+				political_power_gain = 0.15
+			} 
+		}
+		guardian_of_konigsberg = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWI_spirit_of_helvetia_defensive_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_core_defence_factor = 0.075
+				conscription = 0.03
+				stability_factor = -0.1
+			} 
+
+			targeted_modifier = { 
+				tag = PRS
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = BAY
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			} 
+			targeted_modifier = { 
+				tag = WUR
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			} 
+			targeted_modifier = { 
+				tag = HAN
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = SHL
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = SAX
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+				tag = MEK
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+		}
+	}
+}

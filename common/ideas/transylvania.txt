@@ -1,0 +1,367 @@
+ideas = {
+
+	country = {
+		unfinished_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_crush_the_revolution
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.02
+				stability_factor = -0.075
+			}
+		}
+		queer_insurgency = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = queer_insurgency
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.005
+			}
+		}
+		hungarian_puppet = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_oppression
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.35
+			}
+		}
+		all_queer_uprising = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = queer_insurgency
+
+			removal_cost = -1
+			
+			modifier = {
+				out_of_supply_factor = -1
+				army_attack_factor = 0.25
+				terrain_penalty_reduction = 0.5
+				army_org_factor = 0.25
+				weekly_manpower = 5000
+			}
+		}
+		anti_authoritarian_struggle = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_factionalism_modifier
+
+			removal_cost = -1
+			
+			targeted_modifier= {
+				tag = TRA 
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.1
+			}
+		}
+		grozas_debacle = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_army_of_aggression_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				out_of_supply_factor = -1
+				terrain_penalty_reduction = 1
+				army_attack_factor = 0.25
+				army_org_factor = 0.25
+				ai_focus_aggressive_factor = 2
+			}
+		}
+		communist_counterattack = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_war_heroes
+
+			removal_cost = -1
+			
+			targeted_modifier= {
+				tag = QTT 
+				attack_bonus_against = 0.4
+			}
+
+			modifier = {
+				army_org_factor = 0.5
+				ai_focus_aggressive_factor = 2
+			}
+		}
+		military_aid = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_divisions_required = -0.3
+				send_volunteer_size = 5
+				send_volunteers_tension = -1
+			}
+		}
+		memories_from_the_civil_war = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_from_the_transylvanian_civil_war
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				consumer_goods_factor = 0.25
+				army_org_factor = -0.15
+			}
+		}
+		industrial_race = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.35
+				production_speed_buildings_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.5
+				stability_weekly = -0.0025
+				war_support_weekly = -0.0025
+			}
+		}
+		focus_on_production = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.25
+			}
+		}
+		walk_down_to_the_plain = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_support_focus
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ROM 
+				attack_bonus_against = 0.35
+				ai_focus_aggressive_factor = 1
+			}
+		}
+		disciplina_de_fier = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army_2
+
+			removal_cost = -1
+
+			modifier = {
+				offensive_war_stability_factor = 0.15
+				defensive_war_stability_factor = 0.3
+				war_support_factor = 0.1
+			}
+		}
+		romanian_peoples_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = romanian_peoples_army
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		romanian_peoples_army2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = romanian_peoples_army
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.15
+				army_defence_factor = 0.075
+			}
+		}
+		romanian_peoples_army3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = romanian_peoples_army
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.4
+				army_defence_factor = 0.075
+			}
+		}
+		romanian_peoples_army4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = romanian_peoples_army
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.4
+				army_defence_factor = 0.075
+				army_morale_factor = 0.25
+			}
+		}
+		modernization_of_equipment = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_volunteer_defence_corps
+
+			removal_cost = -1
+
+			modifier = {
+				equipment_conversion_speed = 0.5
+			}
+		}
+		marina_militara_romana = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = romanian_fleet
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+			}
+
+			equipment_bonus = { submarine = { instant = yes build_cost_ic = -0.10 } } 
+			equipment_bonus = { screen_ship = { instant = yes build_cost_ic = -0.10 } }
+			equipment_bonus = { destroyer = { instant = yes build_cost_ic = -0.10 } }
+		}
+	}
+}

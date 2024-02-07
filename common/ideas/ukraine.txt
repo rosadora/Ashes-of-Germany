@@ -1,0 +1,684 @@
+ideas = {
+
+	country = {
+		a_disunited_nation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = a_disunited_nation
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.15
+				political_power_factor = -0.35
+				war_support_factor = 0.25
+			} 
+		}
+		slava_ukrainyi_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = a_disunited_nation
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.05
+				war_support_factor = 0.25
+				army_attack_factor = 0.1
+			} 
+		}
+		greater_ukraine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = greater_ukraine
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = 0.15
+				war_support_factor = 0.25
+				army_attack_factor = 0.25
+			} 
+		}
+		hunt_the_leftists = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ENG_the_war_to_end_all_wars
+
+			removal_cost = -1
+			
+			modifier = { 
+				war_support_weekly = 0.005
+				stability_weekly = -0.002
+				social_democracy_drift = -0.05
+				communism_drift = -0.02
+				classical_marxism_drift = -0.02
+				libertarian_socialism_drift = -0.02
+			} 
+		}
+		popular_front = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ukrainian_popular_front
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_weekly = 0.002
+				democratic_drift = 0.01
+				communism_drift = 0.02
+				social_democracy_drift = 0.03
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.01
+			} 
+		}
+		nationalist_rise = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = oun_threat
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_weekly = -0.001
+				neutrality_drift = 0.03
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.01
+			} 
+		}
+		nationalist_cooperation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = oun_threat
+
+			removal_cost = -1
+			
+			modifier = { 
+				war_support_weekly = 0.002
+				democratic_drift = 0.01
+				neutrality_drift = 0.01
+				ultra_nationalism_drift = 0.01
+				fascism_drift = 0.01
+			} 
+		}
+		civil_war = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+
+			rule = {
+				can_join_factions = no
+				can_puppet = no
+			}
+			
+			modifier = { 
+				ai_focus_aggressive_factor = 1
+				ai_call_ally_desire_factor = -1000
+			} 
+		}
+		ukrainian_tachanka = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tachanka_tactics
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_attack_speed_factor = 0.3
+				army_speed_factor = 0.2
+				army_attack_factor = 0.075
+				army_org_factor = -0.05
+			} 
+		}
+		excavation_focus = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_exploit_mines
+
+			removal_cost = -1
+			
+			modifier = { 
+				local_resources_factor = 0.3
+			} 
+		}
+		in_the_meantime_we_must_import = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = { 
+				min_export = -0.15
+				trade_opinion_factor = 0.5
+			} 
+		}
+		ukrainian_economy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ukrainian_economy
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			} 
+		}
+		rearmament_plan = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_factory = 0.35
+				production_speed_arms_factory_factor = 0.25
+				consumer_goods_factor = -0.05
+			} 
+		}
+		the_zsu = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_zsu
+
+			removal_cost = -1
+			
+			modifier = { 
+				research_speed_factor = 0.08
+			} 
+		}
+		the_zsu2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_zsu
+
+			removal_cost = -1
+			
+			modifier = { 
+				research_speed_factor = 0.08
+				max_dig_in = 15
+			} 
+		}
+		the_zsu3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_zsu
+
+			removal_cost = -1
+			
+			modifier = { 
+				research_speed_factor = 0.08
+				max_dig_in = 15
+				army_core_attack_factor = 0.25
+				army_org_factor = 0.1
+				terrain_penalty_reduction = 0.35
+			} 
+		}
+		the_psu = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_psu_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				air_superiority_efficiency = 0.15
+			} 
+		}
+		the_psu2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_psu_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				air_superiority_efficiency = 0.15
+				air_weather_penalty = -0.25
+				air_wing_xp_loss_when_killed_factor = -0.15
+				ground_attack_factor = 0.075
+			} 
+		}
+		the_vmsu = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_vmsu_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_dockyard = 0.15
+			} 
+		}
+		the_vmsu2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_vmsu_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_dockyard = 0.15
+				naval_coordination = 0.25
+			} 
+			
+		}
+		the_vmsu3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_vmsu_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_dockyard = 0.15
+				naval_coordination = 0.25
+				convoy_escort_efficiency = 0.35
+			} 
+			
+		}
+		the_vmsu4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = the_vmsu_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_dockyard = 0.15
+				naval_coordination = 0.25
+				convoy_escort_efficiency = 0.35
+				naval_coordination = 0.5
+			} 
+			
+		}
+		economic_crash = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ROM_king_carol_emptied_accounts
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = 0.35
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				production_speed_buildings_factor = -0.5
+			} 
+		}
+		women_volunteers = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_international_brigades
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.05
+				conscription = 0.02
+			} 
+			
+		}
+		lgbt_rights = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = lgbtia_rights_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_weekly = 0.002
+				political_power_factor = 0.15
+				war_support_factor = 0.1
+			} 
+			
+		}
+		a_society_free_of_validism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = neutrality_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_weekly = 0.002
+				war_support_factor = -0.05
+				conscription_factor = 0.15
+				consumer_goods_factor = 0.05
+				army_defence_factor = 0.075
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			} 
+			
+		}
+		neo_makhnovism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = neo_makhnovism
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription = 0.05
+				stability_factor = 0.15
+				consumer_goods_factor = -0.05
+				line_change_production_efficiency_factor = 0.4
+				production_efficiency_growth = 0.25
+				political_power_factor = 0.15
+				stability_weekly = 0.005
+				war_support_factor = 0.05
+				conscription_factor = 0.15
+				army_defence_factor = 0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				ai_focus_aggressive_factor = 0.85
+			} 
+			
+		}
+		the_road_to_socialism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.05
+			} 
+			
+		}
+		great_works = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan_civilian
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_buildings_factor = 0.15
+			} 
+			
+		}
+		national_unity_government = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			removal_cost = -1
+			
+			modifier = { 
+				democratic_drift = 0.03
+				ultra_nationalism_drift = 0.01
+				neutrality_drift = 0.01
+				fascism_drift = 0.01
+				political_power_factor = 0.15
+				stability_weekly = 0.002
+			} 
+			
+		}
+		purchase_territory = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = 0.075
+			} 
+			
+		}
+		purchased_territory = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.075
+			} 
+			
+		}
+		operation_thunderstorm = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			modifier = { 
+				terrain_penalty_reduction = 1
+				army_org_factor = 0.25
+				army_attack_factor = 0.35
+			} 
+			
+		}
+		work_fight_or_perish_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = work_fight_or_perish_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription = 0.04
+				stability_factor = -0.25
+				political_power_factor = -0.15
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_efficiency_growth = 0.25
+				production_factory_max_efficiency_factor = 0.1
+			} 
+			
+		}
+	}
+}

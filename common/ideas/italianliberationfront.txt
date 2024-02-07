@@ -1,0 +1,308 @@
+ideas = {
+
+	country = {
+		unione_precaria = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				custom_trigger_tooltip = {
+			  set_temp_variable = { ILF_gov_support = party_popularity@classical_liberalism }
+			  add_to_temp_variable = { ILF_gov_support = party_popularity@social_liberalism }
+			  add_to_temp_variable = { ILF_gov_support = party_popularity@social_democracy }
+			  check_variable = { ILF_gov_support > 0.7 }
+		     }
+			}
+
+			picture = chi_incompetent_officers
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				army_org_factor = -0.1
+			}
+		}
+		sacred_union = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_global_flag = italian_civil_war_over
+			}
+
+			picture = ITA_italian_irredentism
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+		struggle_for_democracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_global_flag = italian_civil_war_over
+			}
+
+			picture = EST_democratic_opposition
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+				surrender_limit = 0.1
+			}
+		}
+		italian_democratic_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_conservative_high_command
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.075
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.2
+				experience_gain_navy_factor = -0.2
+				experience_gain_air_factor = -0.2
+			}
+		}
+		italian_democratic_army2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_conservative_high_command
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				experience_gain_navy_factor = 0.05
+				experience_gain_air_factor = 0.05
+				conscription_factor = -0.1
+			}
+		}
+		italian_democratic_army3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_conservative_high_command
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.075
+				army_morale_factor = 0.05
+				experience_gain_army_factor = 0.25
+				experience_gain_navy_factor = 0.25
+				experience_gain_air_factor = 0.25
+				conscription_factor = -0.2
+			}
+		}
+		every_democrat_a_gun = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		cheap_planes = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_support_focus
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				light_air = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		warriors_from_the_moutains = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_global_flag = italian_civil_war_over
+			}
+
+			picture = tur_sub_zero_survival_training
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				terrain_penalty_reduction = 0.2
+				acclimatization_cold_climate_gain_factor = 0.2
+			}
+		}
+		austerity_mesures = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.003
+				consumer_goods_factor = -0.3
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		keynesian_politics = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fourth_five_year_plan
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = 0.3
+			}
+		}
+		italia_viva = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_italian_irredentism
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription = 0.02
+			}
+		}
+		indipendenza_o_morte = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.1
+			}
+		}
+		reach_the_eternal_city = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_global_flag = italian_civil_war_over
+			}
+
+			picture = SWI_spirit_of_helvetia_aggressive_war
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+		}
+    }
+}

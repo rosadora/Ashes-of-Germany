@@ -1,0 +1,91 @@
+ideas = {
+
+	country = {
+		revolutionary_defence = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_global_flag = italian_civil_war_over
+			}
+
+			picture = SPR_anti_fascist_crusade
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		kickstart_the_industry = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_global_flag = italian_civil_war_over
+			}
+
+			picture = SOV_stakhanovite_movement
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.25
+				line_change_production_efficiency_factor = 0.35
+				stability_factor = -0.1
+			}
+		}
+		gruppi_di_difesa_della_donna = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_women_in_the_army
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.15
+				army_attack_factor = 0.05
+				conscription_factor = 0.25
+			}
+		}
+		armata_rossa = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = saf_soviet_advisers
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.125
+				army_attack_factor = -0.05
+				army_morale_factor = -0.1
+				experience_gain_army_factor = -0.2
+				experience_gain_navy_factor = -0.2
+				experience_gain_air_factor = -0.2
+			}
+		}
+    }
+}

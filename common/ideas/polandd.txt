@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+		guardian_of_europe = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWI_spirit_of_helvetia_defensive_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.1
+				army_defence_factor = 0.1
+			} 
+		}
+	}
+}
