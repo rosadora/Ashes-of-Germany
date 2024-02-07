@@ -1,0 +1,313 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_a_disunited_nation"
+		texturefile = "gfx/interface/ideas/a_disunited_nation.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_ukrainian_popular_front"
+		texturefile = "gfx/interface/ideas/ukrainian_popular_front.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_oun_threat"
+		texturefile = "gfx/interface/ideas/oun_threat.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_tachanka_tactics"
+		texturefile = "gfx/interface/ideas/tachanka_tactics.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ukrainian_economy"
+		texturefile = "gfx/interface/ideas/ukrainian_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_the_zsu"
+		texturefile = "gfx/interface/ideas/the_zsu.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_the_psu_idea"
+		texturefile = "gfx/interface/ideas/the_psu_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_the_vmsu_idea"
+		texturefile = "gfx/interface/ideas/the_vmsu_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lgbtia_rights_idea"
+		texturefile = "gfx/interface/ideas/lgbtia_rights_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_neo_makhnovism"
+		texturefile = "gfx/interface/ideas/neo_makhnovism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_work_fight_or_perish_idea"
+		texturefile = "gfx/interface/ideas/work_fight_or_perish_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_greater_ukraine"
+		texturefile = "gfx/interface/ideas/greater_ukraine.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_belarusian_popular_front"
+		texturefile = "gfx/interface/ideas/belarusian_popular_front.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_operation_breakwater"
+		texturefile = "gfx/interface/ideas/operation_breakwater.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_five_years_plan"
+		texturefile = "gfx/interface/ideas/five_years_plan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_neo_paganism_idea"
+		texturefile = "gfx/interface/ideas/neo_paganism_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_plundering_idea"
+		texturefile = "gfx/interface/ideas/plundering_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_segregation_neo_paganist_idea"
+		texturefile = "gfx/interface/ideas/segregation_neo_paganist_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_belarusian_army"
+		texturefile = "gfx/interface/ideas/belarusian_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_queer_insurgency"
+		texturefile = "gfx/interface/ideas/queer_insurgency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_memories_from_the_transylvanian_civil_war"
+		texturefile = "gfx/interface/ideas/memories_from_the_transylvanian_civil_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_romanian_peoples_army"
+		texturefile = "gfx/interface/ideas/romanian_peoples_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_romanian_fleet"
+		texturefile = "gfx/interface/ideas/romanian_fleet.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_bayern_militias"
+		texturefile = "gfx/interface/ideas/bayern_militias.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_economic_crash"
+		texturefile = "gfx/interface/ideas/economic_crash.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_dark_times"
+		texturefile = "gfx/interface/ideas/dark_times.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Republikanischer_Schutzbund"
+		texturefile = "gfx/interface/ideas/Republikanischer_Schutzbund.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Republikanischer_Schutzbund_campaign"
+		texturefile = "gfx/interface/ideas/Republikanischer_Schutzbund_campaign.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lento_idea"
+		texturefile = "gfx/interface/ideas/lento_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_salzburg_festival"
+		texturefile = "gfx/interface/ideas/salzburg_festival.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_red_army_choir"
+		texturefile = "gfx/interface/ideas/red_army_choir.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_moderato_idea"
+		texturefile = "gfx/interface/ideas/moderato_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_allegro_idea"
+		texturefile = "gfx/interface/ideas/allegro_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_the_musical_republic"
+		texturefile = "gfx/interface/ideas/the_musical_republic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_prestissimo_idea"
+		texturefile = "gfx/interface/ideas/prestissimo_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_austrian_industry"
+		texturefile = "gfx/interface/ideas/austrian_industry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_bundesheer"
+		texturefile = "gfx/interface/ideas/bundesheer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_terror"
+		texturefile = "gfx/interface/ideas/terror.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hungarian_industry"
+		texturefile = "gfx/interface/ideas/hungarian_industry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hun_army"
+		texturefile = "gfx/interface/ideas/hun_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_republican_guard_hungary"
+		texturefile = "gfx/interface/ideas/republican_guard_hungary.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_steppes_warriors"
+		texturefile = "gfx/interface/ideas/steppes_warriors.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_imperial_guard_idea"
+		texturefile = "gfx/interface/ideas/imperial_guard_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_for_the_empire"
+		texturefile = "gfx/interface/ideas/for_the_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_freedom_or_death"
+		texturefile = "gfx/interface/ideas/freedom_or_death.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_vive_la_commune"
+		texturefile = "gfx/interface/ideas/vive_la_commune.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_garde_nationale"
+		texturefile = "gfx/interface/ideas/garde_nationale.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_great_industrial_reborn_idea"
+		texturefile = "gfx/interface/ideas/great_industrial_reborn_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sncf_idea"
+		texturefile = "gfx/interface/ideas/sncf_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_military_ram_up_idea"
+		texturefile = "gfx/interface/ideas/military_ram_up_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_war_communism"
+		texturefile = "gfx/interface/ideas/war_communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_new_man_cult_idea"
+		texturefile = "gfx/interface/ideas/new_man_cult_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_war_communism"
+		texturefile = "gfx/interface/ideas/war_communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_war_communism"
+		texturefile = "gfx/interface/ideas/war_communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_war_communism"
+		texturefile = "gfx/interface/ideas/war_communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_classical_liberalism_category"
+		texturefile = "gfx/interface/ideologies/classical_liberalism_category.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_social_liberalism_category"
+		texturefile = "gfx/interface/ideologies/social_liberalism_category.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_social_democracy_category"
+		texturefile = "gfx/interface/ideologies/social_democracy_category.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ultra_nationalism_category"
+		texturefile = "gfx/interface/ideologies/ultra_nationalism_category.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_council_communist"
+		texturefile = "gfx/interface/ideologies/council_communist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_classical_marxism_category"
+		texturefile = "gfx/interface/ideologies/classical_marxism_category.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_libertarian_socialism_category"
+		texturefile = "gfx/interface/ideologies/libertarian_socialism_category.dds"
+	}
+
+}

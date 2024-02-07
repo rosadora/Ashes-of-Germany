@@ -1,0 +1,50 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_large_kuno_von_westarp"
+		texturefile = "gfx/leaders/portrait_large_kuno_von_westarp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_kuno_von_westarp"
+		texturefile = "gfx/leaders/portrait_small_kuno_von_westarp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_hans_schlange"
+		texturefile = "gfx/leaders/portrait_small_hans_schlange.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_paul_le_jeune_jung"
+		texturefile = "gfx/leaders/portrait_small_paul_le_jeune_jung.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_axel_von_f"
+		texturefile = "gfx/leaders/portrait_small_axel_von_f.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_oskar_hergt"
+		texturefile = "gfx/leaders/portrait_small_oskar_hergt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_hermann_schroter"
+		texturefile = "gfx/leaders/portrait_small_hermann_schroter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_erwin_rommel"
+		texturefile = "gfx/leaders/portrait_small_erwin_rommel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_small_erwin_rommel"
+		texturefile = "gfx/leaders/portrait_small_erwin_rommel.dds"
+	}
+
+
+
+}
