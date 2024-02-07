@@ -1,0 +1,67 @@
+
+music = {
+	name = "die_wacht_am_rhein"
+	file = "die_wacht_am_rhein.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "le_chant_du_depart"
+	file = "le_chant_du_depart.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "jingle_bells_red_army_choir"
+	file = "jingle_bells_red_army_choir.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "ukrainian_hymn"
+	file = "ukrainian_hymn.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "the_internationale"
+	file = "the_internationale.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "arbeiter_von_wien"
+	file = "arbeiter_von_wien.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "linsurge"
+	file = "linsurge.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "linsurge"
+	file = "linsurge.ogg"
+	volume = 0.95
+}
+
+music = {
+	name = "victory_day_song"
+	file = "victory_day_song.ogg"
+	volume = 1.3
+}
+
+music = {
+	name = "farwell_of_slavianka_extrac"
+	file = "farwell_of_slavianka_extrac.ogg"
+	volume = 1.3
+}
+
+music = {
+	name = "giovinezza"
+	file = "giovinezza.ogg"
+	volume = 1.3
+}
+

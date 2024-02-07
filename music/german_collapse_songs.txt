@@ -1,0 +1,74 @@
+
+music_station = "german_collapse_music_station"
+
+music = {
+	song = "die_wacht_am_rhein"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "le_chant_du_depart"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "jingle_bells_red_army_choir"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "ukrainian_hymn"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "the_internationale"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "arbeiter_von_wien"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "linsurge"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "giovinezza"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
