@@ -1,4 +1,4 @@
-version="1.13.5"
+version="1.13.7"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -6,7 +6,7 @@ tags={
 	"Gameplay"
 	"Ideologies"
 }
-name="Ashes of Germany : Benvenuto Duce!"
+name="Ashes of Germany"
 replace_path="common/national_focus"
-supported_version="1.13.6"
+supported_version="1.13.7"
 remote_file_id="3153337708"
