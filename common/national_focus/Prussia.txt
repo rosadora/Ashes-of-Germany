@@ -86,6 +86,8 @@
 			factor = 5
 		}
 		available = {
+			controls_state = 66
+			controls_state = 67
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2905,10 +2907,8 @@
 		completion_reward = {
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
-			944 = { set_demilitarized_zone = no }
 			add_state_core = 42
 			add_state_core = 51
-			add_state_core = 944
 			add_state_core = 943
 			custom_effect_tooltip = GER_rhineland_ultimatum
 			add_political_power = 120
@@ -3627,9 +3627,10 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			set_cosmetic_tag = PRA
+			add_state_core = 944
 			add_state_core = 65
 			add_state_core = 60
-			add_state_core = 917
+			add_state_core = 909
 			add_state_core = 61
 			add_state_core = 58
 			add_state_core = 65

@@ -810,6 +810,10 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
+			add_state_core = 937
+			add_state_core = 938
+			add_state_core = 939
+			add_state_core = 941
 			add_state_core = 848
 			add_state_core = 153
 			add_state_core = 152
@@ -903,10 +907,9 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_state_core = 910
 			add_state_core = 51
 			add_state_core = 42
-			add_state_core = 909
+			add_state_core = 943
 			add_state_core = 28
 			add_state_core = 8
 			create_wargoal = {
@@ -955,6 +958,11 @@
 			add_state_core = 807
 			add_state_core = 762
 			add_state_core = 85
+			add_state_core = 763
+			add_state_core = 5
+			add_state_core = 66
+			add_state_core = 67
+			add_state_core = 188
 			create_wargoal = {
 				type = annex_everything
 				target = POL
