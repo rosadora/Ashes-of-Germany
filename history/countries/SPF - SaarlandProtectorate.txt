@@ -1,5 +1,7 @@
 ﻿capital = 909 
 
+oob = SPF_1936
+
 air_experience = 50
 navy_experience = 50
 

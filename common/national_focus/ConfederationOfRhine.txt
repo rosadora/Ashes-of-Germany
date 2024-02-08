@@ -1960,7 +1960,7 @@
 		}
 		available = {
 			controls_state = 51
-			controls_state = 910
+			controls_state = 42
 		}
 		bypass = {
 		}
@@ -2675,7 +2675,8 @@
 			add_state_core = 57
 			add_state_core = 56
 			add_state_core = 59
-			add_state_core = 917
+			add_state_core = 936
+			add_state_core = 935
 			add_state_core = 50
 			add_state_core = 52
 			add_state_core = 53
