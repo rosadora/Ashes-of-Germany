@@ -325,6 +325,7 @@ ideas = {
 		freedom_or_death = {
 			
 			allowed = {
+				has_war = yes
 			}
 
 			allowed_civil_war = {
@@ -347,6 +348,7 @@ ideas = {
 		freedom_or_death2 = {
 			
 			allowed = {
+				has_war = yes
 			}
 
 			allowed_civil_war = {

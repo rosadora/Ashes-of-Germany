@@ -5,7 +5,7 @@ state={
 		529 3512 6469 6570 9482 
 	}
 	history={
-		owner = RCO
+		owner = HAN
 		victory_points = {
 			6469 10 
 		}
@@ -14,8 +14,7 @@ state={
 			industrial_complex = 3
 
 		}
-		add_core_of = RCO
-		set_demilitarized_zone = yes
+		add_core_of = HAN
 	}
 	manpower=4536252
 	buildings_max_level_factor=1.000
