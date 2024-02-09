@@ -16,7 +16,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
-				army_org_factor = 0.25
+				army_org_factor = 0.15
 			}
 
 			cancel_if_invalid = no
@@ -52,7 +52,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.015
-				army_org_factor = 0.15
+				army_org_factor = 0.075
 			}
 
 			default = yes
@@ -125,7 +125,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.025
+				conscription = 0.03
 				army_org_factor = 0.05
 			}
 
@@ -208,7 +208,7 @@ ideas = {
 				#industrial_capacity_factory = -0.1
 				#production_speed_buildings_factor = -0.1
 				training_time_factor = 0.1
-				army_org_factor = -0.05
+				army_org_factor = -0.02
 			}
 
 			cancel_if_invalid = no
@@ -282,7 +282,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.1
 				training_time_factor = 0.2
-				army_org_factor = -0.1
+				army_org_factor = -0.05
 			}
 
 			cancel_if_invalid = no
@@ -414,7 +414,7 @@ ideas = {
 				production_speed_buildings_factor = -0.3
 				#XP from reinforcement penalty (small)
 				training_time_factor = 0.3
-				army_org_factor = -0.15
+				army_org_factor = -0.1
 			}
 
 			cancel_if_invalid = no
@@ -529,7 +529,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.4
 				production_speed_buildings_factor = -0.4
 				training_time_factor = 0.5
-				army_org_factor = -0.2
+				army_org_factor = -0.15
 			}
 
 			cancel_if_invalid = no
