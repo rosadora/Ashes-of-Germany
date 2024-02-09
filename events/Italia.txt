@@ -22,7 +22,7 @@ country_event = { #The Civil War Starts
 		hidden_effect = {
 			set_global_flag = italian_civil_war
 			delete_unit = {}
-        every_core_state = {
+        every_owned_state = {
 			add_claim_by = ILF
 		}
 		ILF = { 
@@ -51,6 +51,9 @@ country_event = { #The Civil War Starts
 
 		every_core_state = {
 			add_core_of = NLC
+		}
+		every_owned_state = {
+			add_claim_by = NLC
 		}
 		NLC = {
 			transfer_state = 158
