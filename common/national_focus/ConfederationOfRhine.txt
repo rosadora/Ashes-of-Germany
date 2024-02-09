@@ -1968,7 +1968,7 @@
 					instant_build = yes
 			    }
 			}
-		 910 = {
+		 42 = {
 		 add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -2784,7 +2784,7 @@
 			factor = 1
 		}
 		available = {
-			controls_state = 5
+			controls_state = 64
 		}
 		bypass = {
 		}
