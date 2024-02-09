@@ -1229,7 +1229,9 @@
 		available = {
 			NOT = {
 				has_idea = war_reparations
+				has_war_with = PRS
 			}
+			
 		}
 		relative_position_id = FRC_war_reparations
 		cancel_if_invalid = yes

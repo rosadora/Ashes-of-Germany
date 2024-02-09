@@ -3631,6 +3631,7 @@
 		completion_reward = {
 			set_cosmetic_tag = PRA
 			add_state_core = 944
+			add_state_core = 936
 			add_state_core = 65
 			add_state_core = 60
 			add_state_core = 909
