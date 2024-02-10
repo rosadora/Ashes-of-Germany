@@ -3,7 +3,7 @@ characters = {
 		name="Harry Graf Kessler"
 		portraits={
 			civilian={
-				large="GFX_Harry_Graf_Kessler"
+				large="GFX_Harry_Kessler"
 			}
 		}
 		country_leader={

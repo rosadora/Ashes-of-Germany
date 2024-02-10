@@ -1089,4 +1089,14 @@ spriteTypes = {
 		name = "GFX_Emil_Maurice_smol"
 		texturefile = "gfx/leaders/MEK/Emil_Maurice_smol.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Harry_Kessler"
+		texturefile = "gfx/leaders/SHL/Harry_Kessler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Harry_Kessler_smol"
+		texturefile = "gfx/leaders/SHL/Harry_Kessler_smol.dds"
+	}
 }

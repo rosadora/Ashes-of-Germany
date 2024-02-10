@@ -15667,7 +15667,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_ponomarenko_comrade_shine"
+		name = "GFX_goal_ponomarenko_comrade_shine"
 		texturefile = "gfx/interface/goals/ponomarenko_comrade.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

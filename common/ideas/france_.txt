@@ -631,7 +631,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.125
 			} 
 		}
-		volunteers_in_the_spanish_civil_war = {
+		volunteers_in_the_italian_civil_war = {
 			
 			allowed = {
 			}

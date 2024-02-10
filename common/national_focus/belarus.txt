@@ -2661,8 +2661,8 @@
 		}
 	}
 	focus = {
-		id = BEL_intervention_in_spanish_civil_war
-		icon = GFX_focus_spr_no_pasaran
+		id = BEL_intervention_in_italian_civil_war
+		icon = GFX_focus_ITA_communist_leadership
 		prerequisite = {focus = BEL_welcome_the_revolutionaries_in_exile}
 		x = 6
 		y = 3
@@ -2674,7 +2674,7 @@
 		}
 
 		available = {
-			has_global_flag = spanish_civil_war
+			has_global_flag = italian_civil_war
 		}
 		
 		bypass = {
@@ -2688,8 +2688,8 @@
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = volunteers_in_the_spanish_civil_war
-				days = 500
+				idea = volunteers_in_italian_civil_war
+				days = 700
 			}
 		}
 	}
