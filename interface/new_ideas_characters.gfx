@@ -1069,5 +1069,24 @@ spriteTypes = {
 		name = "GFX_Janis_Kalnberzins_smol"
 		texturefile = "gfx/leaders/LAT/Janis_Kalnberzins_smol.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Friedrich_Christian"
+		texturefile = "gfx/leaders/SAX/Friedrich_Christian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Friedrich_Christian_smol"
+		texturefile = "gfx/leaders/SAX/Friedrich_Christian_smol.dds"
+	}
 	
+	spriteType = {
+		name = "GFX_Emil_Maurice"
+		texturefile = "gfx/leaders/MEK/Emil_Maurice.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Emil_Maurice_smol"
+		texturefile = "gfx/leaders/MEK/Emil_Maurice_smol.dds"
+	}
 }

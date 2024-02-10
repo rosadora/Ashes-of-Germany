@@ -162,6 +162,7 @@ set_popularities = {
 add_ideas = {
 	radicalization_of_the_political_scene
 	unstable_republic
+	general_staff
 }
 
 

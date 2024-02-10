@@ -22,6 +22,20 @@ characters={
 		}
 	}
 
+	CZE_Josef_Vaclav_Najman={
+		name="Josef Václav Najman"
+		portraits={
+			civilian={
+				large=GFX_portrait_Edvard_Benes
+			}
+		}
+		country_leader={
+			ideology=classical_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	CZE_Karel_Kramar={
 		name="Karel Kramář"
 		portraits={

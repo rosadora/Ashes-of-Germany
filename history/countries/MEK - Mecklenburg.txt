@@ -138,21 +138,33 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
-
 }
+
 set_popularities = {
-	democratic = 30
-	fascism = 10
-	communism = 60
+	fascism = 34
+	ultra_nationalism = 23
+	neutrality = 5
+	democratic = 3
+	classical_liberalism = 28
+	social_liberalism = 1
+	social_democracy = 2
+	classical_marxism = 1
+	libertarian_socialism = 1
+	communism = 2
 }
 
 add_ideas = {
 	general_staff
 }
+
+recruit_character = MEK_Emil_Maurice
+recruit_character = MEK_Hans_Schlange_Schoningen
+recruit_character = MEK_Wilhelm_Kroger
+recruit_character = MEK_Ernst_Goldenbaum
 
 
 

@@ -1,0 +1,74 @@
+characters = {
+	SHL_Harry_Graf_Kessler={
+		name="Harry Graf Kessler"
+		portraits={
+			civilian={
+				large="GFX_Harry_Graf_Kessler"
+			}
+		}
+		country_leader={
+			ideology=classical_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=social_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SHL_Harman_Grube={
+		name="Harman Grube"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SHL_Adolf_Rembte={
+		name="Adolf Rembte"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=classical_marxism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=libertarian_socialism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SHL_Lothar_Witzke={
+		name="Lothar Witzke"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=ultra_nationalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

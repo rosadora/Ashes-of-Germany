@@ -163,14 +163,25 @@ set_politics = {
 
 }
 set_popularities = {
-	democratic = 30
-	fascism = 10
-	communism = 60
+	ultra_nationalism = 7
+	neutrality = 35
+	democratic = 3
+	classical_liberalism = 10
+	social_liberalism = 3
+	social_democracy = 28
+	classical_marxism = 10
+	libertarian_socialism = 1
+	communism = 3
 }
 
 add_ideas = {
 	general_staff
 }
+
+recruit_character = SAX_Friedrich_Christian_von_Sachsen
+recruit_character = SAX_George_Schreiber
+recruit_character = SAX_Hermann_Fleissner
+recruit_character = SAX_Hugo_Graf
 
 
 
