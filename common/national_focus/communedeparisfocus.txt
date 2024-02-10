@@ -844,12 +844,16 @@
 		completion_reward = {
 			custom_effect_tooltip = frc_mutineers
 			hidden_effect = {
-			FRA = {
-			transfer_units_fraction= {
-	        target = FRC
-	        navy_ratio = 0.4
-            }
-			}
+				FRA = {
+					transfer_units_fraction = {
+						target = FRC
+						size = 0.0
+						stockpile_ratio = 0.0
+						army_ratio = 0.0
+						navy_ratio = 0.4
+						air_ratio = 0.0
+					}
+				}
 			}
 		}
 	}

@@ -2694,7 +2694,7 @@
 				add_state_core = 935
 				country_event = {
 					id = francenew.20
-					days 2
+					days = 2
 				}
 			}
 		}
@@ -2735,7 +2735,7 @@
 			SPF = {
 				country_event = {
 					id = francenew.22
-					days 2
+					days = 2
 				}
 			}
 		}
@@ -4200,7 +4200,7 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
             declare_war_on = {
-				wargoal = annex_everything
+				type = annex_everything
 				target = ENG
 			}
 			swap_ideas = {
@@ -4995,40 +4995,6 @@
 		}
 		relative_position_id = FRA_urbanization_of_the_country
 		prerequisite = {focus = FRA_towards_autarky}
-		cost = 8
-			ai_will_do = {
-			factor = 1
-		}
-		available = {
-			controls_state = 21
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_resource = {
-           type = aluminium
-           amount = 35
-           state = 21
-           }
-		}
-	}
-	focus = {
-		id = FRA_marseille_aluminium
-		icon = GFX_focus_generic_aluminum
-		x = -4
-		y = 4
-		offset = {
-			x = 0
-			y = 0
-		}
-		relative_position_id = FRA_urbanization_of_the_country
-		prerequisite = {focus = FRA_marseille_aluminium}
 		cost = 8
 			ai_will_do = {
 			factor = 1

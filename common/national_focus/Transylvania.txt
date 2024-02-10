@@ -35,7 +35,6 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -65,7 +64,6 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -95,7 +93,6 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -128,7 +125,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -165,7 +162,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -257,7 +254,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -288,7 +285,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -319,7 +316,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -356,7 +353,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -445,7 +442,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -475,7 +472,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -509,7 +506,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -551,7 +548,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -585,7 +582,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -615,7 +612,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -645,7 +642,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -693,7 +690,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -725,7 +722,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -755,7 +752,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -817,7 +814,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -891,7 +888,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -956,7 +953,7 @@
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-		relative_position_id = TRA_struggle_with_queer
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {

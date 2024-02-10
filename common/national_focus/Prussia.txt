@@ -419,7 +419,7 @@
 		}
 	}
 	focus = {
-		id = FRA_face_the_crisis
+		id = PRS_face_the_crisis
 		icon = GFX_goal_dealing_with_economic_crisis
 		x = 40
 		y = 7
@@ -441,13 +441,13 @@
 		}
 	}
 	focus = {
-		id = FRA_side_with_small_and_medium_compagnies
+		id = PRS_side_with_small_and_medium_compagnies
 		icon = GFX_goal_centralized_management
 		x = -1
 		y = 1
-		prerequisite = {focus = FRA_face_the_crisis}
-		mutually_exclusive = {focus = FRA_let_the_compagnies_fail}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_face_the_crisis}
+		mutually_exclusive = {focus = PRS_let_the_compagnies_fail}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -466,13 +466,13 @@
 		}
 	}
 	focus = {
-		id = FRA_let_the_compagnies_fail
+		id = PRS_let_the_compagnies_fail
 		icon = GFX_goal_compagnies_fail
 		x = 1
 		y = 1
-		prerequisite = {focus = FRA_face_the_crisis}
-		mutually_exclusive = {focus = FRA_side_with_small_and_medium_compagnies}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_face_the_crisis}
+		mutually_exclusive = {focus = PRS_side_with_small_and_medium_compagnies}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -500,12 +500,12 @@
 		}
 	}
 	focus = {
-		id = FRA_stop_printing_money
+		id = PRS_stop_printing_money
 		icon = GFX_goal_stop_printing_money
 		x = 0
 		y = 2
-		prerequisite = {focus = FRA_let_the_compagnies_fail focus = FRA_side_with_small_and_medium_compagnies}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_let_the_compagnies_fail focus = PRS_side_with_small_and_medium_compagnies}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -527,12 +527,12 @@
 		}
 	}
 	focus = {
-		id = FRA_raise_interest_rate
+		id = PRS_raise_interest_rate
 		icon = GFX_focus_mex_privatisation
 		x = -2
 		y = 3
-		prerequisite = {focus = FRA_stop_printing_money}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_stop_printing_money}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -560,12 +560,12 @@
 		}
 	}
 	focus = {
-		id = FRA_support_soup_kitchens
+		id = PRS_support_soup_kitchens
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 3
-		prerequisite = {focus = FRA_stop_printing_money}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_stop_printing_money}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -580,12 +580,12 @@
 		}
 	}
 	focus = {
-		id = FRA_support_the_farmers
+		id = PRS_support_the_farmers
 		icon = GFX_focus_ITA_grande_rivolta_rurale
 		x = 2
 		y = 3
-		prerequisite = {focus = FRA_stop_printing_money}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_stop_printing_money}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -605,10 +605,10 @@
 		icon = GFX_focus_ETH_adopt_the_lira
 		x = 0
 		y = 4
-		prerequisite = {focus = FRA_raise_interest_rate}
-		prerequisite = {focus = FRA_support_the_farmers}
-		prerequisite = {focus = FRA_support_soup_kitchens}
-		relative_position_id = FRA_face_the_crisis
+		prerequisite = {focus = PRS_raise_interest_rate}
+		prerequisite = {focus = PRS_support_the_farmers}
+		prerequisite = {focus = PRS_support_soup_kitchens}
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -631,7 +631,7 @@
 		x = -1
 		y = 5
 		prerequisite = {focus = PRS_austerity_mesures}
-		relative_position_id = FRA_face_the_crisis
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -654,7 +654,7 @@
 		x = 1
 		y = 5
 		prerequisite = {focus = PRS_austerity_mesures}
-		relative_position_id = FRA_face_the_crisis
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -678,7 +678,7 @@
 		y = 6
 		prerequisite = {focus = PRS_cuts_in_military}
 		prerequisite = {focus = PRS_cuts_in_education}
-		relative_position_id = FRA_face_the_crisis
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -701,7 +701,7 @@
 		x = 0
 		y = 7
 		prerequisite = {focus = PRS_cuts_in_welfare}
-		relative_position_id = FRA_face_the_crisis
+		relative_position_id = PRS_face_the_crisis
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -728,7 +728,7 @@
 		}
 	}
 	focus = {
-		id = FRA_rebuild_the_luftstreitkrafte
+		id = PRS_rebuild_the_luftstreitkrafte
 		icon = GFX_goal_luftwaffe
 		x = 48
 		y = 4
@@ -758,12 +758,12 @@
 		}
 	}
 	focus = {
-		id = FRA_from_the_sky
+		id = PRS_from_the_sky
 		icon = GFX_goal_generic_air_fighter
 		x = 3
 		y = 1
-		prerequisite = {focus = FRA_rebuild_the_luftstreitkrafte}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_rebuild_the_luftstreitkrafte}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -782,12 +782,12 @@
 		}
 	}
 	focus = {
-		id = FRA_heavy_aircraft
+		id = PRS_heavy_aircraft
 		icon = GFX_goal_generic_air_bomber
 		x = 4
 		y = 2
-		prerequisite = {focus = FRA_from_the_sky}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_from_the_sky}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -811,12 +811,12 @@
 		}
 	}
 	focus = {
-		id = FRA_modernization_of_tactics
+		id = PRS_modernization_of_tactics
 		icon = GFX_goal_generic_air_doctrine
 		x = 0
 		y = 1
-		prerequisite = {focus = FRA_rebuild_the_luftstreitkrafte}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_rebuild_the_luftstreitkrafte}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -835,12 +835,12 @@
 		}
 	}
 	focus = {
-		id = FRA_expansion_of_the_airforce
+		id = PRS_expansion_of_the_airforce
 		icon = GFX_goal_generic_CAS
 		x = 0
 		y = 2
-		prerequisite = {focus = FRA_modernization_of_tactics}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_modernization_of_tactics}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -855,12 +855,12 @@
 		}
 	}
 	focus = {
-		id = FRA_manoeuvers_in_baltic_sea
+		id = PRS_manoeuvers_in_baltic_sea
 		icon = GFX_focus_CZE_military_aeronautical_institute
 		x = -2
 		y = 2
-		prerequisite = {focus = FRA_modernization_of_tactics}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_modernization_of_tactics}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -880,12 +880,12 @@
 		}
 	}
 	focus = {
-		id = FRA_womens_in_airforce
+		id = PRS_womens_in_airforce
 		icon = GFX_focus_SOV_women_in_aviation
 		x = 2
 		y = 2
-		prerequisite = {focus = FRA_modernization_of_tactics}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_modernization_of_tactics}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -903,12 +903,12 @@
 		}
 	}
 	focus = {
-		id = FRA_expand_airbase
+		id = PRS_expand_airbase
 		icon = GFX_focus_generic_license_production
 		x = -3
 		y = 1
-		prerequisite = {focus = FRA_rebuild_the_luftstreitkrafte}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_rebuild_the_luftstreitkrafte}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -940,12 +940,12 @@
 		}
 	}
 	focus = {
-		id = FRA_continue_the_airbase_program
+		id = PRS_continue_the_airbase_program
 		icon = GFX_focus_generic_aircraft_production
 		x = -4
 		y = 2
-		prerequisite = {focus = FRA_expand_airbase}
-		relative_position_id = FRA_rebuild_the_luftstreitkrafte
+		prerequisite = {focus = PRS_expand_airbase}
+		relative_position_id = PRS_rebuild_the_luftstreitkrafte
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -977,7 +977,7 @@
 		}
 	}
 	focus = {
-		id = FRA_rebuild_the_deutsches_heer
+		id = PRS_rebuild_the_deutsches_heer
 		icon = GFX_goal_deutsches_heer
 		x = 48
 		y = 0
@@ -1067,12 +1067,12 @@
 		}
 	}
 	focus = {
-		id = FRA_begin_the_rearmament
+		id = PRS_begin_the_rearmament
 		icon = GFX_goal_generic_construct_mil_factory
 		x = -3
 		y = 1
-		prerequisite = {focus = FRA_rebuild_the_deutsches_heer}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_rebuild_the_deutsches_heer}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 5
@@ -1146,12 +1146,12 @@
 		}
 	}
 	focus = {
-		id = FRA_continue_the_rearmament
+		id = PRS_continue_the_rearmament
 		icon = GFX_goal_generic_military_sphere
 		x = -4
 		y = 2
-		prerequisite = {focus = FRA_begin_the_rearmament}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_begin_the_rearmament}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 5
@@ -1225,12 +1225,12 @@
 		}
 	}
 	focus = {
-		id = FRA_modernization_of_weapons
+		id = PRS_modernization_of_weapons
 		icon = GFX_goal_modernization_of_equipment
 		x = 3
 		y = 1
-		prerequisite = {focus = FRA_rebuild_the_deutsches_heer}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_rebuild_the_deutsches_heer}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -1249,12 +1249,12 @@
 		}
 	}
 	focus = {
-		id = FRA_modernization_of_means
+		id = PRS_modernization_of_means
 		icon = GFX_goal_generic_army_tanks
 		x = 4
 		y = 2
-		prerequisite = {focus = FRA_modernization_of_weapons}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_modernization_of_weapons}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -1278,12 +1278,12 @@
 		}
 	}
 	focus = {
-		id = FRA_quality_before_quantity
+		id = PRS_quality_before_quantity
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 1
-		prerequisite = {focus = FRA_rebuild_the_deutsches_heer}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_rebuild_the_deutsches_heer}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -1298,12 +1298,12 @@
 		}
 	}
 	focus = {
-		id = FRA_undefeatable
+		id = PRS_undefeatable
 		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
 		x = 2
 		y = 2
-		prerequisite = {focus = FRA_quality_before_quantity}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_quality_before_quantity}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -1321,12 +1321,12 @@
 		}
 	}
 	focus = {
-		id = FRA_invest_in_military_research
+		id = PRS_invest_in_military_research
 		icon = GFX_focus_research
 		x = 0
 		y = 2
-		prerequisite = {focus = FRA_quality_before_quantity}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_quality_before_quantity}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -1341,12 +1341,12 @@
 		}
 	}
 	focus = {
-		id = FRA_chefs_surprise
+		id = PRS_chefs_surprise
 		icon = GFX_focus_wonderweapons
 		x = -2
 		y = 2
-		prerequisite = {focus = FRA_quality_before_quantity}
-		relative_position_id = FRA_rebuild_the_deutsches_heer
+		prerequisite = {focus = PRS_quality_before_quantity}
+		relative_position_id = PRS_rebuild_the_deutsches_heer
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -1365,7 +1365,7 @@
 		}
 	}
 	focus = {
-		id = FRA_rebuild_thekaiserliche_marine
+		id = PRS_rebuild_thekaiserliche_marine
 		icon = GFX_goal_kaiserliche_marine
 		x = 37
 		y = 0
@@ -1455,18 +1455,18 @@
 		}
 	}
 	focus = {
-		id = FRA_massification
+		id = PRS_massification
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 3
 		y = 1
-		prerequisite = {focus = FRA_rebuild_thekaiserliche_marine}
+		prerequisite = {focus = PRS_rebuild_thekaiserliche_marine}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1534,18 +1534,18 @@
 		}
 	}
 	focus = {
-		id = FRA_expansion_of_dockyards
+		id = PRS_expansion_of_dockyards
 		icon = GFX_focus_generic_refit_civilian_ships
 		x = 1
 		y = 2
-		prerequisite = {focus = FRA_massification}
+		prerequisite = {focus = PRS_massification}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1613,18 +1613,18 @@
 		}
 	}
 	focus = {
-		id = FRA_increase_dockyards_efficiency
+		id = PRS_increase_dockyards_efficiency
 		icon = GFX_goal_generic_navy_cruiser
 		x = 3
 		y = 2
-		prerequisite = {focus = FRA_massification}
+		prerequisite = {focus = PRS_massification}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1650,18 +1650,18 @@
 		}
 	}
 	focus = {
-		id = FRA_direct_the_production
+		id = PRS_direct_the_production
 		icon = GFX_goal_generic_amphibious_assault
 		x = 5
 		y = 2
-		prerequisite = {focus = FRA_massification}
+		prerequisite = {focus = PRS_massification}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1686,18 +1686,18 @@
 		}
 	}
 	focus = {
-		id = FRA_modernization
+		id = PRS_modernization
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		x = -3
 		y = 1
-		prerequisite = {focus = FRA_rebuild_thekaiserliche_marine}
+		prerequisite = {focus = PRS_rebuild_thekaiserliche_marine}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1710,18 +1710,18 @@
 		}
 	}
 	focus = {
-		id = FRA_trade_interdiction_tactics
+		id = PRS_trade_interdiction_tactics
 		icon = GFX_goal_generic_navy_submarine
 		x = -5
 		y = 2
-		prerequisite = {focus = FRA_modernization}
+		prerequisite = {focus = PRS_modernization}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1739,18 +1739,18 @@
 		}
 	}
 	focus = {
-		id = FRA_cruisers
+		id = PRS_cruisers
 		icon = GFX_focus_generic_cruiser2
 		x = -3
 		y = 2
-		prerequisite = {focus = FRA_modernization}
+		prerequisite = {focus = PRS_modernization}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1768,18 +1768,18 @@
 		}
 	}
 	focus = {
-		id = FRA_renew_the_hoscheeflotte
+		id = PRS_renew_the_hoscheeflotte
 		icon = GFX_focus_generic_navy_battleship2
 		x = -1
 		y = 2
-		prerequisite = {focus = FRA_modernization}
+		prerequisite = {focus = PRS_modernization}
 		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 		}
-		relative_position_id = FRA_rebuild_thekaiserliche_marine
+		relative_position_id = PRS_rebuild_thekaiserliche_marine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1797,12 +1797,12 @@
 		}
 	}
 	focus = {
-		id = FRA_one_nation_one_kaiser
+		id = PRS_one_nation_one_kaiser
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 30
 		y = 0
 		prerequisite = {}
-		mutually_exclusive = {focus = FRA_a_democratic_empire}
+		mutually_exclusive = {focus = PRS_a_democratic_empire}
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -1836,13 +1836,13 @@
 		}
 	}
 	focus = {
-		id = FRA_silence_the_opposition
+		id = PRS_silence_the_opposition
 		icon = GFX_goal_no_democracy_in_germany
 		x = 1
 		y = 1
-		prerequisite = {focus = FRA_one_nation_one_kaiser}
+		prerequisite = {focus = PRS_one_nation_one_kaiser}
 		mutually_exclusive = {}
-		relative_position_id = FRA_one_nation_one_kaiser
+		relative_position_id = PRS_one_nation_one_kaiser
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -1869,13 +1869,13 @@
 		}
 	}
 	focus = {
-		id = FRA_cooperation_with_nationalists
+		id = PRS_cooperation_with_nationalists
 		icon = GFX_goal_generic_political_pressure
 		x = -1
 		y = 1
-		prerequisite = {focus = FRA_one_nation_one_kaiser}
+		prerequisite = {focus = PRS_one_nation_one_kaiser}
 		mutually_exclusive = {}
-		relative_position_id = FRA_one_nation_one_kaiser
+		relative_position_id = PRS_one_nation_one_kaiser
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -1894,14 +1894,14 @@
 		}
 	}
 	focus = {
-		id = FRA_crackdown_on_socialist_opposition
+		id = PRS_crackdown_on_socialist_opposition
 		icon = GFX_goal_end_the_crisis
 		x = 0
 		y = 2
-		prerequisite = {focus = FRA_silence_the_opposition}
-		prerequisite = {focus = FRA_cooperation_with_nationalists}
+		prerequisite = {focus = PRS_silence_the_opposition}
+		prerequisite = {focus = PRS_cooperation_with_nationalists}
 		mutually_exclusive = {}
-		relative_position_id = FRA_one_nation_one_kaiser
+		relative_position_id = PRS_one_nation_one_kaiser
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -1919,13 +1919,13 @@
 		}
 	}
 	focus = {
-		id = FRA_blood_and_iron
+		id = PRS_blood_and_iron
 		icon = GFX_goal_solider_flames
 		x = 2
 		y = 1
-		prerequisite = {focus = FRA_crackdown_on_socialist_opposition}
+		prerequisite = {focus = PRS_crackdown_on_socialist_opposition}
 		mutually_exclusive = {}
-		relative_position_id = FRA_crackdown_on_socialist_opposition
+		relative_position_id = PRS_crackdown_on_socialist_opposition
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -1953,13 +1953,13 @@
 		}
 	}
 	focus = {
-		id = FRA_conservative_agenda
+		id = PRS_conservative_agenda
 		icon = GFX_goal_defend_the_land
 		x = 10
 		y = 1
-		prerequisite = {focus = FRA_crackdown_on_socialist_opposition}
+		prerequisite = {focus = PRS_crackdown_on_socialist_opposition}
 		mutually_exclusive = {}
-		relative_position_id = FRA_crackdown_on_socialist_opposition
+		relative_position_id = PRS_crackdown_on_socialist_opposition
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -1981,13 +1981,13 @@
 		}
 	}
 	focus = {
-		id = FRA_school_reform
+		id = PRS_school_reform
 		icon = GFX_focus_generic_military_academy
 		x = 2
 		y = 1
-		prerequisite = {focus = FRA_conservative_agenda}
+		prerequisite = {focus = PRS_conservative_agenda}
 		mutually_exclusive = {}
-		relative_position_id = FRA_conservative_agenda
+		relative_position_id = PRS_conservative_agenda
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2002,13 +2002,13 @@
 		}
 	}
 	focus = {
-		id = FRA_adress_the_nation
+		id = PRS_adress_the_nation
 		icon = GFX_goal_adres_the_nation
 		x = 1
 		y = 2
-		prerequisite = {focus = FRA_conservative_agenda}
+		prerequisite = {focus = PRS_conservative_agenda}
 		mutually_exclusive = {}
-		relative_position_id = FRA_conservative_agenda
+		relative_position_id = PRS_conservative_agenda
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2023,13 +2023,13 @@
 		}
 	}
 	focus = {
-		id = FRA_increase_on_efficiency
+		id = PRS_increase_on_efficiency
 		icon = GFX_goal_generic_production2
 		x = -2
 		y = 1
-		prerequisite = {focus = FRA_conservative_agenda}
+		prerequisite = {focus = PRS_conservative_agenda}
 		mutually_exclusive = {}
-		relative_position_id = FRA_conservative_agenda
+		relative_position_id = PRS_conservative_agenda
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2044,13 +2044,13 @@
 		}
 	}
 	focus = {
-		id = FRA_kaiserreich_arsenals
+		id = PRS_kaiserreich_arsenals
 		icon = GFX_goal_imperial_factories
 		x = -1
 		y = 2
-		prerequisite = {focus = FRA_conservative_agenda}
+		prerequisite = {focus = PRS_conservative_agenda}
 		mutually_exclusive = {}
-		relative_position_id = FRA_conservative_agenda
+		relative_position_id = PRS_conservative_agenda
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2124,13 +2124,13 @@
 		}
 	}
 	focus = {
-		id = FRA_increase_length_of_military_service
+		id = PRS_increase_length_of_military_service
 		icon = GFX_focus_generic_military_mission
 		x = 0
 		y = 1
-		prerequisite = {focus = FRA_conservative_agenda}
+		prerequisite = {focus = PRS_conservative_agenda}
 		mutually_exclusive = {}
-		relative_position_id = FRA_conservative_agenda
+		relative_position_id = PRS_conservative_agenda
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2148,13 +2148,13 @@
 		}
 	}
 	focus = {
-		id = FRA_german_quality
+		id = PRS_german_quality
 		icon = GFX_goal_rhineland
 		x = 0
 		y = 3
-		prerequisite = {focus = FRA_increase_length_of_military_service}
+		prerequisite = {focus = PRS_increase_length_of_military_service}
 		mutually_exclusive = {}
-		relative_position_id = FRA_conservative_agenda
+		relative_position_id = PRS_conservative_agenda
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2169,13 +2169,13 @@
 		}
 	}
 	focus = {
-		id = FRA_stir_militarist_spirit
+		id = PRS_stir_militarist_spirit
 		icon = GFX_goal_stand_up_and_fight
 		x = -1
 		y = 1
-		prerequisite = {focus = FRA_blood_and_iron}
+		prerequisite = {focus = PRS_blood_and_iron}
 		mutually_exclusive = {}
-		relative_position_id = FRA_blood_and_iron
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2190,13 +2190,13 @@
 		}
 	}
 	focus = {
-		id = FRA_bolster_german_nationalism
+		id = PRS_bolster_german_nationalism
 		icon = GFX_focus_generic_support_the_left_right
 		x = 4
 		y = 3
-		prerequisite = {focus = FRA_blood_and_iron}
-		mutually_exclusive = {focus = FRA_moderate_nationalism}
-		relative_position_id = FRA_blood_and_iron
+		prerequisite = {focus = PRS_blood_and_iron}
+		mutually_exclusive = {focus = PRS_moderate_nationalism}
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2218,13 +2218,13 @@
 		}
 	}
 	focus = {
-		id = FRA_freikorps_support
+		id = PRS_freikorps_support
 		icon = GFX_focus_POL_beck_ribbentrop
 		x = 1
 		y = 1
-		prerequisite = {focus = FRA_blood_and_iron}
+		prerequisite = {focus = PRS_blood_and_iron}
 		mutually_exclusive = {}
-		relative_position_id = FRA_blood_and_iron
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2239,13 +2239,13 @@
 		}
 	}
 	focus = {
-		id = FRA_reinforce_kaisers_authority
+		id = PRS_reinforce_kaisers_authority
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 0
 		y = 2
-		prerequisite = {focus = FRA_blood_and_iron}
+		prerequisite = {focus = PRS_blood_and_iron}
 		mutually_exclusive = {}
-		relative_position_id = FRA_blood_and_iron
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2260,13 +2260,13 @@
 		}
 	}
 	focus = {
-		id = FRA_destroy_spartakist_resistance
+		id = PRS_destroy_spartakist_resistance
 		icon = GFX_focus_spr_crush_the_revolution
 		x = -2
 		y = 3
-		prerequisite = {focus = FRA_reinforce_kaisers_authority}
+		prerequisite = {focus = PRS_reinforce_kaisers_authority}
 		mutually_exclusive = {}
-		relative_position_id = FRA_blood_and_iron
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 10
@@ -2284,13 +2284,13 @@
 		}
 	}
 	focus = {
-		id = FRA_moderate_nationalism
+		id = PRS_moderate_nationalism
 		icon = GFX_goal_contacts
 		x = 2
 		y = 3
-		prerequisite = {focus = FRA_reinforce_kaisers_authority}
-		mutually_exclusive = {focus = FRA_bolster_german_nationalism}
-		relative_position_id = FRA_blood_and_iron
+		prerequisite = {focus = PRS_reinforce_kaisers_authority}
+		mutually_exclusive = {focus = PRS_bolster_german_nationalism}
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -2309,13 +2309,13 @@
 		}
 	}
 	focus = {
-		id = FRA_francophobia
+		id = PRS_francophobia
 		icon = GFX_goal_elite_corps
 		x = 0
 		y = 3
-		prerequisite = {focus = FRA_reinforce_kaisers_authority}
+		prerequisite = {focus = PRS_reinforce_kaisers_authority}
 		mutually_exclusive = {}
-		relative_position_id = FRA_blood_and_iron
+		relative_position_id = PRS_blood_and_iron
 		cost = 7
 		ai_will_do = {
 			factor = 1
@@ -2340,12 +2340,12 @@
 		}
 	}
 	focus = {
-		id = FRA_a_democratic_empire
+		id = PRS_a_democratic_empire
 		icon = GFX_goal_democratic_empire
 		x = 20
 		y = 0
 		prerequisite = {}
-		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
+		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -2378,13 +2378,13 @@
 		}
 	}
 	focus = {
-		id = FRA_zentrum_spd_axis
+		id = PRS_zentrum_spd_axis
 		icon = GFX_goal_molotov_ribbentrop_pact
 		x = 1
 		y = 1
-		prerequisite = {focus = FRA_a_democratic_empire}
-		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
-		relative_position_id = FRA_a_democratic_empire
+		prerequisite = {focus = PRS_a_democratic_empire}
+		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -2399,13 +2399,13 @@
 		}
 	}
 	focus = {
-		id = FRA_warn_kaiser_from_extremism
+		id = PRS_warn_kaiser_from_extremism
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = -1
 		y = 1
-		prerequisite = {focus = FRA_a_democratic_empire}
-		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
-		relative_position_id = FRA_a_democratic_empire
+		prerequisite = {focus = PRS_a_democratic_empire}
+		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -2436,10 +2436,10 @@
 		icon = GFX_goal_modification_of_vote
 		x = 0
 		y = 2
-		prerequisite = {focus = FRA_warn_kaiser_from_extremism}
-		prerequisite = {focus = FRA_zentrum_spd_axis}
-		mutually_exclusive = {focus = FRA_one_nation_one_kaiser}
-		relative_position_id = FRA_a_democratic_empire
+		prerequisite = {focus = PRS_warn_kaiser_from_extremism}
+		prerequisite = {focus = PRS_zentrum_spd_axis}
+		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 7
@@ -2462,7 +2462,7 @@
 		x = -10
 		y = 3
 		prerequisite = {focus = PRS_the_electoral_campaign}
-		relative_position_id = FRA_a_democratic_empire
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2612,7 +2612,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = FRA_womens_suffrage
+			add_ideas = PRS_womens_suffrage
 			add_stability = 0.075
 		}
 	}
@@ -2685,7 +2685,7 @@
 		x = -2
 		y = 3
 		prerequisite = {focus = PRS_the_electoral_campaign}
-		relative_position_id = FRA_a_democratic_empire
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 3
@@ -2736,7 +2736,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = PRU_defend_democracy_idea
+			add_ideas = defend_democracy
 		}
 	}
 	focus = {
@@ -2887,8 +2887,8 @@
 		icon = GFX_goal_die_wacht_am_rhein
 		x = 2
 		y = 3
-		prerequisite = {focus = PRS_the_electoral_campaign focus = FRA_crackdown_on_socialist_opposition}
-		relative_position_id = FRA_a_democratic_empire
+		prerequisite = {focus = PRS_the_electoral_campaign focus = PRS_crackdown_on_socialist_opposition}
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 5
@@ -3470,8 +3470,8 @@
 		icon = GFX_goal_the_great_game
 		x = 8
 		y = 3
-		prerequisite = {focus = PRS_the_electoral_campaign focus = FRA_crackdown_on_socialist_opposition}
-		relative_position_id = FRA_a_democratic_empire
+		prerequisite = {focus = PRS_the_electoral_campaign focus = PRS_crackdown_on_socialist_opposition}
+		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
 			factor = 5

@@ -43,32 +43,32 @@
 			add_war_support = 0.1
 			206 = {
 			add_building_construction = {
-				    province = 11370
 					type = bunker
 					level = 5
 					instant_build = yes
+				    province = 11370
 				}
 			}
 			204 = {
 			add_building_construction = {
-				    province = 3350
 					type = bunker
 					level = 2
 					instant_build = yes
+				    province = 3350
 				}
 				add_building_construction = {
-				    province = 11313
 					type = bunker
 					level = 2
 					instant_build = yes
+				    province = 11313
 				}
 			}
 			194 = {
 			add_building_construction = {
-				    province = 6232
 					type = bunker
 					level = 2
 					instant_build = yes
+				    province = 6232
 				}
 			}
 		}
@@ -2065,9 +2065,9 @@
 			}
 			create_wargoal = {
           type = annex_everything
-          target = TAJ
+          target = KYR
          }
-		 TYR = {
+		 TAJ = {
 				every_core_state = {
 					add_claim_by = BLR
 				}
@@ -4455,7 +4455,7 @@
 			set_party_name = {
 				ideology = neutrality 
 				name = BLR_neutrality_ruthenia
-				name_long = BLR_neutrality_ruthenia_long
+				long_name = BLR_neutrality_ruthenia_long
 			}
 			create_country_leader = {
           name = "Peter II of Zhurawetsky"
