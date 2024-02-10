@@ -710,7 +710,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			remove_ideas = kulaks
+			remove_ideas = communism_kulaks_idea
 		}
 	}
 	focus = {
@@ -3017,7 +3017,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = kulaks
+			add_ideas = communism_kulaks_idea
 			add_stability = 0.1
 			add_popularity = {
 				popularity = 0.15

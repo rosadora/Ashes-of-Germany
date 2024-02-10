@@ -1,0 +1,22 @@
+ideas = {
+    country = {
+        communism_kulaks_idea = {
+            allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				consumer_goods_factor = 0.1
+				line_change_production_efficiency_factor = -0.2
+			}
+        }
+    }
+}

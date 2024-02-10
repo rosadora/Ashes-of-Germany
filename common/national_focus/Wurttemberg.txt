@@ -933,7 +933,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = collective_farms
-		 add_ideas = kulaks
+		 add_ideas = WUR_kulaks_idea
 		}
 	}
 	focus = {
@@ -956,7 +956,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_stability = -0.1
-		 remove_ideas = kulaks
+		 remove_ideas = WUR_kulaks_idea
 		}
 	}
 	focus = {

@@ -2063,7 +2063,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = collective_farms
-			add_ideas = kulaks
+			add_ideas = communism_kulaks_idea
 		}
 	}
 	focus = {
@@ -2155,7 +2155,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			remove_ideas = kulaks
+			remove_ideas = communism_kulaks_idea
 			add_stability = -0.2
 		}
 	}

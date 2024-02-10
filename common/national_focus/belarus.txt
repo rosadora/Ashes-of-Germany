@@ -3593,7 +3593,7 @@
 		completion_reward = {
 			add_ideas = collective_farms
 			add_timed_idea = {
-				idea = kulaks
+				idea = communism_kulaks_idea
 				days = 150
 			}
 		}

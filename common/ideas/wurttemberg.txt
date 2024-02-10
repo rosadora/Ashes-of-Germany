@@ -206,7 +206,7 @@ ideas = {
 				line_change_production_efficiency_factor = 0.2
 			}
 		}
-		kulaks = {
+		WUR_kulaks_idea = {
 			
 			allowed = {
 			}

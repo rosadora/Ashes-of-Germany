@@ -1014,7 +1014,7 @@ ideas = {
 				production_speed_buildings_factor = 0.35
 			}
 		}
-		kulaks = {
+		RUS_kulaks_idea = {
 			
 			allowed = {
 			}
