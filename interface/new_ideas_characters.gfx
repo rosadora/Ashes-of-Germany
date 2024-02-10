@@ -1099,4 +1099,49 @@ spriteTypes = {
 		name = "GFX_Harry_Kessler_smol"
 		texturefile = "gfx/leaders/SHL/Harry_Kessler_smol.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Harry_Kessler"
+		texturefile = "gfx/leaders/generic/Harry_Kessler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_caucasian_portrait"
+		texturefile = "gfx/leaders/generic/Generic_caucasian_portrait.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_caucasian_portrait2"
+		texturefile = "gfx/leaders/generic/Generic_caucasian_portrait2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_caucasian_portrait3"
+		texturefile = "gfx/leaders/generic/Generic_caucasian_portrait3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_caucasian_portrait4"
+		texturefile = "gfx/leaders/generic/Generic_caucasian_portrait4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_caucasian_portrait5"
+		texturefile = "gfx/leaders/generic/Generic_caucasian_portrait5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_asian_portrait5"
+		texturefile = "gfx/leaders/generic/Generic_asian_portrait5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_General1"
+		texturefile = "gfx/leaders/generic/Generic_General1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Generic_Black_portrait"
+		texturefile = "gfx/leaders/generic/Generic_Black_portrait.dds"
+	}
 }

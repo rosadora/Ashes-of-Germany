@@ -39,6 +39,9 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_war_support = 0.1
+			hidden_effect = {
+				news_event = news.3063
+			}
 		}
 	}
 	focus = {

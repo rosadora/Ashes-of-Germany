@@ -1,0 +1,1192 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news_event
+
+news_event = {
+	id = news.3000
+	title = news.3000.t
+	desc = news.3000.d
+	picture = GFX_news_event_012
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3000.a
+	}
+}
+news_event = {
+	id = news.3001
+	title = news.3001.t
+	desc = news.3001.d
+	picture = GFX_news_event_012
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3001.a
+	}
+}
+news_event = {
+	id = news.3002
+	title = news.3002.t
+	desc = news.3002.d
+	picture = GFX_news_event_012
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3002.a
+	}
+}
+news_event = {
+	id = news.3003
+	title = news.3003.t
+	desc = news.3003.d
+	picture = GFX_news_event_012
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3003.a
+	}
+}
+news_event = {
+	id = news.3004
+	title = news.3004.t
+	desc = news.3004.d
+	picture = GFX_news_event_german_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3004.a
+	}
+}
+
+news_event = {
+	id = news.3005
+	title = news.3005.t
+	desc = news.3005.d
+	picture = GFX_news_event_german_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3005.a
+	}
+}
+
+news_event = {
+	id = news.3006
+	title = news.3006.t
+	desc = news.3006.d
+	picture = GFX_news_event_battle_for_the_bosporus
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3006.a
+	}
+}
+
+news_event = {
+	id = news.3007
+	title = news.3007.t
+	desc = news.3007.d
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3007.a
+	}
+}
+
+news_event = {
+	id = news.3008
+	title = news.3008.t
+	desc = news.3008.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3008.a
+	}
+}
+
+news_event = {
+	id = news.3009
+	title = news.3009.t
+	desc = news.3009.d
+	picture = GFX_news_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3009.a
+	}
+}
+
+news_event = {
+	id = news.3010
+	title = news.3010.t
+	desc = news.3010.d
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3010.a
+	}
+}
+
+news_event = {
+	id = news.3011
+	title = news.3011.t
+	desc = news.3011.d
+	picture = GFX_news_event_005
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3011.a
+	}
+}
+news_event = {
+	id = news.3012
+	title = news.3012.t
+	desc = news.3012.d
+	picture = GFX_news_event_042
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3012.a
+	}
+}
+news_event = {
+	id = news.3013
+	title = news.3013.t
+	desc = news.3013.d
+	picture = GFX_news_event_german_reichstag_ruins
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3013.a
+	}
+}
+news_event = {
+	id = news.3014
+	title = news.3014.t
+	desc = news.3014.d
+	picture = GFX_news_event_061
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3014.a
+	}
+}
+news_event = {
+	id = news.3015
+	title = news.3015.t
+	desc = news.3015.d
+	picture = GFX_news_event_hitler_handshake
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3015.a
+	}
+}
+news_event = {
+	id = news.3016
+	title = news.3016.t
+	desc = news.3016.d
+	picture = GFX_news_event_hitler_handshake
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3016.a
+	}
+}
+news_event = {
+	id = news.3017
+	title = news.3017.t
+	desc = news.3017.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3017.a
+	}
+}
+news_event = {
+	id = news.3018
+	title = news.3018.t
+	desc = news.3018.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3018.a
+	}
+}
+news_event = {
+	id = news.3019
+	title = news.3019.t
+	desc = news.3019.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3019.a
+	}
+}
+news_event = {
+	id = news.3020
+	title = news.3020.t
+	desc = news.3020.d
+	picture = GFX_news_event_hungarian_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3020.a
+	}
+}
+news_event = {
+	id = news.3021
+	title = news.3021.t
+	desc = news.3021.d
+	picture = GFX_news_event_komet
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3021.a
+	}
+}
+news_event = {
+	id = news.3022
+	title = news.3022.t
+	desc = news.3022.d
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3022.a
+	}
+}
+news_event = {
+	id = news.3023
+	title = news.3023.t
+	desc = news.3023.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3023.a
+	}
+}
+news_event = {
+	id = news.3024
+	title = news.3024.t
+	desc = news.3024.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3024.a
+	}
+}
+news_event = {
+	id = news.3025
+	title = news.3025.t
+	desc = news.3025.d
+	picture = GFX_news_event_067
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3025.a
+	}
+}
+news_event = {
+	id = news.3026
+	title = news.3026.t
+	desc = news.3026.d
+	picture = GFX_news_event_067
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3026.a
+	}
+}
+news_event = {
+	id = news.3027
+	title = news.3027.t
+	desc = news.3027.d
+	picture = GFX_news_event_067
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3027.a
+	}
+}
+news_event = {
+	id = news.3028
+	title = news.3028.t
+	desc = news.3028.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3028.a
+	}
+}
+news_event = {
+	id = news.3029
+	title = news.3029.t
+	desc = news.3029.d
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3029.a
+	}
+}
+news_event = {
+	id = news.3030
+	title = news.3030.t
+	desc = news.3030.d
+	picture = GFX_news_event_019
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3030.a
+	}
+}
+news_event = {
+	id = news.3031
+	title = news.3031.t
+	desc = news.3031.d
+	picture = GFX_news_event_german_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3031.a
+	}
+}
+news_event = {
+	id = news.3032
+	title = news.3032.t
+	desc = news.3032.d
+	picture = GFX_news_event_hungary_refused
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3032.a
+	}
+}
+news_event = {
+	id = news.3033
+	title = news.3033.t
+	desc = news.3033.d
+	picture = GFX_news_event_051
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3033.a
+	}
+}
+news_event = {
+	id = news.3034
+	title = news.3034.t
+	desc = news.3034.d
+	picture = GFX_news_event_soldiers_marching
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3034.a
+	}
+}
+news_event = {
+	id = news.3035
+	title = news.3035.t
+	desc = news.3035.d
+	picture = GFX_news_event_005
+	
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FRA = {
+			controls_state = 64
+		}
+	}
+	
+	option = {
+		name = news.3035.a
+		FRA = {
+			remove_ideas = a_threatened_border
+		}
+	}
+}
+news_event = {
+	id = news.3036
+	title = news.3036.t
+	desc = news.3036.d
+	picture = GFX_news_event_kiev_ruins
+	
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FRA = {
+			has_country_leader = {
+         name = "Napoleon VI"
+         ruling_only = yes
+         }
+		 has_capitulated = yes
+		}
+	}
+	
+	option = {
+		name = news.3036.a
+	}
+}
+news_event = {
+	id = news.3037
+	title = news.3037.t
+	desc = news.3037.d
+	picture = GFX_news_event_052
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3037.a
+	}
+}
+news_event = {
+	id = news.3038
+	title = news.3038.t
+	desc = news.3038.d
+	picture = GFX_news_event_052
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3038.a
+	}
+}
+news_event = {
+	id = news.3039
+	title = news.3039.t
+	desc = news.3039.d
+	picture = GFX_news_event_yugoslav_coup
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3039.a
+	}
+}
+news_event = {
+	id = news.3040
+	title = news.3040.t
+	desc = news.3040.d
+	picture = GFX_news_event_019
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3040.a
+	}
+}
+news_event = {
+	id = news.1016
+	title = news.1016.t
+	desc = news.1016.d
+	picture = GFX_news_event_067
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = {
+		name = news.1016.a
+	}
+}
+
+news_event = {
+	id = news.1017
+	title = news.1017.t
+	desc = news.1017.d
+	picture = GFX_news_event_generic_rally_3
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = {
+		name = news.1017.a
+	}
+}
+
+news_event = {
+	id = news.1018
+	title = news.1018.t
+	desc = news.1018.d
+	picture = GFX_news_event_bulgarian_partisans
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = {
+		name = news.1018.a
+	}
+}
+news_event = {
+	id = news.3041
+	title = news.3041.t
+	desc = news.3041.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3041.a
+	}
+}
+news_event = {
+	id = news.3042
+	title = news.3042.t
+	desc = news.3042.d
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3042.a
+	}
+}
+news_event = {
+	id = news.3043
+	title = news.3043.t
+	desc = news.3043.d
+	picture = GFX_news_event_SOV_supreme_soviet
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3043.a
+	}
+}
+news_event = {
+	id = news.3044
+	title = news.3044.t
+	desc = news.3044.d
+	picture = GFX_news_event_057
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3044.a
+	}
+}
+news_event = {
+	id = news.3045
+	title = news.3045.t
+	desc = news.3045.d
+	picture = GFX_news_event_034
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3045.a
+	}
+}
+news_event = {
+	id = news.3046
+	title = news.3046.t
+	desc = news.3046.d
+	picture = GFX_news_event_057
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3046.a
+	}
+}
+news_event = {
+	id = news.3047
+	title = news.3047.t
+	desc = news.3047.d
+	picture = GFX_news_event_SOV_supreme_soviet_bukharin
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3047.a
+	}
+}
+news_event = {
+	id = news.3048
+	title = news.3048.t
+	desc = news.3048.d
+	picture = GFX_news_event_ITA_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3048.a
+	}
+}
+news_event = {
+	id = news.3049
+	title = news.3049.t
+	desc = news.3049.d
+	picture = GFX_news_event_057
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3049.a
+	}
+}
+news_event = {
+	id = news.3050
+	title = news.3050.t
+	desc = news.3050.d
+	picture = GFX_news_event_journalists_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3050.a
+	}
+}
+news_event = {
+	id = news.3051
+	title = news.3051.t
+	desc = news.3051.d
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3051.a
+	}
+}
+news_event = {
+	id = news.3052
+	title = news.3052.t
+	desc = news.3052.d
+	picture = GFX_news_event_016
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3052.a
+	}
+}
+news_event = {
+	id = news.3053
+	title = news.3053.t
+	desc = news.3053.d
+	picture = GFX_news_event_057
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3053.a
+	}
+}
+news_event = {
+	id = news.3054
+	title = news.3054.t
+	desc = news.3054.d
+	picture = GFX_news_event_battle_for_the_bosporus
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3054.a
+		HUN = {
+			set_country_flag = hungarian_civil_war_has_started
+		}
+	}
+}
+news_event = {
+	id = news.3055
+	title = news.3055.t
+	desc = news.3055.d
+	picture = GFX_news_event_king_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3055.a
+	}
+}
+news_event = {
+	id = news.3056
+	title = news.3056.t
+	desc = news.3056.d
+	picture = GFX_news_event_garbai_victory
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3056.a
+	}
+}
+news_event = {
+	id = news.3057
+	title = news.3057.t
+	desc = news.3057.d
+	picture = GFX_news_event_german_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3057.a
+	}
+}
+news_event = {
+	id = news.3058
+	title = news.3058.t
+	desc = news.3058.d
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3058.a
+	}
+}
+news_event = {
+	id = news.3059
+	title = news.3059.t
+	desc = news.3059.d
+	picture = GFX_news_event_canada_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = news.3059.a
+	}
+}
+news_event = {
+	id = news.3060
+	title = news.3060.t
+	desc = news.3060.d
+	picture = GFX_news_event_SOV_supreme_soviet
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		USR = {
+			has_idea = second_russian_civil_war
+		}
+		NOT = {
+			country_exists = SOV
+		}
+	}
+
+    immediate = {
+		play_song = "victory_day_song"
+		hidden_effect = {
+		 SOV = {
+			remove_ideas = second_russian_civil_war
+		 }
+		 USR = {
+			remove_ideas = second_russian_civil_war
+		}
+		}
+	}
+	
+	option = {
+		name = news.3060.a
+	}
+}
+news_event = {
+	id = news.3061
+	title = news.3061.t
+	desc = news.3061.d
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		SOV = {
+			has_idea = second_russian_civil_war
+		}
+		NOT = {
+			country_exists = USR
+		}
+	}
+
+    immediate = {
+		hidden_effect = {
+			play_song = "farwell_of_slavianka"
+		 SOV = {
+			remove_ideas = second_russian_civil_war
+		 }
+		 USR = {
+			remove_ideas = second_russian_civil_war
+		}
+		}
+	}
+	
+	option = {
+		name = news.3061.a
+	}
+}
+news_event = {
+	id = news.3062
+	title = news.3062.t
+	desc = news.3062.d
+	picture = GFX_news_event_king_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3062.a
+	}
+}
+news_event = {
+	id = news.3063
+	title = news.3063.t
+	desc = news.3063.d
+	picture = GFX_news_event_german_volunteers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3063.a
+	}
+}

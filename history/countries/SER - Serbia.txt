@@ -2,7 +2,7 @@
 
 set_research_slots = 3
 
-oob = "SER_HUN"
+oob = "SER_1936"
 
 add_ideas = {
 }

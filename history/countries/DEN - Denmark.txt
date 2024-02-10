@@ -117,14 +117,25 @@ if = {
 }
 
 
-
+set_politics = {
+	ruling_party = social_democracy
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = yes
+}
 
 set_popularities = {
-		democratic = 94
-		fascism = 1
-		communism = 2
-		neutrality = 3
-	}
+	fascism = 0
+	ultra_nationalism = 0
+	neutrality = 1
+	democratic = 21
+	classical_liberalism = 26
+	social_liberalism = 12
+	social_democracy = 40
+	classical_marxism = 0
+	libertarian_socialism = 0
+	communism = 0
+}
 
 
 set_convoys = 55
@@ -192,27 +203,4 @@ if = {
 add_equipment_to_stockpile = {
 	type = train_equipment_1
 	amount = 7
-}
-
-# 1939 Start #
-1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Submarines #
-		create_equipment_variant = {
-			name = "Havmanden Class"				
-			type = ship_hull_submarine_1
-			name_group = DEN_SS_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_torpedo_slot = ship_torpedo_sub_1
-				fixed_ship_engine_slot = sub_ship_engine_2
-				rear_1_custom_slot = empty
-			}
-		}
-	}
 }

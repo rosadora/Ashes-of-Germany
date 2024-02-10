@@ -7,7 +7,19 @@ characters={
 #########################
 
 #### DEMOCRATIC ####
-
+    DEN_Thomas_Madsen_Mygdal={
+		name="Thomas Madsen Mygdal"
+		portraits={
+			civilian={
+				large="GFX_Generic_caucasian_portrait3"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	DEN_thorvald_stauning = {
 		instance = {
 			allowed = {
@@ -21,7 +33,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = socialism
+				ideology = social_democracy_category
 				traits = { DEN_socialdemokrat }
 				expire = "1965.1.1.1"
 				id = -1
@@ -66,7 +78,7 @@ characters={
 				}
 			}
 			country_leader={
-				ideology=socialism
+				ideology=social_democracy_category
 				expire="1965.1.1.1"
 				id=-1
 			}
@@ -88,7 +100,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = oligarchism
+				ideology = classical_liberalism_category
 				traits = { DEN_rightwing_populist}
 				expire = "1965.1.1.1"
 				id = -1
@@ -102,30 +114,6 @@ characters={
 				}
 				available = {
 					is_country_leader = no
-				}
-				visible = {
-					NOT = { 
-						OR = {
-							has_country_leader = {
-								ruling_only = yes
-								character = DEN_christian_x
-							}
-							AND = {
-								has_country_leader = {
-									ruling_only = yes
-									character = DEN_frits_clausen
-								}
-								has_completed_focus = DEN_ask_for_support
-							}
-							AND = {
-								has_country_leader = {
-									ruling_only = yes
-									character = DEN_cay_lembcke
-								}
-								has_completed_focus = DEN_seize_power
-							}
-						}
-					}
 				}
 				traits = {
 					landbrugsminister 
@@ -141,16 +129,6 @@ characters={
 						DEN_royal_ai = yes
 					}
 				}
-				on_add = {
-					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
-					}
-				}
 			}
 		}
 		instance = {
@@ -164,7 +142,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = moderatism
+				ideology = classical_liberalism_category
 				expire = "1965.1.1.1"
 				id=-1
 			}
@@ -183,7 +161,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = oligarchism
+				ideology = classical_liberalism_category
 				traits = { DEN_rightwing_populist}
 				expire = "1965.1.1.1"
 				id = -1
@@ -199,12 +177,6 @@ characters={
 				available = {
 					is_country_leader = no
 				}
-				visible = {
-					has_country_leader = {
-						ruling_only = yes
-						character = DEN_christian_x
-					}
-				}
 				traits = {
 					landbrugsminister 
 				}
@@ -217,16 +189,6 @@ characters={
 					modifier = {
 						factor = 10
 						DEN_royal_ai = yes
-					}
-				}
-				on_add = {
-					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 			}
@@ -242,7 +204,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = moderatism
+				ideology = classical_liberalism_category
 				expire = "1965.1.1.1"
 				id=-1
 			}
@@ -261,7 +223,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = oligarchism
+				ideology = classical_liberalism_category
 				traits = { DEN_rightwing_populist}
 				expire = "1965.1.1.1"
 				id = -1
@@ -277,24 +239,6 @@ characters={
 				available = {
 					is_country_leader = no
 				}
-				visible = {
-					OR = {
-						AND = {
-							has_country_leader = {
-								ruling_only = yes
-								character = DEN_frits_clausen
-							}
-							has_completed_focus = DEN_ask_for_support
-						}
-						AND = {
-							has_country_leader = {
-								ruling_only = yes
-								character = DEN_cay_lembcke
-							}
-							has_completed_focus = DEN_seize_power
-						}
-					}
-				}
 				traits = {
 					landbrugsminister 
 				}
@@ -303,16 +247,6 @@ characters={
 					modifier = {
 						factor = 0
 						DEN_historical_ai = yes
-					}
-				}
-				on_add = {
-					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 			}
@@ -328,7 +262,7 @@ characters={
 				}
 			}
 			country_leader = {
-				ideology = moderatism
+				ideology = classical_liberalism_category
 				expire = "1965.1.1.1"
 				id=-1
 			}
@@ -385,6 +319,18 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
+			country_leader={
+				ideology=classical_marxism_category
+				traits = { DEN_kommunist }
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				ideology=libertarian_socialism_category
+				traits = { DEN_kommunist }
+				expire="1965.1.1.1"
+				id=-1
+			}
 			advisor = {
 				slot = political_advisor
 				idea_token = DEN_aksel_larsen
@@ -394,11 +340,6 @@ characters={
 				}
 				available = {
 					is_country_leader = no
-					NOT = {
-						has_government = fascism
-						has_character_flag = DEN_political_agitator_flag
-						has_country_flag = DEN_banned_communism_flag
-					}
 				}
 				ai_will_do = {
 					base = 5
@@ -406,27 +347,9 @@ characters={
 						factor = 0
 						DEN_historical_ai = yes
 					}
-					modifier = {
-						factor = 0
-						OR = {
-							DEN_rearming_ai = yes
-							DEN_royal_ai = yes					
-							DEN_fascist_ai = yes
-						}
-					}
 				}
 				traits = {
 					communist_revolutionary 
-				}
-				on_add = {
-					owner = {
-						DEN_advisor_low_BOP_decrease_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						DEN_advisor_low_BOP_increase_effect = yes
-					}
 				}
 			}
 		}
@@ -442,6 +365,18 @@ characters={
 			}
 			country_leader={
 				ideology=leninism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				ideology=classical_marxism_category
+				traits = { DEN_kommunist }
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				ideology=libertarian_socialism_category
+				traits = { DEN_kommunist }
 				expire="1965.1.1.1"
 				id=-1
 			}
@@ -468,6 +403,12 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
+			country_leader={
+				ideology=ultra_nationalism_category
+				traits = { DEN_fascist_populist}
+				expire="1965.1.1.1"
+				id=-1
+			}
 			advisor = {
 				slot = political_advisor
 				idea_token = DEN_frits_clausen
@@ -477,11 +418,6 @@ characters={
 				}
 				available = {
 					is_country_leader = no
-					NOT = {
-						has_government = communism
-						has_character_flag = DEN_political_agitator_flag
-						has_country_flag = DEN_banned_fascism_flag
-					}
 				}
 				traits = {
 					fascist_demagogue 
@@ -501,16 +437,6 @@ characters={
 						DEN_fascist_ai = yes
 					}
 				}
-				on_add = {
-					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
-					}
-				}
 			}
 		}
 		instance = {
@@ -525,6 +451,12 @@ characters={
 			}
 			country_leader={
 				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				ideology=ultra_nationalism_category
+				traits = { DEN_fascist_populist}
 				expire="1965.1.1.1"
 				id=-1
 			}
@@ -691,10 +623,6 @@ characters={
 					#Already checked for DLC in the instance
 				}
 				available = {
-					OR = {
-						has_completed_focus = DEN_haeren_reorganization
-						has_completed_focus = DEN_collaboration_government 
-					}
 				}
 				traits = {
 					army_chief_organizational_1
@@ -796,21 +724,6 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-			visible = { 
-				OR = {
-					has_completed_focus = DEN_strengthen_the_officer_corp
-					AND = {
-						is_subject = yes
-						OVERLORD = {
-							OR = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						has_completed_focus = DEN_contribute_to_the_war
-					}
-				}
-			}
 		}
 	}
 
@@ -849,7 +762,6 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id = -1
-			visible = { has_completed_focus = DEN_seek_independence }
 		}
 	}
 
@@ -911,21 +823,6 @@ characters={
 				planning_skill = 2
 				logistics_skill = 1
 				legacy_id = -1
-				visible = { 
-					OR = {
-						has_completed_focus = DEN_strengthen_the_officer_corp
-						AND = {
-							is_subject = yes
-							OVERLORD = {
-								OR = {
-									has_government = fascism
-									has_government = neutrality
-								}
-							}
-							has_completed_focus = DEN_contribute_to_the_war
-						}
-					}
-				}
 			}
 		}
 		instance = {
@@ -1038,12 +935,6 @@ characters={
 				allowed = {
 					original_tag = DEN
 					#Already checked for DLC in the instance
-				}
-				available = {
-					OR = {
-						has_completed_focus = DEN_expand_ubadsvabnet
-						has_completed_focus = DEN_collaboration_government 
-					}
 				}
 				traits = {
 					navy_chief_maneuver_2
@@ -1278,7 +1169,6 @@ characters={
 				base = 1.000
 			}
 			available = { 
-				has_completed_focus = DEN_konge_og_faedreland 
 			}
 
 			visible = {
@@ -1319,7 +1209,6 @@ characters={
 				base = 1.000
 			}
 			available = { 
-				has_completed_focus = DEN_konge_og_faedreland 
 			}
 			visible = {
 				NOT = { has_character = DEN_christian_x }
@@ -1690,8 +1579,6 @@ characters={
 			}
 			available = {
 				is_subject = no
-				NOT = { has_completed_focus = DEN_start_the_rearmament }
-				NOT = { DEN_christmas_moller = { is_hired_as_advisor = yes }}
 			}
 			traits = {
 				disarmament_proponent 
@@ -1711,16 +1598,6 @@ characters={
 						DEN_royal_ai = yes					
 						DEN_fascist_ai = yes
 					}
-				}
-			}
-			on_add = {
-				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -1743,9 +1620,6 @@ characters={
 			}
 			available = {
 				is_country_leader = no
-				NOT = { has_character_flag = DEN_political_agitator_flag }
-				NOT = { has_completed_focus = DEN_policy_of_disarmament }
-				NOT = { DEN_peter_rochegune_munch = { is_hired_as_advisor = yes }}
 			}
 			traits = {
 				rearmament_proponent 
@@ -1767,16 +1641,6 @@ characters={
 						DEN_royal_ai = yes					
 						DEN_fascist_ai = yes
 					}
-				}
-			}
-			on_add = {
-				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -1817,16 +1681,6 @@ characters={
 					}
 				}
 			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
 		}
 	}
 
@@ -1861,16 +1715,6 @@ characters={
 					}
 				}
 			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
 		}
 	}
 
@@ -1901,16 +1745,6 @@ characters={
 					DEN_historical_ai = yes
 				}
 			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
 		}
 	}
 
@@ -1937,16 +1771,6 @@ characters={
 				}
 				ai_will_do = {
 					base = 5
-				}
-				on_add = {
-					owner = {
-						DEN_advisor_low_BOP_decrease_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						DEN_advisor_low_BOP_increase_effect = yes
-					}
 				}
 			}
 		}
@@ -2011,20 +1835,7 @@ characters={
 				}
 				modifier = {
 					factor = 5
-					OR = {
-						is_subject = yes
-						has_country_flag = DEN_has_occupation_flag
-					}
-				}
-			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
+					is_subject = yes
 				}
 			}
 		}
@@ -2051,16 +1862,6 @@ characters={
 			ai_will_do = {
 				base = 10
 			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
-				}
-			}
 		}
 	}
 
@@ -2079,7 +1880,6 @@ characters={
 				has_dlc = "Arms Against Tyranny"
 			}
 			available = {
-				has_completed_focus = DEN_fortify_our_borders
 			}
 			traits  = {
 				forsvarsminister 
@@ -2101,16 +1901,6 @@ characters={
 					}
 				}
 			}
-			on_add = {
-				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
-				}
-			}
 		}
 	}
 
@@ -2129,7 +1919,6 @@ characters={
 				has_dlc = "Arms Against Tyranny"
 			}
 			available = {
-				has_completed_focus = DEN_kanslergadeforliget
 			}
 			traits = {
 				welfare_architect 
@@ -2139,16 +1928,6 @@ characters={
 				modifier = {
 					factor = 10
 					DEN_historical_ai = yes
-				}
-			}
-			on_add = {
-				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -2169,7 +1948,6 @@ characters={
 				has_dlc = "Arms Against Tyranny"
 			}
 			available = {
-				has_completed_focus = DEN_expand_institut_for_teoretisk_fysik
 			}
 			research_bonus = {
 				nuclear = 0.150
@@ -2185,16 +1963,6 @@ characters={
 						DEN_historical_ai = yes
 						DEN_rearming_ai = yes
 					}
-				}
-			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -2223,31 +1991,12 @@ characters={
 			}
 			available = {
 				is_country_leader = no
-				OR = {
-					has_completed_focus = DEN_strengthen_the_officer_corp
-					has_government = fascism
-				}	
-				NOT = {
-					has_government = communism
-					has_character_flag = DEN_political_agitator_flag
-					has_country_flag = DEN_banned_fascism_flag
-				}
 			}
 			traits = {
 				prince_of_terror 
 			}
 			ai_will_do = {
 				base = 0
-			}
-			on_add = {
-				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
-				}
 			}
 		}
 	}
@@ -2268,7 +2017,6 @@ characters={
 				has_dlc = "La Resistance"
 			}
 			available = {
-				has_completed_focus = DEN_sikkerhedspolitiet
 			}
 			traits = {
 				head_of_intelligence	 
@@ -2279,16 +2027,6 @@ characters={
 					factor = 0.5
 					DEN_historical_ai = yes
 				}
-			}
-			on_add = {
-				#owner = {
-				#	DEN_advisor_low_BOP_increase_effect = yes
-				#}
-			}
-			on_remove = {
-				#owner = {
-				#	DEN_advisor_low_BOP_decrease_effect = yes
-				#}
 			}
 		}
 	}
