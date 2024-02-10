@@ -539,7 +539,7 @@ ideas = {
 				army_org_factor = 0.075
 			} 
 		}
-		defend_democracy = {
+		FRA_defend_democracy_idea = {
 			
 			allowed = {
 			}
