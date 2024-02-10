@@ -41,7 +41,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero}
-			idea_token = AUS_Richard_Bernaschek_military
 			skill=5
 			attack_skill=5
 			defense_skill=6
@@ -91,7 +90,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero bearer_of_artillery}
-			idea_token = AUS_Ludwig_Bernaschek_military
 			skill=5
 			attack_skill=5
 			defense_skill=4
@@ -156,7 +154,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero media_personality}
-			idea_token = AUS_Julius_Deutsch_military
 			skill=4
 			attack_skill=5
 			defense_skill=3
@@ -221,7 +218,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero panzer_leader }
-			idea_token = AUS_Karl_Renner_military
 			skill=3
 			attack_skill=2
 			defense_skill=4

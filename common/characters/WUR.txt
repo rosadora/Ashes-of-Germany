@@ -45,7 +45,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero}
-			idea_token = WUR_Wilhelm_Groener_military
 			skill=6
 			attack_skill=5
 			defense_skill=6
@@ -82,7 +81,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero }
-			idea_token = WUR_Berthold_von_Deimling_military
 			skill=4
 			attack_skill=5
 			defense_skill=3
@@ -119,7 +117,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero media_personality}
-			idea_token = WUR_Otto_von_Garnier_military
 			skill=4
 			attack_skill=5
 			defense_skill=4
@@ -156,7 +153,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero}
-			idea_token = WUR_Karl_Christof_Friedrich_von_Gerok_military
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -193,7 +189,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero}
-			idea_token = WUR_Gerold_von_Gleich_military
 			skill=3
 			attack_skill=2
 			defense_skill=4
@@ -249,7 +244,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero}
-			idea_token = WUR_Heinrich_von_Maur_military
 			skill=2
 			attack_skill=3
 			defense_skill=2
@@ -286,7 +280,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={}
-			idea_token = WUR_Richard_Ruoff_military
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -323,7 +316,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={}
-			idea_token = WUR_Gotthard_Heinrici_military
 			skill=3
 			attack_skill=2
 			defense_skill=2

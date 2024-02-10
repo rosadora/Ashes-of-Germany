@@ -93,7 +93,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero}
-			idea_token = BLR_jan_serada_military
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -173,7 +172,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ media_personality }
-			idea_token = BLR_Vincent_Jouk_Hrychkievitch_military
 			skill=3
 			attack_skill=3
 			defense_skill=4

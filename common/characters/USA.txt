@@ -43,13 +43,13 @@ characters= {
 			id=-1
 		}
 		country_leader={
-			ideology=democratic
+			ideology=conservatism
 			traits={}
 			expire="1965.1.1.1"
 			id=-1
 		}
 		country_leader={
-			ideology=ultra_nationalism
+			ideology=ultra_nationalism_category
 			traits={}
 			expire="1965.1.1.1"
 			id=-1
@@ -1642,10 +1642,11 @@ characters= {
 			ai_will_do  = {
 				factor  = 1.000
 			}
-		}
-		allowed_civil_war  = {
-			NOT  = {
-				has_government  = communism 
+			}
+			allowed_civil_war  = {
+				NOT  = {
+					has_government  = communism 
+				}
 			}
 		}
 	}

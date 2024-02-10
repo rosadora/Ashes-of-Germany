@@ -41,7 +41,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero}
-			idea_token = RCO_Ernest_Louis_military
 			skill=6
 			attack_skill=3
 			defense_skill=7
@@ -78,7 +77,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero }
-			idea_token = RCO_Karl_von_Fasbender_military
 			skill=4
 			attack_skill=6
 			defense_skill=3
@@ -115,7 +113,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero }
-			idea_token = RCO_Georg_Fuchs_military
 			skill=4
 			attack_skill=5
 			defense_skill=4
@@ -165,7 +162,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero}
-			idea_token = RCO_Paul_von_Hindenburg_military
 			skill=6
 			attack_skill=4
 			defense_skill=5
@@ -215,7 +211,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero}
-			idea_token = RCO_Viktor_Kuhne_military
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -265,7 +260,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ war_hero}
-			idea_token = RCO_Arnold_Lequis_military
 			skill=3
 			attack_skill=4
 			defense_skill=2
@@ -315,7 +309,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={}
-			idea_token = RCO_Wilhelm_Heye_military
 			skill=2
 			attack_skill=2
 			defense_skill=4
@@ -365,7 +358,6 @@ characters = {
 		}
 		corps_commander ={
 			traits={ }
-			idea_token = RCO_Hans_von_Seeckt_military
 			skill=2
 			attack_skill=2
 			defense_skill=3

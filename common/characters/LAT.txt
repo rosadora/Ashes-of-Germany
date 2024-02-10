@@ -223,7 +223,7 @@ characters={
 			id=-1
 		}
 		country_leader={
-			ideology=libertarian_socialism
+			ideology=libertarian_socialism_category
 			expire="1965.1.1.1"
 			id=-1
 		}

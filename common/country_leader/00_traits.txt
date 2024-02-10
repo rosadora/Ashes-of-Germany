@@ -472,7 +472,7 @@ leader_traits = {
 	otrante_hero = {
 		random = no
 		political_power_factor = 0.15
-		navy_experience_gain = 0.05
+		experience_gain_navy = 0.05
 		ai_will_do = {
 			factor = 1
 		}
@@ -1529,7 +1529,7 @@ leader_traits = {
 
 	modern_monarch = {
 		random = no
-		weekly_war_support = 0.005
+		war_support_weekly = 0.005
 		stability_weekly = 0.005
 		political_power_gain = 0.1
 		ai_will_do = {
@@ -1567,7 +1567,7 @@ leader_traits = {
 
 	the_tenacious_leader = {
 		random = no
-		war_support_factor 0.15
+		war_support_factor = 0.15
 		army_core_defence_factor = 0.15
 		ai_will_do = {
 			factor = 1
@@ -3019,8 +3019,8 @@ leader_traits = {
 	communist_orator = {
 		random = no
 		communism_drift = 0.05
-		libertarian_socialism = 0.02
-		classical_marxism = 0.02
+		libertarian_socialism_drift = 0.02
+		classical_marxism_drift = 0.02
 		war_support_factor = 0.15
 	}
 	

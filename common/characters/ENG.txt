@@ -59,7 +59,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=classical_marxism
+			ideology=classical_marxism_category
 			traits={ }
 			expire="1960.1.1.1"
 			id=-1

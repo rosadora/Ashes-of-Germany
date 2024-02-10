@@ -45,7 +45,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero old_guard}
-			idea_token = UKR_Symon_Petliura_military
 			skill=5
 			attack_skill=3
 			defense_skill=7
@@ -99,7 +98,6 @@ characters = {
 		}
 		field_marshal ={
 			traits={ war_hero media_personality}
-			idea_token = UKR_Mykhailo_Hrushevsky_military
 			skill=4
 			attack_skill=5
 			defense_skill=3

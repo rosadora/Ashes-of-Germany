@@ -346,8 +346,8 @@ AUS_austrian_civil_war = {
 				153 = {
 					set_demilitarized_zone = no
 					add_manpower = -2500
-					unlock_decision_tooltip = AUS_destroy_voralberg_resistance
 				}
+				unlock_decision_tooltip = AUS_destroy_voralberg_resistance
 			  }
               40 = { 
 			    add_manpower = -2500
@@ -460,8 +460,8 @@ AUS_austrian_civil_war = {
 				102 = {
 					set_demilitarized_zone = no
 					add_manpower = -2500
-					unlock_decision_tooltip = AUS_undermine_resistance_in_ljubljana
 				}
+				unlock_decision_tooltip = AUS_undermine_resistance_in_ljubljana
 			  }
               40 = { 
 			    add_manpower = -2500
