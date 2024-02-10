@@ -278,4 +278,4 @@ recruit_character = BAY_Emil_Barth
 recruit_character = BAY_Emil_Eichhorn
 recruit_character = BAY_Johann_Knief
 recruit_character = BAY_Eugen_Levine
-
+recruit_character = BAY_Rosa_Luxemburg

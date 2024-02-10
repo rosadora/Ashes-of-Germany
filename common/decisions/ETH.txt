@@ -33,6 +33,8 @@ ETH_triumph_over_mussolini = {
                     ITA = {
                         controls_state = 908
                     }
+                }
+                ETH = {
                     transfer_state = 908
                 }
             }

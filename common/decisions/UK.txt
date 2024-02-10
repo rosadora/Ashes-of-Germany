@@ -1,7 +1,7 @@
 
 ENG_8th_coalition_category = {
 
-	ENG_invite_spain {
+	ENG_invite_spain = {
 
 		icon = GFX_decision_eng_ally_imperialist_coup
 

@@ -1,6 +1,6 @@
 USR_expand_the_union = {
 
-	USR_influence_romania {
+	USR_influence_romania = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -128,7 +128,7 @@ USR_expand_the_union = {
         }
 	}
 
-	USR_influence_turkey {
+	USR_influence_turkey = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -256,7 +256,7 @@ USR_expand_the_union = {
         }
 	}
 
-	USR_influence_poland {
+	USR_influence_poland = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -384,7 +384,7 @@ USR_expand_the_union = {
         }
 	}
 
-	USR_influence_finland {
+	USR_influence_finland = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -512,7 +512,7 @@ USR_expand_the_union = {
         }
 	}
 
-	USR_influence_estonia {
+	USR_influence_estonia = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -640,7 +640,7 @@ USR_expand_the_union = {
         }
 	}
 
-	USR_influence_latvia {
+	USR_influence_latvia = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -767,7 +767,7 @@ USR_expand_the_union = {
          factor = 100
         }
 	}
-	USR_influence_lithuania {
+	USR_influence_lithuania = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -895,7 +895,7 @@ USR_expand_the_union = {
         }
 	}
 
-	USR_influence_iran {
+	USR_influence_iran = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1025,7 +1025,7 @@ USR_expand_the_union = {
 }
 ROM_counter_propaganda = {
 
-	ROM_counter_propaganda1 {
+	ROM_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1062,7 +1062,7 @@ ROM_counter_propaganda = {
          factor = 100
         }
 	}
-	ROM_strike_communist_cells {
+	ROM_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1100,7 +1100,7 @@ ROM_counter_propaganda = {
          factor = 100
         }
 	}
-	ROM_eliminate_soviet_presence {
+	ROM_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1137,7 +1137,7 @@ ROM_counter_propaganda = {
 }
 TUR_counter_propaganda = {
 
-	TUR_counter_propaganda1 {
+	TUR_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1174,7 +1174,7 @@ TUR_counter_propaganda = {
          factor = 100
         }
 	}
-	TUR_strike_communist_cells {
+	TUR_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1212,7 +1212,7 @@ TUR_counter_propaganda = {
          factor = 100
         }
 	}
-	TUR_eliminate_soviet_presence {
+	TUR_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1250,7 +1250,7 @@ TUR_counter_propaganda = {
 
 POL_counter_propaganda = {
 
-	POL_counter_propaganda1 {
+	POL_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1287,7 +1287,7 @@ POL_counter_propaganda = {
          factor = 100
         }
 	}
-	POL_strike_communist_cells {
+	POL_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1325,7 +1325,7 @@ POL_counter_propaganda = {
          factor = 100
         }
 	}
-	POL_eliminate_soviet_presence {
+	POL_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1363,7 +1363,7 @@ POL_counter_propaganda = {
 
 FIN_counter_propaganda = {
 
-	FIN_counter_propaganda1 {
+	FIN_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1400,7 +1400,7 @@ FIN_counter_propaganda = {
          factor = 100
         }
 	}
-	FIN_strike_communist_cells {
+	FIN_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1438,7 +1438,7 @@ FIN_counter_propaganda = {
          factor = 100
         }
 	}
-	FIN_eliminate_soviet_presence {
+	FIN_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1475,7 +1475,7 @@ FIN_counter_propaganda = {
 }
 EST_counter_propaganda = {
 
-	EST_counter_propaganda1 {
+	EST_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1512,7 +1512,7 @@ EST_counter_propaganda = {
          factor = 100
         }
 	}
-	EST_strike_communist_cells {
+	EST_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1550,7 +1550,7 @@ EST_counter_propaganda = {
          factor = 100
         }
 	}
-	EST_eliminate_soviet_presence {
+	EST_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1587,7 +1587,7 @@ EST_counter_propaganda = {
 }
 LAT_counter_propaganda = {
 
-	LAT_counter_propaganda1 {
+	LAT_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1624,7 +1624,7 @@ LAT_counter_propaganda = {
          factor = 100
         }
 	}
-	LAT_strike_communist_cells {
+	LAT_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1662,7 +1662,7 @@ LAT_counter_propaganda = {
          factor = 100
         }
 	}
-	LAT_eliminate_soviet_presence {
+	LAT_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1699,7 +1699,7 @@ LAT_counter_propaganda = {
 }
 LIT_counter_propaganda = {
 
-	LIT_counter_propaganda1 {
+	LIT_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1736,7 +1736,7 @@ LIT_counter_propaganda = {
          factor = 100
         }
 	}
-	LIT_strike_communist_cells {
+	LIT_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1774,7 +1774,7 @@ LIT_counter_propaganda = {
          factor = 100
         }
 	}
-	LIT_eliminate_soviet_presence {
+	LIT_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1811,7 +1811,7 @@ LIT_counter_propaganda = {
 }
 PER_counter_propaganda = {
 
-	PER_counter_propaganda1 {
+	PER_counter_propaganda1 = {
 
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -1848,7 +1848,7 @@ PER_counter_propaganda = {
          factor = 100
         }
 	}
-	PER_strike_communist_cells {
+	PER_strike_communist_cells = {
 
 		icon = GFX_decision_generic_ignite_civil_war
 
@@ -1886,7 +1886,7 @@ PER_counter_propaganda = {
          factor = 100
         }
 	}
-	PER_eliminate_soviet_presence {
+	PER_eliminate_soviet_presence = {
 
 		icon = GFX_decision_generic_independence
 
@@ -1924,7 +1924,7 @@ PER_counter_propaganda = {
 
 USR_the_formation_of_soviet_union = {
 
-	USR_uprising_in_ukraine {
+	USR_uprising_in_ukraine = {
 
 		icon = GFX_decision_revolt
 
@@ -1968,7 +1968,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_belarus {
+	USR_uprising_in_belarus = {
 
 		icon = GFX_decision_revolt
 
@@ -2012,7 +2012,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_georgia {
+	USR_uprising_in_georgia = {
 
 		icon = GFX_decision_revolt
 
@@ -2056,7 +2056,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_armenia {
+	USR_uprising_in_armenia = {
 
 		icon = GFX_decision_revolt
 
@@ -2100,7 +2100,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_far_east {
+	USR_uprising_in_far_east = {
 
 		icon = GFX_decision_revolt
 
@@ -2144,7 +2144,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_manchuria {
+	USR_uprising_in_manchuria = {
 
 		icon = GFX_decision_revolt
 
@@ -2188,7 +2188,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_kazakhstan {
+	USR_uprising_in_kazakhstan = {
 
 		icon = GFX_decision_revolt
 
@@ -2232,7 +2232,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_uzbekistan {
+	USR_uprising_in_uzbekistan = {
 
 		icon = GFX_decision_revolt
 
@@ -2276,7 +2276,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_khiva {
+	USR_uprising_in_khiva = {
 
 		icon = GFX_decision_revolt
 
@@ -2320,7 +2320,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_turkmenistan {
+	USR_uprising_in_turkmenistan = {
 
 		icon = GFX_decision_revolt
 
@@ -2364,7 +2364,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_bukhara {
+	USR_uprising_in_bukhara = {
 
 		icon = GFX_decision_revolt
 
@@ -2408,7 +2408,7 @@ USR_the_formation_of_soviet_union = {
          factor = 100
         }
 	}
-	USR_uprising_in_khirgizstan {
+	USR_uprising_in_khirgizstan = {
 
 		icon = GFX_decision_revolt
 
@@ -2456,7 +2456,7 @@ USR_the_formation_of_soviet_union = {
 }
 RUS_civil_war = {
 
-	RUS_recover_the_reserves {
+	RUS_recover_the_reserves = {
 
 		icon = GFX_decision_eng_blackshirt_speech
 
@@ -2489,7 +2489,7 @@ RUS_civil_war = {
         }
 	}
 
-	RUS_winter_counter_offensive {
+	RUS_winter_counter_offensive = {
 
 		icon = GFX_decision_infiltrate_state
 
@@ -2520,7 +2520,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_summer_offensive {
+	RUS_summer_offensive = {
 
 		icon = GFX_decision_gre_faction_management
 
@@ -2551,7 +2551,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_winter_counter_offensive_1938 {
+	RUS_winter_counter_offensive_1938 = {
 
 		icon = GFX_decision_infiltrate_state
 
@@ -2582,7 +2582,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_summer_offensive_1938 {
+	RUS_summer_offensive_1938 = {
 
 		icon = GFX_decision_gre_faction_management
 
@@ -2613,7 +2613,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_raise_cossacks {
+	RUS_raise_cossacks = {
 
 		icon = GFX_decision_generic_cavalry
 
@@ -2706,7 +2706,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_horror_and_despair {
+	RUS_horror_and_despair = {
 
 		icon = GFX_decision_generic_scorched_earth
 
@@ -2770,7 +2770,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_we_will_hold {
+	RUS_we_will_hold = {
 
 		icon = GFX_decision_eng_blackshirt_speech
 
@@ -2806,7 +2806,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_last_stand {
+	RUS_last_stand = {
 
 		icon = GFX_decision_generic_mountain_fortification
 
@@ -2836,7 +2836,7 @@ RUS_civil_war = {
          factor = 100
         }
 	}
-	RUS_our_only_opportunity {
+	RUS_our_only_opportunity = {
 
 		icon = GFX_decision_eng_trade_unions_demand
 
@@ -2870,7 +2870,7 @@ RUS_civil_war = {
 }
 USR_civil_war = {
 
-	USR_spring_offensive {
+	USR_spring_offensive = {
 
 		icon = GFX_decision_infiltrate_state
 
@@ -2900,7 +2900,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_autumn_offensive {
+	USR_autumn_offensive = {
 
 		icon = GFX_decision_generic_scorched_earth
 
@@ -2930,7 +2930,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_disrupt_the_tsarists {
+	USR_disrupt_the_tsarists = {
 
 		icon = GFX_decision_hol_draw_up_staff_plans
 
@@ -2959,7 +2959,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_reach_volgograd {
+	USR_reach_volgograd = {
 
 		icon = GFX_decision_generic_nationalism
 
@@ -2988,7 +2988,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_the_final_offensive {
+	USR_the_final_offensive = {
 
 		icon = GFX_decision_generic_reorganize_irregulars
 
@@ -3017,7 +3017,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_smolensk {
+	USR_looting_of_smolensk = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3053,7 +3053,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_kursk {
+	USR_looting_of_kursk = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3089,7 +3089,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_voronezh {
+	USR_looting_of_voronezh = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3125,7 +3125,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_kharkov {
+	USR_looting_of_kharkov = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3161,7 +3161,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_luhansk {
+	USR_looting_of_luhansk = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3197,7 +3197,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_alexandrovka {
+	USR_looting_of_alexandrovka = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3233,7 +3233,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_rostov {
+	USR_looting_of_rostov = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3269,7 +3269,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_saratov {
+	USR_looting_of_saratov = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3305,7 +3305,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_gorky {
+	USR_looting_of_gorky = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 
@@ -3341,7 +3341,7 @@ USR_civil_war = {
          factor = 100
         }
 	}
-	USR_looting_of_kazan {
+	USR_looting_of_kazan = {
 
 		icon = GFX_decision_generic_prepare_civil_war
 

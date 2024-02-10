@@ -2073,7 +2073,6 @@ USA_intervention_mandate = {
 					FROM = {
 						has_offensive_war = yes
 					}
-					congress_low_support_trigger = yes
 				}
 			}
 			else_if = {
@@ -2082,10 +2081,8 @@ USA_intervention_mandate = {
 						has_war = yes
 					}
 				}
-				congress_medium_support_trigger = yes
 			}
 			else = {
-				congress_high_support_trigger = yes
 			}
 			not = { has_war_with = FROM }
 		}
@@ -2163,7 +2160,6 @@ USA_intervention_mandate = {
 				limit = {
 					has_war_support < 0.4
 				}
-				USA_congress_small_opposition = yes
 			}
 			if = {
 				limit = {
@@ -2224,7 +2220,6 @@ USA_intervention_mandate = {
 				limit = {
 					has_war_support < 0.4
 				}
-				USA_congress_small_opposition = yes
 			}
 			if = {
 				limit = {
@@ -2790,16 +2785,11 @@ USA_intervention_mandate = {
 				limit = {
 					has_war_support > 0.6
 				}
-				congress_low_support_trigger = yes
 			}
 			else_if = {
 				limit = {
 					has_war_support > 0.4
 				}
-				congress_medium_support_trigger = yes
-			}
-			else = {
-				congress_high_support_trigger = yes
 			}
 		}
 		visible = {
@@ -2864,21 +2854,6 @@ USA_intervention_mandate = {
 	USA_demand_liberation = {
 		available = {
 			has_war_support > 0.2
-			if = {
-				limit = {
-					has_war_support > 0.6
-				}
-				congress_low_support_trigger = yes
-			}
-			else_if = {
-				limit = {
-					has_war_support > 0.4
-				}
-				congress_medium_support_trigger = yes
-			}
-			else = {
-				congress_high_support_trigger = yes
-			}
 		}
 		visible = {
 			has_completed_focus = USA_reinforce_monroe_doctrine

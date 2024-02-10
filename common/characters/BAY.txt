@@ -11,42 +11,6 @@ characters = {
 				small="GFX_Rosa_Luxemburg_smol"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = BAY_Rosa_Luxemburg
-			ledger = army
-			allowed = {
-				original_tag = BAY
-			}
-			traits = {
-				army_infantry_4
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 8.000
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BAY_Rosa_Luxemburg2
-			traits = {
-				spartakist_veteran
-			}
-			allowed = {
-				original_tag = BAY
-			}
-			available = {
-			}
-			cost = 150
-		}
-		field_marshal ={
-			traits={ war_hero}
-			skill=5
-			attack_skill=7
-			defense_skill=8
-			planning_skill=7
-			logistics_skill=5
-		}
 	}
 	BAY_Ernst_Toller={
 		name=BAY_Ernst_Toller

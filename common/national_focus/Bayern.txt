@@ -1173,7 +1173,44 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			recruit_character = BAY_Rosa_Luxemburg
+			add_advisor_role = {
+				character = BAY_Rosa_Luxemburg
+				advisor={
+					slot = high_command
+					idea_token = BAY_Rosa_Luxemburg
+					ledger = army
+					traits = {
+						army_infantry_3
+					}
+					cost = 100
+					ai_will_do = {
+						factor = 8.000
+					}
+				}
+			}
+
+			add_advisor_role = {
+				character = BAY_Rosa_Luxemburg
+				advisor={
+					slot = political_advisor
+					idea_token = BAY_Rosa_Luxemburg2
+					traits = {
+						spartakist_veteran
+					}
+					cost = 150
+				}
+			}
+
+			add_field_marshal_role = {
+				character = BAY_Rosa_Luxemburg
+				traits={ war_hero}
+				skill=5
+				attack_skill=7
+				defense_skill=8
+				planning_skill=7
+				logistics_skill=5
+			}
+			#recruit_character = BAY_Rosa_Luxemburg
 		}
 	}
 	focus = {
