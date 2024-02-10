@@ -30,7 +30,7 @@ bookmarks = {
 				spartakist_threat
 			}
 			focuses = {
-				FRA_blood_and_iron
+				PRS_blood_and_iron
 				PRS_the_guardian_of_democracy
 				PRS_our_place_under_the_sun
 			}
@@ -137,7 +137,7 @@ bookmarks = {
 			}
 			focuses = {
 				BEL_david_defeats_goliath
-				BEL_hail_
+				BEL_hail_to_the_tsar
 				BEL_pivot_to_the_past
 			}
 		}

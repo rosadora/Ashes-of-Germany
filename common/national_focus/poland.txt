@@ -1882,7 +1882,7 @@ focus_tree = {
 	focus = {
 		id = POL_complete_april_constitution
 		icon = GFX_focus_POL_complete_april_constitution
-		mutually_exclusive = { focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution focus = POL_assemble_the_regency_council focus = POL_restore_the_sejm }
+		mutually_exclusive = { focus = POL_assemble_the_regency_council focus = POL_restore_the_sejm }
 		
 		x = 49
 		y = 0
@@ -1902,8 +1902,6 @@ focus_tree = {
 				}
 				NOT = {
 					OR = {
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_nationalist_constitution
 						has_completed_focus = POL_assemble_the_regency_council
 					}
 				}
@@ -4929,110 +4927,6 @@ focus_tree = {
 	#############################
 	###NSB ALT-HISTORY CONTENT###
 	#############################
-
-	
-	################
-	###DEMOCRATIC###
-	################
-	focus = {
-		id = POL_elect_a_PSL_leader
-		icon = GFX_goal_support_democracy
-		prerequisite = { focus = POL_raise_the_black_madonna }
-		#prerequisite = { focus = POL_reassemble_the_sejm }
-		#prerequisite = { focus = POL_empower_the_morges }
-		relative_position_id = POL_raise_the_black_madonna
-		mutually_exclusive = { focus = POL_KPP_focus }
-		allow_branch = {
-			has_dlc = "No Step Back"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_assemble_the_regency_council
-						has_completed_focus = POL_nationalist_constitution
-					}
-				}
-			}
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = at_least_50_dem_tt
-				democratic > 0.49
-			}
-			custom_trigger_tooltip = {
-				tooltip = at_most_35_com_tt
-				communism < 0.36
-			}
-		}
-
-		x = 2
-		y = 2
-		cost = 10
-
-		ai_will_do = {
-			factor = 2.5
-		}
-
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_ideas = POL_democratic_sejm_idea
-			country_event = {
-				id = NSB_poland_democratic_events.1
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-		}
-	}
-
-	focus = {
-		id = POL_invest_in_the_peasantry
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = POL_elect_a_PSL_leader }
-		relative_position_id = POL_elect_a_PSL_leader
-
-		x = 0
-		y = 1
-		cost = 10
-		
-		available = { has_civil_war = no }
-
-		ai_will_do = {
-			factor = 2.5
-		}
-
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_stability = 0.1
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 96 
-						state = 95 
-						state = 94 
-						state = 93 
-						state = 91 
-						state = 89 
-						state = 88  
-						state = 97
-					} 
-				}
-				add_dynamic_modifier = { modifier = POL_peasant_communities scope = POL }
-			}
-		}
-	}
 	
 	################
 	###MONARCHIST###
@@ -5041,7 +4935,7 @@ focus_tree = {
 		id = POL_assemble_the_regency_council
 		icon = GFX_focus_generic_monarchy_2
 		allow_branch = { has_dlc = "No Step Back" }
-		mutually_exclusive = { focus = POL_complete_april_constitution focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution }
+		mutually_exclusive = { focus = POL_complete_april_constitution }
 		
 		available = {
 		}

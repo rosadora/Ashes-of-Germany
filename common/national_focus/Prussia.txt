@@ -2383,7 +2383,6 @@
 		x = 1
 		y = 1
 		prerequisite = {focus = PRS_a_democratic_empire}
-		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
 		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
@@ -2404,7 +2403,6 @@
 		x = -1
 		y = 1
 		prerequisite = {focus = PRS_a_democratic_empire}
-		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
 		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {
@@ -2438,7 +2436,6 @@
 		y = 2
 		prerequisite = {focus = PRS_warn_kaiser_from_extremism}
 		prerequisite = {focus = PRS_zentrum_spd_axis}
-		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
 		relative_position_id = PRS_a_democratic_empire
 		cost = 7
 		ai_will_do = {

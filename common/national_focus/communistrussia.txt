@@ -975,7 +975,6 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = USR_return_in_petrograd
 		prerequisite = {focus = USR_open_up_to_the_world}
-		mutually_exclusive = {focus = USR_helsinki_submit}
 
 		completion_reward = {
 			add_war_support = 0.1
