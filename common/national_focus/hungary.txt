@@ -4215,7 +4215,7 @@
 		}
 	}
 	focus = {
-		id = HUN_economic_cooperation
+		id = HUN_economic_cooperation_france
 		icon = GFX_goal_generic_national_unity
 		x = 4
 		y = 8
