@@ -680,7 +680,7 @@ AUS_salzburg_festival_1940 = {
 
 		timeout_effect = {
 			add_stability = -0.05
-			remove_country_flag = salzburg_festival_1940
+			clr_country_flag = salzburg_festival_1940
 			set_country_flag = has_completed_1940_salz_festival
 		}
 
@@ -1000,7 +1000,7 @@ AUS_salzburg_festival_1942 = {
 
 		timeout_effect = {
 			add_stability = -0.05
-			remove_country_flag = salzburg_festival_1942
+			clr_country_flag = salzburg_festival_1942
 			set_country_flag = has_completed_1942_salz_festival
 		}
 
@@ -1161,7 +1161,7 @@ AUS_salzburg_festival_1943 = {
 
 		timeout_effect = {
 			add_stability = -0.05
-			remove_country_flag = salzburg_festival_1943
+			clr_country_flag = salzburg_festival_1943
 			set_country_flag = has_completed_1943_salz_festival
 		}
 
@@ -1319,7 +1319,7 @@ AUS_salzburg_festival_1944 = {
 
 		timeout_effect = {
 			add_stability = -0.05
-			remove_country_flag = salzburg_festival_1944
+			clr_country_flag = salzburg_festival_1944
 			set_country_flag = has_completed_1944_salz_festival
 		}
 

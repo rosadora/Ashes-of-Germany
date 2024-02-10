@@ -23,9 +23,11 @@ ETH_triumph_over_mussolini = {
 
         complete_effect = {
 			white_peace = ITA
-            transfer_state = 550
-			transfer_state = 559
-			transfer_state = 844
+            ETH = {
+                transfer_state = 550
+			    transfer_state = 559
+			    transfer_state = 844
+            }
             IF = {
                 limit = {
                     ITA = {
