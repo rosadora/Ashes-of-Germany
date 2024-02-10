@@ -4011,7 +4011,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.075
-			add_ideas = 40_hours_a_week
+			add_ideas = fourty_hours_a_week
 		}
 	}
 	focus = {

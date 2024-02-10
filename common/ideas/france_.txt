@@ -614,7 +614,7 @@ ideas = {
 				consumer_goods_factor = -0.03
 			} 
 		}
-		40_hours_a_week = {
+		fourty_hours_a_week = {
 			
 			allowed = {
 			}
