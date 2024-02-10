@@ -2176,7 +2176,7 @@
 		prerequisite = {focus = USR_collective_farms}
 
 		completion_reward = {
-			remove_ideas = kulaks
+			remove_ideas = communism_kulaks_idea
 			add_timed_idea = {
 				idea = arrestation_of_the_kulaks
 				days = 50

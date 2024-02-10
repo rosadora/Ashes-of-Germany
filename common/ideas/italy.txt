@@ -463,22 +463,5 @@ ideas = {
 				industrial_capacity_factory = 0.3
 			}
 		}
-		fascist_influence = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_fascism_drift_bonus
-
-			removal_cost = -1
-			
-			modifier = {
-				fascism_drift = 0.1
-			}
-		}
     }
 }

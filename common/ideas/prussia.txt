@@ -479,7 +479,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.075
 			}
 		}
-		defend_democracy = {
+		PRU_defend_democracy_idea = {
 			
 			allowed = {
 			}

@@ -3100,7 +3100,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas = 40_hours_a_week
+			add_ideas = forty_hours_a_week
 		}
 	}
 	focus = {
@@ -3593,7 +3593,7 @@
 		completion_reward = {
 			add_ideas = collective_farms
 			add_timed_idea = {
-				idea = kulaks
+				idea = communism_kulaks_idea
 				days = 150
 			}
 		}

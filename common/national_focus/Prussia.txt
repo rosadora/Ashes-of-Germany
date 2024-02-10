@@ -2736,7 +2736,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = defend_democracy
+			add_ideas = PRU_defend_democracy_idea
 		}
 	}
 	focus = {

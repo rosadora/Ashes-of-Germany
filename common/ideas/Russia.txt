@@ -335,7 +335,6 @@ ideas = {
 				social_democracy_drift = 0.02
 				communism_drift = 0.04
 				classical_marxism_drift =  0.02
-				classical_marxism_drift =  0.02
 			}
 		}
 		army_of_the_old_days = {
@@ -1015,7 +1014,7 @@ ideas = {
 				production_speed_buildings_factor = 0.35
 			}
 		}
-		kulaks = {
+		RUS_kulaks_idea = {
 			
 			allowed = {
 			}
@@ -1660,7 +1659,6 @@ ideas = {
 				army_attack_factor = 0.5
 				army_speed_factor = 0.3
 				army_attack_speed_factor = 0.4
-				army_speed_factor = 0.5
 				ai_focus_aggressive_factor = 10
 			}
 		}

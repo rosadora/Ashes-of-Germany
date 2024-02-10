@@ -539,7 +539,7 @@ ideas = {
 				army_org_factor = 0.075
 			} 
 		}
-		defend_democracy = {
+		FRA_defend_democracy_idea = {
 			
 			allowed = {
 			}
@@ -614,7 +614,7 @@ ideas = {
 				consumer_goods_factor = -0.03
 			} 
 		}
-		40_hours_a_week = {
+		forty_hours_a_week = {
 			
 			allowed = {
 			}

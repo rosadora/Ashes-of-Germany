@@ -177,13 +177,13 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				light_air = {
+				small_plane_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
 			}
 		}
-		warriors_from_the_moutains = {
+		warriors_from_the_mountains = {
 			
 			allowed = {
 			}
