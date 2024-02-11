@@ -1131,8 +1131,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Generic_asian_portrait5"
-		texturefile = "gfx/leaders/generic/Generic_asian_portrait5.dds"
+		name = "GFX_Generic_asian_portrait"
+		texturefile = "gfx/leaders/generic/Generic_asian_portrait.dds"
 	}
 
 	spriteType = {
@@ -1144,4 +1144,35 @@ spriteTypes = {
 		name = "GFX_Generic_Black_portrait"
 		texturefile = "gfx/leaders/generic/Generic_Black_portrait.dds"
 	}
+
+        spriteType = {
+		name = "GFX_Generic_Caucasian_portrait6"
+		texturefile = "gfx/leaders/generic/Generic_Caucasian_portrait6.dds"
+	}
+
+        spriteType = {
+		name = "GFX_Generic_Female_portrait"
+		texturefile = "gfx/leaders/generic/Generic_Female_portrait.dds"
+	}
+
+        spriteType = {
+		name = "GFX_Generic_Female_portrait2"
+		texturefile = "gfx/leaders/generic/Generic_Female_portrait2.dds"
+	}
+
+        spriteType = {
+		name = "GFX_Generic_Female_portrait3"
+		texturefile = "gfx/leaders/generic/Generic_Female_portrait3.dds"
+	}
+
+        spriteType = {
+		name = "GFX_Generic_Female_portrait4"
+		texturefile = "gfx/leaders/generic/Generic_Female_portrait4.dds"
+	}
+
+        spriteType = {
+		name = "GFX_Generic_Female_portrait5"
+		texturefile = "gfx/leaders/generic/Generic_Female_portrait5.dds"
+	} 
+
 }
