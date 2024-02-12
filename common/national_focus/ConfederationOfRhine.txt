@@ -2165,6 +2165,7 @@
               type = annex_everything
               target = BAY
             }
+		 add_state_core = 60
 		 add_state_core = 52
 		 add_state_core = 53
 		 add_state_core = 54
@@ -2265,7 +2266,6 @@
               type = annex_everything
               target = SAX
             }
-		 add_state_core = 60
 		 add_state_core = 65
 		}
 	}

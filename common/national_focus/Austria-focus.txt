@@ -1628,9 +1628,6 @@
 			factor = 5
 		}
 		available = {
-			has_full_control_of_state = 920
-			has_full_control_of_state = 918
-			has_full_control_of_state = 922
 		}
 		bypass = {
 		}
