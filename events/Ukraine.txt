@@ -47,6 +47,9 @@ country_event = {
 			ideology = communism
 			popularity = 0.025
 		}
+		set_politics = {
+			ruling_party = social_democracy
+		}
 	}
 }
 country_event = {

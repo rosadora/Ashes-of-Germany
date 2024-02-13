@@ -1628,9 +1628,6 @@
 			factor = 5
 		}
 		available = {
-			has_full_control_of_state = 920
-			has_full_control_of_state = 918
-			has_full_control_of_state = 922
 		}
 		bypass = {
 		}
@@ -1760,7 +1757,9 @@
 		available = {
 			OR = {
 			has_government = communism
-			has_government = democratic 
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = social_democracy
 			}
 		}
 		bypass = {

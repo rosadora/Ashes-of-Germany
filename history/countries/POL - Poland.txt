@@ -1,12 +1,12 @@
 ﻿capital = 10
 
 set_autonomy = {
-    target = BLR
-    autonomy_state = autonomy_dominion
+	target = BLR
+	autonomous_state = autonomy_dominion
 }
 set_autonomy = {
-    target = UKR
-    autonomy_state = autonomy_dominion
+	target = UKR
+	autonomous_state = autonomy_dominion
 }
 
 oob = "POL_1936"
