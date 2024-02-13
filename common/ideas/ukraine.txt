@@ -382,8 +382,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				industrial_capacity_dockyard = 0.15
-				naval_coordination = 0.25
+				industrial_capacity_dockyard = 0.05
+				naval_coordination = 0.1
 			} 
 			
 		}
@@ -402,8 +402,8 @@ ideas = {
 			
 			modifier = { 
 				industrial_capacity_dockyard = 0.15
-				naval_coordination = 0.25
-				convoy_escort_efficiency = 0.35
+				naval_coordination = 0.2
+				convoy_escort_efficiency = 0.15
 			} 
 			
 		}
@@ -422,8 +422,8 @@ ideas = {
 			
 			modifier = { 
 				industrial_capacity_dockyard = 0.15
-				naval_coordination = 0.25
-				convoy_escort_efficiency = 0.35
+				naval_coordination = 0.2
+				convoy_escort_efficiency = 0.3
 			} 
 			
 		}

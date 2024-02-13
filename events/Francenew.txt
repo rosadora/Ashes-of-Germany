@@ -1033,6 +1033,16 @@ country_event = {
 			transfer_state = 943
 			transfer_state = 42
 			transfer_state = 51
+			IF = {
+				limit = {
+					FRA = {
+						owns_state = 7
+						owns_state = 36
+					}
+					transfer_state = 7
+			        transfer_state = 36
+				}
+			}
 		 annex_country = {
          target = RCO
          transfer_troops = no

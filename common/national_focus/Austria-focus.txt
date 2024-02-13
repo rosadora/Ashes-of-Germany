@@ -1757,7 +1757,9 @@
 		available = {
 			OR = {
 			has_government = communism
-			has_government = democratic 
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = social_democracy
 			}
 		}
 		bypass = {
