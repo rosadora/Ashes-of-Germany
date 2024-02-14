@@ -16,6 +16,50 @@ characters={
 		}
 	}
 
+	EST_Jaan_Tonisson={
+		name="Jaan Tõnisson"
+		portraits={
+			civilian={
+				large="GFX_Generic_Caucasian_portrait6"
+			}
+			army = {
+				small = GFX_Generic_Caucasian_portrait6 #Not ever used
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=classical_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=social_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	EST_August_Rei={
+		name="August Rei"
+		portraits={
+			civilian={
+				large="GFX_Generic_Caucasian_portrait6"
+			}
+			army = {
+				small = GFX_Generic_Caucasian_portrait6 #Not ever used
+			}
+		}
+		country_leader={
+			ideology=social_democracy_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	EST_artur_sirk={
 		name=EST_artur_sirk
 		portraits={
@@ -28,6 +72,11 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=ultra_nationalism_category
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -44,7 +93,19 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=marxism
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+			traits = { baltic_revolutionary }
+		}
+		country_leader={
+			ideology=libertarian_socialism_category
+			expire="1965.1.1.1"
+			id=-1
+			traits = { baltic_revolutionary }
+		}
+		country_leader={
+			ideology=classical_marxism_category
 			expire="1965.1.1.1"
 			id=-1
 			traits = { baltic_revolutionary }
