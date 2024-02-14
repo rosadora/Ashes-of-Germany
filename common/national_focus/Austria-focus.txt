@@ -197,7 +197,7 @@
 			create_country_leader = {
 	      name = "Ruth von Mayenburg"
 	      desc = "POLITICS_Ruth_Von_Mayenburg_DESC"
-	      picture = "gfx/leaders/Ruth_Von_Mayenburg.dds"
+	      picture = "gfx/leaders/AUS/Ruth_von_mayenburg.dds"
 	      expire = "1960.1.16"
 	      ideology = council_communist
 	      traits = {

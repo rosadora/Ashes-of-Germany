@@ -1102,7 +1102,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_Harry_Kessler"
-		texturefile = "gfx/leaders/generic/Harry_Kessler.dds"
+		texturefile = "gfx/leaders/SHL/Harry_Kessler.dds"
 	}
 
 	spriteType = {
