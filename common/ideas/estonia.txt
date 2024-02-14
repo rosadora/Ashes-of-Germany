@@ -1,0 +1,24 @@
+ideas = {
+
+	country = {
+		the_era_of_silence = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = DEN_occupation_laws
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.075
+				political_power_factor = 0.1
+				neutrality_drift = 0.02
+			} 
+		}
+	}
+}
