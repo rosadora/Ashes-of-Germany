@@ -1,0 +1,8 @@
+
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_modifiers_german_speakers_cze"
+		texturefile = "gfx/interface/state_modifiers/modifiers_german_speakers_cze.dds"
+	}
+}

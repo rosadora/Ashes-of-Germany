@@ -110,6 +110,11 @@ set_politics = {
 	elections_allowed = yes
 }
 
+add_ideas = {
+  bastion_of_democracy
+  german_speaking_minorities_cze
+  revanchism_for_unification
+}
 set_popularities = {
 	fascism = 4
 	ultra_nationalism = 11

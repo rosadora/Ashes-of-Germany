@@ -1,0 +1,68 @@
+ideas = {
+
+	country = {
+		bastion_of_democracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = 0.05
+				army_core_defence_factor = 0.05
+			} 
+		}
+		german_speaking_minorities_cze = {
+			
+			allowed = {
+				controls_state = 69
+				controls_state = 74
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.2
+				consumer_goods_factor = 0.15
+				fascism_drift = 0.01
+				ultra_nationalism_drift = 0.01
+				communism_drift = 0.01
+				classical_marxism_drift = 0.01
+				libertarian_socialism_drift = 0.01
+			} 
+		}
+		revanchism_for_unification = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CZE_divided_nation
+
+			removal_cost = -1
+			
+			modifier = { 
+				war_support_factor = 0.05
+				stability_factor = -0.05
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.01
+			} 
+		}
+	}
+}
