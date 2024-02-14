@@ -103,11 +103,12 @@ if = {
 
 set_research_slots = 3
 
+complete_national_focus = CZE_national_social_1935_agenda
+complete_national_focus = CZE_the_language_fracture
+
 set_politics = {
 	ruling_party = social_liberalism
-	last_election = "1935.5.19"
-	election_frequency = 60
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 add_ideas = {

@@ -19,6 +19,25 @@ ideas = {
 				army_core_defence_factor = 0.05
 			} 
 		}
+		heaven_of_liberty = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = 0.1
+				army_core_defence_factor = 0.05
+				monthly_population = 0.2
+			} 
+		}
 		german_speaking_minorities_cze = {
 			
 			allowed = {

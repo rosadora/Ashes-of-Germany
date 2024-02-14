@@ -1,0 +1,26 @@
+﻿###########################
+# Czech Events
+###########################
+add_namespace = bohemia
+
+country_event = {
+	id = bohemia.1
+	title = bohemia.1.t
+	desc = bohemia.1.d
+	picture = GFX_report_event_sanation_left_victory
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.1.a
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		name = bohemia.1.c
+		ai_chance = {
+			base = 30
+		}
+	}
+}

@@ -1450,4 +1450,29 @@ spriteTypes = {
 	name = "GFX_goal_attack_nationalist_spain"
 	texturefile = "gfx/interface/goals/attack_nationalist_spain.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_national_social_politics_cze"
+	texturefile = "gfx/interface/goals/national_social_politics_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_smash_democratic_defeatism_cze"
+	texturefile = "gfx/interface/goals/smash_democratic_defeatism_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_king_of_everything"
+	texturefile = "gfx/interface/goals/king_of_everything.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_king_of_everything"
+	texturefile = "gfx/interface/goals/king_of_everything.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_king_of_everything"
+	texturefile = "gfx/interface/goals/king_of_everything.dds"			
+	}
 }
