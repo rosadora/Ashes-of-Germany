@@ -3,7 +3,7 @@
 ###########################
 add_namespace = bohemia
 
-country_event = {
+country_event = { #Recognize Slovakia? The debate begins.
 	id = bohemia.1
 	title = bohemia.1.t
 	desc = bohemia.1.d
@@ -16,11 +16,136 @@ country_event = {
 		ai_chance = {
 			base = 30
 		}
+		unlock_decision_tooltip = CZE_vote_on_slovakia_status
 	}
+}
+
+country_event = { #Recognize Slovakia? The Vote.
+	id = bohemia.2
+	title = bohemia.2.t
+	desc = bohemia.2.d
+	picture = GFX_report_event_sanation_left_victory
+
+	is_triggered_only = yes
+
 	option = {
-		name = bohemia.1.c
+		name = bohemia.2.a
 		ai_chance = {
 			base = 30
+		}
+		complete_national_focus = CZE_the_bill_passes
+		hidden_effect = {
+			country_event = {
+				id = bohemia.3
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = bohemia.2.b
+		ai_chance = {
+			base = 30
+		}
+		complete_national_focus = CZE_the_bill_fails
+	}
+}
+
+country_event = { #Nationalist Protests in front of the Parliament
+	id = bohemia.3
+	title = bohemia.3.t
+	desc = bohemia.3.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.3.a
+		ai_chance = {
+			base = 60
+		}
+		custom_effect_tooltip = CZE_the_bill_passes_focus
+		add_political_power = 50
+		add_stability = -0.1
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.07
+		}
+		add_ideas = the_shadow_of_nationalism
+		hidden_effect = {
+			country_event = {
+				id = bohemia.4
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = bohemia.3.b
+		ai_chance = {
+			base = 40
+		}
+		add_stability = -0.05
+		add_political_power = -200
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.05
+		}
+		add_ideas = the_shadow_of_nationalism
+	}
+}
+country_event = { #The government is overthrown!
+	id = bohemia.4
+	title = bohemia.4.t
+	desc = bohemia.4.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.4.a
+		ai_chance = {
+			base = 60
+		}
+		set_politics = {
+			ruling_party = ultra_nationalism
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.075
+		}
+		news_event = {
+			id = news.3065
+			days = 1
+		}
+	}
+}
+country_event = { #Nationalist Protests
+	id = bohemia.5
+	title = bohemia.5.t
+	desc = bohemia.5.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.5.a
+		ai_chance = {
+			base = 60
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.014
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.03
 		}
 	}
 }

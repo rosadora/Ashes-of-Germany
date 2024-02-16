@@ -1,9 +1,6 @@
 ﻿l_english:
  ##############################
- ########## FOCUSES ###########
- ##############################
-
- ##############################
- ##########  IDEAS  ###########
+ ########## MODIFIERS ###########
  ##############################
  german_speakers_minority_cze:0 "German-speaking minorities"
+ german_speakers_minority_cze_national_unity:0 "German-speaking minorities"

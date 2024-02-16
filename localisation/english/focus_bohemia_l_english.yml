@@ -7,3 +7,18 @@
  CZE_smash_democratic_defeatism_desc:0 "We must turn our greatest threat into our greatest inspiration. All Europe's democrats must be welcomed in Bohemia, and guaranteed substantial protection."
  CZE_the_language_fracture:0 "Inclusive Policies"
  CZE_the_language_fracture_desc:0 "The linguistic divide between German speakers and Czechs is significant, and is causing considerable discontent in the Sudetenland regions. We need to review our policies to move towards greater inclusion if we are to repair it."
+ CZE_the_bill_passes:0 "The Bill Passes"
+ CZE_the_bill_passes_desc:0 "A majority of MPs voted in favour of the bill to recognize Slovakia as a sovereign state, thus closing the door to possible reunification."
+ CZE_the_bill_fails:0 "The Bill Fails"
+ CZE_the_bill_fails_desc:0 "Under pressure from the nationalists, parliament and the deputies gave in. To avoid the situation degenerating, they opted for the status quo."
+ CZE_integration_by_laws:0 "Integration by Laws"
+ CZE_integration_by_laws_desc:0 "We need to integrate the German-speaking territories by amending the laws to allow recognition of the German language."
+ CZE_integration_by_investments:0 "Integration by Investments"
+ CZE_integration_by_investments_desc:0 "One of the reasons for the feeling of exclusion of the Sudeten German people is their lack of economic integration and the low level of investment that the Bohemian state reserves for them. By correcting the inequalities, we'll manage to integrate them."
+ CZE_national_unity_agenda:0 "National Unity Agenda"
+ CZE_national_unity_agenda_desc:0 "The unity of the Bohemian people, no matter how diverse, is paramount. The inhabitants of the Sudetenland are just as Bohemian as the citizens of Prague."
+ CZE_reform_the_administration:0 "Two-Languages Solution"
+ CZE_reform_the_administration_desc:0 "To include Bohemia's German population, we need to recognize German as the country's official language. This will make it possible to learn German throughout the country, and facilitate administrative procedures for German-speaking inhabitants."
+ 
+ #### CUSTOM EFFECTS ####
+ CZE_the_bill_passes_focus:0 "§RThis action will have consequences...§!"

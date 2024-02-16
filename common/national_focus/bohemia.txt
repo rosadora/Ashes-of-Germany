@@ -61,7 +61,6 @@
 		}
 
 		available = {
-			date > 1935.05.19
 			has_government = social_liberalism
 		}
 		
@@ -85,6 +84,70 @@
 		}
 	}
 	focus = {
+		id = CZE_the_bill_passes
+		icon = GFX_goal_generic_dangerous_deal
+		x = -2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			always = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_way_to_appeasement}
+		mutually_exclusive = {focus = CZE_the_bill_fails}
+		relative_position_id = CZE_a_way_to_appeasement
+
+		completion_reward = {
+			custom_effect_tooltip = CZE_the_bill_passes_focus
+		}
+	}
+	focus = {
+		id = CZE_the_bill_fails
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			always = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_way_to_appeasement}
+		mutually_exclusive = {focus = CZE_the_bill_passes}
+		relative_position_id = CZE_a_way_to_appeasement
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
 		id = CZE_smash_democratic_defeatism
 		icon = GFX_goal_smash_democratic_defeatism_cze
 		x = 0
@@ -97,7 +160,6 @@
 		}
 
 		available = {
-			date > 1935.05.19
 			has_government = social_liberalism
 		}
 		
@@ -132,7 +194,6 @@
 		}
 
 		available = {
-			date > 1935.05.19
 			has_government = social_liberalism
 		}
 		
@@ -155,6 +216,173 @@
 			add_popularity = {
 				popularity = -0.02
 				ideology = ultra_nationalism
+			}
+		}
+	}
+	focus = {
+		id = CZE_integration_by_laws
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_language_fracture}
+		relative_position_id = CZE_the_language_fracture
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				popularity = -0.02
+				ideology = fascism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = ultra_nationalism
+			}
+		}
+	}
+	focus = {
+		id = CZE_integration_by_investments
+		icon = GFX_focus_SWE_landsverk
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+			controls_state = 69
+			controls_state = 74
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_language_fracture}
+		relative_position_id = CZE_the_language_fracture
+
+		completion_reward = {
+			69 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+			}
+		}
+	}
+	focus = {
+		id = CZE_national_unity_agenda
+		icon = GFX_goal_anschluss
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_integration_by_laws}
+		prerequisite = {focus = CZE_integration_by_investments}
+		relative_position_id = CZE_the_language_fracture
+
+		completion_reward = {
+			69 = {
+				remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				add_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+			}
+			74 = {
+				remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				add_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+			}
+		}
+	}
+	focus = {
+		id = CZE_reform_the_administration
+		icon = GFX_focus_generic_national_security
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_national_unity_agenda}
+		relative_position_id = CZE_the_language_fracture
+
+		completion_reward = {
+			add_political_power = -75
+			country_event = {
+				id = bohemia.5
+				days = 2
 			}
 		}
 	}
