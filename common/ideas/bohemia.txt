@@ -63,6 +63,26 @@ ideas = {
 				libertarian_socialism_drift = 0.01
 			} 
 		}
+		german_speaking_minorities_cze2 = {
+			
+			allowed = {
+				controls_state = 69
+				controls_state = 74
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.1
+				consumer_goods_factor = 0.2
+			} 
+		}
 		revanchism_for_unification = {
 			
 			allowed = {
@@ -101,6 +121,82 @@ ideas = {
 				stability_factor = -0.35
 				ultra_nationalism_drift = 0.05
 				fascism_drift = 0.03
+			} 
+		}
+		army_reform = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tfv_can_conscription_crisis
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_org_factor = -0.25
+				army_defence_factor = -0.3
+				army_attack_factor = -0.3
+			} 
+		}
+		czechoslovakian_liberation_army_slovakia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = czechoslovakian_liberation_army
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_org_factor = -0.15
+				army_core_defence_factor = -0.15
+				army_attack_factor = -0.1
+			} 
+		}
+		czech_funded_organizations = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_neutrality_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				classical_liberalism_drift = 0.04
+				social_liberalism_drift = 0.1
+				social_democracy_drift = 0.06
+			} 
+		}
+		czech_funded_organizations_czech = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_neutrality_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = 0.25
 			} 
 		}
 	}

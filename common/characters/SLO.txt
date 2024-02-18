@@ -11,6 +11,68 @@ characters={
 			expire="1965.1.1"
 			id=-1
 		}
+		country_leader={
+			ideology=ultra_nationalism_category
+			expire="1965.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+
+	SLO_Milan_Hodza={
+		name="Milan Hodža"
+		portraits={
+			civilian={
+				large=GFX_Generic_caucasian_portrait3
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+
+	SLO_Igor_Hrusovský={
+		name="Igor Hrušovský"
+		portraits={
+			civilian={
+				large=GFX_Generic_caucasian_portrait2
+			}
+		}
+		country_leader={
+			ideology=classical_liberalism_category
+			expire="1965.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=social_liberalism_category
+			expire="1965.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=social_democracy_category
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+
+	SLO_anarchist_commune={
+		name="Anarchist Commune"
+		portraits={
+			civilian={
+				large=GFX_anarchist_commune
+			}
+		}
+		country_leader={
+			ideology=libertarian_socialism_category
+			expire="1965.1.1"
+			id=-1
+		}
 	}
 
 	SLO_jaroslav_kratochvil={

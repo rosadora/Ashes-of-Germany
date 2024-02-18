@@ -1633,3 +1633,7 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  ENE_fascist: "The empire of Nordland"
  ENE_fascist_def: "$ENM_fascist$"
 
+ SLL_unionist_slovakia:0 "Unionist Slovakia"
+ SLL_unionist_slovakia_DEF:0 "The Unionist Slovakia"
+ SLL_unionist_slovakia_ADJ:0 "Slovakian"
+

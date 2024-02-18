@@ -1462,17 +1462,22 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_king_of_everything"
-	texturefile = "gfx/interface/goals/king_of_everything.dds"			
+	name = "GFX_goal_claim_slovakia"
+	texturefile = "gfx/interface/goals/claim_slovakia.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_king_of_everything"
-	texturefile = "gfx/interface/goals/king_of_everything.dds"			
+	name = "GFX_goal_infiltrate_slovakia"
+	texturefile = "gfx/interface/goals/infiltrate_slovakia.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_king_of_everything"
-	texturefile = "gfx/interface/goals/king_of_everything.dds"			
+	name = "GFX_goal_unity_propaganda_cze"
+	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_war_with_slovakia"
+	texturefile = "gfx/interface/goals/war_with_slovakia.dds"			
 	}
 }

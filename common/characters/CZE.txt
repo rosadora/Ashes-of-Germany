@@ -26,7 +26,8 @@ characters={
 		name="Josef Václav Najman"
 		portraits={
 			civilian={
-				large=GFX_portrait_Edvard_Benes
+				large=GFX_Josef_Vaclav_Najman
+				small=GFX_Josef_Vaclav_Najman_small
 			}
 		}
 		country_leader={
@@ -40,7 +41,8 @@ characters={
 		name="Karel Kramář"
 		portraits={
 			civilian={
-				large=GFX_Portrait_Europe_Generic_2
+				large=GFX_Karel_Kramar
+				small=GFX_Karel_Kramar_small
 			}
 		}
 		country_leader={
@@ -59,7 +61,8 @@ characters={
 		name="Rudolf Beran"
 		portraits={
 			civilian={
-				large=GFX_Portrait_Europe_Generic_2
+				large=GFX_Rudolf_Beran
+				small=GFX_Rudolf_Beran_small
 			}
 		}
 		country_leader={
@@ -73,7 +76,8 @@ characters={
 		name="Antonín Hampl"
 		portraits={
 			civilian={
-				large=GFX_Portrait_Europe_Generic_2
+				large=GFX_Antonin_Hampl
+				small=GFX_Antonin_Hampl_small
 			}
 		}
 		country_leader={
@@ -101,7 +105,8 @@ characters={
 		name=CZE_frantishek_havlik
 		portraits={
 			civilian={
-				large=GFX_portrait_CZE_frantishek_havlik
+				large=GFX_Frantisek_Havlik
+				small=GFX_Frantisek_Havlik_small
 			}
 		}
 		country_leader={
@@ -116,10 +121,11 @@ characters={
 		name=CZE_klement_gottwald
 		portraits={
 			army={
-				small=GFX_portrait_CZE_klement_gottwald_small
+				small=GFX_Klement_Gottwald_small
 			}
 			civilian={
-				large=GFX_portrait_CZE_klement_gottwald
+				large=GFX_Klement_Gottwald
+				small=GFX_Klement_Gottwald_small
 			}
 		}
 		advisor={

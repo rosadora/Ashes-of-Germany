@@ -1,0 +1,33 @@
+﻿units = {
+	##### Slovenská Polná Armádna (CO: Catlos) #####
+	division = {
+		#name = "1. Pesi Divize 'Janosík'"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11539
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+	}
+	division = {
+		#name = "2. Pesi Divize 'Skultéty'"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3489
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+	}
+	division = {
+		#name = "3. Pesi Divize 'Razus'"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 541
+		division_template = "Pesi Divize"
+		start_experience_factor = 0.2
+	}
+}

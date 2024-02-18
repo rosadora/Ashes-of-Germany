@@ -39,3 +39,379 @@ CZE_votes = {
 		}
 	}
 }
+
+CZE_infiltration_in_slovakia = {
+
+	CZE_coordinating_unionists = {
+
+		icon = GFX_decision_generic_nationalism
+
+		state_target = yes
+
+		on_map_mode = map_and_decisions_view
+
+		target_array = SLO.core_states
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			has_equipment = {
+             infantry_equipment > 699
+            }
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 10
+		days_re_enable = 100
+
+		visible = {
+          has_completed_focus = CZE_infiltrate_slovakia
+		  country_exists = SLO
+		  NOT = {
+			has_country_flag = CZE_started_the_coup
+		  }
+		}
+
+		complete_effect = {
+			SLO = {add_stability = -0.02}
+			damage_building = {
+             type = infrastructure
+             damage = 1
+            }
+			damage_building = {
+             type = arms_factory
+             damage = 1
+            }
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -700
+            }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CZE_plan_the_uprising = {
+
+		icon = GFX_decision_infiltrate_state
+
+		state_target = yes
+
+		on_map_mode = map_and_decisions_view
+
+		target_array = SLO.core_states
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			has_equipment = {
+             infantry_equipment > 7000
+            }
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 100
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_infiltrate_slovakia
+		  country_exists = SLO
+		  NOT = {
+			has_country_flag = CZE_started_the_coup
+		  }
+		}
+
+		complete_effect = {
+			FROM = {
+			set_state_flag = uprising_planned_cze
+			}
+			custom_effect_tooltip = CZE_uprising_planned
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	CZE_start_the_coup = {
+
+		icon = GFX_decision_revolt
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			SLO = {
+				social_liberalism > 0.3
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 100
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_infiltrate_slovakia
+		  country_exists = SLO
+		  NOT = {
+			has_country_flag = CZE_started_the_coup
+		  }
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_started_the_coup
+			SLO = {
+			IF = {
+				limit = {
+					70 = {
+					has_state_flag = uprising_planned_cze
+					}
+				}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = social_liberalism
+				size = 0.4
+				states = {71}
+				hidden_effect = {
+				set_province_controller = 11539
+				set_province_controller = 3489
+				set_province_controller = 541
+				set_cosmetic_tag = SLL_unionist_slovakia
+				load_oob = SLO_unionist_civil_war_western_slovakia
+				set_popularities = {
+	             fascism = 6
+	             ultra_nationalism = 11
+	             democratic = 1
+	             classical_liberalism = 12
+	             social_liberalism = 34
+	             social_democracy = 22
+	             classical_marxism = 4
+	             libertarian_socialism = 3
+	             communism = 7
+                }
+				}
+			}
+			hidden_effect = {
+			set_province_controller = 555
+			set_province_controller = 6586
+			set_province_controller = 6604
+			}
+			random_other_country = {
+				limit = {
+					original_tag = SLO
+					has_government = social_liberalism
+				}
+				set_equipment_fraction = 0.5
+			}
+			}
+			else_if = {
+				limit = {
+					71 = {
+					has_state_flag = uprising_planned_cze
+					}
+				}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = social_liberalism
+				size = 0.4
+				states = {71}
+				hidden_effect = {
+				set_cosmetic_tag = SLL_unionist_slovakia
+				load_oob = SLO_unionist_civil_war_eastern_slovakia
+				set_popularities = {
+	             fascism = 6
+	             ultra_nationalism = 11
+	             democratic = 1
+	             classical_liberalism = 12
+	             social_liberalism = 34
+	             social_democracy = 22
+	             classical_marxism = 4
+	             libertarian_socialism = 3
+	             communism = 7
+                }
+				}
+			}
+			random_other_country = {
+				limit = {
+					original_tag = SLO
+					has_government = social_liberalism
+				}
+				set_equipment_fraction = 0.5
+			}
+			}
+			else_if = {
+				limit = {
+					70 = {
+					has_state_flag = uprising_planned_cze
+					}
+					71 = {
+					has_state_flag = uprising_planned_cze
+					}
+				}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = social_liberalism
+				size = 0.4
+				states = {71}
+				hidden_effect = {
+				set_province_controller = 11539
+				set_province_controller = 3489
+				set_province_controller = 541
+				set_cosmetic_tag = SLL_unionist_slovakia
+				load_oob = SLO_unionist_civil_war_western_slovakia
+				load_oob = SLO_unionist_civil_war_eastern_slovakia
+				set_popularities = {
+	             fascism = 6
+	             ultra_nationalism = 11
+	             democratic = 1
+	             classical_liberalism = 12
+	             social_liberalism = 34
+	             social_democracy = 22
+	             classical_marxism = 4
+	             libertarian_socialism = 3
+	             communism = 7
+                }
+				}
+			}
+			random_other_country = {
+				limit = {
+					original_tag = SLO
+					has_government = social_liberalism
+				}
+				set_equipment_fraction = 0.5
+			}
+			}
+			else = {
+			start_civil_war = {
+				ruling_party = communism
+				ideology = social_liberalism
+				size = 0.4
+				states = {71}
+				hidden_effect = {
+				set_cosmetic_tag = SLL_unionist_slovakia
+				set_popularities = {
+	             fascism = 6
+	             ultra_nationalism = 11
+	             democratic = 1
+	             classical_liberalism = 12
+	             social_liberalism = 34
+	             social_democracy = 22
+	             classical_marxism = 4
+	             libertarian_socialism = 3
+	             communism = 7
+                }
+				}
+			}
+			random_other_country = {
+				limit = {
+					original_tag = SLO
+					has_government = social_liberalism
+				}
+				set_equipment_fraction = 0.5
+			}
+			hidden_effect = {
+			set_province_controller = 555
+			set_province_controller = 6586
+			set_province_controller = 6604
+			}
+			}
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	CZE_create_the_czechoslovakian_liberation_army = {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			has_equipment = {
+             infantry_equipment > 5000
+            }
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 85
+		priority = 10
+		days_re_enable = 100
+
+		visible = {
+          has_completed_focus = CZE_infiltrate_slovakia
+		  country_exists = SLO
+		  NOT = {
+			has_country_flag = CZE_started_the_coup
+		  }
+		}
+
+		complete_effect = {
+			SLO = {
+				add_ideas = czechoslovakian_liberation_army_slovakia
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CZE_fund_unionist_organizations_in_slovakia = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 70
+		priority = 50
+
+		visible = {
+          has_completed_focus = CZE_infiltrate_slovakia
+		  country_exists = SLO
+		}
+
+		complete_effect = {
+			SLO = {
+				add_timed_idea = {
+					idea = czech_funded_organizations
+					days = 100
+				}
+			}
+			add_timed_idea = {
+				idea = czech_funded_organizations_czech
+				days = 100
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

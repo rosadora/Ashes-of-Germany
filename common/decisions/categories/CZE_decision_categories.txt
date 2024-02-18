@@ -14,3 +14,17 @@ CZE_votes = {
 	visible = {
 	}
 }
+
+CZE_infiltration_in_slovakia = {
+
+	icon = GFX_decision_category_NOR_fascist_deploy_prep
+
+	priority = 50
+
+	allowed = {
+		original_tag = CZE
+	}
+
+	visible = {
+	}
+}

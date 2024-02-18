@@ -50,8 +50,8 @@
 	}
 	focus = {
 		id = CZE_a_way_to_appeasement
-		icon = GFX_goal_colombe
-		x = -4
+		icon = GFX_focus_SWE_refuge_from_war
+		x = -5
 		y = 1
 
 		cost = 7
@@ -148,6 +148,148 @@
 		}
 	}
 	focus = {
+		id = CZE_towards_a_united_czechoslovakia
+		icon = GFX_goal_claim_slovakia
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {focus = CZE_the_bill_fails}
+		relative_position_id = CZE_the_bill_fails
+
+		completion_reward = {
+			add_state_claim = 70
+			add_state_claim = 71
+		}
+	}
+	focus = {
+		id = CZE_infiltrate_slovakia
+		icon = GFX_goal_infiltrate_slovakia
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {focus = CZE_towards_a_united_czechoslovakia}
+		relative_position_id = CZE_the_bill_fails
+
+		completion_reward = {
+			unlock_decision_tooltip = CZE_coordinating_unionists
+			unlock_decision_tooltip = CZE_fund_unionist_organizations_in_slovakia
+			unlock_decision_tooltip = CZE_create_the_czechoslovakian_liberation_army
+		}
+	}
+	focus = {
+		id = CZE_unity_propaganda
+		icon = GFX_goal_unity_propaganda_cze
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {focus = CZE_towards_a_united_czechoslovakia}
+		relative_position_id = CZE_the_bill_fails
+
+		completion_reward = {
+			add_war_support = 0.075
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = 0.015
+			}
+		}
+	}
+	focus = {
+		id = CZE_intervene_in_liberation_war
+		icon = GFX_goal_war_with_slovakia
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SLO = {
+				has_civil_war = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {focus = CZE_unity_propaganda}
+		prerequisite = {focus = CZE_infiltrate_slovakia}
+		relative_position_id = CZE_the_bill_fails
+		will_lead_to_war_with = SLO
+
+		completion_reward = {
+			declare_war_on = {
+             target = SLO
+             type = annex_everything
+            }
+		}
+	}
+	focus = {
 		id = CZE_smash_democratic_defeatism
 		icon = GFX_goal_smash_democratic_defeatism_cze
 		x = 0
@@ -182,9 +324,83 @@
 		}
 	}
 	focus = {
+		id = CZE_a_land_of_freedom
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_smash_democratic_defeatism}
+		relative_position_id = CZE_national_social_1935_agenda
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				popularity = 0.05
+				ideology = social_liberalism
+			}
+			add_popularity = {
+				popularity = 0.02
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity = 0.02
+				ideology = social_democracy
+			}
+		}
+	}
+	focus = {
+		id = CZE_insist_on_democratic_volunteers
+		icon = GFX_focus_NORDIC_com_selector_army
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_smash_democratic_defeatism}
+		relative_position_id = CZE_national_social_1935_agenda
+
+		completion_reward = {
+			add_manpower = 75000
+		}
+	}
+	focus = {
 		id = CZE_the_language_fracture
 		icon = GFX_goal_generic_national_unity
-		x = 4
+		x = 5
 		y = 1
 
 		cost = 7
@@ -383,6 +599,76 @@
 			country_event = {
 				id = bohemia.5
 				days = 2
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CZE_reform_the_army
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 2
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_national_unity_agenda}
+		relative_position_id = CZE_the_language_fracture
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = army_reform
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = CZE_marginalization_of_independentist_movements
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 0
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_reform_the_army}
+		prerequisite = {focus = CZE_reform_the_administration}
+		relative_position_id = CZE_the_language_fracture
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = german_speaking_minorities_cze
+				add_idea = german_speaking_minorities_cze2
 			}
 		}
 	}

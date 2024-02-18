@@ -1102,7 +1102,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_Harry_Kessler"
-		texturefile = "gfx/leaders/SHL/Harry_Kessler.dds"
+		texturefile = "gfx/leaders/generic/Harry_Kessler.dds"
 	}
 
 	spriteType = {
@@ -1170,9 +1170,79 @@ spriteTypes = {
 		texturefile = "gfx/leaders/generic/Generic_Female_portrait4.dds"
 	}
 
-        spriteType = {
+    spriteType = {
 		name = "GFX_Generic_Female_portrait5"
 		texturefile = "gfx/leaders/generic/Generic_Female_portrait5.dds"
 	} 
+
+	spriteType = {
+		name = "GFX_Antonin_Hampl"
+		texturefile = "gfx/leaders/CZE/Antonin_Hampl.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Antonin_Hampl_small"
+		texturefile = "gfx/leaders/CZE/Antonin_Hampl_small.dds"
+	} 
+
+	spriteType = {
+		name = "GFX_Frantisek_Havlik"
+		texturefile = "gfx/leaders/CZE/Frantisek_Havlik.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Frantisek_Havlik_small"
+		texturefile = "gfx/leaders/CZE/Frantisek_Havlik_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Rudolf_Beran"
+		texturefile = "gfx/leaders/CZE/Rudolf_Beran.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Rudolf_Beran_small"
+		texturefile = "gfx/leaders/CZE/Rudolf_Beran_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Rudolf_Beran"
+		texturefile = "gfx/leaders/CZE/Rudolf_Beran.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Rudolf_Beran_small"
+		texturefile = "gfx/leaders/CZE/Rudolf_Beran_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Klement_Gottwald"
+		texturefile = "gfx/leaders/CZE/Klement_Gottwald.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Klement_Gottwald_small"
+		texturefile = "gfx/leaders/CZE/Klement_Gottwald_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Karel_Kramar"
+		texturefile = "gfx/leaders/CZE/Karel_Kramar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Karel_Kramar_small"
+		texturefile = "gfx/leaders/CZE/Karel_Kramar_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josef_Vaclav_Najman"
+		texturefile = "gfx/leaders/CZE/Josef_Vaclav_Najman.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josef_Vaclav_Najman_small"
+		texturefile = "gfx/leaders/CZE/Josef_Vaclav_Najman_small.dds"
+	}
 
 }
