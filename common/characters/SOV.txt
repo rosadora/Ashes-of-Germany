@@ -52,7 +52,7 @@ characters = {
 		name = SOV_tsar_vladimir_kirillovich
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_SOV_vladimir_kirillovich"
+				large = "gfx/leaders/SOV/Vladimir_III.dds"
 			}
 		}
 		country_leader = {
@@ -3573,10 +3573,10 @@ characters = {
 
 			portraits = {
 				civilian = {
-					large = GFX_portrait_SOV_konstantin_rodzayevsky
+					large = "gfx/leaders/SOV/Konstantin_Rodzaevsky.dds"
 				}
 				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
+					small = "gfx/leaders/SOV/small/konstantin_Rodzaevsky.dds"
 				}
 			}
 
@@ -3595,7 +3595,7 @@ characters = {
 
 			portraits = {
 				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
+					small = "gfx/leaders/SOV/small/konstantin_Rodzaevsky.dds"
 				}
 			}
 			advisor = {
@@ -3645,10 +3645,10 @@ characters = {
 
 		portraits = {
 			civilian = {
-				large = GFX_portrait_SOV_aleksandr_kerensky
+				large = "gfx/leaders/SOV/Alexandr_Kerensky_civilian.dds"
 			}
 			army = {
-				small = "GFX_idea_alexander_kerensky"
+				small = "gfx/leaders/SOV/small/Alexandr_Kerensky_military_small.dds"
 			}
 		}
 		country_leader = {
@@ -3660,7 +3660,7 @@ characters = {
 
 		advisor = {
 			slot = political_advisor
-			idea_token = SOV_aleksandr_kerensky
+			idea_token = "gfx/leaders/SOV/small/Alexandr_Kerensky_civilian_small.dds"
 			allowed = {
 					original_tag = SOV
 			}
