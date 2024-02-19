@@ -1637,3 +1637,13 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  SLL_unionist_slovakia_DEF:0 "The Unionist Slovakia"
  SLL_unionist_slovakia_ADJ:0 "Slovakian"
 
+ CZE_UNIFIED:0 "Czechoslovakia"
+ CZE_UNIFIED_communism:0 "Czechoslovakian Socialist Republic"
+ CZE_UNIFIED_classical_marxism:0 "Czechoslovakian Socialist Republic"
+ CZE_UNIFIED_libertarian_socialism:0 "Czechoslovakian Socialist Republic"
+ CZE_UNIFIED_social_liberalism:0 "Czechoslovakian Republic"
+ CZE_UNIFIED_classical_liberalism:0 "Czechoslovakian Republic"
+ CZE_UNIFIED_social_democracy:0 "Czechoslovakian Republic"
+ CZE_UNIFIED_DEF:0 "Czechoslovakia"
+ CZE_UNIFIED_ADJ:0 "Czechoslovakian"
+

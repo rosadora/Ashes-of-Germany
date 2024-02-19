@@ -29,7 +29,6 @@
 		}
 
 		available = {
-			date > 1935.05.19
 			has_government = social_liberalism
 		}
 		
@@ -43,7 +42,52 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			
+			remove_ideas = unionist_opposition
+			remove_ideas = illegitimate_government
+			swap_ideas = {
+				remove_idea = autonomous_militias
+				add_idea = leftist_terror_slo
+			}
+		}
+	}
+	focus = {
+		id = SLO_realize_the_dream
+		icon = GFX_goal_czechoslovakia_united
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+			country_exists = CZE
+			CZE = {
+			has_government = social_liberalism
+			}
+		}
+
+		prerequisite = {focus = SLO_unionist_victory}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = SLO_unionist_victory
+
+		completion_reward = {
+			news_event = news.3064
+			CZE = {
+				country_event = slovakia.1
+			}
+			custom_effect_tooltip = SLO_unification
 		}
 	}
 }

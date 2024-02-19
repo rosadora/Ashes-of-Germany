@@ -1480,4 +1480,29 @@ spriteTypes = {
 	name = "GFX_goal_war_with_slovakia"
 	texturefile = "gfx/interface/goals/war_with_slovakia.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_czechoslovakia_united"
+	texturefile = "gfx/interface/goals/czechoslovakia_united.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_unity_propaganda_cze"
+	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_unity_propaganda_cze"
+	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_unity_propaganda_cze"
+	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_unity_propaganda_cze"
+	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	}
 }

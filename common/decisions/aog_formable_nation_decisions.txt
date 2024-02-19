@@ -1,0 +1,52 @@
+czechoslovakia_category = {
+	
+	form_czechoslovakia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = SLO
+				original_tag = CZE
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 9
+			controls_state = 69
+			controls_state = 70
+			controls_state = 71
+			controls_state = 74
+			controls_state = 75
+		}
+
+		visible = {
+			OR = {
+				original_tag = SLO
+				original_tag = CZE
+			}
+			NOT = { has_global_flag = form_czechoslovakia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = CZE_UNIFIED
+			hidden_effect = {
+				9 = { add_core_of = ROOT }
+				69 = { add_core_of = ROOT }
+				70 = { add_core_of = ROOT }
+				71 = { add_core_of = ROOT }
+				74 = { add_core_of = ROOT }
+				75 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = news.3064 hours = 6 }
+				set_global_flag = form_czechoslovakia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+}

@@ -1,0 +1,24 @@
+﻿###########################
+# Czech Events
+###########################
+add_namespace = slovakia
+
+country_event = { #Union with Bohemia
+	id = slovakia.1
+	title = slovakia.1.t
+	desc = slovakia.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.1.a
+		ai_chance = {
+			base = 30
+		}
+		annex_country = {
+            target = SLO
+            transfer_troops = yes
+        }
+	}
+}

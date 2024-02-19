@@ -1190,3 +1190,17 @@ news_event = {
 		name = news.3063.a
 	}
 }
+news_event = { #Czecholslovak Union
+	id = news.3064
+	title = news.3064.t
+	desc = news.3064.d
+	picture = GFX_news_event_cze_divided_nation
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3064.a
+	}
+}
