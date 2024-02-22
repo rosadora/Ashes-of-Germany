@@ -271,6 +271,21 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_fortress_bohemia"
+		texturefile = "gfx/interface/ideas/fortress_bohemia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hlinka_spirit"
+		texturefile = "gfx/interface/ideas/hlinka_spirit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hlinka_spirit"
+		texturefile = "gfx/interface/ideas/hlinka_spirit.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_war_communism"
 		texturefile = "gfx/interface/ideas/war_communism.dds"
 	}

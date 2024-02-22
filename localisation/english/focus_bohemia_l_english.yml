@@ -35,5 +35,13 @@
  CZE_unity_propaganda_desc:0 "We need to strengthen nationalist feeling among the Bohemian population, particularly with a view to union with Slovakia and potential Czech intervention."
  CZE_intervene_in_liberation_war:0 "Intervene in Liberation War"
  CZE_intervene_in_liberation_war_desc:0 "The Slovak rebels are too weak to win, and if we don't intervene in the war now, we have no chance of success."
+ CZE_focus_on_germany:0 "Eyes on Germany"
+ CZE_focus_on_germany_desc:0 "Germany and its balance concerns us directly, because a powerful, bellicose Germany would be a direct threat to the integrity of the nation."
+ CZE_defensive_plans_focus:0 "Defence of Bohemia"
+ CZE_defensive_plans_focus_desc:0 "Bohemia's physical integrity is threatened by Germany, and by all the powers seeking to settle there. We must fortify the country and make it an impregnable fortress."
+ CZE_shatter_prussian_dreams:0 "Shatter Prussian Dreams"
+ CZE_shatter_prussian_dreams_desc:0 "The Prussians are trying to unify Germany, and we have to stop them if we want to avert a threat, but we have to wait for the right pretext to strike, such as an offensive war by the Prussians."
+ CZE_fortress_bohemia:0 "Fortress Bohemia"
+ CZE_fortress_bohemia_desc:0 "Priority is given to the absolute defense of the national territory."
  #### CUSTOM EFFECTS ####
  CZE_the_bill_passes_focus:0 "§RThis action will have consequences...§!"

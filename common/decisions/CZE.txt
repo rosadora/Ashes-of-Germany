@@ -415,3 +415,406 @@ CZE_infiltration_in_slovakia = {
 		}
 	}
 }
+
+CZE_defensive_lines = {
+
+	CZE_begin_the_works_on_sudetenland = {
+
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			num_of_available_civilian_factories > 7
+			controls_state = 69
+			controls_state = 74
+			controls_state = 70
+			controls_state = 9
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_defensive_plans
+		}
+
+		modifier = {
+			industrial_factory_donations = 7
+		}
+
+		remove_effect = {
+			if = {
+				limit = { controls_state = 69 }
+				69 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 9 }
+				9 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							id = 445
+							id = 494
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 74 }
+				74 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							id = 421
+							id = 6485
+							id = 3414
+							id = 3583
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							id = 9539
+							id = 9692
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			}
+			set_country_flag = CZE_sudety_worksI
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	CZE_continue_the_works_on_sudetenland = {
+
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			num_of_available_civilian_factories > 7
+			controls_state = 69
+			controls_state = 74
+			controls_state = 70
+			controls_state = 9
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_sudety_worksI
+		}
+
+		modifier = {
+			industrial_factory_donations = 7
+		}
+
+		remove_effect = {
+			if = {
+				limit = { controls_state = 69 }
+				69 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 9 }
+				9 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = {
+							id = 445
+							id = 494
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 74 }
+				74 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = {
+							id = 421
+							id = 6485
+							id = 3414
+							id = 3583
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = {
+							id = 9539
+							id = 9692
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+			set_country_flag = CZE_sudety_worksII
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	CZE_final_works = {
+
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			num_of_available_civilian_factories > 7
+			controls_state = 69
+			controls_state = 74
+			controls_state = 70
+			controls_state = 9
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_sudety_worksII
+		}
+
+		modifier = {
+			industrial_factory_donations = 7
+		}
+
+		remove_effect = {
+			if = {
+				limit = { controls_state = 69 }
+				69 = {
+					set_building_level = {
+						type = bunker
+						level = 7
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 7
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 9 }
+				9 = {
+					set_building_level = {
+						type = bunker
+						level = 7
+						province = {
+							id = 445
+							id = 494
+							limit_to_border = yes
+							level < 7
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 74 }
+				74 = {
+					set_building_level = {
+						type = bunker
+						level = 7
+						province = {
+							id = 421
+							id = 6485
+							id = 3414
+							id = 3583
+							limit_to_border = yes
+							level < 7
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 7
+						province = {
+							id = 9539
+							id = 9692
+							limit_to_border = yes
+							level < 7
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	CZE_prevent_a_breakthrough = {
+
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			num_of_available_civilian_factories > 7
+			has_full_control_of_state = 75
+			has_full_control_of_state = 9
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_defensive_plans
+		}
+
+		modifier = {
+			industrial_factory_donations = 7
+		}
+
+		remove_effect = {
+			if = {
+				limit = { controls_state = 75 }
+				75 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 6562
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 3569
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 9 }
+				9 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 11542
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 6418
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 9569
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 9429
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 583
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 9421
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

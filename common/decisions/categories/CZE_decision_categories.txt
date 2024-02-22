@@ -28,3 +28,17 @@ CZE_infiltration_in_slovakia = {
 	visible = {
 	}
 }
+
+CZE_defensive_lines = {
+
+	icon = GFX_decision_category_generic_fortification
+
+	priority = 50
+
+	allowed = {
+		original_tag = CZE
+	}
+
+	visible = {
+	}
+}

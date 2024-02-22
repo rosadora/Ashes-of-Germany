@@ -1487,8 +1487,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_unity_propaganda_cze"
-	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	name = "GFX_goal_fortress_bohemia_focus"
+	texturefile = "gfx/interface/goals/fortress_bohemia_focus.dds"			
 	}
 
 	SpriteType = {

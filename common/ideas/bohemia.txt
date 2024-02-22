@@ -199,5 +199,25 @@ ideas = {
 				consumer_goods_factor = 0.25
 			} 
 		}
+		fortress_bohemia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fortress_bohemia
+
+			removal_cost = -1
+			
+			modifier = { 
+				land_bunker_effectiveness_factor = 0.125
+				production_speed_bunker_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_attack_factor = -0.05
+			} 
+		}
 	}
 }
