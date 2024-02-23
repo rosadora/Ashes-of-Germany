@@ -723,6 +723,286 @@ characters={
 		}		
 	}
 
+	CZE_Leon_Blum={
+		name="Léon Blum"
+		portraits={
+			army={
+				small="gfx/leaders/FRA/Léon_Blum_small.dds"
+			}
+			civilian = {
+				large="gfx/leaders/FRA/Léon_Blum.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_leon_blum
+			allowed  = {
+				original_tag  = CZE
+			}
+			available  = {
+			}
+			traits  = {
+				social_democratic_reformer 
+				exiled
+			}
+			ai_will_do  = {
+				factor  = 10
+			}
+		}
+	}
+
+	CZE_edouard_daladier={
+		name="Edouard Daladier"
+		portraits={
+			civilian = {
+				large="gfx/leaders/FRA/Edouard_Daladier.dds"
+				small="gfx/leaders/FRA/Edouard_Daladier_small.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_edouard_daladier
+			allowed  = {
+				original_tag  = CZE
+			}
+			available  = {
+			}
+			traits  = {
+				liberal_democratic_paragon 
+				exiled
+			}
+			ai_will_do  = {
+				factor  = 10
+			}
+		}
+	}
+
+	CZE_maurice_gamelin={
+		name="Maurice Gamelin"
+		portraits={
+			army={
+				small="gfx/leaders/FRA/Maurice_Gamelin_small.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Maurice_Gamelin.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CZE_maurice_gamelin
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+			}
+			cost = 100.000
+			traits = {
+				army_chief_offensive_2
+				exiled
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		field_marshal={
+			traits={ old_guard inflexible_strategist career_officer defensive_doctrine }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=0
+		}
+	}
+
+	CZE_aleksandr_kerensky = {
+		name = "Aleksandr Kerensky"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Alexandr_Kerensky_civilian.dds"
+			}
+			army = {
+				small = "gfx/leaders/SOV/small/Alexandr_Kerensky_military_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = CZE_aleksandr_kerensky
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+				OR = {
+					NOT = {
+					country_exists = SOV
+					}
+					AND = {
+						country_exists = SOV 
+						NOT = {
+						SOV = {
+							OR = {
+								has_government = democratic
+				                has_government = classical_liberalism
+				                has_government = social_liberalism
+				                has_government = social_democracy
+							}
+						}
+						}
+					}
+
+				}
+			}
+			traits = {
+				socialist_reformer 
+				exiled
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	CZE_Savinkov_small={
+		name="Boris Savinkov"
+		portraits={
+			civilian={
+				large="GFX_Savinkov_small"
+				small="GFX_Savinkov_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_Savinkov_small
+			traits = {
+				guerrilla_warfare_expert
+				exiled
+			}
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = classical_marxism
+				has_government = communism
+				}
+			}
+			cost = 150
+		}
+	}
+
+	CZE_Viktor_Tchernov={
+		name="Viktor Tchernov"
+		portraits={
+			civilian={
+				large="GFX_Viktor_Tchernov_small"
+				small="GFX_Viktor_Tchernov_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_Viktor_Tchernov
+			traits = {
+				minister_of_agriculture
+				exiled
+			}
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = classical_marxism
+				has_government = communism
+				}
+			}
+			cost = 150
+		}
+	}
+
+	CZE_theodor_heuss={
+		name="Theodor Heuss"
+		portraits={
+			army={
+				small="GFX_idea_GER_theodor_heuss"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_theodor_heuss
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+			}
+			traits = {
+				liberal_journalist 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+
+	CZE_heinrich_beythien={
+		name="Heinrich Beythien"
+		portraits={
+			civilian={
+				small="GFX_Heinrich_Beythien_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_heinrich_beythien
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+			}
+			traits = {
+				conservative_grandee 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+
+	CZE_Wilhelm_Keil={
+		name="Wilhelm Keil"
+		portraits={
+			civilian={
+				small="GFX_Wilhelm_Keil_small"
+				large="GFX_Wilhelm_Keil"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_heinrich_beythien
+			allowed = {
+				original_tag = CZE
+			}
+			available = {
+			}
+			traits = {
+				socialist_justice 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+
 	
 
 	# Illusive Gentleman auto-generated

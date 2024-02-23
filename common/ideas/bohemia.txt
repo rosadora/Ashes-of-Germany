@@ -219,5 +219,23 @@ ideas = {
 				army_attack_factor = -0.05
 			} 
 		}
+		towards_the_future = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_heavy
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.07
+				production_speed_industrial_complex_factor = 0.1
+			} 
+		}
 	}
 }

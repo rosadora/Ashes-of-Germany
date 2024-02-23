@@ -6,7 +6,7 @@ tags={
 	"Gameplay"
 	"Ideologies"
 }
-name="Ashes of Germany"
+name="Ashes of Germany (1)"
 replace_path="common/characters"
 replace_path="common/decisions"
 replace_path="common/national_focus"

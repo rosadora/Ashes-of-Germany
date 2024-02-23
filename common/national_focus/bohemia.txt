@@ -51,7 +51,7 @@
 	focus = {
 		id = CZE_a_way_to_appeasement
 		icon = GFX_focus_SWE_refuge_from_war
-		x = -5
+		x = -7
 		y = 1
 
 		cost = 7
@@ -525,6 +525,177 @@
 
 		completion_reward = {
 			add_manpower = 75000
+		}
+	}
+	focus = {
+		id = CZE_towards_the_future
+		icon = GFX_focus_NORDIC_com_selector_civilian
+		x = -2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_smash_democratic_defeatism}
+		relative_position_id = CZE_national_social_1935_agenda
+
+		completion_reward = {
+			add_ideas = towards_the_future
+		}
+	}
+	focus = {
+		id = CZE_welcome_political_refugiees
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_land_of_freedom}
+		relative_position_id = CZE_national_social_1935_agenda
+
+		completion_reward = {
+			unlock_decision_category_tooltip = CZE_welcome_political_refugiees
+		}
+	}
+	focus = {
+		id = CZE_always_outdo_yourself
+		icon = GFX_focus_SWE_education_reform
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_land_of_freedom}
+		relative_position_id = CZE_national_social_1935_agenda
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = CZE_cooperation_with_the_left
+		icon = GFX_goal_social_progressivism
+		x = -2
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_land_of_freedom}
+		relative_position_id = CZE_national_social_1935_agenda
+		mutually_exclusive = {focus = CZE_a_shift_on_the_right}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = CZE_a_shift_on_the_right
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 2
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = social_liberalism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_land_of_freedom}
+		mutually_exclusive = {focus = CZE_cooperation_with_the_left}
+		relative_position_id = CZE_national_social_1935_agenda
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
 		}
 	}
 	focus = {

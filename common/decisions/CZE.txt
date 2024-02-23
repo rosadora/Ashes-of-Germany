@@ -818,3 +818,187 @@ CZE_defensive_lines = {
 		}
 	}
 }
+CZE_welcome_political_refugiees = {
+
+	CZE_welcome_french_refugiees = {
+
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			FRA = {
+				AND = {
+					NOT = {
+						has_government = social_democracy
+						has_government = social_liberalism
+						has_government = classical_liberalism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 75
+		priority = 20
+		days_remove = 70
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_welcome_political_refugiees
+		}
+
+		modifier = {
+			political_power_cost = 0.8
+		}
+
+		remove_effect = {
+			FRA = {
+				retire_character = FRA_leon_blum
+			}
+			recruit_character = CZE_Leon_Blum
+			custom_effect_tooltip = available_political_advisor
+
+			FRA = {
+				retire_character = FRA_edouard_daladier
+			}
+			recruit_character = CZE_edouard_daladier
+			custom_effect_tooltip = available_political_advisor
+
+			FRA = {
+				retire_character = FRA_maurice_gamelin
+			}
+			recruit_character = CZE_maurice_gamelin
+			custom_effect_tooltip = available_political_advisor
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	CZE_welcome_russian_refugiees = {
+
+		icon = GFX_decision_SOV_exiles_state
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			SOV = {
+				AND = {
+					NOT = {
+						has_government = social_democracy
+						has_government = social_liberalism
+						has_government = classical_liberalism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 75
+		priority = 20
+		days_remove = 70
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_welcome_political_refugiees
+		}
+
+		modifier = {
+			political_power_cost = 0.8
+		}
+
+		remove_effect = {
+			SOV = {
+				retire_character = SOV_aleksandr_kerensky
+			}
+			recruit_character = CZE_aleksandr_kerensky
+			custom_effect_tooltip = available_political_advisor
+
+			SOV = {
+				retire_character = RUS_Savinkov_small
+			}
+			recruit_character = CZE_Savinkov_small
+			custom_effect_tooltip = available_political_advisor
+
+			SOV = {
+				retire_character = RUS_Viktor_Tchernov
+			}
+			recruit_character = CZE_Viktor_Tchernov
+			custom_effect_tooltip = available_political_advisor
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	CZE_welcome_german_refugiees = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			OR = {
+			PRS = {
+				has_completed_focus = PRS_proclamation_of_the_iii_reich
+			}
+			BAY = {
+				has_completed_focus = BAY_return_in_berlin
+			}
+			HAN = {
+				has_completed_focus = HAN_heil_deutschland
+			}
+			WUR = {
+				has_completed_focus = WUR_proclaim_gross_deutschland
+			}
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 75
+		priority = 20
+		days_remove = 70
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_welcome_political_refugiees
+		}
+
+		modifier = {
+			political_power_cost = 0.8
+		}
+
+		remove_effect = {
+			PRS = {
+				retire_character = GER_theodor_heuss
+			}
+			recruit_character = CZE_theodor_heuss
+			custom_effect_tooltip = available_political_advisor
+
+			recruit_character = CZE_heinrich_beythien
+			custom_effect_tooltip = available_political_advisor
+
+			recruit_character = CZE_Wilhelm_Keil
+			custom_effect_tooltip = available_political_advisor
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

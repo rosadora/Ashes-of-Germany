@@ -3656,7 +3656,6 @@ characters = {
 			expire = "1953.3.1.1"
 			id = -1
 		}
-		allowed_civil_war = { tag = SOV}
 
 		advisor = {
 			slot = political_advisor

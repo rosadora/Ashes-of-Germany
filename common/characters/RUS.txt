@@ -19,6 +19,8 @@ characters={
 			available = {
 				NOT = {
 					has_government = communism
+					has_government = classical_marxism
+					has_government = libertarian_socialism
 				}
 			}
 			cost = 150
@@ -45,6 +47,10 @@ characters={
 				has_completed_focus = RUS_appoint_left_wing_ministers
 				OR = {
 				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = classical_marxism
 				has_government = communism
 				}
 			}
@@ -72,6 +78,10 @@ characters={
 				has_completed_focus = RUS_appoint_left_wing_ministers
 				OR = {
 				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = classical_marxism
 				has_government = communism
 				}
 			}
@@ -99,6 +109,10 @@ characters={
 				has_completed_focus = RUS_appoint_left_wing_ministers
 				OR = {
 				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = classical_marxism
 				has_government = communism
 				}
 			}
@@ -126,6 +140,10 @@ characters={
 				has_completed_focus = RUS_appoint_left_wing_ministers
 				OR = {
 				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = classical_marxism
 				has_government = communism
 				}
 			}
