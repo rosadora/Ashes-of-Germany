@@ -973,4 +973,863 @@
 			}
 		}
 	}
+	######### INDUSTRY #########
+
+	focus = {
+		id = CZE_hands_free_investors
+		icon = GFX_focus_generic_industrialists
+		x = 22
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_a_shift_on_the_right
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = CZE_encourage_skoda_works
+		icon = GFX_goal_skoda_subside
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_a_shift_on_the_right
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_hands_free_investors}
+		relative_position_id = CZE_hands_free_investors
+
+		completion_reward = {
+			add_ideas = CZE_skoda_works
+		}
+	}
+	focus = {
+		id = CZE_the_market_law
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_a_shift_on_the_right
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_encourage_skoda_works}
+		prerequisite = {focus = CZE_connect_the_countryside}
+		relative_position_id = CZE_hands_free_investors
+
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.05
+			}
+			add_ideas = competitive_bohemia
+		}
+	}
+	focus = {
+		id = CZE_heaven_for_business
+		icon = GFX_goal_heaven_for_business_cze
+		x = -1
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_a_shift_on_the_right
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_the_market_law}
+		prerequisite = {focus = CZE_welcome_new_industries}
+		relative_position_id = CZE_hands_free_investors
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = competitive_bohemia
+				add_idea = competitive_bohemia2
+			}
+		}
+	}
+	focus = {
+		id = CZE_the_heart_of_central_europe_industry
+		icon = GFX_goal_bohemia_moravia_industry
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			has_government = social_liberalism
+			has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_hands_free_investors focus = CZE_regulated_market}
+		relative_position_id = CZE_hands_free_investors
+
+		completion_reward = {
+			9 = {
+			add_extra_state_shared_building_slots = 2
+			}
+			75 = {
+			add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = CZE_connect_the_countryside
+		icon = GFX_focus_generic_farmland
+		x = -2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 72
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			has_government = social_liberalism
+			has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_the_heart_of_central_europe_industry}
+		relative_position_id = CZE_the_heart_of_central_europe_industry
+
+		completion_reward = {
+			72 = {
+			add_building_construction = {
+              type = supply_node
+              level = 1
+              instant_build = yes
+              province = 9551
+             }
+			}
+			9 = {
+			add_building_construction = {
+              type = supply_node
+              level = 1
+              instant_build = yes
+              province = 9541
+             }
+			}
+		}
+	}
+	focus = {
+		id = CZE_assert_our_independance_on_steel
+		icon = GFX_focus_generic_mining_industry
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			has_government = social_liberalism
+			has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_the_heart_of_central_europe_industry}
+		relative_position_id = CZE_the_heart_of_central_europe_industry
+
+		completion_reward = {
+			9 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+			 add_resource = {
+              type = steel
+              amount = 11
+             }
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+			 add_resource = {
+              type = steel
+              amount = 7
+             }
+			}
+		}
+	}
+	focus = {
+		id = CZE_prospect_for_oil
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			has_government = social_liberalism
+			has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_assert_our_independance_on_steel}
+		relative_position_id = CZE_the_heart_of_central_europe_industry
+
+		completion_reward = {
+			75 = {
+			 add_resource = {
+              type = oil
+              amount = 11
+             }
+			 add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_encourage_technical_progress
+		icon = GFX_focus_generic_modernize_industry
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = democratic
+			has_government = classical_liberalism
+			has_government = social_liberalism
+			has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = CZE_the_heart_of_central_europe_industry}
+		relative_position_id = CZE_the_heart_of_central_europe_industry
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 3
+             category = industry
+            }
+		}
+	}
+	focus = {
+		id = CZE_regulated_market
+		icon = GFX_focus_DEN_limited_regulations
+		x = 26
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = social_democracy
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_cooperation_with_the_left
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = regulated_market_cze
+		}
+	}
+	focus = {
+		id = CZE_focus_on_domestic_production
+		icon = GFX_goal_centralized_management
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			has_government = social_democracy
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_cooperation_with_the_left
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_regulated_market}
+		relative_position_id = CZE_regulated_market
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = regulated_market_cze
+				add_idea = regulated_market_cze2
+			}
+		}
+	}
+	focus = {
+		id = CZE_raise_efficiency
+		icon = GFX_focus_NORDIC_com_civilian
+		x = 1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = improved_machine_tools
+			OR = {
+			has_government = social_democracy
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_cooperation_with_the_left
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_focus_on_domestic_production}
+		prerequisite = {focus = CZE_encourage_technical_progress}
+		relative_position_id = CZE_regulated_market
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = regulated_market_cze2
+				add_idea = regulated_market_cze3
+			}
+		}
+	}
+	focus = {
+		id = CZE_invest_in_electronics
+		icon = GFX_goal_generic_radar
+		x = -2
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+			    has_government = social_liberalism
+			    has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = CZE_the_market_law focus = CZE_raise_efficiency}
+		relative_position_id = CZE_regulated_market
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 3
+             category = electronics
+            }
+		}
+	}
+	focus = {
+		id = CZE_welcome_new_industries
+		icon = GFX_focus_generic_industry_3
+		x = -2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+			    has_government = social_liberalism
+			    has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = CZE_invest_in_electronics}
+		relative_position_id = CZE_invest_in_electronics
+
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.02
+			}
+			9 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 1
+                 instant_build = yes
+                }
+			}
+		}
+	}
+	focus = {
+		id = CZE_invest_in_synthetic_rubber
+		icon = GFX_focus_generic_rubber
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+			    has_government = social_liberalism
+			    has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = CZE_invest_in_electronics}
+		relative_position_id = CZE_invest_in_electronics
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_increase_on_military_production
+		icon = GFX_focus_generic_reorient_production
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+			    has_government = social_liberalism
+			    has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = CZE_invest_in_electronics}
+		relative_position_id = CZE_invest_in_electronics
+
+		completion_reward = {
+			9 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                 type = arms_factory
+                 level = 2
+                 instant_build = yes
+                }
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = arms_factory
+                 level = 1
+                 instant_build = yes
+                }
+			}
+		}
+	}
+	focus = {
+		id = CZE_national_industrial_pride
+		icon = GFX_goal_national_pride_cze
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+			    has_government = social_liberalism
+			    has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = CZE_welcome_new_industries}
+		prerequisite = {focus = CZE_increase_on_military_production}
+		relative_position_id = CZE_invest_in_electronics
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_decrease_on_unemployment
+		icon = GFX_focus_generic_full_employment
+		x = 1
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = improved_machine_tools
+			OR = {
+			has_government = social_democracy
+			AND = {
+			has_government = social_liberalism
+			has_completed_focus = CZE_cooperation_with_the_left
+			}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = CZE_raise_efficiency}
+		prerequisite = {focus = CZE_increase_on_military_production}
+		relative_position_id = CZE_regulated_market
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = regulated_market_cze3
+				add_idea = regulated_market_cze4
+			}
+		}
+	}
 }

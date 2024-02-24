@@ -1492,17 +1492,37 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_unity_propaganda_cze"
-	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	name = "GFX_goal_skoda_subside"
+	texturefile = "gfx/interface/goals/skoda_subside.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_unity_propaganda_cze"
-	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	name = "GFX_goal_bohemia_moravia_industry"
+	texturefile = "gfx/interface/goals/bohemia_moravia_industry.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_unity_propaganda_cze"
-	texturefile = "gfx/interface/goals/unity_propaganda_cze.dds"			
+	name = "GFX_goal_heaven_for_business_cze"
+	texturefile = "gfx/interface/goals/heaven_for_business_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_national_pride_cze"
+	texturefile = "gfx/interface/goals/national_pride_cze.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_bohemia_moravia_industry"
+	texturefile = "gfx/interface/goals/bohemia_moravia_industry.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_bohemia_moravia_industry"
+	texturefile = "gfx/interface/goals/bohemia_moravia_industry.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_bohemia_moravia_industry"
+	texturefile = "gfx/interface/goals/bohemia_moravia_industry.dds"			
 	}
 }

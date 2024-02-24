@@ -237,5 +237,144 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 			} 
 		}
+		regulated_market_cze = {
+			
+			allowed = {
+				NOT = {
+					has_completed_focus = CZE_hands_free_investors
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.075
+				production_factory_max_efficiency_factor = -0.1
+			} 
+		}
+		regulated_market_cze2 = {
+			
+			allowed = {
+				NOT = {
+					has_completed_focus = CZE_hands_free_investors
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.075
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			} 
+		}
+		regulated_market_cze3 = {
+			
+			allowed = {
+				NOT = {
+					has_completed_focus = CZE_hands_free_investors
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.075
+				production_factory_max_efficiency_factor = -0.025
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.035
+				production_speed_industrial_complex_factor = 0.075
+				production_speed_arms_factory_factor = 0.075
+			} 
+		}
+		regulated_market_cze4 = {
+			
+			allowed = {
+				NOT = {
+					has_completed_focus = CZE_hands_free_investors
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.1
+				line_change_production_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			} 
+		}
+		competitive_bohemia = {
+			
+			allowed = {
+				NOT = {
+					has_completed_focus = CZE_regulated_market
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.075
+				production_factory_max_efficiency_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.025
+			} 
+		}
+		competitive_bohemia2 = {
+			
+			allowed = {
+				NOT = {
+					has_completed_focus = CZE_regulated_market
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.075
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+			} 
+		}
 	}
 }
