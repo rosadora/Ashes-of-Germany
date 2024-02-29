@@ -1512,13 +1512,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_bohemia_moravia_industry"
-	texturefile = "gfx/interface/goals/bohemia_moravia_industry.dds"			
+	name = "GFX_goal_memories_from_defeat"
+	texturefile = "gfx/interface/goals/memories_from_defeat.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_bohemia_moravia_industry"
-	texturefile = "gfx/interface/goals/bohemia_moravia_industry.dds"			
+	name = "GFX_goal_army_upgrade"
+	texturefile = "gfx/interface/goals/army_upgrade.dds"			
 	}
 
 	SpriteType = {

@@ -65,7 +65,7 @@ CZE_infiltration_in_slovakia = {
 		cancel_trigger = {
 		}
 
-		cost = 50
+		cost = 25
 		priority = 10
 		days_re_enable = 100
 
@@ -137,10 +137,14 @@ CZE_infiltration_in_slovakia = {
 			set_state_flag = uprising_planned_cze
 			}
 			custom_effect_tooltip = CZE_uprising_planned
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -7000
+            }
 		}
 
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 	}
 	CZE_start_the_coup = {
@@ -192,6 +196,7 @@ CZE_infiltration_in_slovakia = {
 				set_province_controller = 541
 				set_cosmetic_tag = SLL_unionist_slovakia
 				load_oob = SLO_unionist_civil_war_western_slovakia
+				remove_ideas = czechoslovakian_liberation_army_slovakia
 				set_popularities = {
 	             fascism = 6
 	             ultra_nationalism = 11
@@ -232,6 +237,7 @@ CZE_infiltration_in_slovakia = {
 				hidden_effect = {
 				set_cosmetic_tag = SLL_unionist_slovakia
 				load_oob = SLO_unionist_civil_war_eastern_slovakia
+				remove_ideas = czechoslovakian_liberation_army_slovakia
 				set_popularities = {
 	             fascism = 6
 	             ultra_nationalism = 11
@@ -274,6 +280,7 @@ CZE_infiltration_in_slovakia = {
 				set_cosmetic_tag = SLL_unionist_slovakia
 				load_oob = SLO_unionist_civil_war_western_slovakia
 				load_oob = SLO_unionist_civil_war_eastern_slovakia
+				remove_ideas = czechoslovakian_liberation_army_slovakia
 				set_popularities = {
 	             fascism = 6
 	             ultra_nationalism = 11
@@ -303,6 +310,7 @@ CZE_infiltration_in_slovakia = {
 				states = {71}
 				hidden_effect = {
 				set_cosmetic_tag = SLL_unionist_slovakia
+				remove_ideas = czechoslovakian_liberation_army_slovakia
 				set_popularities = {
 	             fascism = 6
 	             ultra_nationalism = 11
@@ -333,7 +341,7 @@ CZE_infiltration_in_slovakia = {
 		}
 
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 	}
 	CZE_create_the_czechoslovakian_liberation_army = {
@@ -356,6 +364,7 @@ CZE_infiltration_in_slovakia = {
 		cost = 85
 		priority = 10
 		days_re_enable = 100
+		fire_only_once = yes
 
 		visible = {
           has_completed_focus = CZE_infiltrate_slovakia
@@ -372,7 +381,7 @@ CZE_infiltration_in_slovakia = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 	}
 	CZE_fund_unionist_organizations_in_slovakia = {
@@ -389,8 +398,9 @@ CZE_infiltration_in_slovakia = {
 		cancel_trigger = {
 		}
 
-		cost = 70
+		cost = 40
 		priority = 50
+		days_re_enable = 100
 
 		visible = {
           has_completed_focus = CZE_infiltrate_slovakia
@@ -411,7 +421,7 @@ CZE_infiltration_in_slovakia = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 	}
 }

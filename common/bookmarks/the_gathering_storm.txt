@@ -217,6 +217,21 @@ bookmarks = {
 				ITA_the_eagle_rise
 			}
 		}
+		"CZE"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = social_liberalism
+			ideas = {
+				bastion_of_democracy
+	            german_speakers_minority_cze
+	            revanchism_for_unification
+			}
+			focuses = {
+				CZE_smash_democratic_defeatism
+				CZE_towards_a_united_czechoslovakia
+				CZE_national_industrial_pride
+			}
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

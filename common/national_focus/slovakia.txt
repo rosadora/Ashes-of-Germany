@@ -30,6 +30,9 @@
 
 		available = {
 			has_government = social_liberalism
+			NOT = {
+				has_civil_war = yes
+			}
 		}
 		
 		bypass = {
@@ -67,6 +70,9 @@
 			country_exists = CZE
 			CZE = {
 			has_government = social_liberalism
+			}
+			NOT = {
+				has_civil_war = yes
 			}
 		}
 

@@ -72,3 +72,11 @@ music = {
 		}		
 	}
 }
+music = {
+	song = "partizanskym_chodnikom"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

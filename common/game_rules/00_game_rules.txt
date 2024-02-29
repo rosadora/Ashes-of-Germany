@@ -642,6 +642,31 @@ RCO_ai_behavior = {
 	}
 }
 
+CZE_ai_behavior = {
+	name = "CZE_ai_behavior"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = NATIONAL_SOCIAL_LEFT_LINE
+		text = "RULE_OPTION_NATIONAL_SOCIAL_LEFT_LINE"
+		desc = "RULE_OPTION_NATIONAL_SOCIAL_LEFT_LINE_CZE_AI_DESC"
+	}
+	option = {
+		name = NATIONAL_SOCIAL_RIGHT_LINE
+		text = "RULE_OPTION_NATIONAL_SOCIAL_RIGHT_LINE"
+		desc = "RULE_OPTION_NATIONAL_SOCIAL_RIGHT_LINE_CZE_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
 POL_ai_behavior = {
 	name = "POL_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"

@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "giovinezza.ogg"
+	file = "partizanskym_chodnikom.ogg"
 	volume = 0.95
 }
 

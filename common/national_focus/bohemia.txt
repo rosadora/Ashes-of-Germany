@@ -26,7 +26,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -57,7 +57,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -92,7 +92,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -124,7 +124,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -154,7 +154,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -184,7 +184,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -223,7 +223,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -254,7 +254,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -286,7 +286,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -318,7 +318,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -351,7 +351,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -390,7 +390,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -413,10 +413,21 @@
 		will_lead_to_war_with = SLO
 
 		completion_reward = {
+			SLO = {
+				leave_faction = yes
+			 add_timed_idea = {
+				idea = war_for_unification
+				days = 150
+			 }
+			}
 			declare_war_on = {
              target = SLO
              type = annex_everything
             }
+			add_timed_idea = {
+				idea = war_for_unification
+				days = 150
+			}
 		}
 	}
 	focus = {
@@ -428,7 +439,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -462,7 +473,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -567,7 +578,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -598,7 +609,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -629,7 +640,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -666,7 +677,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -707,7 +718,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -745,7 +756,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -785,7 +796,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -838,7 +849,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -877,7 +888,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -913,7 +924,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -947,7 +958,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -984,7 +995,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1020,7 +1031,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1058,7 +1069,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1101,7 +1112,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1143,7 +1154,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1186,7 +1197,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1239,7 +1250,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1300,7 +1311,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1349,7 +1360,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1389,7 +1400,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1424,7 +1435,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1464,7 +1475,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1506,7 +1517,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1546,7 +1557,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1603,7 +1614,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1662,7 +1673,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1715,7 +1726,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1799,7 +1810,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -1830,6 +1841,810 @@
 				remove_idea = regulated_market_cze3
 				add_idea = regulated_market_cze4
 			}
+		}
+	}
+	######## MILITARY ########
+	focus = {
+		id = CZE_lessons_of_the_1920_defeat
+		icon = GFX_goal_memories_from_defeat
+		x = 34
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = CZE_defensive_strategies
+		icon = GFX_goal_generic_construction2
+		x = -3
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_lessons_of_the_1920_defeat}
+		mutually_exclusive = {focus = CZE_review_the_strategy}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_ideas = zakoreneni_doctrine
+		}
+	}
+	focus = {
+		id = CZE_improve_soldiers_turnover
+		icon = GFX_focus_generic_little_entente
+		x = -4
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_defensive_strategies}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = zakoreneni_doctrine
+				add_idea = zakoreneni_doctrine2
+			}
+		}
+	}
+	focus = {
+		id = CZE_prepare_for_the_long_war
+		icon = GFX_focus_SWE_hedgehog_defense
+		x = -4
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_improve_soldiers_turnover}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = zakoreneni_doctrine2
+				add_idea = zakoreneni_doctrine3
+			}
+		}
+	}
+	focus = {
+		id = CZE_neprojdou
+		icon = GFX_focus_generic_total_war
+		x = -4
+		y = 6
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_prepare_for_the_long_war}
+		prerequisite = {focus = CZE_compagnies_support}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = zakoreneni_doctrine3
+				add_idea = zakoreneni_doctrine4
+			}
+		}
+	}
+	focus = {
+		id = CZE_a_lot_of_rifles
+		icon = GFX_goal_generic_small_arms
+		x = 1
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_defensive_strategies}
+		relative_position_id = CZE_defensive_strategies
+
+		completion_reward = {
+			add_ideas = cheap_guns
+		}
+	}
+	focus = {
+		id = CZE_review_the_strategy
+		icon = GFX_goal_generic_position_armies
+		x = 3
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_lessons_of_the_1920_defeat}
+		mutually_exclusive = {focus = CZE_defensive_strategies}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_ideas = podovne_doctrine
+		}
+	}
+	focus = {
+		id = CZE_restructure_armys_divisions
+		icon = GFX_focus_generic_manpower
+		x = 4
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_review_the_strategy}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = podovne_doctrine
+				add_idea = podovne_doctrine2
+			}
+		}
+	}
+	focus = {
+		id = CZE_mobile_warfare
+		icon = GFX_focus_FIN_foreign_anti_air
+		x = 4
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_restructure_armys_divisions}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = podovne_doctrine2
+				add_idea = podovne_doctrine3
+			}
+		}
+	}
+	focus = {
+		id = CZE_combined_warfare
+		icon = GFX_focus_generic_license_production
+		x = 4
+		y = 6
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_mobile_warfare}
+		prerequisite = {focus = CZE_replace_outdated_planes}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = podovne_doctrine3
+				add_idea = podovne_doctrine4
+			}
+		}
+	}
+	focus = {
+		id = CZE_effort_on_mechanisation
+		icon = GFX_focus_generic_truck
+		x = -1
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_review_the_strategy}
+		relative_position_id = CZE_review_the_strategy
+
+		completion_reward = {
+			add_ideas = mechanised_army
+		}
+	}
+	focus = {
+		id = CZE_army_technological_advances
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_defensive_strategies focus = CZE_review_the_strategy}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = CZE_bohemian_navy
+		icon = GFX_focus_SWE_Vasa_II
+		x = 0
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		 any_state = {
+          is_controlled_by = CZE
+          is_coastal = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_defensive_strategies focus = CZE_review_the_strategy}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			navy_experience = 75
+		}
+	}
+	focus = {
+		id = CZE_creation_of_the_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		 any_state = {
+          is_controlled_by = CZE
+          is_coastal = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_bohemian_navy}
+		relative_position_id = CZE_bohemian_navy
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_invest_in_navy_research
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		 any_state = {
+          is_controlled_by = CZE
+          is_coastal = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_bohemian_navy}
+		relative_position_id = CZE_bohemian_navy
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 2
+             category = ship_modules_tech
+            }
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 2
+             category = dd_tech
+            }
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 2
+             category = ss_tech
+            }
+		}
+	}
+	focus = {
+		id = CZE_trade_interdiction_fleet
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 0
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		 any_state = {
+          is_controlled_by = CZE
+          is_coastal = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_invest_in_navy_research}
+		prerequisite = {focus = CZE_creation_of_the_navy}
+		relative_position_id = CZE_bohemian_navy
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = naval_doctrine
+            }
+		}
+	}
+	focus = {
+		id = CZE_experienced_army
+		icon = GFX_goal_army_upgrade
+		x = -1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_army_technological_advances}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			army_experience = 75
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = CZE_modern_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = -2
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_experienced_army}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 2
+             category = artillery
+            }
+		}
+	}
+	focus = {
+		id = CZE_invest_in_breakthrough
+		icon = GFX_goal_generic_army_tanks
+		x = -2
+		y = 6
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_modern_artillery}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 1
+             category = cat_light_armor
+            }
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 1
+             category = cat_medium_armor
+            }
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 1
+             category = cat_heavy_armor
+            }
+		}
+	}
+	focus = {
+		id = CZE_compagnies_support
+		icon = GFX_focus_generic_supply_line
+		x = -3
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_experienced_army}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 3
+             category = support_tech
+            }
+		}
+	}
+	focus = {
+		id = CZE_bohemian_airforce
+		icon = GFX_focus_generic_cas_aircraft
+		x = 1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_army_technological_advances}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			air_experience = 75
+		}
+	}
+	focus = {
+		id = CZE_domestic_production_of_planes
+		icon = GFX_goal_generic_air_fighter2
+		x = 2
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_bohemian_airforce}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_ideas = ROM_local_development
+		}
+	}
+	focus = {
+		id = CZE_futuristic_research
+		icon = GFX_focus_generic_jet_planes
+		x = 2
+		y = 6
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_domestic_production_of_planes}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 2
+			 ahead_reduction = 1
+             category = jet_technology
+            }
+		}
+	}
+	focus = {
+		id = CZE_replace_outdated_planes
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = CZE_bohemian_airforce}
+		relative_position_id = CZE_lessons_of_the_1920_defeat
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.75
+             uses = 2
+             category = light_air
+            }
 		}
 	}
 }

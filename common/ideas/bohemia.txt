@@ -36,6 +36,7 @@ ideas = {
 				political_power_factor = 0.1
 				army_core_defence_factor = 0.05
 				monthly_population = 0.2
+				weekly_manpower = 800
 			} 
 		}
 		german_speaking_minorities_cze = {
@@ -375,6 +376,185 @@ ideas = {
 				industrial_capacity_factory = 0.075
 				industrial_capacity_dockyard = 0.075
 			} 
+		}
+		zakoreneni_doctrine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_wall_line
+
+			removal_cost = -1
+			
+			modifier = { 
+				max_dig_in = 5
+				army_core_defence_factor = 0.05
+			} 
+		}
+		zakoreneni_doctrine2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_wall_line
+
+			removal_cost = -1
+			
+			modifier = { 
+				max_dig_in = 5
+				army_core_defence_factor = 0.05
+				army_org_regain = 0.1
+				army_morale_factor = 0.05
+			} 
+		}
+		zakoreneni_doctrine3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_wall_line
+
+			removal_cost = -1
+			
+			modifier = { 
+				max_dig_in = 10
+				army_core_defence_factor = 0.075
+				army_org_regain = 0.1
+				army_morale_factor = 0.05
+				conscription = 0.02
+			} 
+		}
+		zakoreneni_doctrine4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_wall_line
+
+			removal_cost = -1
+			
+			modifier = { 
+				max_dig_in = 10
+				max_dig_in_factor = 0.15
+				army_core_defence_factor = 0.1
+				army_org_regain = 0.125
+				army_morale_factor = 0.1
+				conscription = 0.04
+			} 
+		}
+		podovne_doctrine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_land_air_warfare
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+			} 
+		}
+		podovne_doctrine2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_land_air_warfare
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_speed_factor = 0.05
+				army_attack_factor = 0.075
+				army_org_factor = 0.05
+			} 
+		}
+		podovne_doctrine3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_land_air_warfare
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_speed_factor = 0.075
+				army_attack_factor = 0.1
+				army_org_factor = 0.05
+				breakthrough_factor = 0.05
+				cat_mobile_warfare_cost_factor = -0.1
+			} 
+		}
+		podovne_doctrine4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_land_air_warfare
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_speed_factor = 0.1
+				army_attack_factor = 0.1
+				army_org_factor = 0.075
+				breakthrough_factor = 0.075
+				cat_mobile_warfare_cost_factor = -0.1
+				air_cas_efficiency = 0.1
+				air_superiority_efficiency = 0.1
+				ground_attack_factor = 0.1
+			} 
+		}
+		mechanised_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_supply_line
+
+			removal_cost = -1
+			
+			equipment_bonus = { mechanized_equipment = { instant = yes build_cost_ic = -0.075 } } 
+			equipment_bonus = { motorized_equipment = { instant = yes build_cost_ic = -0.075 } } 
 		}
 	}
 }

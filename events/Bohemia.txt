@@ -31,7 +31,11 @@ country_event = { #Recognize Slovakia? The Vote.
 	option = {
 		name = bohemia.2.a
 		ai_chance = {
-			base = 30
+			base = 1
+			modifier = {
+              factor = 100
+			  has_game_rule = { rule = ULTRA_NATIONALIST_LINE option = yes }
+			}
 		}
 		complete_national_focus = CZE_the_bill_passes
 		hidden_effect = {
@@ -44,7 +48,15 @@ country_event = { #Recognize Slovakia? The Vote.
 	option = {
 		name = bohemia.2.b
 		ai_chance = {
-			base = 30
+			base = 1
+			modifier = {
+              factor = 100
+			  has_game_rule = { rule = NATIONAL_SOCIAL_LEFT_LINE option = yes }
+			}
+			modifier = {
+              factor = 100
+			  has_game_rule = { rule = NATIONAL_SOCIAL_RIGHT_LINE option = yes }
+			}
 		}
 		complete_national_focus = CZE_the_bill_fails
 	}
@@ -86,6 +98,14 @@ country_event = { #Nationalist Protests in front of the Parliament
 		name = bohemia.3.b
 		ai_chance = {
 			base = 40
+			modifier = {
+              factor = 100
+			  has_game_rule = { rule = NATIONAL_SOCIAL_LEFT_LINE option = yes }
+			}
+			modifier = {
+              factor = 100
+			  has_game_rule = { rule = NATIONAL_SOCIAL_RIGHT_LINE option = yes }
+			}
 		}
 		add_stability = -0.05
 		add_political_power = -200

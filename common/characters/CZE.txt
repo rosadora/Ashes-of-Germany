@@ -743,7 +743,6 @@ characters={
 			}
 			traits  = {
 				social_democratic_reformer 
-				exiled
 			}
 			ai_will_do  = {
 				factor  = 10
@@ -769,7 +768,6 @@ characters={
 			}
 			traits  = {
 				liberal_democratic_paragon 
-				exiled
 			}
 			ai_will_do  = {
 				factor  = 10
@@ -798,7 +796,6 @@ characters={
 			cost = 100.000
 			traits = {
 				army_chief_offensive_2
-				exiled
 			}
 			cost = 100
 			ai_will_do = {
@@ -858,7 +855,6 @@ characters={
 			}
 			traits = {
 				socialist_reformer 
-				exiled
 			}
 			ai_will_do = {
 				factor = 10
@@ -879,7 +875,6 @@ characters={
 			idea_token = CZE_Savinkov_small
 			traits = {
 				guerrilla_warfare_expert
-				exiled
 			}
 			allowed = {
 				original_tag = CZE
@@ -911,7 +906,6 @@ characters={
 			idea_token = CZE_Viktor_Tchernov
 			traits = {
 				minister_of_agriculture
-				exiled
 			}
 			allowed = {
 				original_tag = CZE

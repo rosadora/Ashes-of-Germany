@@ -1,0 +1,114 @@
+CZE_national_social_left_agenda = {
+	name = "National Social Agenda - Left"
+	desc = "Bohemia will follow the path taken by the country for several years now, the agenda of President Benes and the government, allying itself with the Social Democrats and pursuing a slightly left-wing policy."
+
+	allowed = {
+		original_tag = CZE
+	}
+	enable = {
+		has_game_rule = {
+			rule = CZE_ai_behavior
+			option = NATIONAL_SOCIAL_LEFT_LINE
+		}
+	}
+
+	ai_national_focuses = {
+		CZE_a_way_to_appeasement
+		CZE_smash_democratic_defeatism
+		CZE_a_land_of_freedom
+		CZE_cooperation_with_the_left
+		CZE_always_outdo_yourself
+		CZE_welcome_political_refugiees
+		CZE_integration_by_investments
+		CZE_focus_on_germany
+		CZE_defensive_plans_focus
+		CZE_shatter_prussian_dreams
+		CZE_towards_a_united_czechoslovakia
+		CZE_infiltrate_slovakia
+		CZE_regulated_market
+		CZE_focus_on_domestic_production
+		CZE_the_heart_of_central_europe_industry
+		CZE_assert_our_independance_on_steel
+		CZE_unity_propaganda
+		CZE_fortress_bohemia
+		CZE_intervene_in_liberation_war
+		CZE_integration_by_laws
+		CZE_national_unity_agenda
+		CZE_reform_the_army
+		CZE_encourage_technical_progress
+		CZE_raise_efficiency
+		CZE_reform_the_administration
+		CZE_marginalization_of_independentist_movements
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+CZE_national_social_right_agenda = {
+	name = "National Social Agenda - Right"
+	desc = "In a long-awaited change of direction in National Social Party policy, the party will ally itself with the right and pursue a very liberal economic policy."
+
+	allowed = {
+		original_tag = CZE
+	}
+	enable = {
+		has_game_rule = {
+			rule = CZE_ai_behavior
+			option = NATIONAL_SOCIAL_RIGHT_LINE
+		}
+	}
+
+	ai_national_focuses = {
+		CZE_a_way_to_appeasement
+		CZE_smash_democratic_defeatism
+		CZE_a_land_of_freedom
+		CZE_a_shift_on_the_right
+		CZE_always_outdo_yourself
+		CZE_welcome_political_refugiees
+		CZE_integration_by_investments
+		CZE_towards_a_united_czechoslovakia
+		CZE_infiltrate_slovakia
+		CZE_towards_a_united_czechoslovakia
+		CZE_focus_on_germany
+		CZE_defensive_plans_focus
+		CZE_shatter_prussian_dreams
+		CZE_encourage_skoda_works
+		CZE_the_heart_of_central_europe_industry
+		CZE_assert_our_independance_on_steel
+		CZE_unity_propaganda
+		CZE_fortress_bohemia
+		CZE_intervene_in_liberation_war
+		CZE_integration_by_laws
+		CZE_national_unity_agenda
+		CZE_reform_the_army
+		CZE_connect_the_countryside
+		CZE_the_market_law
+		CZE_reform_the_administration
+		CZE_marginalization_of_independentist_movements
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

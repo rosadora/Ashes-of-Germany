@@ -10,3 +10,8 @@
  RULE_OPTION_INDEPENTIST_LINE_FRA_AI_DESC:0 "The IA of the Confederation of the Rhine will seek to ensure the sovereignty of the Confederation as well as to extend itself by rearming quickly, and thus has as objective, to unify Germany."
  RULE_OPTION_UNDER_THE_FRENCH:0 "Under France"
  RULE_UNDER_THE_FRENCH_FRA_AI_DESC:0 "The IA of the Confederation of the Rhine will preserve its close ties with France, and will thus turn more naturally to an expansion towards the West."
+ CZE_ai_behavior:0 "@CZE Bohemia"
+ RULE_OPTION_NATIONAL_SOCIAL_LEFT_LINE:0 "National Social Agenda - Left"
+ RULE_OPTION_NATIONAL_SOCIAL_LEFT_LINE_CZE_AI_DESC:0 "Bohemia will follow the path taken by the country for several years now, the agenda of President Benes and the government, allying itself with the Social Democrats and pursuing a slightly left-wing policy."
+ RULE_OPTION_NATIONAL_SOCIAL_RIGHT_LINE:0 "National Social Agenda - Right"
+ RULE_OPTION_NATIONAL_SOCIAL_RIGHT_LINE_CZE_AI_DESC:0 "In a long-awaited change of direction in National Social Party policy, the party will ally itself with the right and pursue a very liberal economic policy."
