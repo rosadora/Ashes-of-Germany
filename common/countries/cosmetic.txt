@@ -44,6 +44,11 @@ WGD = {
 	color_ui = rgb { 0 0 0 }
 }
 
+CZE_REV = {
+	color = rgb { 128 3 3 }
+	color_ui = rgb { 128 3 3 }
+}
+
 RCF = {
 	color = rgb { 16 105 143 }
 	color_ui = rgb { 16 105 143 }

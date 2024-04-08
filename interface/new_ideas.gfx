@@ -325,4 +325,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/libertarian_socialism_category.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_revolutionary_mobilization"
+		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+	}
+
 }

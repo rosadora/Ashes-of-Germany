@@ -39,6 +39,28 @@ ideas = {
 				weekly_manpower = 800
 			} 
 		}
+		heaven_of_peace_and_liberty_forever = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = 0.25
+				production_speed_buildings_factor = 0.1
+				army_core_defence_factor = 0.05
+				monthly_population = 0.6
+				weekly_manpower = 1000
+				stability_factor = 0.1
+			} 
+		}
 		german_speaking_minorities_cze = {
 			
 			allowed = {
@@ -555,6 +577,311 @@ ideas = {
 			
 			equipment_bonus = { mechanized_equipment = { instant = yes build_cost_ic = -0.075 } } 
 			equipment_bonus = { motorized_equipment = { instant = yes build_cost_ic = -0.075 } } 
+		}
+		face_czechoslovakian_nationalism_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = { 
+				war_support_weekly = -0.001
+				stability_weekly = -0.001
+				fascism_drift = -0.02
+				ultra_nationalism_drift = -0.04
+			} 
+		}
+		united_workers_front_of_bohemia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ICE_general_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_weekly = -0.001
+				social_democracy_drift = 0.03
+				classical_marxism_drift = 0.03
+				communism_drift = 0.04
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.35
+			} 
+		}
+		massive_strikes = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_organize_wreckers
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = 0.5
+				stability_weekly = -0.0025
+			} 
+		}
+		revolutionary_czechia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_class_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.05
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.01
+				communism_drift = 0.01
+			} 
+		}
+		revolutionary_czechia2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_class_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.05
+				conscription = 0.02
+				classical_marxism_drift = 0.03
+				libertarian_socialism_drift = 0.02
+			} 
+		}
+		revolutionary_czechia3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_class_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.1
+				conscription = 0.02
+				conscription_factor = 0.2
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				monthly_population = -0.2
+				classical_marxism_drift = 0.03
+				libertarian_socialism_drift = 0.02
+			} 
+		}
+		revolutionary_czechia4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_class_war
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.1
+				conscription = 0.02
+				conscription_factor = 0.2
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				monthly_population = -0.2
+				justify_war_goal_time = -0.75
+				classical_marxism_drift = 0.03
+				libertarian_socialism_drift = 0.02
+			} 
+		}
+		revolutionary_police = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_varnplikt
+
+			removal_cost = -1
+			
+			modifier = { 
+				resistance_target = -0.075
+				compliance_gain = 0.25
+			} 
+		}
+		socialist_education_cze = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_the_unthinkable_option
+
+			removal_cost = -1
+			
+			modifier = { 
+				research_speed_factor = 0.075
+				classical_marxism_drift = 0.03
+				libertarian_socialism_drift = 0.03
+			} 
+		}
+		socialism_in_sudety = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.15
+			} 
+		}
+		anticapitalist_policy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = -0.05
+			} 
+		}
+		paid_holidays = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_per_albin_bus
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.1
+				consumer_goods_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.075
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			} 
+		}
+		wages_for_sudety_peasants = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+				monthly_population = 0.25
+			} 
+		}
+		nationalized_war_industry = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.25
+			} 
+		}
+		women_in_military = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_women_in_the_army
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription_factor = 0.25
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
+			} 
 		}
 	}
 }

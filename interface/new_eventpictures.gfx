@@ -39,4 +39,9 @@ spriteTypes = {
 		name = "GFX_report_commune_of_paris_event"
 		texturefile = "gfx/event_pictures/commune_of_paris_event.dds"
 	}
+
+	spriteType = {
+		name = "GFX_report_workers_government_cze_election_event"
+		texturefile = "gfx/event_pictures/workers_government_cze_election_event.dds"
+	}
 }

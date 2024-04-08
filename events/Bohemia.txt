@@ -169,3 +169,185 @@ country_event = { #Nationalist Protests
 		}
 	}
 }
+country_event = { #1940 Campaign
+	id = bohemia.6
+	title = bohemia.6.t
+	desc = bohemia.6.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.6.a
+		ai_chance = {
+			base = 60
+		}
+		set_country_flag = CZE_election_campaign_begins
+		set_variable = {
+            var = ksc_pop
+            value = party_popularity@communism
+		}
+		add_to_variable = {
+            var = ksc_pop
+            value = party_popularity@classical_marxism
+		}
+		add_to_variable = {
+            var = ksc_pop
+            value = party_popularity@libertarian_socialism
+		}
+		set_variable = {
+            var = sd_pop
+            value = party_popularity@social_democracy
+		}
+		set_variable = {
+            var = csns_pop
+            value = party_popularity@social_liberalism
+		}
+		set_variable = {
+            var = czos_pop
+            value = party_popularity@classical_liberalism
+		}
+		set_variable = {
+            var = rszml_pop
+            value = party_popularity@democratic
+		}
+		set_variable = {
+            var = ns_pop
+            value = party_popularity@fascism
+		}
+		add_to_variable = {
+            var = ns_pop
+            value = party_popularity@ultra_nationalism
+		}
+	}
+}
+country_event = { #1940 Results
+	id = bohemia.7
+	title = bohemia.7.t
+	desc = bohemia.7.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.7.a
+		ai_chance = {
+			base = 60
+		}
+		set_country_flag = CZE_election_campaign_end
+	}
+}
+country_event = { #Worker's Government 1940: Appointment
+	id = bohemia.8
+	title = bohemia.8.t
+	desc = bohemia.8.d
+	picture = GFX_report_workers_government_cze_election_event
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.8.a
+		ai_chance = {
+			base = 60
+		}
+		set_politics = {
+         ruling_party = social_democracy
+	    }
+	}
+	option = {
+		name = bohemia.8.b
+		ai_chance = {
+			base = 60
+		}
+		set_politics = {
+         ruling_party = classical_marxism
+	    }
+	}
+}
+country_event = { #Gottwald is Ousted!
+	id = bohemia.9
+	title = bohemia.9.t
+	desc = bohemia.9.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.9.a
+		ai_chance = {
+			base = 60
+		}
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = libertarian_socialism 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = -0.075
+		}
+		swap_ideas = {
+			remove_idea = revolutionary_czechia
+			add_idea = revolutionary_czechia2
+		}
+	  create_country_leader = {
+	   name = "Revolutionary Supreme Council"
+	   desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	   picture = "gfx/leaders/CZE/CZE_supreme_council.dds"
+	   expire = "1965.1.1"
+	   ideology = classical_marxism_category
+	   traits = {
+	   }
+      }
+	}
+}
+country_event = { #Socdems Ousted!
+	id = bohemia.10
+	title = bohemia.10.t
+	desc = bohemia.10.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.10.a
+		ai_chance = {
+			base = 60
+		}
+		add_stability = -0.1
+		set_politics = {
+		ruling_party = classical_marxism
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = -0.15
+		}
+		hidden_effect = {
+			uncomplete_national_focus = {
+             focus = CZE_fight_inflation
+			}
+			uncomplete_national_focus = {
+             focus = CZE_holidays_for_everyone
+			}
+			uncomplete_national_focus = {
+             focus = CZE_pro_workers_policies
+			}
+			uncomplete_national_focus = {
+             focus = CZE_increase_their_pay
+			}
+			uncomplete_national_focus = {
+             focus = CZE_the_right_to_have_a_job
+			}
+			uncomplete_national_focus = {
+             focus = CZE_answer_to_the_social_uprising
+			}
+			uncomplete_national_focus = {
+             focus = CZE_curb_the_revolution
+			}
+			complete_national_focus = CZE_abolish_the_presidency
+		}
+	}
+}

@@ -1646,4 +1646,11 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  CZE_UNIFIED_social_democracy:0 "Czechoslovakian Republic"
  CZE_UNIFIED_DEF:0 "Czechoslovakia"
  CZE_UNIFIED_ADJ:0 "Czechoslovakian"
+ 
+ CZE_REV:0 "The Revolution"
+ CZE_REV_communism:0 "The Revolution"
+ CZE_REV_classical_marxism:0 "The Revolution"
+ CZE_REV_libertarian_socialism:0 "The Revolution"
+ CZE_REV_DEF:0 "The Revolution"
+ CZE_REV_ADJ:0 "Revolutionary"
 

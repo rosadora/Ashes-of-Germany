@@ -1,5 +1,953 @@
 #Category only allowed for CZE
 
+CZE_1940_legislative_elections = {
+
+	CZE_1940_campaign = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 7
+		fire_only_once = yes
+		priority = 10
+
+		activation = {
+		  date > 1939.12.13
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = {
+				id = bohemia.6
+				days = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CZE_promises_promises = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+			0R = {
+				has_completed_focus = CZE_abolish_the_presidency
+				AND = {
+					has_completed_focus = CZE_the_right_to_have_a_job
+					has_completed_focus = CZE_holidays_for_everyone
+					has_completed_focus = CZE_increase_their_pay
+					has_completed_focus = CZE_fight_inflation
+					has_completed_focus = CZE_pro_workers_policies
+				}
+			}
+		}
+
+		days_mission_timeout = 500
+		fire_only_once = yes
+		priority = 10
+
+		activation = {
+          has_country_flag = CZE_election_campaign_end
+		  has_country_flag = CZE_has_promised_better_days
+		  has_country_flag = CZE_leftist_coalition
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			hidden_effect = {
+				remove_ideas = each_person_a_job
+				remove_ideas = anticapitalist_policy
+				remove_ideas = paid_holidays
+			}
+			country_event = bohemia.10
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CZE_new_poll = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 5
+		priority = 10
+
+		activation = {
+          has_country_flag = CZE_election_campaign_begins
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+		set_variable = {
+            var = ksc_pop
+            value = party_popularity@communism
+		}
+		add_to_variable = {
+            var = ksc_pop
+            value = party_popularity@classical_marxism
+		}
+		add_to_variable = {
+            var = ksc_pop
+            value = party_popularity@libertarian_socialism
+		}
+		set_variable = {
+            var = sd_pop
+            value = party_popularity@social_democracy
+		}
+		set_variable = {
+            var = csns_pop
+            value = party_popularity@social_liberalism
+		}
+		set_variable = {
+            var = czos_pop
+            value = party_popularity@classical_liberalism
+		}
+		set_variable = {
+            var = rszml_pop
+            value = party_popularity@democratic
+		}
+		set_variable = {
+            var = ns_pop
+            value = party_popularity@fascism
+		}
+		add_to_variable = {
+            var = ns_pop
+            value = party_popularity@ultra_nationalism
+		}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CZE_election_day = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 185
+		fire_only_once = yes
+		priority = 10
+
+		activation = {
+          has_country_flag = CZE_election_campaign_begins
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = {
+				id = bohemia.7
+				days = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CZE_side_with_market = {
+
+		icon = GFX_decision_gre_investment_decisions
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_election_campaign_begins
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_has_sided_with_the_left
+			has_country_flag = CZE_has_sided_with_center
+		  }
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_has_sided_with_right
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_denounce_leftist_extremism = {
+
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+		days_remove = 80
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_right
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology =  classical_marxism 
+				popularity = -0.03
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_promote_bohemian_growth = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+		days_remove = 100
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_right
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology =  classical_liberalism 
+				popularity = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_right_wing_populist_rethoric = {
+
+		icon = GFX_decision_generic_coastal_fortification
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+		days_remove = 100
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_right
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.15
+			stability_weekly = -0.001
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology =  classical_liberalism 
+				popularity = 0.03
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_promote_the_agrarianist_model = {
+
+		icon = GFX_decision_faction_bul_bzns
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+		days_remove = 80
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_right
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology =  classical_liberalism 
+				popularity = 0.02
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_side_with_the_reason = {
+
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_election_campaign_begins
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_has_sided_with_the_left
+			has_country_flag = CZE_has_sided_with_right
+		  }
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_has_sided_with_center
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_promote_social_policies = {
+
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+		days_remove = 100
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_center
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology =  social_liberalism 
+				popularity = 0.03
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_oppose_free_market = {
+
+		icon = GFX_decision_gre_investment_decisions
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			has_completed_focus = CZE_cooperation_with_the_left
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 10
+		fire_only_once = yes
+		days_remove = 100
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_center
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology =  social_liberalism 
+				popularity = 0.03
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_call_on_peoples_reason = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			has_completed_focus = CZE_cooperation_with_the_left
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 20
+		priority = 10
+		fire_only_once = yes
+		days_remove = 20
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_center
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.7
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology =  social_liberalism 
+				popularity = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_side_with_freedom = {
+
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			has_completed_focus = CZE_cooperation_with_the_left
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 10
+		fire_only_once = yes
+		days_remove = 70
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_center
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology =  social_liberalism 
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology =  social_democracy 
+				popularity = 0.02
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_side_with_the_workers_movement = {
+
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_election_campaign_begins
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_has_sided_with_center
+			has_country_flag = CZE_has_sided_with_right
+		  }
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_has_sided_with_the_left
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_creation_of_the_united_workers_front_of_bohemia = {
+
+		icon = GFX_decision_SOV_the_workers_dictatorship
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_the_left
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_united_front_formed
+			add_ideas = united_workers_front_of_bohemia
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_massive_strikes = {
+
+		icon = GFX_decision_bul_against_bs
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_the_left
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = massive_strikes 
+				days = 100
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.03
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_denounce_the_political_establishment = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+		priority = 10
+		days_remove = 70
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_the_left
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		modifier = {
+			political_power_factor = -0.3
+			stability_weekly = -0.0025
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = 0.03
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_promises_of_better_days = {
+
+		icon = GFX_decision_bul_joint_act_bs
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 20
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_has_sided_with_the_left
+		  NOT = {
+			has_country_flag = CZE_election_campaign_end
+		  }
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CZE_promises_of_better_days_decision
+			set_country_flag = CZE_has_promised_better_days
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.06
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	CZE_right_alliance = {
+
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CZE_liberal_rightist_majority_trigger_tt
+				set_temp_variable = { CZE_right_coalition_support = party_popularity@classical_liberalism }
+				add_to_temp_variable = { CZE_right_coalition_support = party_popularity@social_liberalism }
+				add_to_temp_variable = { CZE_right_coalition_support = party_popularity@democratic }
+				check_variable = { CZE_right_coalition_support > 0.5 }
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 10
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_election_campaign_end
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_right_coalition
+			news_event = news.3065
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	CZE_centrist_alliance = {
+
+		icon = GFX_decision_gre_investment_decisions
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CZE_centrist_majority_trigger_tt
+				set_temp_variable = { CZE_centrist_coalition_support = party_popularity@social_liberalism }
+				add_to_temp_variable = { CZE_centrist_coalition_support = party_popularity@social_democracy }
+				check_variable = { CZE_centrist_coalition_support > 0.5 }
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 10
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_election_campaign_end
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_centrist_coalition
+			news_event = news.3066
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	CZE_leftist_alliance = {
+
+		icon = GFX_decision_bul_appoint_members_bs
+
+		allowed = {
+			tag = CZE
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CZE_leftist_majority_trigger_tt
+				set_temp_variable = { CZE_leftist_coalition_support = party_popularity@social_democracy }
+				add_to_temp_variable = { CZE_leftist_coalition_support = party_popularity@classical_marxism }
+				add_to_temp_variable = { CZE_leftist_coalition_support = party_popularity@libertarian_socialism }
+				add_to_temp_variable = { CZE_leftist_coalition_support = party_popularity@communism }
+				check_variable = { CZE_leftist_coalition_support > 0.5 }
+			}
+			has_country_flag = CZE_united_front_formed
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 10
+		priority = 10
+		fire_only_once = yes
+
+		visible = {
+          has_country_flag = CZE_election_campaign_end
+		}
+
+		complete_effect = {
+			set_country_flag = CZE_leftist_coalition
+			news_event = news.3067
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
 CZE_votes = {
 
 	CZE_vote_on_slovakia_status = {
@@ -437,10 +1385,10 @@ CZE_defensive_lines = {
 		}
 
 		available = {
-			num_of_available_civilian_factories > 7
+			num_of_civilian_factories_available_for_projects > 7
 			controls_state = 69
 			controls_state = 74
-			controls_state = 70
+			controls_state = 75
 			controls_state = 9
 		}
 
@@ -453,11 +1401,11 @@ CZE_defensive_lines = {
 		fire_only_once = yes
 
 		visible = {
-          has_completed_focus = CZE_defensive_plans
+          has_completed_focus = CZE_defensive_plans_focus
 		}
 
 		modifier = {
-			industrial_factory_donations = 7
+			civilian_factory_use = 7
 		}
 
 		remove_effect = {
@@ -512,7 +1460,7 @@ CZE_defensive_lines = {
 
 			if = {
 				limit = { controls_state = 70 }
-				70 = {
+				75 = {
 					set_building_level = {
 						type = bunker
 						level = 3
@@ -541,10 +1489,10 @@ CZE_defensive_lines = {
 		}
 
 		available = {
-			num_of_available_civilian_factories > 7
+			num_of_civilian_factories_available_for_projects > 7
 			controls_state = 69
 			controls_state = 74
-			controls_state = 70
+			controls_state = 75
 			controls_state = 9
 		}
 
@@ -561,7 +1509,7 @@ CZE_defensive_lines = {
 		}
 
 		modifier = {
-			industrial_factory_donations = 7
+			civilian_factory_use = 7
 		}
 
 		remove_effect = {
@@ -616,7 +1564,7 @@ CZE_defensive_lines = {
 
 			if = {
 				limit = { controls_state = 70 }
-				70 = {
+				75 = {
 					set_building_level = {
 						type = bunker
 						level = 5
@@ -645,10 +1593,10 @@ CZE_defensive_lines = {
 		}
 
 		available = {
-			num_of_available_civilian_factories > 7
+			num_of_civilian_factories_available_for_projects > 7
 			controls_state = 69
 			controls_state = 74
-			controls_state = 70
+			controls_state = 75
 			controls_state = 9
 		}
 
@@ -665,7 +1613,7 @@ CZE_defensive_lines = {
 		}
 
 		modifier = {
-			industrial_factory_donations = 7
+			civilian_factory_use = 7
 		}
 
 		remove_effect = {
@@ -720,7 +1668,7 @@ CZE_defensive_lines = {
 
 			if = {
 				limit = { controls_state = 70 }
-				70 = {
+				75 = {
 					set_building_level = {
 						type = bunker
 						level = 7
@@ -748,7 +1696,7 @@ CZE_defensive_lines = {
 		}
 
 		available = {
-			num_of_available_civilian_factories > 7
+			num_of_civilian_factories_available_for_projects > 7
 			has_full_control_of_state = 75
 			has_full_control_of_state = 9
 		}
@@ -766,7 +1714,7 @@ CZE_defensive_lines = {
 		}
 
 		modifier = {
-			industrial_factory_donations = 7
+			civilian_factory_use = 7
 		}
 
 		remove_effect = {

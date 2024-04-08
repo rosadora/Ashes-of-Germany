@@ -116,6 +116,158 @@
 		}
 	}
 	focus = {
+		id = CZE_face_czechoslovakian_nationalism
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		x = -5
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_bill_passes}
+		relative_position_id = CZE_the_bill_passes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.025
+			add_timed_idea = {
+				idea = face_czechoslovakian_nationalism_idea
+				days = 150
+			}
+		}
+	}
+	focus = {
+		id = CZE_bohemia_prevails
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = -5
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			NOT = {
+				has_idea = face_czechoslovakian_nationalism_idea
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_face_czechoslovakian_nationalism}
+		relative_position_id = CZE_the_bill_passes
+
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = revanchism_for_unification
+			remove_ideas = the_shadow_of_nationalism
+		}
+	}
+	focus = {
+		id = CZE_united_front_of_all_democrats
+		icon = GFX_focus_SWE_bofors_fly_swatter
+		x = -4
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_face_czechoslovakian_nationalism}
+		relative_position_id = CZE_the_bill_passes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = CZE_promote_bohemian_identity
+		icon = GFX_goal_bohemian_people
+		x = -6
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_face_czechoslovakian_nationalism}
+		relative_position_id = CZE_the_bill_passes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 75
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.03
+			}
+		}
+	}
+	focus = {
 		id = CZE_focus_on_germany
 		icon = GFX_goal_the_great_game
 		x = 0
@@ -2645,6 +2797,1790 @@
              uses = 2
              category = light_air
             }
+		}
+	}
+	focus = {
+		id = CZE_the_workers_government
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 10
+		y = 7
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_leftist_coalition
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			country_event = {
+				id = bohemia.8
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = CZE_abolish_the_presidency
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = -1
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = CZE_abolish_the_presidency
+			}
+		}
+
+		allow_branch = {
+			NOT = { has_completed_focus = CZE_curb_the_revolution }
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_workers_government}
+		mutually_exclusive = {focus = CZE_curb_the_revolution}
+		relative_position_id = CZE_the_workers_government
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.1
+			add_ideas = revolutionary_czechia
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = CZE_ban_the_ns
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 3
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_abolish_the_presidency}
+		relative_position_id = CZE_abolish_the_presidency
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = revanchism_for_unification
+				}
+				remove_ideas = revanchism_for_unification
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -1
+			}
+		}
+	}
+	focus = {
+		id = CZE_revolutionary_police
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		x = -1
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_ban_the_ns}
+		relative_position_id = CZE_ban_the_ns
+
+		completion_reward = {
+			add_ideas = revolutionary_police
+		}
+	}
+	focus = {
+		id = CZE_undermine_the_traitors_of_the_revolution
+		icon = GFX_focus_NOR_vote_of_no_confidence
+		x = 1
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_ban_the_ns}
+		relative_position_id = CZE_ban_the_ns
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -1
+			}
+		}
+	}
+	focus = {
+		id = CZE_social_revolution_march_on
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 0
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_abolish_the_presidency}
+		relative_position_id = CZE_abolish_the_presidency
+
+		completion_reward = {
+			country_event = {
+				id = bohemia.9
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = CZE_womens_liberation
+		icon = GFX_focus_ARG_women_in_industry
+		x = 0
+		y = 2
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_social_revolution_march_on}
+		relative_position_id = CZE_abolish_the_presidency
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = revolutionary_czechia2
+				add_idea = revolutionary_czechia3
+			}
+		}
+	}
+	focus = {
+		id = CZE_one_step_forward
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 3
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_womens_liberation}
+		relative_position_id = CZE_abolish_the_presidency
+
+		completion_reward = {
+			add_manpower = 100000
+			add_war_support = 0.15
+			set_cosmetic_tag = CZE_REV
+			every_state = {
+				add_claim_by = CZE
+			}
+		}
+	}
+	focus = {
+		id = CZE_transformation_of_the_society
+		icon = GFX_focus_generic_workers
+		x = -2
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_one_step_forward}
+		relative_position_id = CZE_one_step_forward
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = CZE_socialist_education
+		icon = GFX_focus_generic_socialist_science
+		x = -2
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_transformation_of_the_society}
+		relative_position_id = CZE_transformation_of_the_society
+
+		completion_reward = {
+			add_ideas = socialist_education_cze
+		}
+	}
+	focus = {
+		id = CZE_build_the_revolutionary_army
+		icon = GFX_goal_revolutionary_mobilization
+		x = 0
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_transformation_of_the_society}
+		relative_position_id = CZE_transformation_of_the_society
+
+		completion_reward = {
+			add_ideas = CZE_revolutionary_mobilization
+		}
+	}
+	focus = {
+		id = CZE_undermine_those_who_betrayed_humanity
+		icon = GFX_focus_generic_total_war
+		x = 2
+		y = 4
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_one_step_forward}
+		prerequisite = {focus = CZE_undermine_the_traitors_of_the_revolution}
+		relative_position_id = CZE_abolish_the_presidency
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = revolutionary_czechia3
+				add_idea = revolutionary_czechia4
+			}
+		}
+	}
+	focus = {
+		id = CZE_destroy_prussian_imperialism
+		icon = GFX_focus_ger_oppose_hitler
+		x = -2
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_undermine_those_who_betrayed_humanity}
+		relative_position_id = CZE_undermine_those_who_betrayed_humanity
+
+		completion_reward = {
+			create_wargoal = {
+             type = annex_everything
+             target = PRS
+            }
+		}
+	}
+	focus = {
+		id = CZE_honour_1871
+		icon = GFX_focus_attack_france
+		x = 0
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_undermine_those_who_betrayed_humanity}
+		relative_position_id = CZE_undermine_those_who_betrayed_humanity
+
+		completion_reward = {
+			create_wargoal = {
+             type = annex_everything
+             target = FRA
+            }
+		}
+	}
+	focus = {
+		id = CZE_revenge_1917
+		icon = GFX_goal_generic_attack_allies
+		x = 2
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_undermine_those_who_betrayed_humanity}
+		relative_position_id = CZE_undermine_those_who_betrayed_humanity
+
+		completion_reward = {
+			create_wargoal = {
+             type = annex_everything
+             target = SOV
+            }
+		}
+	}
+	focus = {
+		id = CZE_the_question_of_separatism
+		icon = GFX_focus_SWE_organize_a_putsch
+		x = -3
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_abolish_the_presidency}
+		relative_position_id = CZE_abolish_the_presidency
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CZE_fight_the_reactionary_movement
+		icon = GFX_focus_generic_conspiracy
+		x = -1
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_question_of_separatism}
+		mutually_exclusive = {focus = CZE_unitary_state_in_diversity}
+		relative_position_id = CZE_the_question_of_separatism
+
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.05
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze
+				}
+				remove_ideas = german_speaking_minorities_cze
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze2
+				}
+				remove_ideas = german_speaking_minorities_cze2
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_unitary_state_in_diversity
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 1
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_question_of_separatism}
+		mutually_exclusive = {focus = CZE_fight_the_reactionary_movement}
+		relative_position_id = CZE_the_question_of_separatism
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = socialism_in_sudety
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = CZE_integration_of_german_speakers
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 1
+		y = 2
+
+		allow_branch = {
+			has_completed_focus = CZE_abolish_the_presidency
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			}
+			NOT = {
+				has_idea = socialism_in_sudety
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_unitary_state_in_diversity}
+		relative_position_id = CZE_the_question_of_separatism
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = 0.02
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze
+				}
+				remove_ideas = german_speaking_minorities_cze
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze2
+				}
+				remove_ideas = german_speaking_minorities_cze2
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_curb_the_revolution
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 1
+		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_completed_focus = CZE_curb_the_revolution
+			}
+		}
+		allow_branch = {
+			NOT = { has_completed_focus = CZE_abolish_the_presidency }
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_the_workers_government}
+		mutually_exclusive = {focus = CZE_abolish_the_presidency}
+		relative_position_id = CZE_the_workers_government
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.05
+			remove_ideas = united_workers_front_of_bohemia
+			add_timed_idea = {
+				idea = massive_strikes
+				days = 400
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = CZE_answer_to_the_social_uprising
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_curb_the_revolution}
+		relative_position_id = CZE_curb_the_revolution
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CZE_the_right_to_have_a_job
+		icon = GFX_goal_social_progressivism
+		x = -4
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_answer_to_the_social_uprising}
+		relative_position_id = CZE_answer_to_the_social_uprising
+
+		completion_reward = {
+			add_ideas = each_person_a_job
+		}
+	}
+	focus = {
+		id = CZE_increase_their_pay
+		icon = GFX_focus_ITA_devaluate_the_lire
+		x = -2
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_answer_to_the_social_uprising}
+		relative_position_id = CZE_answer_to_the_social_uprising
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = CZE_pro_workers_policies
+		icon = GFX_focus_NOR_empower_sivorg
+		x = 0
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_answer_to_the_social_uprising}
+		relative_position_id = CZE_answer_to_the_social_uprising
+
+		completion_reward = {
+			add_ideas = anticapitalist_policy
+		}
+	}
+	focus = {
+		id = CZE_holidays_for_everyone
+		icon = GFX_focus_SWE_state_paid_vacation
+		x = 2
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_answer_to_the_social_uprising}
+		relative_position_id = CZE_answer_to_the_social_uprising
+
+		completion_reward = {
+			add_ideas = paid_holidays
+		}
+	}
+	focus = {
+		id = CZE_fight_inflation
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 4
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_answer_to_the_social_uprising}
+		relative_position_id = CZE_answer_to_the_social_uprising
+
+		completion_reward = {
+			add_political_power = 100
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_moderate_change
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 0
+		y = 2
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_pro_workers_policies}
+		relative_position_id = CZE_answer_to_the_social_uprising
+
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = CZE_prepare_for_war
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 0
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_moderate_change}
+		mutually_exclusive = {focus = CZE_a_heaven_of_peace_and_liberty_forever}
+		relative_position_id = CZE_moderate_change
+
+		completion_reward = {
+			add_war_support = 0.075
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = CZE_nationalize_war_industries
+		icon = GFX_focus_DEN_heavy_regulations
+		x = -1
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_prepare_for_war}
+		relative_position_id = CZE_prepare_for_war
+
+		completion_reward = {
+			add_political_power = -100
+			add_timed_idea = {
+				idea = nationalized_war_industry
+				days = 300
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_expand_womens_rights
+		icon = GFX_focus_generic_universal_suffrage
+		x = 2
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_prepare_for_war focus = CZE_a_heaven_of_peace_and_liberty_forever}
+		relative_position_id = CZE_prepare_for_war
+
+		completion_reward = {
+			add_ideas = women_in_military
+			set_rule ={
+				can_generate_female_aces = yes
+				can_generate_female_unit_leaders = yes
+				can_generate_female_country_leaders = yes
+			}
+		}
+	}
+	focus = {
+		id = CZE_the_call_of_democracy
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = -1
+		y = 2
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_expand_womens_rights}
+		prerequisite = {focus = CZE_nationalize_war_industries}
+		relative_position_id = CZE_prepare_for_war
+
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+	focus = {
+		id = CZE_against_the_pacifist_left
+		icon = GFX_focus_NOR_broken_gun_policies
+		x = 1
+		y = 2
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_expand_womens_rights}
+		prerequisite = {focus = CZE_nationalize_war_industries}
+		relative_position_id = CZE_prepare_for_war
+
+		completion_reward = {
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = CZE_a_heaven_of_peace_and_liberty_forever
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = 4
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		mutually_exclusive = {focus = CZE_prepare_for_war}
+		prerequisite = {focus = CZE_moderate_change}
+		relative_position_id = CZE_moderate_change
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = heaven_of_liberty
+				add_idea = heaven_of_peace_and_liberty_forever
+			}
+		}
+	}
+	focus = {
+		id = CZE_expand_civil_rights
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 1
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_a_heaven_of_peace_and_liberty_forever}
+		relative_position_id = CZE_a_heaven_of_peace_and_liberty_forever
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = CZE_invest_in_public_works
+		icon = GFX_focus_generic_public_works
+		x = 1
+		y = 2
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_expand_civil_rights}
+		prerequisite = {focus = CZE_expand_womens_rights}
+		relative_position_id = CZE_a_heaven_of_peace_and_liberty_forever
+
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_socialist_path_for_bohemia
+		icon = GFX_focus_SWE_refuge_from_war
+		x = -1
+		y = 2
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_expand_civil_rights}
+		prerequisite = {focus = CZE_expand_womens_rights}
+		relative_position_id = CZE_a_heaven_of_peace_and_liberty_forever
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = CZE_reconciliation_policy
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = -4
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_moderate_change}
+		relative_position_id = CZE_moderate_change
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = CZE_a_wage_for_sudety_peasants
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		x = -1
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_reconciliation_policy}
+		relative_position_id = CZE_reconciliation_policy
+
+		completion_reward = {
+			add_ideas = wages_for_sudety_peasants
+		}
+	}
+	focus = {
+		id = CZE_pursue_the_efforts_on_sudety
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 1
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+			controls_state = 69
+			controls_state = 74
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_reconciliation_policy}
+		relative_position_id = CZE_reconciliation_policy
+
+		completion_reward = {
+			69 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 1
+                 instant_build = yes
+                }
+			}
+		}
+	}
+	focus = {
+		id = CZE_recognize_autonomist_demands
+		icon = GFX_goal_anschluss
+		x = 0
+		y = 2
+		allow_branch = {
+			has_completed_focus = CZE_curb_the_revolution
+		}
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = social_democracy
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = CZE_reconciliation_policy}
+		relative_position_id = CZE_reconciliation_policy
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze
+				}
+				remove_ideas = german_speaking_minorities_cze
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze2
+				}
+				remove_ideas = german_speaking_minorities_cze2
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+			}
 		}
 	}
 }

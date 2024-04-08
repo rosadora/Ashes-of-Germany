@@ -43,6 +43,12 @@ czechoslovakia_category = {
 				news_event = { id = news.3064 hours = 6 }
 				set_global_flag = form_czechoslovakia_flag
 			}
+			IF = {
+				limit = {
+					has_idea = revanchism_for_unification
+				}
+				remove_ideas = revanchism_for_unification
+			}
 		}
 
 		ai_will_do = {
