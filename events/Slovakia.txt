@@ -22,3 +22,58 @@ country_event = { #Union with Bohemia
         }
 	}
 }
+
+country_event = { #The Silent Revolution
+	id = slovakia.2
+	title = slovakia.2.t
+	desc = slovakia.2.d
+	picture = GFX_report_event_FIN_svinhufvud_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.2.a
+		ai_chance = {
+			base = 30
+		}
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = 0.2
+		}
+		set_politics = {
+          ruling_party = ultra_nationalism
+          elections_allowed = no
+		}
+		HUN = {
+			end_puppet = SLO
+		}
+		leave_faction = yes
+		remove_ideas = illegitimate_government
+	}
+}
+
+country_event = { #Democratic Opposition Fired
+	id = slovakia.3
+	title = slovakia.3.t
+	desc = slovakia.3.d
+	picture = GFX_report_event_generic_italian_fascists
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.3.a
+		ai_chance = {
+			base = 30
+		}
+		add_stability = 0.1
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = 0.1
+		}
+		set_politics = {
+          ruling_party = ultra_nationalism
+          elections_allowed = no
+		}
+		remove_ideas = unionist_opposition
+	}
+}

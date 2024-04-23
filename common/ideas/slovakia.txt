@@ -60,6 +60,47 @@ ideas = {
 				libertarian_socialism_drift = 0.01
 			} 
 		}
+		nationalist_ascendency = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_oppression
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.1
+				stability_factor -0.05
+				ultra_nationalism_drift = 0.01
+				fascism_drift = 0.03
+			} 
+		}
+		church_influence = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPA_carlism
+
+			removal_cost = -1
+			
+			modifier = { 
+				monthly_population = 0.2
+				stability_factor 0.05
+				democratic_drift = 0.02
+				ultra_nationalism_drift = 0.03
+				fascism_drift = 0.01
+			} 
+		}
 		leftist_terror_slo = {
 			
 			allowed = {

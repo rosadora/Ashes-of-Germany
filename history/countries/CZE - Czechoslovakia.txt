@@ -79,6 +79,16 @@ recruit_character = CZE_konrad_henlein
 recruit_character = CZE_gustav_husak
 recruit_character = CZE_Josef_Vaclav_Najman
 
+recruit_character = CZE_Leon_Blum
+recruit_character = CZE_edouard_daladier
+recruit_character = CZE_maurice_gamelin
+recruit_character = CZE_aleksandr_kerensky
+recruit_character = CZE_Savinkov_small
+recruit_character = CZE_Viktor_Tchernov
+recruit_character = CZE_theodor_heuss
+recruit_character = CZE_heinrich_beythien
+recruit_character = CZE_Wilhelm_Keil
+
 
 if = {
 	limit = {

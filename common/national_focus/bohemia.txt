@@ -3055,6 +3055,7 @@
 		relative_position_id = CZE_abolish_the_presidency
 
 		completion_reward = {
+			remove_ideas = united_workers_front_of_bohemia
 			country_event = {
 				id = bohemia.9
 				days = 1

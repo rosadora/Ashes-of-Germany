@@ -52,7 +52,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		cancel_trigger = {
-			0R = {
+			OR = {
 				has_completed_focus = CZE_abolish_the_presidency
 				AND = {
 					has_completed_focus = CZE_the_right_to_have_a_job
@@ -1026,7 +1026,9 @@ CZE_infiltration_in_slovakia = {
 		}
 
 		complete_effect = {
-			SLO = {add_stability = -0.02}
+			SLO = {
+				add_stability = -0.02
+			random_owned_state = {
 			damage_building = {
              type = infrastructure
              damage = 1
@@ -1039,6 +1041,8 @@ CZE_infiltration_in_slovakia = {
               type = infantry_equipment
               amount = -700
             }
+			}
+			}
 		}
 
 		ai_will_do = {
@@ -1819,20 +1823,17 @@ CZE_welcome_political_refugiees = {
 			FRA = {
 				retire_character = FRA_leon_blum
 			}
-			recruit_character = CZE_Leon_Blum
-			custom_effect_tooltip = available_political_advisor
+			set_country_flag = french_exiled_in_bohemia
 
 			FRA = {
 				retire_character = FRA_edouard_daladier
 			}
-			recruit_character = CZE_edouard_daladier
-			custom_effect_tooltip = available_political_advisor
 
 			FRA = {
 				retire_character = FRA_maurice_gamelin
 			}
-			recruit_character = CZE_maurice_gamelin
-			custom_effect_tooltip = available_political_advisor
+
+			custom_effect_tooltip = CZE_french_exiled_in_bohemia
 		}
 
 		ai_will_do = {
@@ -1880,20 +1881,17 @@ CZE_welcome_political_refugiees = {
 			SOV = {
 				retire_character = SOV_aleksandr_kerensky
 			}
-			recruit_character = CZE_aleksandr_kerensky
-			custom_effect_tooltip = available_political_advisor
+			set_country_flag = russian_exiled_in_bohemia
 
 			SOV = {
 				retire_character = RUS_Savinkov_small
 			}
-			recruit_character = CZE_Savinkov_small
-			custom_effect_tooltip = available_political_advisor
 
 			SOV = {
 				retire_character = RUS_Viktor_Tchernov
 			}
-			recruit_character = CZE_Viktor_Tchernov
-			custom_effect_tooltip = available_political_advisor
+
+			custom_effect_tooltip = CZE_russian_exiled_in_bohemia
 		}
 
 		ai_will_do = {
@@ -1945,14 +1943,14 @@ CZE_welcome_political_refugiees = {
 			PRS = {
 				retire_character = GER_theodor_heuss
 			}
-			recruit_character = CZE_theodor_heuss
+			set_country_flag = german_exiled_in_bohemia
 			custom_effect_tooltip = available_political_advisor
 
-			recruit_character = CZE_heinrich_beythien
 			custom_effect_tooltip = available_political_advisor
 
-			recruit_character = CZE_Wilhelm_Keil
 			custom_effect_tooltip = available_political_advisor
+
+			custom_effect_tooltip = CZE_german_exiled_in_bohemia
 		}
 
 		ai_will_do = {
