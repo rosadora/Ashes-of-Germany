@@ -1,0 +1,556 @@
+RULE_socialist_support_socialist_HUN = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        HUN = { has_government = communism }
+        HUN = { has_government = libertarian_socialism }
+        HUN = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = HUN
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = HUN
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = HUN
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = HUN
+        value = 150
+    }
+}
+RULE_socialist_support_socialist_reverse_HUN = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        HUN = { has_government = communism }
+        HUN = { has_government = libertarian_socialism }
+        HUN = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    reversed = yes
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = HUN
+        value = 300
+    }
+    ai_strategy = {
+        type = support
+        id = HUN
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = HUN
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = HUN
+        value = 150
+    }
+}
+
+RULE_socialist_support_socialist_BAY = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        BAY = { has_government = communism }
+        BAY = { has_government = libertarian_socialism }
+        BAY = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = BAY
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = BAY
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = BAY
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = BAY
+        value = 150
+    }
+}
+RULE_socialist_support_socialist_reverse_BAY = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        BAY = { has_government = communism }
+        BAY = { has_government = libertarian_socialism }
+        BAY = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    reversed = yes
+    ai_strategy = {
+        type = support
+        id = BAY
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = BAY
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = BAY
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = BAY
+        value = 150
+    }
+}
+
+RULE_socialist_support_socialist_AUS = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        AUS = { has_government = communism }
+        AUS = { has_government = libertarian_socialism }
+        AUS = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = AUS
+        value = 300
+    }
+    ai_strategy = {
+        type = support
+        id = AUS
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = AUS
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = AUS
+        value = 150
+    }
+}
+RULE_socialist_support_socialist_reverse_AUS = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        AUS = { has_government = communism }
+        AUS = { has_government = libertarian_socialism }
+        AUS = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    reversed = yes
+    ai_strategy = {
+        type = support
+        id = AUS
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = AUS
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = AUS
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = AUS
+        value = 150
+    }
+}
+
+RULE_socialist_support_socialist_PRS = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = libertarian_socialism
+		  has_government = communism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        AUS = { has_government = communism }
+        AUS = { has_government = libertarian_socialism }
+        AUS = { has_government = classical_marxism }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = PRS
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = PRS
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = PRS
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = PRS
+        value = 150
+    }
+}
+RULE_socialist_support_socialist_reverse_PRS = {
+    enable = {
+       OR = {
+          has_government = democratic
+		  has_government = neutrality
+		  has_government = ultra_nationalism
+          has_government = social_liberalism
+		  has_government = classical_liberalism
+		}
+    }
+    enable_reverse = {
+        OR = {
+        PRS = { has_government = democratic }
+        PRS = { has_government = neutrality }
+        PRS = { has_government = ultra_nationalism }
+        PRS = { has_government = social_liberalism }
+        PRS = { has_government = classical_liberalism }
+        }
+    }
+    abort_when_not_enabled = yes
+    reversed = yes
+    ai_strategy = {
+        type = support
+        id = PRS
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = PRS
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = PRS
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = PRS
+        value = 150
+    }
+}
+RULE_anti_communism_russian_civil_war = {
+    enable = {
+       OR = {
+          has_government = democratic
+		  has_government = neutrality
+		  has_government = ultra_nationalism
+          has_government = social_liberalism
+		  has_government = classical_liberalism
+          has_government = fascism
+		}
+        SOV = {
+            has_war_with = USR
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = SOV
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = SOV
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = SOV
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = SOV
+        value = 150
+    }
+}
+RULE_bolshevik_support_civil_war = {
+    enable = {
+       OR = {
+          has_government = social_democracy
+		  has_government = classical_marxism
+		  has_government = libertarian_socialism
+          has_government = communism
+		}
+        USR = {
+            has_war_with = SOV
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = USR
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = USR
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = USR
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = USR
+        value = 150
+    }
+}
+RULE_italian_civil_war_ILF_support = {
+    enable = {
+       OR = {
+          has_government = democratic
+		  has_government = neutrality
+          has_government = social_liberalism
+		  has_government = classical_liberalism
+          has_government = social_democracy
+		}
+        ILF = {
+            OR = {
+            has_war_with = ITA
+            has_war_with = NLC
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = ILF
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = ILF
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = ILF
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = ILF
+        value = 150
+    }
+}
+RULE_italian_civil_war_NLC_support = {
+    enable = {
+       OR = {
+          has_government = classical_marxism
+		  has_government = communism
+          has_government = libertarian_socialism
+		}
+        ILF = {
+            OR = {
+            has_war_with = ITA
+            has_war_with = ILF
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = NLC
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = NLC
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = NLC
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = NLC
+        value = 150
+    }
+}
+RULE_italian_civil_war_ITA_support = {
+    enable = {
+       OR = {
+          has_government = fascism
+		  has_government = ultra_nationalism
+		}
+        ITA = {
+            OR = {
+            has_war_with = NLC
+            has_war_with = ILF
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = ITA
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = ITA
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = ITA
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = ITA
+        value = 150
+    }
+}
+RULE_anti_communism_yugoslavia = {
+    enable = {
+       OR = {
+          has_government = democratic
+		  has_government = neutrality
+		  has_government = ultra_nationalism
+          has_government = social_liberalism
+		  has_government = classical_liberalism
+          has_government = fascism
+		}
+        CRO = {
+            has_war_with = YUG
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = YUG
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = YUG
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = YUG
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = YUG
+        value = 150
+    }
+}
+RULE_support_communism_yugoslavia = {
+    enable = {
+       OR = {
+          has_government = social_democracy
+		  has_government = classical_marxism
+		  has_government = libertarian_socialism
+          has_government = communism
+		}
+        YUG = {
+            has_war_with = CRO
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = support
+        id = CRO
+        value = 300
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = CRO
+        value = 300
+    }
+    ai_strategy = {
+        type = alliance
+        id = CRO
+        value = 150
+    }
+    ai_strategy = {
+        type = befriend
+        id = CRO
+        value = 150
+    }
+}

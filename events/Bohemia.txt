@@ -351,3 +351,53 @@ country_event = { #Socdems Ousted!
 		}
 	}
 }
+country_event = { #Join France
+	id = bohemia.11
+	title = bohemia.11.t
+	desc = bohemia.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.11.a
+		ai_chance = {
+			base = 60
+		}
+		add_to_faction = CZE
+		CZE = {
+			country_event = {
+				id = bohemia.12
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = bohemia.11.b
+		ai_chance = {
+			base = 0
+		}
+		CZE = {
+			country_event = {
+				id = bohemia.13
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #Join France : Yes
+	id = bohemia.12
+	title = bohemia.12.t
+	desc = bohemia.12.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = bohemia.12.a
+		ai_chance = {
+			base = 60
+		}
+		add_war_support = 0.05
+	}
+}

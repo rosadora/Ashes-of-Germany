@@ -1,0 +1,17 @@
+#################
+#### CROATIA ####
+#################
+
+CRO_struggle_for_yugoslavia = {
+
+	icon = GFX_decision_category_power_struggle
+
+	priority = 50
+
+	allowed = {
+		original_tag = CRO
+	}
+
+	visible = {
+	}
+}

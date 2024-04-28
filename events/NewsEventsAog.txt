@@ -1246,3 +1246,51 @@ news_event = { #Victory for the Left in Bohemia 1940
 		name = news.3067.a
 	}
 }
+news_event = { #The Hungarian Genocide
+	id = news.3068
+	title = news.3068.t
+	desc = news.3068.d
+	picture = GFX_news_event_spr_spanish_civil_war2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3068.a
+	}
+}
+news_event = { #The Hungarian Genocide
+	id = news.3069
+	title = news.3069.t
+	desc = news.3069.d
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3069.a
+	}
+}
+news_event = { #Yugoslavian Civil War
+	id = news.3070
+	title = news.3070.t
+	desc = news.3070.d
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = Zabruje_Tako_Pjesme_Znane
+		}
+	}
+	
+	option = {
+		name = news.3070.a
+	}
+}

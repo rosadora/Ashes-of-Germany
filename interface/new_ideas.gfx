@@ -330,4 +330,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_state_catholicism"
+		texturefile = "gfx/interface/ideas/state_catholicism.dds"
+	}
+
 }

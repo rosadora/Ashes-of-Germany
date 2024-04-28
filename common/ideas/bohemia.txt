@@ -883,5 +883,59 @@ ideas = {
 				industrial_capacity_dockyard = -0.075
 			} 
 		}
+		attractive_country = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_ligas_patrioticas
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.075
+			} 
+		}
+		large_state_medias = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = EST_democratic_opposition
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = 0.1
+				defensive_war_stability_factor = 0.2
+			} 
+		}
+		republican_guard_of_bohemia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_secret_rearmament
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_core_defence_factor = 0.1
+				conscription = 0.01
+			} 
+		}
 	}
 }

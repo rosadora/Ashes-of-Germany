@@ -3252,7 +3252,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			create_faction = Reichspakt
 			set_rule = {
 				can_create_factions = yes
 			}
@@ -3475,7 +3474,7 @@
 		}
 		available = {
 			has_army_manpower = {
-				size > 270000
+				size > 210000
 			}
 		}
 		cancel_if_invalid = yes

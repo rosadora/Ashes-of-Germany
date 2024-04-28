@@ -74,6 +74,7 @@ recruit_character = SLO_anton_pulanick
 recruit_character = SLO_Milan_Hodza
 recruit_character = SLO_Igor_Hrusovský
 recruit_character = SLO_anarchist_commune
+recruit_character = SLO_alexandr_mach
 
 add_ideas = {
 	illegitimate_government

@@ -23,7 +23,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -64,7 +64,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -99,7 +99,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -132,7 +132,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -167,7 +167,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -203,7 +203,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -238,7 +238,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 7
 		}
 
 		available = {
@@ -264,6 +264,949 @@
 		}
 	}
 	focus = {
+		id = SLO_national_catholicism
+		icon = GFX_goal_state_catholicism_focus
+		x = -5
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_silence}
+		relative_position_id = SLO_silence
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = church_influence
+				add_idea = catholic_state
+			}
+		}
+	}
+	focus = {
+		id = SLO_slovakia_to_slovakians
+		icon = GFX_goal_infiltrate_slovakia
+		x = -10
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_national_catholicism}
+		relative_position_id = SLO_national_catholicism
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = SLO_join_prussia
+		icon = GFX_focus_ger_oppose_hitler
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+			PRS = {
+			    is_in_faction = yes
+			    is_faction_leader = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_slovakia_to_slovakians}
+		relative_position_id = SLO_slovakia_to_slovakians
+
+		completion_reward = {
+			PRS = {
+				country_event = {
+					id = slovakia.4
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_raise_everything_we_can
+		icon = GFX_focus_generic_fascist_troops
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_slovakia_to_slovakians}
+		relative_position_id = SLO_slovakia_to_slovakians
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = raise_everything_we_can
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = SLO_reclaim_what_is_ours
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {focus = SLO_raise_everything_we_can}
+		relative_position_id = SLO_slovakia_to_slovakians
+
+		completion_reward = {
+			add_state_claim = 664
+			add_state_claim = 73
+              create_wargoal = {
+              target = HUN
+              type = take_state_focus
+              generator = { 123 }
+              }
+			add_threat = 5
+		}
+	}
+	focus = {
+		id = SLO_a_solution_to_the_hungarian_question
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			has_idea = hungarian_partisans
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_raise_everything_we_can}
+		relative_position_id = SLO_slovakia_to_slovakians
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SLO_eliminate_the_hungarians
+		icon = GFX_focus_generic_total_war
+		x = 1
+		y = 3
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			has_idea = hungarian_partisans
+		}
+
+		select_effect = {
+			news_event = news.3068
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_a_solution_to_the_hungarian_question}
+		mutually_exclusive = {focus = SLO_deport_hungarians}
+		cancelable = no
+		relative_position_id = SLO_slovakia_to_slovakians
+
+		completion_reward = {
+			add_state_core = 664
+			664 = {
+				add_manpower = -400000
+			}
+			73 = {
+				add_manpower = -400000
+			}
+			add_war_support = 0.1
+			remove_ideas = hungarian_partisans
+		}
+	}
+	focus = {
+		id = SLO_deport_hungarians
+		icon = GFX_focus_SOV_penal_battalions
+		x = 3
+		y = 3
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			has_idea = hungarian_partisans
+		}
+		
+		bypass = {
+
+		}
+
+		select_effect = {
+			news_event = news.3069
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_a_solution_to_the_hungarian_question}
+		mutually_exclusive = {focus = SLO_eliminate_the_hungarians}
+		cancelable = no
+		relative_position_id = SLO_slovakia_to_slovakians
+
+		completion_reward = {
+			add_state_core = 664
+			664 = {
+				add_manpower = -400000
+			}
+			43 = {
+				add_manpower = 400000
+			}
+			953 = {
+				add_manpower = 150000
+			}
+			73 = {
+				add_manpower = -400000
+				add_compliance = 100
+			}
+			154 = {
+				add_manpower = 250000
+			}
+			remove_ideas = hungarian_partisans
+		}
+	}
+	focus = {
+		id = SLO_boh_rodina_slovensko
+		icon = GFX_focus_FIN_chaplains
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_national_catholicism}
+		relative_position_id = SLO_national_catholicism
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SLO_the_great_protector_of_slovaks
+		icon = GFX_focus_SWE_the_lion_of_the_north
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = SLO_keep_control_on_the_guard
+				has_completed_focus = SLO_the_last_coup
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_boh_rodina_slovensko}
+		relative_position_id = SLO_boh_rodina_slovensko
+
+		completion_reward = {
+			add_country_leader_trait = the_great_protector_of_slovakians
+		}
+	}
+	focus = {
+		id = SLO_the_slavic_model
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_the_great_protector_of_slovaks}
+		relative_position_id = SLO_boh_rodina_slovensko
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 150
+			add_manpower = 50000
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = SLO_family_at_heart
+		icon = GFX_focus_generic_population_growth
+		x = 2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_boh_rodina_slovensko}
+		relative_position_id = SLO_boh_rodina_slovensko
+
+		completion_reward = {
+			add_ideas = rodina_v_srdci
+		}
+	}
+	focus = {
+		id = SLO_religious_schools
+		icon = GFX_focus_generic_university_1
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = SLO_family_at_heart}
+		relative_position_id = SLO_boh_rodina_slovensko
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SLO_ban_the_unions
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = -2
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_boh_rodina_slovensko}
+		relative_position_id = SLO_boh_rodina_slovensko
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.035
+			}
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = -0.035
+			}
+			add_popularity = {
+				ideology = libertarian_socialism
+				popularity = -0.035
+			}
+			add_ideas = unions_banned
+		}
+	}
+	focus = {
+		id = SLO_united_under_god
+		icon = GFX_goal_class_collaboration
+		x = -2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_ban_the_unions}
+		relative_position_id = SLO_boh_rodina_slovensko
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unions_banned
+				add_idea = class_collaboration
+			}
+		}
+	}
+	focus = {
+		id = SLO_strengthen_the_hlinka_guard
+		icon = GFX_goal_generic_military_deal
+		x = -4
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_national_catholicism}
+		relative_position_id = SLO_national_catholicism
+
+		completion_reward = {
+			add_manpower = 10000
+			swap_ideas = {
+				remove_idea = slovensko_slovakom
+				add_idea = hlinka_guard
+			}
+		}
+	}
+	focus = {
+		id = SLO_recrutment_campaigns
+		icon = GFX_focus_generic_workers
+		x = -4
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_completed_focus = SLO_the_last_coup
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_strengthen_the_hlinka_guard}
+		relative_position_id = SLO_national_catholicism
+
+		completion_reward = {
+			add_manpower = 20000
+			swap_ideas = {
+				remove_idea = hlinka_guard
+				add_idea = hlinka_guard2
+			}
+		}
+	}
+	focus = {
+		id = SLO_deploy_hlinka_police
+		icon = GFX_focus_SWE_lottakoren
+		x = -4
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_war = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_recrutment_campaigns}
+		relative_position_id = SLO_national_catholicism
+
+		completion_reward = {
+			add_manpower = 40000
+			hidden_effect = {
+				load_oob = SLO_hlinka_police
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+			random_controlled_state = {
+			create_unit = {
+             division = "name = \"Hlinka Police Division\" division_template = \"Hlinka Police Division\" start_experience_factor = 0.2"
+             owner = SLO
+            }
+			}
+		}
+	}
+	focus = {
+		id = SLO_guard_domination
+		icon = GFX_focus_generic_fascist_propaganda
+		x = -2
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_recrutment_campaigns}
+		relative_position_id = SLO_national_catholicism
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hlinka_guard2
+				add_idea = hlinka_guard3
+			}
+		}
+	}
+	focus = {
+		id = SLO_arm_the_hlinka
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_strengthen_the_hlinka_guard}
+		relative_position_id = SLO_strengthen_the_hlinka_guard
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_keep_control_on_the_guard
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_strengthen_the_hlinka_guard}
+		mutually_exclusive = {focus = SLO_the_last_coup}
+		relative_position_id = SLO_strengthen_the_hlinka_guard
+
+		completion_reward = {
+			add_stability = 0.075
+			add_war_support = -0.05
+			add_political_power = -25
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SLO_incorporate_the_hlinka_into_the_army
+		icon = GFX_focus_generic_manpower
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_keep_control_on_the_guard}
+		relative_position_id = SLO_strengthen_the_hlinka_guard
+
+		completion_reward = {
+			country_event = {
+				id = slovakia.8
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = SLO_the_last_coup
+		icon = GFX_focus_NOR_quislings_coup
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = SLO_strengthen_the_hlinka_guard}
+		mutually_exclusive = {focus = SLO_keep_control_on_the_guard}
+		relative_position_id = SLO_strengthen_the_hlinka_guard
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
 		id = SLO_organize_democratic_elections
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 2
@@ -276,6 +1219,10 @@
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = work_in_progress
+                always = no
+			}
 		}
 		
 		bypass = {
@@ -293,7 +1240,7 @@
 		completion_reward = {
 			add_stability = 0.1
 			set_politics = {
-				ideology = democratic 
+				ruling_party = democratic 
 				elections_allowed = yes
 			}
 		}
@@ -346,6 +1293,10 @@
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = work_in_progress
+                always = no
+			}
 		}
 		
 		bypass = {
@@ -364,6 +1315,1535 @@
 		}
 	}
 	focus = {
+		id = SLO_preserve_slovakian_independence
+		icon = GFX_focus_generic_coastal_fort
+		x = -25
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_idea = illegitimate_government
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SLO_fortify_the_bohemian_border
+		icon = GFX_goal_generic_construct_military
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_preserve_slovakian_independence
+		prerequisite = {focus = SLO_preserve_slovakian_independence}
+
+		completion_reward = {
+			if = {
+				limit = { controls_state = 70 }
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 9539
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 3484
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 11539
+					}
+				}
+			}
+			if = {
+				limit = { controls_state = 71 }
+				71 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 11554
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_the_northern_threat
+		icon = GFX_goal_northern_threat
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_preserve_slovakian_independence
+		prerequisite = {focus = SLO_preserve_slovakian_independence}
+
+		completion_reward = {
+			if = {
+				limit = { controls_state = 71 }
+				71 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 11554
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 581
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 3550
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 3581
+					}
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = 6604
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_establish_a_naval_presence
+		icon = GFX_goal_generic_amphibious_assault
+		x = -3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_preserve_slovakian_independence
+		prerequisite = {focus = SLO_fortify_the_bohemian_border}
+		prerequisite = {focus = SLO_the_northern_threat}
+
+		completion_reward = {
+			navy_experience = 50
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_focus_on_trade_interdiction
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_establish_a_naval_presence
+		prerequisite = {focus = SLO_establish_a_naval_presence}
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 2
+             category = ss_tech
+            }
+		}
+	}
+	focus = {
+		id = SLO_focus_on_fleet_improvement
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_establish_a_naval_presence
+		prerequisite = {focus = SLO_focus_on_trade_interdiction}
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 5
+             category = ship_modules_tech
+            }
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = naval_doctrine
+            }
+		}
+	}
+	focus = {
+		id = SLO_expand_our_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_establish_a_naval_presence
+		prerequisite = {focus = SLO_establish_a_naval_presence}
+
+		completion_reward = {
+			navy_experience = 50
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_secure_our_trade
+		icon = GFX_focus_generic_destroyer
+		x = 0
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_establish_a_naval_presence
+		prerequisite = {focus = SLO_expand_our_dockyards}
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 1
+             category = dd_tech
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_the_slavic_mountaineer
+		icon = GFX_focus_SMB_a_land_of_mountains
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_preserve_slovakian_independence
+		prerequisite = {focus = SLO_fortify_the_bohemian_border}
+		prerequisite = {focus = SLO_the_northern_threat}
+
+		completion_reward = {
+			add_ideas = a_land_of_moutains
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = SLO_modernize_the_equipment
+		icon = GFX_goal_modernization_of_equipment
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH}
+		relative_position_id = SLO_the_slavic_mountaineer
+		prerequisite = {focus = SLO_the_slavic_mountaineer}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SLO_invest_in_new_guns
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH}
+		relative_position_id = SLO_the_slavic_mountaineer
+		prerequisite = {focus = SLO_modernize_the_equipment}
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 2
+             category = infantry_weapons
+            }
+		}
+	}
+	focus = {
+		id = SLO_modernize_the_tactics
+		icon = GFX_goal_generic_army_doctrines
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP}
+		relative_position_id = SLO_the_slavic_mountaineer
+		prerequisite = {focus = SLO_the_slavic_mountaineer}
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = SLO_mechanization_of_the_army
+		icon = GFX_focus_FIN_foreign_anti_air
+		x = 1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP}
+		relative_position_id = SLO_the_slavic_mountaineer
+		prerequisite = {focus = SLO_modernize_the_tactics}
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 1
+             category = armor
+            }
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 1
+             category = cat_mechanized_equipment
+            }
+		}
+	}
+	focus = {
+		id = SLO_kickstart_slovakian_war_industries
+		icon = GFX_focus_generic_reorient_production
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH}
+		relative_position_id = SLO_the_slavic_mountaineer
+		prerequisite = {focus = SLO_the_slavic_mountaineer}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_masters_of_our_land
+		icon = GFX_focus_SMB_special_forces_option_3
+		x = 0
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_preserve_slovakian_independence
+		prerequisite = {focus = SLO_kickstart_slovakian_war_industries}
+		prerequisite = {focus = SLO_mechanization_of_the_army}
+		prerequisite = {focus = SLO_invest_in_new_guns}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = a_land_of_moutains
+				add_idea = a_land_of_moutains2
+			}
+		}
+	}
+	focus = {
+		id = SLO_expand_airforce_capacities
+		icon = GFX_goal_generic_air_production
+		x = 3
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_preserve_slovakian_independence
+		prerequisite = {focus = SLO_fortify_the_bohemian_border}
+		prerequisite = {focus = SLO_the_northern_threat}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_more_experienced_pilots
+		icon = GFX_goal_generic_air_doctrine
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_expand_airforce_capacities
+		prerequisite = {focus = SLO_expand_airforce_capacities}
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = air_doctrine
+            }
+		}
+	}
+	focus = {
+		id = SLO_protect_our_airspace
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_expand_airforce_capacities
+		prerequisite = {focus = SLO_more_experienced_pilots}
+
+		completion_reward = {
+			air_experience = 50
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_invest_in_air_research
+		icon = GFX_focus_generic_jet_planes
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_expand_airforce_capacities
+		prerequisite = {focus = SLO_expand_airforce_capacities}
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 1
+             category = light_air
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_invest_in_air_research
+		icon = GFX_focus_generic_jet_planes
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_expand_airforce_capacities
+		prerequisite = {focus = SLO_expand_airforce_capacities}
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 2
+             category = light_air
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_modernize_the_modules
+		icon = GFX_goal_generic_CAS
+		x = 0
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS }
+		relative_position_id = SLO_expand_airforce_capacities
+		prerequisite = {focus = SLO_invest_in_air_research}
+
+		completion_reward = {
+			add_tech_bonus = {
+             bonus = 0.5
+             uses = 4
+             category = plane_modules_tech
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_from_the_scratch
+		icon = GFX_focus_SWE_beneath_sticks_and_stone
+		x = -13
+		y = 0
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			NOT = {
+				has_idea = illegitimate_government
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				uses = 2
+				bonus = 2
+			}
+		}
+	}
+	focus = {
+		id = SLO_pursue_the_industrialisation_of_slovakia
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_from_the_scratch}
+		mutually_exclusive = {focus = SLO_preserve_the_agrarian_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = backward_country
+				add_idea = slovakian_economic_model
+			}
+		}
+	}
+	focus = {
+		id = SLO_increase_manufacture_production
+		icon = GFX_goal_generic_production2
+		x = 4
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_pursue_the_industrialisation_of_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = slovakian_economic_model
+				add_idea = slovakian_economic_model2
+			}
+		}
+	}
+	focus = {
+		id = SLO_encourage_rural_exodus
+		icon = GFX_goal_force_farmers_into_factories
+		x = 3
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_increase_manufacture_production}
+		prerequisite = {focus = SLO_invest_in_new_tools}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = slovakian_economic_model2
+				add_idea = slovakian_economic_model3
+			}
+		}
+	}
+	focus = {
+		id = SLO_centralize_the_production
+		icon = GFX_focus_DEN_limited_regulations
+		x = 3
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_encourage_rural_exodus}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = slovakian_economic_model3
+				add_idea = slovakian_economic_model4
+			}
+		}
+	}
+	focus = {
+		id = SLO_preserve_the_agrarian_slovakia
+		icon = GFX_focus_generic_farmland
+		x = -3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_from_the_scratch}
+		mutually_exclusive = {focus = SLO_pursue_the_industrialisation_of_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = backward_country
+				add_idea = agrarian_slovakia
+			}
+		}
+	}
+	focus = {
+		id = SLO_increase_agrarian_exportations
+		icon = GFX_goal_generic_trade
+		x = -4
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_preserve_the_agrarian_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_liberalism 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.02
+			}
+			swap_ideas = {
+				remove_idea = agrarian_slovakia
+				add_idea = agrarian_slovakia2
+			}
+		}
+	}
+	focus = {
+		id = SLO_invest_in_new_tools
+		icon = GFX_goal_generic_radar
+		x = 2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_preserve_the_agrarian_slovakia focus = SLO_pursue_the_industrialisation_of_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = electronics
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = SLO_strengthen_the_housing_sector
+		icon = GFX_focus_generic_low_cost_housing
+		x = -2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_preserve_the_agrarian_slovakia focus = SLO_pursue_the_industrialisation_of_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			add_political_power = 75
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = SLO_moderate_industrialisation
+		icon = GFX_focus_generic_full_employment
+		x = -3
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_increase_agrarian_exportations}
+		prerequisite = {focus = SLO_strengthen_the_housing_sector}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = agrarian_slovakia2
+				add_idea = agrarian_slovakia3
+			}
+		}
+	}
+	focus = {
+		id = SLO_promote_localism
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		x = -3
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_moderate_industrialisation}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.03
+			}
+			swap_ideas = {
+				remove_idea = agrarian_slovakia3
+				add_idea = agrarian_slovakia4
+			}
+		}
+	}
+	focus = {
+		id = SLO_slovakia_will_rise
+		icon = GFX_goal_slovakia_industry
+		x = 0
+		y = 5
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			num_of_factories > 25
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_promote_localism focus = SLO_centralize_the_production}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			custom_effect_tooltip = SLO_slovakia_will_rise_tt
+			IF = {
+				limit = {
+					has_idea = agrarian_slovakia4
+				}
+				swap_ideas = {
+					remove_idea = agrarian_slovakia4
+					add_idea = a_new_slovakia_agrarian
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = slovakian_economic_model4
+				}
+				swap_ideas = {
+					remove_idea = slovakian_economic_model4
+					add_idea = a_new_slovakia_industrial
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_infrastructure_program
+		icon = GFX_focus_generic_public_works
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_preserve_the_agrarian_slovakia focus = SLO_pursue_the_industrialisation_of_slovakia}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			70 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			71 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_challenge_europe
+		icon = GFX_focus_research2
+		x = 0
+		y = 3
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			num_of_factories > 10
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {focus = SLO_infrastructure_program}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SLO_open_iron_mines_in_eastern_slovakia
+		icon = GFX_focus_generic_steel
+		x = -1
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_challenge_europe}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			71 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel 
+					amount = 10
+				}
+			}
+		}
+	}
+	focus = {
+		id = SLO_industrial_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 4
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 71
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = SLO_challenge_europe}
+		relative_position_id = SLO_from_the_scratch
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = SLO_unionist_victory
 		icon = GFX_goal_national_social_politics_cze
 		x = 10
@@ -372,7 +2852,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 
 		available = {
@@ -409,7 +2889,7 @@
 		cost = 7
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 
 		available = {

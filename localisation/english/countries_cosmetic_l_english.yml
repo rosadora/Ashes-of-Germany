@@ -1654,3 +1654,14 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  CZE_REV_DEF:0 "The Revolution"
  CZE_REV_ADJ:0 "Revolutionary"
 
+ CZE_federalized:0 "United States of Bohemia"
+ CZE_federalized_DEF:0 "The United States of Bohemiac"
+ CZE_federalized_ADJ:0 "Bohemian"
+
+ CRO_YUG:0 "Yugoslavia"
+ CRO_YUG_classical_marxism:0 "Socialist Federal Republic of Yugoslavia"
+ CRO_YUG_communism:0 "Socialist Federal Republic of Yugoslavia"
+ CRO_YUG_libertarian_communism:0 "Socialist Federal Republic of Yugoslavia"
+ CRO_YUG_DEF:0 "Yugoslavia"
+ CRO_YUG_ADJ:0 "Yugoslavian"
+

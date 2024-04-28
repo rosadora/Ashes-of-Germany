@@ -2800,6 +2800,664 @@
 		}
 	}
 	focus = {
+		id = CZE_triumph_over_radicalism
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 10
+		y = 7
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CZE_the_time_of_choice
+		icon = GFX_goal_generic_dangerous_deal
+		x = -3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_triumph_over_radicalism
+		prerequisite = {focus = CZE_triumph_over_radicalism}
+		mutually_exclusive = {focus = CZE_absolute_neutrality}
+
+		completion_reward = {
+			unlock_decision_tooltip = CZE_side_with_france
+			unlock_decision_tooltip = CZE_side_with_prussia
+			unlock_decision_tooltip = CZE_side_with_hungary
+		}
+	}
+	focus = {
+		id = CZE_federalization
+		icon = GFX_focus_DEN_civilian_preparations
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_triumph_over_radicalism
+		prerequisite = {focus = CZE_triumph_over_radicalism}
+		mutually_exclusive = {focus = CZE_divert_german_speakers_attention}
+
+		completion_reward = {
+			set_cosmetic_tag = CZE_federalized
+			add_stability = 0.05
+			add_political_power = 30
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze
+				}
+				remove_ideas = german_speaking_minorities_cze
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze2
+				}
+				remove_ideas = german_speaking_minorities_cze2
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_divert_german_speakers_attention
+		icon = GFX_focus_SWI_helvetic_junta
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+			any_neighbor_country = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_triumph_over_radicalism
+		prerequisite = {focus = CZE_triumph_over_radicalism}
+		mutually_exclusive = {focus = CZE_federalization}
+
+		completion_reward = {
+			add_war_support = 0.05
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze
+				}
+				remove_ideas = german_speaking_minorities_cze
+			}
+			IF = {
+				limit = {
+					has_idea = german_speaking_minorities_cze2
+				}
+				remove_ideas = german_speaking_minorities_cze2
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze }
+				}
+			}
+			IF = {
+				limit = {
+					69 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+					74 = { has_dynamic_modifier = {modifier = german_speakers_minority_cze_national_unity} }
+				}
+				69 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+				74 = {
+					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_fading_hegemony_over_bohemian_politics
+		icon = GFX_goal_national_social_fading_hegemony
+		x = 0
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_triumph_over_radicalism
+		prerequisite = {focus = CZE_triumph_over_radicalism}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.015
+			}
+		}
+	}
+	focus = {
+		id = CZE_expand_state_medias
+		icon = GFX_goal_generic_radar
+		x = 3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_fading_hegemony_over_bohemian_politics
+		prerequisite = {focus = CZE_fading_hegemony_over_bohemian_politics}
+
+		completion_reward = {
+			add_ideas = large_state_medias
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = CZE_modernist_ambition
+		icon = GFX_focus_generic_railroad
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_expand_state_medias
+		prerequisite = {focus = CZE_expand_state_medias}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.075
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.075
+			}
+		}
+	}
+	focus = {
+		id = CZE_create_the_republican_guard
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		x = 1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_expand_state_medias
+		prerequisite = {focus = CZE_expand_state_medias}
+
+		completion_reward = {
+			add_ideas = republican_guard_of_bohemia
+		}
+	}
+	focus = {
+		id = CZE_laws_against_extremism
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 0
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_fading_hegemony_over_bohemian_politics
+		prerequisite = {focus = CZE_fading_hegemony_over_bohemian_politics}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = CZE_interdiction_of_militias
+		icon = GFX_focus_generic_military_dictatorship
+		x = -1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_laws_against_extremism
+		prerequisite = {focus = CZE_laws_against_extremism}
+
+		completion_reward = {
+			add_stability = 0.05
+			army_experience = 50
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.075
+			}
+		}
+	}
+	focus = {
+		id = CZE_empower_moderate_unions
+		icon = GFX_focus_generic_workers
+		x = 1
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_laws_against_extremism
+		prerequisite = {focus = CZE_laws_against_extremism}
+
+		completion_reward = {
+			add_stability = 0.05
+			army_experience = 50
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = CZE_skyrocket_economy
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		x = -3
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_fading_hegemony_over_bohemian_politics
+		prerequisite = {focus = CZE_fading_hegemony_over_bohemian_politics}
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 4
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+	}
+	focus = {
+		id = CZE_attract_tourism
+		icon = GFX_focus_SWE_urbanization
+		x = -4
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_fading_hegemony_over_bohemian_politics
+		prerequisite = {focus = CZE_skyrocket_economy}
+
+		completion_reward = {
+			add_ideas = attractive_country
+		}
+	}
+	focus = {
+		id = CZE_increase_subsidies
+		icon = GFX_focus_DEN_no_regulations
+		x = -2
+		y = 2
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_fading_hegemony_over_bohemian_politics
+		prerequisite = {focus = CZE_skyrocket_economy}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_absolute_neutrality
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		x = -1
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = CZE_triumph_over_radicalism
+		prerequisite = {focus = CZE_triumph_over_radicalism}
+		mutually_exclusive = {focus = CZE_the_time_of_choice}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = heaven_of_liberty
+				add_idea = heaven_of_peace_and_liberty_forever
+			}
+		}
+	}
+	focus = {
 		id = CZE_the_workers_government
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
 		x = 10
@@ -2824,6 +3482,10 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_leftist_coalition
+		}
 
 		completion_reward = {
 			add_political_power = 100
@@ -2848,6 +3510,8 @@
 
 		allow_branch = {
 			NOT = { has_completed_focus = CZE_curb_the_revolution }
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_leftist_coalition
 		}
 
 		cost = 7
@@ -3698,6 +4362,8 @@
 		}
 		allow_branch = {
 			NOT = { has_completed_focus = CZE_abolish_the_presidency }
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_leftist_coalition
 		}
 
 		cost = 7

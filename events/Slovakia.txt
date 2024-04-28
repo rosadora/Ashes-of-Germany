@@ -70,10 +70,138 @@ country_event = { #Democratic Opposition Fired
 			ideology = ultra_nationalism
 			popularity = 0.1
 		}
-		set_politics = {
-          ruling_party = ultra_nationalism
-          elections_allowed = no
-		}
 		remove_ideas = unionist_opposition
+		remove_ideas = nationalist_ascendency
+	}
+}
+
+country_event = { #Join Prussia : Request
+	id = slovakia.4
+	title = slovakia.4.t
+	desc = slovakia.4.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.4.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = SLO
+		add_ai_strategy = {
+          type = alliance
+          id = SLO
+          value = 200
+        }
+		SLO = {
+		 add_ai_strategy = {
+          type = alliance
+          id = PRS
+          value = 200
+         }
+		 country_event = {
+					id = slovakia.5
+					days = 1
+				}
+		}
+	}
+	option = {
+		name = slovakia.4.b
+		ai_chance = {
+			base = 0
+		}
+		add_to_faction = SLO
+
+		country_event = {
+					id = slovakia.6
+					days = 1
+				}
+	}
+}
+
+country_event = { #Join Prussia : Accepted
+	id = slovakia.5
+	title = slovakia.5.t
+	desc = slovakia.5.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.5.a
+		ai_chance = {
+			base = 100
+		}
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #Join Prussia : Refused
+	id = slovakia.6
+	title = slovakia.6.t
+	desc = slovakia.6.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.6.a
+		ai_chance = {
+			base = 100
+		}
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #Magyar Resistance
+	id = slovakia.7
+	title = slovakia.7.t
+	desc = slovakia.7.d
+	picture = GFX_report_event_FIN_karelian_forest_guerillas
+
+	trigger = {
+		tag = SLO 
+		owns_state = 664
+		owns_state = 73
+		OR = {
+		has_government = fascism
+		has_government = ultra_nationalism
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = slovakia.7.a
+		ai_chance = {
+			base = 100
+		}
+		add_war_support = 0.05
+		add_ideas = hungarian_partisans
+	}
+}
+
+country_event = { #Disband the Hlinka
+	id = slovakia.8
+	title = slovakia.8.t
+	desc = slovakia.8.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = slovakia.8.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = hlinka_guard
+			add_idea = defenders_of_slovakia
+		}
+		add_timed_idea = {
+			idea = hlinka_uprising
+			days = 100
+		}
 	}
 }

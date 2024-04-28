@@ -7,17 +7,25 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=fascism_ideology
-			expire="1965.1.1"
-			id=-1
-		}
-		country_leader={
 			ideology=ultra_nationalism_category
 			expire="1965.1.1"
 			id=-1
 		}
 		country_leader={
 			ideology=despotism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+	SLO_alexandr_mach={
+		name="Alexander Mach"
+		portraits={
+			civilian={
+				large=GFX_Alexander_Mach
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
 			expire="1965.1.1"
 			id=-1
 		}

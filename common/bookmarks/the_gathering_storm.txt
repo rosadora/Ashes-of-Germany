@@ -141,19 +141,18 @@ bookmarks = {
 				BEL_pivot_to_the_past
 			}
 		}
-		"POL"={
+		"SLO"={
 			minor = yes
-			history = "POL_2_GATHERING_STORM_DESC"
-			ideology = neutrality
+			history = "SLO_GATHERING_STORM_DESC"
+			ideology = communism
 			ideas = {
-				POL_april_constitution_1
-		        POL_looming_peasants_strike
-		        POL_sanation_left_opposition_1
+				illegitimate_government
+				slovensko_slovakom
+				backward_country
 			}
 			focuses = {
-				POL_waiting_isnt_a_solution
-				POL_assemble_the_regency_council
-				POL_consolidate_sanation_government
+				SLO_form_the_slovakian_national_council
+				SLO_stand_firm
 			}
 		}
 		"WUR"={
@@ -223,7 +222,7 @@ bookmarks = {
 			ideology = social_liberalism
 			ideas = {
 				bastion_of_democracy
-	            german_speakers_minority_cze
+	            german_speaking_minorities_cze
 	            revanchism_for_unification
 			}
 			focuses = {

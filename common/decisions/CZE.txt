@@ -231,7 +231,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_denounce_leftist_extremism = {
@@ -276,7 +276,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_promote_bohemian_growth = {
@@ -321,7 +321,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_right_wing_populist_rethoric = {
@@ -367,7 +367,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_promote_the_agrarianist_model = {
@@ -412,7 +412,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_side_with_the_reason = {
@@ -447,7 +447,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_promote_social_policies = {
@@ -492,7 +492,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_oppose_free_market = {
@@ -538,7 +538,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_call_on_peoples_reason = {
@@ -580,7 +580,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_side_with_freedom = {
@@ -627,7 +627,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_side_with_the_workers_movement = {
@@ -662,7 +662,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_creation_of_the_united_workers_front_of_bohemia = {
@@ -696,7 +696,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_massive_strikes = {
@@ -740,7 +740,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_denounce_the_political_establishment = {
@@ -790,7 +790,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_promises_of_better_days = {
@@ -828,7 +828,7 @@ CZE_1940_legislative_elections = {
 		}
 
 		ai_will_do = {
-			factor = 50
+			factor = 1000
 		}
 	}
 	CZE_right_alliance = {
@@ -1028,6 +1028,10 @@ CZE_infiltration_in_slovakia = {
 		complete_effect = {
 			SLO = {
 				add_stability = -0.02
+				add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = -700
+            }
 			random_owned_state = {
 			damage_building = {
              type = infrastructure
@@ -1036,10 +1040,6 @@ CZE_infiltration_in_slovakia = {
 			damage_building = {
              type = arms_factory
              damage = 1
-            }
-			add_equipment_to_stockpile = {
-              type = infantry_equipment
-              amount = -700
             }
 			}
 			}
@@ -1955,6 +1955,156 @@ CZE_welcome_political_refugiees = {
 
 		ai_will_do = {
 			factor = 100
+		}
+	}
+}
+CZE_time_of_choice = {
+
+	CZE_side_with_france = {
+
+		icon = GFX_decision_category_intervention_overseas
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			FRA = {
+				is_faction_leader = yes
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_the_time_of_choice
+		}
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+
+		remove_effect = {
+			FRA = {
+				country_event = {
+					id = bohemia.11
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	CZE_side_with_prussia = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			PRS = {
+				is_faction_leader = yes
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_the_time_of_choice
+		}
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+
+		remove_effect = {
+			PRS = {
+				country_event = {
+					id = bohemia.11
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	CZE_side_with_hungary = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		available = {
+			HUN = {
+				is_faction_leader = yes
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		visible = {
+          has_completed_focus = CZE_the_time_of_choice
+		}
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+
+		remove_effect = {
+			HUN = {
+				country_event = {
+					id = bohemia.11
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
 		}
 	}
 }

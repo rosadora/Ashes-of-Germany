@@ -7,7 +7,7 @@ HUN_reactionnary_unrest = {
 		icon = GFX_decision_generic_form_nation
 
 		allowed = {
-			tag = HUN
+			original_tag = HUN
 		}
 
 		available = {
@@ -52,7 +52,7 @@ HUN_reactionnary_unrest = {
 		icon = GFX_decision_POL_organize_strike_two
 
 		allowed = {
-			tag = HUN
+			original_tag = HUN
 		}
 
 		available = {
@@ -92,7 +92,7 @@ HUN_reactionnary_unrest = {
 		icon = GFX_decision_eng_blackshirt_march
 
 		allowed = {
-			tag = HUN
+			original_tag = HUN
 		}
 
 		available = {
@@ -286,7 +286,7 @@ HUN_reactionnary_unrest_natio_side = {
 		icon = GFX_decision_eng_blackshirt_march
 
 		allowed = {
-			tag = HUN
+			original_tag = HUN
 		}
 
 		available = {
@@ -425,7 +425,7 @@ HUN_communist_insurgency_decision = {
 		icon = GFX_decision_SOV_the_workers_dictatorship
 
 		allowed = {
-			tag = HUN
+			original_tag = HUN
 		}
 
 		available = {
@@ -468,7 +468,7 @@ HUN_fascist_insurgency_decision = {
 		icon = GFX_decision_generic_police_action
 
 		allowed = {
-			tag = HUN
+			original_tag = HUN
 		}
 
 		available = {

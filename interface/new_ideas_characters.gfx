@@ -1245,4 +1245,14 @@ spriteTypes = {
 		texturefile = "gfx/leaders/CZE/Klement_Gottwald_small.dds"
 	} 
 
+	spriteType = {
+		name = "GFX_Alexander_Mach_small"
+		texturefile = "gfx/leaders/SLO/Alexander_Mach_small.dds"
+	} 
+
+	spriteType = {
+		name = "GFX_Alexander_Mach"
+		texturefile = "gfx/leaders/SLO/Alexander_Mach.dds"
+	} 
+
 }

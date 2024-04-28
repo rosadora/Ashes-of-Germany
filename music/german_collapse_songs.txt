@@ -80,3 +80,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "zabruje_tako_pjesme_znane"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

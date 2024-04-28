@@ -71,3 +71,9 @@ music = {
 	volume = 1.3
 }
 
+music = {
+	name = "zabruje_tako_pjesme_znane"
+	file = "zabruje_tako_pjesme_znane.ogg"
+	volume = 1.3
+}
+

@@ -851,3 +851,5 @@ if = {
 		icon = "GFX_GER_naval_bomber1_medium"
 	}
 }
+
+create_faction = Reichspakt

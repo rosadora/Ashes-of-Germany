@@ -34,9 +34,134 @@ ideas = {
 			
 			modifier = { 
 				conscription = -0.01
-				stability_factor -0.2
+				stability_factor = -0.2
 				fascism_drift = 0.02
 				ultra_nationalism_drift = 0.01
+			} 
+		}
+		defenders_of_slovakia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_secret_rearmament
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_org_factor = 0.05
+				army_core_defence = 0.1
+				army_core_attack = 0.1
+				conscription = 0.01
+				fascism_drift = 0.01
+				ultra_nationalism_drift = 0.03
+			} 
+		}
+		hlinka_guard = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hlinka_spirit
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.1
+				fascism_drift = 0.02
+				ultra_nationalism_drift = 0.03
+			} 
+		}
+		hlinka_guard2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hlinka_spirit
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription = 0.01
+				fascism_drift = 0.02
+				ultra_nationalism_drift = 0.03
+			} 
+		}
+		hlinka_guard3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hlinka_spirit
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription = 0.03
+				modifier_army_sub_unit_militia_max_org_factor = 0.15
+				modifier_army_sub_unit_militia_attack_factor = 0.15
+				modifier_army_sub_unit_militia_defence_factor = 0.15
+				fascism_drift = 0.02
+				ultra_nationalism_drift = 0.03
+			} 
+		}
+		a_land_of_moutains = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_sub_zero_survival_training
+
+			removal_cost = -1
+			
+			modifier = { 
+				modifier_army_sub_unit_mountaineers_max_org_factor = 0.075
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
+				special_forces_cap = 0.3
+			} 
+		}
+		a_land_of_moutains2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_sub_zero_survival_training
+
+			removal_cost = -1
+			
+			modifier = { 
+				modifier_army_sub_unit_mountaineers_max_org_factor = 0.15
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.1
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.1
+				special_forces_cap = 0.3
+				terrain_penalty_reduction = 0.2
+				supply_consumption_factor = -0.15
+				army_core_defence_factor = 0.1
 			} 
 		}
 		autonomous_militias = {
@@ -54,7 +179,7 @@ ideas = {
 			
 			modifier = { 
 				political_power_gain = -0.1
-				stability_factor -0.05
+				stability_factor = -0.05
 				communism_drift = 0.01
 				classical_marxism_drift = 0.02
 				libertarian_socialism_drift = 0.01
@@ -75,7 +200,7 @@ ideas = {
 			
 			modifier = { 
 				political_power_gain = -0.1
-				stability_factor -0.05
+				stability_factor = -0.05
 				ultra_nationalism_drift = 0.01
 				fascism_drift = 0.03
 			} 
@@ -95,10 +220,31 @@ ideas = {
 			
 			modifier = { 
 				monthly_population = 0.2
-				stability_factor 0.05
+				stability_factor = 0.05
 				democratic_drift = 0.02
 				ultra_nationalism_drift = 0.03
 				fascism_drift = 0.01
+			} 
+		}
+		catholic_state = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = state_catholicism
+
+			removal_cost = -1
+			
+			modifier = { 
+				monthly_population = 0.2
+				stability_factor = 0.15
+				democratic_drift = 0.02
+				ultra_nationalism_drift = 0.04
+				fascism_drift = 0.04
 			} 
 		}
 		leftist_terror_slo = {
@@ -115,7 +261,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				stability_factor -0.015
+				stability_factor = -0.015
 				communism_drift = 0.01
 				classical_marxism_drift = 0.02
 				libertarian_socialism_drift = 0.01
@@ -158,6 +304,338 @@ ideas = {
 			modifier = { 
 				global_building_slots_factor = -0.2
 				consumer_goods_expected_value = 0.1
+			} 
+		}
+		slovakian_economic_model = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = -0.15
+				consumer_goods_expected_value = 0.075
+			} 
+		}
+		slovakian_economic_model2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = -0.15
+				consumer_goods_expected_value = 0.04
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.025
+			} 
+		}
+		slovakian_economic_model3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = -0.02
+				consumer_goods_expected_value = -0.01
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.025
+			} 
+		}
+		slovakian_economic_model4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				consumer_goods_expected_value = -0.03
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			} 
+		}
+		a_new_slovakia_industrial = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.3
+				consumer_goods_expected_value = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			} 
+		}
+		agrarian_slovakia = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				global_building_slots_factor = -0.2
+				consumer_goods_expected_value = 0.1
+				monthly_population = 0.2
+				production_speed_industrial_complex_factor = 0.05
+			} 
+		}
+		agrarian_slovakia2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				global_building_slots_factor = -0.2
+				consumer_goods_expected_value = 0.05
+				industrial_factory_donations = 2
+				monthly_population = 0.2
+				production_speed_industrial_complex_factor = 0.05
+				min_export = 0.05
+			} 
+		}
+		agrarian_slovakia3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				global_building_slots_factor = -0.1
+				consumer_goods_expected_value = 0.03
+				industrial_factory_donations = 2
+				monthly_population = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				min_export = 0.05
+			} 
+		}
+		agrarian_slovakia4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				global_building_slots_factor = -0.05
+				consumer_goods_expected_value = 0.01
+				industrial_factory_donations = 2
+				monthly_population = 0.45
+				production_speed_industrial_complex_factor = 0.2
+				min_export = -0.05
+			} 
+		}
+		a_new_slovakia_agrarian = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_factory_donations = 4
+				monthly_population = 0.6
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_infrastructure_factor = 0.2
+				min_export = -0.05
+			} 
+		}
+		unions_banned = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_crush_the_revolution
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+			} 
+		}
+		class_collaboration = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -1
+			
+			modifier = { 
+				production_factory_max_efficiency_factor = 0.075
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
+			} 
+		}
+		rodina_v_srdci = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_battaglie_per_la_nascite
+
+			removal_cost = -1
+			
+			modifier = { 
+				monthly_population = 0.5
+				stability_factor = 0.075
+				consumer_goods_factor = 0.05
+			} 
+		}
+		raise_everything_we_can = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_volunteer_expedition_bonus
+
+			removal_cost = -1
+			
+			modifier = { 
+				weekly_manpower = 7000
+				industrial_capacity_factory = 0.8
+				consumer_goods_factor = -0.15
+				stability_weekly = -0.01
+			} 
+		}
+		hungarian_partisans = {
+			
+			allowed = {
+				owns_state = 664
+				owns_state = 73
+				is_puppet = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = { 
+				no_compliance_gain = 1
+				stability_factor = -0.2
+				resistance_target = 0.3
+			} 
+		}
+		hlinka_uprising = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_org_factor = -0.1
+				stability_factor = -0.1
+				stability_weekly = -0.01
+				fascism_drift = 0.02
 			} 
 		}
 	}
