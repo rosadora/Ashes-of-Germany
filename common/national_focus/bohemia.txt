@@ -2812,6 +2812,9 @@
 		}
 
 		available = {
+		}
+
+		allow_branch = {
 			has_country_flag = CZE_election_campaign_end
 			has_country_flag = CZE_centrist_coalition
 		}
@@ -2843,10 +2846,11 @@
 		}
 
 		available = {
-			OR = {
-				has_government = social_liberalism
-				has_government = social_democracy
-			}
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 		
 		bypass = {
@@ -2880,10 +2884,11 @@
 		}
 
 		available = {
-			OR = {
-				has_government = social_liberalism
-				has_government = social_democracy
-			}
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 		
 		bypass = {
@@ -2950,6 +2955,11 @@
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 
 		available = {
@@ -3026,6 +3036,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3067,6 +3082,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3103,6 +3123,11 @@
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 
 		available = {
@@ -3147,6 +3172,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3181,6 +3211,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3213,6 +3248,11 @@
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 
 		available = {
@@ -3258,6 +3298,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3301,6 +3346,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3340,6 +3390,11 @@
 			factor = 3
 		}
 
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
+		}
+
 		available = {
 			OR = {
 				has_government = social_liberalism
@@ -3372,6 +3427,11 @@
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 
 		available = {
@@ -3436,6 +3496,11 @@
 				has_government = social_liberalism
 				has_government = social_democracy
 			}
+		}
+
+		allow_branch = {
+			has_country_flag = CZE_election_campaign_end
+			has_country_flag = CZE_centrist_coalition
 		}
 		
 		bypass = {

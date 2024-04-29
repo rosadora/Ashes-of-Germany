@@ -1,5 +1,6 @@
 RULE_socialist_support_socialist_HUN = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -37,6 +38,7 @@ RULE_socialist_support_socialist_HUN = {
 }
 RULE_socialist_support_socialist_reverse_HUN = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -76,6 +78,7 @@ RULE_socialist_support_socialist_reverse_HUN = {
 
 RULE_socialist_support_socialist_BAY = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -113,6 +116,7 @@ RULE_socialist_support_socialist_BAY = {
 }
 RULE_socialist_support_socialist_reverse_BAY = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -152,6 +156,7 @@ RULE_socialist_support_socialist_reverse_BAY = {
 
 RULE_socialist_support_socialist_AUS = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -189,6 +194,7 @@ RULE_socialist_support_socialist_AUS = {
 }
 RULE_socialist_support_socialist_reverse_AUS = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -222,91 +228,12 @@ RULE_socialist_support_socialist_reverse_AUS = {
     ai_strategy = {
         type = befriend
         id = AUS
-        value = 150
-    }
-}
-
-RULE_socialist_support_socialist_PRS = {
-    enable = {
-       OR = {
-          has_government = classical_marxism
-		  has_government = libertarian_socialism
-		  has_government = communism
-		}
-    }
-    enable_reverse = {
-        OR = {
-        AUS = { has_government = communism }
-        AUS = { has_government = libertarian_socialism }
-        AUS = { has_government = classical_marxism }
-        }
-    }
-    abort_when_not_enabled = yes
-    ai_strategy = {
-        type = support
-        id = PRS
-        value = 300
-    }
-    ai_strategy = {
-        type = send_volunteers_desire
-        id = PRS
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = PRS
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = PRS
-        value = 150
-    }
-}
-RULE_socialist_support_socialist_reverse_PRS = {
-    enable = {
-       OR = {
-          has_government = democratic
-		  has_government = neutrality
-		  has_government = ultra_nationalism
-          has_government = social_liberalism
-		  has_government = classical_liberalism
-		}
-    }
-    enable_reverse = {
-        OR = {
-        PRS = { has_government = democratic }
-        PRS = { has_government = neutrality }
-        PRS = { has_government = ultra_nationalism }
-        PRS = { has_government = social_liberalism }
-        PRS = { has_government = classical_liberalism }
-        }
-    }
-    abort_when_not_enabled = yes
-    reversed = yes
-    ai_strategy = {
-        type = support
-        id = PRS
-        value = 300
-    }
-    ai_strategy = {
-        type = send_volunteers_desire
-        id = PRS
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = PRS
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = PRS
         value = 150
     }
 }
 RULE_anti_communism_russian_civil_war = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -343,6 +270,7 @@ RULE_anti_communism_russian_civil_war = {
 }
 RULE_bolshevik_support_civil_war = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = social_democracy
 		  has_government = classical_marxism
@@ -377,6 +305,7 @@ RULE_bolshevik_support_civil_war = {
 }
 RULE_italian_civil_war_ILF_support = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -415,6 +344,7 @@ RULE_italian_civil_war_ILF_support = {
 }
 RULE_italian_civil_war_NLC_support = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = classical_marxism
 		  has_government = communism
@@ -451,6 +381,7 @@ RULE_italian_civil_war_NLC_support = {
 }
 RULE_italian_civil_war_ITA_support = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = fascism
 		  has_government = ultra_nationalism
@@ -486,6 +417,7 @@ RULE_italian_civil_war_ITA_support = {
 }
 RULE_anti_communism_yugoslavia = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -522,6 +454,7 @@ RULE_anti_communism_yugoslavia = {
 }
 RULE_support_communism_yugoslavia = {
     enable = {
+        is_on_continent = europe
        OR = {
           has_government = social_democracy
 		  has_government = classical_marxism
