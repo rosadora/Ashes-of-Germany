@@ -1253,6 +1253,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Alexander_Mach"
 		texturefile = "gfx/leaders/SLO/Alexander_Mach.dds"
-	} 
+	}
+
+	spriteType = {
+		name = "GFX_Milan_Hodza"
+		texturefile = "gfx/leaders/SLO/Milan_Hodza.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Igor_Hrušovský"
+		texturefile = "gfx/leaders/SLO/Igor_Hrušovský.dds"
+	}
 
 }

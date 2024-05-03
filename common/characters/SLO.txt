@@ -35,7 +35,7 @@ characters={
 		name="Milan Hodža"
 		portraits={
 			civilian={
-				large=GFX_Generic_caucasian_portrait3
+				large=GFX_Milan_Hodza
 			}
 		}
 		country_leader={
@@ -49,7 +49,7 @@ characters={
 		name="Igor Hrušovský"
 		portraits={
 			civilian={
-				large=GFX_Generic_caucasian_portrait2
+				large=GFX_Igor_Hrušovský
 			}
 		}
 		country_leader={

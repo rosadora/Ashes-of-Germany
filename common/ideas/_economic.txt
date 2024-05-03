@@ -329,7 +329,7 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 
-			cancel_if_invalid = no
+			cancel_if_invalid = yes
 
 			ai_will_do = {
    				factor = 100000

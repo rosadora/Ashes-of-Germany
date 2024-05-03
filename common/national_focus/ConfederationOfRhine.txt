@@ -2100,7 +2100,10 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_war_support = 0.15
-		 add_country_leader_trait = no_need_to_call_on_the_french
+		 FRA = {
+			end_puppet = RCO
+		 }
+		 leave_faction = yes
 		}
 	}
 	focus = {
@@ -2804,6 +2807,13 @@
 				has_idea = freedom_or_death2
 			}
 			remove_ideas = freedom_or_death2
+		 }
+		 FRA = {
+			add_to_faction = RCO
+			set_autonomy = {
+              target = RCO
+              autonomous_state = autonomy_dominion
+            }
 		 }
 		}
 	}

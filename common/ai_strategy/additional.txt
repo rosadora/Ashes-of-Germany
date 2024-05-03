@@ -1,6 +1,8 @@
 RULE_socialist_support_socialist_HUN = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -18,27 +20,19 @@ RULE_socialist_support_socialist_HUN = {
     ai_strategy = {
         type = support
         id = HUN
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = HUN
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = HUN
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = HUN
-        value = 150
+        value = 100
     }
 }
 RULE_socialist_support_socialist_reverse_HUN = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -57,28 +51,20 @@ RULE_socialist_support_socialist_reverse_HUN = {
     ai_strategy = {
         type = send_volunteers_desire
         id = HUN
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = support
         id = HUN
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = HUN
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = HUN
-        value = 150
+        value = 100
     }
 }
 
 RULE_socialist_support_socialist_BAY = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -96,27 +82,19 @@ RULE_socialist_support_socialist_BAY = {
     ai_strategy = {
         type = support
         id = BAY
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = BAY
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = BAY
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = BAY
-        value = 150
+        value = 100
     }
 }
 RULE_socialist_support_socialist_reverse_BAY = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -135,28 +113,20 @@ RULE_socialist_support_socialist_reverse_BAY = {
     ai_strategy = {
         type = support
         id = BAY
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = BAY
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = BAY
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = BAY
-        value = 150
+        value = 100
     }
 }
 
 RULE_socialist_support_socialist_AUS = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -174,27 +144,19 @@ RULE_socialist_support_socialist_AUS = {
     ai_strategy = {
         type = send_volunteers_desire
         id = AUS
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = support
         id = AUS
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = AUS
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = AUS
-        value = 150
+        value = 100
     }
 }
 RULE_socialist_support_socialist_reverse_AUS = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -213,27 +175,19 @@ RULE_socialist_support_socialist_reverse_AUS = {
     ai_strategy = {
         type = support
         id = AUS
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = AUS
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = AUS
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = AUS
-        value = 150
+        value = 100
     }
 }
 RULE_anti_communism_russian_civil_war = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -250,27 +204,49 @@ RULE_anti_communism_russian_civil_war = {
     ai_strategy = {
         type = support
         id = SOV
-        value = 300
+        value = 150
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = SOV
-        value = 300
+        value = 150
     }
+}
+RULE_anti_communism_russian_civil_war_defeat = {
+    enable = {
+        random_owned_state = {
+        is_on_continent = europe
+        }
+       OR = {
+          has_government = democratic
+		  has_government = neutrality
+		  has_government = ultra_nationalism
+          has_government = social_liberalism
+		  has_government = classical_liberalism
+          has_government = fascism
+		}
+        SOV = {
+            has_war_with = USR
+            surrender_progress > 0.3
+        }
+    }
+    abort_when_not_enabled = yes
     ai_strategy = {
-        type = alliance
+        type = support
         id = SOV
         value = 150
     }
     ai_strategy = {
-        type = befriend
+        type = send_volunteers_desire
         id = SOV
         value = 150
     }
 }
 RULE_bolshevik_support_civil_war = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = social_democracy
 		  has_government = classical_marxism
@@ -285,27 +261,19 @@ RULE_bolshevik_support_civil_war = {
     ai_strategy = {
         type = support
         id = USR
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = USR
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = USR
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = USR
-        value = 150
+        value = 100
     }
 }
 RULE_italian_civil_war_ILF_support = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -324,27 +292,19 @@ RULE_italian_civil_war_ILF_support = {
     ai_strategy = {
         type = support
         id = ILF
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = ILF
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = ILF
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = ILF
-        value = 150
+        value = 100
     }
 }
 RULE_italian_civil_war_NLC_support = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = classical_marxism
 		  has_government = communism
@@ -361,27 +321,19 @@ RULE_italian_civil_war_NLC_support = {
     ai_strategy = {
         type = support
         id = NLC
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = NLC
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = NLC
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = NLC
-        value = 150
+        value = 100
     }
 }
 RULE_italian_civil_war_ITA_support = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = fascism
 		  has_government = ultra_nationalism
@@ -397,27 +349,19 @@ RULE_italian_civil_war_ITA_support = {
     ai_strategy = {
         type = support
         id = ITA
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = ITA
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = ITA
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = ITA
-        value = 150
+        value = 100
     }
 }
 RULE_anti_communism_yugoslavia = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -434,27 +378,19 @@ RULE_anti_communism_yugoslavia = {
     ai_strategy = {
         type = support
         id = YUG
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = YUG
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = YUG
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = YUG
-        value = 150
+        value = 100
     }
 }
 RULE_support_communism_yugoslavia = {
     enable = {
+        random_owned_state = {
         is_on_continent = europe
+        }
        OR = {
           has_government = social_democracy
 		  has_government = classical_marxism
@@ -469,21 +405,11 @@ RULE_support_communism_yugoslavia = {
     ai_strategy = {
         type = support
         id = CRO
-        value = 300
+        value = 100
     }
     ai_strategy = {
         type = send_volunteers_desire
         id = CRO
-        value = 300
-    }
-    ai_strategy = {
-        type = alliance
-        id = CRO
-        value = 150
-    }
-    ai_strategy = {
-        type = befriend
-        id = CRO
-        value = 150
+        value = 100
     }
 }

@@ -1989,7 +1989,10 @@ CZE_time_of_choice = {
 		fire_only_once = yes
 
 		visible = {
+          OR = {
           has_completed_focus = CZE_the_time_of_choice
+		  has_completed_focus = CZE_break_our_isolation
+			}
 		}
 
 		modifier = {
@@ -2038,7 +2041,10 @@ CZE_time_of_choice = {
 		fire_only_once = yes
 
 		visible = {
+          OR = {
           has_completed_focus = CZE_the_time_of_choice
+		  has_completed_focus = CZE_break_our_isolation
+			}
 		}
 
 		modifier = {
@@ -2087,7 +2093,10 @@ CZE_time_of_choice = {
 		fire_only_once = yes
 
 		visible = {
+			OR = {
           has_completed_focus = CZE_the_time_of_choice
+		  has_completed_focus = CZE_break_our_isolation
+			}
 		}
 
 		modifier = {
