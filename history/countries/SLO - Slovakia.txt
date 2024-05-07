@@ -60,13 +60,10 @@ recruit_character = SLO_jozef_snejdarek
 recruit_character = SLO_fritz_gejza
 recruit_character = SLO_frantisek_sadek
 recruit_character = SLO_stefan_tiso
-recruit_character = SLO_cyril_kuchta
 recruit_character = SLO_jindrich_honzl
-recruit_character = SLO_frantisek_straka
 recruit_character = SLO_karol_sidor
 recruit_character = SLO_emil_lendvay
 recruit_character = SLO_jozef_turanec
-recruit_character = SLO_gustav_malar
 recruit_character = SLO_rudolf_viest
 recruit_character = SLO_janko_jesensky
 recruit_character = SLO_ferdinand_catlos
@@ -75,6 +72,9 @@ recruit_character = SLO_Milan_Hodza
 recruit_character = SLO_Igor_Hrusovský
 recruit_character = SLO_anarchist_commune
 recruit_character = SLO_alexandr_mach
+
+recruit_character = SLO_Jan_Golian
+recruit_character = SLO_Rudolf_Viest
 
 add_ideas = {
 	illegitimate_government

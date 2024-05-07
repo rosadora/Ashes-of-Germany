@@ -185,6 +185,70 @@ ideas = {
 				libertarian_socialism_drift = 0.01
 			} 
 		}
+		slovakian_red_guard = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_international_brigades
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription_factor = 0.2
+				conscription = 0.01
+				communism_drift = 0.01
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.01
+			} 
+		}
+		slovakian_red_guard2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_international_brigades
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription_factor = 0.2
+				conscription = 0.03
+				surrender_limit = 0.2
+				communism_drift = 0.01
+				classical_marxism_drift = 0.02
+				libertarian_socialism_drift = 0.01
+			} 
+		}
+		democratization_of_the_regime = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = 0.25
+				stability_weekly = 0.001
+				classical_liberalism = 0.02
+				social_liberalism_drift = 0.02
+				social_democracy_drift = 0.02
+			} 
+		}
 		nationalist_ascendency = {
 			
 			allowed = {
@@ -285,7 +349,7 @@ ideas = {
 				war_support_factor -0.15
 				classical_liberalism_drift = 0.01
 				social_liberalism_drift = 0.02
-				social_democracy_socialism_drift = 0.01
+				social_democracy_drift = 0.01
 			} 
 		}
 		backward_country = {
@@ -637,6 +701,54 @@ ideas = {
 				stability_weekly = -0.01
 				fascism_drift = 0.02
 			} 
+		}
+		anti_bohemian_spirit = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_the_lion_of_the_north
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = CZE
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		the_northern_border = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_secret_rearmament
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = PRS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
 		}
 	}
 }

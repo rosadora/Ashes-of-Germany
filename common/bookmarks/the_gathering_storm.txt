@@ -153,6 +153,7 @@ bookmarks = {
 			focuses = {
 				SLO_form_the_slovakian_national_council
 				SLO_stand_firm
+				SLO_slava_slovenska_republika_rad
 			}
 		}
 		"WUR"={

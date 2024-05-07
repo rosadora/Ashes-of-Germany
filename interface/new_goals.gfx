@@ -1562,12 +1562,27 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_slovakia_industry"
-	texturefile = "gfx/interface/goals/slovakia_industry.dds"			
+	name = "GFX_goal_antifascism"
+	texturefile = "gfx/interface/goals/antifascism.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_slovakia_industry"
-	texturefile = "gfx/interface/goals/slovakia_industry.dds"			
+	name = "GFX_goal_slava_rad_slovakia"
+	texturefile = "gfx/interface/goals/slava_rad_slovakia.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_assert_independence_slovakia"
+	texturefile = "gfx/interface/goals/assert_independence_slovakia.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_mobilization"
+	texturefile = "gfx/interface/goals/hussite_mobilization.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_cult"
+	texturefile = "gfx/interface/goals/hussite_cult.dds"			
 	}
 }

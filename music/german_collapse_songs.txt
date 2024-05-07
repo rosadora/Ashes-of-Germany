@@ -89,3 +89,21 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "internationale_orchestral_arrangement"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "mozart_lacrimosa"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}

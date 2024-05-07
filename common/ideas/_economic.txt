@@ -307,9 +307,10 @@ ideas = {
 					has_government = classical_marxism 
 					has_government = libertarian_socialism
 				}
-				surrender_progress > 0.1
+				has_war = yes
 			}
 			allowed_to_remove = {
+				has_war = no
 			}
 
 			removal_cost = -1
@@ -321,6 +322,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.2
 				production_speed_buildings_factor = -0.5
+				production_speed_arms_factory_factor = 0.5
 				industrial_capacity_factory = 0.5
 				industrial_capacity_dockyard = 0.5
 				production_factory_max_efficiency_factor = 0.2
@@ -329,12 +331,10 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 
-			cancel_if_invalid = yes
-
 			ai_will_do = {
    				factor = 100000
 				modifier = {
-					factor = 80
+					factor = 1800
 				}
    			}
 		}

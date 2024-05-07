@@ -1,8 +1,6 @@
 RULE_socialist_support_socialist_HUN = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -30,9 +28,7 @@ RULE_socialist_support_socialist_HUN = {
 }
 RULE_socialist_support_socialist_reverse_HUN = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+       is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -62,9 +58,7 @@ RULE_socialist_support_socialist_reverse_HUN = {
 
 RULE_socialist_support_socialist_BAY = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -92,9 +86,7 @@ RULE_socialist_support_socialist_BAY = {
 }
 RULE_socialist_support_socialist_reverse_BAY = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -124,9 +116,7 @@ RULE_socialist_support_socialist_reverse_BAY = {
 
 RULE_socialist_support_socialist_AUS = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -154,9 +144,7 @@ RULE_socialist_support_socialist_AUS = {
 }
 RULE_socialist_support_socialist_reverse_AUS = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = libertarian_socialism
@@ -185,9 +173,7 @@ RULE_socialist_support_socialist_reverse_AUS = {
 }
 RULE_anti_communism_russian_civil_war = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -214,9 +200,7 @@ RULE_anti_communism_russian_civil_war = {
 }
 RULE_anti_communism_russian_civil_war_defeat = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -244,9 +228,7 @@ RULE_anti_communism_russian_civil_war_defeat = {
 }
 RULE_bolshevik_support_civil_war = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = social_democracy
 		  has_government = classical_marxism
@@ -271,9 +253,7 @@ RULE_bolshevik_support_civil_war = {
 }
 RULE_italian_civil_war_ILF_support = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -302,9 +282,7 @@ RULE_italian_civil_war_ILF_support = {
 }
 RULE_italian_civil_war_NLC_support = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = classical_marxism
 		  has_government = communism
@@ -331,9 +309,7 @@ RULE_italian_civil_war_NLC_support = {
 }
 RULE_italian_civil_war_ITA_support = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = fascism
 		  has_government = ultra_nationalism
@@ -359,9 +335,7 @@ RULE_italian_civil_war_ITA_support = {
 }
 RULE_anti_communism_yugoslavia = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = democratic
 		  has_government = neutrality
@@ -388,9 +362,7 @@ RULE_anti_communism_yugoslavia = {
 }
 RULE_support_communism_yugoslavia = {
     enable = {
-        random_owned_state = {
-        is_on_continent = europe
-        }
+        is_major = yes
        OR = {
           has_government = social_democracy
 		  has_government = classical_marxism

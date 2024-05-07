@@ -4,7 +4,7 @@
 	template_counter = 68
 	is_locked = yes
 	force_allow_recruiting = yes
-	division_cap = 12 
+	division_cap = 32
 
 	regiments = { 
 		militia = { x = 0 y = 0 }

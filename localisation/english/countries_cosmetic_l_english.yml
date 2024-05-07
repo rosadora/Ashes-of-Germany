@@ -1658,6 +1658,9 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  CZE_federalized_DEF:0 "The United States of Bohemiac"
  CZE_federalized_ADJ:0 "Bohemian"
 
+ CZE_the_hussite_state_fascism:0 "The Hussite State"
+ CZE_the_hussite_state_ultra_nationalism:0 "The Hussite State"
+
  CRO_YUG:0 "Yugoslavia"
  CRO_YUG_classical_marxism:0 "Socialist Federal Republic of Yugoslavia"
  CRO_YUG_communism:0 "Socialist Federal Republic of Yugoslavia"

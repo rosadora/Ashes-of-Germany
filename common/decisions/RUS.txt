@@ -3045,7 +3045,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3081,7 +3081,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3117,7 +3117,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3153,7 +3153,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3189,7 +3189,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3225,7 +3225,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3261,7 +3261,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3297,7 +3297,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3333,7 +3333,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 
@@ -3369,7 +3369,7 @@ USR_civil_war = {
 			}
 			add_equipment_to_stockpile = {
            type = infantry_equipment
-           amount = 2500
+           amount = 4000
          }
         }
 

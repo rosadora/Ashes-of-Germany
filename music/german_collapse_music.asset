@@ -77,3 +77,15 @@ music = {
 	volume = 1.3
 }
 
+music = {
+	name = "internationale_orchestral_arrangement"
+	file = "internationale_orchestral_arrangement.ogg"
+	volume = 1.3
+}
+
+music = {
+	name = "mozart_lacrimosa"
+	file = "mozart_lacrimosa.ogg"
+	volume = 1
+}
+

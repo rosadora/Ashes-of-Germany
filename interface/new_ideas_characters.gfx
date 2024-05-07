@@ -1265,4 +1265,63 @@ spriteTypes = {
 		texturefile = "gfx/leaders/SLO/Igor_Hrušovský.dds"
 	}
 
+	spriteType = {
+		name = "GFX_Jan_Golian"
+		texturefile = "gfx/leaders/SLO/Jan_Golian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Jan_Golian_small"
+		texturefile = "gfx/leaders/SLO/Jan_Golian_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Rudolf_Viest"
+		texturefile = "gfx/leaders/SLO/Rudolf_Viest.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Rudolf_Viest_small"
+		texturefile = "gfx/leaders/SLO/Rudolf_Viest_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Ferdinand_Catlos"
+		texturefile = "gfx/leaders/SLO/Ferdinand_Catlos.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Ferdinand_Catlos_small"
+		texturefile = "gfx/leaders/SLO/Ferdinand_Catlos_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josef_Snejdarek"
+		texturefile = "gfx/leaders/SLO/Josef_Snejdarek.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josef_Snejdarek_small"
+		texturefile = "gfx/leaders/SLO/Josef_Snejdarek_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Frantisek_Sadek"
+		texturefile = "gfx/leaders/SLO/Frantisek_Sadek.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Frantisek_Sadek_small"
+		texturefile = "gfx/leaders/SLO/Frantisek_Sadek_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Fritz_Gejza"
+		texturefile = "gfx/leaders/SLO/Fritz_Gejza.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Fritz_Gejza_small"
+		texturefile = "gfx/leaders/SLO/Fritz_Gejza_small.dds"
+	}
 }

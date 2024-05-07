@@ -1,4 +1,52 @@
 on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			SLO = {
+				controls_state = 664
+			}
+		}
+		set_province_name = { id = 6573 name = "Košice" }
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			HUN = {
+				controls_state = 664
+			}
+		}
+		set_province_name = { id = 6573 name = "Kassa" }
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			SLO = {
+				controls_state = 73
+			}
+		}
+		set_province_name = { id = 6573 name = "Mukacevo" }
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			HUN = {
+				controls_state = 73
+			}
+		}
+		set_province_name = { id = 6573 name = "Munkács" }
+		}
+		}
+	}
 	on_startup = {
   effect = {
 	every_possible_country = {

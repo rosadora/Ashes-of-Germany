@@ -858,6 +858,10 @@ CZE_1940_legislative_elections = {
 
 		visible = {
           has_country_flag = CZE_election_campaign_end
+		  NOT = {
+			has_country_flag = CZE_centrist_coalition
+			has_country_flag = CZE_leftist_coalition
+		  }
 		}
 
 		complete_effect = {
@@ -895,6 +899,10 @@ CZE_1940_legislative_elections = {
 
 		visible = {
           has_country_flag = CZE_election_campaign_end
+		  NOT = {
+			has_country_flag = CZE_leftist_coalition
+			has_country_flag = CZE_right_coalition
+		  }
 		}
 
 		complete_effect = {
@@ -935,6 +943,10 @@ CZE_1940_legislative_elections = {
 
 		visible = {
           has_country_flag = CZE_election_campaign_end
+		  NOT = {
+			has_country_flag = CZE_centrist_coalition
+			has_country_flag = CZE_right_coalition
+		  }
 		}
 
 		complete_effect = {
@@ -1993,6 +2005,7 @@ CZE_time_of_choice = {
           has_completed_focus = CZE_the_time_of_choice
 		  has_completed_focus = CZE_break_our_isolation
 			}
+			is_in_faction = no
 		}
 
 		modifier = {
@@ -2045,6 +2058,7 @@ CZE_time_of_choice = {
           has_completed_focus = CZE_the_time_of_choice
 		  has_completed_focus = CZE_break_our_isolation
 			}
+			is_in_faction = no
 		}
 
 		modifier = {
@@ -2097,6 +2111,7 @@ CZE_time_of_choice = {
           has_completed_focus = CZE_the_time_of_choice
 		  has_completed_focus = CZE_break_our_isolation
 			}
+			is_in_faction = no
 		}
 
 		modifier = {

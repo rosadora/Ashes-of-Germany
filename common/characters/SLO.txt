@@ -83,6 +83,83 @@ characters={
 		}
 	}
 
+	SLO_Jan_Golian={
+		name="Ján Golian"
+		portraits={
+			army={
+				large="gfx/leaders/SLO/Jan_Golian.dds"
+			}
+			army={
+				small="gfx/leaders/SLO/Jan_Golian_small.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SLO_Jan_Golian
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+			}
+			cost = 100.000
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		field_marshal={
+			traits={ inflexible_strategist career_officer }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
+	SLO_Rudolf_Viest={
+		name="Rudolf Viest"
+		portraits={
+			army={
+				large="gfx/leaders/SLO/Rudolf_Viest.dds"
+			}
+			army={
+				small="gfx/leaders/SLO/Rudolf_Viest_small.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SLO_Rudolf_Viest
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+			}
+			cost = 100.000
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		corps_commander ={
+			traits={ inflexible_strategist career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+
 	SLO_jaroslav_kratochvil={
 		advisor={
 			slot = political_advisor
@@ -176,11 +253,22 @@ characters={
 					factor  = 1.000
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		corps_commander ={
+			traits={ inflexible_strategist career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
 		name="Jozef Snejdarek"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_1"
+				large="gfx/leaders/SLO/Josef_Snejdarek.dds"
+			}
+			army={
+				small="gfx/leaders/SLO/Josef_Snejdarek_small.dds"
 			}
 		}
 	}
@@ -199,11 +287,22 @@ characters={
 					factor  = 1.000
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		corps_commander ={
+			traits={ career_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=0
+		}
 		name="Fritz Gejza"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_3"
+				large="gfx/leaders/SLO/Fritz_Gejza.dds"
+			}
+			army={
+				small="gfx/leaders/SLO/Fritz_Gejza_small.dds"
 			}
 		}
 	}
@@ -222,11 +321,22 @@ characters={
 					factor  = 1.000
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		corps_commander ={
+			traits= {career_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=0
+		}
 		name="Frantisek Sadek"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				large="gfx/leaders/SLO/Frantisek_Sadek.dds"
+			}
+			army={
+				small="gfx/leaders/SLO/Frantisek_Sadek_small.dds"
 			}
 		}
 	}
@@ -457,11 +567,23 @@ characters={
 					factor  = 1.000
 				}
 		}
+		corps_commander ={
+			traits={ inflexible_strategist career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=0
+		}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Ferdinand Catlos"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				large="gfx/leaders/SLO/Ferdinand_Catlos.dds"
+			}
+			army={
+				small="gfx/leaders/SLO/Ferdinand_Catlos_small.dds"
 			}
 		}
 	}

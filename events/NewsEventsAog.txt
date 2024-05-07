@@ -1278,7 +1278,7 @@ news_event = { #Yugoslavian Civil War
 	id = news.3070
 	title = news.3070.t
 	desc = news.3070.d
-	picture = GFX_news_event_009
+	picture = GFX_news_event_spr_spanish_civil_war3
 	
 	major = yes
 	
@@ -1292,5 +1292,25 @@ news_event = { #Yugoslavian Civil War
 	
 	option = {
 		name = news.3070.a
+	}
+}
+news_event = { #Sudety Oppression
+	id = news.3071
+	title = news.3071.t
+	desc = news.3071.d
+	picture = GFX_news_event_spr_spanish_civil_war3
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = mozart_lacrimosa
+		}
+	}
+	
+	option = {
+		name = news.3071.a
 	}
 }

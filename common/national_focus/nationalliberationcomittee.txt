@@ -138,7 +138,6 @@
 			factor = 1
 		}
 		available = {
-			has_full_control_of_state = 161
 		}
 		bypass = {
 		}
@@ -146,44 +145,18 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			161 = {
-				add_building_construction = {
-                   type = bunker
-                   level = 3
-                   instant_build = yes
-                   province = 9752
-                }
-				add_building_construction = {
-                   type = bunker
-                   level = 3
-                   instant_build = yes
-                   province = 6606
-                }
-				add_building_construction = {
-                   type = bunker
-                   level = 3
-                   instant_build = yes
-                   province = 6793
-                }
-				add_building_construction = {
-                   type = bunker
-                   level = 3
-                   instant_build = yes
-                   province = 3773
-                }
-				add_building_construction = {
-                   type = bunker
-                   level = 3
-                   instant_build = yes
-                   province = 6790
-                }
-			}
-			158 = {
-				add_building_construction = {
-                   type = bunker
-                   level = 3
-                   instant_build = yes
-                   province = 6788
+			if = {
+				limit = { controls_state = 161 }
+				161 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+					}
 				}
 			}
 		}
