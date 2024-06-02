@@ -1726,5 +1726,24 @@ ideas = {
 				industrial_capacity_factory = -1
 			}
 		}
+		call_to_masses = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = call_to_the_masses
+
+			removal_cost = -1
+
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				weekly_manpower = 1000
+			}
+		}
 	}
 }

@@ -1,4 +1,6 @@
 ﻿l_english:
+ PRS_german_quality:0 "German Quality"
+ PRS_german_quality_desc:0 "This is Prussia"
  the_great_chairman:0 "The Great Chairman"
  war_for_unification:0 "Unification War"
  no_need_to_call_on_the_french:0 "No Need to Call on the French"
@@ -2720,6 +2722,8 @@
  USR_secure_the_bosphorus_desc:0 "We must secure the entrance to the Black Sea."
  USR_revenge_on_tsushima:0 "Revenge of Tsushima"
  USR_revenge_on_tsushima_desc:0 "We will take our revenge on Tsushima defeat."
+ USR_a_call_to_masses:0 "A Call to Masses"
+ USR_a_call_to_masses_desc:0 "The Revolution is now. We must call on all revolutionaries and change-loving citizens to rise up."
  USR_return_in_petrograd:0 "Return in Petrograd"
  USR_return_in_petrograd_desc:0 "Petrograd, the heart of the first Russian revolution, and it is also the second. From a simple province, we will overthrow the Tsar!"
  USR_recover_the_weapons_of_the_great_war:0 "The Weapons of the Great War"

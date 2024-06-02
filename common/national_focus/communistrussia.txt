@@ -46,6 +46,37 @@
 		}
 	}
 	focus = {
+		id = USR_a_call_to_masses
+		icon = GFX_goal_propaganda_poster
+		x = 0
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = call_to_masses 
+				days = 200
+			}
+		}
+	}
+	focus = {
 		id = USR_recover_the_weapons_of_the_great_war
 		icon = GFX_goal_panzerwaffe
 		x = -1
@@ -383,8 +414,8 @@
 	focus = {
 		id = USR_the_first_congress
 		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 0
-		y = 6
+		x = 20
+		y = 0
 
 		cost = 9
 
@@ -407,10 +438,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = USR_return_in_petrograd
-		prerequisite = {focus = USR_ties_with_rosa_luxemburg}
-		prerequisite = {focus = USR_revive_the_revolutionary_flame}
-		prerequisite = {focus = USR_rifles_of_moscow}
-		prerequisite = {focus = USR_arsenal_of_the_revolution}
 
 		completion_reward = {
           country_event = rus.14
@@ -423,7 +450,7 @@
 		id = USR_the_great_clash
 		icon = GFX_focus_SOV_behead_the_snake
 		x = -8
-		y = 7
+		y = 1
 
 		cost = 8
 
@@ -443,7 +470,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_first_congress}
 
 		completion_reward = {
@@ -454,7 +481,7 @@
 		id = USR_the_communist_party
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		x = -12
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -473,7 +500,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		mutually_exclusive = {focus = USR_an_alternative_way}
 		prerequisite = {focus = USR_the_great_clash}
 
@@ -488,7 +515,7 @@
 		id = USR_the_left
 		icon = GFX_focus_fra_loyalty_trotzky
 		x = -14
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -507,7 +534,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		mutually_exclusive = {focus = USR_the_right}
 		prerequisite = {focus = USR_the_communist_party}
 
@@ -519,7 +546,7 @@
 		id = USR_crackdown_on_counter_revolutionaries
 		icon = GFX_focus_SOV_the_last_purge
 		x = -15
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -538,7 +565,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_left}
 
 		completion_reward = {
@@ -549,7 +576,7 @@
 		id = USR_power_to_the_soviets
 		icon = GFX_focus_generic_treaty
 		x = -13
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -568,7 +595,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_left}
 
 		completion_reward = {
@@ -580,7 +607,7 @@
 		id = USR_urbanization
 		icon = GFX_goal_generic_soviet_construction
 		x = -17
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -599,7 +626,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_left}
 
 		completion_reward = {
@@ -610,7 +637,7 @@
 		id = USR_the_right
 		icon = GFX_focus_SOV_bukharinists
 		x = -10
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -629,7 +656,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		mutually_exclusive = {focus = USR_the_left}
 		prerequisite = {focus = USR_the_communist_party}
 
@@ -641,7 +668,7 @@
 		id = USR_amnesty_for_kulaks
 		icon = GFX_goal_generic_national_unity
 		x = -11
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -660,7 +687,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_right}
 
 		completion_reward = {
@@ -673,7 +700,7 @@
 		id = USR_increase_cereal_production
 		icon = GFX_focus_ITA_grande_rivolta_rurale
 		x = -9
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -692,7 +719,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_right}
 
 		completion_reward = {
@@ -703,7 +730,7 @@
 		id = USR_socialist_market_economy
 		icon = GFX_focus_por_workers_of_iberia
 		x = -7
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -722,7 +749,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_right}
 
 		completion_reward = {
@@ -733,7 +760,7 @@
 		id = USR_an_alternative_way
 		icon = GFX_goal_generic_neutrality_focus
 		x = -5
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -752,7 +779,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		mutually_exclusive = {focus = USR_the_communist_party}
 		prerequisite = {focus = USR_the_great_clash}
 
@@ -764,7 +791,7 @@
 		id = USR_march_on_moscow
 		icon = GFX_focus_generic_little_entente
 		x = -5
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -784,7 +811,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_an_alternative_way}
 
 		completion_reward = {
@@ -798,7 +825,7 @@
 		id = USR_socialist_union
 		icon = GFX_focus_spr_unify_the_london_bureau
 		x = -4
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -817,7 +844,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_march_on_moscow}
 
 		completion_reward = {
@@ -828,7 +855,7 @@
 		id = USR_purge_the_right_wing_of_the_party
 		icon = GFX_focus_generic_court
 		x = -6
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -847,7 +874,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_march_on_moscow}
 
 		completion_reward = {
@@ -859,7 +886,7 @@
 		id = USR_the_true_social_democracy
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = -5
-		y = 12
+		y = 6
 
 		cost = 8
 
@@ -878,7 +905,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_socialist_union}
 		prerequisite = {focus = USR_purge_the_right_wing_of_the_party}
 
@@ -890,7 +917,7 @@
 		id = USR_open_up_to_the_world
 		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		x = 18
-		y = 7
+		y = 1
 
 		cost = 8
 
@@ -909,7 +936,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_first_congress}
 
 		completion_reward = {
@@ -920,7 +947,7 @@
 		id = USR_no_time_for_peace
 		icon = GFX_focus_spr_crush_the_revolution
 		x = 14
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -940,7 +967,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_open_up_to_the_world}
 
 		completion_reward = {
@@ -954,7 +981,7 @@
 		id = USR_surrounded_by_ennemies
 		icon = GFX_focus_ITA_comandante_diavolo
 		x = 18
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -973,7 +1000,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_open_up_to_the_world}
 
 		completion_reward = {
@@ -984,7 +1011,7 @@
 		id = USR_arsenal_of_russia
 		icon = GFX_focus_generic_aircraft_production
 		x = 17
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -1006,7 +1033,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_surrounded_by_ennemies}
 
 		completion_reward = {
@@ -1040,7 +1067,7 @@
 		id = USR_a_pact_with_rosa_luxemburg
 		icon = GFX_goal_generic_alliance
 		x = 19
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -1059,7 +1086,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_surrounded_by_ennemies}
 
 		completion_reward = {
@@ -1073,7 +1100,7 @@
 		id = USR_forward
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		x = 18
-		y = 10
+		y = 4
 
 		cost = 7
 
@@ -1092,7 +1119,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_arsenal_of_russia}
 		prerequisite = {focus = USR_a_pact_with_rosa_luxemburg}
 
@@ -1152,7 +1179,7 @@
 		id = USR_proclaim_the_ussr
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
 		x = 18
-		y = 11
+		y = 5
 
 		cost = 7
 
@@ -1171,7 +1198,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_forward}
 
 		completion_reward = {
@@ -1185,7 +1212,7 @@
 		id = USR_revenge_on_finland
 		icon = GFX_focus_generic_attack_finland
 		x = 16
-		y = 12
+		y = 6
 
 		cost = 7
 
@@ -1206,7 +1233,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_proclaim_the_ussr}
 
 		completion_reward = {
@@ -1221,7 +1248,7 @@
 		id = USR_secure_scandinavia
 		icon = GFX_focus_generic_scandinavia_flags
 		x = 15
-		y = 13
+		y = 7
 
 		cost = 7
 
@@ -1248,7 +1275,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_revenge_on_finland}
 
 		completion_reward = {
@@ -1271,7 +1298,7 @@
 		id = USR_strike_south
 		icon = GFX_focus_generic_attack_iran
 		x = 20
-		y = 12
+		y = 6
 
 		cost = 7
 
@@ -1295,7 +1322,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_proclaim_the_ussr}
 
 		completion_reward = {
@@ -1314,7 +1341,7 @@
 		id = USR_secure_the_bosphorus
 		icon = GFX_focus_generic_black_sea_focus
 		x = 21
-		y = 13
+		y = 7
 
 		cost = 7
 
@@ -1335,7 +1362,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_strike_south}
 
 		completion_reward = {
@@ -1350,7 +1377,7 @@
 		id = USR_secure_the_koenigsberg_minsk_railway
 		icon = GFX_focus_POL_warsaw_main_station
 		x = 18
-		y = 12
+		y = 6
 
 		cost = 7
 
@@ -1374,7 +1401,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_proclaim_the_ussr}
 
 		completion_reward = {
@@ -1393,7 +1420,7 @@
 		id = USR_revenge_on_tsushima
 		icon = GFX_focus_attack_japan
 		x = 18
-		y = 14
+		y = 8
 
 		cost = 7
 
@@ -1414,7 +1441,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_secure_the_koenigsberg_minsk_railway}
 
 		completion_reward = {
@@ -1429,7 +1456,7 @@
 		id = USR_secure_the_baltics
 		icon = GFX_focus_generic_forest_brothers
 		x = 17
-		y = 13
+		y = 7
 
 		cost = 7
 
@@ -1453,7 +1480,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_secure_the_koenigsberg_minsk_railway}
 
 		completion_reward = {
@@ -1472,7 +1499,7 @@
 		id = USR_strike_romania
 		icon = GFX_focus_generic_attack_romania
 		x = 19
-		y = 13
+		y = 7
 
 		cost = 7
 
@@ -1493,7 +1520,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_secure_the_koenigsberg_minsk_railway}
 
 		completion_reward = {
@@ -1508,7 +1535,7 @@
 		id = USR_the_red_army
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		x = 8
-		y = 7
+		y = 1
 
 		cost = 8
 
@@ -1527,7 +1554,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_first_congress}
 
 		completion_reward = {
@@ -1538,7 +1565,7 @@
 		id = USR_an_era_of_resistance
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		x = 5
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -1557,7 +1584,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		mutually_exclusive = {focus = USR_professionalize_the_red_army}
 		prerequisite = {focus = USR_the_red_army}
 
@@ -1572,7 +1599,7 @@
 		id = USR_stir_the_flame
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		x = 5
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -1591,7 +1618,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_an_era_of_resistance}
 
 		completion_reward = {
@@ -1605,7 +1632,7 @@
 		id = USR_improve_trainings
 		icon = GFX_focus_generic_military_mission
 		x = 5
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -1624,7 +1651,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_stir_the_flame}
 
 		completion_reward = {
@@ -1638,7 +1665,7 @@
 		id = USR_kick_them_out
 		icon = GFX_focus_ITA_peasants_rise
 		x = 5
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -1657,7 +1684,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_improve_trainings}
 
 		completion_reward = {
@@ -1671,7 +1698,7 @@
 		id = USR_improve_our_tactics
 		icon = GFX_goal_generic_cavalry
 		x = 8
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -1690,7 +1717,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_professionalize_the_red_army focus = USR_an_era_of_resistance}
 
 		completion_reward = {
@@ -1705,7 +1732,7 @@
 		id = USR_improve_our_firepower
 		icon = GFX_goal_generic_army_artillery2
 		x = 8
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -1724,7 +1751,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_improve_our_tactics}
 
 		completion_reward = {
@@ -1739,7 +1766,7 @@
 		id = USR_t_34
 		icon = GFX_goal_generic_army_tanks
 		x = 8
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -1758,7 +1785,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_improve_our_firepower}
 
 		completion_reward = {
@@ -1773,7 +1800,7 @@
 		id = USR_improve_our_knowledge
 		icon = GFX_focus_research2
 		x = 8
-		y = 12
+		y = 6
 
 		cost = 8
 
@@ -1792,7 +1819,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_t_34}
 		prerequisite = {focus = USR_kick_them_out focus = USR_elite_corps}
 
@@ -1804,7 +1831,7 @@
 		id = USR_professionalize_the_red_army
 		icon = GFX_focus_generic_combined_arms
 		x = 11
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -1823,7 +1850,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		mutually_exclusive = {focus = USR_an_era_of_resistance}
 		prerequisite = {focus = USR_the_red_army}
 
@@ -1838,7 +1865,7 @@
 		id = USR_westernize_the_army
 		icon = GFX_goal_rhineland
 		x = 11
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -1857,7 +1884,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_professionalize_the_red_army}
 
 		completion_reward = {
@@ -1871,7 +1898,7 @@
 		id = USR_reduce_conscription
 		icon = GFX_focus_generic_manpower
 		x = 11
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -1890,7 +1917,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_westernize_the_army}
 
 		completion_reward = {
@@ -1904,7 +1931,7 @@
 		id = USR_elite_corps
 		icon = GFX_goal_generic_major_war
 		x = 11
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -1923,7 +1950,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_reduce_conscription}
 
 		completion_reward = {
@@ -1937,7 +1964,7 @@
 		id = USR_rapid_industrialization
 		icon = GFX_focus_generic_tank_air_support
 		x = 0
-		y = 7
+		y = 1
 
 		cost = 8
 
@@ -1956,7 +1983,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_the_first_congress}
 
 		completion_reward = {
@@ -1970,7 +1997,7 @@
 		id = USR_moscow_izhevsk
 		icon = GFX_goal_generic_construct_infrastructure
 		x = -2
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -1989,7 +2016,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_rapid_industrialization}
 
 		completion_reward = {
@@ -2007,7 +2034,7 @@
 		id = USR_modernize_the_trans_siberian
 		icon = GFX_focus_SOV_the_road_of_life
 		x = -3
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -2026,7 +2053,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_moscow_izhevsk}
 
 		completion_reward = {
@@ -2044,7 +2071,7 @@
 		id = USR_connect_the_far_east
 		icon = GFX_goal_reichsautobahn
 		x = -2
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -2070,7 +2097,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_modernize_the_trans_siberian}
 
 		completion_reward = {
@@ -2088,7 +2115,7 @@
 		id = USR_increase_the_logistics
 		icon = GFX_focus_SOV_breadbasket_of_the_union
 		x = 2
-		y = 8
+		y = 2
 
 		cost = 15
 
@@ -2107,7 +2134,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_rapid_industrialization}
 
 		completion_reward = {
@@ -2118,7 +2145,7 @@
 		id = USR_collective_farms
 		icon = GFX_focus_prc_agrarian_socialism
 		x = 0
-		y = 8
+		y = 2
 
 		cost = 8
 
@@ -2137,7 +2164,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_rapid_industrialization}
 
 		completion_reward = {
@@ -2152,7 +2179,7 @@
 		id = USR_arrest_the_kulaks
 		icon = GFX_focus_generic_infiltration
 		x = -1
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -2171,7 +2198,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_collective_farms}
 
 		completion_reward = {
@@ -2186,7 +2213,7 @@
 		id = USR_moscow_academy_of_sciences
 		icon = GFX_focus_generic_socialist_science
 		x = 1
-		y = 9
+		y = 3
 
 		cost = 8
 
@@ -2205,7 +2232,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_collective_farms}
 
 		completion_reward = {
@@ -2216,7 +2243,7 @@
 		id = USR_modernized_agriculture
 		icon = GFX_focus_generic_land_reclamation
 		x = 0
-		y = 10
+		y = 4
 
 		cost = 8
 
@@ -2235,7 +2262,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_moscow_academy_of_sciences}
 		prerequisite = {focus = USR_arrest_the_kulaks}
 
@@ -2250,7 +2277,7 @@
 		id = USR_arm_the_revolution
 		icon = GFX_goal_generic_construct_mil_factory
 		x = -1
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -2271,7 +2298,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_modernized_agriculture}
 		completion_reward = {
 			add_stability = -0.075
@@ -2297,7 +2324,7 @@
 		id = USR_industrialize_the_cities
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 1
-		y = 11
+		y = 5
 
 		cost = 8
 
@@ -2320,7 +2347,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_the_first_congress
 		prerequisite = {focus = USR_modernized_agriculture}
 		completion_reward = {
 			add_stability = -0.075

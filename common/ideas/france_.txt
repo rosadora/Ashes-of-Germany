@@ -496,8 +496,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_core_attack_factor = 0.35
-				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
 			}
 		}
 		vive_la_france = {

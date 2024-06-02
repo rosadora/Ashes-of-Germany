@@ -9,18 +9,6 @@ set_rule = {
 
 complete_national_focus = SOV_autonomous_soviet_republics
 
-#You don't want Russian party names? Just remove these lines
-set_party_name = {
-	ideology = communism
-	long_name = SOV_communism_party_russian_long
-	name = SOV_communism_party_russian
-}
-set_party_name = {
-	ideology = fascism
-	long_name = SOV_fascism_party_russian_long
-	name = SOV_fascism_party_russian
-}
-
 if = {
 	limit = {
 		has_dlc = "No Step Back"

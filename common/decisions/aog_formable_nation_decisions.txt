@@ -27,6 +27,7 @@ czechoslovakia_category = {
 				original_tag = CZE
 			}
 			NOT = { has_global_flag = form_czechoslovakia_flag }
+			NOT = {has_completed_focus = CZE_restore_our_greatness}
 		}
 
 		complete_effect = {

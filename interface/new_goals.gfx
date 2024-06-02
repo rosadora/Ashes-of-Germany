@@ -1585,4 +1585,29 @@ spriteTypes = {
 	name = "GFX_goal_hussite_cult"
 	texturefile = "gfx/interface/goals/hussite_cult.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_bohemia_rebirth"
+	texturefile = "gfx/interface/goals/bohemia_rebirth.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_family"
+	texturefile = "gfx/interface/goals/hussite_family.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_demographic_superiority"
+	texturefile = "gfx/interface/goals/demographic_superiority.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_army_focus"
+	texturefile = "gfx/interface/goals/hussite_army_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_triumph"
+	texturefile = "gfx/interface/goals/hussite_triumph.dds"			
+	}
 }

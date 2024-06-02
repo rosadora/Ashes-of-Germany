@@ -22,6 +22,12 @@ CZE_1940_legislative_elections = {
 		priority = 10
 
 		activation = {
+			OR = {
+			NOT = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+			}
 		  date > 1939.12.13
 		}
 

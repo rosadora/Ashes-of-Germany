@@ -335,4 +335,35 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/state_catholicism.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_bohemian_rebirth"
+		texturefile = "gfx/interface/ideas/bohemian_rebirth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hussite_army"
+		texturefile = "gfx/interface/ideas/hussite_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_call_to_the_masses"
+		texturefile = "gfx/interface/ideas/call_to_the_masses.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_revolutionary_mobilization"
+		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_revolutionary_mobilization"
+		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_revolutionary_mobilization"
+		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+	}
+
+
 }

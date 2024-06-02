@@ -140,6 +140,9 @@ country_event = { #The government is overthrown!
 			ideology = ultra_nationalism 
 			popularity = 0.075
 		}
+		remove_ideas = the_shadow_of_nationalism
+		remove_ideas = revanchism_for_unification
+		remove_ideas = bastion_of_democracy
 		news_event = {
 			id = news.3065
 			days = 1
