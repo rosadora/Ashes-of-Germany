@@ -73,7 +73,7 @@ country_event = { #Nationalist Protests in front of the Parliament
 	option = {
 		name = bohemia.3.a
 		ai_chance = {
-			base = 60
+			base = 10
 		}
 		custom_effect_tooltip = CZE_the_bill_passes_focus
 		add_political_power = 50
@@ -97,7 +97,7 @@ country_event = { #Nationalist Protests in front of the Parliament
 	option = {
 		name = bohemia.3.b
 		ai_chance = {
-			base = 40
+			base = 90
 			modifier = {
               factor = 100
 			  has_game_rule = { rule = NATIONAL_SOCIAL_LEFT_LINE option = yes }
