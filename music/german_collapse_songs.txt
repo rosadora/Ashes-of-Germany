@@ -107,3 +107,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "uraliin"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}

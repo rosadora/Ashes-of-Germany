@@ -39,6 +39,36 @@ on_actions = {
 		effect = {
 			if = {
 		limit = {
+			USR = {
+				controls_state = 195
+			}
+		}
+		set_province_name = { id = 3151 name = "Leningrad" }
+		195 = {
+			set_state_name = "Leningrad"
+		}
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			SOV = {
+				controls_state = 195
+			}
+		}
+		set_province_name = { id = 3151 name = "Saint Petersburg" }
+		195 = {
+			set_state_name = "Saint Petersburg"
+		}
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
 			HUN = {
 				controls_state = 73
 			}

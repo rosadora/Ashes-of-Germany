@@ -1314,3 +1314,17 @@ news_event = { #Sudety Oppression
 		name = news.3071.a
 	}
 }
+news_event = { #Uraliin
+	id = news.3072
+	title = news.3072.t
+	desc = news.3072.d
+	picture = GFX_news_event_FIN_continuation_war_murmansk
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3072.a
+	}
+}

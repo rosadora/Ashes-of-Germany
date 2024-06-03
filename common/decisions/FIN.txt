@@ -1,0 +1,50 @@
+#Category only allowed for CZE
+
+FIN_intervention_in_russian_civil_war = {
+
+	FIN_uraalin = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			original_tag = FIN
+		}
+
+		available = {
+			SOV = {
+				has_war_with = USR
+			}
+		}
+
+		visible = {
+			country_exists = FIN
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 0
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+		will_lead_to_war_with = YUG
+
+		modifier = {
+		}
+
+		remove_effect = {
+			play_song = "uraliin"
+			transfer_state = 216
+			transfer_state = 215
+			transfer_state = 213
+			add_state_core = 216
+			add_state_core = 215
+			add_state_core = 213
+			news_event = news.3072
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

@@ -1742,7 +1742,74 @@ ideas = {
 			
 			modifier = {
 				army_core_attack_factor = 0.15
-				weekly_manpower = 1000
+				weekly_manpower = 10000
+			}
+		}
+		women_in_the_workforce = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = revolutionary_mobilization
+
+			removal_cost = -1
+
+			
+			modifier = {
+				monthly_population = -0.15
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.075
+			}
+		}
+		volunteers_in_russian_civil_war = {
+			
+			allowed = {
+			}
+
+			available = {
+				SOV = {
+					has_war_with = USR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_women_in_industry
+
+			removal_cost = -1
+
+			
+			modifier = {
+				send_volunteer_divisions_required = -0.8
+				send_volunteer_size = 3
+			}
+		}
+		politburo = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot_purged
+
+			removal_cost = -1
+
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 	}

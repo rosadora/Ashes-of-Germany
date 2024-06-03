@@ -17,41 +17,12 @@
 
 
 	focus = {
-		id = USR_return_in_petrograd
-		icon = GFX_focus_SOV_restore_cossack_units
-		x = 10
-		y = 0
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_stability = 0.075
-			add_political_power = 100
-		}
-	}
-	focus = {
 		id = USR_a_call_to_masses
 		icon = GFX_goal_propaganda_poster
 		x = 0
 		y = 0
 
-		cost = 1
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -77,12 +48,12 @@
 		}
 	}
 	focus = {
-		id = USR_recover_the_weapons_of_the_great_war
-		icon = GFX_goal_panzerwaffe
-		x = -1
-		y = 1
+		id = USR_plan_next_offensives
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 3
 
-		cost = 2
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -99,8 +70,324 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+
+		completion_reward = {
+			add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = USR_international_aid
+		icon = GFX_focus_ETH_callout_to_the_world
+		x = -4
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_a_call_to_masses}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+           type = infantry_equipment
+           amount = 3000
+	       }
+		   add_equipment_to_stockpile = {
+           type = artillery_equipment
+           amount = 500
+	       }
+		}
+	}
+	focus = {
+		id = USR_foreign_corps
+		icon = GFX_focus_generic_manpower
+		x = -5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_international_aid}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+					has_government = social_democracy
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+					}
+				}
+				add_ideas = volunteers_in_russian_civil_war
+			}
+		}
+	}
+	focus = {
+		id = USR_humanitarian_aid
+		icon = GFX_focus_SOV_the_road_of_life
+		x = -3
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_international_aid}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_stability = 0.05
+			add_equipment_to_stockpile = {
+           type = support_equipment
+           amount = 600
+	       }
+		   add_equipment_to_stockpile = {
+           type = motorized_equipment
+           amount = 800
+	       }
+		}
+	}
+	focus = {
+		id = USR_requisition_of_leningrad_industries
+		icon = GFX_goal_industries_under_the_state
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_a_call_to_masses}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_stability = -0.05
+			195 = {
+				add_extra_state_shared_building_slots = 3
+               add_building_construction = {
+              type = arms_factory
+              level = 2
+              instant_build = yes
+             }
+			 add_building_construction = {
+              type = arms_factory
+              level = 1
+              instant_build = yes
+             }
+			}
+		}
+	}
+	focus = {
+		id = USR_women_in_the_workforce
+		icon = GFX_goal_revolutionary_mobilization
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_requisition_of_leningrad_industries}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_ideas = women_in_the_workforce
+		}
+	}
+	focus = {
+		id = USR_return_in_petrograd
+		icon = GFX_focus_SOV_restore_cossack_units
+		x = 4
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_a_call_to_masses}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = USR_reform_the_provisional_government
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 5
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {focus = USR_return_in_petrograd}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				popularity = -0.15
+				ideology = social_democracy
+			}
+			add_ideas = politburo
+		}
+	}
+	focus = {
+		id = USR_suppress_white_elements
+		icon = GFX_focus_SOV_the_last_purge
+		x = 3
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_return_in_petrograd}
+		relative_position_id = USR_a_call_to_masses
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				popularity = -0.15
+				ideology = ultra_nationalism
+			}
+		}
+	}
+	focus = {
+		id = USR_recover_the_weapons_of_the_great_war
+		icon = GFX_goal_panzerwaffe
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_plan_next_offensives
+		prerequisite = {focus = USR_plan_next_offensives}
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -113,10 +400,10 @@
 	focus = {
 		id = USR_raise_revolutionnary_units
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		x = 1
+		x = 2
 		y = 1
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -133,8 +420,8 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
-		prerequisite = {focus = USR_return_in_petrograd}
+		relative_position_id = USR_plan_next_offensives
+		prerequisite = {focus = USR_plan_next_offensives}
 
 		completion_reward = {
 			195 = {
@@ -164,10 +451,10 @@
 	focus = {
 		id = USR_involve_the_community_in_the_war_effort
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 0
+		x = 1
 		y = 2
 
-		cost = 2
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -185,15 +472,28 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
-		prerequisite = {focus = USR_raise_revolutionnary_units}
-		prerequisite = {focus = USR_recover_the_weapons_of_the_great_war}
+		relative_position_id = USR_a_call_to_masses
+		prerequisite = {focus = USR_requisition_of_leningrad_industries}
 
 		completion_reward = {
-			195 = {
+			random_owned_state = {
                add_building_construction = {
               type = arms_factory
-              level = 3
+              level = 1
+              instant_build = yes
+             }
+			}
+			random_owned_state = {
+               add_building_construction = {
+              type = arms_factory
+              level = 1
+              instant_build = yes
+             }
+			}
+			random_owned_state = {
+               add_building_construction = {
+              type = arms_factory
+              level = 1
               instant_build = yes
              }
 			}
@@ -203,16 +503,16 @@
 		id = USR_winter_offensive
 		icon = GFX_goal_generic_major_war
 		x = 0
-		y = 3
+		y = 1
 
-		cost = 2
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			date > 1936.10.20
+			date > 1936.11.20
 		}
 		
 		bypass = {
@@ -223,8 +523,8 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
-		prerequisite = {focus = USR_involve_the_community_in_the_war_effort}
+		prerequisite = {focus = USR_plan_next_offensives}
+		relative_position_id = USR_plan_next_offensives
 
 		completion_reward = {
 			add_timed_idea = {
@@ -237,7 +537,7 @@
 		id = USR_return_in_moscow
 		icon = GFX_focus_SOV_organization_centralization_discipline
 		x = 0
-		y = 4
+		y = 2
 
 		cost = 2
 
@@ -246,7 +546,7 @@
 		}
 
 		available = {
-			controls_state = 219
+			controls_state = 217
 		}
 		
 		bypass = {
@@ -257,7 +557,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_plan_next_offensives
 		prerequisite = {focus = USR_winter_offensive}
 
 		completion_reward = {
@@ -267,45 +567,10 @@
 		}
 	}
 	focus = {
-		id = USR_rifles_of_moscow
-		icon = GFX_focus_generic_license_production
-		x = -1
-		y = 5
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			controls_state = 219
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
-		prerequisite = {focus = USR_return_in_moscow}
-
-		completion_reward = {
-          add_equipment_to_stockpile = {
-           type = infantry_equipment
-           amount = 15000
-           producer = USR
-	       }
-		}
-	}
-	focus = {
 		id = USR_arsenal_of_the_revolution
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-		x = -3
-		y = 5
+		x = -1
+		y = 3
 
 		cost = 4
 
@@ -325,7 +590,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_plan_next_offensives
 		prerequisite = {focus = USR_return_in_moscow}
 
 		completion_reward = {
@@ -340,52 +605,10 @@
 		}
 	}
 	focus = {
-		id = USR_ties_with_rosa_luxemburg
-		icon = GFX_focus_spr_unify_the_london_bureau
-		x = 1
-		y = 5
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
-		prerequisite = {focus = USR_return_in_moscow}
-
-		completion_reward = {
-			BAY = {
-				add_opinion_modifier = {
-             target = USR
-             modifier = huge_increase
-             }
-			}
-			add_opinion_modifier = {
-            target = BAY
-            modifier = huge_increase
-          }
-          BAY = {
-			add_ideas = german_volunteers
-		  }
-		}
-	}
-	focus = {
 		id = USR_revive_the_revolutionary_flame
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		x = 3
-		y = 5
+		x = 1
+		y = 3
 
 		cost = 4
 
@@ -404,17 +627,17 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
+		relative_position_id = USR_plan_next_offensives
 		prerequisite = {focus = USR_return_in_moscow}
 
 		completion_reward = {
-			add_war_support = 0.3
+			add_war_support = 0.1
 		}
 	}
 	focus = {
 		id = USR_the_first_congress
 		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 20
+		x = 22
 		y = 0
 
 		cost = 9
@@ -437,7 +660,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = USR_return_in_petrograd
 
 		completion_reward = {
           country_event = rus.14

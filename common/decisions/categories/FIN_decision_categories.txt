@@ -1,0 +1,17 @@
+#################
+#### CROATIA ####
+#################
+
+FIN_intervention_in_russian_civil_war = {
+
+	icon = GFX_decision_category_FIN_national_defense
+
+	priority = 50
+
+	allowed = {
+		original_tag = FIN
+	}
+
+	visible = {
+	}
+}

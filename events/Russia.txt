@@ -274,6 +274,12 @@ country_event = {
 				idea = revolutionary_furiousness
 				days = 300
 			}
+			inherit_technology = SOV
+		}
+		transfer_units_fraction= {
+	     target = USR
+	     air_ratio = 0.5
+		 navy_ratio = 0.5
 		}
 		add_ideas = second_russian_civil_war
 		load_oob = SOV_civil_war
@@ -324,6 +330,12 @@ country_event = {
 				idea = revolutionary_furiousness
 				days = 300
 			}
+			inherit_technology = SOV
+		}
+		transfer_units_fraction= {
+	     target = USR
+	     air_ratio = 0.5
+		 navy_ratio = 0.5
 		}
 		add_ideas = second_russian_civil_war
 		load_oob = SOV_civil_war

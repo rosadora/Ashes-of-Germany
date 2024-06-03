@@ -92,30 +92,7 @@ if = {
 		basic_depth_charges = 1
 	}
 }
-if = {
-	limit = { has_dlc = "No Step Back" }
-	set_variable = {
-		var = pol_peasant_democracy
-		value = 30
-	}
-	set_variable = {
-		var = pol_peasant_communism
-		value = 30
-	}
-}
 
-if = {
-	limit = {
-		has_dlc = "Poland: United and Ready"
-	}
-	add_ideas = {
-		uncontrolled_exports
-		POL_april_constitution_1
-		POL_looming_peasants_strike
-		POL_sanation_left_opposition_1
-		POL_sanation_right_opposition_1
-	}
-}
 
 
 85 = {
@@ -355,15 +332,6 @@ set_popularities = {
 	fascism = 11
 	communism = 19
 	neutrality = 38
-}
-
-1939.1.1 = {
-	set_popularities = {
-		democratic = 13
-		fascism = 7
-		communism = 2
-		neutrality = 78
-	}
 }
 
 recruit_character = POL_ignacy_moscicki
