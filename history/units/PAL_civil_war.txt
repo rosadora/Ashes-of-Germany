@@ -1,0 +1,154 @@
+﻿division_template = {
+	name = "Holy War Division"		# 'Holy War Division' - Represents local religious tribal levies (militia)
+
+	division_names_group = SAU_INF_01
+	is_locked = yes
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Arab Liberation Division"		# 'Holy War Division' - Represents local religious tribal levies (militia)
+
+	division_names_group = SAU_INF_01
+	is_locked = yes
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Palestinian Police"		# Camel-mounted levies (militia)
+
+	division_names_group = SAU_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	division = {
+		#name = "Holy War Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13382
+		division_template = "Holy War Division"		
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Arab Liberation Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13382
+		division_template = "Arab Liberation Division"	
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		#name = "Holy War Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 133889
+		division_template = "Holy War Division"		
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Arab Liberation Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7107
+		division_template = "Arab Liberation Division"	
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		#name = "Holy War Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1086
+		division_template = "Holy War Division"		
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Arab Liberation Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13375
+		division_template = "Arab Liberation Division"	
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Arab Liberation Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13364
+		division_template = "Arab Liberation Division"	
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Arab Liberation Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13363
+		division_template = "Arab Liberation Division"	
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Arab Liberation Division"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 13384
+		division_template = "Arab Liberation Division"	
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Palestinian Police"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1015
+		division_template = "Palestinian Police"
+		start_equipment_factor = 0.3
+
+	}
+}

@@ -351,18 +351,28 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_revolutionary_mobilization"
-		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+		name = "GFX_idea_balfour_declaration"
+		texturefile = "gfx/interface/ideas/balfour_declaration.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_revolutionary_mobilization"
-		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+		name = "GFX_idea_arab_attitude_negative"
+		texturefile = "gfx/interface/ideas/arab_attitude_negative.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_revolutionary_mobilization"
-		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+		name = "GFX_idea_arab_attitude_positive"
+		texturefile = "gfx/interface/ideas/arab_attitude_positive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_zionist_militias_attitude_negative"
+		texturefile = "gfx/interface/ideas/zionist_militias_attitude_negative.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_zionist_militias_attitude_positive"
+		texturefile = "gfx/interface/ideas/zionist_militias_attitude_positive.dds"
 	}
 
 

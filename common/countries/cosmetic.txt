@@ -3,6 +3,16 @@ MAL_UK = {
     color_ui = rgb { 255 73 121 }
 }
 
+PAL_UK = {
+    color = rgb { 201 56 93 }
+    color_ui = rgb { 255 73 121 }
+}
+
+JOR_UK = {
+    color = rgb { 201 56 93 }
+    color_ui = rgb { 255 73 121 }
+}
+
 FRA_GOV_PRO = {
     color = rgb { 19 43 143 }
     color_ui = rgb { 19 43 143 }

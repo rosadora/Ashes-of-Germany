@@ -1231,3 +1231,17 @@
  women_in_the_workforce_desc:0 "The emancipation of women means emancipation in the home: women must be able to work and be independent. "
  volunteers_in_russian_civil_war:0 "Volunteers in Russian Civil War"
  politburo:0 "Politburo"
+ ### PALESTINE ###
+ balfour_declaration:0 "Balfour Declaration"
+ balfour_declaration_desc:0 "In 1917, the British government decided to create a Jewish national home in Palestine. Since then, several Aliyahs have followed, with a growing Jewish population and Zionist sentiment. The result has been growing discontent among the Arab masses, who see themselves dispossessed of their land and isolated."
+ arab_attitude_uprising:0 "Arab Attitude : §RSeparatist§!"
+ arab_attitude_hostile:0 "Arab Attitude : §RHostile§!"
+ arab_attitude_neutral:0 "Arab Attitude : Neutral"
+ arab_attitude_positive:0 "Arab Attitude : §GHappy§!"
+ arab_attitude_supportive:0 "Arab Attitude : §GSupportive§!"
+
+ zionist_militias_attitude_uprising:0 "Zionist Attitude : §RSeparatist§!"
+ zionist_militias_attitude_hostile:0 "Zionist Attitude : §RHostile§!"
+ zionist_militias_attitude_neutral:0 "Zionist Attitude : Neutral"
+ zionist_militias_attitude_positive:0 "Zionist Attitude : §GHappy§!"
+ zionist_militias_attitude_supportive:0 "Zionist Attitude : §GSupportive§!"

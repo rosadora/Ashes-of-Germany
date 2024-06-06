@@ -46,10 +46,12 @@ on_actions = {
 						original_tag = RAJ
 						original_tag = MAL
 						original_tag = INS
+						original_tag = PAL
 					}
 				}
 				abandon_colony_tag = yes
 			}
+			
 			if = {
 				limit = { 
 					NOT = { 
@@ -209,6 +211,15 @@ on_actions = {
 	#ROOT = nation being puppeted, FROM = overlord
 	on_puppet = {
 		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						original_tag = PAL
+						is_subject_of = ENG
+				    }
+				} 
+				set_cosmetic_tag = PAL_UK
+			}
 			if = {
 				limit = {
 					has_dlc = "Death or Dishonor"

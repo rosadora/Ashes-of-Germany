@@ -1324,4 +1324,134 @@ spriteTypes = {
 		name = "GFX_Fritz_Gejza_small"
 		texturefile = "gfx/leaders/SLO/Fritz_Gejza_small.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Arthur_Grenfell_Wauchope"
+		texturefile = "gfx/leaders/PAL/Arthur_Grenfell_Wauchope.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Arthur_Grenfell_Wauchope_small"
+		texturefile = "gfx/leaders/PAL/Arthur_Grenfell_Wauchope_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Jabra_Nicola"
+		texturefile = "gfx/leaders/PAL/Jabra_Nicola.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Jabra_Nicola_small"
+		texturefile = "gfx/leaders/PAL/Jabra_Nicola_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Husayn_al_Khalidi"
+		texturefile = "gfx/leaders/PAL/Husayn_al_Khalidi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Husayn_al_Khalidi_small"
+		texturefile = "gfx/leaders/PAL/Husayn_al_Khalidi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Raghib_al_Nashashibi"
+		texturefile = "gfx/leaders/PAL/Raghib_al_Nashashibi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Raghib_al_Nashashibi_small"
+		texturefile = "gfx/leaders/PAL/Raghib_al_Nashashibi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Mohammed_Amin_al_Husseini"
+		texturefile = "gfx/leaders/PAL/Mohammed_Amin_al_Husseini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Mohammed_Amin_al_Husseini_small"
+		texturefile = "gfx/leaders/PAL/Mohammed_Amin_al_Husseini_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Fahmi_al_Abboushi"
+		texturefile = "gfx/leaders/PAL/Fahmi_al_Abboushi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Fahmi_al_Abboushi_small"
+		texturefile = "gfx/leaders/PAL/Fahmi_al_Abboushi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_David_Ben_Gurion"
+		texturefile = "gfx/leaders/ISR/David_Ben_Gurion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_David_Ben_Gurion_small"
+		texturefile = "gfx/leaders/ISR/David_Ben_Gurion_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yitzhak_Tabenkin"
+		texturefile = "gfx/leaders/ISR/Yitzhak_Tabenkin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yitzhak_Tabenkin_small"
+		texturefile = "gfx/leaders/ISR/Yitzhak_Tabenkin_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Pinchas_Rosen"
+		texturefile = "gfx/leaders/ISR/Pinchas_Rosen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Pinchas_Rosen_small"
+		texturefile = "gfx/leaders/ISR/Pinchas_Rosen_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Israel_Rokach"
+		texturefile = "gfx/leaders/ISR/Israel_Rokach.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Israel_Rokach_small"
+		texturefile = "gfx/leaders/ISR/Israel_Rokach_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Menachem_Begin"
+		texturefile = "gfx/leaders/ISR/Menachem_Begin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Menachem_Begin_small"
+		texturefile = "gfx/leaders/ISR/Menachem_Begin_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yehuda_Leib_Maimon"
+		texturefile = "gfx/leaders/ISR/Yehuda_Leib_Maimon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yehuda_Leib_Maimon_small"
+		texturefile = "gfx/leaders/ISR/Yehuda_Leib_Maimon_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zeev_Jabotinsky"
+		texturefile = "gfx/leaders/ISR/Zeev_Jabotinsky.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zeev_Jabotinsky_small"
+		texturefile = "gfx/leaders/ISR/Zeev_Jabotinsky_small.dds"
+	}
 }

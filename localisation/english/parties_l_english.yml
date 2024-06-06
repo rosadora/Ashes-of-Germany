@@ -803,16 +803,6 @@
  EGY_fascism_party:0 "Misr El-Fatah"
  EGY_democratic_party:0 "Liberation Rally"
  EGY_neutrality_party:0 "Royalists"
- PAL_fascism_party:0 "Al-Muqaddas"
- PAL_communism_party:0 "NLL"
- PAL_communism_party_long:0 "National Liberation League"
- PAL_democratic_party:0 "SMC"
- PAL_democratic_party_long:0 "Supreme Muslim Council"
- PAL_neutrality_party:0 "Loyalists"
- ISR_communism_party:0 "Maki"
- ISR_democratic_party:0 "Mapai"
- ISR_fascism_party:0 "Helpam"
- ISR_neutrality_party:0 "Central Council"
  VIN_fascism_party:0 "Vietnamese Restoration League" #or Reformation Society   
  VIN_democratic_party:0 "Can Lao Party" #formed in early 50s
  VIN_communism_party:0 "Communist Party of Vietnam" #Viet Minh was more important in early years

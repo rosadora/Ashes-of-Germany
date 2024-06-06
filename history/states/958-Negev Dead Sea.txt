@@ -1,0 +1,25 @@
+
+state={
+	id=958
+	name="STATE_958"
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = ISR
+		victory_points = {
+			13375 2 
+		}
+	}
+
+	provinces={
+		7176 13373 13374 13375 13376 
+	}
+	manpower=25654
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

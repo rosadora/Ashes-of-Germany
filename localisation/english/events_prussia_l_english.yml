@@ -1117,3 +1117,11 @@
  news.3063.t:0 "Bavaria takes the offensive"
  news.3063.d:0 "Since its birth and emergence as a socialist nation, Bavaria has made no secret of its desire to reunite Germany under the red flag. Now that the Bavarian government has announced its roadmap, all eyes are on Germany, and first and foremost on Württemberg. Bavaria has announced that it will fight to the bitter end in its quest."
  news.3063.a:0 "Ok"
+ ### PALESTINE ###
+ palestine.1.t:0 "Collapse of the Mandate!"
+ palestine.1.d:0 "After weeks of chaos in the streets, with clashes between Zionists and Arab independence fighters, this morning the colonial administration announced its withdrawal in the face of widespread chaos, leaving the state of Israel to be proclaimed, while the Arab High Committee for Palestine announced the proclamation of a Palestinian government in the south and east. The region plunged into civil war."
+ palestine.1.a:0 "Side with Israel"
+ palestine.1.b:0 "Side with Palestine"
+ news.3073.t:0 "Chaos in Palestine"
+ news.3073.d:0 "After years of British control, the Palestine Mandate collapsed into chaos as the administration fled. The United Kingdom justified its withdrawal by citing the self-determination of the Jewish people. The region was engulfed in civil war between Zionists and Palestinians. No one knows what the outcome will be."
+ news.3073.a:0 "Ok"

@@ -1,0 +1,272 @@
+ideas = {
+
+	country = {
+		balfour_declaration = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = balfour_declaration
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 2
+				weekly_manpower = 1000
+				stability_factor = -0.25
+			}
+		}
+		arab_attitude_uprising = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = arab_attitude_negative
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.5
+				resistance_target = 0.4
+				resistance_growth = 0.5
+			}
+		}
+		arab_attitude_hostile = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = arab_attitude_negative
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.4
+				resistance_target = 0.2
+				resistance_growth = 0.35
+			}
+		}
+		arab_attitude_neutral = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = arab_attitude_positive
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		arab_attitude_positive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = arab_attitude_positive
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.075
+				stability_factor = 0.075
+				compliance_growth = 0.002
+			}
+		}
+		arab_attitude_supportive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = arab_attitude_positive
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.15
+				compliance_growth = 0.005
+			}
+		}
+		zionist_militias_attitude_uprising = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = zionist_militias_attitude_negative
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				resistance_target = 0.25
+				conscription = -0.02
+			}
+		}
+		zionist_militias_attitude_hostile = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = zionist_militias_attitude_negative
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				resistance_target = 0.1
+				conscription = -0.01
+			}
+		}
+		zionist_militias_attitude_neutral = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = zionist_militias_attitude_positive
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		zionist_militias_attitude_positive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = zionist_militias_attitude_positive
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.075
+				army_org_factor = 0.05
+				conscription = 0.03
+			}
+		}
+		zionist_militias_attitude_supportive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = zionist_militias_attitude_positive
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.15
+				army_org_factor = 0.075
+				conscription = 0.05
+			}
+		}
+	}
+}

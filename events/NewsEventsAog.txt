@@ -1328,3 +1328,17 @@ news_event = { #Uraliin
 		name = news.3072.a
 	}
 }
+news_event = { #Israeli-Palestinian War
+	id = news.3073
+	title = news.3073.t
+	desc = news.3073.d
+	picture = GFX_news_collapse_of_the_mandate_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3073.a
+	}
+}

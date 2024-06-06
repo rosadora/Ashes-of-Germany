@@ -141,6 +141,7 @@ country_event = { #Italian Civil War Is Over
 		}
 		set_global_flag = italian_civil_war_over
 		remove_ideas = anti_communist_focus_ita
+		mark_focus_tree_layout_dirty = yes
 		delete_unit_template_and_units = {
            division_template = "Camicie Nere"
            disband = yes #will refund equipment and manpower

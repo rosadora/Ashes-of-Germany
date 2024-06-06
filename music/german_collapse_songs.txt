@@ -116,3 +116,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "hava_nagila"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
