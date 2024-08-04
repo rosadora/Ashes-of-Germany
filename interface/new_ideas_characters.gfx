@@ -1454,4 +1454,34 @@ spriteTypes = {
 		name = "GFX_Zeev_Jabotinsky_small"
 		texturefile = "gfx/leaders/ISR/Zeev_Jabotinsky_small.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Abdullah_Bin_Al_Hussein"
+		texturefile = "gfx/leaders/JOR/Abdullah_Bin_Al_Hussein.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Abdullah_Bin_Al_Hussein_small"
+		texturefile = "gfx/leaders/JOR/Abdullah_Bin_Al_Hussein_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Oswald_Mosley"
+		texturefile = "gfx/leaders/ENG/Oswald_Mosley.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Oswald_Mosley_small"
+		texturefile = "gfx/leaders/ENG/Oswald_Mosley_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sylvia_Pankhurst"
+		texturefile = "gfx/leaders/ENG/Sylvia_Pankhurst.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sylvia_Pankhurst_small"
+		texturefile = "gfx/leaders/ENG/Sylvia_Pankhurst_small.dds"
+	}
 }

@@ -125,3 +125,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "raf_march"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

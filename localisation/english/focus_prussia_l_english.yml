@@ -4856,3 +4856,13 @@
  ILF_and_quickness_desc:0 "The modern warfare depends on tanks."
  ILF_a_new_generation_of_scientists:0 "New Generation of Scientists"
  ILF_a_new_generation_of_scientists_desc:0 "A new generation of innovative scientists is starting to take action."
+ ### PALESTINE ###
+ PAL_accept_the_inevitable:0 "Accept the Inevitable"
+ PAL_accept_the_inevitable_desc:0 "We know that the mandate cannot be stabilized, so we're going to prepare for the end of the British presence, and pick a side."
+ PAL_great_arab_revolt_occured:0 "Great Arab Revolt"
+ PAL_palestine_one_and_indivisible:0 "Palestine, One and Undivisible"
+ PAL_palestine_one_and_indivisible_desc:0 "We must do what we can to prevent the collapse of the Mandate and preserve a united Palestine."
+ PAL_mandate_collapse:0 "Mandate Collapse!"
+ PAL_pay_attention:0 "§RIf a faction's support hits rock bottom, the mandate will collapse, watch out!§!"
+ PAL_end_the_aliyah:0 "End the Aliyah"
+ PAL_end_the_aliyah_desc:0 "The Balfour Declaration was a mistake; it led to a multiplication of Zionist colonization. The administration must reverse this declaration as soon as possible."

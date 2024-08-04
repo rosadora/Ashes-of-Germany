@@ -150,10 +150,10 @@ characters={
 		name=ENG_oswald_mosley
 		portraits={
 			civilian={
-				large=GFX_portrait_ENG_oswald_mosley
+				large="GFX_Oswald_Mosley"
 			}
 			army={
-				small="GFX_idea_ENG_oswald_mosley"
+				small="GFX_Oswald_Mosley_small"
 			}
 		}
 		advisor={
@@ -238,6 +238,18 @@ characters={
 			traits={}
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+
+	ENG_Sylvia_Pankhurst={
+		name="Sylvia Pankhurst"
+		portraits={
+			civilian={
+				large=GFX_Sylvia_Pankhurst
+			}
+			army={
+				small="GFX_Sylvia_Pankhurst_small"
+			}
 		}
 
 		country_leader={

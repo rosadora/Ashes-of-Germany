@@ -1610,4 +1610,29 @@ spriteTypes = {
 	name = "GFX_goal_hussite_triumph"
 	texturefile = "gfx/interface/goals/hussite_triumph.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_prepare_the_end_of_the_mandate"
+	texturefile = "gfx/interface/goals/prepare_the_end_of_the_mandate.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_towards_a_binational_state"
+	texturefile = "gfx/interface/goals/towards_a_binational_state.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_end_the_aliyah"
+	texturefile = "gfx/interface/goals/end_the_aliyah.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_army_focus"
+	texturefile = "gfx/interface/goals/hussite_army_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hussite_army_focus"
+	texturefile = "gfx/interface/goals/hussite_army_focus.dds"			
+	}
 }

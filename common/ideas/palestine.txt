@@ -268,5 +268,31 @@ ideas = {
 				conscription = 0.05
 			}
 		}
+		great_arab_revolt = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					has_war_with = ISR
+				}
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+				stability_factor = -0.3
+				political_power_factor = -0.5
+				neutrality_drift = -0.02
+			}
+		}
 	}
 }

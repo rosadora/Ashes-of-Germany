@@ -375,5 +375,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/zionist_militias_attitude_positive.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_overshadowed_by_france"
+		texturefile = "gfx/interface/ideas/overshadowed_by_france.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mosley_ascendancy"
+		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+	}
 
 }

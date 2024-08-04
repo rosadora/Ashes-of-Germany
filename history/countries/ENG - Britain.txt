@@ -168,10 +168,15 @@ if = {
 add_ideas = {
 	stiff_upper_lip
 	george_v
+	overshadowed_by_france
+	ENG_the_war_to_end_all_wars
+	mosley_ascendancy
 }
 	
 
 set_convoys = 800
+
+puppet = EGY
 
 # DIPLOMACY
 if = {
@@ -187,6 +192,10 @@ if = {
 	}
 	set_autonomy = {
 		target = PAL
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = JOR
 		autonomous_state = autonomy_integrated_puppet
 	}
 	set_autonomy = {
@@ -235,12 +244,14 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 set_popularities = {
+	fascism = 6
+	ultra_nationalism = 21
 	neutrality = 2
-	democratic = 46
+	democratic = 20
 	classical_liberalism = 11
 	social_liberalism = 2
-	social_democracy = 36
-	classical_marxism = 2
+	social_democracy = 29
+	classical_marxism = 8
 	communism = 1
 }
 
@@ -260,6 +271,7 @@ add_to_faction = MAL
 #give_guarantee = CZE
 
 # Order matters - here Chamberlain becomes starting leader
+recruit_character = ENG_Sylvia_Pankhurst
 recruit_character = ENG_oswald_mosley
 recruit_character = ENG_stanley_baldwin
 recruit_character = ENG_winston_churchill

@@ -1,5 +1,7 @@
 ﻿capital = 455
 
+oob = JOR_1936
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -17,54 +19,7 @@ set_convoys = 5
 
 set_cosmetic_tag = JOR_UK
 
-1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	set_technology = {
-		tech_support = 1
-		tech_recon = 1
-		support_weapons = 1
-		gw_artillery = 1
-
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-}
-
+recruit_character = JOR_Abdullah_Bin_Al_Hussein
 
 set_politics = {
 	ruling_party = neutrality
@@ -73,10 +28,16 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 25
-	fascism = 20
-	communism = 5
-	neutrality = 50
+	fascism = 14
+	ultra_nationalism = 1
+	neutrality = 43
+	democratic = 12
+	classical_liberalism = 5
+	social_liberalism = 21
+	social_democracy = 3
+	classical_marxism = 0
+	libertarian_socialism = 0
+	communism = 1
 }
 
 create_country_leader = {
@@ -94,16 +55,6 @@ create_country_leader = {
 	desc = ""
 	picture = GFX_portrait_Saeed_Ahmadi
 	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Abdullah bin al-Hussein"
-	desc = ""
-	picture = GFX_portrait_Abdullah_bin_al_Hussein
-	ideology = despotism
 	traits = {
 		#
 	}

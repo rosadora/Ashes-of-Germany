@@ -1,13 +1,7 @@
 ﻿capital = 10
 
-set_autonomy = {
-	target = BLR
-	autonomous_state = autonomy_dominion
-}
-set_autonomy = {
-	target = UKR
-	autonomous_state = autonomy_dominion
-}
+puppet = UKR 
+puppet = BLR
 
 oob = "POL_1936"
 if = {

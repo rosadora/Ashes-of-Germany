@@ -1,0 +1,14 @@
+#################
+#### GERMANY ####
+#################
+PAL_the_colonial_conflict = {
+
+	icon = GFX_decision_category_power_struggle
+
+	allowed = {
+		original_tag = PAL
+	}
+
+	visible = {
+	}
+}
