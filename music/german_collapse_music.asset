@@ -54,8 +54,8 @@ music = {
 }
 
 music = {
-	name = "farwell_of_slavianka_extrac"
-	file = "farwell_of_slavianka_extrac.ogg"
+	name = "farwell_of_slavianka_extract"
+	file = "farwell_of_slavianka_extract.ogg"
 	volume = 1.3
 }
 
