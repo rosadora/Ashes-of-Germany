@@ -1,4 +1,4 @@
-version="1.14.5"
+version="1.15.3"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -6,10 +6,10 @@ tags={
 	"Gameplay"
 	"Ideologies"
 }
-name="Ashes of Germany (1)"
+name="Ashes of Germany"
 replace_path="common/characters"
 replace_path="common/decisions"
 replace_path="common/national_focus"
 replace_path="history/states"
-supported_version="1.14.5"
+supported_version="1.15.3"
 remote_file_id="3153337708"
