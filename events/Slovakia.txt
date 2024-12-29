@@ -258,40 +258,6 @@ country_event = { #Kosice Conference
 		}
 	}
 }
-country_event = { #Kosice Conference
-	id = slovakia.10
-	title = slovakia.10.t
-	desc = slovakia.10.d
-	picture = GFX_report_event_finnish_letter
-
-	is_triggered_only = yes
-
-	option = {
-		name = slovakia.10.a
-		ai_chance = {
-			base = 100
-		}
-		SLO = {
-			country_event = {
-				id = slovakia.12
-				days = 1
-			}
-		}
-	}
-
-	option = {
-		name = slovakia.10.b
-		ai_chance = {
-			base = 20
-		}
-		SLO = {
-			country_event = {
-				id = slovakia.11
-				days = 1
-			}
-		}
-	}
-}
 
 country_event = { #Kosice Conference : Hungary Refuses
 	id = slovakia.11

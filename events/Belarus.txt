@@ -98,21 +98,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = blr.3
-	title = blr.3.t
-	desc = blr.3.d
-	picture = GFX_report_event_generic_sign_treaty2
-
-	is_triggered_only = yes
-
-	option = {
-		name = blr.3.a
-		ai_chance = {
-			base = 100
-		}
-	}
-}
-country_event = {
 	id = blr.4
 	title = blr.4.t
 	desc = blr.4.d

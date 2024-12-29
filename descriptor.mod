@@ -1,4 +1,4 @@
-version="1.14.7"
+version="1.15.3"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -6,11 +6,14 @@ tags={
 	"Gameplay"
 	"Ideologies"
 }
-name="Ashes of Germany (1)"
+name="Ashes of Germany"
+replace_path="events"
+replace_path="common/ai_strategy"
+replace_path="common/ai_strategy_plans"
 replace_path="common/characters"
 replace_path="common/decisions"
 replace_path="common/national_focus"
-replace_path="history"
+replace_path="history/states"
 replace_path="map"
-supported_version="1.14.7"
+supported_version="1.15.3"
 remote_file_id="3153337708"

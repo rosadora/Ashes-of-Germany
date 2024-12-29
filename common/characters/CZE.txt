@@ -789,7 +789,7 @@ characters={
 		}
 		advisor={
 			slot = army_chief
-			idea_token = CZE_maurice_gamelin
+			idea_token = CZE_maurice_gamelin_idea
 			allowed = {
 				original_tag = CZE
 			}
