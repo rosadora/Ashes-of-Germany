@@ -1,0 +1,249 @@
+﻿###########################
+# SYR Events
+###########################
+
+add_namespace = syria
+
+country_event = {
+	id = syria.1
+	title = syria.1.t
+	desc = syria.1.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.1.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		 country_event = {
+			id = syria.2
+			days = 2
+		 }
+		}
+	}
+	option = { 
+		name = syria.1.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+		 country_event = {
+			id = syria.3
+			days = 2
+		 }
+		}
+	}
+}
+country_event = {
+	id = syria.2
+	title = syria.2.t
+	desc = syria.2.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.2.a
+		ai_chance = {
+			factor = 50
+		}
+		end_puppet = SYR
+		hidden_effect = {
+			SYR = {
+		 country_event = {
+			id = syria.4
+			days = 2
+		    }
+			}
+		}
+	}
+	option = { 
+		name = syria.2.b
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			SYR = {
+		 country_event = {
+			id = syria.5
+			days = 2
+		    }
+			}
+		}
+	}
+}
+country_event = {
+	id = syria.3
+	title = syria.3.t
+	desc = syria.3.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.3.a
+		ai_chance = {
+			factor = 100
+		}
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = social_democracy
+			popularity = -0.1
+		}
+		set_country_flag = france_said_no_to_negociations_syr
+	}
+}
+country_event = {
+	id = syria.4
+	title = syria.4.t
+	desc = syria.4.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.4.a
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+country_event = {
+	id = syria.5
+	title = syria.5.t
+	desc = syria.5.d
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.5.a
+		ai_chance = {
+			factor = 50
+		}
+		add_timed_idea = {
+			idea = syrian_reparations
+			days = 365
+		}
+		FRA = {
+			end_puppet = SYR
+			add_timed_idea = {
+			  idea = syrian_reparations_fra
+			  days = 365
+		    }
+			transfer_state = 553
+		}
+		hidden_effect = {
+			FRA = {
+		 country_event = {
+			id = syria.4
+			days = 2
+		    }
+			}
+		}
+	}
+	option = { 
+		name = syria.5.b
+		ai_chance = {
+			factor = 50
+		}
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = social_democracy
+			popularity = -0.1
+		}
+		set_country_flag = france_said_no_to_negociations_syr
+		hidden_effect = {
+			FRA = {
+		 country_event = {
+			id = syria.5
+			days = 2
+		    }
+			}
+		}
+	}
+}
+country_event = {
+	id = syria.6
+	title = syria.6.t
+	desc = syria.6.d
+	picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.6.a
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+	      ruling_party = ultra_nationalism
+        }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = 0.15
+		}
+	}
+	option = { 
+		name = syria.6.b
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+	      ruling_party = neutrality
+        }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+	}
+	option = {
+		name = syria.6.c
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+	      ruling_party = democratic
+        }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = syria.6.e
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+	      ruling_party = classical_marxism
+        }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = classical_marxism
+			popularity = 0.15
+		}
+	}
+}

@@ -396,18 +396,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_mosley_ascendancy"
-		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+		name = "GFX_idea_nationalist_majority"
+		texturefile = "gfx/interface/ideas/nationalist_majority.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_mosley_ascendancy"
-		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+		name = "GFX_idea_national_front_of_syria"
+		texturefile = "gfx/interface/ideas/national_front_of_syria.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_mosley_ascendancy"
-		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+		name = "GFX_idea_centralized_power_syr"
+		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_mosley_ascendancy"

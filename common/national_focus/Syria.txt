@@ -1,0 +1,458 @@
+﻿focus_tree = {
+	id = syrian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = SYR
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = SYR_the_march_towards_independance
+		icon = GFX_goal_march_towards_syrian_ind
+		x = 10
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_accords_vienot
+		icon = GFX_goal_accords_vienot
+		x = -3
+		y = 1
+		prerequisite = {focus = SYR_the_march_towards_independance}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+			FRA = {
+				OR = {
+				has_government = social_democracy
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.075
+			}
+			FRA = {
+				country_event = {
+					id = syria.1
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_independance_through_national_stockpile
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_the_march_towards_independance}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_independance_through_resistance
+		icon = GFX_goal_independance_through_resistance
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_the_march_towards_independance}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = SYR_unite_the_chiefs
+		icon = GFX_goal_unite_the_chief
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_independance_through_resistance}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 40000
+			swap_ideas = {
+				remove_idea = unstable_union
+				add_idea = unstable_union2
+			}
+		}
+	}
+	focus = {
+		id = SYR_raid_french_arms_storages
+		icon = GFX_goal_raids_on_french
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_independance_through_resistance}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = 8000
+             producer = FRA
+            }
+			FRA = {
+				add_war_support = -0.05
+				add_stability = -0.05
+			 add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = -8000
+             producer = FRA
+             }
+			}
+		}
+	}
+	focus = {
+		id = SYR_turn_fear_into_combativeness
+		icon = GFX_goal_national_front_of_syria
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_raid_french_arms_storages focus = SYR_unite_the_chiefs}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = 1925_revolt_legacy
+				add_idea = aljabhat_alwataniat_litahrir_suria
+			}
+		}
+	}
+	focus = {
+		id = SYR_expell_the_settler
+		icon = GFX_goal_expell_the_settler
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_turn_fear_into_combativeness}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+			has_completed_focus = SYR_unite_the_chiefs
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3074
+			unlock_decision_tooltip = SYR_arms_smuggling
+			unlock_decision_tooltip = SYR_expell_the_settler_decision
+			add_manpower = 25000
+			hidden_effect = {
+			FRA = {
+				transfer_state = 553
+				transfer_state = 554
+				transfer_state = 964
+				554 = {
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				}
+				553 = {
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				}
+				end_puppet = SYR
+				SYR = {
+					leave_faction = yes
+				}
+				declare_war_on = {
+                  target = SYR
+                  type = puppet_wargoal_focus
+                }
+			}
+			}
+		}
+	}
+	focus = {
+		id = SYR_a_free_syria
+		icon = GFX_goal_a_free_syria
+		x = -2
+		y = 5
+		prerequisite = {focus = SYR_accords_vienot focus = SYR_expell_the_settler}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+			is_puppet_of = FRA
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			country_event = {
+				id = syria.6
+				days = 2
+			}
+		}
+	}
+	focus = {
+		id = SYR_national_bloc_triumph
+		icon = GFX_focus_SWE_refuge_from_war
+		x = 21
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_nationalism_in_the_plural
+		icon = GFX_focus_generic_red_flags
+		x = 19
+		y = 1
+		prerequisite = {focus = SYR_national_bloc_triumph}
+		mutually_exclusive = {focus = SYR_towards_a_unitary_state}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = work_in_progress_summer
+		}
+	}
+	focus = {
+		id = SYR_towards_a_unitary_state
+		icon = GFX_goal_generic_national_unity
+		x = 21
+		y = 1
+		prerequisite = {focus = SYR_national_bloc_triumph}
+		mutually_exclusive = {focus = SYR_nationalism_in_the_plural}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+	           ruling_party = classical_liberalism
+			}
+			add_popularity = {
+			  ideology = democratic
+			  popularity = -0.1
+		    }
+			add_popularity = {
+			  ideology = classical_liberalism
+			  popularity = 0.1
+		    }
+		}
+	}
+	focus = {
+		id = SYR_local_assemblies_but_a_strong_executive
+		icon = GFX_goal_local_assemblies
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_towards_a_unitary_state}
+		relative_position_id = SYR_towards_a_unitary_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = unstable_union
+				}
+				swap_ideas = {
+					remove_idea = unstable_union
+					add_idea = centralized_executive
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = unstable_union2
+				}
+				swap_ideas = {
+					remove_idea = unstable_union2
+					add_idea = centralized_executive
+				}
+			}
+		}
+	}
+}
