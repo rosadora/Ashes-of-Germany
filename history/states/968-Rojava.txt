@@ -1,22 +1,20 @@
 state={
-	id=680
-	name="STATE_680"
+	id=968
+	name="STATE_968"
 	provinces={
-		2013 3942 7513 10383 12316 12442 
+		901 1549 1578 1606 1634 6883 10882 
 	}
 	history={
 		owner = SYR
-		victory_points = {
-			2013 2 
-		}
 		buildings = {
 			infrastructure = 1
+
 		}
 		add_core_of = SYR
-
+		add_core_of = KUR
 	}
-	manpower=144110
+	manpower=214000
 	buildings_max_level_factor=1.000
 	state_category=pastoral
-	local_supplies=4.000
+	local_supplies=1.000
 }

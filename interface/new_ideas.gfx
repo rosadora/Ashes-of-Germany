@@ -385,4 +385,33 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_unstable_union"
+		texturefile = "gfx/interface/ideas/unstable_union.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_revolt_legacy"
+		texturefile = "gfx/interface/ideas/revolt_legacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mosley_ascendancy"
+		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mosley_ascendancy"
+		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mosley_ascendancy"
+		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mosley_ascendancy"
+		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+	}
+
 }

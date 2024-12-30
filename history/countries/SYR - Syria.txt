@@ -1,5 +1,7 @@
 ﻿capital = 554
 
+oob = SYR_1936
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -128,4 +130,53 @@ create_country_leader = {
 	 traits = {
 	}
 }
+create_country_leader = {
+	name = "Ghazi I"
+	desc = ""
+	picture = "gfx/leaders/SYR/Ghazi_first.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	 traits = {
+	}
+}
+create_country_leader = {
+	name = "Khalid Bakdash"
+	desc = ""
+	picture = "gfx/leaders/SYR/Khalid_Bakdash.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	 traits = {
+	}
+}
+create_country_leader = {
+	name = "Khalid Bakdash"
+	desc = ""
+	picture = "gfx/leaders/SYR/Khalid_Bakdash.dds"
+	expire = "1965.1.1"
+	ideology = classical_marxism_category
+	 traits = {
+	}
+}
+create_country_leader = {
+	name = "Antoun Saadeh"
+	desc = ""
+	picture = "gfx/leaders/SYR/Antoun_Saadeh.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	 traits = {
+	}
+}
+create_country_leader = {
+	name = "Antoun Saadeh"
+	desc = ""
+	picture = "gfx/leaders/SYR/Antoun_Saadeh.dds"
+	expire = "1965.1.1"
+	ideology = ultra_nationalism_category
+	 traits = {
+	}
+}
 
+add_ideas = {
+	unstable_union
+	1925_revolt_legacy
+}
