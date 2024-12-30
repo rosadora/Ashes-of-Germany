@@ -1,4 +1,9 @@
 ﻿capital = 927
+set_autonomy = {
+	target = SYR
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
 
 if = {
 	limit = {
