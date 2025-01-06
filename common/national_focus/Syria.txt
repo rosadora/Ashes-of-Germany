@@ -316,6 +316,542 @@
 		}
 	}
 	focus = {
+		id = SYR_born_from_nothing
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		x = 30
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SYR_focus_on_excavation
+		icon = GFX_focus_generic_resource_extraction
+		x = -2
+		y = 1
+		prerequisite = {focus = SYR_born_from_nothing}
+		mutually_exclusive = {focus = SYR_focus_on_the_real_economy}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = neutrality
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = focus_on_excavation
+		}
+	}
+	focus = {
+		id = SYR_increase_steel_production
+		icon = GFX_focus_generic_steel
+		x = -5
+		y = 2
+		prerequisite = {focus = SYR_focus_on_excavation}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			553 = {
+				controls_or_subject_of = yes
+			}
+			554 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			553 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = steel
+                 amount = 13
+                }
+			}
+			554 = {
+			    add_resource = {
+                 type = steel
+                 amount = 5
+                }
+			}
+		}
+	}
+	focus = {
+		id = SYR_syria_is_a_rich_country
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = -3
+		y = 2
+		prerequisite = {focus = SYR_focus_on_excavation}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = neutrality
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = focus_on_excavation
+				add_idea = focus_on_excavation2
+			}
+		}
+	}
+	focus = {
+		id = SYR_eastern_black_gold
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_syria_is_a_rich_country}
+		relative_position_id = SYR_syria_is_a_rich_country
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			968 = {
+				controls_or_subject_of = yes
+			}
+			680 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 17
+                }
+			}
+			680 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 8
+                }
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_oil_storages
+		icon = GFX_focus_generic_supply_line
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_syria_is_a_rich_country}
+		relative_position_id = SYR_syria_is_a_rich_country
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_oil_paradise
+		icon = GFX_focus_GER_autarky_ambitions
+		x = 2
+		y = 2
+		prerequisite = {focus = SYR_expand_oil_storages}
+		prerequisite = {focus = SYR_eastern_black_gold}
+		relative_position_id = SYR_syria_is_a_rich_country
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			968 = {
+				controls_or_subject_of = yes
+			}
+			680 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 12
+                }
+			}
+			680 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 10
+                }
+			}
+			swap_ideas = {
+				remove_idea = focus_on_excavation2
+				add_idea = focus_on_excavation3
+			}
+		}
+	}
+	focus = {
+		id = SYR_focus_on_the_real_economy
+		icon = GFX_focus_generic_military_industry
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_born_from_nothing}
+		mutually_exclusive = {focus = SYR_focus_on_excavation}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = focus_on_the_real_economy
+		}
+	}
+	focus = {
+		id = SYR_expand_industrial_sector
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_focus_on_the_real_economy}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_tourism_sector
+		icon = GFX_focus_SWE_urbanization
+		x = -1
+		y = 2
+		prerequisite = {focus = SYR_expand_industrial_sector}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_massive_railroad_construction
+		icon = GFX_focus_generic_truck
+		x = 1
+		y = 2
+		prerequisite = {focus = SYR_expand_industrial_sector}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_industrialised_country
+		icon = GFX_focus_GER_wirtschaftswunder
+		x = -1
+		y = 3
+		prerequisite = {focus = SYR_massive_railroad_construction}
+		prerequisite = {focus = SYR_expand_tourism_sector}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = focus_on_the_real_economy
+				add_idea = focus_on_the_real_economy2
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_bare_minimum
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_focus_on_the_real_economy}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+			    add_resource = {
+                 type = oil
+                 amount = 7
+                }
+			}
+			680 = {
+			    add_resource = {
+                 type = oil
+                 amount = 3
+                }
+			}
+			554 = {
+			    add_resource = {
+                 type = steel
+                 amount = 10
+                }
+			}
+			553 = {
+			    add_resource = {
+                 type = aluminium
+                 amount = 3
+                }
+			}
+		}
+	}
+	focus = {
 		id = SYR_national_bloc_triumph
 		icon = GFX_focus_SWE_refuge_from_war
 		x = 21

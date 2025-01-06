@@ -451,5 +451,96 @@ ideas = {
 
 			}
 		}
+		focus_on_excavation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		focus_on_excavation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.25
+				trade_opinion_factor = 0.15
+			}
+		}
+		focus_on_excavation3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.4
+				trade_opinion_factor = 0.3
+			}
+		}
+		focus_on_the_real_economy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_industrial_complex_factor = 0.075
+			}
+		}
+		focus_on_the_real_economy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.25
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.1
+			}
+		}
 	}
 }
