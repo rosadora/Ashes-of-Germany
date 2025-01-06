@@ -43,6 +43,79 @@ ideas = {
 				conscription_factor = -0.075
 			}
 		}
+		high_illiteracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.35
+				stability_factor = -0.1
+			}
+		}
+		a_new_generation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_supremacy_of_technology
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				monthly_population = 0.25
+				stability_factor = -0.15
+			}
+		}
+		a_new_generation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_supremacy_of_technology
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+				monthly_population = 0.75
+				stability_factor = -0.1
+			}
+		}
+		public_school_for_everyone_funds = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_supremacy_of_technology
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
 		centralized_executive = {
 			
 			allowed = {
@@ -62,6 +135,157 @@ ideas = {
 				required_garrison_factor = 0.025
 				resistance_target = 0.2
 				conscription_factor = 0.05
+			}
+		}
+		centralized_executive2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = centralized_power_syr
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.25
+				required_garrison_factor = 0.025
+				resistance_target = 0.2
+				conscription_factor = 0.35
+				conscription = 0.02
+			}
+		}
+		centralized_executive3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = centralized_power_syr
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.25
+				conscription_factor = 0.5
+				conscription = 0.035
+				army_org_factor = 0.075
+			}
+		}
+		harmonic_executive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.15
+				required_garrison_factor = -0.05
+				conscription_factor = 0.15
+				compliance_gain = 0.01
+			}
+		}
+		harmonic_executive2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.25
+				political_power_factor = 0.15
+				required_garrison_factor = -0.05
+				conscription_factor = 0.45
+				compliance_gain = 0.01
+			}
+		}
+		dirigism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = new_economic_policy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.1
+				industrial_capacity_dockyard = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		dirigism2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = new_economic_policy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.1
+				industrial_capacity_dockyard = -0.075
+				industrial_capacity_factory = -0.075
+				line_change_production_efficiency_factor = 0.075
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		dirigism3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = new_economic_policy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				global_building_slots_factor = 0.25
+				industrial_capacity_dockyard = -0.15
+				industrial_capacity_factory = -0.15
+				line_change_production_efficiency_factor = 0.075
+				production_factory_start_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+				min_export = -0.15
 			}
 		}
 		1925_revolt_legacy = {
@@ -159,6 +383,72 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.1
+			}
+		}
+		liberal_agenda_syr = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		liberal_agenda_syr2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = 0.075
+				industrial_capacity_factory = 0.075
+				min_export = 0.1
+				trade_opinion_factor = 0.75
+				research_speed_factor = 0.05
+
+			}
+		}
+		liberal_agenda_syr3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.125
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				min_export = 0.15
+				trade_opinion_factor = 0.75
+				research_speed_factor = 0.1
+
 			}
 		}
 	}

@@ -180,4 +180,5 @@ add_ideas = {
 	unstable_union
 	1925_revolt_legacy
 	nationalist_majority
+	high_illiteracy
 }

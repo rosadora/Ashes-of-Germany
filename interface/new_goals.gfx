@@ -1672,7 +1672,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_unite_the_chief"
-	texturefile = "gfx/interface/goals/unite_the_chief.dds"			
+	name = "GFX_goal_a_new_syria"
+	texturefile = "gfx/interface/goals/a_new_syria.dds"			
 	}
 }
