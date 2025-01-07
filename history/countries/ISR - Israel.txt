@@ -1,0 +1,139 @@
+﻿capital = 454
+ 
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	fuel_silos = 1
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 5
+
+
+set_politics = {
+	ruling_party = social_democracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	fascism = 2
+	ultra_nationalism = 10
+	neutrality = 12
+	democratic = 12
+	classical_liberalism = 5
+	social_liberalism = 4
+	social_democracy = 36
+	classical_marxism = 15
+	libertarian_socialism = 0
+	communism = 4
+}
+
+create_country_leader = {
+	name = "David Ben-Gurion"
+	desc = ""
+	picture = "gfx/leaders/ISR/David_Ben_Gurion.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Israel Rokach"
+	desc = ""
+	picture = "gfx/leaders/ISR/Israel_Rokach.dds"
+	expire = "1965.1.1"
+	ideology = classical_liberalism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Pinchas Rosen"
+	desc = ""
+	picture = "gfx/leaders/ISR/Pinchas_Rosen.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yehuda Leib Maimon"
+	desc = ""
+	picture = "gfx/leaders/ISR/Yehuda_Leib_Maimon.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yehuda Leib Maimon"
+	desc = ""
+	picture = "gfx/leaders/ISR/Yehuda_Leib_Maimon.dds"
+	expire = "1965.1.1"
+	ideology = ultra_nationalism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yitzhak Tabenkin"
+	desc = ""
+	picture = "gfx/leaders/ISR/Yitzhak_Tabenkin.dds"
+	expire = "1965.1.1"
+	ideology = classical_marxism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yitzhak Tabenkin"
+	desc = ""
+	picture = "gfx/leaders/ISR/Yitzhak_Tabenkin.dds"
+	expire = "1965.1.1"
+	ideology = libertarian_socialism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yitzhak Tabenkin"
+	desc = ""
+	picture = "gfx/leaders/ISR/Yitzhak_Tabenkin.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Zeev Jabotinsky"
+	desc = ""
+	picture = "gfx/leaders/ISR/Zeev_Jabotinsky.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Menahem Begin"
+	desc = ""
+	picture = "gfx/leaders/ISR/Menahem_Begin.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	 traits = {
+	}
+}

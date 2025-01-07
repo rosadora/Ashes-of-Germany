@@ -542,5 +542,44 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		syrian_agriculture = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_national_studs
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.2
+			}
+		}
+		syrian_lebanon = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_puppet_of = SYR
+			}
+
+			picture = ARG_war_division
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.25
+				conscription = 0.1
+			}
+		}
 	}
 }

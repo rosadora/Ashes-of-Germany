@@ -1356,3 +1356,23 @@ news_event = { #Syrian Independance War
 		name = news.3074.a
 	}
 }
+news_event = { #Syrian-Israeli War
+	id = news.3075
+	title = news.3075.t
+	desc = news.3075.d
+	picture = GFX_news_collapse_of_the_mandate_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = al_watan_al_akbar
+		}
+	}
+	
+	option = {
+		name = news.3075.a
+	}
+}

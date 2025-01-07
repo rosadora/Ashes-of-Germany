@@ -1675,4 +1675,24 @@ spriteTypes = {
 	name = "GFX_goal_a_new_syria"
 	texturefile = "gfx/interface/goals/a_new_syria.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_free_lebanon"
+	texturefile = "gfx/interface/goals/free_lebanon.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hava_nagila"
+	texturefile = "gfx/interface/goals/hava_nagila.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_a_new_syria"
+	texturefile = "gfx/interface/goals/a_new_syria.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_a_new_syria"
+	texturefile = "gfx/interface/goals/a_new_syria.dds"			
+	}
 }

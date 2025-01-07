@@ -1,0 +1,128 @@
+#Category only allowed for ISR
+
+ISR_raise_militias = {
+
+	ISR_raise_militias_hagana = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            454 = {
+			create_unit = {
+                division = "name = \"Hagana Militia\" division_template = \"Hagana Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            }
+        }
+    }
+    ISR_raise_militias_lehi = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            add_stability = -0.025
+            add_war_support = 0.025
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+            454 = {
+			create_unit = {
+                division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            }
+        }
+    }
+    ISR_raise_militias_irgun = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            add_stability = -0.025
+            add_war_support = 0.025
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+            454 = {
+			create_unit = {
+                division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            }
+        }
+    }
+}

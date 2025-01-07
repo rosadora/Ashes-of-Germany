@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "raf_march.ogg"
+	file = "al_watan_al_akbar.ogg"
 	volume = 0.95
 }
 

@@ -1,0 +1,43 @@
+﻿focus_tree = {
+	id = israel_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = ISR
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = PAL_hava_nagila
+		icon = GFX_goal_hava_nagila
+		x = 10
+		y = 0
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = PAL
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = ISR_raise_militias_hagana
+			unlock_decision_tooltip = ISR_raise_militias_lehi
+			unlock_decision_tooltip = ISR_raise_militias_irgun
+		}
+	}
+}

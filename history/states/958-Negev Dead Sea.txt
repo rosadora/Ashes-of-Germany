@@ -13,7 +13,7 @@ state={
 		victory_points = {
 			13404 3 
 		}
-		add_core_of = PAL
+		add_claim_by = ISR
 
 	}
 	manpower=25654

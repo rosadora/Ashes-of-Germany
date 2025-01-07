@@ -409,9 +409,10 @@ spriteTypes = {
 		name = "GFX_idea_centralized_power_syr"
 		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
 	}
+
 	spriteType = {
-		name = "GFX_idea_mosley_ascendancy"
-		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+		name = "GFX_idea_hava_nagila_idea"
+		texturefile = "gfx/interface/ideas/hava_nagila_idea.dds"
 	}
 
 }

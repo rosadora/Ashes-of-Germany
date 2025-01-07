@@ -134,3 +134,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "al_watan_al_akbar"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

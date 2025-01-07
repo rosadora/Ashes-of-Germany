@@ -15,7 +15,7 @@ state={
 		victory_points = {
 			13384 2 
 		}
-		add_core_of = ISR
+		add_claim_by = ISR
 
 	}
 

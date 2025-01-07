@@ -38,6 +38,7 @@ country_event = {
               target = PAL
               type = annex_everything
             }
+			add_ideas = hava_nagila
 		}
 		leave_faction = yes
 		add_state_core = 962
@@ -50,6 +51,8 @@ country_event = {
 		add_state_core = 957
 		add_state_core = 958
 		play_song = hava_nagila
+		remove_ideas = great_arab_revolt
+		remove_ideas = balfour_declaration
 		delete_unit_template_and_units = {
           division_template = "Palestine Regiments"
           disband = yes #will refund equipment and manpower

@@ -9,7 +9,7 @@ state={
 			infrastructure = 1
 
 		}
-		add_core_of = ISR
+		add_claim_by = ISR
 		victory_points = {
 			13389 2 
 		}

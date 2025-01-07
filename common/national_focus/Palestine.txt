@@ -37,6 +37,42 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = -75
+			IF = {
+				limit = {
+					has_idea = arab_attitude_neutral
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_neutral
+				  add_idea = arab_attitude_hostile
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_hostile
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_hostile
+				  add_idea = arab_attitude_uprising
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_positive
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_positive
+				  add_idea = arab_attitude_neutral
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_supportive
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_supportive
+				  add_idea = arab_attitude_positive
+			    }
+			}
 		}
 	}
 	focus = {
@@ -49,6 +85,9 @@
 		cost = 7
 		ai_will_do = {
 			factor = 1
+		}
+		allow_branch = {
+			always = no
 		}
 		available = {
 			has_country_flag = PAL_great_arab_revolt_occured
@@ -85,6 +124,9 @@
 				has_country_flag = PAL_mandate_collapse
 			}
 		}
+		allow_branch = {
+			always = no
+		}
 		bypass = {
 		}
 		cancel_if_invalid = yes
@@ -92,7 +134,78 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = PAL_pay_attention
-			cou
+			IF = {
+				limit = {
+					has_idea = arab_attitude_hostile
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_hostile
+				  add_idea = arab_attitude_neutral
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_uprising
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_uprising
+				  add_idea = arab_attitude_hostile
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_neutral
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_neutral
+				  add_idea = arab_attitude_positive
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_positive
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_positive
+				  add_idea = arab_attitude_supportive
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_hostile
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_hostile
+				  add_idea = zionist_militias_attitude_uprising
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_neutral
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_neutral
+				  add_idea = zionist_militias_attitude_hostile
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_positive
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_positive
+				  add_idea = zionist_militias_attitude_neutral
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_supportive
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_supportive
+				  add_idea = zionist_militias_attitude_positive
+			    }
+			}
 		}
 	}
 }

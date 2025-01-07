@@ -337,8 +337,8 @@
  PAL_communism_party:0 "Hizb-al-Shuyueiu al-filastiniu"
  PAL_communism_party_long:0 "Hizb-al-Shuyueiu al-filastiniu (Communist Party of Palestine)"
 
- ISR_fascism_party:0 "Irgun"
- ISR_fascism_party_long:0 "Irgun"
+ ISR_fascism_party:0 "Irgun/Lehi"
+ ISR_fascism_party_long:0 "Irgun/Lehi"
  ISR_ultra_nationalism_party:0 "Hazit Datit Meuhedet"
  ISR_ultra_nationalism_party_long:0 "Hazit Datit Meuhedet (United Religious Front)"
  ISR_neutrality_party:0 "Hazit Datit Meuhedet"

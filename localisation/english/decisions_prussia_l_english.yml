@@ -30,3 +30,8 @@
  SYR_independance_war:0 "Independance War!"
  SYR_expell_the_settler_decision:0 "Expell the Settler"
  SYR_arms_smuggling:0 "Arm Smuggling"
+ ### ISRAEL ###
+ ISR_raise_militias:0 "Raise Militias"
+ ISR_raise_militias_hagana:0 "Raise Hagana Militia"
+ ISR_raise_militias_irgun:0 "Raise Irgun Militia"
+ ISR_raise_militias_lehi:0 "Raise Lehi Militia"
