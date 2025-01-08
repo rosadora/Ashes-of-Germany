@@ -14,3 +14,17 @@ ISR_raise_militias = {
 	visible = {
 	}
 }
+
+ISR_seek_an_agreement = {
+
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = ISR
+	}
+
+	priority = 1000
+
+	visible = {
+	}
+}

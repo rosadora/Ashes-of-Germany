@@ -35,3 +35,5 @@
  ISR_raise_militias_hagana:0 "Raise Hagana Militia"
  ISR_raise_militias_irgun:0 "Raise Irgun Militia"
  ISR_raise_militias_lehi:0 "Raise Lehi Militia"
+ ISR_seek_an_agreement:0 "Seek an Agreement"
+ ISR_seek_a_ceasefire:0 "Seek a Ceasefire"

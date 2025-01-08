@@ -1163,3 +1163,9 @@
  news.3075.t:0 "Syria intervenes in the Israeli-Palestinian War"
  news.3075.d:0 "Syria has long hesitated to intervene to help the Palestinians in the conflict with Israel, but now the Syrian government is crossing the border, with the aim of putting an end to Israel. "
  news.3075.a:0 "Ok"
+ ### ISRAEL ###
+ news.3076.t:0 "Ceasefire in Palestine"
+ news.3076.d:0 "After months of intense fighting and tens of thousands of deaths on both sides, the two sides of the war in Palestine have agreed a ceasefire along the areas occupied by each. Both states will have survived what promised to be a fight to the death."
+ israel.1.t:0 "Israel Independance Secured!"
+ israel.1.d:0 "After months of fighting, Israel was able to win its independence from the Arab armies, but did not manage to take back all the Palestinian land. Now it's time for Israel's first legislative elections."
+ israel.1.a:0 "Beautiful Day for Israel"
