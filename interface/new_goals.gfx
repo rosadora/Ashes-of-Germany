@@ -1687,12 +1687,37 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_a_new_syria"
-	texturefile = "gfx/interface/goals/a_new_syria.dds"			
+	name = "GFX_goal_new_era_palestine"
+	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_a_new_syria"
-	texturefile = "gfx/interface/goals/a_new_syria.dds"			
+	name = "GFX_goal_anti_zionism"
+	texturefile = "gfx/interface/goals/anti_zionism.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_palestinian_free_army_focus"
+	texturefile = "gfx/interface/goals/palestinian_free_army_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_new_era_palestine"
+	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_new_era_palestine"
+	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_new_era_palestine"
+	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_new_era_palestine"
+	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
 	}
 }

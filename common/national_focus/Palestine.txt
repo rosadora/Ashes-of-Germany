@@ -208,4 +208,295 @@
 			}
 		}
 	}
+	focus = {
+		id = PAL_the_end_of_an_era
+		icon = GFX_goal_new_era_palestine
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_accept_the_inevitable}
+		relative_position_id = PAL_accept_the_inevitable
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_anti_colonialist_spirit
+		icon = GFX_goal_anti_zionism
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = anti_zionism
+		}
+	}
+	focus = {
+		id = PAL_a_war_of_annihilation
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = PAL_create_the_palestinian_free_army
+		icon = GFX_goal_palestinian_free_army_focus
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			959 = {
+			create_unit = {
+                division = "name = \"Holy War Division\" division_template = \"Holy War Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+			create_unit = {
+                division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			957 = {
+			create_unit = {
+                division = "name = \"Holy War Division\" division_template = \"Holy War Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			958 = {
+			create_unit = {
+                division = "name = \"Holy War Division\" division_template = \"Holy War Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			956 = {
+			create_unit = {
+                division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			add_ideas = palestinian_free_army
+		}
+	}
+	focus = {
+		id = PAL_appeal_to_internationalist_solidarity
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = 2
+		y = 2
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.075
+			}
+			add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = 3000
+             producer = PAL
+            }
+		}
+	}
+	focus = {
+		id = PAL_turn_red_the_provisionary_government
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 2
+		y = 3
+		prerequisite = {focus = PAL_appeal_to_internationalist_solidarity}
+		mutually_exclusive = {focus = PAL_united_arab_front}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.095
+			}
+			set_politics = {
+	           ruling_party = classical_marxism
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = PAL_the_invisible_arsenal
+		icon = GFX_focus_AUS_raid_military_storages
+		x = -2
+		y = 2
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	focus = {
+		id = PAL_united_arab_front
+		icon = GFX_focus_GER_party_chancellor_hess
+		x = -2
+		y = 3
+		prerequisite = {focus = PAL_the_invisible_arsenal}
+		mutually_exclusive = {focus = PAL_turn_red_the_provisionary_government}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = united_arab_front
+		}
+	}
+	focus = {
+		id = PAL_end_the_aliyah
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 4
+		prerequisite = {focus = PAL_united_arab_front focus = PAL_turn_red_the_provisionary_government}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = end_the_aliyah 
+				days = 120
+			}
+		}
+	}
+	focus = {
+		id = PAL_destabilize_israel
+		icon = GFX_focus_BRA_utilize_security_law
+		x = -3
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = palestian_resistance_spirit
+			ISR = {
+				add_stability = -0.1
+			}
+		}
+	}
 }

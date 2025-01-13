@@ -415,4 +415,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/hava_nagila_idea.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_anti_zionism"
+		texturefile = "gfx/interface/ideas/anti_zionism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_palestinian_free_army"
+		texturefile = "gfx/interface/ideas/palestinian_free_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_centralized_power_syr"
+		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_centralized_power_syr"
+		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
+	}
+
 }

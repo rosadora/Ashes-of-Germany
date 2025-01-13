@@ -54,6 +54,32 @@ leader_traits = {
 		}
 	}
 
+	divided_governance = {
+		random = no
+		political_power_factor = -0.075
+		army_org_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	modern_robespierre = {
+		random = no
+		army_attack_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	marechal_de_france = {
+		random = no
+		weekly_manpower = 5000
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
 	the_great_protector_of_slovakians = {
 		random = no
 		political_power_factor = 0.075

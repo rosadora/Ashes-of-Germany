@@ -34,12 +34,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 			}
 			
 			targeted_modifier = {
 				tag = ENG
-                attack_bonus_against = 0.15
+                attack_bonus_against = 0.1
 			}
 		}
 		la_perfide_albion1 = {
@@ -56,12 +56,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.015
 			}
 			
 			targeted_modifier = {
 				tag = ENG
-                attack_bonus_against = 0.15
+                attack_bonus_against = 0.1
 				defense_bonus_against = 0.05
 			}
 		}
@@ -79,12 +79,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.02
 			}
 			
 			targeted_modifier = {
 				tag = ENG
-                attack_bonus_against = 0.2
+                attack_bonus_against = 0.15
 				defense_bonus_against = 0.15
 			}
 		}
@@ -258,8 +258,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_org_factor = 0.15
-				conscription = 0.04
+				army_org_factor = 0.1
+				conscription = 0.015
 			}
 		}
 		training_of_colonial_troops = {
@@ -332,9 +332,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				global_building_slots_factor = 0.35
-				industrial_capacity_factory = 0.15
-				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.3
+				industrial_capacity_factory = 0.075
+				production_speed_buildings_factor = 0.05
 			}
 		}
 		invest_in_development = {
@@ -421,7 +421,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.02
 				war_support_factor = 0.075
 			}
 		}
@@ -590,7 +590,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.04
+				conscription = 0.02
 				fascism_drift = -0.01
 				neutrality_drift = -0.01
 			} 

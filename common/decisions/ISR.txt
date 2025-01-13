@@ -15,6 +15,7 @@ ISR_raise_militias = {
 
 		days_remove = 10
 	    days_re_enable = 10
+        fire_only_once = yes
 
 		ai_will_do = {
 			factor = 100
@@ -25,6 +26,10 @@ ISR_raise_militias = {
         complete_effect = {
             454 = {
 			create_unit = {
+                division = "name = \"Hagana Militia\" division_template = \"Hagana Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
                 division = "name = \"Hagana Militia\" division_template = \"Hagana Militia\" start_experience_factor = 0.5"
                 owner = ISR
             }
@@ -44,6 +49,7 @@ ISR_raise_militias = {
 
 		days_remove = 10
 	    days_re_enable = 10
+        fire_only_once = yes
 
 		ai_will_do = {
 			factor = 100
@@ -75,6 +81,10 @@ ISR_raise_militias = {
                 division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
                 owner = ISR
             }
+            create_unit = {
+                division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
             }
         }
     }
@@ -92,6 +102,7 @@ ISR_raise_militias = {
 
 		days_remove = 10
 	    days_re_enable = 10
+        fire_only_once = yes
 
 		ai_will_do = {
 			factor = 100
@@ -116,6 +127,10 @@ ISR_raise_militias = {
 			}
             454 = {
 			create_unit = {
+                division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
                 division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
                 owner = ISR
             }

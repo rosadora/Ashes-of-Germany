@@ -19,7 +19,7 @@
 	
 	focus = {
 		id = RCO_democracy_in_deutschland
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_focus_GER_tend_to_the_future
 		x = 12
 		y = 0
 		prerequisite = {}

@@ -294,5 +294,111 @@ ideas = {
 				neutrality_drift = -0.02
 			}
 		}
+		anti_zionism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = anti_zionism
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = ISR 
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.15
+			}
+		}
+		palestinian_free_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = palestinian_free_army
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				military_leader_cost_factor = -0.5 
+				army_leader_cost_factor = -0.5 
+			}
+		}
+		united_arab_front = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war_with = ISR
+			}
+
+			picture = ARG_military_government
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				political_power_gain = 0.075
+			}
+		}
+		palestian_resistance_spirit = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war_with = ISR
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.3
+				resistance_growth_on_our_occupied_states = 0.2
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+			}
+		}
+		end_the_aliyah = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war_with = ISR
+			}
+
+			picture = SWI_spirit_of_helvetia_aggressive_war
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_attack_factor = 0.1
+			    ai_focus_aggressive_factor = 0.5
+			}
+		}
 	}
 }
