@@ -2756,7 +2756,7 @@
 		bypass = {
 			NOT = {
 				HUN = {
-					controls_state = 915
+					controls_state = 942
 				}
 			}
 		}

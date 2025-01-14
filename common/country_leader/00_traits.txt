@@ -79,6 +79,15 @@ leader_traits = {
 		}
 	}
 
+	old_fighter = {
+		random = no
+		army_org_factor = 0.05
+		army_org_regain = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 
 	the_great_protector_of_slovakians = {
 		random = no
