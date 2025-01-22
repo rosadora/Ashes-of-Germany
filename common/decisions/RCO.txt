@@ -75,7 +75,7 @@ RCO_remilitarisation_war = {
              owner = RCO
 			}
 			}
-			910 = {
+			42 = {
 			create_unit = {
              division = "name = \"Division Freiheit\" division_template = \"Division Freiheit\" start_experience_factor = 2"
              owner = RCO
@@ -122,7 +122,7 @@ RCO_remilitarisation_war = {
 		available = {
 			NOT = {
 			controls_state = 51
-			controls_state = 910
+			controls_state = 42
 			}
 		}
 
@@ -169,7 +169,7 @@ RCO_remilitarisation_war = {
 			has_war_with =  FRA
         }
         available = {
-			controls_state = 909
+			controls_state = 943
         }
         priority = 10
 		fire_only_once = yes
@@ -180,8 +180,8 @@ RCO_remilitarisation_war = {
 
         complete_effect = {
 			set_country_flag = victory_against_france
-            add_state_core = 909
-			transfer_state = 909
+            add_state_core = 943
+			transfer_state = 943
 			white_peace = FRA
 		  FRA = {
 			set_autonomy = {

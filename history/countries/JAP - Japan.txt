@@ -425,13 +425,21 @@ if = {
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 100
+	fascism = 9
+	ultra_nationalism = 20
+	neutrality = 0
+	democratic = 27
+	classical_liberalism = 0
+	social_liberalism = 29
+	social_democracy = 5
+	classical_marxism = 7
+	communism = 3
 }
 
 recruit_character = JAP_tetsu_katayama

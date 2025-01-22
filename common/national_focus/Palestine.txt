@@ -499,4 +499,56 @@
 			}
 		}
 	}
+	focus = {
+		id = PAL_we_hold
+		icon = GFX_goal_generic_military_sphere
+		x = 20
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PAL_settler_expelled}
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = ISR
+			NOT = {
+			has_war_with = ISR
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_settler_expelled
+		icon = GFX_goal_generic_political_pressure
+		x = 23
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PAL_we_hold}
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				country_exists = ISR
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
 }

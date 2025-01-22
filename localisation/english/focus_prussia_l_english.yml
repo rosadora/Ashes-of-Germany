@@ -4884,6 +4884,10 @@
  PAL_a_war_of_annihilation_desc:0 "Israel wants to conquer and eliminate the populations of Palestine, so this war will be a war of annihilation. Ceasefire or no ceasefire, the war will return, and it must end as soon as possible."
  PAL_end_the_aliyah:0 "End the Aliyah"
  PAL_end_the_aliyah_desc:0 "The Israeli settler will be expelled from Palestine for ever."
+ PAL_we_hold:0 "We Hold"
+ PAL_we_hold_desc:0 "We gained independance but with the permanent Israeli threat, we will have to build-up to comeback."
+ PAL_settler_expelled:0 "Victory over Israel"
+ PAL_settler_expelled_desc:0 "The Israeli settler has been expelled from Palestine. Our army and our people is victorious, it is now time to build a new Palestine!"
  ### SYRIA ###
  SYR_the_march_towards_independance:0 "The March Towards Independance"
  SYR_the_march_towards_independance_desc:0 "The French and British promised us independence following the Arab revolts during the Great War, but never withdrew! Now is the time to put an end to the humiliation of colonial tutelage and to raise our heads."
