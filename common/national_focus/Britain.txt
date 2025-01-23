@@ -1,0 +1,199 @@
+﻿focus_tree = {
+	id = uk_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = ENG
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = ENG_baldwin_resignation
+		icon = GFX_goal_baldwin_resignation
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = ENG_stay_in_office}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -75
+			add_stability = -0.02
+			add_popularity = {
+				popularity = -0.02
+				ideology = democratic
+			}
+			
+		}
+	}
+	focus = {
+		id = ENG_stay_in_office
+		icon = GFX_goal_baldwin_stay
+		x = 17
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = ENG_baldwin_resignation}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -150
+			custom_effect_tooltip = eng_unions_strike
+			custom_effect_tooltip = eng_mosley_ascendancy
+			country_event = eng.2
+		}
+	}
+	focus = {
+		id = ENG_cable_street_battle
+		icon = GFX_focus_eng_organise_the_blackshirts
+		x = 0
+		y = 1
+		prerequisite = {focus = ENG_stay_in_office}
+		mutually_exclusive = {}
+		relative_position_id = ENG_stay_in_office
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = cable_street_battle
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.02
+		}
+	}
+	focus = {
+		id = ENG_arrest_mosley
+		icon = GFX_goal_arrest_mosley
+		x = -2
+		y = 2
+		prerequisite = {focus = ENG_cable_street_battle}
+		mutually_exclusive = {focus = ENG_united_against_strikers}
+		relative_position_id = ENG_stay_in_office
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = sided_with_socialists
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			remove_ideas = mosley_ascendancy2
+			add_popularity = {
+			popularity = -0.07
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.03
+			ideology = fascism
+		}
+		country_event = eng.5
+		}
+	}
+	focus = {
+		id = ENG_united_against_strikers
+		icon = GFX_focus_GER_end_european_communism
+		x = 2
+		y = 2
+		prerequisite = {focus = ENG_cable_street_battle}
+		mutually_exclusive = {focus = ENG_arrest_mosley}
+		relative_position_id = ENG_stay_in_office
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = sided_with_mosley
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = union_strike
+			add_political_power = -200
+		}
+	}
+	focus = {
+		id = ENG_fight_extremism
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 3
+		prerequisite = {focus = ENG_cable_street_battle}
+		mutually_exclusive = {}
+		relative_position_id = ENG_stay_in_office
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			NOT = {
+				has_country_flag = sided_with_mosley
+				has_country_flag = sided_with_socialists
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+		add_popularity = {
+			popularity = -0.03
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = -0.03
+			ideology = communism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.02
+			ideology = fascism
+		}
+		}
+	}
+}

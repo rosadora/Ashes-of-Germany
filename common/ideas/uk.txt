@@ -39,5 +39,47 @@ ideas = {
 				fascism_drift = 0.01
 			}
 		}
+		mosley_ascendancy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = mosley_ascendancy
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.015
+				war_support_factor = 0.25
+				ultra_nationalism_drift = 0.04
+				fascism_drift = 0.02
+			}
+		}
+		union_strike = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ICE_general_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.75
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				social_democracy_drift = 0.01
+				communism_drift = 0.02
+				classical_marxism_drift = 0.05
+			}
+		}
 	}
 }

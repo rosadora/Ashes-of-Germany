@@ -3,7 +3,7 @@
 ###########################
 add_namespace = eng
 
-country_event = {
+country_event = { #OUTDATED
 	id = eng.1
 	title = eng.1.t
 	desc = eng.1.d
@@ -25,6 +25,152 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}
+	}
+}
+country_event = { #Union strike
+	id = eng.2
+	title = eng.2.t
+	desc = eng.2.d
+	picture = GFX_report_event_generic_sign_treaty2
 
+	is_triggered_only = yes
+
+	option = {
+		name = eng.2.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = union_strike
+		hidden_effect = {
+			country_event = {
+				id = eng.3
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #Mosley's Strikebreakers
+	id = eng.3
+	title = eng.3.t
+	desc = eng.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.3.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = mosley_ascendancy
+			add_idea = mosley_ascendancy2
+		}
+		hidden_effect = {
+			country_event = {
+				id = eng.4
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #Battle of Cable Street
+	id = eng.4
+	title = eng.4.t
+	desc = eng.4.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = ENG_cable_street_battle
+		}
+	}
+
+	option = {
+		name = eng.4.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			popularity = -0.07
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = fascism
+		}
+		add_popularity = {
+			popularity = 0.04
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = 0.02
+			ideology = communism
+		}
+		set_country_flag = sided_with_socialists
+	}
+	option = {
+		name = eng.4.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.1
+		add_popularity = {
+			popularity = -0.03
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = -0.03
+			ideology = communism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.02
+			ideology = fascism
+		}
+	}
+	option = {
+		name = eng.4.c
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			popularity = 0.05
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = 0.02
+			ideology = fascism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = -0.02
+			ideology = communism
+		}
+
+		set_country_flag = sided_with_mosley
+	}
+}
+country_event = { #Fascism in the UK beheaded
+	id = eng.5
+	title = eng.5.t
+	desc = eng.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.5.a
+		ai_chance = {
+			base = 100
+		}
 	}
 }

@@ -1702,18 +1702,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_new_era_palestine"
-	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	name = "GFX_goal_baldwin_resignation"
+	texturefile = "gfx/interface/goals/baldwin_resignation.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_new_era_palestine"
-	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	name = "GFX_goal_baldwin_stay"
+	texturefile = "gfx/interface/goals/baldwin_stay.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_new_era_palestine"
-	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
 	}
 
 	SpriteType = {
