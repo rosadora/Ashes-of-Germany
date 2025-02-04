@@ -196,4 +196,254 @@
 		}
 		}
 	}
+	focus = {
+		id = ENG_back_off_a_bit
+		icon = GFX_goal_generic_improve_relations
+		x = -2
+		y = 1
+		prerequisite = {focus = ENG_fight_extremism}
+		mutually_exclusive = {}
+		relative_position_id = ENG_fight_extremism
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			NOT = {
+				has_country_flag = sided_with_mosley
+				has_country_flag = sided_with_socialists
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		 add_popularity = {
+			popularity = 0.03
+			ideology = democratic
+		 }
+		}
+	}
+	focus = {
+		id = ENG_end_all_dialogue_with_buf
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 2
+		y = 1
+		prerequisite = {focus = ENG_fight_extremism}
+		mutually_exclusive = {}
+		relative_position_id = ENG_fight_extremism
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			NOT = {
+				has_country_flag = sided_with_mosley
+				has_country_flag = sided_with_socialists
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = mosley_ascendancy2
+				add_idea = marginalized_buf
+			}
+		}
+	}
+	focus = {
+		id = ENG_workers_of_britain_arise
+		icon = GFX_focus_GER_the_peoples_victory
+		x = 25
+		y = 0
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+			has_war = no
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = workers_of_britain_arise
+		}
+	}
+	focus = {
+		id = ENG_chairwoman_pankhurst
+		icon = GFX_goal_chairwoman_pankhurst
+		x = 0
+		y = 1
+		prerequisite = {focus = ENG_workers_of_britain_arise}
+		relative_position_id = ENG_workers_of_britain_arise
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+			has_war = no
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = ENG_exile_the_royal_family
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 2
+		prerequisite = {focus = ENG_chairwoman_pankhurst}
+		mutually_exclusive = {focus = ENG_execute_the_royal_family}
+		relative_position_id = ENG_workers_of_britain_arise
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = -0.05
+			remove_ideas = george_v
+		}
+	}
+	focus = {
+		id = ENG_execute_the_royal_family
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 1
+		y = 2
+		prerequisite = {focus = ENG_chairwoman_pankhurst}
+		mutually_exclusive = {focus = ENG_exile_the_royal_family}
+		relative_position_id = ENG_workers_of_britain_arise
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_political_power = 200
+			remove_ideas = george_v
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.08
+			}
+		}
+	}
+	focus = {
+		id = ENG_seize_their_properties
+		icon = GFX_focus_rom_parties_end
+		x = 0
+		y = 3
+		prerequisite = {focus = ENG_execute_the_royal_family focus = ENG_exile_the_royal_family}
+		relative_position_id = ENG_workers_of_britain_arise
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 }

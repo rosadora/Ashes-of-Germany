@@ -28,6 +28,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				NOT = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = mosley_ascendancy
 
 			removal_cost = -1
@@ -50,6 +58,14 @@ ideas = {
 
 			picture = mosley_ascendancy
 
+			available = {
+				NOT = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+
 			removal_cost = -1
 			
 			modifier = {
@@ -57,6 +73,26 @@ ideas = {
 				war_support_factor = 0.25
 				ultra_nationalism_drift = 0.04
 				fascism_drift = 0.02
+			}
+		}
+		marginalized_buf = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = mosley_ascendancy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.075
+				war_support_factor = -0.05
+				ultra_nationalism_drift = -0.01
+				fascism_drift = -0.01
 			}
 		}
 		union_strike = {
@@ -76,9 +112,35 @@ ideas = {
 				consumer_goods_factor = 0.75
 				industrial_capacity_factory = -0.5
 				industrial_capacity_dockyard = -0.5
-				social_democracy_drift = 0.01
-				communism_drift = 0.02
-				classical_marxism_drift = 0.05
+				social_democracy_drift = 0.02
+				communism_drift = 0.05
+				classical_marxism_drift = 0.10
+			}
+		}
+		workers_of_britain_arise = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war = yes
+			}
+
+			picture = GER_wage_war_on_capitalism
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.05
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				ultra_nationalism_drift = -0.05
+				fascism_drift = -0.05
 			}
 		}
 	}

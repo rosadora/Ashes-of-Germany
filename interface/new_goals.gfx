@@ -1717,7 +1717,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_new_era_palestine"
-	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	name = "GFX_goal_chairwoman_pankhurst"
+	texturefile = "gfx/interface/goals/chairwoman_pankhurst.dds"			
 	}
 }
