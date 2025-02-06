@@ -472,3 +472,172 @@ country_event = { #Portugal in the Empire #Negative Answer
 	 }
 	}
 }
+country_event = { #Socialist Italy surrenders to fascists
+	id = italia.15
+	title = italia.15.t
+	desc = italia.15.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = ITA 
+		has_war_with = NLC 
+		NLC = {
+		surrender_progress > 0.8
+		}
+	}
+
+	option = {
+		name = italia.15.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+          target = NLC
+          transfer_troops = no
+        }
+	}
+}
+country_event = { #Socialist Italy surrenders to south
+	id = italia.16
+	title = italia.16.t
+	desc = italia.16.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = ILF
+		NOT = {
+			country_exists = ITA
+		}
+		has_war_with = NLC 
+		NLC = {
+		surrender_progress > 0.8
+		}
+	}
+
+	option = {
+		name = italia.16.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+          target = NLC
+          transfer_troops = no
+        }
+	}
+}
+country_event = { #Fascist Italy surrenders to North
+	id = italia.17
+	title = italia.17.t
+	desc = italia.17.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = NLC
+		controls_state = 2
+		has_war_with = ITA 
+		ITA = {
+		surrender_progress > 0.8
+		}
+	}
+
+	option = {
+		name = italia.17.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+          target = ITA
+          transfer_troops = no
+        }
+	}
+}
+country_event = { #Fascist Italy surrenders to South
+	id = italia.18
+	title = italia.18.t
+	desc = italia.18.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = ILF
+		controls_state = 2
+		has_war_with = ITA 
+		ITA = {
+		surrender_progress > 0.8
+		}
+	}
+
+	option = {
+		name = italia.17.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+          target = ITA
+          transfer_troops = no
+        }
+	}
+}
+country_event = { #South Italy surrenders to Fascists
+	id = italia.19
+	title = italia.19.t
+	desc = italia.19.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = ITA
+		controls_state = 117
+		has_war_with = ILF
+		ITA = {
+		surrender_progress > 0.8
+		}
+	}
+
+	option = {
+		name = italia.19.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+          target = ILF
+          transfer_troops = no
+        }
+	}
+}
+country_event = { #South Italy surrenders to North
+	id = italia.20
+	title = italia.20.t
+	desc = italia.20.d
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = NLC
+		controls_state = 117
+		has_war_with = ILF
+		NLC = {
+		surrender_progress > 0.8
+		}
+	}
+
+	option = {
+		name = italia.20.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+          target = ILF
+          transfer_troops = no
+        }
+	}
+}
