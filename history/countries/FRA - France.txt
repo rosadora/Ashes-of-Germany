@@ -22,6 +22,39 @@ if = {
 
 starting_train_buffer = 2
 
+set_autonomy = {
+	target = ALG
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = SEN
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = CAM
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = CMR
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = VIN
+	autonomous_state = autonomy_integrated_puppet
+}
+
+
+puppet = MOR
+
+set_autonomy = {
+	target = TUN
+	autonomous_state = autonomy_colony
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "FRA_1936_naval_mtg"

@@ -178,6 +178,66 @@ set_convoys = 800
 
 puppet = EGY
 
+set_autonomy = {
+	target = SUD
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = KEN
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = UGA
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = MLW
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = ZAM
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = ZIM
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = BOT
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = SOM
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = GAM
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = NGA
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = SIE
+	autonomous_state = autonomy_integrated_puppet
+}
+
+set_autonomy = {
+	target = GHA
+	autonomous_state = autonomy_integrated_puppet
+}
+
 # DIPLOMACY
 if = {
 	limit = {

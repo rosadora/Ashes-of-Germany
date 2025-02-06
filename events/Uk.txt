@@ -241,3 +241,92 @@ country_event = { #Socialist Revolution
      }
 	}
 }
+country_event = { #The Future of Northern Ireland
+	id = eng.8
+	title = eng.8.t
+	desc = eng.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Northern Ireland is Britain
+		name = eng.8.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_political_power = 50
+	}
+	option = { #Independance
+		name = eng.8.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		NIR = {
+			transfer_state = 119
+		}
+		give_guarantee = NIR
+		IRE = {
+			country_event = {
+				id = ire.1
+				days = 1
+			}
+		}
+	}
+	option = { #Irish Unification
+		name = eng.8.c
+		ai_chance = {
+			base = 100
+		}
+		add_manpower = 40000
+		119 = {
+			add_manpower = -500000
+		}
+		133 = {
+			add_manpower = 200000
+		}
+		121 = {
+			add_manpower = 300000
+		}
+		add_stability = 0.05
+		IRE = {
+			transfer_state = 119
+		}
+	}
+}
+country_event = { #The Fate of Scotland and Wales
+	id = eng.9
+	title = eng.9.t
+	desc = eng.9.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #United we are stronger
+		name = eng.9.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = decentralized_executive
+			add_idea = decentralized_executive2
+		}
+	}
+	option = { #Regional autonomy must be guaranteed
+		name = eng.9.b
+		ai_chance = {
+			base = 100
+		}
+		release_autonomy = {
+           target = SCO
+           autonomy_state = autonomy_integrated_puppet
+           freedom_level = 0.1
+        }
+		release_autonomy = {
+           target = WLS
+           autonomy_state = autonomy_integrated_puppet
+           freedom_level = 0.1
+        }
+	}
+}

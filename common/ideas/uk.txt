@@ -143,5 +143,83 @@ ideas = {
 				fascism_drift = -0.05
 			}
 		}
+		mass_migration = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war = yes
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 3
+				weekly_manpower = 5000
+				stability_factor = -0.1
+			}
+		}
+		decentralized_executive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.075
+				local_resources_factor = 0.05
+				defensive_war_stability_factor = 0.1
+			}
+		}
+		decentralized_executive2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				local_resources_factor = 0.1
+				defensive_war_stability_factor = 0.1
+			}
+		}
 	}
 }

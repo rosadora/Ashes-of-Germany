@@ -1390,3 +1390,41 @@ news_event = { #Ceasefire in Palestine
 		name = news.3076.a
 	}
 }
+news_event = { #Independance of Northern Ireland
+	id = news.3077
+	title = news.3077.t
+	desc = news.3077.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		NIR = {
+			owns_state = 119
+		}
+	}
+	
+	option = {
+		name = news.3077.a
+	}
+}
+news_event = { #Irish Unification
+	id = news.3078
+	title = news.3078.t
+	desc = news.3078.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		IRE = {
+			owns_state = 119
+		}
+	}
+	
+	option = {
+		name = news.3078.a
+	}
+}
