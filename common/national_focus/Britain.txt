@@ -323,6 +323,10 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 150
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = 0.15
+			}
 		}
 	}
 	focus = {
@@ -645,6 +649,192 @@
 				id = eng.9
 				days = 1
 			}
+		}
+	}
+	focus = {
+		id = ENG_steps_of_the_social_revolution
+		icon = GFX_focus_BEL_the_grand_place
+		x = 2
+		y = 1
+		prerequisite = {focus = ENG_government_for_the_workers_by_the_workers}
+		relative_position_id = ENG_government_for_the_workers_by_the_workers
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = new_britain
+		}
+	}
+	focus = {
+		id = ENG_emancipation_of_women
+		icon = GFX_focus_SWE_education_reform
+		x = -1
+		y = 1
+		prerequisite = {focus = ENG_steps_of_the_social_revolution}
+		relative_position_id = ENG_steps_of_the_social_revolution
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -250
+			swap_ideas = {
+				remove_idea = new_britain
+				add_idea = new_britain2
+			}
+		}
+	}
+	focus = {
+		id = ENG_collectivist_model
+		icon = GFX_focus_generic_workers
+		x = 1
+		y = 1
+		prerequisite = {focus = ENG_steps_of_the_social_revolution}
+		relative_position_id = ENG_steps_of_the_social_revolution
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = collective_farms
+			add_ideas = workers_councils
+		}
+	}
+	focus = {
+		id = ENG_new_diplomacy
+		icon = GFX_focus_generic_communist_attack_hungary
+		x = -4
+		y = 2
+		prerequisite = {focus = ENG_collectivist_model focus = ENG_new_britain_new_diplomacy focus = ENG_autonomy_for_provinces focus = ENG_emancipation_of_women}
+		relative_position_id = ENG_steps_of_the_social_revolution
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = overshadowed_by_france
+			unlock_decision_tooltip = gen_join_united_workers_of_europe
+		}
+	}
+	focus = {
+		id = ENG_end_french_domination
+		icon = GFX_focus_attack_france
+		x = -2
+		y = 1
+		prerequisite = {focus = ENG_new_diplomacy}
+		relative_position_id = ENG_new_diplomacy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = FRA
+	        }
+		}
+	}
+	focus = {
+		id = ENG_strike_the_capitalist_eagle
+		icon = GFX_focus_ARG_the_american_push
+		x = 0
+		y = 1
+		prerequisite = {focus = ENG_new_diplomacy}
+		relative_position_id = ENG_new_diplomacy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = USA
+	        }
+		}
+	}
+	focus = {
+		id = ENG_avenge_trotsky
+		icon = GFX_focus_GER_alliance_with_the_ussr
+		x = 2
+		y = 1
+		prerequisite = {focus = ENG_new_diplomacy}
+		relative_position_id = ENG_new_diplomacy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = SOV
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = SOV
+	        }
 		}
 	}
 }

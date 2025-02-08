@@ -474,6 +474,11 @@ country_event = { #Socialist Surrender
           target = USR
           transfer_troops = no
         }
+		hidden_effect = {
+		every_state = {
+			remove_core_of = USR
+		}
+		}
 	}
 }
 country_event = { #White Russia Surrender
@@ -501,5 +506,10 @@ country_event = { #White Russia Surrender
           target = SOV
           transfer_troops = no
         }
+		hidden_effect = {
+		every_state = {
+			remove_core_of = SOV
+		}
+		}
 	}
 }

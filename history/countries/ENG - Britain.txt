@@ -177,6 +177,9 @@ add_ideas = {
 set_convoys = 800
 
 puppet = EGY
+puppet = RAJ
+puppet = CAN
+puppet = AUS
 
 set_autonomy = {
 	target = SUD
@@ -257,11 +260,6 @@ if = {
 	set_autonomy = {
 		target = JOR
 		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = RAJ
-		autonomous_state = autonomy_colony
-		freedom_level = 0.35
 	}
 	set_autonomy = {
 		target = CAN

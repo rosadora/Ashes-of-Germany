@@ -256,7 +256,7 @@
 	}
 	focus = {
 		id = AUS_nationalist_debacle
-		icon = GFX_focus_ITA_liberation_or_death
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		x = 20
 		y = 0
 		prerequisite = {}
@@ -1333,7 +1333,7 @@
 	}
 	focus = {
 		id = AUS_development_and_prosperity
-		icon = GFX_focus_generic_aircraft_production
+		icon = GFX_focus_AUS_austromarxism
 		x = 5
 		y = 7
 		prerequisite = {}

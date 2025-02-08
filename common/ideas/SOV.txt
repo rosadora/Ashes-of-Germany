@@ -9618,28 +9618,6 @@ ideas = {
 			}
 		}
 
-		SOV_soviet_railways_improved = { #NSB
-			name = SOV_soviet_railways
-
-			picture = SOV_soviet_railways
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			cost = 75
-
-			research_bonus = {
-				train_tech = 0.2
-			}
-
-			traits = { railway_company }
-
-			modifier = {
-				mobilization_speed = 0.02
-			}
-		}
 
 
   #####

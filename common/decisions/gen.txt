@@ -1,0 +1,117 @@
+#Category only allowed for CZE
+
+gen_pick_a_side = {
+
+	gen_join_united_workers_of_europe = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			OR = {
+				HUN = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				}
+				BAY = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				}
+				AUS = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = ENG_new_diplomacy
+			}
+			is_in_faction = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			IF = {
+				limit = {
+					HUN = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				}
+				}
+				HUN = {
+				country_event = {
+					id = gen.1
+					days = 1
+				}
+			    }
+			}
+			else_if = {
+				limit = {
+					BAY = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				}
+				}
+				BAY = {
+				country_event = {
+					id = gen.1
+					days = 1
+				}
+			    }
+			}
+			else_if = {
+				limit = {
+					AUS = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				}
+				}
+				AUS = {
+				country_event = {
+					id = gen.1
+					days = 1
+				}
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
