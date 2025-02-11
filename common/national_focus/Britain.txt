@@ -837,4 +837,564 @@
 	        }
 		}
 	}
+	focus = {
+		id = ENG_order_prevails
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 35
+		y = 0
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = ENG_abolish_the_legislative_power
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 0
+		y = 1
+		prerequisite = {focus = ENG_order_prevails}
+		relative_position_id = ENG_order_prevails
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = dictator
+		}
+	}
+	focus = {
+		id = ENG_end_the_circus
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = -1
+		y = 2
+		prerequisite = {focus = ENG_abolish_the_legislative_power}
+		mutually_exclusive = {focus = ENG_monarchist_compromise}
+		relative_position_id = ENG_order_prevails
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = great_baronet_of_britain
+			remove_ideas = george_v
+		}
+	}
+	focus = {
+		id = ENG_monarchist_compromise
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 2
+		prerequisite = {focus = ENG_abolish_the_legislative_power}
+		mutually_exclusive = {focus = ENG_end_the_circus}
+		relative_position_id = ENG_order_prevails
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = kings_support
+		}
+	}
+	focus = {
+		id = ENG_britain_march_on
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 0
+		y = 3
+		prerequisite = {focus = ENG_end_the_circus}
+		prerequisite = {focus = ENG_monarchist_compromise}
+		relative_position_id = ENG_order_prevails
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = ENG_the_war_to_end_all_wars
+		}
+	}
+	focus = {
+		id = ENG_british_path_to_fascism
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = -2
+		y = 1
+		prerequisite = {focus = ENG_britain_march_on}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = british_path_to_fascism
+		}
+	}
+	focus = {
+		id = ENG_expand_the_blackshirt
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -3
+		y = 2
+		prerequisite = {focus = ENG_british_path_to_fascism}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = mosley_ascendancy2
+				add_idea = british_black_shirt
+			}
+		}
+	}
+	focus = {
+		id = ENG_nationalize_keys_sectors
+		icon = GFX_focus_generic_military_industry
+		x = -1
+		y = 2
+		prerequisite = {focus = ENG_british_path_to_fascism}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = nationalized_major_compagnies
+		}
+	}
+	focus = {
+		id = ENG_ban_leftists_parties
+		icon = GFX_focus_ICE_infiltrating_the_british_isles
+		x = 0
+		y = 3
+		prerequisite = {focus = ENG_british_path_to_fascism}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.075
+			add_political_power = 150
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = -0.2
+			}
+		}
+	}
+	focus = {
+		id = ENG_britain_awake
+		icon = GFX_focus_BEL_maritime_phoenix
+		x = -2
+		y = 3
+		prerequisite = {focus = ENG_british_path_to_fascism}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.125
+		}
+	}
+	focus = {
+		id = ENG_the_party_state_idea
+		icon = GFX_focus_SWI_embrace_panoramaheim
+		x = -1
+		y = 4
+		prerequisite = {focus = ENG_britain_awake}
+		prerequisite = {focus = ENG_ban_leftists_parties}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = british_path_to_fascism
+				add_idea = british_path_to_fascism2
+			}
+		}
+	}
+	focus = {
+		id = ENG_the_new_english_century
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 0
+		y = 5
+		prerequisite = {focus = ENG_the_party_state_idea}
+		prerequisite = {focus = ENG_one_master_of_the_anglosphere}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+			948 = {
+			controls_or_subject_of = yes
+			}
+			361 = {
+			controls_or_subject_of = yes
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = british_2th_century
+		}
+	}
+	focus = {
+		id = ENG_the_sun_never_sets
+		icon = GFX_focus_eng_imperial_federation
+		x = 3
+		y = 1
+		prerequisite = {focus = ENG_britain_march_on}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_tooltip = gen_join_italy
+			unlock_decision_tooltip = gen_join_prussia
+		}
+	}
+	focus = {
+		id = ENG_recover_ireland
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 1
+		y = 2
+		prerequisite = {focus = ENG_the_sun_never_sets}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 113
+			add_state_claim = 135
+			add_state_claim = 134
+			create_wargoal = {
+		      type = annex_everything
+		      target = IRE
+	        }
+		}
+	}
+	focus = {
+		id = ENG_break_the_isolation
+		icon = GFX_focus_eng_global_defense
+		x = 3
+		y = 2
+		prerequisite = {focus = ENG_the_sun_never_sets}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+			has_army_manpower = {
+				size > 700000
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = overshadowed_by_france
+		}
+	}
+	focus = {
+		id = ENG_secure_swedish_imports
+		icon = GFX_focus_NOR_build_the_northern_rail
+		x = 2
+		y = 3
+		prerequisite = {focus = ENG_break_the_isolation}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = NOR
+	        }
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = SWE
+	        }
+		}
+	}
+	focus = {
+		id = ENG_cross_the_channel
+		icon = GFX_focus_BEL_belgian_special_forces
+		x = 4
+		y = 3
+		prerequisite = {focus = ENG_break_the_isolation}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = BEL
+	        }
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = HOL
+	        }
+		}
+	}
+	focus = {
+		id = ENG_one_master_of_the_anglosphere
+		icon = GFX_focus_eng_unite_the_anglosphere
+		x = 3
+		y = 4
+		prerequisite = {focus = ENG_break_the_isolation}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+		      type = puppet_wargoal_focus
+		      target = USA
+	        }
+			add_ideas = welcome_back_thirteen_colonies
+			add_state_claim = 365
+			add_state_claim = 364
+			add_state_claim = 363
+			add_state_claim = 362
+			add_state_claim = 361
+			add_state_claim = 816
+			add_state_claim = 360
+			add_state_claim = 359
+			add_state_claim = 358
+			add_state_claim = 357
+		}
+	}
+	focus = {
+		id = ENG_secure_our_puppets
+		icon = GFX_focus_eng_bring_the_dominions_back_into_the_fold
+		x = 5
+		y = 2
+		prerequisite = {focus = ENG_the_sun_never_sets}
+		relative_position_id = ENG_britain_march_on
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_puppet_of = ENG
+				}
+				add_autonomy_score = {
+					value = -500
+				}
+			}
+		}
+	}
 }

@@ -1267,8 +1267,8 @@
  francenew.48.d:0 "The people of Casablanca overthrew the governor following the announcement of the government's arrival in Tunis. Control of the region has been lost."
  francenew.48.a:0 "And they will pay for their treachery"
  ### GENERIC ###
- gen.1.t:0 "[FROM.GetName] wants to join United Workers of Europe"
- gen.1.d:0 "A new country has become socialist, and wants to join our global fight for proletarian liberation."
+ gen.1.t:0 "[FROM.GetName] wants to join our Alliance"
+ gen.1.d:0 "A new country has become friendly towards us, and wants to join our global fight."
  gen.1.a:0 "Welcome!"
  gen.1.b:0 "No."
  gen.2.t:0 "[FROM.GetName] accepts our Demand!"
