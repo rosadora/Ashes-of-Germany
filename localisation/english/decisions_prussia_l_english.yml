@@ -37,3 +37,8 @@
  ISR_raise_militias_lehi:0 "Raise Lehi Militia"
  ISR_seek_an_agreement:0 "Seek an Agreement"
  ISR_seek_a_ceasefire:0 "Seek a Ceasefire"
+ ### BRITAIN ###
+ ENG_1936_elections_desc:0 "The §Onation's policy§! remains to be determined. At a time when §Opolitical parties and forces are fragmenting§!, it's time to §Oelect a majority§! to guide our path.\n\n§OVote Projection:§!\n§gBUF§! : [?buf_pop|%]\n§2Tories§! : [?tories_pop|%]\n§YLiberals§!: [?liberal_pop|%]\n§8National Labour§!: [?nl_pop|%]\n§tLabour§!: [?labour_pop|%]\n§RWorker's Dreadnought§!: [?wd_pop|%]\n§RCommunist Party of Great Britain§!: [?cpgb_pop|%]"
+ ENG_1936_elections:0 "1936 Snap Elections!"
+ ENG_1936_election_day:0 "Election Day!"
+ ENG_new_poll:0 "New Poll"

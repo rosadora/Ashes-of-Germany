@@ -41,13 +41,815 @@
 				popularity = -0.02
 				ideology = democratic
 			}
-			
+			unlock_decision_category_tooltip = ENG_1936_elections
+
+			set_variable = {
+             var = buf_pop
+             value = party_popularity@ultra_nationalism
+			}
+			add_to_variable = {
+             var = buf_pop
+             value = party_popularity@fascism
+			}
+
+			set_variable = {
+             var = labour_pop
+             value = party_popularity@social_democracy
+			}
+
+			set_variable = {
+             var = liberal_pop
+             value = party_popularity@classical_liberalism
+			}
+			set_variable = {
+             var = nl_pop
+             value = party_popularity@social_liberalism
+			}
+
+			set_variable = {
+             var = tories_pop
+             value = party_popularity@democratic
+			}
+
+			set_variable = {
+             var = wd_pop
+             value = party_popularity@classical_marxism
+			}
+			set_variable = {
+             var = cpgb_pop
+             value = party_popularity@communism
+			}
+		}
+	}
+	focus = {
+		id = ENG_side_with_labour
+		icon = GFX_focus_por_workers_of_iberia
+		x = 1
+		y = 1
+		prerequisite = {focus = ENG_baldwin_resignation}
+		mutually_exclusive = {focus = ENG_side_with_liberals}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.025
+			add_popularity = {
+				popularity = 0.04
+				ideology = social_democracy
+			}
+		}
+	}
+	focus = {
+		id = ENG_please_left_wingers_voters
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 1
+		y = 2
+		prerequisite = {focus = ENG_side_with_labour}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				popularity = -0.04
+				ideology = classical_marxism
+			}
+		}
+	}
+	focus = {
+		id = ENG_denounce_liberal_indulgence
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		x = 1
+		y = 3
+		prerequisite = {focus = ENG_please_left_wingers_voters}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				popularity = -0.04
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity = -0.01
+				ideology = social_liberalism
+			}
+		}
+	}
+	focus = {
+		id = ENG_attack_mosley_rallies
+		icon = GFX_focus_generic_communism_anti_fascism
+		x = 2
+		y = 4
+		prerequisite = {focus = ENG_please_left_wingers_voters}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				popularity = -0.05
+				ideology = ultra_nationalism
+			}
+			add_popularity = {
+				popularity = -0.02
+				ideology = fascism
+			}
+		}
+	}
+	focus = {
+		id = ENG_side_with_liberals
+		icon = GFX_focus_generic_the_giant_wakes
+		x = -1
+		y = 1
+		prerequisite = {focus = ENG_baldwin_resignation}
+		mutually_exclusive = {focus = ENG_side_with_labour}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = new_winds
+				days = 150
+			}
+		}
+	}
+	focus = {
+		id = ENG_invest_protests
+		icon = GFX_focus_generic_workers
+		x = -1
+		y = 2
+		prerequisite = {focus = ENG_side_with_liberals}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -0.05
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ENG_promise_a_new_prosperity_era
+		icon = GFX_focus_generic_low_cost_housing
+		x = -1
+		y = 3
+		prerequisite = {focus = ENG_invest_protests}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.02
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ENG_take_part_in_the_anti_fascist_front
+		icon = GFX_focus_BEL_v_for_victory
+		x = -2
+		y = 4
+		prerequisite = {focus = ENG_invest_protests}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.075
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.02
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ENG_end_the_tory_rule
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = 0
+		y = 5
+		prerequisite = {focus = ENG_take_part_in_the_anti_fascist_front focus = ENG_attack_mosley_rallies}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = democratic
+			}
+		}
+	}
+	focus = {
+		id = ENG_labour_landslide
+		icon = GFX_goal_social_progressivism
+		x = 0
+		y = 6
+		prerequisite = {focus = ENG_end_the_tory_rule focus = ENG_tories_strike_back}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_socialist_majority_trigger_tt
+				check_variable = { labour_pop > tories_pop }
+				check_variable = { labour_pop > wd_pop }
+				check_variable = { labour_pop > cpgb_pop }
+				check_variable = { labour_pop > nl_pop }
+				check_variable = { labour_pop > liberal_pop }
+				check_variable = { labour_pop > buf_pop }
+				has_country_flag = eng_election_1936_happened
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			set_politics = {
+				ruling_party = social_democracy
+				elections_allowed = yes
+			}
+		}
+	}
+	focus = {
+		id = ENG_create_the_nhs
+		icon = GFX_focus_generic_welfare
+		x = -1
+		y = 1
+		prerequisite = {focus = ENG_labour_landslide}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democracy
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = nhs
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = ENG_dirigist_politics
+		icon = GFX_focus_DEN_limited_regulations
+		x = 0
+		y = 2
+		prerequisite = {focus = ENG_labour_landslide}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democracy
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = ENG_push_for_gender_equality
+		icon = GFX_focus_AUS_courting_the_princess_of_industry
+		x = -1
+		y = 3
+		prerequisite = {focus = ENG_dirigist_politics}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democracy
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = women_in_military
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			set_rule = {
+				can_generate_female_country_leaders = yes
+			}
+			set_rule = {
+				can_generate_female_unit_leaders = yes
+			}
+		}
+	}
+	focus = {
+		id = ENG_armed_pacifism
+		icon = GFX_goal_colombe
+		x = 1
+		y = 3
+		prerequisite = {focus = ENG_dirigist_politics}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democracy
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_manpower = 100000
+		}
+	}
+	focus = {
+		id = ENG_the_socdem_british_model
+		icon = GFX_goal_40_hours_a_week
+		x = 0
+		y = 4
+		prerequisite = {focus = ENG_armed_pacifism}
+		prerequisite = {focus = ENG_push_for_gender_equality}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democracy
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = british_socialism
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = ENG_end_the_utopia
+		icon = GFX_focus_GER_gebirgsjager
+		x = 4
+		y = 5
+		prerequisite = {focus = ENG_the_socdem_british_model focus = ENG_british_liberalism}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = ENG_the_war_to_end_all_wars
+		}
+	}
+	focus = {
+		id = ENG_ban_the_buf
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 2
+		y = 1
+		prerequisite = {focus = ENG_labour_landslide focus = ENG_liberal_victory}
+		relative_position_id = ENG_labour_landslide
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democracy
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = mosley_ascendancy
+		}
+	}
+	focus = {
+		id = ENG_tories_majority
+		icon = GFX_goal_generic_defence
+		x = 8
+		y = 6
+		prerequisite = {focus = ENG_end_the_tory_rule focus = ENG_tories_strike_back}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = ENG_tories_strike_back
+			custom_trigger_tooltip = {
+				tooltip = ENG_tories_majority_trigger_tt
+				check_variable = { tories_pop > labour_pop }
+				check_variable = { tories_pop > wd_pop }
+				check_variable = { tories_pop > cpgb_pop }
+				check_variable = { tories_pop > nl_pop }
+				check_variable = { tories_pop > liberal_pop }
+				check_variable = { tories_pop > buf_pop }
+				has_country_flag = eng_election_1936_happened
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+	focus = {
+		id = ENG_liberal_victory
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 6
+		prerequisite = {focus = ENG_end_the_tory_rule focus = ENG_tories_strike_back}
+		relative_position_id = ENG_baldwin_resignation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_liberal_majority_trigger_tt
+				check_variable = { liberal_pop > labour_pop }
+				check_variable = { liberal_pop > wd_pop }
+				check_variable = { liberal_pop > cpgb_pop }
+				check_variable = { liberal_pop > nl_pop }
+				check_variable = { liberal_pop > tories_pop }
+				check_variable = { liberal_pop > buf_pop }
+				has_country_flag = eng_election_1936_happened
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			set_politics = {
+				ruling_party = classical_liberalism
+				elections_allowed = yes
+			}
+		}
+	}
+	focus = {
+		id = ENG_liberal_deregulation
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 0
+		y = 1
+		prerequisite = {focus = ENG_liberal_victory}
+		relative_position_id = ENG_liberal_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = deregulation
+		}
+	}
+	focus = {
+		id = ENG_the_empire_of_trade
+		icon = GFX_focus_generic_british_trade
+		x = -1
+		y = 2
+		prerequisite = {focus = ENG_liberal_deregulation}
+		relative_position_id = ENG_liberal_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = empire_of_trade
+		}
+	}
+	focus = {
+		id = ENG_fruits_of_liberalism
+		icon = GFX_focus_BEL_engine_of_the_economy
+		x = -1
+		y = 3
+		prerequisite = {focus = ENG_the_empire_of_trade}
+		relative_position_id = ENG_liberal_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = 0.075
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = ENG_ensure_individual_freedom
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 1
+		y = 2
+		prerequisite = {focus = ENG_liberal_deregulation}
+		relative_position_id = ENG_liberal_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = ENG_encourage_business
+		icon = GFX_focus_GER_wirtschaftswunder
+		x = 1
+		y = 3
+		prerequisite = {focus = ENG_ensure_individual_freedom}
+		relative_position_id = ENG_liberal_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = deregulation
+				add_idea = deregulation2
+			}
+		}
+	}
+	focus = {
+		id = ENG_british_liberalism
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 4
+		prerequisite = {focus = ENG_encourage_business}
+		prerequisite = {focus = ENG_fruits_of_liberalism}
+		relative_position_id = ENG_liberal_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+				popularity = 0.05
+				ideology = classical_liberalism
+			}
+			add_popularity = {
+				popularity = 0.02
+				ideology = social_liberalism
+			}
 		}
 	}
 	focus = {
 		id = ENG_stay_in_office
 		icon = GFX_goal_baldwin_stay
-		x = 17
+		x = 18
 		y = 0
 		prerequisite = {}
 		mutually_exclusive = {focus = ENG_baldwin_resignation}
@@ -258,6 +1060,38 @@
 				remove_idea = mosley_ascendancy2
 				add_idea = marginalized_buf
 			}
+		}
+	}
+	focus = {
+		id = ENG_tories_strike_back
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 2
+		prerequisite = {focus = ENG_back_off_a_bit}
+		prerequisite = {focus = ENG_end_all_dialogue_with_buf}
+		mutually_exclusive = {}
+		relative_position_id = ENG_fight_extremism
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			NOT = {
+				has_country_flag = sided_with_mosley
+				has_country_flag = sided_with_socialists
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			popularity = 0.075
+			ideology = democratic
+		 }
 		}
 	}
 	focus = {
@@ -703,6 +1537,15 @@
 				remove_idea = new_britain
 				add_idea = new_britain2
 			}
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			set_rule = {
+				can_generate_female_country_leaders = yes
+			}
+			set_rule = {
+				can_generate_female_unit_leaders = yes
+			}
 		}
 	}
 	focus = {
@@ -940,8 +1783,7 @@
 		icon = GFX_focus_eng_the_sun_never_sets
 		x = 0
 		y = 3
-		prerequisite = {focus = ENG_end_the_circus}
-		prerequisite = {focus = ENG_monarchist_compromise}
+		prerequisite = {focus = ENG_end_the_circus focus = ENG_monarchist_compromise}
 		relative_position_id = ENG_order_prevails
 		cost = 7
 		ai_will_do = {
@@ -1181,6 +2023,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
+			dismantle_faction = yes
 			random_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
