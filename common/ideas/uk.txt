@@ -559,5 +559,98 @@ ideas = {
 				min_export = 0.1
 			}
 		}
+		law_on_extreme_poverty = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_government = democratic
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.075
+				stability_factor = 0.05
+			}
+		}
+		innovation_home = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_government = democratic
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.075
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		corporatism_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_government = democratic
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.075
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		priority_to_home = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+				has_government = communism
+				has_government = libertarian_socialism
+				has_government = classical_marxism
+			    }
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.1
+			}
+		}
 	}
 }

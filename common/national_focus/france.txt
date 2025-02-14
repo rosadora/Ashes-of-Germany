@@ -6455,7 +6455,7 @@
 		completion_reward = {
 			add_political_power = -200
 			add_state_core = 460
-			add_state_core = 460
+			add_state_core = 459
 			add_state_core = 458
 			add_state_core = 461
 			add_state_core = 462

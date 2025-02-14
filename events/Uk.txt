@@ -330,3 +330,68 @@ country_event = { #The Fate of Scotland and Wales
         }
 	}
 }
+
+country_event = { #Alliance with Ethiopia (Request)
+	id = eng.10
+	title = eng.10.t
+	desc = eng.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = eng.10.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			add_to_faction = ETH
+			country_event = {
+			  id = eng.11
+			  days = 2
+		    }
+		}
+	}
+	option = { #Deny
+		name = eng.10.b
+		ai_chance = {
+			base = 0
+		}
+		ENG = {
+		country_event = {
+			id = eng.12
+			days = 2
+		}
+		}
+	}
+}
+country_event = { #Alliance with Ethiopia (Accept)
+	id = eng.11
+	title = eng.11.t
+	desc = eng.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = eng.11.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Alliance with Ethiopia (Denies)
+	id = eng.12
+	title = eng.12.t
+	desc = eng.12.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Denies
+		name = eng.12.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
