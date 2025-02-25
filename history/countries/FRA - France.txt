@@ -24,31 +24,28 @@ starting_train_buffer = 2
 
 set_autonomy = {
 	target = ALG
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = french_colonial_administration
 }
 
 set_autonomy = {
 	target = SEN
-	autonomous_state = autonomy_integrated_puppet
-}
-
-set_autonomy = {
-	target = CAM
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = french_colonial_administration
 }
 
 set_autonomy = {
 	target = CMR
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = french_colonial_administration
 }
 
 set_autonomy = {
 	target = VIN
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = french_colonial_administration
 }
 
-
-puppet = MOR
+set_autonomy = {
+	target = MOR
+	autonomous_state = protectorate
+}
 
 set_autonomy = {
 	target = TUN

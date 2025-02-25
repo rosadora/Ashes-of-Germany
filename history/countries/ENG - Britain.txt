@@ -176,116 +176,109 @@ add_ideas = {
 
 set_convoys = 800
 
-puppet = EGY
-puppet = RAJ
-puppet = CAN
-puppet = AUS
+set_autonomy = {
+	target = AST
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = CAN
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = RAJ
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = EGY
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = SAF
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = NZL
+	autonomous_state = autonomy_dominion
+}
 
 set_autonomy = {
 	target = SUD
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = KEN
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = UGA
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = MLW
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = ZAM
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = ZIM
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = BOT
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = SOM
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = GAM
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = NGA
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = SIE
-	autonomous_state = autonomy_integrated_puppet
+	autonomous_state = british_crown_colonies
 }
 
 set_autonomy = {
 	target = GHA
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = MAL
+	autonomous_state = autonomy_integrated_puppet
+}
+set_autonomy = {
+	target = PAL
+	autonomous_state = autonomy_integrated_puppet
+}
+set_autonomy = {
+	target = JOR
 	autonomous_state = autonomy_integrated_puppet
 }
 
-# DIPLOMACY
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = MAL
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = PAL
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = JOR
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = CAN
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = SAF
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = AST
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = NZL
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = MAL
-		puppet = RAJ
-	}
-}
 
 
 if = {

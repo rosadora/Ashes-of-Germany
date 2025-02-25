@@ -1494,4 +1494,19 @@ spriteTypes = {
 		name = "GFX_Herbert_Samuel_small"
 		texturefile = "gfx/leaders/ENG/Herbert_Samuel_small.dds"
 	}
+
+	spriteType = {
+        name = "GFX_british_crown_colonies_icon"
+        textureFile = "gfx/interface/autonomy/british_crown_colonies.dds"
+    }
+
+	spriteType = {
+        name = "GFX_french_colonial_administration_icon"
+        textureFile = "gfx/interface/autonomy/french_colonial_administration.dds"
+    }
+
+	spriteType = {
+        name = "GFX_protectorate_icon"
+        textureFile = "gfx/interface/autonomy/protectorate.dds"
+    }
 }

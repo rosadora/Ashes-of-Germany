@@ -1344,3 +1344,7 @@
  hava_nagila:0 "§YHava Nagila§!"
  hava_nagila2:0 "§YHava Nagila§!"
  western_aid:0 "Western Aid"
+ ### AUTONOMOUS STATES ###
+ british_crown_colonies:0 "British Crown Colony"
+ french_colonial_administration:0 "French Colonial Administration"
+ protectorate:0 "Protectorate"
