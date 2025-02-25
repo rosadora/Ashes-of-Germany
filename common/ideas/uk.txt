@@ -87,7 +87,7 @@ ideas = {
 			picture = SOV_politicized_military_keep_ccp_sov_compatibility
 
 			available = {
-				NOT = {
+				OR = {
 					has_government = ultra_nationalism
 					has_government = fascism 
 				}
@@ -650,6 +650,33 @@ ideas = {
 			
 			modifier = {
 				global_building_slots_factor = 0.1
+			}
+		}
+		the_socialist_factory_of_the_world = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+				has_government = communism
+				has_government = libertarian_socialism
+				has_government = classical_marxism
+			    }
+			}
+
+			picture = GER_wunderwaffen
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.25
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
 			}
 		}
 	}
