@@ -1,0 +1,378 @@
+
+JAP_1936_elections = {
+
+	JAP_1936_election_day = {
+
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 105
+		fire_only_once = yes
+
+		activation = {
+          NOT = {
+			has_global_flag = japanese_1936_elections
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = {
+				id = jap.1
+				days = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_invade_china = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+			date > 1937.05.01
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			add_timed_idea = {
+				idea = JAP_ichi_go 
+				days = 450
+			}
+         create_wargoal = {
+            target = CHI
+            type = take_state_focus
+            generator = { 608 614 597 }
+         }
+		 create_wargoal = {
+            target = SHX
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = SHX
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = YUN
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = GXC
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = XSM
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = PRC
+            type = take_state_focus
+         }
+        }
+    }
+	JAP_recover_far_eastern_republic = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+			date > 1938.01.01
+			NOT = {
+				FER = {
+					is_puppet_of = JAP
+				}
+			}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = FER
+            type = puppet_wargoal_focus
+         }
+        }
+    }
+	JAP_protect_siberia = {
+
+		icon = GFX_decision_infiltrate_state
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+			date > 1939.01.01
+				FER = {
+					is_puppet_of = JAP
+				}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = SOV
+            type = puppet_wargoal_focus
+         }
+		 create_wargoal = {
+            target = USR
+            type = puppet_wargoal_focus
+         }
+        }
+    }
+	JAP_secure_southern_resources = {
+
+		icon = GFX_decision_rubber
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			date > 1939.01.01
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = VIN
+            type = puppet_wargoal_focus
+         }
+		 create_wargoal = {
+            target = MAL
+            type = puppet_wargoal_focus
+         }
+		 create_wargoal = {
+            target = INS
+            type = puppet_wargoal_focus
+         }
+        }
+    }
+	JAP_pacific_dominance = {
+
+		icon = GFX_decision_generic_coastal_fortification
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = democratic
+			}
+			date > 1941.01.01
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = USA
+            type = puppet_wargoal_focus
+         }
+		 create_wargoal = {
+            target = PHI
+            type = puppet_wargoal_focus
+         }
+        }
+    }
+	JAP_ally_communist_china = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+			has_civil_war = no
+			country_exists = PRC
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_faction = asian_international
+		 PRC = {
+			country_event = {
+				id = jap.2
+				days = 1
+			}
+		 }
+        }
+    }
+	JAP_joint_attack = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+        }
+		available = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+			has_civil_war = no
+			country_exists = PRC
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = CHI
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = SHX
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = SHX
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = YUN
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = GXC
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = XSM
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = PRC
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = MAN
+            type = take_state_focus
+         }
+		 create_wargoal = {
+            target = MEN
+            type = take_state_focus
+         }
+        }
+    }
+}

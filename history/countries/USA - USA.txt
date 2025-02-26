@@ -182,6 +182,11 @@ add_ideas = {
 	home_of_the_free
 }
 
+add_timed_idea = {
+	idea = great_depression
+	days = 1500
+}
+
 
 # DIPLOMACY
 set_autonomy = {

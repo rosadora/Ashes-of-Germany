@@ -143,3 +143,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "lets_do_our_best"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

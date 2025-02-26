@@ -1,0 +1,163 @@
+﻿###########################
+# Japanese Events
+###########################
+
+add_namespace = jap
+
+# Japanese elections
+country_event = {
+	id = jap.1
+	title = jap.1.t
+	desc = jap.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #Conservative Victory
+		name = jap.1.a
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = democratic 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+	}
+	option = { #Liberal Victory
+		name = jap.1.b
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = social_liberalism 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.15
+		}
+	}
+	option = { #Officiers Coup
+		name = jap.1.c
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = fascism 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.35
+		}
+	}
+	option = { #Socialists starts civil war
+		name = jap.1.e
+		ai_chance = {
+			base = 50
+		}
+				 set_popularities = {
+	             fascism = 6
+	             ultra_nationalism = 11
+	             democratic = 1
+	             classical_liberalism = 12
+	             social_liberalism = 4
+	             social_democracy = 22
+	             classical_marxism = 34
+	             libertarian_socialism = 3
+	             communism = 7
+                }
+				 set_cosmetic_tag = JAP_SOC
+		    start_civil_war = {
+				ruling_party = classical_marxism
+				ideology = fascism
+				size = 0.4
+				states = {534 535 282 533 536 555 537 655 525 527 609 745}
+				hidden_effect = {
+                }
+			}
+			remove_ideas = JAP_militarism
+			end_puppet = MAN
+			end_puppet = MEN
+			news_event = {
+				id = news.3079
+				days = 1
+			}
+	}
+}
+
+# China-Japan Socialist Alliance (Request)
+country_event = {
+	id = jap.2
+	title = jap.2.t
+	desc = jap.2.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+	
+	option = { #Accepts
+		name = jap.2.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			add_to_faction = PRC
+			country_event = {
+				id = jap.3
+				days = 1
+			}
+		}
+	}
+	option = { #Denies
+		name = jap.2.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.4
+				days = 1
+			}
+		}
+	}
+}
+# China-Japan Socialist Alliance (Accepts)
+country_event = {
+	id = jap.3
+	title = jap.3.t
+	desc = jap.3.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.3.a
+		ai_chance = {
+			base = 100
+		}
+		PRC = {
+			transfer_state = 609
+			transfer_state = 745
+		}
+	}
+}
+# China-Japan Socialist Alliance (Denies)
+country_event = {
+	id = jap.4
+	title = jap.4.t
+	desc = jap.4.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.4.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

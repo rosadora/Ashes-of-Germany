@@ -1428,3 +1428,23 @@ news_event = { #Irish Unification
 		name = news.3078.a
 	}
 }
+news_event = { #Japanese Civil War
+	id = news.3079
+	title = news.3079.t
+	desc = news.3079.d
+	picture = GFX_news_event_japanese_parade
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = lets_do_our_best
+		}
+	}
+	
+	option = {
+		name = news.3079.a
+	}
+}

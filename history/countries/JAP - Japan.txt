@@ -1487,4 +1487,52 @@ if = {
 			}
 		}	
 	}
+create_country_leader = {
+                 name = "Yamakawa Kikue"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+                 expire = "1965.1.1"
+                 ideology = classical_marxism_category
+                 traits = {
+					Feminist
+                 }
+			}
+create_country_leader = {
+                 name = "Yamakawa Kikue"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+                 expire = "1965.1.1"
+                 ideology = libertarian_socialism_category
+                 traits = {
+					Feminist
+                 }
+			}
+create_country_leader = {
+                 name = "Yamakawa Kikue"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+                 expire = "1965.1.1"
+                 ideology = marxism
+                 traits = {
+					Feminist
+                 }
+			}
+create_country_leader = {
+                 name = "Machida Chūji"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Machida_Chuji.dds"
+                 expire = "1965.1.1"
+                 ideology = social_liberalism_category
+                 traits = {
+                 }
+			}
+create_country_leader = {
+                 name = "Machida Chūji"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Machida_Chuji.dds"
+                 expire = "1965.1.1"
+                 ideology = classical_liberalism_category
+                 traits = {
+                 }
+			}
 	
