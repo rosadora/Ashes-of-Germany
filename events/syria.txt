@@ -247,3 +247,145 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = syria.7
+	title = syria.7.t
+	desc = syria.7.d
+	picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.7.a
+		ai_chance = {
+			factor = 20
+		}
+		SYR = {
+			country_event = {
+				id = syria.8
+				days = 1
+			}
+		}
+	}
+	option = { 
+		name = syria.7.b
+		ai_chance = {
+			factor = 80
+		}
+		SYR = {
+			country_event = {
+				id = syria.9
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = syria.8
+	title = syria.8.t
+	desc = syria.8.d
+	picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.8.a
+		ai_chance = {
+			factor = 80
+		}
+		create_wargoal = {
+            target = PAL
+            type = annex_everything
+        }
+	}
+}
+country_event = {
+	id = syria.9
+	title = syria.9.t
+	desc = syria.9.d
+	picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.9.a
+		ai_chance = {
+			factor = 80
+		}
+		annex_country = {
+            target = PAL
+            transfer_troops = yes
+        }
+	}
+}
+country_event = {
+	id = syria.10
+	title = syria.10.t
+	desc = syria.10.d
+	picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.10.a
+		ai_chance = {
+			factor = 20
+		}
+		SYR = {
+			country_event = {
+				id = syria.11
+				days = 1
+			}
+		}
+	}
+	option = { 
+		name = syria.10.b
+		ai_chance = {
+			factor = 80
+		}
+		SYR = {
+			country_event = {
+				id = syria.12
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = syria.11
+	title = syria.11.t
+	desc = syria.11.d
+	picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.11.a
+		ai_chance = {
+			factor = 80
+		}
+		create_wargoal = {
+            target = JOR
+            type = annex_everything
+        }
+	}
+}
+country_event = {
+	id = syria.12
+	title = syria.12.t
+	desc = syria.12.d
+	picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+	option = { 
+		name = syria.12.a
+		ai_chance = {
+			factor = 80
+		}
+		annex_country = {
+            target = JOR
+            transfer_troops = yes
+        }
+	}
+}

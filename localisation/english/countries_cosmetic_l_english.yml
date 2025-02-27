@@ -1674,3 +1674,14 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  CRO_YUG_DEF:0 "Yugoslavia"
  CRO_YUG_ADJ:0 "Yugoslavian"
 
+ SYR_HAS_neutrality:0 "Hashemite Kingdom"
+ SYR_HAS_neutrality_DEF:0 "The Hashemite Kingdom"
+ SYR_HAS_neutrality_ADJ:0 "Hashemite"
+
+ SYR_SSN_fascism:0 "Greater Syria"
+ SYR_SSN_fascism_DEF:0 "The Greater Syria"
+ SYR_SSN_fascism_ADJ:0 "Syrian"
+ SYR_SSN_ultra_nationalism:0 "Greater Syria"
+ SYR_SSN_ultra_nationalism_DEF:0 "The Greater Syria"
+ SYR_SSN_ultra_nationalism_ADJ:0 "Syrian"
+

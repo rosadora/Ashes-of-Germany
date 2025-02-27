@@ -38,6 +38,7 @@ gen_pick_a_side = {
 		visible = {
 			OR = {
 				has_completed_focus = ENG_new_diplomacy
+				has_completed_focus = SYR_join_the_european_internationale
 			}
 			is_in_faction = no
 		}
@@ -133,6 +134,7 @@ gen_pick_a_side = {
 		visible = {
 			OR = {
 				has_completed_focus = ENG_the_sun_never_sets
+				has_completed_focus = SYR_saadbreak_isolation
 			}
 			is_in_faction = no
 		}
@@ -187,6 +189,8 @@ gen_pick_a_side = {
 		visible = {
 			OR = {
 				has_completed_focus = ENG_the_sun_never_sets
+				has_completed_focus = SYR_new_alignement
+				has_completed_focus = SYR_saadbreak_isolation
 			}
 			is_in_faction = no
 		}

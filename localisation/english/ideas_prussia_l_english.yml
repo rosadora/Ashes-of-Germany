@@ -1300,6 +1300,9 @@
  empire_of_trade:0 "The Empire of Trade"
  defense_of_the_mainland:0 "Defense of the Mainland"
  in_defense_of_the_revolution:0 "Defend the Revolution"
+ king_of_syria:0 "King of Syria"
+ classical_marxism_acceptance:0 "Acceptance of Classical-Marxist Diplomacy"
+ libertarian_socialism_acceptance:0 "Acceptance of Libertarian-Socialist Diplomacy"
  ### SYRIA ###
  unstable_union:0 "Unstable Union"
  unstable_union_desc:0 "The French mandate imposed on our country encourages nationalist movements by forcing communities together and pitting them against each other. Whether in Lebanon, or in the Druze, Alawite or Kurdish territories, rivalries deepened as nationalism grew stronger. This leads to regular revolts, particularly in Lebanon, which is difficult to administer from Syria."

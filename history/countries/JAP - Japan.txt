@@ -1498,9 +1498,9 @@ create_country_leader = {
                  }
 			}
 create_country_leader = {
-                 name = "Yamakawa Kikue"
+                 name = "Itō Noe"
                  desc = ""
-	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+	             picture = "gfx/leaders/JAP/ito_noe.dds"
                  expire = "1965.1.1"
                  ideology = libertarian_socialism_category
                  traits = {

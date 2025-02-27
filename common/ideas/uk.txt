@@ -735,5 +735,44 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
+		air_land_coordination = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.05
+				army_org_factor = 0.05
+				air_superiority_bonus_in_combat = 0.075
+			}
+		}
+		air_land_coordination2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.05
+				army_org_factor = 0.075
+				army_morale_factor = 0.1
+				air_superiority_bonus_in_combat = 0.075
+			}
+		}
 	}
 }

@@ -233,7 +233,7 @@ country_event = { #Socialist Revolution
 		start_civil_war = {
       ruling_party = classical_marxism
       ideology = fascism
-      size = 0.4
+      size = 0.3
       capital = 132
       states = {
         128 132 130 129 122 123 338 931 131 121 133 136 120 932 119

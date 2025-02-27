@@ -43,6 +43,270 @@ ideas = {
 				conscription_factor = -0.075
 			}
 		}
+		saadeh_syria = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.075
+				political_power_factor = 0.1
+				required_garrison_factor = 0.05
+				resistance_target = 0.1
+				conscription = 0.03
+			}
+		}
+		saadeh_syria2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				conscription = 0.05
+			}
+		}
+		syrian_free_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 300
+				conscription = 0.02
+			}
+		}
+		militarism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.075
+				conscription_factor = 0.15
+				weekly_casualties_war_support = 0.006
+			}
+		}
+		federative_socialist_republic_of_syria = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_limited_democratic_principles
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				conscription_factor = -0.075
+			}
+		}
+		federative_socialist_republic_of_arabia = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_limited_democratic_principles
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				conscription_factor = 0.15
+				compliance_gain = 0.01
+			}
+		}
+		hashemite_in_charge = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_limited_democratic_principles
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.25
+				trade_opinion_factor = 0.4
+				classical_marxism_acceptance = -50
+				libertarian_socialism_acceptance = -50
+				communism_acceptance = -50
+				fascism_acceptance = -50
+			}
+		}
+		hashemite_kingdom = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_limited_democratic_principles
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.25
+				trade_opinion_factor = 0.6
+				resistance_target = -0.1
+				offence = 0.05
+				classical_marxism_acceptance = -50
+				libertarian_socialism_acceptance = -50
+				communism_acceptance = -50
+				fascism_acceptance = -50
+			}
+		}
+		black_gold = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fuel_reserves
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.1
+				trade_opinion_factor = 0.2
+			}
+		}
+		black_gold2 = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fuel_reserves
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.2
+				trade_opinion_factor = 0.2
+			}
+		}
+		anti_hashemite_spirit = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_army_of_aggression_focus
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = IRQ
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+		}
 		high_illiteracy = {
 			
 			allowed = {
