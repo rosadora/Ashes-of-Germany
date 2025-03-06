@@ -425,7 +425,7 @@
 	}
 	focus = {
 		id = PAL_united_arab_front
-		icon = GFX_focus_GER_party_chancellor_hess
+		icon = GFX_goal_generic_national_unity
 		x = -2
 		y = 3
 		prerequisite = {focus = PAL_the_invisible_arsenal}
@@ -499,7 +499,7 @@
 			}
 		}
 	}
-	focus = {
+	focus = { ## OUTDATED ##
 		id = PAL_we_hold
 		icon = GFX_goal_generic_military_sphere
 		x = 20
@@ -507,6 +507,9 @@
 		prerequisite = {}
 		mutually_exclusive = {focus = PAL_settler_expelled}
 		cost = 3
+		allow_branch = {
+			always = no
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -532,7 +535,7 @@
 		y = 0
 		prerequisite = {}
 		mutually_exclusive = {focus = PAL_we_hold}
-		cost = 3
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -549,6 +552,374 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = PAL_breakup_of_the_national_front
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_settler_expelled}
+		mutually_exclusive = {focus = PAL_consolidate_socialist_government}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -100
+			create_country_leader = {
+                 name = "Mohammed Amin al-Husseini"
+                 desc = ""
+	             picture = "gfx/leaders/PAL/Mohammed_Amin_al_Husseini.dds"
+                 expire = "1965.1.1"
+                 ideology = centrism
+                 traits = {
+                 }
+			}
+		}
+	}
+	focus = {
+		id = PAL_consolidate_socialist_government
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_settler_expelled}
+		mutually_exclusive = {focus = PAL_breakup_of_the_national_front}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = PAL_palestinian_arab_party
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_breakup_of_the_national_front}
+		mutually_exclusive = {focus = PAL_hizb_al_islah}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.25
+			}
+		}
+	}
+	focus = {
+		id = PAL_hizb_al_islah
+		icon = GFX_goal_social_progressivism
+		x = -4
+		y = 2
+		prerequisite = {focus = PAL_breakup_of_the_national_front}
+		mutually_exclusive = {focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democracy
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.03
+			}
+		}
+	}
+	focus = {
+		id = PAL_against_military_cheef_for_the_people
+		icon = GFX_goal_social_progressivism
+		x = -2
+		y = 1
+		prerequisite = {focus = PAL_hizb_al_islah}
+		relative_position_id = PAL_hizb_al_islah
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = PAL_desegregate_schools
+		icon = GFX_goal_social_progressivism
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_hizb_al_islah focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_hizb_al_islah
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = high_illiteracy
+				add_idea = massive_illiteracy
+			}
+		}
+	}
+	focus = {
+		id = PAL_allow_women_in_the_workforce
+		icon = GFX_goal_social_progressivism
+		x = -2
+		y = 1
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = women_in_the_workforce
+		}
+	}
+	focus = {
+		id = PAL_subside_palestinian_independent_press
+		icon = GFX_goal_social_progressivism
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = PAL_fight_for_meritocracy
+		icon = GFX_goal_social_progressivism
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		prerequisite = {focus = PAL_desegregate_schools}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = massive_illiteracy
+				add_idea = towards_meritocracy
+			}
+		}
+	}
+	focus = {
+		id = PAL_protect_jewish_minorities
+		icon = GFX_goal_social_progressivism
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = protected_jewish_minorities
+		}
+	}
+	focus = {
+		id = PAL_protect_jewish_minorities
+		icon = GFX_goal_social_progressivism
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = protected_jewish_minorities
 		}
 	}
 }

@@ -25,6 +25,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
+
+add_ideas = {
+	high_illiteracy
+}
 set_popularities = {
 	fascism = 2
 	ultra_nationalism = 10

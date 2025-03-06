@@ -7152,8 +7152,6 @@
 					remove_dynamic_modifier = { modifier = german_speakers_minority_cze_national_unity }
 				}
 			}
-			remove_state_core = 69
-			remove_state_core = 74
 
 			69 = {
 				add_manpower = -300000

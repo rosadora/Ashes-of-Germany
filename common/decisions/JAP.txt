@@ -70,32 +70,31 @@ JAP_1936_elections = {
 			}
          create_wargoal = {
             target = CHI
-            type = take_state_focus
-            generator = { 608 614 597 }
+            type = annex_everything
          }
 		 create_wargoal = {
             target = SHX
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = SHX
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = YUN
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = GXC
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = XSM
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = PRC
-            type = take_state_focus
+            type = annex_everything
          }
         }
     }
@@ -135,7 +134,7 @@ JAP_1936_elections = {
         complete_effect = {
          create_wargoal = {
             target = FER
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
         }
     }
@@ -173,11 +172,11 @@ JAP_1936_elections = {
         complete_effect = {
          create_wargoal = {
             target = SOV
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = USR
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
         }
     }
@@ -214,15 +213,15 @@ JAP_1936_elections = {
         complete_effect = {
          create_wargoal = {
             target = VIN
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = MAL
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = INS
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
         }
     }
@@ -260,11 +259,11 @@ JAP_1936_elections = {
         complete_effect = {
          create_wargoal = {
             target = USA
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = PHI
-            type = puppet_wargoal_focus
+            type = annex_everything
          }
         }
     }
@@ -339,39 +338,39 @@ JAP_1936_elections = {
         complete_effect = {
          create_wargoal = {
             target = CHI
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = SHX
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = SHX
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = YUN
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = GXC
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = XSM
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = PRC
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = MAN
-            type = take_state_focus
+            type = annex_everything
          }
 		 create_wargoal = {
             target = MEN
-            type = take_state_focus
+            type = annex_everything
          }
         }
     }

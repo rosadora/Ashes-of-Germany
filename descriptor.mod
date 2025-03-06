@@ -1,4 +1,4 @@
-version="1.15.4"
+version="1.16.0"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -15,5 +15,6 @@ replace_path="common/decisions"
 replace_path="common/national_focus"
 replace_path="history/states"
 replace_path="map"
-supported_version="1.15.4"
+replace_path="map/strategicregions"
+supported_version="1.16.0"
 remote_file_id="3434132774"

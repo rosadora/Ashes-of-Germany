@@ -156,14 +156,6 @@ country_event = {
 			popularity = -0.1
 		}
 		set_country_flag = france_said_no_to_negociations_syr
-		hidden_effect = {
-			FRA = {
-		 country_event = {
-			id = syria.5
-			days = 2
-		    }
-			}
-		}
 	}
 }
 country_event = {

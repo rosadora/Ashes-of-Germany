@@ -49,6 +49,54 @@ units = {
 		start_equipment_factor = 0.5
 
 	}
+	division = {
+		#name = "1 Shuebat Alharas"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4111
+		division_template = "Shuebat Alharas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "2 Shuebat Alharas"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12473
+		division_template = "Shuebat Alharas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Shuebat Alharas"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4111
+		division_template = "Shuebat Alharas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "2 Shuebat Alharas"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12473
+		division_template = "Shuebat Alharas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
 }
 
 

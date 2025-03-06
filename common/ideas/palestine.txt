@@ -400,5 +400,23 @@ ideas = {
 			    ai_focus_aggressive_factor = 0.5
 			}
 		}
+		protected_jewish_minorities = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.5
+				weekly_manpower = 200
+			}
+		}
 	}
 }

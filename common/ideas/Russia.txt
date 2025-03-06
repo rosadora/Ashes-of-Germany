@@ -1014,25 +1014,6 @@ ideas = {
 				production_speed_buildings_factor = 0.35
 			}
 		}
-		RUS_kulaks_idea = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = POL_looming_peasants_strike
-
-			removal_cost = -1
-
-			
-			modifier = {
-				stability_factor = -0.2
-				political_power_factor = -0.25
-			}
-		}
 		arrestation_of_the_kulaks = {
 			
 			allowed = {
