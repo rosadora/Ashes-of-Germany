@@ -39,8 +39,43 @@ gen_pick_a_side = {
 			OR = {
 				has_completed_focus = ENG_new_diplomacy
 				has_completed_focus = SYR_join_the_european_internationale
+				has_completed_focus = ideological_fanaticism
 			}
+			OR = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+			OR = {
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = SHL
+				tag = MEK
+				tag = SAX
+				tag = SWI
+				tag = SPR
+				tag = POR
+				tag = YUG
+				tag = ALB
+				tag = GRE
+				tag = ROM
+				tag = TUR
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = SWE
+				tag = NOR
+				tag = FIN
+				tag = DEN
+				tag = ENG
+				tag = IRE
+				tag = RCO
+				tag = UKR
+				tag = BLR
+			        }
 			is_in_faction = no
+			is_puppet = no
 		}
 
 		cancel_trigger = {
@@ -135,8 +170,38 @@ gen_pick_a_side = {
 			OR = {
 				has_completed_focus = ENG_the_sun_never_sets
 				has_completed_focus = SYR_break_isolation
+				has_completed_focus = ideological_fanaticism
 			}
+				OR = {
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = SHL
+				tag = MEK
+				tag = SAX
+				tag = SWI
+				tag = SPR
+				tag = POR
+				tag = YUG
+				tag = ALB
+				tag = GRE
+				tag = ROM
+				tag = TUR
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = SWE
+				tag = NOR
+				tag = FIN
+				tag = DEN
+				tag = ENG
+				tag = IRE
+				tag = RCO
+				tag = UKR
+				tag = BLR
+			        }
 			is_in_faction = no
+			is_puppet = no
 		}
 
 		cancel_trigger = {
@@ -191,8 +256,39 @@ gen_pick_a_side = {
 				has_completed_focus = ENG_the_sun_never_sets
 				has_completed_focus = SYR_new_alignement
 				has_completed_focus = SYR_break_isolation
+				has_completed_focus = why_we_fight
+				has_completed_focus = ideological_fanaticism
 			}
+			OR = {
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = SHL
+				tag = MEK
+				tag = SAX
+				tag = SWI
+				tag = SPR
+				tag = POR
+				tag = YUG
+				tag = ALB
+				tag = GRE
+				tag = ROM
+				tag = TUR
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = SWE
+				tag = NOR
+				tag = FIN
+				tag = DEN
+				tag = ENG
+				tag = IRE
+				tag = RCO
+				tag = UKR
+				tag = BLR
+			        }
 			is_in_faction = no
+			is_puppet = no
 		}
 
 		cancel_trigger = {
@@ -220,6 +316,561 @@ gen_pick_a_side = {
 				}
 			    }
 			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	gen_join_france = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			OR = {
+				FRA = {
+					is_faction_leader = yes
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = why_we_fight
+			}
+			OR = {
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = SHL
+				tag = MEK
+				tag = SAX
+				tag = SWI
+				tag = SPR
+				tag = POR
+				tag = YUG
+				tag = ALB
+				tag = GRE
+				tag = ROM
+				tag = TUR
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = SWE
+				tag = NOR
+				tag = FIN
+				tag = DEN
+				tag = ENG
+				tag = IRE
+				tag = RCO
+				tag = UKR
+				tag = BLR
+			        }
+			is_in_faction = no
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			IF = {
+				limit = {
+					FRA = {
+					is_faction_leader = yes
+				    }
+				}
+				FRA = {
+				country_event = {
+					id = gen.1
+					days = 1
+				}
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	gen_join_japan = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			OR = {
+				JAP = {
+					OR = {
+					has_government = ultra_nationalism
+					has_government = fascism
+					}
+					is_faction_leader = yes
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = ideological_fanaticism
+			}
+				OR = {
+				tag = TIB
+				tag = SIA
+				tag = RAJ
+				tag = NEP
+				tag = BHU
+				tag = MAL
+				tag = INS
+				tag = PHI
+				tag = AST
+				tag = NZL
+				tag = MON
+			    }
+			is_in_faction = no
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			IF = {
+				limit = {
+					JAP = {
+					OR = {
+					has_government = ultra_nationalism
+					has_government = fascism
+					}
+					is_faction_leader = yes
+				}
+				}
+				JAP = {
+				country_event = {
+					id = gen.1
+					days = 1
+				}
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+gen_war_of_unification = {
+
+	strike_wurttemberg = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = WUR
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = RCO
+				original_tag = SPF
+				original_tag = BAY
+				original_tag = HAN
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = PRS
+				original_tag = MEK
+			}
+			is_puppet = no
+			country_exists = WUR
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 935
+			add_state_core = 50
+			create_wargoal = {
+              type = annex_everything
+              target = WUR
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	strike_hanover = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = HAN
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = RCO
+				original_tag = SPF
+				original_tag = BAY
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = PRS
+				original_tag = MEK
+			}
+			is_puppet = no
+			country_exists = HAN
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 944
+			add_state_core = 57
+			add_state_core = 56
+			add_state_core = 59
+			add_state_core = 936
+			create_wargoal = {
+              type = annex_everything
+              target = HAN
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	strike_bavaria = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = BAY
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = RCO
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = PRS
+				original_tag = MEK
+			}
+			is_puppet = no
+			country_exists = BAY
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 55
+			add_state_core = 54
+			add_state_core = 53
+			add_state_core = 52
+			create_wargoal = {
+              type = annex_everything
+              target = BAY
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	strike_schleswig = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = SHL
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = RCO
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = BAY
+				original_tag = PRS
+				original_tag = MEK
+			}
+			country_exists = SHL
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 58
+			create_wargoal = {
+              type = annex_everything
+              target = SHL
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	strike_mecklemburg = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = MEK
+			}
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = RCO
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = PRS
+				original_tag = BAY
+			}
+			country_exists = MEK
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 61
+			create_wargoal = {
+              type = annex_everything
+              target = MEK
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	strike_prussia = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = PRS
+			}
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = RCO
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = MEK
+				original_tag = BAY
+			}
+			country_exists = PRS
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 64
+			add_state_core = 62
+			add_state_core = 65
+			add_state_core = 68
+			add_state_core = 63
+			create_wargoal = {
+              type = annex_everything
+              target = PRS
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	strike_rhineland = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = RCO
+			}
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = PRS
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = MEK
+				original_tag = BAY
+			}
+			country_exists = PRS
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 51
+			add_state_core = 42
+			create_wargoal = {
+              type = annex_everything
+              target = RCO
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	proclaim_german_unity = {
+
+		icon = GFX_decision_generic_speech
+
+		available = {
+			controls_state = 64
+		}
+
+		visible = {
+			OR = {
+				original_tag = PRS
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = MEK
+				original_tag = BAY
+				original_tag = RCO
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			set_cosmetic_tag = GER
+			add_stability = 0.1
 		}
 
 		ai_will_do = {

@@ -1486,6 +1486,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Sultan_al_Atrash"
+		texturefile = "gfx/leaders/SYR/Sultan_al_Atrash.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sultan_al_Atrash_small"
+		texturefile = "gfx/leaders/SYR/Sultan_al_Atrash_small.dds"
+	}
+
+	spriteType = {
 		name = "GFX_Herbert_Samuel"
 		texturefile = "gfx/leaders/ENG/Herbert_Samuel.dds"
 	}

@@ -238,4 +238,66 @@ ISR_seek_an_agreement = {
             }
         }
     }
+    ISR_seek_a_ceasefire_syria = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = SYR
+            has_war_with = PAL
+        }
+        priority = 1000
+
+        available = {
+            date > 1937.01.01
+            controls_state = 964
+        }
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 25
+
+        complete_effect = {
+            transfer_state = 964
+            white_peace = SYR
+        }
+    }
+    ISR_seek_a_ceasefire_transjordania = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = SYR
+            has_war_with = PAL
+        }
+        priority = 1000
+
+        available = {
+            date > 1937.01.01
+            controls_state = 965
+            controls_state = 966
+        }
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 25
+
+        complete_effect = {
+            transfer_state = 966
+            transfer_state = 965
+            white_peace = JOR
+        }
+    }
 }

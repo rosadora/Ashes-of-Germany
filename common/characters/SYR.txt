@@ -1,0 +1,39 @@
+characters = {
+	SYR_sultan_al_atrash={
+		name=SYR_sultan_al_atrash
+		portraits={
+			army={
+				large="GFX_Sultan_al_Atrash"
+				small="GFX_Sultan_al_Atrash_small"
+			}
+			civilian={
+				large="GFX_Sultan_al_Atrash"
+				small="GFX_Sultan_al_Atrash_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SYR_sultan_al_atrash_advisor
+			ledger = army
+			allowed = {
+				original_tag = SYR
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		field_marshal ={
+			traits={ war_hero old_guard}
+			idea_token = SYR_sultan_al_atrash_military
+			skill=5
+			attack_skill=3
+			defense_skill=7
+			planning_skill=4
+			logistics_skill=5
+		}
+	}
+}

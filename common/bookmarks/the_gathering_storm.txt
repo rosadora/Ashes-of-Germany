@@ -7,18 +7,19 @@ bookmarks = {
 		default_country = "PRS"
 		default = yes
 		
-		"HAN"={
-			history = "HAN_GATHERING_STORM_DESC"
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
 			available = { }
 			ideas = {
-				radicalization_of_the_political_scene
-				unstable_republic
+				overshadowed_by_france
+				ENG_the_war_to_end_all_wars
+				mosley_ascendancy
 			}
 			focuses = {
-				HAN_under_the_kaiser
-				HAN_under_willikens
-				HAN_the_rise_of_hanover
+				ENG_end_the_tory_rule
+				ENG_chairwoman_pankhurst
+				ENG_one_master_of_the_anglosphere
 			}
 		}
 		PRS = {
@@ -112,6 +113,20 @@ bookmarks = {
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
 
+		"HAN"={
+			minor = yes
+			history = "HAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				radicalization_of_the_political_scene
+				unstable_republic
+			}
+			focuses = {
+				HAN_under_the_kaiser
+				HAN_under_willikens
+				HAN_the_rise_of_hanover
+			}
+		}
 		"UKR"={
 			minor = yes
 			history = "UKR_GATHERING_STORM_DESC"
@@ -243,6 +258,21 @@ bookmarks = {
 			}
 			focuses = {
 				PAL_accept_the_inevitable
+			}
+		}
+		"SYR"={
+			minor = yes
+			history = "SYR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				unstable_union
+	            1925_revolt_legacy
+	            nationalist_majority
+			}
+			focuses = {
+				SYR_the_march_towards_independance
+				SYR_socialist_arabia_arise
+				SYR_the_hashemite_kingdom
 			}
 		}
 		effect = {

@@ -981,19 +981,14 @@ country_event = {
         }
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.33
 	title = francenew.33.t
 	desc = francenew.33.d
 	picture = GFX_report_event_generic_sign_treaty2
 
-	trigger = {
-		original_tag = FRA
-		surrender_progress > 0.3
-		has_war_with = PRS
-	}
+	is_triggered_only = yes
 
-	fire_only_once = yes
 	option = {
 		name = francenew.33.a
 		ai_chance = {
@@ -1054,19 +1049,14 @@ country_event = {
 		} 
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.34
 	title = francenew.34.t
 	desc = francenew.34.d
 	picture = GFX_report_event_worker_protests
 
-	trigger = {
-		original_tag = FRA
-		surrender_progress > 0.05
-		has_war_with = PRS
-	}
+	is_triggered_only = yes
 
-	fire_only_once = yes
 	option = {
 		name = francenew.34.a
 		ai_chance = {
@@ -1078,15 +1068,13 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.35
 	title = francenew.35.t
 	desc = francenew.35.d
 	picture = GFX_report_event_french_resistance_02
 
 	is_triggered_only = yes
-
-	fire_only_once = yes
 
 	option = {
 		name = francenew.35.a
@@ -1096,19 +1084,14 @@ country_event = {
 	 remove_country_leader_trait = low_legitimacy
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.36
 	title = francenew.36.t
 	desc = francenew.36.d
 	picture = GFX_report_event_panay_incident
 
-	trigger = {
-		original_tag = FRA
-		surrender_progress > 0.8
-		has_war_with = FRC
-	}
+	is_triggered_only = yes
 
-	fire_only_once = yes
 	option = {
 		name = francenew.36.a
 		ai_chance = {

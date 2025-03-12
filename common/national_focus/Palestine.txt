@@ -629,6 +629,33 @@
 		}
 	}
 	focus = {
+		id = PAL_law_on_securalism_in_politics
+		icon = GFX_focus_PER_state_atheism
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_consolidate_socialist_government}
+		relative_position_id = PAL_consolidate_socialist_government
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = state_atheism
+		}
+	}
+	focus = {
 		id = PAL_palestinian_arab_party
 		icon = GFX_goal_generic_major_alliance
 		x = -1
@@ -667,6 +694,238 @@
 				ideology = neutrality 
 				popularity = -0.25
 			}
+		}
+	}
+	focus = {
+		id = PAL_traditionalism_and_progress
+		icon = GFX_goal_tripartite_pact
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_promote_democratic_ideals
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = in_defence_of_democracy
+		}
+	}
+	focus = {
+		id = PAL_let_provinces_choose_education
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_desegregate_schools}
+		prerequisite = {focus = PAL_promote_democratic_ideals}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = massive_illiteracy
+				add_idea = decentralized_education
+			}
+		}
+	}
+	focus = {
+		id = PAL_palestinian_science
+		icon = GFX_focus_research
+		x = -2
+		y = 3
+		prerequisite = {focus = PAL_let_provinces_choose_education focus = PAL_fight_for_meritocracy}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = PAL_research_political
+			IF = {
+				limit = {
+					has_idea = decentralized_education
+				}
+			swap_ideas = {
+				remove_idea = decentralized_education
+				add_idea = decentralized_education2
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = towards_meritocracy
+				}
+			swap_ideas = {
+				remove_idea = towards_meritocracy
+				add_idea = towards_meritocracy2
+			}
+			}
+		}
+	}
+	focus = {
+		id = PAL_law_against_settlement
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_promote_democratic_ideals}
+		prerequisite = {focus = PAL_traditionalism_and_progress}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = prevent_next_aliyahs
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = PAL_forge_palestinian_identity
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 3
+		prerequisite = {focus = PAL_law_against_settlement}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = PAL_meet_local_chiefs
+		icon = GFX_focus_ETH_sway_the_warlords
+		x = 3
+		y = 3
+		prerequisite = {focus = PAL_law_against_settlement}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = support_from_provinces
 		}
 	}
 	focus = {
@@ -712,7 +971,7 @@
 	}
 	focus = {
 		id = PAL_against_military_cheef_for_the_people
-		icon = GFX_goal_social_progressivism
+		icon = GFX_focus_ETH_expand_the_levy
 		x = -2
 		y = 1
 		prerequisite = {focus = PAL_hizb_al_islah}
@@ -749,7 +1008,7 @@
 	}
 	focus = {
 		id = PAL_desegregate_schools
-		icon = GFX_goal_social_progressivism
+		icon = GFX_focus_ARG_develop_the_electricity_sector
 		x = 1
 		y = 1
 		prerequisite = {focus = PAL_hizb_al_islah focus = PAL_palestinian_arab_party}
@@ -775,7 +1034,7 @@
 	}
 	focus = {
 		id = PAL_allow_women_in_the_workforce
-		icon = GFX_goal_social_progressivism
+		icon = GFX_focus_SWE_education_reform
 		x = -2
 		y = 1
 		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
@@ -804,7 +1063,7 @@
 	}
 	focus = {
 		id = PAL_subside_palestinian_independent_press
-		icon = GFX_goal_social_progressivism
+		icon = GFX_focus_generic_welfare
 		x = 0
 		y = 1
 		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
@@ -833,7 +1092,7 @@
 	}
 	focus = {
 		id = PAL_fight_for_meritocracy
-		icon = GFX_goal_social_progressivism
+		icon = GFX_goal_generic_demand_territory
 		x = 2
 		y = 1
 		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
@@ -866,7 +1125,7 @@
 	}
 	focus = {
 		id = PAL_protect_jewish_minorities
-		icon = GFX_goal_social_progressivism
+		icon = GFX_goal_generic_defence
 		x = 1
 		y = 2
 		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
@@ -894,8 +1153,8 @@
 		}
 	}
 	focus = {
-		id = PAL_protect_jewish_minorities
-		icon = GFX_goal_social_progressivism
+		id = PAL_rely_on_ourselves
+		icon = GFX_goal_generic_small_arms
 		x = -1
 		y = 2
 		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
@@ -919,7 +1178,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = protected_jewish_minorities
+			add_war_support = 0.075
 		}
 	}
 }

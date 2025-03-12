@@ -37,6 +37,8 @@
  ISR_raise_militias_lehi:0 "Raise Lehi Militia"
  ISR_seek_an_agreement:0 "Seek an Agreement"
  ISR_seek_a_ceasefire:0 "Seek a Ceasefire"
+ ISR_seek_a_ceasefire_syria:0 "Seek a Ceasefire with Syria"
+ ISR_seek_a_ceasefire_transjordania:0 "Seek a Ceasefire with Jordania"
  ### BRITAIN ###
  ENG_1936_elections_desc:0 "The §Onation's policy§! remains to be determined. At a time when §Opolitical parties and forces are fragmenting§!, it's time to §Oelect a majority§! to guide our path.\n\n§OVote Projection:§!\n§gBUF§! : [?buf_pop|%]\n§2Tories§! : [?tories_pop|%]\n§YLiberals§!: [?liberal_pop|%]\n§8National Labour§!: [?nl_pop|%]\n§tLabour§!: [?labour_pop|%]\n§RWorker's Dreadnought§!: [?wd_pop|%]\n§RCommunist Party of Great Britain§!: [?cpgb_pop|%]"
  ENG_1936_elections:0 "1936 Snap Elections!"
@@ -56,3 +58,15 @@
  ### france ###
  FRA_french_politics:0 "French Politics"
  FRA_give_damas_to_syria:0 "Transfer Damas to Syria"
+ ### generic ###
+ gen_join_france:0 "Join France"
+ gen_join_japan:0 "Join Japan"
+ gen_war_of_unification:0 "War of Unification"
+ strike_wurttemberg:0 "Strike Wurtemberg"
+ strike_hanover:0 "Strike Hanover"
+ strike_schleswig:0 "Strike Schleswig"
+ strike_bavaria:0 "Strike Bavaria"
+ strike_mecklemburg:0 "Strike Mecklemburg"
+ strike_prussia:0 "Strike Prussia"
+ strike_rhineland:0 "Strike Rhineland"
+ proclaim_german_unity:0 "Proclaim German Unity"

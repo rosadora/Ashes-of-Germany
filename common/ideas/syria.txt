@@ -364,6 +364,63 @@ ideas = {
 				monthly_population = 0.15
 			}
 		}
+		towards_meritocracy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.05
+				monthly_population = -0.15
+			}
+		}
+		decentralized_education = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.15
+				stability_factor = 0.05
+				monthly_population = 0.35
+			}
+		}
+		decentralized_education2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = 0.075
+				monthly_population = 0.45
+			}
+		}
 		a_new_generation = {
 			
 			allowed = {

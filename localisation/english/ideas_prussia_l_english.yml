@@ -1259,6 +1259,8 @@
  end_the_aliyah_desc:0 "The Israeli settler will be expelled from Palestine for ever."
  modern_robespierre:0 "Modern Robespierre"
  marechal_de_france:0 "Maréchal de France"
+ PAL_research_political:0 "Effect depends on ideology"
+ state_atheism:0 "State Atheism"
  ### BRITAIN ###
  overshadowed_by_france:0 "Overshadowed by France"
  overshadowed_by_france_desc:0 "Since the implementation of the French partition plan in Europe, the United Kingdom has lost all its influence."
@@ -1353,3 +1355,9 @@
  british_crown_colonies:0 "British Crown Colony"
  french_colonial_administration:0 "French Colonial Administration"
  protectorate:0 "Protectorate"
+ ### GENERIC ###
+ revolutionary_fervor_idea:0 "Revolutionary Fervor"
+ autogestion_idea:0 "Autogestion"
+ defensive_approach:0 "Defensive Approach"
+ fruits_of_global_trade:0 "Fruits of Global Trade"
+ democratic_volunteers:0 "Democratic Volunteers"

@@ -1448,3 +1448,17 @@ news_event = { #Japanese Civil War
 		name = news.3079.a
 	}
 }
+news_event = { #Jordanian Independance
+	id = news.3080
+	title = news.3080.t
+	desc = news.3080.d
+	picture = GFX_news_event_king_speech
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3080.a
+	}
+}

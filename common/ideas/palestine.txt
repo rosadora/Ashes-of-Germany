@@ -418,5 +418,79 @@ ideas = {
 				weekly_manpower = 200
 			}
 		}
+		in_defence_of_democracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.075
+			}
+		}
+		prevent_next_aliyahs = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_growing_nationalism_modifier
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				conscription = 0.01
+				monthly_population = -0.1
+			}
+		}
+		support_from_provinces = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_deal_with_the_devil2
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				political_power_gain = 0.1
+			}
+		}
+		state_atheism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PER_forced_secularization
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				compliance_gain = 0.01
+			}
+		}
 	}
 }

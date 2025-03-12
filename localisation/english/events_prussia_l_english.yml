@@ -1201,6 +1201,10 @@
  syria.12.t:0 "Jordania agrees!"
  syria.12.d:0 ""
  syria.12.a:0 "Nice!"
+ ### JORDANIA ###
+ news.3080.t:0 "The End of the Jordanian Mandate"
+ news.3080.d:0 "The government of King Abdullah 1st decided to end the British mandate by deploying its national guard in the country during the day. This independence is in line with the country's growing autonomy."
+ news.3080.a:0 "Ok"
  ### ISRAEL ###
  news.3076.t:0 "Ceasefire in Palestine"
  news.3076.d:0 "After months of intense fighting and tens of thousands of deaths on both sides, the two sides of the war in Palestine have agreed a ceasefire along the areas occupied by each. Both states will have survived what promised to be a fight to the death."
