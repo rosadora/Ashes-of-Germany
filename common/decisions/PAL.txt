@@ -44,3 +44,507 @@ PAL_the_colonial_conflict = {
 		}
 	}
 }
+PAL_pan_arabianist_decisions = {
+
+	PAL_coup_the_egyptian_government = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = PAL
+        }
+        visible = {
+			has_completed_focus = PAL_support_a_coup_in_egypt
+        }
+		available = {
+			EGY = {
+				neutrality > 0.3
+				has_stability > 0.5
+			}
+		}
+        priority = 1000
+
+		days_remove = 2
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			ENG = {
+				end_puppet = EGY
+			}
+			EGY = {
+				country_event = {
+					id = palestine.4
+					days = 1
+				}
+				set_politics = {
+					ruling_party = neutrality
+				}
+				leave_faction = yes
+			}
+			puppet = EGY
+        }
+    }
+	PAL_anti_colonialist_war_in_libya = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = PAL
+        }
+        visible = {
+			has_completed_focus = PAL_organize_libyan_anti_colonialists
+        }
+		available = {
+		}
+        priority = 1000
+
+		days_remove = 2
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			IF = {
+				limit = {
+					ITA = {
+						controls_state = 448
+					}
+				}
+			ITA = {
+				release = LBA
+			}
+			LBA = {
+				661 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+				662 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+				449 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+				450 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+			 }
+			puppet = LBA
+			ITA = {
+				declare_war_on = {
+                 target = LBA
+                 type = annex_everything
+                }
+			}
+			add_timed_idea = {
+				days = 100
+				idea = conflict_in_libya
+			}
+			}
+
+			IF = {
+				limit = {
+					ILF = {
+						controls_state = 448
+					}
+				}
+			ILF = {
+				release = LBA
+			}
+			LBA = {
+				661 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+				662 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+				449 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+				450 = {
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				create_unit = {
+                 division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                 owner = LBA
+                }
+				}
+			 }
+			puppet = LBA
+			ILF = {
+				declare_war_on = {
+                 target = LBA
+                 type = annex_everything
+                }
+			}
+			add_timed_idea = {
+				days = 100
+				idea = conflict_in_libya
+			}
+			}
+			else = {
+				every_country = {
+	         limit = {
+	          owns_state = 448
+	          }
+	         PAL = {
+		      create_wargoal = {
+		        type = annex_everything
+		        target = PREV
+	           }
+		      }
+             }
+			 add_state_claim = 448
+			 add_state_claim = 661
+			 add_state_claim = 449
+			 add_state_claim = 662
+			 add_state_claim = 450
+			 add_state_claim = 451
+			 add_state_claim = 663
+		    }
+        }
+    }
+	PAL_anti_colonialist_war_in_libya_wp = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = PAL
+        }
+        visible = {
+			has_completed_focus = PAL_organize_libyan_anti_colonialists
+        }
+		available = {
+			LBA = {
+				is_puppet_of = PAL
+			}
+			NOT = {
+				has_idea = conflict_in_libya
+			}
+			448 = {
+				controls_or_subject_of = yes
+			}
+			661 = {
+				controls_or_subject_of = yes
+			}
+			449 = {
+				controls_or_subject_of = yes
+			}
+			662 = {
+				controls_or_subject_of = yes
+			}
+			450 = {
+				controls_or_subject_of = yes
+			}
+			451 = {
+				controls_or_subject_of = yes
+			}
+			663 = {
+				controls_or_subject_of = yes
+			}
+		}
+        priority = 1000
+
+		days_remove = 2
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			IF = {
+				limit = {
+					has_war_with = ITA
+				}
+			 white_peace = ITA
+			}
+			IF = {
+				limit = {
+					has_war_with = ILF
+				}
+			 white_peace = ILF
+			}
+        }
+    }
+
+	PAL_anti_colonialist_war_in_northern_africa = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = PAL
+        }
+        visible = {
+			has_completed_focus = PAL_organize_maghreb_resistance
+        }
+		available = {
+		}
+        priority = 1000
+
+		days_remove = 2
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			IF = {
+				limit = {
+					TUN = {
+						is_puppet_of = FRA
+					}
+				}
+			FRA = {
+				release = TUN
+			}
+			puppet = TUN
+			FRA = {
+				declare_war_on = {
+                 target = TUN
+                 type = annex_everything
+                }
+			}
+			add_timed_idea = {
+				days = 100
+				idea = conflict_in_northern_africa
+			}
+			}
+
+			IF = {
+				limit = {
+					ALG = {
+						is_puppet_of = FRA
+					}
+				}
+			FRA = {
+				release = ALG
+			}
+			puppet = ALG
+			FRA = {
+				declare_war_on = {
+                 target = ALG
+                 type = annex_everything
+                }
+			}
+			}
+
+			IF = {
+				limit = {
+					MOR = {
+						is_puppet_of = FRA
+					}
+				}
+			FRA = {
+				release = MOR
+			}
+			puppet = MOR
+			FRA = {
+				declare_war_on = {
+                 target = MOR
+                 type = annex_everything
+                }
+			}
+			}
+			else = {
+				every_country = {
+	         limit = {
+	          owns_state = 458
+	          }
+	         PAL = {
+		      create_wargoal = {
+		        type = annex_everything
+		        target = PREV
+	           }
+		      }
+             }
+			 add_state_claim = 458
+			 add_state_claim = 665
+			 add_state_claim = 460
+			 add_state_claim = 459
+			 add_state_claim = 513
+			 add_state_claim = 514
+			 add_state_claim = 461
+			 add_state_claim = 462
+			 every_country = {
+	         limit = {
+	          owns_state = 459
+	          }
+	         PAL = {
+		      create_wargoal = {
+		        type = annex_everything
+		        target = PREV
+	           }
+		      }
+		    }
+			every_country = {
+	         limit = {
+	          owns_state = 461
+	          }
+	         PAL = {
+		      create_wargoal = {
+		        type = annex_everything
+		        target = PREV
+	           }
+		      }
+			}
+			}
+        }
+    }
+	PAL_anti_colonialist_war_in_northern_africa_wp = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = PAL
+        }
+        visible = {
+			has_completed_focus = PAL_organize_maghreb_resistance
+        }
+		available = {
+			ALG = {
+				is_puppet_of = PAL
+			}
+			TUN = {
+				is_puppet_of = PAL
+			}
+			MOR = {
+				is_puppet_of = PAL
+			}
+			NOT = {
+				has_idea = conflict_in_northern_africa
+			}
+			459 = {
+				controls_or_subject_of = yes
+			}
+			513 = {
+				controls_or_subject_of = yes
+			}
+			460 = {
+				controls_or_subject_of = yes
+			}
+			458 = {
+				controls_or_subject_of = yes
+			}
+			665 = {
+				controls_or_subject_of = yes
+			}
+			461 = {
+				controls_or_subject_of = yes
+			}
+			462 = {
+				controls_or_subject_of = yes
+			}
+		}
+        priority = 1000
+
+		days_remove = 2
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			IF = {
+				limit = {
+					has_war_with = FRA
+				}
+			 white_peace = FRA
+			}
+        }
+    }
+}

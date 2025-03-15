@@ -28,7 +28,6 @@
 			factor = 1
 		}
 		available = {
-			has_country_flag = PAL_great_arab_revolt_occured
 		}
 		bypass = {
 		}
@@ -84,7 +83,6 @@
 			factor = 1
 		}
 		available = {
-			has_country_flag = PAL_great_arab_revolt_occured
 		}
 		bypass = {
 		}

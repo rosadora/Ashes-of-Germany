@@ -12,3 +12,15 @@ PAL_the_colonial_conflict = {
 	visible = {
 	}
 }
+
+PAL_pan_arabianist_decisions = {
+
+	icon = GFX_decision_category_power_struggle
+
+	allowed = {
+		original_tag = PAL
+	}
+
+	visible = {
+	}
+}

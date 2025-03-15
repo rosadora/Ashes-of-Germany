@@ -455,6 +455,242 @@ ideas = {
 				monthly_population = -0.1
 			}
 		}
+		five_year_plan = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_construction_guilds
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+				production_speed_arms_factory_factor = -0.1
+			}
+		}
+		palestinian_local_development = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_ga_pa_tactics
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		pan_arabian_volunteers = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 700
+				war_support_factor = 0.05
+			}
+		}
+		pan_arabian_broadcasting = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_radiotjanst_corrupted
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.005
+				neutrality_drift = 0.1
+			}
+		}
+		conflict_in_libya = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_quami
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.005
+			}
+		}
+		conflict_in_northern_africa = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_quami
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.005
+			}
+		}
+		palestinian_economics = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_civilian_economy_boost
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		palestinian_economics2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_civilian_economy_boost
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.075
+				production_speed_industrial_complex_factor = 0.075
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+		palestinian_economics2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_civilian_economy_boost
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		radio_palestine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_radio_concern
+
+			removal_cost = -1
+			
+			modifier = {
+				defensive_war_stability_factor = 0.3
+				offensive_war_stability_factor = 0.1
+				drift_defence_factor = 0.3
+				political_power_gain = 0.2
+			}
+		}
+		radio_palestine2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_radio_concern
+
+			removal_cost = -1
+			
+			modifier = {
+				defensive_war_stability_factor = 0.3
+				offensive_war_stability_factor = 0.1
+				drift_defence_factor = 0.3
+				political_power_gain = 0.2
+				naval_coordination = 0.075
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		the_anti_imperialist_mission = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_independence_movement
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.075
+				defense_bonus_against = 0.075
+			}
+		}
 		support_from_provinces = {
 			
 			allowed = {
@@ -490,6 +726,24 @@ ideas = {
 				political_power_gain = 0.15
 				stability_factor = 0.05
 				compliance_gain = 0.01
+			}
+		}
+		a_land_for_all_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				weekly_manpower = 500
 			}
 		}
 	}
