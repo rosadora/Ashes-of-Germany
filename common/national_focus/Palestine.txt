@@ -25,7 +25,7 @@
 		mutually_exclusive = {focus = PAL_palestine_one_and_indivisible}
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_country_flag = PAL_great_arab_revolt_occured
@@ -2578,12 +2578,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				OR = {
+			OR = {
 				has_government = democratic
 				has_government = classical_liberalism
 				has_government = social_liberalism
-			}
 			}
 		}
 		bypass = {
@@ -2608,12 +2606,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				OR = {
+			OR = {
 				has_government = democratic
 				has_government = classical_liberalism
 				has_government = social_liberalism
-			}
 			}
 		}
 		bypass = {
@@ -2640,12 +2636,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				OR = {
+			OR = {
 				has_government = democratic
 				has_government = classical_liberalism
 				has_government = social_liberalism
-			}
 			}
 		}
 		bypass = {
@@ -2688,12 +2682,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
 				OR = {
 				has_government = democratic
 				has_government = classical_liberalism
 				has_government = social_liberalism
-			}
 			}
 		}
 		bypass = {
@@ -2721,12 +2713,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				OR = {
+			OR = {
 				has_government = democratic
 				has_government = classical_liberalism
 				has_government = social_liberalism
-			}
 			}
 		}
 		bypass = {
@@ -2751,12 +2741,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
 				OR = {
 				has_government = democratic
 				has_government = classical_liberalism
 				has_government = social_liberalism
-			}
 			}
 		}
 		bypass = {
@@ -2781,12 +2769,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				OR = {
+			OR = {
 				has_government = communism
 				has_government = classical_marxism
 				has_government = libertarian_socialism
-			}
 			}
 		}
 		bypass = {
@@ -2821,12 +2807,10 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				OR = {
+			OR = {
 				has_government = communism
 				has_government = classical_marxism
 				has_government = libertarian_socialism
-			}
 			}
 		}
 		bypass = {

@@ -6,7 +6,7 @@
 		
 		modifier = {
 			add = 1000
-			tag = ENG
+			original_tag = ENG
 		}
 	}
 

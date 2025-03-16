@@ -3760,11 +3760,14 @@
 			factor = 5
 		}
 		available = {
-			controls_state = 50
-			controls_state = 52
-			controls_state = 53
-			controls_state = 54
-			controls_state = 55
+			NOT = {
+				country_exists = HAN
+				country_exists = WUR
+				country_exists = MEK
+				country_exists = SAX 
+				country_exists = SHL 
+				country_exists = BAY
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no

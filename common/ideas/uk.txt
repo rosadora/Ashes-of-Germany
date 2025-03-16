@@ -132,6 +132,16 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+				NOT = {
+					has_government = communism 
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+				}
+				}
+			}
+
 			picture = ICE_general_strike
 
 			removal_cost = -1

@@ -93,7 +93,7 @@ country_event = {
 		}
 		remove_ideas = an_alternative_way
 		set_politics = {
-	   ruling_party = democratic
+	   ruling_party = social_democracy
        elections_allowed = yes
        last_election = "1935.12.17"
        election_frequency = 48

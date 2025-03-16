@@ -12993,7 +12993,6 @@ greater_italy_category = {
 		}
 
 		available = {
-			has_completed_focus = ITA_towards_a_greater_italy
 			custom_trigger_tooltip = {
 				tooltip = greater_italy_required_states
 				controls_state = 852 # Istria
@@ -13106,8 +13105,6 @@ greater_italy_category = {
 			set_cosmetic_tag = greater_italy 
 			
 			custom_effect_tooltip = greater_italy_effect_tooltip
-			
-			add_ideas = ITA_italia_irredenta_achieved
 			
 			hidden_effect = { 
 

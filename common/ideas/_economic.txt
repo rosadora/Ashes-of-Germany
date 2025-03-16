@@ -298,24 +298,25 @@ ideas = {
 
 			picture = war_communism
 
-			allowed = {
-				always = yes
-			}
 			available = {
 				OR = {
 					has_government = communism 
 					has_government = classical_marxism 
 					has_government = libertarian_socialism
 				}
-				has_war = yes
 			}
-			allowed_to_remove = {
-				has_war = no
-			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					has_war = yes
+					factor = 1800
+				}
+   			}
 
 			removal_cost = 150
-
-			cancel_if_invalid = yes
 			
 			cost = 0
 
@@ -330,13 +331,6 @@ ideas = {
 				stability_factor = -0.2
 				army_defense_core_factor = 0.1
 			}
-
-			ai_will_do = {
-   				factor = 100000
-				modifier = {
-					factor = 1800
-				}
-   			}
 		}
 
 		new_economic_policy = {
