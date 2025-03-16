@@ -307,6 +307,46 @@ ideas = {
                 defense_bonus_against = 0.1
 			}
 		}
+		nationalist_education_isr = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_national_mobilization_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.2
+				stability_factor = -0.15
+				monthly_population = 0.5
+				army_org_factor = 0.05
+			}
+		}
+		nationalist_education_isr2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_national_mobilization_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = -0.05
+				monthly_population = 0.5
+				army_org_factor = 0.075
+			}
+		}
 		high_illiteracy = {
 			
 			allowed = {

@@ -68,10 +68,6 @@ ideas = {
 				always = yes
 			}
 
-			available = {
-				has_war = yes
-			}
-
 			picture = hol_caved_to_the_british
 
 			removal_cost = -1
@@ -80,6 +76,294 @@ ideas = {
 				country_resource_oil = 5
 				country_resource_steel = 12
 				country_resource_aluminium = 3
+			}
+		}
+		tsahal = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hava_nagila_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		strong_palestinian_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = 0.3
+			}
+		}
+		fading_palestinian_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = 0.2
+			}
+		}
+		honor_the_heroes = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ENG_the_war_to_end_all_wars
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				war_support_factor = 0.1
+			}
+		}
+		the_besieged_fortress = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.2
+				army_core_defence_factor = 0.1
+				max_dig_in = 10
+			}
+		}
+		sixth_aliyah = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 1000
+				monthly_population = 1
+				stability_factor = -0.1
+			}
+		}
+		zionist_terror = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_neither_death_nor_dishonor
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = 0.25
+				fascism_drift = 0.15
+			}
+		}
+		mossad = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_neither_death_nor_dishonor
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				own_operative_capture_chance_factor = -0.5
+			}
+		}
+		special_powers = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_private_military_complex
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.1
+				modifier_army_sub_unit_militia_attack_factor = 0.15
+				modifier_army_sub_unit_militia_defence_factor = 0.15
+			}
+		}
+		palestine_epuration = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_military_government
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.7
+				stability_factor = -0.5
+			}
+		}
+		colonization_of_palestine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_social_welfare_fund_ns
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 2
+				weekly_manpower = 1500
+				stability_factor = -0.2
+			}
+		}
+		the_ethno_state = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_social_welfare_fund_ns
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				non_core_manpower = -0.05
+				army_org_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		israeli_economics = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			picture = ARG_social_welfare_fund_ns
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.075
+			}
+		}
+		israeli_economics2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			picture = ARG_rapid_militarization
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				
+			}
+		}
+		israeli_economics3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			picture = ARG_rapid_militarization
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+				line_change_production_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				
 			}
 		}
 	}

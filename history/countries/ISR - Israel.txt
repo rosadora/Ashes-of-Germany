@@ -28,6 +28,7 @@ set_politics = {
 
 add_ideas = {
 	high_illiteracy
+	strong_palestinian_resistance
 }
 set_popularities = {
 	fascism = 2
