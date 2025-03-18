@@ -3760,13 +3760,53 @@
 			factor = 5
 		}
 		available = {
+			OR = {
 			NOT = {
 				country_exists = HAN
+			}
+			HAN = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
 				country_exists = WUR
+			}
+			WUR = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
 				country_exists = MEK
-				country_exists = SAX 
-				country_exists = SHL 
+			}
+			MEK = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = SAX
+			}
+			SAX = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = SHL
+			}
+			SHL = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
 				country_exists = BAY
+			}
+			BAY = {
+				has_capitulated = yes
+			}
 			}
 		}
 		cancel_if_invalid = yes

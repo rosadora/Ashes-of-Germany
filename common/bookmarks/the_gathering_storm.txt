@@ -257,7 +257,9 @@ bookmarks = {
 	            zionist_militias_attitude_positive
 			}
 			focuses = {
-				PAL_accept_the_inevitable
+				PAL_settler_expelled
+				PAL_from_oman_to_the_rif_arabia_will_be_free
+				PAL_al_watan_al_akbar
 			}
 		}
 		"SYR"={

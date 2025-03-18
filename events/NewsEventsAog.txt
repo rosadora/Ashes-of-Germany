@@ -1462,3 +1462,45 @@ news_event = { #Jordanian Independance
 		name = news.3080.a
 	}
 }
+news_event = { #Konigsberg Conference - Vilnius is Lithuanian
+	id = news.3081
+	title = news.3081.t
+	desc = news.3081.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3081.a
+	}
+}
+news_event = { #Konigsberg Conference - Vilnius is Lithuanian but Konigsberg is Demilitarized
+	id = news.3082
+	title = news.3082.t
+	desc = news.3082.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3082.a
+	}
+}
+news_event = { #Konigsberg Conference - Failure
+    id = news.3083
+	title = news.3083.t
+	desc = news.3083.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3083.a
+	}
+}

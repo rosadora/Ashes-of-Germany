@@ -50,11 +50,6 @@ JAP_1936_elections = {
 				has_government = communism
 			}
 			date > 1938.01.01
-			NOT = {
-				FER = {
-					is_puppet_of = JAP
-				}
-			}
 		}
         priority = 1000
 
@@ -87,6 +82,9 @@ JAP_1936_elections = {
 				has_government = communism
 			}
 			date > 1937.05.01
+			has_army_manpower = {
+				size > 800000
+			}
 		}
         priority = 1000
 

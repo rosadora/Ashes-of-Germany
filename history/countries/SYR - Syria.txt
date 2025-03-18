@@ -23,8 +23,6 @@ if = {
 	}
 }
 
-recruit_character = SYR_sultan_al_atrash
-
 set_convoys = 5
 
 set_politics = {
@@ -142,3 +140,5 @@ add_ideas = {
 	nationalist_majority
 	high_illiteracy
 }
+
+recruit_character = SYR_sultan_al_atrash

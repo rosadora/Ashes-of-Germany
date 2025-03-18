@@ -17,6 +17,7 @@ state=
 		}
 		add_core_of = SLV
 		set_demilitarized_zone = yes
+		add_core_of = YUG
 	}
 	provinces={
 		6650 9627
