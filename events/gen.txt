@@ -56,3 +56,57 @@ country_event = { #Join United Worker's of Europe (Denies)
 		}
 	}
 }
+
+country_event = { #War Communism Demobilization - is no longer communist
+	id = gen.4
+	title = gen.4.t
+	desc = gen.4.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	trigger = {
+		has_idea = war_communism
+		OR = {
+		NOT = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+		}
+		}
+	}
+
+	option = {
+		name = gen.4.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = war_communism
+			add_idea = war_economy
+		}
+	}
+}
+
+country_event = { #War Communism Demobilization - Not at war
+	id = gen.5
+	title = gen.5.t
+	desc = gen.5.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	trigger = {
+		has_idea = war_communism
+		NOT = {
+			has_war = yes
+		}
+	}
+
+	option = {
+		name = gen.5.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = war_communism
+			add_idea = war_economy
+		}
+	}
+}

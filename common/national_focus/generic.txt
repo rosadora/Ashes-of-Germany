@@ -2582,6 +2582,37 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = choose_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {focus = defensive_war_preparations}
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		x = 6
+		y = 5
+		relative_position_id = liberal_democracy_model
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		mutually_exclusive = {focus = why_we_fight}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+			add_ideas = neutrality_idea
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
 
 	focus = {
 		id = why_we_fight
@@ -2599,6 +2630,7 @@ focus_tree = {
 		x = 4
 		y = 5
 		relative_position_id = liberal_democracy_model
+		mutually_exclusive = {focus = choose_neutrality}
 		cost = 10
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2725,6 +2757,24 @@ focus_tree = {
 				unlock_decision_tooltip = gen_join_italy
 				unlock_decision_tooltip = gen_join_prussia
 				unlock_decision_tooltip = gen_join_united_workers_of_europe
+				unlock_decision_tooltip = gen_join_japan
+			}
+			IF = {
+				limit = {
+					OR = {
+				tag = TIB
+				tag = SIA
+				tag = RAJ
+				tag = NEP
+				tag = BHU
+				tag = MAL
+				tag = INS
+				tag = PHI
+				tag = AST
+				tag = NZL
+				tag = MON
+			    }
+				}
 				unlock_decision_tooltip = gen_join_japan
 			}
 		}

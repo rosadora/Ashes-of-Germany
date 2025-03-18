@@ -461,7 +461,7 @@ country_event = { #Socialist Surrender
 		tag = SOV 
 		has_war_with = USR 
 		USR = {
-		surrender_progress > 0.8
+		surrender_progress > 0.7
 		}
 	}
 
@@ -493,7 +493,7 @@ country_event = { #White Russia Surrender
 		tag = USR 
 		has_war_with = SOV 
 		SOV = {
-		surrender_progress > 0.8
+		surrender_progress > 0.7
 		}
 	}
 

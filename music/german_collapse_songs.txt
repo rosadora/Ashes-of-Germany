@@ -152,3 +152,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "dadao_song"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

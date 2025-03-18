@@ -217,7 +217,7 @@
 		relative_position_id = PAL_accept_the_inevitable
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -241,7 +241,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -264,7 +264,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -288,7 +288,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -339,7 +339,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -375,7 +375,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -409,7 +409,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -433,7 +433,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR
@@ -482,7 +482,7 @@
 		relative_position_id = PAL_the_end_of_an_era
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = ISR

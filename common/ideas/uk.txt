@@ -140,6 +140,9 @@ ideas = {
 					has_government = libertarian_socialism
 				}
 				}
+				NOT = {
+					has_civil_war = yes
+				}
 			}
 
 			picture = ICE_general_strike

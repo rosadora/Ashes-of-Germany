@@ -1508,6 +1508,42 @@
 				}
 				end_puppet = ROOT
 			}
+			set_autonomy = {
+              target = AST
+              autonomous_state = autonomy_free
+              end_wars = yes
+              end_civil_wars = no
+            }
+			set_autonomy = {
+              target = CAN
+              autonomous_state = autonomy_free
+              end_wars = yes
+              end_civil_wars = no
+            }
+			set_autonomy = {
+              target = RAJ
+              autonomous_state = autonomy_free
+              end_wars = yes
+              end_civil_wars = no
+            }
+			set_autonomy = {
+              target = SAF
+              autonomous_state = autonomy_free
+              end_wars = yes
+              end_civil_wars = no
+            }
+			set_autonomy = {
+              target = EGY
+              autonomous_state = autonomy_free
+              end_wars = yes
+              end_civil_wars = no
+            }
+			set_autonomy = {
+              target = NZL
+              autonomous_state = autonomy_free
+              end_wars = yes
+              end_civil_wars = no
+            }
 		}
 	}
 	focus = {

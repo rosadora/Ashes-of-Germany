@@ -836,24 +836,14 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.32
 	title = francenew.32.t
 	desc = francenew.32.d
 	picture = GFX_report_commune_of_paris_event
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
-	trigger = {
-		original_tag = FRA
-		948 = {
-			any_neighbor_state = {
-				NOT = {
-				is_controlled_by = FRA
-				}
-			} 
-		}
-	}
 	option = {
 		name = francenew.32.a
 		ai_chance = {

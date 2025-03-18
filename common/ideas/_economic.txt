@@ -22,11 +22,16 @@ ideas = {
 				generate_wargoal_tension = 1.00
 				join_faction_tension = 0.20
 				lend_lease_tension = 0.50
-				send_volunteers_tension = 0.20
+				send_volunteers_tension = 1
+				lend_lease_tension = 1
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
 				agency_upgrade_time = 1.0
+			}
+
+			rule = {
+				can_send_volunteers = no
 			}
 
 			allowed_to_remove = {
@@ -55,12 +60,18 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = -0.4
 				generate_wargoal_tension = 1.00
 				join_faction_tension = 0.20
-				send_volunteers_tension = 0.20
+				lend_lease_tension = 1
+				send_volunteers_tension = 1
 				guarantee_tension = 0.5
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
 				agency_upgrade_time = 0.8
 			}
+
+			rule = {
+				can_send_volunteers = no
+			}
+
 			allowed_to_remove = {
 				OR = {
 					has_war_support > 0.75
@@ -78,7 +89,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.27
+				consumer_goods_expected_value = 0.35
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
@@ -102,7 +113,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.25
+				consumer_goods_expected_value = 0.3
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
@@ -141,7 +152,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.23
+				consumer_goods_expected_value = 0.26
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor= 0.1
@@ -316,7 +327,7 @@ ideas = {
 				}
    			}
 
-			removal_cost = 150
+			removal_cost = -1
 			
 			cost = 0
 

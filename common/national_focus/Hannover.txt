@@ -1101,8 +1101,7 @@
 		   days = 400
 		   idea = shock_strategy
 		 }
-		 custom_effect_tooltip = HAN_shock_strategy_tooltip
-		 unlock_decision_category_tooltip = HAN_shock_strategy_decision
+		 add_stability = -0.15
         }
 	}
 	focus = {

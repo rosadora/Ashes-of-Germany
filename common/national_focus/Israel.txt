@@ -24,7 +24,7 @@
 		prerequisite = {}
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL
@@ -49,7 +49,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL
@@ -76,7 +76,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL
@@ -103,7 +103,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL
@@ -127,7 +127,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			ENG = {
@@ -156,7 +156,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL
@@ -194,7 +194,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL
@@ -231,7 +231,7 @@
 		relative_position_id = PAL_hava_nagila
 		cost = 3
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		available = {
 			has_war_with = PAL

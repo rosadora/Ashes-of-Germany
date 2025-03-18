@@ -1504,3 +1504,30 @@ news_event = { #Konigsberg Conference - Failure
 		name = news.3083.a
 	}
 }
+news_event = { #Sino-Japanese War
+    id = news.3084
+	title = news.3084.t
+	desc = news.3084.d
+	picture = GFX_news_event_chinese_soldiers_city_ruin
+	
+	major = yes
+
+	trigger = {
+		JAP = {
+			has_war_with = CHI
+			has_idea = JAP_ichi_go
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			play_song = dadao_song
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = {
+		name = news.3084.a
+	}
+}

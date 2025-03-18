@@ -790,10 +790,24 @@
 		available = {
 			is_subject = no
 			is_in_faction = no
+			JAP = {
+				NOT = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+			has_defensive_war_with = JAP
 		}
 
 		bypass = {
-			is_in_faction_with = PRC
+			JAP = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -805,13 +819,13 @@
 		}
 
 		completion_reward = {
-			CHI = {
-				set_rule = { can_create_factions = yes }
-				create_faction = chinese_united_front
-			}
-			PRC = {
-				country_event = generic.5
-			}
+			create_faction = chinese_united_front
+			add_to_faction = PRC
+			add_to_faction = SHX
+			add_to_faction = XSM
+			add_to_faction = GXC
+			add_to_faction = YUN
+			add_to_faction = SIK
 		}
 	}
 

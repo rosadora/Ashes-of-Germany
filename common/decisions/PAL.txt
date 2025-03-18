@@ -58,7 +58,7 @@ PAL_pan_arabianist_decisions = {
 		available = {
 			EGY = {
 				neutrality > 0.3
-				has_stability > 0.5
+				has_stability < 0.5
 			}
 		}
         priority = 1000

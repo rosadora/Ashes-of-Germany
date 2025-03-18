@@ -188,8 +188,11 @@ JAP_1936_elections = {
 				has_government = communism
 			}
 			date > 1939.01.01
-				FER = {
-					is_puppet_of = JAP
+				408 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				409 = {
+					is_controlled_by_ROOT_or_ally = yes
 				}
 		}
         priority = 1000

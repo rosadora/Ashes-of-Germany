@@ -597,8 +597,8 @@ country_event = { #South Italy surrenders to Fascists
 		tag = ITA
 		controls_state = 117
 		has_war_with = ILF
-		ITA = {
-		surrender_progress > 0.8
+		ILF = {
+		surrender_progress > 0.6
 		}
 	}
 
@@ -625,8 +625,8 @@ country_event = { #South Italy surrenders to North
 		tag = NLC
 		controls_state = 117
 		has_war_with = ILF
-		NLC = {
-		surrender_progress > 0.8
+		ILF = {
+		surrender_progress > 0.6
 		}
 	}
 

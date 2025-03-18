@@ -5497,7 +5497,7 @@
  ENG_carrier_is_the_queen_of_seas:0 "Carrier is the Queen of Seas"
  ENG_fleet_of_atlantic:0 "Fleet of Atlantic"
  ENG_key_of_battles:0 "Key of Battles"
- ENG_britannia_rule_the_waves_and_the_land_and_the_air:0 "Britania rules the Waves, the Land, and the Air"
+ ENG_britannia_rule_the_waves_and_the_land_and_the_air:0 "Britania rule the Waves, the Land, and the Air"
  ENG_supremacy_of_number:0 "Supremacy of Number"
  ### TRANSJORDANIA ###
  JOR_assert_independance:0 "Assert Independance"
@@ -5527,5 +5527,6 @@
  civil_rights_for_women:0 "Civil Rights for Women"
  patriotic_education_focus:0 "Patriotic Education"
  protect_democratic_values:0 "Protect Democratic Values"
+ choose_neutrality:0 "Neutrality"
  ### National Liberation Comittee ###
  NLC_join_our_comrades:0 "Join our Comrades"

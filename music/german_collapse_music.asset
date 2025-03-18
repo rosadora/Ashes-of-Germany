@@ -119,3 +119,8 @@ music = {
 	volume = 1
 }
 
+music = {
+	name = "dadao_song"
+	file = "dadao_song.ogg"
+	volume = 1
+}

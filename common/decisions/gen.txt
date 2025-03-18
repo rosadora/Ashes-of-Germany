@@ -76,6 +76,7 @@ gen_pick_a_side = {
 				tag = UKR
 				tag = BLR
 				tag = NLC
+				tag = USR
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -249,11 +250,47 @@ gen_pick_a_side = {
 		icon = GFX_decision_hol_exchange_intelligence_data
 
 		available = {
-			OR = {
+			AND = {
 				PRS = {
+					OR = {
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism
+					}
 					is_faction_leader = yes
 				}
-			}
+				OR = {
+					has_government = ultra_nationalism
+					has_government = fascism
+					has_government = neutrality
+				}
+				}
+				AND = {
+				PRS = {
+					OR = {
+					has_government = democratic
+					has_government = classical_liberalism
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				}
+				AND = {
+				PRS = {
+					OR = {
+					has_government = social_liberalism
+					has_government = social_democracy
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+				}
+			    }
 		}
 
 		visible = {
@@ -265,6 +302,7 @@ gen_pick_a_side = {
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = PAL_arabia_in_the_world_stage
 				has_completed_focus = PAL_pick_a_side
+				has_completed_focus = USR_a_pact_with_rosa_luxemburg
 			}
 			OR = {
 				tag = HOL
@@ -312,19 +350,12 @@ gen_pick_a_side = {
 		}
 
 		remove_effect = {
-			IF = {
-				limit = {
-					PRS = {
-					is_faction_leader = yes
-				    }
-				}
 				PRS = {
 				country_event = {
 					id = gen.1
 					days = 1
 				}
 			    }
-			}
 		}
 
 		ai_will_do = {
@@ -336,11 +367,47 @@ gen_pick_a_side = {
 		icon = GFX_decision_hol_exchange_intelligence_data
 
 		available = {
-			OR = {
+			AND = {
 				FRA = {
+					OR = {
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism
+					}
 					is_faction_leader = yes
 				}
-			}
+				OR = {
+					has_government = ultra_nationalism
+					has_government = fascism
+					has_government = neutrality
+				}
+				}
+				AND = {
+				FRA = {
+					OR = {
+					has_government = democratic
+					has_government = classical_liberalism
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				}
+				AND = {
+				FRA = {
+					OR = {
+					has_government = social_liberalism
+					has_government = social_democracy
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+				}
+			    }
 		}
 
 		visible = {
@@ -411,7 +478,7 @@ gen_pick_a_side = {
 		}
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 		}
 	}
 	gen_join_japan = {
@@ -420,12 +487,33 @@ gen_pick_a_side = {
 
 		available = {
 			OR = {
+				AND = {
 				JAP = {
 					OR = {
 					has_government = ultra_nationalism
 					has_government = fascism
 					}
 					is_faction_leader = yes
+				}
+				OR = {
+					has_government = ultra_nationalism
+					has_government = fascism
+				}
+				}
+				AND = {
+				JAP = {
+					OR = {
+					has_government = communism
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = communism
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+				}
 				}
 			}
 		}
@@ -463,22 +551,11 @@ gen_pick_a_side = {
 		}
 
 		remove_effect = {
-			IF = {
-				limit = {
-					JAP = {
-					OR = {
-					has_government = ultra_nationalism
-					has_government = fascism
-					}
-					is_faction_leader = yes
-				}
-				}
-				JAP = {
+			JAP = {
 				country_event = {
 					id = gen.1
 					days = 1
 				}
-			    }
 			}
 		}
 

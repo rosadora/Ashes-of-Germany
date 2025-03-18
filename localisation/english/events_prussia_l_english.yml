@@ -1334,6 +1334,12 @@
  gen.3.t:0 "[FROM.GetName] denies our Demand!"
  gen.3.d:0 ""
  gen.3.a:0 "..."
+ gen.4.t:0 "The End of War Communism"
+ gen.4.d:0 "Our country is no longer communist, we have to demobilize."
+ gen.4.a:0 "Ok"
+ gen.5.t:0 "The End of War Communism"
+ gen.5.d:0 "Our country is no longer at war, we have to demobilize."
+ gen.5.a:0 "Ok"
  ### JAPAN ###
  jap.1.t:0 "Japanese 1936 Elections"
  jap.1.d:0 ""
@@ -1354,6 +1360,9 @@
  jap.4.t:0 "Communist China says No"
  jap.4.d:0 ""
  jap.4.a:0 "Oh..."
+ news.3084.t:0 "Second Sino-Japanese War"
+ news.3084.d:0 "After weeks of border provocations and preparations, Japan decided to launch Operation Ichi-go, plunging China into an asymmetric war. European nations and the League of Nations protested, but to little effect. The battles for control of Beijing are already beginning."
+ news.3084.a:0 "Ok"
  ### LITHUANIA ###
  lithuania.1.t:0 "Konigsberg Conference"
  lithuania.1.d:0 "Lithuania, after years of dispute over the return of Vilnius to their country, decided to open negotiations in Konigsberg with representatives of our nation. The Polish government has yet to announce its position on the matter."
