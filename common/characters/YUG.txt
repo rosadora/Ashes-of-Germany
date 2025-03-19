@@ -11,6 +11,11 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		country_leader={
+			ideology=ultra_nationalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 	YUG_milan_stojadinovic={
 		name=YUG_milan_stojadinovic
@@ -33,27 +38,73 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=liberalism
+			ideology=classical_liberalism_category
 			expire="1965.1.1.1"
 			id=-1
 		}
 	}
-	YUG_peter_ii={
-		name=YUG_peter_ii
+	YUG_Vitomir_Korac={
+		name="Vitomir Korać"
 		portraits={
 			civilian={
-				large="GFX_portrait_yugoslavia_peter_ii_young"
+				large= GFX_Vitomir_Korac
+				small = GFX_Vitomir_Korac_small
 			}
 		}
 		country_leader={
-			ideology=despotism
-			traits={ underage_monarch }
+			ideology=social_democracy_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YUG_Aleksa_Stanojevic={
+		name="Aleksa "Aca" Stanojević"
+		portraits={
+			civilian={
+				large= GFX_Aleksa_Stanojevic
+				small = GFX_Aleksa_Stanojevic_small
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YUG_Svetozar_Pribicevic={
+		name="Svetozar Pribićević"
+		portraits={
+			civilian={
+				large= GFX_Svetozar_Pribicevic
+				small = GFX_Svetozar_Pribicevic_small
+			}
+		}
+		country_leader={
+			ideology=social_liberalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YUG_Filip_Filipovic={
+		name="Filip Filipović"
+		portraits={
+			civilian={
+				large= GFX_Filip_Filipovic
+				small = GFX_Filip_Filipovic_small
+			}
+		}
+		country_leader={
+			ideology=marxism
 			expire="1965.1.1.1"
 			id=-1
 		}
 		country_leader={
-			ideology=conservatism
-			traits={ underage_monarch }
+			ideology=libertarian_socialism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=classical_marxism_category
 			expire="1965.1.1.1"
 			id=-1
 		}

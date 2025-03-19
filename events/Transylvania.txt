@@ -16,10 +16,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		HUN = {
-			end_puppet = TRA
-		}
-		leave_faction = yes
 		add_ideas = civil_war
 		QTT = {
 			add_ideas = all_queer_uprising
@@ -40,10 +36,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		HUN = {
-			end_puppet = TRA
-		}
-		leave_faction = yes
 		add_ideas = civil_war
 		QTT = {
 			add_ideas = all_queer_uprising
@@ -124,7 +116,6 @@ country_event = {
 			}
 		}
 		remove_ideas = hungarian_puppet
-		leave_faction = yes
 	}
 }
 country_event = {

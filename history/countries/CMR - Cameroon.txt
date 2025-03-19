@@ -31,6 +31,7 @@ recruit_character = CMR_mt
 recruit_character = CMR_ai2
 recruit_character = CMR_ncs
 recruit_character = CMR_acr
+recruit_character = CMR_Felix_Eboue
 
 
 1939.1.1 = {
@@ -93,4 +94,8 @@ set_popularities = {
 	fascism = 20
 	communism = 5
 	neutrality = 50
+}
+
+add_ideas = {
+	code_de_lindigenat
 }

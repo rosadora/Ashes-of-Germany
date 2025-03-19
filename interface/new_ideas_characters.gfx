@@ -1506,6 +1506,76 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Vitomir_Korac"
+		texturefile = "gfx/leaders/YUG/Vitomir_Korac.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Vitomir_Korac_small"
+		texturefile = "gfx/leaders/YUG/Vitomir_Korac_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Aleksa_Stanojevic"
+		texturefile = "gfx/leaders/YUG/Aleksa_Stanojevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Aleksa_Stanojevic_small"
+		texturefile = "gfx/leaders/YUG/Aleksa_Stanojevic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Svetozar_Pribicevic"
+		texturefile = "gfx/leaders/YUG/Svetozar_Pribicevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Svetozar_Pribicevic_small"
+		texturefile = "gfx/leaders/YUG/Svetozar_Pribicevic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Filip_Filipovic"
+		texturefile = "gfx/leaders/YUG/Filip_Filipovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Filip_Filipovic_small"
+		texturefile = "gfx/leaders/YUG/Filip_Filipovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Felix_Eboue"
+		texturefile = "gfx/leaders/CMR/Felix_Eboue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Felix_Eboue_small"
+		texturefile = "gfx/leaders/CMR/Felix_Eboue_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Leon_Geismar"
+		texturefile = "gfx/leaders/SEN/Leon_Geismar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Leon_Geismar_small"
+		texturefile = "gfx/leaders/SEN/Leon_Geismar_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Georges_Le_Beau"
+		texturefile = "gfx/leaders/ALG/Georges_Le_Beau.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Georges_Le_Beau_small"
+		texturefile = "gfx/leaders/ALG/Georges_Le_Beau_small.dds"
+	}
+
+	spriteType = {
         name = "GFX_british_crown_colonies_icon"
         textureFile = "gfx/interface/autonomy/british_crown_colonies.dds"
     }

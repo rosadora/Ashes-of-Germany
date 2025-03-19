@@ -1,5 +1,8 @@
 ﻿capital = 107
 
+create_faction = belgrade_bucarest_axis
+add_to_faction = ROM
+
 if = {
 	limit = {
 		NOT = {
@@ -41,7 +44,6 @@ set_research_slots = 3
 recruit_character = YUG_prince_paul
 recruit_character = YUG_milan_stojadinovic
 recruit_character = YUG_milan_grol
-recruit_character = YUG_josip_broz_tito
 recruit_character = YUG_vladimir_Cukavac
 recruit_character = YUG_ivan_gosnjak
 recruit_character = YUG_danilo_kalafatovic
@@ -63,35 +65,10 @@ recruit_character = YUG_milan_nedic
 recruit_character = YUG_ivan_ribar
 recruit_character = YUG_dimitrije_ljotic
 recruit_character = YUG_ivo_lola_ribar
-recruit_character = YUG_peter_ii
-
-
-
-if = {
-	limit = {
-		#has_dlc = Battle for the Bosporus
-	}
-	add_opinion_modifier = { 
-		target = GRE
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = ROM
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = TUR
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = BUL
-		modifier = BFTB_balkan_pact_enemy
-	}
-	add_opinion_modifier = { 
-		target = HUN
-		modifier = BFTB_balkan_pact_enemy
-	}
-}
+recruit_character = YUG_Vitomir_Korac
+recruit_character = YUG_Aleksa_Stanojevic
+recruit_character = YUG_Svetozar_Pribicevic
+recruit_character = YUG_Filip_Filipovic
 
 set_technology = {
 	tech_support = 1		
@@ -104,6 +81,7 @@ set_technology = {
 	interwar_antiair = 1
 	superior_firepower = 1
 	basic_train = 1
+	tech_trucks = 1
 }
 if = {
 	limit = {
@@ -163,10 +141,16 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 15
-	fascism = 10
-	communism = 15
-	neutrality = 60
+	fascism = 3
+	ultra_nationalism = 7
+	neutrality = 35
+	democratic = 21
+	classical_liberalism = 12
+	social_liberalism = 7
+	social_democracy = 3
+	classical_marxism = 5
+	libertarian_socialism = 0
+	communism = 7
 }
 
 1939.1.1 = {

@@ -6,7 +6,7 @@ tags={
 	"Gameplay"
 	"Ideologies"
 }
-name="Ashes of Germany (Beta) 2"
+name="Ashes of Germany (Beta)"
 replace_path="events"
 replace_path="common/ai_strategy"
 replace_path="common/ai_strategy_plans"

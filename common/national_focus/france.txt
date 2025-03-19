@@ -3474,6 +3474,42 @@
 		}
 	}
 	focus = {
+		id = FRA_blum_violette_proposal
+		icon = GFX_goal_blum_violette_proposal
+		x = 4
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {focus = FRA_blum_government}
+		cost = 8
+			ai_will_do = {
+			factor = 2
+		}
+		available = {
+			ALG = {
+				is_puppet_of = FRA
+			}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ALG = {
+			country_event = {
+				id = francenew.49
+				days = 2
+			}
+			}
+		}
+	}
+	focus = {
 		id = FRA_volunteers_in_the_civil_war
 		icon = GFX_focus_SOV_organization_centralization_discipline
 		x = -1
@@ -3523,10 +3559,6 @@
 			add_opinion_modifier = {
 				target = SOV
 				modifier = support_the_other_side_in_russian_civil_war
-			}
-			add_timed_idea = {
-			idea = volunteers_in_the_spanish_civil_war
-			days = 800
 			}
 		}
 	}

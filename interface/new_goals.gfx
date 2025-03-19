@@ -1720,4 +1720,44 @@ spriteTypes = {
 	name = "GFX_goal_chairwoman_pankhurst"
 	texturefile = "gfx/interface/goals/chairwoman_pankhurst.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_blum_violette_proposal"
+	texturefile = "gfx/interface/goals/blum_violette_proposal.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
 }

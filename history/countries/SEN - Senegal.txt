@@ -31,6 +31,7 @@ recruit_character = SEN_ai2
 recruit_character = SEN_democratic_guy
 recruit_character = SEN_ar
 recruit_character = SEN_acgs
+recruit_character = SEN_Leon_Geismar
 
 1939.1.1 = {
 	
@@ -80,15 +81,19 @@ recruit_character = SEN_acgs
 }
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 55
-	fascism = 15
+	democratic = 25
+	fascism = 0
 	communism = 5
-	neutrality = 25
+	neutrality = 70
+}
+
+add_ideas = {
+	code_de_lindigenat
 }

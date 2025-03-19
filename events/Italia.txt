@@ -493,6 +493,9 @@ country_event = { #Socialist Italy surrenders to fascists
 		ai_chance = {
 			base = 80
 		}
+		transfer_navy = {
+            target = NLC
+        }
 		annex_country = {
           target = NLC
           transfer_troops = no
@@ -523,6 +526,9 @@ country_event = { #Socialist Italy surrenders to south
 		ai_chance = {
 			base = 80
 		}
+		transfer_navy = {
+            target = NLC
+        }
 		annex_country = {
           target = NLC
           transfer_troops = no
@@ -551,6 +557,9 @@ country_event = { #Fascist Italy surrenders to North
 		ai_chance = {
 			base = 80
 		}
+		transfer_navy = {
+            target = ITA
+        }
 		annex_country = {
           target = ITA
           transfer_troops = no
@@ -579,6 +588,9 @@ country_event = { #Fascist Italy surrenders to South
 		ai_chance = {
 			base = 80
 		}
+		transfer_navy = {
+            target = ITA
+        }
 		annex_country = {
           target = ITA
           transfer_troops = no
@@ -607,6 +619,9 @@ country_event = { #South Italy surrenders to Fascists
 		ai_chance = {
 			base = 80
 		}
+		transfer_navy = {
+            target = ILF
+        }
 		annex_country = {
           target = ILF
           transfer_troops = no
@@ -635,9 +650,217 @@ country_event = { #South Italy surrenders to North
 		ai_chance = {
 			base = 80
 		}
+		transfer_navy = {
+            target = ILF
+        }
 		annex_country = {
           target = ILF
           transfer_troops = no
         }
+	}
+}
+# Negotiations with Albania - Event for ALB
+country_event = {
+	id = italia.21
+	title = italia.21.t
+	desc = italia.21.desc
+	picture = GFX_report_event_albanian_king_zog
+	
+	is_triggered_only = yes
+	
+	#Accept - Get annexed
+	option = {
+		name = italia.21.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				is_subject = yes
+				NOT = { is_subject_of = FROM }
+			}
+			modifier = {
+				factor = 0.8
+				any_other_country = {
+					OR = {
+						is_major = yes
+						tag = YUG
+					}
+					NOT = { tag = FROM }
+					OR = {
+						has_guaranteed = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 0.6
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 10
+				is_in_faction_with = FROM
+			}
+			modifier = {
+				factor = 100
+				is_subject_of = FROM
+			}
+		}
+
+		hidden_effect = {
+			FROM = { country_event = { id = italia.22 hours = 6 random_hours = 2 } }
+		}
+
+		effect_tooltip = {
+			FROM = { annex_country = { target = ROOT transfer_troops = yes } }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	#Middle ground - Puppet
+	option = {
+		name = italia.21.b
+		ai_chance = {
+			base = 0
+		}
+
+		hidden_effect = {
+			FROM = { country_event = { id = italia.23 hours = 6 random_hours = 2 } }
+		}
+
+		effect_tooltip = {
+			FROM = { puppet = ROOT }
+		}
+	}
+
+	# Refuse
+	option = {
+		name = italia.100.c
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FROM
+						OR = {
+							is_subject = no
+							is_subject_of = FROM
+						}
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FROM }
+								has_guaranteed = ROOT
+							} 
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 100
+				is_in_faction = yes
+				NOT = { is_in_faction_with = FROM }
+			}
+			modifier = {
+				add = 100
+				is_subject = yes
+				NOT = { is_subject_of = FROM }
+			}
+		}
+
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ROOT
+					generator = { 44 805 }
+				}
+			}
+		}
+
+		hidden_effect = {
+			FROM = { country_event = { id = italia.24 hours = 6 random_hours = 2 } }
+		}
+	}
+}
+
+# Negotiations with Albania - ALB gets annexed - Event for ITA
+country_event = {
+	id = italia.22
+	title = italia.22.t
+	desc = italia.22.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+	#Cool
+	option = {
+		name = italia.22.a
+
+		annex_country = { target = FROM transfer_troops = yes }
+	}
+}
+
+# Negotiations with Albania - ALB gets puppetted - Event for ITA
+country_event = {
+	id = italia.23
+	title = italia.23.t
+	desc = italia.23.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+	#Cool
+	option = {
+		name = italia.23.a
+
+		puppet = FROM
+	}
+}
+
+# Negotiations with Albania - ALB refused to get puppeted - Event for ITA
+country_event = {
+	id = italia.24
+	title = italia.24.t
+	desc = italia.24.desc
+	picture = GFX_report_event_albanian_partisans
+
+	is_triggered_only = yes
+
+	#Nothing we respect their decision (pfff lies)
+	option = {
+		name = italia.24.a
+
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	#War goal
+	option = {
+		name = italia.24.a
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = -4
+				FROM = { is_ai = no }
+			}
+		}
+
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 44 805 }
+		}
+
+		hidden_effect = {
+			country_event = { days = 1 id = bba_news.108 }
+		}
 	}
 }

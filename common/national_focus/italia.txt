@@ -961,7 +961,7 @@ focus_tree = {
 				limit = {
 					ALB = { has_war = no }
 				}
-				ALB = { country_event = { id = italy.3 hours = 1 } }
+				ALB = { country_event = { id = italia.21 hours = 1 } }
 			}
 			else = {
 				create_wargoal = {

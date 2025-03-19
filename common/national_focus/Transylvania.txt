@@ -911,10 +911,7 @@
 				ROM = {
 					add_ideas = civil_war
 				}
-				HUN = {
-					end_puppet = TRA
-				}
-				leave_faction = yes
+			}
 			news_event = {
 				days = 1
 				id = news.3048
@@ -928,7 +925,6 @@
                 target = ROM
                 type = annex_everything
             }
-		}
 	}
 	focus = {
 		id = TRA_the_romanian_council_republic
@@ -2674,6 +2670,54 @@
 		}
 	}
 	focus = {
+		id = TRA_friends_and_forever
+		icon = GFX_goal_hungarian_aid
+		x = 27
+		y = 6
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = {
+				size > 400000
+			}
+			HUN = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = {}
+		mutually_exclusive = {focus = TRA_hungaro_romanian_split}
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hungarian_puppet 
+				add_idea = friends_forever
+			}
+			add_tech_bonus = {
+				category = nuclear
+				bonus = 2
+				uses = 1
+			}
+			remove_state_core = 942
+		}
+	}
+	focus = {
 		id = TRA_hungaro_romanian_split
 		icon = GFX_goal_romano_hungarian_split
 		x = 25
@@ -2700,6 +2744,7 @@
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		mutually_exclusive = {focus = TRA_friends_and_forever}
 
 		completion_reward = {
 			country_event = {
@@ -2858,7 +2903,7 @@
 		bypass = {
 		}
 
-		prerequisite = {focus = TRA_hungaro_romanian_split}
+		prerequisite = {focus = TRA_hungaro_romanian_split focus = TRA_friends_and_forever}
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
@@ -3014,7 +3059,7 @@
 		bypass = {
 		}
 
-		prerequisite = {focus = TRA_hungaro_romanian_split}
+		prerequisite = {focus = TRA_hungaro_romanian_split focus = TRA_friends_and_forever}
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
@@ -3177,7 +3222,7 @@
 	focus = {
 		id = TRA_romania_inainte_mars
 		icon = GFX_goal_romania_inainte_mars
-		x = 0
+		x = 2
 		y = 4
 
 		cost = 7
@@ -3193,7 +3238,6 @@
 		}
 
 		prerequisite = {focus = TRA_antifascist_focus}
-		prerequisite = {focus = TRA_ideological_hegemony}
 		prerequisite = {focus = TRA_the_russian_bear}
 
 		continue_if_invalid = yes

@@ -315,6 +315,7 @@ ideas = {
 					has_government = classical_marxism 
 					has_government = libertarian_socialism
 				}
+				has_war = yes
 			}
 
 			cancel_if_invalid = no

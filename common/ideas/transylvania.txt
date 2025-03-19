@@ -53,6 +53,26 @@ ideas = {
 				political_power_factor = -0.35
 			}
 		}
+		friends_forever = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_socialist_welfare
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				research_speed_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
 		all_queer_uprising = {
 			
 			allowed = {

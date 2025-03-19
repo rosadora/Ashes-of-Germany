@@ -369,7 +369,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		   add_ideas = warriors_from_the_moutains
+		   add_ideas = warriors_from_the_mountains
 		}
 	}
 	focus = {

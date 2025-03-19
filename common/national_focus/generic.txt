@@ -1753,6 +1753,9 @@ focus_tree = {
 			NOT = {
 				original_tag = JAP
 			}
+			NOT = {
+				is_puppet = yes
+			}
 		}
 
 		completion_reward = {

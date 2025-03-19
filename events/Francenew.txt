@@ -1415,3 +1415,77 @@ country_event = {
         }
 	}
 }
+country_event = { # Blum-Violette proposal - Request
+	id = francenew.49
+	title = francenew.49.t
+	desc = francenew.49.d
+	picture = GFX_report_event_AUS_military_march
+
+	is_triggered_only = yes
+
+	option = { # Sure, Sir Blum
+		name = francenew.49.a
+		ai_chance = {
+			base = 100
+		}
+		FRA = {
+			country_event = {
+				id = francenew.50
+				days = 2
+			}
+			add_state_core = 459
+			add_state_core = 460
+			add_state_core = 513
+			add_state_core = 514
+			annex_country = {
+				target = ALG
+				transfer_troops = yes
+			}
+		}
+	}
+	option = { # No
+		name = francenew.49.b
+		ai_chance = {
+			base = 0
+		}
+		FRA = {
+			country_event = {
+				id = francenew.51
+				days = 2
+			}
+			add_political_power = 100
+		}
+	}
+}
+
+country_event = { # Blum-Violette proposal - Algeria Accepts
+	id = francenew.50
+	title = francenew.50.t
+	desc = francenew.50.d
+	picture = GFX_report_event_AUS_military_march
+
+	is_triggered_only = yes
+
+	option = { # Nice
+		name = francenew.50.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { # Blum-Violette proposal - Algeria denies
+	id = francenew.51
+	title = francenew.51.t
+	desc = francenew.51.d
+	picture = GFX_report_event_AUS_military_march
+
+	is_triggered_only = yes
+
+	option = { # Sad
+		name = francenew.51.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
