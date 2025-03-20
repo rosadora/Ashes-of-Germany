@@ -76,7 +76,7 @@ country_event = {
 				ruling_party = classical_marxism
 				ideology = fascism
 				size = 0.4
-				states = {534 535 282 533 536 555 537 655 525 527 609 745}
+				states = {534 535 282 533 536 555 537 655 525 527 609 745 532}
 				hidden_effect = {
                 }
 			}

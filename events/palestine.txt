@@ -62,7 +62,6 @@ country_event = {
           disband = yes #will refund equipment and manpower
          }
 		load_oob = PAL_civil_war
-		}
 		news_event = news.3073
 		retire_country_leader = yes
 		create_country_leader = {
@@ -80,6 +79,7 @@ country_event = {
           long_name = PAL_neutrality_independent_long
           name = PAL_neutrality_independent
         }
+		}
 	}
 
 	option = {

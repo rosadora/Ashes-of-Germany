@@ -1,0 +1,29 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = china
+
+# The End of the United Front
+country_event = {
+	id = china.1
+	title = china.1.t
+	desc = china.1.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		tag = CHI 
+		has_completed_focus = CHI_united_front
+		has_war = no
+	}
+
+	fire_only_once = yes
+	
+	option = { #Dissolve the Faction
+		name = china.1.a
+		ai_chance = {
+			base = 50
+		}
+		dismantle_faction = yes
+	}
+}
