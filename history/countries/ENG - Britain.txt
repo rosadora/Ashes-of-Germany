@@ -167,7 +167,6 @@ if = {
 }
 
 add_ideas = {
-	stiff_upper_lip
 	george_v
 	overshadowed_by_france
 	ENG_the_war_to_end_all_wars

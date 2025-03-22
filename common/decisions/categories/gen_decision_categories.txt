@@ -25,3 +25,15 @@ gen_war_of_unification = {
 	visible = {
 	}
 }
+
+gen_join_chinese_united_front = {
+
+	icon = GFX_decision_category_NOR_fascist_deploy_prep
+
+	picture = GFX_decision_cat_picture_unite_germany
+
+	priority = 50
+
+	visible = {
+	}
+}

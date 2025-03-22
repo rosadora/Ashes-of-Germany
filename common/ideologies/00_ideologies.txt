@@ -186,7 +186,7 @@ ideologies = {
 		rules = {
 			can_force_government = yes
 			can_send_volunteers = yes
-			can_lower_tension = yes
+			can_puppet = yes
 		}
 
 		can_host_government_in_exile = yes
@@ -236,7 +236,7 @@ ideologies = {
 		rules = {
 			can_force_government = yes
 			can_send_volunteers = yes
-			can_lower_tension = yes
+			can_puppet = yes
 		}
 
 		can_host_government_in_exile = yes
@@ -286,7 +286,7 @@ ideologies = {
 		rules = {
 			can_force_government = yes
 			can_send_volunteers = yes
-			can_lower_tension = yes
+			can_puppet = yes
 		}
 
 		can_host_government_in_exile = yes
@@ -336,7 +336,7 @@ ideologies = {
 		rules = {
 			can_force_government = yes
 			can_send_volunteers = yes
-			can_lower_tension = yes
+			can_puppet = yes
 		}
 
 		can_host_government_in_exile = yes

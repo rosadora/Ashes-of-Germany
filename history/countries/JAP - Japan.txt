@@ -4,7 +4,7 @@ puppet = FER
 
 
 
-set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
+set_stability = 0.5
 set_war_support = 0.8
 
 set_research_slots = 4
@@ -14,10 +14,10 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-
 	JAP_zaibatsus
 	JAP_duplicate_research_efforts
 	JAP_militarism
+	JAP_hirohito
 }
 
 609 = {
@@ -75,20 +75,6 @@ add_ideas = {
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
-
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	add_ideas = {
-		JAP_interservice_rivalry_balanced		
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
-}
-
 
 
 set_technology = {

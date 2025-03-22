@@ -80,7 +80,6 @@ country_event = {
 				hidden_effect = {
                 }
 			}
-			remove_ideas = JAP_militarism
 			end_puppet = MAN
 			end_puppet = MEN
 			news_event = {

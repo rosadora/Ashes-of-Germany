@@ -968,3 +968,50 @@ gen_war_of_unification = {
 		}
 	}
 }
+gen_join_chinese_united_front = {
+
+	gen_defend_china = {
+
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			CHI = {
+				has_completed_focus = CHI_united_front
+				has_war_with = JAP
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = SHX
+				original_tag = SIK
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = MEN
+				original_tag = MAN
+				original_tag = PRC
+				original_tag = GXC
+			}
+			is_puppet = no
+			is_in_faction = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 20
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		remove_effect = {
+			CHI = {
+				add_to_faction = FROM
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

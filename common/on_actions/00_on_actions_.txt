@@ -1,4 +1,13 @@
 on_actions = {
+	on_monthly = {
+		effect = {
+			every_country = {
+				set_rule = {
+					can_create_factions = no
+				}
+			}
+		}
+	}
 	on_state_control_changed = {
 		effect = {
 			if = {
@@ -197,11 +206,6 @@ on_actions = {
 			can_join_factions = no
 		}
 	}
-    FRA = {
-    country_event = {
-     id = general.2
-    }
-   }
    every_country = {
     country_event = {
      id = general.1

@@ -1727,13 +1727,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_state_zaibtasus"
+	texturefile = "gfx/interface/goals/state_zaibtasus.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_shintoism"
+	texturefile = "gfx/interface/goals/shintoism.dds"			
 	}
 
 	SpriteType = {

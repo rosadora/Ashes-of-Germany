@@ -588,9 +588,6 @@ focus_tree = {
               amount = 3000
               producer = ITA
             }
-			hidden_effect = {
-			play_song = "giovinezza"
-			}
 		}
 	}
 	focus = {

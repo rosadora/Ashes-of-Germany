@@ -42,13 +42,13 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			NOT = {
 				has_government = classical_marxism
 				has_government = libertarian_socialism
 				has_government = communism
 			}
+        }
+		available = {
 			date > 1938.01.01
 		}
         priority = 1000
@@ -74,16 +74,16 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			NOT = {
 				has_government = classical_marxism
 				has_government = libertarian_socialism
 				has_government = communism
 			}
+        }
+		available = {
 			date > 1937.05.01
 			has_army_manpower = {
-				size > 800000
+				size > 1000000
 			}
 		}
         priority = 1000
@@ -133,6 +133,72 @@ JAP_1936_elections = {
          }
         }
     }
+	JAP_imperial_arsenals = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+        }
+		available = {
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
 	JAP_recover_far_eastern_republic = {
 
 		icon = GFX_decision_eng_trade_unions_demand
@@ -140,13 +206,13 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			NOT = {
 				has_government = classical_marxism
 				has_government = libertarian_socialism
 				has_government = communism
 			}
+        }
+		available = {
 			date > 1938.01.01
 			NOT = {
 				FER = {
@@ -180,14 +246,14 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			NOT = {
 				has_government = classical_marxism
 				has_government = libertarian_socialism
 				has_government = communism
 			}
-			date > 1939.01.01
+        }
+		available = {
+			date > 1942.01.01
 				408 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
@@ -225,8 +291,6 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			NOT = {
 				has_government = classical_marxism
 				has_government = libertarian_socialism
@@ -234,7 +298,9 @@ JAP_1936_elections = {
 				has_government = classical_liberalism
 				has_government = social_liberalism
 			}
-			date > 1939.01.01
+        }
+		available = {
+			date > 1941.01.01
 		}
         priority = 1000
 
@@ -270,8 +336,6 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			NOT = {
 				has_government = classical_marxism
 				has_government = libertarian_socialism
@@ -280,6 +344,8 @@ JAP_1936_elections = {
 				has_government = social_liberalism
 				has_government = democratic
 			}
+        }
+		available = {
 			date > 1941.01.01
 		}
         priority = 1000
@@ -312,13 +378,13 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			OR = {
 			has_government = classical_marxism
 			has_government = libertarian_socialism
 			has_government = communism
 			}
+        }
+		available = {
 			has_civil_war = no
 			country_exists = PRC
 		}
@@ -351,15 +417,18 @@ JAP_1936_elections = {
             tag = JAP
         }
         visible = {
-        }
-		available = {
 			OR = {
 			has_government = classical_marxism
 			has_government = libertarian_socialism
 			has_government = communism
 			}
+        }
+		available = {
 			has_civil_war = no
 			country_exists = PRC
+			has_army_manpower = {
+				size > 800000
+			}
 		}
         priority = 1000
 
@@ -408,6 +477,43 @@ JAP_1936_elections = {
          }
 		 create_wargoal = {
             target = MEN
+            type = annex_everything
+         }
+        }
+    }
+	JAP_save_the_russian_revolution = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+        }
+		available = {
+			SOV = {
+				has_war_with = USR
+			}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = SOV
             type = annex_everything
          }
         }

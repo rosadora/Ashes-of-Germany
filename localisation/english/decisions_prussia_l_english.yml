@@ -50,6 +50,9 @@
  ENG_1936_elections:0 "1936 Snap Elections!"
  ENG_1936_election_day:0 "Election Day!"
  ENG_new_poll:0 "New Poll"
+ ENG_intervention_in_continental_affairs:0 "Intervention in Continental Affairs"
+ JAP_save_the_russian_revolution:0 "Save the Russian Revolution"
+ ENG_british_politics:0 "British Politics"
  ### JAPAN ###
  JAP_1936_elections:0 "Japanese Politics"
  JAP_1936_election_day:0 "Election Day!"
@@ -63,6 +66,7 @@
  JAP_joint_attack:0 "Joint Attack"
  daitoa_kyoeiken:0 "Dai-tō-a Kyōeiken"
  JAP_foundations_of_japanese_resurgence:0 "Dai-tō-a Kyōeiken"
+ JAP_imperial_arsenals:0 "Imperial Arsenals"
  ### france ###
  FRA_french_politics:0 "French Politics"
  FRA_give_damas_to_syria:0 "Transfer Damas to Syria"
@@ -83,3 +87,6 @@
  LIT_konigsberg_conference:0 "Konigsberg Conference"
  RECALL_VOLUNTEERS_ACTION_DESC:0 "Recall Volunteers"
  RECALL_VOLUNTEERS_TITLE:0 "Recall Volunteers"
+ ### CHINA ###
+ gen_join_chinese_united_front:0 "Chinese United Front"
+ gen_defend_china:0 "Join the United Front"

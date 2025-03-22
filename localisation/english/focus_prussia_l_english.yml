@@ -5535,3 +5535,16 @@
  belgrade_bucarest_axis:0 "Belgrade-Bucarest Axis"
  ### National Liberation Comittee ###
  NLC_join_our_comrades:0 "Join our Comrades"
+ ### JAPAN ###
+ JAP_hanran:0 "Hanran!"
+ JAP_hanran_desc:0 "It's our time to create a new World!"
+ JAP_end_the_nationalist_fable:0 "End the Nationalist Fable"
+ JAP_end_the_nationalist_fable_desc:0 "The nationalist education and culture established during the Meiji era is a poison spread throughout Japanese society. "
+ JAP_expropriate_zaibatsus:0 "Expropriate Zaibatsus"
+ JAP_expropriate_zaibatsus_desc:0 "Japan's few large corporations have too much power over society and successive governments, and their expropriation is necessary for the success of the revolution."
+ JAP_give_up_state_religion:0 "Give-up State Shintoism"
+ JAP_give_up_state_religion_desc:0 "Within Japan's borders, all religious beliefs must be accepted, and the state must be indifferent to them."
+ JAP_new_dawn_for_socialism:0 "New Dawn for Socialism"
+ JAP_new_dawn_for_socialism_desc:0 "Japan will be the heart of the Asian Revolution, and maybe the World Revolution!"
+ JAP_fix_the_situation:0 "Fix the Situation"
+ JAP_fix_the_situation_desc:0 "Japan is in the grip of a deep internal crisis, and it will take time to remedy."
