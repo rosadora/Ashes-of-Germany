@@ -1,4 +1,4 @@
-version="1.16.2"
+version="1.16.4"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -6,7 +6,7 @@ tags={
 	"Gameplay"
 	"Ideologies"
 }
-name="Ashes of Germany (Beta)"
+name="Ashes of Germany : The Fading Empire"
 replace_path="events"
 replace_path="common/ai_strategy"
 replace_path="common/ai_strategy_plans"
@@ -16,4 +16,4 @@ replace_path="common/national_focus"
 replace_path="history/states"
 replace_path="map"
 supported_version="1.16.2"
-remote_file_id="3434132774"
+remote_file_id="3153337708"

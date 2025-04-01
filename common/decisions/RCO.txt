@@ -144,14 +144,6 @@ RCO_remilitarisation_war = {
 		timeout_effect = {
 		  set_country_flag = victory_against_france
 		  white_peace = FRA
-		  FRA = {
-			set_autonomy = {
-            target = RCO
-            autonomy_state = autonomy_dominion
-            end_wars = no
-            end_civil_wars = no
-           }
-		  }
 		}
 
 		ai_will_do = {
@@ -183,14 +175,6 @@ RCO_remilitarisation_war = {
             add_state_core = 943
 			transfer_state = 943
 			white_peace = FRA
-		  FRA = {
-			set_autonomy = {
-            target = RCO
-            autonomy_state = autonomy_dominion
-            end_wars = no
-            end_civil_wars = no
-           }
-		  }
         }
     }
 }
