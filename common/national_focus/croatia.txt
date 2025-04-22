@@ -1,0 +1,497 @@
+﻿focus_tree = {
+	id = croatia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = CRO
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = CRO_recognize_rakosi
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 4
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = CRO_yugoslavianism}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			country_exists = SER
+			SER = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = CRO_has_give_up_yugoslavian_claims
+			add_state_core = 104
+			add_state_core = 804
+			add_state_core = 105
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = CRO_yugoslavianism
+		icon = GFX_focus_YUG_dissolve_serbia
+		x = 8
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = CRO_recognize_rakosi}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 764
+			add_state_core = 45
+			add_state_core = 107
+			add_state_core = 104
+			add_state_core = 804
+			add_state_core = 105
+			add_state_core = 108
+			add_state_core = 802
+			add_state_core = 803
+			add_state_core = 106
+			set_cosmetic_tag = CRO_YUG
+		}
+	}
+	focus = {
+		id = CRO_pressure_rakosi
+		icon = GFX_goal_generic_forceful_treaty
+		x = 9
+		y = 1
+		prerequisite = {focus = CRO_yugoslavianism}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			country_exists = SER
+			SER = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			SER = {
+				country_event = {
+					id = croatia.1
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = CRO_expand_anti_titoist_wing_of_kpj
+		icon = GFX_SOV_socialist_realism_ccp_2d_sov_compatibility
+		x = 3
+		y = 1
+		prerequisite = {focus = CRO_recognize_rakosi}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = CRO_recruit_partisans
+		icon = GFX_focus_GER_the_peoples_victory
+		x = 6
+		y = 1
+		prerequisite = { focus = CRO_yugoslavianism focus = CRO_recognize_rakosi}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = CRO_expand_zagreb_military_plant
+		icon = GFX_focus_SWI_issue_war_bonds
+		x = -2
+		y = 1
+		prerequisite = { focus = CRO_recruit_partisans}
+		relative_position_id = CRO_recruit_partisans
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			109 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CRO_galvanize_our_soldiers
+		icon = GFX_focus_SWE_lottakoren
+		x = 0
+		y = 1
+		prerequisite = { focus = CRO_recruit_partisans}
+		relative_position_id = CRO_recruit_partisans
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = CRO_bet_on_a_defensive_doctrine
+		icon = GFX_goal_generic_defence
+		x = 2
+		y = 1
+		prerequisite = { focus = CRO_recruit_partisans}
+		relative_position_id = CRO_recruit_partisans
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = defensive_doctrine
+		}
+	}
+	focus = {
+		id = CRO_ignite_the_flames
+		icon = GFX_focus_generic_attack_yugoslavia
+		x = 0
+		y = 2
+		prerequisite = { focus = CRO_bet_on_a_defensive_doctrine}
+		prerequisite = { focus = CRO_galvanize_our_soldiers}
+		prerequisite = { focus = CRO_expand_zagreb_military_plant}
+		relative_position_id = CRO_recruit_partisans
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3070
+			declare_war_on = {
+              target = YUG
+              type = annex_everything
+            }
+		}
+	}
+	focus = {
+		id = CRO_the_yugoslavian_fsr
+		icon = GFX_focus_AUS_danubian_socialist_communes
+		x = 13
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 107
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = CRO_pan_slavic_agenda
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = -1
+		y = 1
+		prerequisite = {focus = CRO_the_yugoslavian_fsr}
+		relative_position_id = CRO_the_yugoslavian_fsr
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = CRO_uz_marsala_tita
+		icon = GFX_focus_AFG_defender_of_central_asia
+		x = 4
+		y = 1
+		prerequisite = {focus = CRO_the_yugoslavian_fsr}
+		relative_position_id = CRO_the_yugoslavian_fsr
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = uz_marsala
+		}
+	}
+	focus = {
+		id = CRO_pioneers
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = -2
+		y = 1
+		prerequisite = {focus = CRO_uz_marsala_tita}
+		relative_position_id = CRO_uz_marsala_tita
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = yug_pioneers
+		}
+	}
+	focus = {
+		id = CRO_first_five_year_plan
+		icon = GFX_SOV_architect_of_communism_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		prerequisite = {focus = CRO_uz_marsala_tita}
+		relative_position_id = CRO_uz_marsala_tita
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = five_year_plan 
+				days = 1825
+			}
+		}
+	}
+	focus = {
+		id = CRO_dams_on_danube
+		icon = GFX_focus_BEL_dam_the_consequences
+		x = -1
+		y = 1
+		prerequisite = {focus = CRO_first_five_year_plan}
+		relative_position_id = CRO_first_five_year_plan
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			107 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CRO_connect_the_mountains
+		icon = GFX_focus_SMB_a_land_of_mountains
+		x = 1
+		y = 1
+		prerequisite = {focus = CRO_first_five_year_plan}
+		relative_position_id = CRO_first_five_year_plan
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			104 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			804 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			105 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			803 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CRO_assassinate_ante_pavelic
+		icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
+		x = 2
+		y = 1
+		prerequisite = {focus = CRO_uz_marsala_tita}
+		relative_position_id = CRO_uz_marsala_tita
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			kill_ideology_leader = fascism
+			swap_ideas = {
+				remove_idea = ustasa
+				add_idea = beheaded_ustasa
+			}
+		}
+	}
+}

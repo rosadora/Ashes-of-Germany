@@ -58,6 +58,13 @@ set_popularities = {
 	communism = 37
 }
 
+add_ideas = {
+	ustasa
+	extensive_conscription
+	low_economic_mobilisation
+	partisan_spirit
+}
+
 create_country_leader = {
 	name = "Ante Pavelic"
 	desc = "ANTE_PAVELIC_DESC"

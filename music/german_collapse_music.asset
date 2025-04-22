@@ -124,3 +124,9 @@ music = {
 	file = "dadao_song.ogg"
 	volume = 1
 }
+
+music = {
+	name = "yugoslavian_partisan_song"
+	file = "yugoslavian_partisan_song.ogg"
+	volume = 1
+}

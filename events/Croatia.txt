@@ -1,0 +1,74 @@
+﻿###########################
+# Croatian Events
+###########################
+add_namespace = croatia
+
+country_event = {
+	id = croatia.1
+	title = croatia.1.t
+	desc = croatia.1.d
+	picture = GFX_report_event_PER_shah_inspection
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.1.a
+		ai_chance = {
+			base = 100
+		}
+		CRO = {
+			country_event = {
+				id = croatia.2
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = croatia.1.c
+		ai_chance = {
+			base = 0
+		}
+		CRO = {
+			country_event = {
+				id = croatia.3
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = croatia.2
+	title = croatia.2.t
+	desc = croatia.2.d
+	picture = GFX_report_event_PER_shah_inspection
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.2.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = {
+            target = SER
+            transfer_troops = yes
+        }
+	}
+}
+
+country_event = {
+	id = croatia.3
+	title = croatia.3.t
+	desc = croatia.3.d
+	picture = GFX_report_event_PER_shah_inspection
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.3.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

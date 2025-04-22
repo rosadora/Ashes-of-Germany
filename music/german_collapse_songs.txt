@@ -161,3 +161,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "yugoslavian_partisan_song"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

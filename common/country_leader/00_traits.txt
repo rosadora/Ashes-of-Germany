@@ -63,6 +63,15 @@ leader_traits = {
 		}
 	}
 
+	uz_marsala = {
+		random = no
+		army_org_factor = 0.05
+		conscription = 0.03
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	kings_support = {
 		random = no
 		political_power_gain = 0.2
