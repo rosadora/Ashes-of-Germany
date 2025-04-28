@@ -63,7 +63,11 @@ add_ideas = {
 	extensive_conscription
 	low_economic_mobilisation
 	partisan_spirit
+	rightist_opposition
 }
+
+recruit_character = CRO_milovan_djilas
+recruit_character = CRO_Zivko_Topalovic
 
 create_country_leader = {
 	name = "Ante Pavelic"

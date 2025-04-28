@@ -24,7 +24,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = croatia.1.c
+		name = croatia.1.b
 		ai_chance = {
 			base = 0
 		}
@@ -70,5 +70,110 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
+	}
+}
+
+country_event = { #March on Trieste
+	id = croatia.4
+	title = croatia.4.t
+	desc = croatia.4.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.4.a
+		ai_chance = {
+			base = 70
+		}
+	}
+	option = {
+		name = croatia.4.b
+		ai_chance = {
+			base = 30
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = CRO
+        }
+	}
+}
+
+country_event = { #Request Control of Slovenia - Request
+	id = croatia.5
+	title = croatia.5.t
+	desc = croatia.5.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.5.a
+		ai_chance = {
+			base = 70
+		}
+		CRO = {
+			transfer_state = 102
+			transfer_state = 853
+			country_event = {
+				id = croatia.6
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = croatia.5.b
+		ai_chance = {
+			base = 30
+		}
+		CRO = {
+			country_event = {
+				id = croatia.7
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #Request Control of Slovenia - Austria Accepts
+	id = croatia.6
+	title = croatia.6.t
+	desc = croatia.6.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.6.a
+		ai_chance = {
+			base = 70
+		}
+		add_stability = 0.05
+	}
+}
+country_event = { #Request Control of Slovenia - Austria denies
+	id = croatia.7
+	title = croatia.7.t
+	desc = croatia.7.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = croatia.7.a
+		ai_chance = {
+			base = 70
+		}
+		
+	}
+	option = {
+		name = croatia.7.b
+		ai_chance = {
+			base = 30
+		}
+		leave_faction = yes
+		create_wargoal = {
+            type = take_state_focus
+            target = AUS
+        }
 	}
 }

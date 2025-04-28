@@ -318,6 +318,447 @@
 		}
 	}
 	focus = {
+		id = CRO_march_on_trieste
+		icon = GFX_focus_NORDIC_com_selector_army
+		x = -1
+		y = 1
+		prerequisite = {focus = CRO_pan_slavic_agenda}
+		relative_position_id = CRO_pan_slavic_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_threat = 5
+			ITA = {
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 736
+					owns_state = 852
+					owns_state = 163
+					}
+				}
+				country_event = {
+					id = croatia.4
+					days = 1
+				}
+			}
+			}
+			NLC = {
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 736
+					owns_state = 852
+					owns_state = 163
+					}
+				}
+				country_event = {
+					id = croatia.4
+					days = 1
+				}
+			}
+			}
+			ILF = {
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 736
+					owns_state = 852
+					owns_state = 163
+					}
+				}
+				country_event = {
+					id = croatia.4
+					days = 1
+				}
+			}
+			}
+
+			add_state_core = 736
+			add_state_core = 852
+			add_state_core = 163
+			transfer_state = 736
+			transfer_state = 852
+			transfer_state = 163
+		}
+	}
+	focus = {
+		id = CRO_request_slovenian_control
+		icon = GFX_goal_slovenian_issue
+		x = 1
+		y = 1
+		prerequisite = {focus = CRO_pan_slavic_agenda}
+		relative_position_id = CRO_pan_slavic_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			AUS = {
+			IF = {
+				limit = {
+					owns_state = 102
+					owns_state = 853
+				}
+				country_event = {
+					id = croatia.5
+					days = 1
+				}
+			}
+			}
+
+			add_state_core = 102
+			add_state_core = 853
+		}
+	}
+	focus = {
+		id = CRO_push_for_bulgarian_annexation
+		icon = GFX_focus_generic_attack_bulgaria
+		x = 0
+		y = 2
+		prerequisite = {focus = CRO_pan_slavic_agenda}
+		relative_position_id = CRO_pan_slavic_agenda
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 48
+			add_state_core = 212
+			add_state_core = 801
+			add_state_core = 211
+			create_wargoal = {
+		      type = annex_everything
+		      target = BUL
+	        }
+		}
+	}
+	focus = {
+		id = CRO_southern_slavic_brothers_united
+		icon = GFX_focus_AFG_against_kabul
+		x = 2
+		y = 4
+		prerequisite = {focus = CRO_push_for_bulgarian_annexation}
+		prerequisite = {focus = CRO_dams_on_danube}
+		prerequisite = {focus = CRO_connect_the_mountains}
+		relative_position_id = CRO_the_yugoslavian_fsr
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 48
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = CRO_focus_on_bulgarian_development
+		icon = GFX_focus_BUL_consolidate_the_third_bulgarian_state
+		x = 0
+		y = 1
+		prerequisite = {focus = CRO_southern_slavic_brothers_united}
+		relative_position_id = CRO_southern_slavic_brothers_united
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			48 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 7
+				}
+			}
+			801 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 11
+				}
+			}
+		}
+	}
+	focus = {
+		id = CRO_sofia_science_academy
+		icon = GFX_focus_NORDIC_dem_capstone_research
+		x = 0
+		y = 2
+		prerequisite = {focus = CRO_focus_on_bulgarian_development}
+		relative_position_id = CRO_southern_slavic_brothers_united
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = CRO_second_five_year_plan
+		icon = GFX_focus_generic_military_industry
+		x = 0
+		y = 1
+		prerequisite = {focus = CRO_sofia_science_academy}
+		relative_position_id = CRO_sofia_science_academy
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_idea = five_year_plan
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = five_year_plan_military
+				days = 1825
+			}
+		}
+	}
+	focus = {
+		id = CRO_disavowal_of_nationalism
+		icon = GFX_focus_generic_communism_anti_fascism
+		x = 3
+		y = 1
+		prerequisite = {focus = CRO_southern_slavic_brothers_united}
+		relative_position_id = CRO_southern_slavic_brothers_united
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = beheaded_ustasa
+		}
+	}
+	focus = {
+		id = CRO_assert_titoist_dominance_within_the_party
+		icon = GFX_focus_generic_communist
+		x = -1
+		y = 1
+		prerequisite = {focus = CRO_disavowal_of_nationalism}
+		relative_position_id = CRO_disavowal_of_nationalism
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = -0.05
+			}
+			remove_ideas = rightist_opposition
+		}
+	}
+	focus = {
+		id = CRO_the_party_of_youth
+		icon = GFX_focus_generic_whispers
+		x = 1
+		y = 1
+		prerequisite = {focus = CRO_disavowal_of_nationalism}
+		relative_position_id = CRO_disavowal_of_nationalism
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = yug_pioneers
+				add_idea = yug_pioneers2
+			}
+		}
+	}
+	focus = {
+		id = CRO_balkan_dream
+		icon = GFX_focus_BUL_balkan_federation_of_socialist_republics
+		x = -3
+		y = 1
+		prerequisite = {focus = CRO_southern_slavic_brothers_united}
+		relative_position_id = CRO_southern_slavic_brothers_united
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = UBF_united_balkan_federation
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = CRO_go_south
+		icon = GFX_focus_generic_attack_greece
+		x = 1
+		y = 1
+		prerequisite = {focus = CRO_balkan_dream}
+		relative_position_id = CRO_balkan_dream
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+				type = annex_everything
+				target = ALB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GRE
+			}
+			add_state_core = 934
+			add_state_core = 44
+			add_state_core = 805
+			add_state_core = 185
+			add_state_core = 731
+			add_state_core = 184
+			add_state_core = 47
+			add_state_core = 186
+			add_state_core = 187
+			add_state_core = 182
+			add_state_core = 164
+		}
+	}
+	focus = {
+		id = CRO_claims_on_turkey
+		icon = GFX_focus_generic_attack_turkey
+		x = -1
+		y = 1
+		prerequisite = {focus = CRO_balkan_dream}
+		relative_position_id = CRO_balkan_dream
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+			add_threat = 5
+			add_state_core = 341
+			add_state_core = 797
+		}
+	}
+	focus = {
 		id = CRO_uz_marsala_tita
 		icon = GFX_focus_AFG_defender_of_central_asia
 		x = 4

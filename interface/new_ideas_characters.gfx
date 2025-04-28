@@ -1571,6 +1571,26 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_Milovan_Djilas_small"
+		texturefile = "gfx/leaders/CRO/Milovan_Djilas_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Milovan_Djilas"
+		texturefile = "gfx/leaders/CRO/Milovan_Djilas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zivko_Topalovic_small"
+		texturefile = "gfx/leaders/CRO/Zivko_Topalovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zivko_Topalovic"
+		texturefile = "gfx/leaders/CRO/Zivko_Topalovic.dds"
+	}
+
+	spriteType = {
 		name = "GFX_Georges_Le_Beau_small"
 		texturefile = "gfx/leaders/ALG/Georges_Le_Beau_small.dds"
 	}

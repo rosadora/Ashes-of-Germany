@@ -21,6 +21,25 @@ ideas = {
 				fascism_drift = 0.03
 			}
 		}
+		rightist_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_matignon_agreements
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				classical_marxism_drift = 0.02
+			}
+		}
 		beheaded_ustasa = {
 			
 			allowed = {
@@ -97,6 +116,48 @@ ideas = {
 				army_speed_factor = 0.05
 				production_speed_buildings_factor = 0.05
 				conscription = 0.01
+			}
+		}
+		yug_pioneers2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_torchbearers_of_tomorrow
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.075
+				production_speed_buildings_factor = 0.075
+				conscription = 0.02
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		five_year_plan_military = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan_military
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+		        production_factory_efficiency_gain_factor = 0.05
+		        production_factory_start_efficiency_factor = 0.05
+		        line_change_production_efficiency_factor = 0.05
 			}
 		}
 	}

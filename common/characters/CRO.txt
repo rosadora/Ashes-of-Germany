@@ -40,6 +40,36 @@ characters = {
 
 	}
 
+	CRO_milovan_djilas={
+		name="Milovan Djilas"
+		portraits={
+			civilian={
+				large= GFX_Milovan_Djilas
+				small = GFX_Milovan_Djilas_small
+			}
+		}
+		country_leader={
+			ideology=classical_marxism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	CRO_Zivko_Topalovic={
+		name="Živko Topalović"
+		portraits={
+			civilian={
+				large= GFX_Zivko_Topalovic
+				small = GFX_Zivko_Topalovic_small
+			}
+		}
+		country_leader={
+			ideology=social_democracy_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	CRO_vladko_macek = {
 
 		name = CRO_vladko_macek
