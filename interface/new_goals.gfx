@@ -1737,8 +1737,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_ana_pauker_take_over"
+	texturefile = "gfx/interface/goals/ana_pauker_take_over.dds"			
 	}
 
 	SpriteType = {

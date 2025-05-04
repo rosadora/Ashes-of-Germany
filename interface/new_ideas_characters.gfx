@@ -1609,4 +1609,14 @@ spriteTypes = {
         name = "GFX_protectorate_icon"
         textureFile = "gfx/interface/autonomy/protectorate.dds"
     }
+
+	spriteType = {
+		name = "GFX_Ana_Pauker_small"
+		texturefile = "gfx/leaders/TRA/Ana_Pauker_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Ana_Pauker"
+		texturefile = "gfx/leaders/TRA/Ana_Pauker.dds"
+	}
 }
