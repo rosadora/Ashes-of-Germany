@@ -37,6 +37,8 @@
  TRA_social_democracy_long:1 "Asociatia Liberală Română"
  TRA_classical_liberalism_party:1 "ALR"
  TRA_classical_liberalism_party_long:1 "Asociatia Liberală Română"
+ TRA_reformed_pcr:0 "PCR"
+ TRA_reformed_pcr_long:0 "Partidul Comunist Român (Romanian Communist Party)"
 
  FRC_fascism_party:0 "Ligues d'Extrême Droite (Far-Right Leagues)"
  FRC_ultra_militarism_party:0 "Ligues d'Extrême Droite (Far-Right Leagues)"

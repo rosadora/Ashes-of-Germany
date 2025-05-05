@@ -242,3 +242,22 @@ country_event = {
 		add_to_faction = FROM
 	}
 }
+country_event = {
+	id = tra.11
+	title = tra.11.t
+	desc = tra.11.d
+	picture = GFX_report_event_gre_political_upheaval
+
+	is_triggered_only = yes
+
+	option = {
+		name = tra.11.a
+		ai_chance = {
+			base = 80
+		}
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.075
+		}
+	}
+}

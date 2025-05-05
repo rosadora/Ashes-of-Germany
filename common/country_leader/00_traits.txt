@@ -54,6 +54,15 @@ leader_traits = {
 		}
 	}
 
+	iron_lady = {
+		random = no
+		stability_factor = 0.1
+		resistance_target = -0.075
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	great_baronet_of_britain = {
 		random = no
 		army_org_factor = 0.05
