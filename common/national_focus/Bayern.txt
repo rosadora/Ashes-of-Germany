@@ -29,7 +29,7 @@
 		}
 		available = {
 			has_army_manpower = {
-				size > 250000
+				size > 200000
 			}
 		}
 		bypass = {
@@ -360,8 +360,6 @@
 			factor = 5
 		}
 		available = {
-			has_full_control_of_state = 54
-			has_full_control_of_state = 55
 		}
 		bypass = {
 		}
@@ -448,10 +446,6 @@
 			factor = 5
 		}
 		available = {
-			controls_state = 54
-			controls_state = 55
-			controls_state = 53
-			controls_state = 52
 		}
 		bypass = {
 		}
@@ -3329,8 +3323,8 @@
 	focus = {
 		id = BAY_the_bavarian_army
 		icon = GFX_goal_bavarian_army
-		x = 18
-		y = 10
+		x = 0
+		y = 0
 		prerequisite = {}
 		mutually_exclusive = { }
 		cost = 7

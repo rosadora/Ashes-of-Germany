@@ -1840,7 +1840,7 @@
 		mutually_exclusive = {}
 		cost = 7
 		ai_will_do = {
-			factor = 5
+			factor = 500
 		}
 		available = {
 			OR = {
