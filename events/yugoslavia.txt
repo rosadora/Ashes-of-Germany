@@ -1,0 +1,117 @@
+﻿###########################
+# Yugoslavia Events
+###########################
+add_namespace = yug
+
+country_event = { # Time to make a Choice
+	id = yug.1
+	title = yug.1.t
+	desc = yug.1.d
+	picture = GFX_report_event_yugoslavian_split
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.1.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = follows_paul_will
+	}
+	option = {
+		name = yug.1.b
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = follows_regency_council_will
+	}
+}
+country_event = { # General Elections - Communist Banned
+	id = yug.2
+	title = yug.2.t
+	desc = yug.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.2.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = democratic_front_victory
+		add_popularity = {
+				ideology = classical_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.075
+			}
+	}
+	option = {
+		name = yug.2.b
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = conservative_victory
+		add_popularity = {
+				ideology = democratic 
+				popularity = 0.1
+			}
+	}
+}
+country_event = { # General Elections - Communist Allowed
+	id = yug.3
+	title = yug.3.t
+	desc = yug.3.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.3.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = democratic_front_victory
+		add_popularity = {
+				ideology = classical_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.075
+			}
+	}
+	option = {
+		name = yug.3.b
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = conservative_victory
+		add_popularity = {
+				ideology = democratic 
+				popularity = 0.1
+			}
+	}
+	option = {
+		name = yug.3.c
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = kpj_victory
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.25
+			}
+	}
+}

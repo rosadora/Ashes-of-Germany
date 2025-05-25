@@ -1,0 +1,338 @@
+﻿focus_tree = {
+	id = yugoslavia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = YUG
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = YUG_yugoslavia_in_a_new_era
+		icon = GFX_goal_eternal_regency_focus
+		x = -5
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = YUG_the_eternal_regency
+		icon = GFX_goal_eternal_regency_focus
+		x = 4
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			country_event = yug.1
+		}
+	}
+	focus = {
+		id = YUG_reinstate_multi_party_system
+		icon = GFX_goal_pauls_will
+		x = -2
+		y = 1
+		prerequisite = { focus = YUG_the_eternal_regency }
+		mutually_exclusive = {focus = YUG_embrace_alexanders_legacy}
+		relative_position_id = YUG_the_eternal_regency
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = follows_paul_will
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = YUG_unban_the_kpj
+		icon = GFX_focus_generic_communist
+		x = -1
+		y = 1
+		prerequisite = { focus = YUG_reinstate_multi_party_system }
+		mutually_exclusive = {focus = YUG_prevent_extremist_takeover}
+		relative_position_id = YUG_reinstate_multi_party_system
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.03
+			}
+		}
+	}
+	focus = {
+		id = YUG_prevent_extremist_takeover
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 1
+		y = 1
+		prerequisite = { focus = YUG_reinstate_multi_party_system }
+		mutually_exclusive = {focus = YUG_unban_the_kpj}
+		relative_position_id = YUG_reinstate_multi_party_system
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 75
+			add_stability = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = YUG_general_elections
+		icon = GFX_goal_yugoslavian_elections
+		x = 0
+		y = 2
+		prerequisite = { focus = YUG_prevent_extremist_takeover focus = YUG_unban_the_kpj }
+		relative_position_id = YUG_reinstate_multi_party_system
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_completed_focus = YUG_prevent_extremist_takeover
+				}
+			country_event = {
+				id = yug.2
+				days = 1
+			}
+			}
+			else = {
+				country_event = {
+				id = yug.3
+				days = 1
+			    }
+			}
+		}
+	}
+	focus = {
+		id = YUG_radical_national_victory
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = YUG_general_elections}
+		mutually_exclusive = { focus = YUG_communist_surge}
+		mutually_exclusive = { focus = YUG_centrist_victory}
+		relative_position_id = YUG_general_elections
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = conservative_victory
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_ideas = prince_paul
+		}
+	}
+	focus = {
+		id = YUG_centrist_victory
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 1
+		prerequisite = { focus = YUG_general_elections}
+		mutually_exclusive = { focus = YUG_radical_national_victory}
+		mutually_exclusive = { focus = YUG_communist_surge}
+		relative_position_id = YUG_general_elections
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = democratic_front_victory
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = classical_liberalism
+				elections_allowed = yes
+			}
+			add_ideas = prince_paul
+		}
+	}
+	focus = {
+		id = YUG_communist_surge
+		icon = GFX_focus_generic_communist_industry
+		x = -4
+		y = 1
+		prerequisite = { focus = YUG_general_elections}
+		prerequisite = { focus = YUG_unban_the_kpj}
+		mutually_exclusive = { focus = YUG_radical_national_victory}
+		mutually_exclusive = { focus = YUG_centrist_victory}
+		relative_position_id = YUG_general_elections
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = kpj_victory
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = classical_marxism
+				elections_allowed = yes
+			}
+		}
+	}
+	focus = {
+		id = YUG_titoist_democratic_victory
+		icon = GFX_focus_invite_yugoslavia
+		x = -4
+		y = 2
+		prerequisite = { focus = YUG_communist_surge}
+		relative_position_id = YUG_general_elections
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = game_over
+			CRO = {
+				annex_country = {
+                  target = YUG 
+                  transfer_troops = yes
+                }
+			}
+			news_event = news.3085
+		}
+	}
+	focus = {
+		id = YUG_embrace_alexanders_legacy
+		icon = GFX_goal_alexanders_legacy
+		x = 2
+		y = 1
+		prerequisite = { focus = YUG_the_eternal_regency }
+		mutually_exclusive = {focus = YUG_reinstate_multi_party_system}
+		relative_position_id = YUG_the_eternal_regency
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = follows_regency_council_will
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+}

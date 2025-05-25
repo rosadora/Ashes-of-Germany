@@ -426,13 +426,43 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_centralized_power_syr"
-		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_centralized_power_syr"
-		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
+		name = "GFX_idea_memories_of_alexander"
+		texturefile = "gfx/interface/ideas/memories_of_alexander.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_prince_paul_idea"
+		texturefile = "gfx/interface/ideas/prince_paul_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
 	}
 
 }

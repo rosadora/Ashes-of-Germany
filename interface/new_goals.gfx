@@ -1742,22 +1742,22 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_eternal_regency_focus"
+	texturefile = "gfx/interface/goals/eternal_regency_focus.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_pauls_will"
+	texturefile = "gfx/interface/goals/pauls_will.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_alexanders_legacy"
+	texturefile = "gfx/interface/goals/alexanders_legacy.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_arrest_mosley"
-	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	name = "GFX_goal_yugoslavian_elections"
+	texturefile = "gfx/interface/goals/yugoslavian_elections.dds"			
 	}
 }

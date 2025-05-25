@@ -1531,3 +1531,17 @@ news_event = { #Sino-Japanese War
 		name = news.3084.a
 	}
 }
+news_event = { #Yugoslavian Peaceful Reunification
+    id = news.3085
+	title = news.3085.t
+	desc = news.3085.d
+	picture = GFX_news_event_eng_churchill_sign_treaty
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3085.a
+	}
+}
