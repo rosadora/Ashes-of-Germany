@@ -20,6 +20,76 @@ ideas = {
 				neutrality_drift = -0.01
 			}
 		}
+		belgrade_pact = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			OR = {
+				is_in_faction_with = ROM
+				is_in_faction_with = YUG
+				is_in_faction_with = GRE
+				is_in_faction_with = BUL
+				is_in_faction_with = ALB
+			}
+
+			picture = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_org_factor = 0.05
+			}
+		}
+		belgrade_pact2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			OR = {
+				is_in_faction_with = ROM
+				is_in_faction_with = YUG
+				is_in_faction_with = GRE
+				is_in_faction_with = BUL
+				is_in_faction_with = ALB
+			}
+
+			picture = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				army_org_factor = 0.075
+				army_defence_factor = 0.05
+			}
+		}
+		monarchist_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AUS_habsburg_monarchy_restored
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				political_power_cost = 0.1
+				neutrality_drift = 0.02
+			}
+		}
 		memories_of_the_2nd_july = {
 			
 			allowed = {
@@ -37,6 +107,49 @@ ideas = {
 				war_support_factor = -0.1
 				classical_marxism_drift = 0.02
 				communism_drift = 0.01
+			}
+		}
+		memories_of_the_2nd_july_forgave = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_of_alexander
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				social_democracy_drift = 0.03
+				social_liberalism_drift = 0.01
+				classical_marxism_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+		memories_of_the_2nd_july_condemned = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_of_alexander
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				classical_liberalism_drift = 0.03
+				social_democracy_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_marxism_drift = -0.01
+				communism_drift = -0.01
 			}
 		}
 		democratic_front_opposition = {
@@ -60,6 +173,72 @@ ideas = {
 				social_democracy_drift = 0.01
 			}
 		}
+		social_and_democratic_front = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.02
+				social_democracy_drift = 0.03
+				classical_marxism = 0.01
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		democratic_front_social_liberalism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_construction_guilds
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.03
+				social_democracy_drift = 0.01
+				consumer_goods_factor = -0.1
+			}
+		}
+		democratic_front_classical_liberalism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.03
+				social_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+		        industrial_capacity_dockyard = 0.1
+			}
+		}
 		prince_paul = {
 			
 			allowed = {
@@ -77,6 +256,25 @@ ideas = {
 				stability_factor = 0.1
 				democratic_drift = 0.02
 				neutrality_drift = 0.01
+			}
+		}
+		peter_ii_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = peter_ii
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.25
+				classical_liberalism_drift = 0.03
+				social_liberalism_drift = 0.01
 			}
 		}
 	}

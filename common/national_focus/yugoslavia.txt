@@ -17,8 +17,8 @@
 	
 	default = no
 	focus = {
-		id = YUG_yugoslavia_in_a_new_era
-		icon = GFX_goal_eternal_regency_focus
+		id = YUG_yugoslavia_in_the_new_era
+		icon = GFX_goal_democratic_yugoslavia
 		x = -5
 		y = 0
 		prerequisite = {}
@@ -27,6 +27,7 @@
 			factor = 5
 		}
 		available = {
+			has_completed_focus = YUG_centrist_victory
 		}
 		bypass = {
 		}
@@ -34,7 +35,549 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = YUG_reject_alexanders_legacy
+		icon = GFX_goal_alexanders_legacy_rejected
+		x = -5
+		y = 1
+		prerequisite = {focus = YUG_yugoslavia_in_the_new_era}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = YUG_reform_scholar_programs
+		icon = GFX_focus_SWE_education_reform
+		x = -6
+		y = 2
+		prerequisite = {focus = YUG_reject_alexanders_legacy}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = YUG_denounce_radicals_compliance
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = -4
+		y = 2
+		prerequisite = {focus = YUG_reject_alexanders_legacy}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				popularity = -0.05
+				ideology = democratic
+			}
+		}
+	}
+	focus = {
+		id = YUG_honor_the_summer_protests
+		icon = GFX_focus_PER_stage_mass_protests
+		x = -6
+		y = 3
+		prerequisite = {focus = YUG_denounce_radicals_compliance}
+		prerequisite = {focus = YUG_reform_scholar_programs}
+		mutually_exclusive = {focus = YUG_forgiving_the_murderers}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_completed_focus = YUG_towards_constitutional_monarchy
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = memories_of_the_2nd_july
+				add_idea = memories_of_the_2nd_july_condemned
+			}
+			add_stability = 0.05
+			add_popularity = {
+				popularity = 0.05
+				ideology = classical_liberalism
+			}
+		}
+	}
+	focus = {
+		id = YUG_forgiving_the_murderers
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = -4
+		y = 3
+		prerequisite = {focus = YUG_denounce_radicals_compliance}
+		prerequisite = {focus = YUG_reform_scholar_programs}
+		mutually_exclusive = {focus = YUG_honor_the_summer_protests}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_completed_focus = YUG_the_rival_republic
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = memories_of_the_2nd_july
+				add_idea = memories_of_the_2nd_july_forgave
+			}
+			add_stability = -0.05
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = YUG_stance_on_titoist_regime
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 0
+		y = 1
+		prerequisite = {focus = YUG_yugoslavia_in_the_new_era}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = YUG_croatia_is_yugoslavia
+		icon = GFX_focus_RAJ_crush_the_anathema
+		x = 0
+		y = 2
+		prerequisite = {focus = YUG_stance_on_titoist_regime}
+		mutually_exclusive = {focus = YUG_preserve_the_status_quo}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			create_wargoal = {
+				type = annex_everything
+				target = CRO
+			}
+			add_popularity = {
+				popularity = 0.075
+				ideology = classical_liberalism
+			}
+		}
+	}
+	focus = {
+		id = YUG_preserve_the_status_quo
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 2
+		prerequisite = {focus = YUG_stance_on_titoist_regime}
+		mutually_exclusive = {focus = YUG_croatia_is_yugoslavia}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_war_with = CRO
+			}
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			CRO = {
+				country_event = {
+					id = yug.4
+					days = 1
+				}
+			}
+			add_popularity = {
+				popularity = 0.075
+				ideology = social_democracy
+			}
+			add_popularity = {
+				popularity = 0.025
+				ideology = social_liberalism
+			}
+		}
+	}
+	focus = {
+		id = YUG_return_in_zagreb
+		icon = GFX_focus_BEL_v_for_victory
+		x = -1
+		y = 3
+		prerequisite = {focus = YUG_croatia_is_yugoslavia focus = YUG_preserve_the_status_quo}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 109
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = YUG_spj_hegemony
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		x = -3
+		y = 4
+		prerequisite = {focus = YUG_return_in_zagreb}
+		mutually_exclusive = {focus = YUG_ds_hegemony}
+		mutually_exclusive = {focus = YUG_sds_hegemony}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_completed_focus = YUG_unban_the_kpj
+			social_democracy > 0.25
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democracy
+				elections_allowed = yes
+			}
+			swap_ideas = {
+				remove_idea = democratic_front_opposition
+				add_idea = social_and_democratic_front
+			}
+		}
+	}
+	focus = {
+		id = YUG_sds_hegemony
+		icon = GFX_focus_ITA_devaluate_the_lire
+		x = -1
+		y = 4
+		prerequisite = {focus = YUG_return_in_zagreb}
+		mutually_exclusive = {focus = YUG_ds_hegemony}
+		mutually_exclusive = {focus = YUG_spj_hegemony}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			social_liberalism > 0.25
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_liberalism
+				elections_allowed = yes
+			}
+			swap_ideas = {
+				remove_idea = democratic_front_opposition
+				add_idea = democratic_front_social_liberalism
+			}
+		}
+	}
+	focus = {
+		id = YUG_a_world_to_liberate
+		icon = GFX_focus_RAJ_to_shake_the_world
+		x = -1
+		y = 1
+		prerequisite = {focus = YUG_sds_hegemony focus = YUG_ds_hegemony focus = YUG_spj_hegemony}
+		mutually_exclusive = {focus = YUG_pax_balkannica}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_sds_hegemony
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			leave_faction = yes
+			unlock_decision_tooltip = gen_join_france
+			unlock_decision_tooltip = gen_join_prussia
+		}
+	}
+	focus = {
+		id = YUG_pax_balkannica
+		icon = GFX_focus_TUR_reform_the_balkan_pact
+		x = 1
+		y = 1
+		prerequisite = {focus = YUG_sds_hegemony focus = YUG_ds_hegemony focus = YUG_spj_hegemony}
+		mutually_exclusive = {focus = YUG_a_world_to_liberate}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_sds_hegemony
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+				is_in_faction_with = ROM
+				is_in_faction_with = YUG
+				is_in_faction_with = GRE
+				is_in_faction_with = BUL
+				is_in_faction_with = ALB
+			     }
+				}
+				swap_ideas = {
+				remove_idea = belgrade_pact
+				add_idea = belgrade_pact2
+			 }
+			}
+		}
+	}
+	focus = {
+		id = YUG_ds_hegemony
+		icon = GFX_focus_PER_embrace_opulence
+		x = 1
+		y = 4
+		prerequisite = {focus = YUG_return_in_zagreb}
+		mutually_exclusive = {focus = YUG_sds_hegemony}
+		mutually_exclusive = {focus = YUG_spj_hegemony}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			classical_liberalism > 0.25
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = classical_liberalism
+				elections_allowed = yes
+			}
+			swap_ideas = {
+				remove_idea = democratic_front_opposition
+				add_idea = democratic_front_classical_liberalism
+			}
+		}
+	}
+	focus = {
+		id = YUG_curtail_regency_councils_power
+		icon = GFX_focus_rom_parties_end
+		x = 3
+		y = 1
+		prerequisite = {focus = YUG_yugoslavia_in_the_new_era}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = eternal_regency_idea
+				add_idea = monarchist_opposition
+			}
+			add_popularity = {
+				popularity = -0.075
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = YUG_towards_constitutional_monarchy
+		icon = GFX_focus_GER_monarchy_compromise
+		x = 2
+		y = 2
+		prerequisite = {focus = YUG_curtail_regency_councils_power}
+		mutually_exclusive = {focus = YUG_the_rival_republic}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = monarchist_opposition
+			add_popularity = {
+				popularity = -0.05
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = 0.075
+				ideology = classical_liberalism
+			}
+			add_political_power = -100
+		}
+	}
+	focus = {
+		id = YUG_the_coronation
+		icon = GFX_goal_the_coronation_yugoslavia
+		x = 2
+		y = 3
+		prerequisite = {focus = YUG_towards_constitutional_monarchy}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			date > 1941.09.06
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = prince_paul
+				add_idea = peter_ii_idea
+			}
+		}
+	}
+	focus = {
+		id = YUG_the_rival_republic
+		icon = GFX_focus_RAJ_a_tiger_unchained
+		x = 4
+		y = 2
+		prerequisite = {focus = YUG_curtail_regency_councils_power}
+		mutually_exclusive = {focus = YUG_towards_constitutional_monarchy}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = monarchist_opposition
+			add_popularity = {
+				popularity = -0.15
+				ideology = neutrality
+			}
+			add_popularity = {
+				popularity = 0.075
+				ideology = social_democracy
+			}
+			add_popularity = {
+				popularity = 0.05
+				ideology = social_liberalism
+			}
+			add_stability = -0.1
+			set_cosmetic_tag = YUG_REP
 		}
 	}
 	focus = {

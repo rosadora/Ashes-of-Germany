@@ -115,3 +115,79 @@ country_event = { # General Elections - Communist Allowed
 			}
 	}
 }
+country_event = { # Truce with Croatia?
+	id = yug.4
+	title = yug.4.t
+	desc = yug.4.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.4.a
+		ai_chance = {
+			base = 100
+		}
+		YUG = {
+			country_event = {
+				id = yug.5
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = yug.4.b
+		ai_chance = {
+			base = 0
+		}
+		YUG = {
+			country_event = {
+				id = yug.6
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Truce with Croatia? Croatia Accepts
+	id = yug.5
+	title = yug.5.t
+	desc = yug.5.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.5.a
+		ai_chance = {
+			base = 100
+		}
+		set_truce = {
+          target = CRO
+          days = 365
+        }
+		diplomatic_relation = {
+         country = CRO
+         relation = non_aggression_pact
+         active = yes
+        }
+	}
+}
+country_event = { # Truce with Croatia? Croatia Denies
+	id = yug.6
+	title = yug.6.t
+	desc = yug.6.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.6.a
+		ai_chance = {
+			base = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CRO
+		}
+	}
+}

@@ -303,6 +303,7 @@ gen_pick_a_side = {
 				has_completed_focus = PAL_arabia_in_the_world_stage
 				has_completed_focus = PAL_pick_a_side
 				has_completed_focus = USR_a_pact_with_rosa_luxemburg
+				has_completed_focus = YUG_a_world_to_liberate
 			}
 			OR = {
 				tag = HOL
@@ -333,6 +334,7 @@ gen_pick_a_side = {
 				tag = BLR
 				tag = PAL
 				tag = ISR
+				tag = YUG
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -415,6 +417,7 @@ gen_pick_a_side = {
 				has_completed_focus = why_we_fight
 				has_completed_focus = PAL_arabia_in_the_world_stage
 				has_completed_focus = PAL_pick_a_side
+				has_completed_focus = YUG_a_world_to_liberate
 			}
 			OR = {
 				tag = HOL
@@ -445,6 +448,7 @@ gen_pick_a_side = {
 				tag = BLR
 				tag = PAL
 				tag = ISR
+				tag = YUG
 			        }
 			is_in_faction = no
 			is_puppet = no

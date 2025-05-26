@@ -154,6 +154,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	belgrade_pact
 	eternal_regency_idea
 	memories_of_the_2nd_july
 	democratic_front_opposition

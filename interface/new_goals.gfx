@@ -1760,4 +1760,29 @@ spriteTypes = {
 	name = "GFX_goal_yugoslavian_elections"
 	texturefile = "gfx/interface/goals/yugoslavian_elections.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_democratic_yugoslavia"
+	texturefile = "gfx/interface/goals/democratic_yugoslavia.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_the_coronation_yugoslavia"
+	texturefile = "gfx/interface/goals/the_coronation_yugoslavia.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_alexanders_legacy_rejected"
+	texturefile = "gfx/interface/goals/alexanders_legacy_rejected.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_alexanders_legacy"
+	texturefile = "gfx/interface/goals/alexanders_legacy.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_alexanders_legacy"
+	texturefile = "gfx/interface/goals/alexanders_legacy.dds"			
+	}
 }
