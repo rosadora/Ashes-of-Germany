@@ -1777,12 +1777,12 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_alexanders_legacy"
-	texturefile = "gfx/interface/goals/alexanders_legacy.dds"			
+	name = "GFX_goal_yugoslavian_sfr"
+	texturefile = "gfx/interface/goals/yugoslavian_sfr.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_alexanders_legacy"
-	texturefile = "gfx/interface/goals/alexanders_legacy.dds"			
+	name = "GFX_goal_preserve_yugoslavia"
+	texturefile = "gfx/interface/goals/preserve_yugoslavia.dds"			
 	}
 }

@@ -197,5 +197,64 @@ ideas = {
 				army_org_factor = 0.1
 			}
 		}
+		dalmatian_tourism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = BEL_engine_of_the_economy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		hungarian_training = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_wuw_HUN_hungarian_national_defense_association
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				breakthrough_factor = 0.1
+			}
+		}
+		domestic_training = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_mountain_defensive_training
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.15
+				command_power_gain_mult = 0.25
+				army_leader_start_level = 1 
+				army_leader_start_attack_level = 1 
+				army_leader_start_defense_level = 1 
+				army_leader_start_logistics_level = 1 
+				army_leader_start_planning_level = 1 
+				military_leader_cost_factor = -0.4
+			}
+		}
 	}
 }

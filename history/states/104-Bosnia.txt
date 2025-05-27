@@ -26,6 +26,7 @@ state={
 		}
 		add_core_of = YUG
 		add_core_of = BOS
+		add_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
 	}
 
 	provinces={

@@ -20,6 +20,7 @@ state={
 		add_core_of = YUG
 		add_core_of = MAC
 		add_claim_by = BUL
+		add_dynamic_modifier = { modifier = macedonian_nationalism_yug_cro }
 	}
 
 	provinces={
