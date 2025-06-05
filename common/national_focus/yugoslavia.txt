@@ -867,7 +867,7 @@
 	focus = {
 		id = YUG_preserve_yugoslavia
 		icon = GFX_goal_preserve_yugoslavia
-		x = 12
+		x = 14
 		y = 0
 		prerequisite = {}
 		cost = 7
@@ -989,6 +989,111 @@
 		}
 	}
 	focus = {
+		id = YUG_ties_with_the_regency_council
+		icon = GFX_focus_GER_monarchy_compromise
+		x = -3
+		y = 1
+		prerequisite = {focus = YUG_preserve_yugoslavia}
+		relative_position_id = YUG_preserve_yugoslavia
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = YUG_appoint_monarchist_figures
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		x = -4
+		y = 2
+		prerequisite = {focus = YUG_ties_with_the_regency_council}
+		relative_position_id = YUG_preserve_yugoslavia
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.025
+			}
+		}
+	}
+	focus = {
+		id = YUG_reward_loyal_military_staff
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = -2
+		y = 2
+		prerequisite = {focus = YUG_ties_with_the_regency_council}
+		relative_position_id = YUG_preserve_yugoslavia
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = loyalty_to_the_king
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.025
+			}
+		}
+	}
+	focus = {
+		id = YUG_moderate_changes
+		icon = GFX_focus_NOR_the_glucksburg_sea_wall
+		x = -3
+		y = 3
+		prerequisite = {focus = YUG_reward_loyal_military_staff}
+		prerequisite = {focus = YUG_appoint_monarchist_figures}
+		relative_position_id = YUG_preserve_yugoslavia
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = eternal_regency_idea
+				add_idea = eternal_regency_idea2
+			}
+		}
+	}
+	focus = {
 		id = YUG_focus_on_the_true_ennemy
 		icon = GFX_focus_SWI_helvetic_junta
 		x = 0
@@ -1033,6 +1138,218 @@
               type = annex_everything
               target = CRO
             }
+		}
+	}
+	focus = {
+		id = YUG_united_yugoslavia
+		icon = GFX_focus_invite_yugoslavia
+		x = 0
+		y = 3
+		prerequisite = {focus = YUG_strike_now}
+		relative_position_id = YUG_preserve_yugoslavia
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 109
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = YUG_and_after
+		icon = GFX_goal_onwards
+		x = 0
+		y = 4
+		prerequisite = {focus = YUG_united_yugoslavia}
+		prerequisite = {focus = YUG_moderate_changes}
+		prerequisite = {focus = YUG_remember_who_did_this}
+		relative_position_id = YUG_preserve_yugoslavia
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			controls_state = 109
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = YUG_yugoslavia_for_everyone
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 4
+		y = 1
+		prerequisite = {focus = YUG_and_after}
+		relative_position_id = YUG_and_after
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			104 = {
+				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
+			}
+			804 = {
+				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
+			}
+			105 = {
+				remove_dynamic_modifier = { modifier = montenegrin_nationalism_yug_cro }
+			}
+			106 = {
+				remove_dynamic_modifier = { modifier = macedonian_nationalism_yug_cro }
+			}
+		}
+	}
+	focus = {
+		id = YUG_monarchist_investments
+		icon = GFX_focus_generic_monetary_union
+		x = 2
+		y = 1
+		prerequisite = {focus = YUG_and_after}
+		relative_position_id = YUG_and_after
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = YUG_marginalize_republican_extremists
+		icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+		x = 0
+		y = 1
+		prerequisite = {focus = YUG_and_after}
+		relative_position_id = YUG_and_after
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = democratic_front_opposition
+		}
+	}
+	focus = {
+		id = YUG_fund_private_research
+		icon = GFX_focus_NORDIC_dem_capstone_research
+		x = -2
+		y = 1
+		prerequisite = {focus = YUG_and_after}
+		relative_position_id = YUG_and_after
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = YUG_prepare_the_defence_of_balkans
+		icon = GFX_focus_BUL_free_balkan_states
+		x = -4
+		y = 1
+		prerequisite = {focus = YUG_and_after}
+		relative_position_id = YUG_and_after
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = belgrade_pact
+				add_idea = belgrade_pact2
+			}
 		}
 	}
 	focus = {
@@ -1331,6 +1648,67 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 50
+		}
+	}
+	focus = {
+		id = YUG_decree_of_national_mourning
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		prerequisite = { focus = YUG_embrace_alexanders_legacy }
+		relative_position_id = YUG_embrace_alexanders_legacy
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = YUG_hunt_anti_national_elements
+		icon = GFX_focus_RAJ_a_private_military
+		x = 1
+		y = 1
+		prerequisite = { focus = YUG_embrace_alexanders_legacy }
+		relative_position_id = YUG_embrace_alexanders_legacy
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = firing_squads
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = libertarian_socialism 
+				popularity = -0.05
+			}
 		}
 	}
 }

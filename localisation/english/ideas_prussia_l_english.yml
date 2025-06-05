@@ -1442,6 +1442,8 @@
  ### YUGOSLAVIA ###
  eternal_regency_idea:0 "The Eternal Regency"
  eternal_regency_idea_desc:0 "Since the death of Alexander I, the kingdom has been without a king of governing age. A regency council has been set up, and its legitimacy is being called into question month after month, as Prince Paul comes up against the authoritarian will of the rest of the council."
+ eternal_regency_idea2:0 "The Eternal Regency"
+ eternal_regency_idea2_desc:0 "Since the death of Alexander I, the kingdom has been without a king of governing age. A regency council has been set up, and its legitimacy is being called into question month after month, as Prince Paul comes up against the authoritarian will of the rest of the council."
  democratic_front_opposition:0 "The Democratic Front"
  democratic_front_opposition_desc:0 "The Democratic Front, made up of center and center-left forces, is growing stronger by the week as the regime erodes. They call for the establishment of true democracy in Yugoslavia."
  memories_of_the_2nd_july:0 "Memories of 2nd July"
@@ -1468,3 +1470,7 @@
  montenegrin_nationalism_yug_cro:0 "Montenegrin Nationalism"
  macedonian_nationalism_yug_cro:0 "Macedonian Nationalism"
  private_infrastructure:0 "Private Infrastructures"
+ loyalty_to_the_king:0 "Loyalty to the King"
+ loyalty_to_the_king_desc:0 "A loyal army and local citizens, that's what this country needs."
+ the_eastern_sun:0 "The Eastern Sun"
+ firing_squads:0 "Firing Squads"

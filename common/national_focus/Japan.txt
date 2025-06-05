@@ -52,7 +52,7 @@
 		prerequisite = {focus = JAP_hanran}
 		mutually_exclusive = { }
 		relative_position_id = JAP_hanran
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -81,7 +81,7 @@
 		prerequisite = {focus = JAP_hanran}
 		mutually_exclusive = { }
 		relative_position_id = JAP_hanran
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -112,7 +112,7 @@
 		prerequisite = {focus = JAP_hanran}
 		mutually_exclusive = { }
 		relative_position_id = JAP_hanran
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -137,7 +137,7 @@
 	}
 	focus = {
 		id = JAP_new_dawn_for_socialism
-		icon = GFX_focus_generic_spur_communist_revolutions
+		icon = GFX_focus_GER_strike_at_the_rising_sun
 		x = 0
 		y = 2
 		prerequisite = {focus = JAP_expropriate_zaibatsus}
@@ -145,7 +145,7 @@
 		prerequisite = {focus = JAP_give_up_state_religion}
 		mutually_exclusive = { }
 		relative_position_id = JAP_hanran
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -162,8 +162,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		 add_stability = 0.3
-		 add_war_support = 0.1
+		 add_ideas = the_eastern_sun
 		 load_focus_tree = generic_focus
 		 remove_ideas = JAP_hirohito
 		}

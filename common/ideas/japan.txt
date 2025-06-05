@@ -1,6 +1,30 @@
 ideas = {
 
 	country = {
+		the_eastern_sun = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war = yes
+			}
+
+			picture = GER_wage_war_on_capitalism
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				consumer_goods_expected_value = -0.05
+				conscription = 0.01
+			} 
+		}
 		hanran = {
 			
 			allowed = {
