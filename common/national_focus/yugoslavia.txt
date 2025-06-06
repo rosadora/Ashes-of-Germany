@@ -804,15 +804,24 @@
 	focus = {
 		id = YUG_the_coronation
 		icon = GFX_goal_the_coronation_yugoslavia
-		x = 2
-		y = 3
-		prerequisite = {focus = YUG_towards_constitutional_monarchy}
+		x = 5
+		y = 0
 		cost = 7
 		ai_will_do = {
 			factor = 5
 		}
 		available = {
 			date > 1941.09.06
+			OR = {
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+				has_government = democratic
+			}
+			OR = {
+				has_completed_focus = YUG_towards_constitutional_monarchy
+				has_completed_focus = YUG_united_yugoslavia
+			}
 		}
 		bypass = {
 		}
@@ -1708,6 +1717,61 @@
 			add_popularity = {
 				ideology = libertarian_socialism 
 				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = YUG_national_rejuvenation
+		icon = GFX_focus_RAJ_red_in_the_shadows
+		x = 0
+		y = 2
+		prerequisite = { focus = YUG_hunt_anti_national_elements }
+		prerequisite = { focus = YUG_decree_of_national_mourning }
+		relative_position_id = YUG_embrace_alexanders_legacy
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = memories_of_the_2nd_july
+				add_idea = national_rejuvenation
+			}
+		}
+	}
+	focus = {
+		id = YUG_persecute_muslim_minorities
+		icon = GFX_focus_PER_forced_secularization
+		x = -1
+		y = 3
+		prerequisite = { focus = YUG_national_rejuvenation }
+		relative_position_id = YUG_embrace_alexanders_legacy
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			104 = {
+				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
+				add_dynamic_modifier = { modifier = muslim_communities_oppressed_yug_cro }
+			}
+			804 = {
+				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
+				add_dynamic_modifier = { modifier = muslim_communities_oppressed_yug_cro }
 			}
 		}
 	}
