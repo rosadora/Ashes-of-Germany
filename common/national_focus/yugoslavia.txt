@@ -874,6 +874,188 @@
 		}
 	}
 	focus = {
+		id = YUG_reinforce_council_authority
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 22
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_completed_focus = YUG_unity_first
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = YUG_jrz_ministers
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 28
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_completed_focus = YUG_persecute_muslim_minorities
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = national_rejuvenation
+				add_idea = national_rejuvenation2
+			}
+		}
+	}
+	focus = {
+		id = YUG_stance_on_italian_civil_war
+		icon = GFX_focus_ITA_by_blood_alone
+		x = -3
+		y = 1
+		prerequisite = {focus = YUG_jrz_ministers focus = YUG_reinforce_council_authority}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_global_flag = italian_civil_war
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = YUG_liberation_of_yugoslav_lands
+		icon = GFX_focus_attack_italy
+		x = -1
+		y = 1
+		prerequisite = {focus = YUG_stance_on_italian_civil_war}
+		mutually_exclusive = {focus = YUG_zara_and_trieste_for_support}
+		relative_position_id = YUG_stance_on_italian_civil_war
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			OR = {
+				ITA = {
+					has_war_with = ILF
+					has_war_with = NLC
+				}
+			}
+			has_completed_focus = YUG_reinforce_council_authority
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			ITA = {
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 736
+					owns_state = 852
+					owns_state = 163
+					}
+				}
+				country_event = {
+					id = yug.7
+					days = 1
+				}
+			}
+			}
+			NLC = {
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 736
+					owns_state = 852
+					owns_state = 163
+					}
+				}
+				country_event = {
+					id = yug.7
+					days = 1
+				}
+			}
+			}
+			ILF = {
+			IF = {
+				limit = {
+					OR = {
+					owns_state = 736
+					owns_state = 852
+					owns_state = 163
+					}
+				}
+				country_event = {
+					id = yug.7
+					days = 1
+				}
+			}
+			}
+			transfer_state = 736
+			transfer_state = 852
+			transfer_state = 163
+		}
+	}
+	focus = {
+		id = YUG_zara_and_trieste_for_support
+		icon = GFX_focus_ITA_italian_irredentism
+		x = 1
+		y = 1
+		prerequisite = {focus = YUG_stance_on_italian_civil_war}
+		mutually_exclusive = {focus = YUG_liberation_of_yugoslav_lands}
+		relative_position_id = YUG_stance_on_italian_civil_war
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			OR = {
+				ITA = {
+					has_war_with = ILF
+					has_war_with = NLC
+				}
+			}
+			has_completed_focus = YUG_jrz_ministers
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			ITA = {
+				country_event = {
+					id = yug.10
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
 		id = YUG_preserve_yugoslavia
 		icon = GFX_goal_preserve_yugoslavia
 		x = 14
@@ -1749,9 +1931,48 @@
 	focus = {
 		id = YUG_persecute_muslim_minorities
 		icon = GFX_focus_PER_forced_secularization
+		x = 1
+		y = 3
+		prerequisite = { focus = YUG_national_rejuvenation }
+		mutually_exclusive = { focus = YUG_unity_first }
+		relative_position_id = YUG_embrace_alexanders_legacy
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.05
+			}
+			104 = {
+				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
+				add_dynamic_modifier = { modifier = muslim_communities_oppressed_yug_cro }
+			}
+			804 = {
+				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
+				add_dynamic_modifier = { modifier = muslim_communities_oppressed_yug_cro }
+			}
+		}
+	}
+	focus = {
+		id = YUG_unity_first
+		icon = GFX_focus_PER_islamic_solidarity
 		x = -1
 		y = 3
 		prerequisite = { focus = YUG_national_rejuvenation }
+		mutually_exclusive = { focus = YUG_persecute_muslim_minorities }
 		relative_position_id = YUG_embrace_alexanders_legacy
 		cost = 7
 		ai_will_do = {
@@ -1767,12 +1988,12 @@
 		completion_reward = {
 			104 = {
 				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
-				add_dynamic_modifier = { modifier = muslim_communities_oppressed_yug_cro }
 			}
 			804 = {
 				remove_dynamic_modifier = { modifier = bosnian_nationalism_yug_cro }
-				add_dynamic_modifier = { modifier = muslim_communities_oppressed_yug_cro }
 			}
+			add_political_power = -100
+			add_stability = -0.05
 		}
 	}
 }

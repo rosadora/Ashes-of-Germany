@@ -191,3 +191,160 @@ country_event = { # Truce with Croatia? Croatia Denies
 		}
 	}
 }
+country_event = { # Liberation of Yugoslavian Lands
+	id = yug.7
+	title = yug.7.t
+	desc = yug.7.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { #Do nothing
+		name = yug.7.a
+		ai_chance = {
+			base = 10
+		}
+		YUG = {
+			country_event = {
+				id = yug.8
+				days = 1
+			}
+		}
+	}
+	option = { #Strike Back!
+		name = yug.7.b
+		ai_chance = {
+			base = 90
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = YUG
+		}
+		YUG = {
+			country_event = {
+				id = yug.9
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Liberation of Yugoslavian Lands - Italy strikes back!
+	id = yug.8
+	title = yug.8.t
+	desc = yug.8.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.7.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { # Liberation of Yugoslavian Lands - Italy folds!
+	id = yug.9
+	title = yug.9.t
+	desc = yug.9.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.9.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { # Zara and Trieste for support - Request
+	id = yug.10
+	title = yug.10.t
+	desc = yug.10.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = yug.10.a
+		ai_chance = {
+			base = 100
+		}
+		YUG = {
+			country_event = {
+				id = yug.11
+				days = 1
+			}
+		}
+		transfer_state = 736
+		transfer_state = 852
+		transfer_state = 163
+	}
+	option = { #Never
+		name = yug.10.b
+		ai_chance = {
+			base = 10
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = YUG
+		}
+		YUG = {
+			country_event = {
+				id = yug.12
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Zara and Trieste for support - Join the War
+	id = yug.10
+	title = yug.10.t
+	desc = yug.10.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = yug.10.a
+		ai_chance = {
+			base = 100
+		}
+		declare_war_on = {
+            target = NLC
+            type = topple_government
+        }
+		declare_war_on = {
+            target = ILF
+            type = topple_government
+        }
+	}
+}
+country_event = { # Zara and Trieste for support - Denied
+	id = yug.11
+	title = yug.11.t
+	desc = yug.11.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = yug.11.a
+		ai_chance = {
+			base = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ITA
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = NLC
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ILF
+		}
+	}
+}

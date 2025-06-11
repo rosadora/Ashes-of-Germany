@@ -400,5 +400,26 @@ ideas = {
 				fascism_drift = 0.02
 			}
 		}
+		national_rejuvenation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				neutrality_drift = 0.01
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.05
+			}
+		}
 	}
 }
