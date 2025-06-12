@@ -421,5 +421,41 @@ ideas = {
 				fascism_drift = 0.05
 			}
 		}
+		intervention_in_italian_civil_war = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+				ITA = {
+					OR = {
+					has_war_with = ILF
+					has_war_with = NLC
+					}
+				}
+				ILF = {
+					OR = {
+					has_war_with = ITA
+					has_war_with = NLC
+					}
+				}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_italian_irredentism
+
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 3
+				send_volunteers_tension = -1
+			}
+		}
 	}
 }

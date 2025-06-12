@@ -39,6 +39,28 @@
 		}
 	}
 	focus = {
+		id = YUG_crush_italian_nationalism
+		icon = GFX_focus_ITA_cavalry_charge
+		x = -2
+		y = 1
+		prerequisite = {focus = YUG_yugoslavia_in_the_new_era}
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = YUG_yugoslavia_in_the_new_era
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = intervention_in_italian_civil_war
+		}
+	}
+	focus = {
 		id = YUG_reject_alexanders_legacy
 		icon = GFX_goal_alexanders_legacy_rejected
 		x = -5
