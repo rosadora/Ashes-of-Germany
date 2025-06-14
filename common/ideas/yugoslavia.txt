@@ -379,6 +379,32 @@ ideas = {
 				conscription = 0.01
 			}
 		}
+		greenshirts = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_private_military_complex
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+				war_support_factor = 0.125
+				communism_drift = -0.01
+				classical_marxism_drift = -0.01
+				libertarian_socialism_drift = -0.01
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.04
+				conscription = 0.03
+				army_morale_factor = 0.1
+			}
+		}
 		national_rejuvenation = {
 			
 			allowed = {
@@ -419,6 +445,26 @@ ideas = {
 				neutrality_drift = 0.01
 				ultra_nationalism_drift = 0.02
 				fascism_drift = 0.05
+			}
+		}
+		national_rejuvenation3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.15
+				conscription = 0.02
+				neutrality_drift = 0.05
 			}
 		}
 		intervention_in_italian_civil_war = {

@@ -343,6 +343,7 @@
 		y = 2
 		prerequisite = {focus = YUG_stance_on_titoist_regime}
 		mutually_exclusive = {focus = YUG_preserve_the_status_quo}
+		will_lead_to_war_with = CRO
 		cost = 7
 		ai_will_do = {
 			factor = 5
@@ -918,6 +919,177 @@
 		}
 	}
 	focus = {
+		id = YUG_end_the_terror
+		icon = GFX_focus_BRA_repeale_national_security_law
+		x = -1
+		y = 1
+		prerequisite = {focus = YUG_reinforce_council_authority}
+		relative_position_id = YUG_reinforce_council_authority
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = firing_squads
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = YUG_monarchy_for_stability
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		prerequisite = {focus = YUG_reinforce_council_authority}
+		relative_position_id = YUG_reinforce_council_authority
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = democratic_front_opposition
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = YUG_preserve_consciousness_freedom
+		icon = GFX_focus_YUG_dissolve_serbia
+		x = 0
+		y = 2
+		prerequisite = {focus = YUG_monarchy_for_stability}
+		prerequisite = {focus = YUG_end_the_terror}
+		relative_position_id = YUG_reinforce_council_authority
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			105 = {
+				remove_dynamic_modifier = { modifier = montenegrin_nationalism_yug_cro }
+			}
+			106 = {
+				remove_dynamic_modifier = { modifier = macedonian_nationalism_yug_cro }
+			}
+		}
+	}
+	focus = {
+		id = YUG_centralize_power
+		icon = GFX_focus_generic_monarchy_1
+		x = 1
+		y = 3
+		prerequisite = {focus = YUG_preserve_consciousness_freedom}
+		relative_position_id = YUG_reinforce_council_authority
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = YUG_ban_on_democratic_organizations
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = -1
+		y = 3
+		prerequisite = {focus = YUG_preserve_consciousness_freedom}
+		relative_position_id = YUG_reinforce_council_authority
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = classical_liberalism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = YUG_and_alexander_is_young_again
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		x = 0
+		y = 4
+		prerequisite = {focus = YUG_centralize_power}
+		prerequisite = {focus = YUG_ban_on_democratic_organizations}
+		relative_position_id = YUG_reinforce_council_authority
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = national_rejuvenation
+				add_idea = national_rejuvenation3
+			}
+		}
+	}
+	focus = {
 		id = YUG_jrz_ministers
 		icon = GFX_focus_generic_strike_at_democracy1
 		x = 28
@@ -940,6 +1112,286 @@
 				remove_idea = national_rejuvenation
 				add_idea = national_rejuvenation2
 			}
+		}
+	}
+	focus = {
+		id = YUG_suppress_national_identities
+		icon = GFX_focus_FIN_parmis_devils
+		x = 1
+		y = 1
+		prerequisite = {focus =	YUG_jrz_ministers}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.05
+			}
+			105 = {
+				remove_dynamic_modifier = { modifier = montenegrin_nationalism_yug_cro }
+			}
+			106 = {
+				remove_dynamic_modifier = { modifier = macedonian_nationalism_yug_cro }
+			}
+		}
+	}
+	focus = {
+		id = YUG_overshadow_prince_paul
+		icon = GFX_focus_ICE_hrafninn_flygur
+		x = -1
+		y = 1
+		prerequisite = {focus =	YUG_jrz_ministers}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = YUG_overthrow_prince_paul
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 2
+		prerequisite = {focus =	YUG_overshadow_prince_paul}
+		prerequisite = {focus =	YUG_suppress_national_identities}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = YUG_empower_greenshirts
+		icon = GFX_focus_ITA_banda_carita
+		x = 1
+		y = 3
+		prerequisite = {focus =	YUG_overthrow_prince_paul}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = firing_squads
+				add_idea = greenshirts
+			}
+		}
+	}
+	focus = {
+		id = YUG_promote_monarcho_fascism
+		icon = GFX_focus_CHL_crown_antoine_as_sovereign_king
+		x = -1
+		y = 3
+		prerequisite = {focus =	YUG_overthrow_prince_paul}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = democratic_front_opposition
+		}
+	}
+	focus = {
+		id = YUG_fascist_yugoslavia_fascist_dynasty
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 0
+		y = 4
+		prerequisite = {focus =	YUG_promote_monarcho_fascism}
+		prerequisite = {focus =	YUG_empower_greenshirts}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_country_leader_trait = voda
+			set_country_leader_name = {
+	          ideology = fascism
+	          name = milan_loc
+            }
+			remove_ideas = eternal_regency_idea
+		}
+	}
+	focus = {
+		id = YUG_pan_slavic_outlook
+		icon = GFX_focus_SOV_panslavic_nationalism
+		x = -3
+		y = 5
+		prerequisite = {focus =	YUG_fascist_yugoslavia_fascist_dynasty focus =	YUG_and_alexander_is_young_again}
+		relative_position_id = YUG_jrz_ministers
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = YUG_pressure_bulgaria
+		icon = GFX_focus_generic_attack_bulgaria
+		x = 2
+		y = 1
+		prerequisite = {focus =	YUG_pan_slavic_outlook}
+		relative_position_id = YUG_pan_slavic_outlook
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+              type = annex_everything
+              target = BUL
+            }
+			add_state_core = 48
+			add_state_core = 801
+			add_state_core = 212
+			add_state_core = 211
+			add_state_core = 77
+		}
+	}
+	focus = {
+		id = YUG_struggle_for_macedonia
+		icon = GFX_focus_generic_attack_greece
+		x = 0
+		y = 1
+		prerequisite = {focus =	YUG_pan_slavic_outlook}
+		relative_position_id = YUG_pan_slavic_outlook
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+              type = annex_everything
+              target = GRE
+            }
+			add_state_core = 731
+			add_state_core = 184
+		}
+	}
+	focus = {
+		id = YUG_illyrian_claims
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		x = -2
+		y = 1
+		prerequisite = {focus =	YUG_pan_slavic_outlook}
+		relative_position_id = YUG_pan_slavic_outlook
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+              type = annex_everything
+              target = ALB
+            }
+			add_state_core = 934
+			add_state_core = 44
+			add_state_core = 805
 		}
 	}
 	focus = {
@@ -1043,12 +1495,39 @@
 		}
 	}
 	focus = {
+		id = YUG_lessons_from_the_italian_civil_war
+		icon = GFX_focus_GER_demonstration_of_military_achievements
+		x = 0
+		y = 2
+		prerequisite = {focus = YUG_zara_and_trieste_for_support focus = YUG_liberation_of_yugoslav_lands}
+		relative_position_id = YUG_stance_on_italian_civil_war
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				ITA = {
+					has_war_with = ILF
+					has_war_with = NLC
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
 		id = YUG_zara_and_trieste_for_support
 		icon = GFX_focus_ITA_italian_irredentism
 		x = 1
 		y = 1
 		prerequisite = {focus = YUG_stance_on_italian_civil_war}
-		mutually_exclusive = {focus = YUG_liberation_of_yugoslav_lands}
 		relative_position_id = YUG_stance_on_italian_civil_war
 		cost = 7
 		ai_will_do = {
@@ -1335,6 +1814,7 @@
 		y = 2
 		prerequisite = {focus = YUG_focus_on_the_true_ennemy}
 		relative_position_id = YUG_preserve_yugoslavia
+		will_lead_to_war_with = CRO
 		cost = 7
 		ai_will_do = {
 			factor = 5
@@ -2016,6 +2496,32 @@
 			}
 			add_political_power = -100
 			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = YUG_strike_the_communist_heart
+		icon = GFX_focus_GER_end_european_communism
+		x = 0
+		y = 4
+		prerequisite = { focus = YUG_unity_first focus = YUG_persecute_muslim_minorities }
+		relative_position_id = YUG_embrace_alexanders_legacy
+		will_lead_to_war_with = CRO
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = CRO
+            }
 		}
 	}
 }

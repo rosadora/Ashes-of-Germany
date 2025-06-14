@@ -301,6 +301,16 @@ leader_traits = {
 		}
 	}
 
+	voda = {
+		random = no
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		army_attack_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	victory_orchestrator = {
 		random = no
 		war_support_factor = 0.075
