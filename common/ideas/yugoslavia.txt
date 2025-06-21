@@ -467,6 +467,65 @@ ideas = {
 				neutrality_drift = 0.05
 			}
 		}
+		national_rejuvenation4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.15
+				war_support_factor = 0.2
+				conscription = 0.05
+				army_org_factor = 0.1
+				neutrality_drift = 0.05
+			}
+		}
+		subside_to_peasants = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.3
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		balkan_protection_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_yugoslavian_general_staff
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				army_defence_factor = 0.075
+			}
+		}
 		intervention_in_italian_civil_war = {
 			
 			allowed = {

@@ -277,6 +277,36 @@ bookmarks = {
 				SYR_the_hashemite_kingdom
 			}
 		}
+		"YUG"={
+			minor = yes
+			history = "YUG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				eternal_regency_idea
+	            memories_of_the_2nd_july
+	            democratic_front_opposition
+			}
+			focuses = {
+				YUG_the_eternal_regency
+				YUG_yugoslavia_in_the_new_era
+				YUG_pan_slavic_outlook
+			}
+		}
+		"CRO"={
+			minor = yes
+			history = "CRO_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				ustasa
+	            partisan_spirit
+	            rightist_opposition
+			}
+			focuses = {
+				YUG_yugoslavianism
+				YUG_the_yugoslavian_fsr
+				YUG_balkan_dream
+			}
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

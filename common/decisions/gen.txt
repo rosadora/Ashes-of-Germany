@@ -176,6 +176,7 @@ gen_pick_a_side = {
 				has_completed_focus = SYR_break_isolation
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = PAL_ties_with_italy
+				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
 			}
 				OR = {
 				tag = HOL
@@ -304,6 +305,7 @@ gen_pick_a_side = {
 				has_completed_focus = PAL_pick_a_side
 				has_completed_focus = USR_a_pact_with_rosa_luxemburg
 				has_completed_focus = YUG_a_world_to_liberate
+				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
 			}
 			OR = {
 				tag = HOL

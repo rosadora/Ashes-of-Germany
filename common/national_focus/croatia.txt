@@ -373,6 +373,7 @@
 			factor = 5
 		}
 		available = {
+			controls_state = 103
 		}
 		bypass = {
 		}
