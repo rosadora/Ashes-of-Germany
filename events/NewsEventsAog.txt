@@ -1545,3 +1545,17 @@ news_event = { #Yugoslavian Peaceful Reunification
 		name = news.3085.a
 	}
 }
+news_event = { #Fascist Takeover in Croatia
+    id = news.3086
+	title = news.3086.t
+	desc = news.3086.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3086.a
+	}
+}

@@ -1,0 +1,146 @@
+YUG_liberal_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+	}
+	enable = {
+		has_game_rule = {
+			rule = YUG_ai_behavior
+			option = LIBERAL_YUGOSLAVIA
+		}
+	}
+
+	ai_national_focuses = {
+		YUG_the_eternal_regency
+		YUG_reinstate_multi_party_system
+		YUG_prevent_extremist_takeover
+		YUG_general_elections
+		YUG_centrist_victory
+	}	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+YUG_radical_national_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+	}
+	enable = {
+		has_game_rule = {
+			rule = YUG_ai_behavior
+			option = RADICAL_NATIONAL_YUGOSLAVIA
+		}
+	}
+
+	ai_national_focuses = {
+		YUG_the_eternal_regency
+		YUG_reinstate_multi_party_system
+		YUG_prevent_extremist_takeover
+		YUG_general_elections
+		YUG_radical_national_victory
+	}	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+YUG_monarchist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+	}
+	enable = {
+		has_game_rule = {
+			rule = YUG_ai_behavior
+			option = MONARCHIST_YUGOSLAVIA
+		}
+	}
+
+	ai_national_focuses = {
+		YUG_the_eternal_regency
+		YUG_embrace_alexanders_legacy
+		YUG_decree_of_national_mourning
+		YUG_hunt_anti_national_elements
+		YUG_national_rejuvenation
+		YUG_unity_first
+	}	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+YUG_fascist_plan = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+	}
+	enable = {
+		has_game_rule = {
+			rule = YUG_ai_behavior
+			option = FASCIST_YUGOSLAVIA
+		}
+	}
+
+	ai_national_focuses = {
+		YUG_the_eternal_regency
+		YUG_embrace_alexanders_legacy
+		YUG_decree_of_national_mourning
+		YUG_hunt_anti_national_elements
+		YUG_national_rejuvenation
+		YUG_persecute_muslim_minorities
+	}	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

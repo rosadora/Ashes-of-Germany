@@ -818,12 +818,42 @@ HAN_ai_behavior = {
 	}
 }
 
+YUG_ai_behavior = {
+	name = "YUG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = LIBERAL_YUGOSLAVIA
+		text = "RULE_OPTION_LIBERAL_YUGOSLAVIA"
+		desc = "RULE_OPTION_LIBERAL_YUGOSLAVIA_YUG_AI_DESC"
+	}
+	option = {
+		name = RADICAL_NATIONAL_YUGOSLAVIA
+		text = "RULE_OPTION_RADICAL_NATIONAL_YUGOSLAVIA"
+		desc = "RULE_OPTION_RADICAL_NATIONAL_YUGOSLAVIA_YUG_AI_DESC"
+	}
+	option = {
+		name = MONARCHIST_YUGOSLAVIA
+		text = "RULE_OPTION_MONARCHIST_YUGOSLAVIA"
+		desc = "RULE_OPTION_MONARCHIST_YUGOSLAVIA_YUG_AI_DESC"
+	}
+	option = {
+		name = FASCIST_YUGOSLAVIA
+		text = "RULE_OPTION_FASCIST_YUGOSLAVIA"
+		desc = "RULE_OPTION_FASCIST_YUGOSLAVIA_YUG_AI_DESC"
+	}
+}
+
 
  ##   ##  #   # ###      ## ### ### #  # ###  
 #    #  # ## ## #       #   #    #  #  # #  # 
 # ## #### # # # ##       #  ##   #  #  # ###  
 #  # #  # #   # #         # #    #  #  # #    
- ##  #  # #   # ###     ##  ###  #   ##  #     
+ ##  #  # #   # ###     ##  ###  #   ##  #   
 
 americas_colonization_status = {
 	name = "AMERICAS_COLONIZATION_STATUS"

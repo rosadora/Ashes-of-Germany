@@ -14,14 +14,42 @@ country_event = { # Time to make a Choice
 	option = {
 		name = yug.1.a
 		ai_chance = {
-			base = 50
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = LIBERAL_YUGOSLAVIA
+		        }
+			}
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = RADICAL_NATIONAL_YUGOSLAVIA
+		        }
+			}
 		}
 		set_country_flag = follows_paul_will
 	}
 	option = {
 		name = yug.1.b
 		ai_chance = {
-			base = 50
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = MONARCHIST_YUGOSLAVIA
+		        }
+			}
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = FASCIST_YUGOSLAVIA
+		        }
+			}
 		}
 		set_country_flag = follows_regency_council_will
 	}
@@ -37,7 +65,14 @@ country_event = { # General Elections - Communist Banned
 	option = {
 		name = yug.2.a
 		ai_chance = {
-			base = 50
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = LIBERAL_YUGOSLAVIA
+		        }
+			}
 		}
 		set_country_flag = democratic_front_victory
 		add_popularity = {
@@ -56,7 +91,14 @@ country_event = { # General Elections - Communist Banned
 	option = {
 		name = yug.2.b
 		ai_chance = {
-			base = 50
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = RADICAL_NATIONAL_YUGOSLAVIA
+		        }
+			}
 		}
 		set_country_flag = conservative_victory
 		add_popularity = {
@@ -76,7 +118,14 @@ country_event = { # General Elections - Communist Allowed
 	option = {
 		name = yug.3.a
 		ai_chance = {
-			base = 50
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = LIBERAL_YUGOSLAVIA
+		        }
+			}
 		}
 		set_country_flag = democratic_front_victory
 		add_popularity = {
@@ -95,7 +144,14 @@ country_event = { # General Elections - Communist Allowed
 	option = {
 		name = yug.3.b
 		ai_chance = {
-			base = 50
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = RADICAL_NATIONAL_YUGOSLAVIA
+		        }
+			}
 		}
 		set_country_flag = conservative_victory
 		add_popularity = {
@@ -106,7 +162,7 @@ country_event = { # General Elections - Communist Allowed
 	option = {
 		name = yug.3.c
 		ai_chance = {
-			base = 50
+			base = 1
 		}
 		set_country_flag = kpj_victory
 			add_popularity = {

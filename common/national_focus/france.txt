@@ -1812,10 +1812,6 @@
 		select_effect = {
 		}
 		bypass = {
-			NOT = {
-				country_exists = ITA
-			}
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
