@@ -302,9 +302,9 @@ bookmarks = {
 	            rightist_opposition
 			}
 			focuses = {
-				YUG_yugoslavianism
-				YUG_the_yugoslavian_fsr
-				YUG_balkan_dream
+				CRO_yugoslavianism
+				CRO_the_yugoslavian_fsr
+				CRO_balkan_dream
 			}
 		}
 		effect = {

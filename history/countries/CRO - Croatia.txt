@@ -68,6 +68,11 @@ add_ideas = {
 
 recruit_character = CRO_milovan_djilas
 recruit_character = CRO_Zivko_Topalovic
+recruit_character = CRO_Josip_Broz_Tito
+recruit_character = CRO_Stojan_Matic
+recruit_character = CRO_Doko_Jovanic
+recruit_character = CRO_Arso_Jovanovic
+recruit_character = CRO_Koca_Popovic
 
 create_country_leader = {
 	name = "Ante Pavelic"

@@ -1619,4 +1619,54 @@ spriteTypes = {
 		name = "GFX_Ana_Pauker"
 		texturefile = "gfx/leaders/TRA/Ana_Pauker.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Stojan_Matic_small"
+		texturefile = "gfx/leaders/CRO/Stojan_Matic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Stojan_Matic"
+		texturefile = "gfx/leaders/CRO/Stojan_Matic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josip_Broz_Tito_small"
+		texturefile = "gfx/leaders/CRO/Josip_Broz_Tito_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josip_Broz_Tito"
+		texturefile = "gfx/leaders/CRO/Josip_Broz_Tito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Doko_Jovanic_small"
+		texturefile = "gfx/leaders/CRO/Doko_Jovanic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Doko_Jovanic"
+		texturefile = "gfx/leaders/CRO/Doko_Jovanic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Arso_Jovanovic_small"
+		texturefile = "gfx/leaders/CRO/Arso_Jovanovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Arso_Jovanovic"
+		texturefile = "gfx/leaders/CRO/Arso_Jovanovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Koca_Popovic_small"
+		texturefile = "gfx/leaders/CRO/Koca_Popovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Koca_Popovic"
+		texturefile = "gfx/leaders/CRO/Koca_Popovic.dds"
+	}
 }
