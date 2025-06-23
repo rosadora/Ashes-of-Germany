@@ -441,13 +441,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_eternal_regency"
-		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+		name = "GFX_idea_juche_idea"
+		texturefile = "gfx/interface/ideas/juche_idea.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_eternal_regency"
-		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+		name = "GFX_idea_war_against_imperialism_juche"
+		texturefile = "gfx/interface/ideas/war_against_imperialism_juche.dds"
 	}
 
 	spriteType = {

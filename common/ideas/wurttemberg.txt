@@ -202,8 +202,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.075
-				line_change_production_efficiency_factor = 0.2
+				consumer_goods_expected_value = -0.03
+				monthly_population = 0.2
 			}
 		}
 		WUR_kulaks_idea = {

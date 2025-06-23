@@ -1785,4 +1785,34 @@ spriteTypes = {
 	name = "GFX_goal_preserve_yugoslavia"
 	texturefile = "gfx/interface/goals/preserve_yugoslavia.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_juche_focus"
+	texturefile = "gfx/interface/goals/juche_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_war_against_imperialism_korea"
+	texturefile = "gfx/interface/goals/war_against_imperialism_korea.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_chollima_focus"
+	texturefile = "gfx/interface/goals/chollima_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_korean_elections"
+	texturefile = "gfx/interface/goals/korean_elections.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_cho_bong_am_victory"
+	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_kim_koo_victory"
+	texturefile = "gfx/interface/goals/kim_koo_victory.dds"			
+	}
 }

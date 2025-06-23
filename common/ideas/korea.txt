@@ -23,6 +23,25 @@ ideas = {
 				research_speed_factor = -0.05
 			} 
 		}
+		war_against_imperialism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = war_against_imperialism_juche
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_defence_against_major_factor = 0.1
+				conscription = 0.04
+			} 
+		}
 		japanese_landlords = {
 			
 			allowed = {
@@ -59,6 +78,113 @@ ideas = {
 				consumer_goods_expected_value = 0.15
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
+			} 
+		}
+		wpk_governance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot_purged
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				line_change_production_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.025
+				drift_defence_factor = 0.5
+			} 
+		}
+		wpk_governance2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = trotskyite_plot_purged
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.3
+				war_support_factor = 0.3
+				consumer_goods_expected_value = -0.05
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				drift_defence_factor = 1
+			} 
+		}
+		juche = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = juche_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				local_resources = 0.15
+				global_building_slots_factor = 0.2
+				consumer_goods_expected_value = -0.075
+				min_export = -0.1
+				trade_opinion_factor = -0.2
+			} 
+		}
+		juche2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = juche_idea
+
+			removal_cost = -1
+			
+			modifier = { 
+				local_resources = 0.15
+				global_building_slots_factor = 0.2
+				consumer_goods_expected_value = -0.075
+				min_export = -0.1
+				trade_opinion_factor = -0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.1
+			} 
+		}
+		state_censorship = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_oppression
+
+			removal_cost = -1
+			
+			modifier = { 
+				communism_drift = 0.03
+				classical_marxism_drift = 0.01
+				war_support_factor = 0.1
 			} 
 		}
 	}
