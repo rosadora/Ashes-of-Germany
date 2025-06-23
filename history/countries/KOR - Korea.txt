@@ -12,22 +12,67 @@ set_technology = {
 set_convoys = 5
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = social_democracy
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 35
-	fascism = 25
-	communism = 30
-	neutrality = 10
+	libertarian_socialism = 0
+	classical_marxism = 17
+	communism = 4
+	social_democracy = 29
+	social_liberalism = 7
+	classical_liberalism = 21
+	democratic = 6
+	fascism = 3
+	neutrality = 11
+	ultra_nationalism = 2
+}
+
+add_ideas = {
+	donghak_legacy
+	japanese_landlords
+	feudal_legacy
+}
+
+create_country_leader = {
+	name = "Cho Bong-am"
+	desc = ""
+	picture = "gfx/leaders/KOR/Cho_Bong_am.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_category
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Koo"
+	desc = ""
+	picture = "gfx/leaders/KOR/Kim_Koo.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism_category
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Koo"
+	desc = ""
+	picture = "gfx/leaders/KOR/Kim_Koo.dds"
+	expire = "1965.1.1"
+	ideology = classical_liberalism_category
+	traits = {
+		#
+	}
 }
 
 create_country_leader = {
 	name = "Syngman Rhee"
 	desc = ""
-	picture = GFX_portrait_Syngman_Rhee
+	picture = "gfx/leaders/KOR/Syngman_Rhee.dds"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
@@ -36,9 +81,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Yi Kang"
+	name = "Yi Un"
 	desc = ""
-	picture = GFX_portrait_Yi_Kang
+	picture = "gfx/leaders/KOR/Yi_Un.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
@@ -47,11 +92,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Kim Il-sung"
+	name = "Yi Un"
 	desc = ""
-	picture = GFX_portrait_Kim_Il_sung
+	picture = "gfx/leaders/KOR/Yi_Un.dds"
 	expire = "1965.1.1"
-	ideology = stalinism
+	ideology = ultra_nationalism_category
 	traits = {
 		#
 	}
@@ -60,9 +105,31 @@ create_country_leader = {
 create_country_leader = {
 	name = "Yi Un"
 	desc = ""
-	picture = GFX_portrait_Yi_Un
+	picture = "gfx/leaders/KOR/Yi_Un.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Il-sung"
+	desc = ""
+	picture = "gfx/leaders/KOR/Kim_Il_Sung.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Il-sung"
+	desc = ""
+	picture = "gfx/leaders/KOR/Kim_Il_Sung.dds"
+	expire = "1965.1.1"
+	ideology = classical_marxism_category
 	traits = {
 		#
 	}

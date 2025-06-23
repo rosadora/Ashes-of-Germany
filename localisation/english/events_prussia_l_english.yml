@@ -1396,6 +1396,10 @@
  news.3084.t:0 "Second Sino-Japanese War"
  news.3084.d:0 "After weeks of border provocations and preparations, Japan decided to launch Operation Ichi-go, plunging China into an asymmetric war. European nations and the League of Nations protested, but to little effect. The battles for control of Beijing are already beginning."
  news.3084.a:0 "Ok"
+ jap.5.t:0 "Korean Uprising"
+ jap.5.d:0 "In the atmosphere of chaos in which the Empire of Japan had collapsed, Korean pro-independence movements came together to proclaim the independence of the Korean peninsula."
+ jap.5.a:0 "Ok"
+ jap.5.b:0 "(Play as Korea)"
  ### LITHUANIA ###
  lithuania.1.t:0 "Konigsberg Conference"
  lithuania.1.d:0 "Lithuania, after years of dispute over the return of Vilnius to their country, decided to open negotiations in Konigsberg with representatives of our nation. The Polish government has yet to announce its position on the matter."
@@ -1496,3 +1500,4 @@
  news.3086.t:0 "Fascist Take Over in Yugoslavia"
  news.3086.d:0 "After months of rising to power and assisting the declining monarchy, the fascist JRZ movement had entered government a few months earlier, and with the help of their gigantic paramilitary force, they decided to depose Prince Paul, representative of the monarchy's reformist wing."
  news.3086.a:0 "Ok"
+ 

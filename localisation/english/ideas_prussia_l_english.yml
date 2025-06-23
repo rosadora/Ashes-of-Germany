@@ -1490,3 +1490,10 @@
  subside_to_peasants:0 "Prosperous Agricultural Sector"
  balkan_protection_army:0 "Balkan Protection Army"
  balkan_protection_army_desc:0 ""
+ ### KOREA ###
+ donghak_legacy:0 "Donghak Legacy"
+ donghak_legacy_desc:0 "The memory of the Donghak movement still haunts Korean society, and continues to influence anti-colonial, anti-Western and pro-democracy thinking."
+ japanese_landlords:0 "Japanese Landlords"
+ japanese_landlords_desc:0 "During the Japanese occupation, former landowners and peasants were expropriated from their land for Japanese owners. The consequences were severe, resulting in famine and famine throughout the country. Today, the question of the fate of this land is at the heart of public debate in Korea."
+ feudal_legacy:0 "Feudal Society"
+ feudal_legacy_desc:0 "Unlike its former colonial power, Korean society is not industrialized, so it is still largely based on an agrarian economy and feudal social organization."

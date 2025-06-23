@@ -161,3 +161,68 @@ country_event = {
 		}
 	}
 }
+# Korean Secession
+country_event = {
+	id = jap.5
+	title = jap.5.t
+	desc = jap.5.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	trigger = {
+		JAP = {
+			has_civil_war = yes
+		}
+		tag = JAP
+	}
+	immediate = {
+		hidden_effect = {
+		KOR = {
+			transfer_state = 525
+			transfer_state = 527
+			delete_units = {
+              division_template = "Hohei Shidan"
+              disband = yes
+            }
+			delete_units = {
+              division_template = "Dokuritsu Konsei Ryodan"
+              disband = yes
+            }
+			delete_units = {
+              division_template = "Jidousha Shidan"
+              disband = yes
+            }
+			delete_units = {
+              division_template = "Rikusentai"
+              disband = yes
+            }
+			delete_units = {
+              division_template = "Chuton-chi Shidan"
+              disband = yes
+            }
+			delete_units = {
+              division_template = "Kihei Shidan"
+              disband = yes
+            }
+			load_oob = KOR_independance
+		}
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = { 
+		name = jap.5.a
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { 
+		name = jap.5.b
+		ai_chance = {
+			base = 0
+		}
+		KOR = {
+		change_tag_from = JAP
+		}
+	}
+}

@@ -1,0 +1,65 @@
+ideas = {
+
+	country = {
+		donghak_legacy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_the_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				neutrality_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_liberalism_drift = 0.01
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.075
+				research_speed_factor = -0.05
+			} 
+		}
+		japanese_landlords = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_militarism_shogun
+
+			removal_cost = -1
+			
+			modifier = { 
+				monthly_population = -0.35
+				stability_factor = -0.05
+				political_power_factor = -0.15
+			} 
+		}
+		feudal_legacy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_the_Hacienda_inquilinaje_system
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_expected_value = 0.15
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			} 
+		}
+	}
+}
