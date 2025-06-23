@@ -141,6 +141,7 @@ country_event = {
 		PRC = {
 			transfer_state = 609
 			transfer_state = 745
+			transfer_state = 524
 		}
 	}
 }

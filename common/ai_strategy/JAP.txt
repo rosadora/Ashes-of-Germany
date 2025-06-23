@@ -288,7 +288,10 @@ southern_expansion = {
 		original_tag = JAP
 	}
 	enable = {
-		has_completed_focus = JAP_strike_south_doctrine
+		OR = {
+			has_government = fascism 
+			has_government = ultra_nationalism
+		}
 		OR = {
 			country_exists = HOL
 			country_exists = ENG
@@ -318,18 +321,21 @@ northern_expansion = {
 		original_tag = JAP
 	}
 	enable = {
-		has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
-		country_exists = SOV
-	}
-	abort = {
-		NOT = {
-			country_exists = SOV
+		OR = {
+			has_government = fascism 
+			has_government = ultra_nationalism
 		}
 	}
 
 	ai_strategy = {
 		type = antagonize
 		id = "SOV"
+		value = 200
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "USR"
 		value = 200
 	}
 }
@@ -339,7 +345,6 @@ chinese_war = {
 		original_tag = JAP
 	}
 	enable = {
-		has_completed_focus = JAP_intervene_in_china
 		country_exists = CHI
 	}
 	abort = {

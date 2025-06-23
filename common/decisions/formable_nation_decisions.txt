@@ -1003,6 +1003,16 @@ form_austria_hungary_category = {
 				state = 973
 				state = 974
 				state = 154
+
+				state = 953
+				state = 954
+				state = 955
+				state = 940
+				state = 941
+				state = 937
+				state = 938
+				state = 939
+				state = 942
 			}
 		}
 
@@ -1041,6 +1051,7 @@ form_austria_hungary_category = {
 				controls_state = 84
 				controls_state = 764
 				controls_state = 82
+				controls_state = 942
 				# Austria
 				controls_state = 848
 				controls_state = 153
@@ -1048,6 +1059,11 @@ form_austria_hungary_category = {
 				controls_state = 4
 				controls_state = 975
 				controls_state = 976
+				controls_state = 940
+				controls_state = 941
+				controls_state = 937
+				controls_state = 938
+				controls_state = 939
 				
 				# Czechoslovakia
 				controls_state = 69
@@ -1067,6 +1083,9 @@ form_austria_hungary_category = {
 				controls_state = 973
 				controls_state = 974
 				controls_state = 154
+				controls_state = 953
+				controls_state = 954
+				controls_state = 955
 			}
 			
 		}
@@ -1118,6 +1137,7 @@ form_austria_hungary_category = {
 				850 = { add_core_of = ROOT }
 				764 = { add_core_of = ROOT }
 				82 = { add_core_of = ROOT }
+				942 = { add_core_of = ROOT }
 
 				# Austria
 				custom_effect_tooltip = form_country_austria_coring_states_tt
@@ -1128,6 +1148,11 @@ form_austria_hungary_category = {
 					4 = { add_core_of = ROOT }
 					975 = { add_core_of = ROOT }
 					976 = { add_core_of = ROOT }
+					940 = { add_core_of = ROOT }
+					941 = { add_core_of = ROOT }
+					937 = { add_core_of = ROOT }
+					938 = { add_core_of = ROOT }
+					939 = { add_core_of = ROOT }
 				}
 
 				# Czechoslovakia
@@ -1153,6 +1178,9 @@ form_austria_hungary_category = {
 					973 = { add_core_of = ROOT }
 					974 = { add_core_of = ROOT }
 					154 = { add_core_of = ROOT }
+					953 = { add_core_of = ROOT }
+					954 = { add_core_of = ROOT }
+					955 = { add_core_of = ROOT }
 				}
 
 				hidden_effect = {

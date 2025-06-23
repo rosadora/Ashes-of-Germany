@@ -91,6 +91,12 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = PRC
 
 		ai_will_do = {
 			factor = 1000
@@ -105,10 +111,6 @@ JAP_1936_elections = {
 			}
          create_wargoal = {
             target = CHI
-            type = annex_everything
-         }
-		 create_wargoal = {
-            target = SHX
             type = annex_everything
          }
 		 create_wargoal = {
@@ -225,6 +227,7 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = FER
 
 		ai_will_do = {
 			factor = 1000
@@ -266,6 +269,8 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = SOV
+		will_lead_to_war_with = USR
 
 		ai_will_do = {
 			factor = 1000
@@ -307,6 +312,9 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = VIN
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
 
 		ai_will_do = {
 			factor = 1000
@@ -353,6 +361,8 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = USA
+		will_lead_to_war_with = PHI
 
 		ai_will_do = {
 			factor = 1000
@@ -435,6 +445,13 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = MEN
+		will_lead_to_war_with = MAN
 
 		ai_will_do = {
 			factor = 1000
@@ -465,10 +482,6 @@ JAP_1936_elections = {
          }
 		 create_wargoal = {
             target = XSM
-            type = annex_everything
-         }
-		 create_wargoal = {
-            target = PRC
             type = annex_everything
          }
 		 create_wargoal = {
@@ -504,6 +517,7 @@ JAP_1936_elections = {
 		days_remove = 10
 	    days_re_enable = 10
         fire_only_once = yes
+		will_lead_to_war_with = SOV
 
 		ai_will_do = {
 			factor = 1000

@@ -900,13 +900,6 @@
 			add_state_core = 79
 			add_state_core = 78
 			add_state_core = 80
-			every_country = {
-				diplomatic_relation = {
-                country = ROM
-                relation = guarantee
-                active = no
-             }
-			}
 			hidden_effect = {
 				add_ideas = civil_war
 				ROM = {
@@ -917,15 +910,15 @@
 				days = 1
 				id = news.3048
 			}
-			}
 			add_timed_idea = {
 				days = 70
 				idea = walk_down_to_the_plain
 			}
-			declare_war_on = {
-                target = ROM
-                type = annex_everything
-            }
+			create_wargoal = {
+              type = annex_everything
+              target = ROM
+			}
+		}
 	}
 	focus = {
 		id = TRA_the_romanian_council_republic
