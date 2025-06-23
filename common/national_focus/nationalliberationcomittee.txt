@@ -482,4 +482,28 @@
 			add_stability = 0.05
 		}
 	}
+	focus = {
+		id = NLC_join_our_comrades
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		x = 5
+		y = 1
+		prerequisite = {focus = NLC_avanti_popolo_alla_riscossa}
+		relative_position_id = NLC_avanti_popolo_alla_riscossa
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.01.01
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = gen_join_united_workers_of_europe
+		}
+	}
 }

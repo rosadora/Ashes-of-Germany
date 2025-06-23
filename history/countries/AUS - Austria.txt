@@ -28,6 +28,7 @@ set_technology = {
 	tech_support = 1
 	tech_mountaineers = 1
 	basic_train = 1
+	tech_trucks = 1
 }
 
 recruit_character = AUS_kurt_schuschnigg

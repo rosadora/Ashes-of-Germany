@@ -1,0 +1,199 @@
+﻿focus_tree = {
+	id = japan_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			original_tag = JAP
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = JAP_hanran
+		icon = GFX_goal_communist_offensive
+		x = 5
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = JAP_fix_the_situation }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+			has_civil_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = hanran
+		}
+	}
+	focus = {
+		id = JAP_end_the_nationalist_fable
+		icon = GFX_focus_AUS_frontmiliz_focus
+		x = -2
+		y = 1
+		prerequisite = {focus = JAP_hanran}
+		mutually_exclusive = { }
+		relative_position_id = JAP_hanran
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+			has_civil_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = JAP_militarism
+		}
+	}
+	focus = {
+		id = JAP_expropriate_zaibatsus
+		icon = GFX_goal_state_zaibtasus
+		x = 0
+		y = 1
+		prerequisite = {focus = JAP_hanran}
+		mutually_exclusive = { }
+		relative_position_id = JAP_hanran
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+			remove_idea = JAP_zaibatsus
+			add_idea = state_zaibatsus
+		 }
+		}
+	}
+	focus = {
+		id = JAP_give_up_state_religion
+		icon = GFX_goal_shintoism
+		x = 2
+		y = 1
+		prerequisite = {focus = JAP_hanran}
+		mutually_exclusive = { }
+		relative_position_id = JAP_hanran
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 swap_ideas = {
+			remove_idea = state_shintoism
+			add_idea = pluralism
+		 }
+		}
+	}
+	focus = {
+		id = JAP_new_dawn_for_socialism
+		icon = GFX_focus_GER_strike_at_the_rising_sun
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_expropriate_zaibatsus}
+		prerequisite = {focus = JAP_end_the_nationalist_fable}
+		prerequisite = {focus = JAP_give_up_state_religion}
+		mutually_exclusive = { }
+		relative_position_id = JAP_hanran
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = the_eastern_sun
+		 load_focus_tree = generic_focus
+		 remove_ideas = JAP_hirohito
+		}
+	}
+	focus = {
+		id = JAP_fix_the_situation
+		icon = GFX_focus_jap_pacific_guardian
+		x = 0
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = JAP_hanran}
+		cost = 30
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.25
+		 add_war_support = 0.1
+		 load_focus_tree = generic_focus
+		}
+	}
+}

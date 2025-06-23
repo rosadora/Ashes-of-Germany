@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "main_theme_bohemia_slovakia_patch.ogg"
+	file = "yugoslavian_partisan_song.ogg"
 	volume = 0.95
 }
 

@@ -4,7 +4,7 @@ puppet = FER
 
 
 
-set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
+set_stability = 0.5
 set_war_support = 0.8
 
 set_research_slots = 4
@@ -14,10 +14,10 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-
 	JAP_zaibatsus
 	JAP_duplicate_research_efforts
 	JAP_militarism
+	JAP_hirohito
 }
 
 609 = {
@@ -75,20 +75,6 @@ add_ideas = {
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
-
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	add_ideas = {
-		JAP_interservice_rivalry_balanced		
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
-}
-
 
 
 set_technology = {
@@ -425,13 +411,21 @@ if = {
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 100
+	fascism = 9
+	ultra_nationalism = 20
+	neutrality = 0
+	democratic = 27
+	classical_liberalism = 0
+	social_liberalism = 29
+	social_democracy = 5
+	classical_marxism = 7
+	communism = 3
 }
 
 recruit_character = JAP_tetsu_katayama
@@ -1479,4 +1473,52 @@ if = {
 			}
 		}	
 	}
+create_country_leader = {
+                 name = "Yamakawa Kikue"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+                 expire = "1965.1.1"
+                 ideology = classical_marxism_category
+                 traits = {
+					Feminist
+                 }
+			}
+create_country_leader = {
+                 name = "Itō Noe"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/ito_noe.dds"
+                 expire = "1965.1.1"
+                 ideology = libertarian_socialism_category
+                 traits = {
+					Feminist
+                 }
+			}
+create_country_leader = {
+                 name = "Yamakawa Kikue"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+                 expire = "1965.1.1"
+                 ideology = marxism
+                 traits = {
+					Feminist
+                 }
+			}
+create_country_leader = {
+                 name = "Machida Chūji"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Machida_Chuji.dds"
+                 expire = "1965.1.1"
+                 ideology = social_liberalism_category
+                 traits = {
+                 }
+			}
+create_country_leader = {
+                 name = "Machida Chūji"
+                 desc = ""
+	             picture = "gfx/leaders/JAP/Machida_Chuji.dds"
+                 expire = "1965.1.1"
+                 ideology = classical_liberalism_category
+                 traits = {
+                 }
+			}
 	

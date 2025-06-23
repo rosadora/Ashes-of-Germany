@@ -1,0 +1,406 @@
+﻿###########################
+# Yugoslavia Events
+###########################
+add_namespace = yug
+
+country_event = { # Time to make a Choice
+	id = yug.1
+	title = yug.1.t
+	desc = yug.1.d
+	picture = GFX_report_event_yugoslavian_split
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.1.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = LIBERAL_YUGOSLAVIA
+		        }
+			}
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = RADICAL_NATIONAL_YUGOSLAVIA
+		        }
+			}
+		}
+		set_country_flag = follows_paul_will
+	}
+	option = {
+		name = yug.1.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = MONARCHIST_YUGOSLAVIA
+		        }
+			}
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = FASCIST_YUGOSLAVIA
+		        }
+			}
+		}
+		set_country_flag = follows_regency_council_will
+	}
+}
+country_event = { # General Elections - Communist Banned
+	id = yug.2
+	title = yug.2.t
+	desc = yug.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.2.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = LIBERAL_YUGOSLAVIA
+		        }
+			}
+		}
+		set_country_flag = democratic_front_victory
+		add_popularity = {
+				ideology = classical_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.075
+			}
+	}
+	option = {
+		name = yug.2.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = RADICAL_NATIONAL_YUGOSLAVIA
+		        }
+			}
+		}
+		set_country_flag = conservative_victory
+		add_popularity = {
+				ideology = democratic 
+				popularity = 0.1
+			}
+	}
+}
+country_event = { # General Elections - Communist Allowed
+	id = yug.3
+	title = yug.3.t
+	desc = yug.3.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.3.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = LIBERAL_YUGOSLAVIA
+		        }
+			}
+		}
+		set_country_flag = democratic_front_victory
+		add_popularity = {
+				ideology = classical_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.075
+			}
+	}
+	option = {
+		name = yug.3.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 500000
+				has_game_rule = {
+			      rule = YUG_ai_behavior
+			      option = RADICAL_NATIONAL_YUGOSLAVIA
+		        }
+			}
+		}
+		set_country_flag = conservative_victory
+		add_popularity = {
+				ideology = democratic 
+				popularity = 0.1
+			}
+	}
+	option = {
+		name = yug.3.c
+		ai_chance = {
+			base = 1
+		}
+		set_country_flag = kpj_victory
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.25
+			}
+	}
+}
+country_event = { # Truce with Croatia?
+	id = yug.4
+	title = yug.4.t
+	desc = yug.4.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.4.a
+		ai_chance = {
+			base = 100
+		}
+		YUG = {
+			country_event = {
+				id = yug.5
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = yug.4.b
+		ai_chance = {
+			base = 0
+		}
+		YUG = {
+			country_event = {
+				id = yug.6
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Truce with Croatia? Croatia Accepts
+	id = yug.5
+	title = yug.5.t
+	desc = yug.5.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.5.a
+		ai_chance = {
+			base = 100
+		}
+		set_truce = {
+          target = CRO
+          days = 365
+        }
+		diplomatic_relation = {
+         country = CRO
+         relation = non_aggression_pact
+         active = yes
+        }
+	}
+}
+country_event = { # Truce with Croatia? Croatia Denies
+	id = yug.6
+	title = yug.6.t
+	desc = yug.6.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.6.a
+		ai_chance = {
+			base = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CRO
+		}
+	}
+}
+country_event = { # Liberation of Yugoslavian Lands
+	id = yug.7
+	title = yug.7.t
+	desc = yug.7.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { #Do nothing
+		name = yug.7.a
+		ai_chance = {
+			base = 10
+		}
+		YUG = {
+			country_event = {
+				id = yug.8
+				days = 1
+			}
+		}
+	}
+	option = { #Strike Back!
+		name = yug.7.b
+		ai_chance = {
+			base = 90
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = YUG
+		}
+		YUG = {
+			country_event = {
+				id = yug.9
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Liberation of Yugoslavian Lands - Italy strikes back!
+	id = yug.8
+	title = yug.8.t
+	desc = yug.8.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.7.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { # Liberation of Yugoslavian Lands - Italy folds!
+	id = yug.9
+	title = yug.9.t
+	desc = yug.9.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = {
+		name = yug.9.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { # Zara and Trieste for support - Request
+	id = yug.10
+	title = yug.10.t
+	desc = yug.10.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = yug.10.a
+		ai_chance = {
+			base = 100
+		}
+		YUG = {
+			country_event = {
+				id = yug.11
+				days = 1
+			}
+		}
+		transfer_state = 736
+		transfer_state = 852
+		transfer_state = 163
+	}
+	option = { #Never
+		name = yug.10.b
+		ai_chance = {
+			base = 10
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = YUG
+		}
+		YUG = {
+			country_event = {
+				id = yug.12
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Zara and Trieste for support - Join the War
+	id = yug.10
+	title = yug.10.t
+	desc = yug.10.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = yug.10.a
+		ai_chance = {
+			base = 100
+		}
+		declare_war_on = {
+            target = NLC
+            type = topple_government
+        }
+		declare_war_on = {
+            target = ILF
+            type = topple_government
+        }
+	}
+}
+country_event = { # Zara and Trieste for support - Denied
+	id = yug.11
+	title = yug.11.t
+	desc = yug.11.d
+	picture = GFX_report_event_gre_megali_conference_signing
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = yug.11.a
+		ai_chance = {
+			base = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ITA
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = NLC
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ILF
+		}
+	}
+}

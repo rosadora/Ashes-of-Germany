@@ -1,0 +1,126 @@
+﻿###########################
+# Lithuanian Events
+###########################
+add_namespace = lithuania
+
+country_event = { # Konigsberg Conference
+	id = lithuania.1
+	title = lithuania.1.t
+	desc = lithuania.1.d
+	picture = GFX_report_event_SOV_negotiations_japan_rodzaevsky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Return Vilnius
+		name = lithuania.1.a
+		ai_chance = {
+			base = 30
+		}
+		LIT = {
+			country_event = {
+				id = lithuania.2
+				days = 2
+			}
+		}
+	}
+
+	option = { # Return Vilnius for Konigsberg Demilitarization
+		name = lithuania.1.b
+		ai_chance = {
+			base = 30
+		}
+		LIT = {
+		country_event = {
+			id = lithuania.3
+			days = 2
+		}
+		}
+	}
+
+	option = { # Vilnius is Polish!
+		name = lithuania.1.b
+		ai_chance = {
+			base = 30
+		}
+		LIT = {
+		country_event = {
+			id = lithuania.4
+			days = 2
+		}
+		}
+	}
+}
+
+country_event = { # Konigsberg Conference - Vilnius is Lithuanian
+	id = lithuania.2
+	title = lithuania.2.t
+	desc = lithuania.2.d
+	picture = GFX_report_event_SOV_negotiations_japan_rodzaevsky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Return Vilnius Accepted
+		name = lithuania.2.a
+		ai_chance = {
+			base = 30
+		}
+		transfer_state = 784
+		news_event = news.3081
+	}
+}
+
+country_event = { # Konigsberg Conference - Demilitarization for Vilnius
+	id = lithuania.3
+	title = lithuania.3.t
+	desc = lithuania.3.d
+	picture = GFX_report_event_SOV_negotiations_japan_rodzaevsky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Accept Concessions
+		name = lithuania.3.a
+		ai_chance = {
+			base = 80
+		}
+		transfer_state = 784
+		news_event = news.3082
+		763 = {
+			set_demilitarized_zone = yes
+		}
+	}
+
+	option = { # Denies Concessions
+		name = lithuania.3.b
+		ai_chance = {
+			base = 20
+		}
+		add_war_support = 0.1
+		news_event = news.3083
+	}
+}
+
+country_event = { # Konigsberg Conference - Failure
+	id = lithuania.4
+	title = lithuania.4.t
+	desc = lithuania.4.d
+	picture = GFX_report_event_SOV_negotiations_japan_rodzaevsky
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Failure
+		name = lithuania.4.a
+		ai_chance = {
+			base = 80
+		}
+		news_event = news.3083
+		add_war_support = 0.1
+	}
+}

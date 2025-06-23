@@ -1,0 +1,303 @@
+#Category only allowed for ISR
+
+ISR_raise_militias = {
+
+	ISR_raise_militias_hagana = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            454 = {
+			create_unit = {
+                division = "name = \"Hagana Militia\" division_template = \"Hagana Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Hagana Militia\" division_template = \"Hagana Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            }
+        }
+    }
+    ISR_raise_militias_lehi = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            add_stability = -0.025
+            add_war_support = 0.025
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+            454 = {
+			create_unit = {
+                division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Lehi Militia\" division_template = \"Lehi Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            }
+        }
+    }
+    ISR_raise_militias_irgun = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+            has_completed_focus = PAL_hava_nagila
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            add_stability = -0.025
+            add_war_support = 0.025
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.01
+			}
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+            454 = {
+			create_unit = {
+                division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            create_unit = {
+                division = "name = \"Irgun Militia\" division_template = \"Irgun Militia\" start_experience_factor = 0.5"
+                owner = ISR
+            }
+            }
+        }
+    }
+}
+ISR_seek_an_agreement = {
+
+	ISR_seek_a_ceasefire = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = PAL 
+            has_completed_focus = PAL_seek_an_agreement
+        }
+        priority = 1000
+
+        available = {
+            date > 1938.01.01
+        }
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 25
+
+        complete_effect = {
+            news_event = news.3076
+            IF = {
+                limit = {
+                    controls_state = 956
+                }
+                transfer_state = 956
+            }
+            IF = {
+                limit = {
+                    controls_state = 957
+                }
+                transfer_state = 957
+            }
+            IF = {
+                limit = {
+                    controls_state = 958
+                }
+                transfer_state = 958
+            }
+            IF = {
+                limit = {
+                    controls_state = 959
+                }
+                transfer_state = 959
+            }
+            IF = {
+                limit = {
+                    controls_state = 961
+                }
+                transfer_state = 961
+            }
+            IF = {
+                limit = {
+                    controls_state = 960
+                }
+                transfer_state = 960
+            }
+            IF = {
+                limit = {
+                    PAL = {
+                    controls_state = 962
+                    }
+                }
+                PAL = {
+                transfer_state = 962
+                }
+            }
+            IF = {
+                limit = {
+                    PAL = {
+                    controls_state = 454
+                    }
+                }
+                PAL = {
+                transfer_state = 454
+                }
+            }
+            IF = {
+                limit = {
+                    PAL = {
+                    controls_state = 963
+                    }
+                }
+                PAL = {
+                transfer_state = 963
+                }
+            }
+        }
+    }
+    ISR_seek_a_ceasefire_syria = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = SYR
+            has_war_with = PAL
+        }
+        priority = 1000
+
+        available = {
+            date > 1937.01.01
+            controls_state = 964
+        }
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 25
+
+        complete_effect = {
+            transfer_state = 964
+            white_peace = SYR
+        }
+    }
+    ISR_seek_a_ceasefire_transjordania = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = ISR
+        }
+        visible = {
+            has_war_with = SYR
+            has_war_with = PAL
+        }
+        priority = 1000
+
+        available = {
+            date > 1937.01.01
+            controls_state = 965
+            controls_state = 966
+        }
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 25
+
+        complete_effect = {
+            transfer_state = 966
+            transfer_state = 965
+            white_peace = JOR
+        }
+    }
+}

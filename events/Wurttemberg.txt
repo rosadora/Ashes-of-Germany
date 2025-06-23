@@ -779,6 +779,7 @@ country_event = {
 		add_state_core = 939
 		add_state_core = 940
 		add_state_core = 941
+		add_state_core = 853
     }
 }
 country_event = {
@@ -861,13 +862,11 @@ country_event = {
 		transfer_state = 84
 		transfer_state = 76
 		transfer_state = 80
-		transfer_state = 916
 		add_state_core = 80
 		add_state_core = 82
 		add_state_core = 83
 		add_state_core = 84
 		add_state_core = 76
-		transfer_state = 916
     }
 }
 country_event = {

@@ -1610,4 +1610,179 @@ spriteTypes = {
 	name = "GFX_goal_hussite_triumph"
 	texturefile = "gfx/interface/goals/hussite_triumph.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_prepare_the_end_of_the_mandate"
+	texturefile = "gfx/interface/goals/prepare_the_end_of_the_mandate.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_towards_a_binational_state"
+	texturefile = "gfx/interface/goals/towards_a_binational_state.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_end_the_aliyah"
+	texturefile = "gfx/interface/goals/end_the_aliyah.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_march_towards_syrian_ind"
+	texturefile = "gfx/interface/goals/march_towards_syrian_ind.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_accords_vienot"
+	texturefile = "gfx/interface/goals/accords_vienot.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_independance_through_resistance"
+	texturefile = "gfx/interface/goals/independance_through_resistance.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_unite_the_chief"
+	texturefile = "gfx/interface/goals/unite_the_chief.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_national_front_of_syria"
+	texturefile = "gfx/interface/goals/national_front_of_syria.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_raids_on_french"
+	texturefile = "gfx/interface/goals/raids_on_french.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_expell_the_settler"
+	texturefile = "gfx/interface/goals/expell_the_settler.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_a_free_syria"
+	texturefile = "gfx/interface/goals/a_free_syria.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_local_assemblies"
+	texturefile = "gfx/interface/goals/local_assemblies.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_a_new_syria"
+	texturefile = "gfx/interface/goals/a_new_syria.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_free_lebanon"
+	texturefile = "gfx/interface/goals/free_lebanon.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hava_nagila"
+	texturefile = "gfx/interface/goals/hava_nagila.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_new_era_palestine"
+	texturefile = "gfx/interface/goals/new_era_palestine.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_anti_zionism"
+	texturefile = "gfx/interface/goals/anti_zionism.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_palestinian_free_army_focus"
+	texturefile = "gfx/interface/goals/palestinian_free_army_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_baldwin_resignation"
+	texturefile = "gfx/interface/goals/baldwin_resignation.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_baldwin_stay"
+	texturefile = "gfx/interface/goals/baldwin_stay.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_arrest_mosley"
+	texturefile = "gfx/interface/goals/arrest_mosley.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_chairwoman_pankhurst"
+	texturefile = "gfx/interface/goals/chairwoman_pankhurst.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_blum_violette_proposal"
+	texturefile = "gfx/interface/goals/blum_violette_proposal.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_state_zaibtasus"
+	texturefile = "gfx/interface/goals/state_zaibtasus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_shintoism"
+	texturefile = "gfx/interface/goals/shintoism.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_ana_pauker_take_over"
+	texturefile = "gfx/interface/goals/ana_pauker_take_over.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_eternal_regency_focus"
+	texturefile = "gfx/interface/goals/eternal_regency_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_pauls_will"
+	texturefile = "gfx/interface/goals/pauls_will.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_alexanders_legacy"
+	texturefile = "gfx/interface/goals/alexanders_legacy.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_yugoslavian_elections"
+	texturefile = "gfx/interface/goals/yugoslavian_elections.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_democratic_yugoslavia"
+	texturefile = "gfx/interface/goals/democratic_yugoslavia.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_the_coronation_yugoslavia"
+	texturefile = "gfx/interface/goals/the_coronation_yugoslavia.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_alexanders_legacy_rejected"
+	texturefile = "gfx/interface/goals/alexanders_legacy_rejected.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_yugoslavian_sfr"
+	texturefile = "gfx/interface/goals/yugoslavian_sfr.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_preserve_yugoslavia"
+	texturefile = "gfx/interface/goals/preserve_yugoslavia.dds"			
+	}
 }

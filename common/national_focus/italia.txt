@@ -588,9 +588,6 @@ focus_tree = {
               amount = 3000
               producer = ITA
             }
-			hidden_effect = {
-			play_song = "giovinezza"
-			}
 		}
 	}
 	focus = {
@@ -961,7 +958,7 @@ focus_tree = {
 				limit = {
 					ALB = { has_war = no }
 				}
-				ALB = { country_event = { id = italy.3 hours = 1 } }
+				ALB = { country_event = { id = italia.21 hours = 1 } }
 			}
 			else = {
 				create_wargoal = {

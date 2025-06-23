@@ -44,4 +44,14 @@ spriteTypes = {
 		name = "GFX_report_workers_government_cze_election_event"
 		texturefile = "gfx/event_pictures/workers_government_cze_election_event.dds"
 	}
+
+	spriteType = {
+		name = "GFX_report_collapse_of_the_mandate_event"
+		texturefile = "gfx/event_pictures/collapse_of_the_mandate_event.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_collapse_of_the_mandate_news"
+		texturefile = "gfx/event_pictures/collapse_of_the_mandate_news.dds"
+	}
 }

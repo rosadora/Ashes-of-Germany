@@ -7,18 +7,19 @@ bookmarks = {
 		default_country = "PRS"
 		default = yes
 		
-		"HAN"={
-			history = "HAN_GATHERING_STORM_DESC"
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
 			available = { }
 			ideas = {
-				radicalization_of_the_political_scene
-				unstable_republic
+				overshadowed_by_france
+				ENG_the_war_to_end_all_wars
+				mosley_ascendancy
 			}
 			focuses = {
-				HAN_under_the_kaiser
-				HAN_under_willikens
-				HAN_the_rise_of_hanover
+				ENG_end_the_tory_rule
+				ENG_chairwoman_pankhurst
+				ENG_one_master_of_the_anglosphere
 			}
 		}
 		PRS = {
@@ -112,6 +113,20 @@ bookmarks = {
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
 
+		"HAN"={
+			minor = yes
+			history = "HAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				radicalization_of_the_political_scene
+				unstable_republic
+			}
+			focuses = {
+				HAN_under_the_kaiser
+				HAN_under_willikens
+				HAN_the_rise_of_hanover
+			}
+		}
 		"UKR"={
 			minor = yes
 			history = "UKR_GATHERING_STORM_DESC"
@@ -230,6 +245,66 @@ bookmarks = {
 				CZE_smash_democratic_defeatism
 				CZE_towards_a_united_czechoslovakia
 				CZE_national_industrial_pride
+			}
+		}
+		"PAL"={
+			minor = yes
+			history = "PAL_GATHERING_STORM_DESC"
+			ideology = social_liberalism
+			ideas = {
+				balfour_declaration
+	            arab_attitude_hostile
+	            zionist_militias_attitude_positive
+			}
+			focuses = {
+				PAL_settler_expelled
+				PAL_from_oman_to_the_rif_arabia_will_be_free
+				PAL_al_watan_al_akbar
+			}
+		}
+		"SYR"={
+			minor = yes
+			history = "SYR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				unstable_union
+	            1925_revolt_legacy
+	            nationalist_majority
+			}
+			focuses = {
+				SYR_the_march_towards_independance
+				SYR_socialist_arabia_arise
+				SYR_the_hashemite_kingdom
+			}
+		}
+		"YUG"={
+			minor = yes
+			history = "YUG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				eternal_regency_idea
+	            memories_of_the_2nd_july
+	            democratic_front_opposition
+			}
+			focuses = {
+				YUG_the_eternal_regency
+				YUG_yugoslavia_in_the_new_era
+				YUG_pan_slavic_outlook
+			}
+		}
+		"CRO"={
+			minor = yes
+			history = "CRO_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				ustasa
+	            partisan_spirit
+	            rightist_opposition
+			}
+			focuses = {
+				CRO_yugoslavianism
+				CRO_the_yugoslavian_fsr
+				CRO_balkan_dream
 			}
 		}
 		effect = {

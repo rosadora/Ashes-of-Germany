@@ -6,7 +6,7 @@
 		
 		modifier = {
 			add = 2000
-			tag = HUN
+			original_tag = HUN
 		}
 	}
 
@@ -2723,7 +2723,7 @@
 		mutually_exclusive = { focus = HUN_prepare_our_return}
 		cost = 7
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		available = {
 		}

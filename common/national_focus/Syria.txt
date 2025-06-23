@@ -1,0 +1,4352 @@
+﻿focus_tree = {
+	id = syrian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = SYR
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = SYR_the_march_towards_independance
+		icon = GFX_goal_march_towards_syrian_ind
+		x = 10
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_accords_vienot
+		icon = GFX_goal_accords_vienot
+		x = -3
+		y = 1
+		prerequisite = {focus = SYR_the_march_towards_independance}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+			FRA = {
+				OR = {
+				has_government = social_democracy
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.075
+			}
+			FRA = {
+				country_event = {
+					id = syria.1
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_independance_through_national_stockpile
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_the_march_towards_independance}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_independance_through_resistance
+		icon = GFX_goal_independance_through_resistance
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_the_march_towards_independance}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = SYR_unite_the_chiefs
+		icon = GFX_goal_unite_the_chief
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_independance_through_resistance}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 40000
+			swap_ideas = {
+				remove_idea = unstable_union
+				add_idea = unstable_union2
+			}
+		}
+	}
+	focus = {
+		id = SYR_raid_french_arms_storages
+		icon = GFX_goal_raids_on_french
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_independance_through_resistance}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = 8000
+             producer = FRA
+            }
+			FRA = {
+				add_war_support = -0.05
+				add_stability = -0.05
+			 add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = -8000
+             producer = FRA
+             }
+			}
+		}
+	}
+	focus = {
+		id = SYR_turn_fear_into_combativeness
+		icon = GFX_goal_national_front_of_syria
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_raid_french_arms_storages focus = SYR_unite_the_chiefs}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = 1925_revolt_legacy
+				add_idea = aljabhat_alwataniat_litahrir_suria
+			}
+		}
+	}
+	focus = {
+		id = SYR_expell_the_settler
+		icon = GFX_goal_expell_the_settler
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_turn_fear_into_combativeness}
+		relative_position_id = SYR_independance_through_resistance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet_of = FRA
+			has_completed_focus = SYR_unite_the_chiefs
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3074
+			unlock_decision_tooltip = SYR_arms_smuggling
+			unlock_decision_tooltip = SYR_expell_the_settler_decision
+			add_manpower = 25000
+			hidden_effect = {
+			FRA = {
+				transfer_state = 553
+				transfer_state = 554
+				transfer_state = 964
+				554 = {
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				}
+				553 = {
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				create_unit = {
+                 division = "name = \"Division Coloniale\" division_template = \"Division Coloniale\" start_experience_factor = 0.5"
+                 owner = FRA
+                }
+				}
+				end_puppet = SYR
+				SYR = {
+					leave_faction = yes
+				}
+				declare_war_on = {
+                  target = SYR
+                  type = puppet_wargoal_focus
+                }
+			}
+			}
+		}
+	}
+	focus = {
+		id = SYR_a_free_syria
+		icon = GFX_goal_a_free_syria
+		x = -2
+		y = 5
+		prerequisite = {focus = SYR_accords_vienot focus = SYR_expell_the_settler}
+		relative_position_id = SYR_the_march_towards_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+			is_puppet_of = FRA
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			country_event = {
+				id = syria.6
+				days = 2
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_syrian_free_army
+		icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
+		x = 40
+		y = 5
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 100
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_modernization_of_weapons
+		icon = GFX_goal_modernization_of_equipment
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_the_syrian_free_army}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = SYR_study_foreign_plane_models
+		icon = GFX_goal_generic_air_fighter
+		x = 3
+		y = 2
+		prerequisite = {focus = SYR_modernization_of_weapons}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = light_air
+			}
+		}
+	}
+	focus = {
+		id = SYR_syria_in_the_modern_warfare_era
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_study_foreign_plane_models}
+		prerequisite = {focus = SYR_build_up_syrian_military}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SYR_build_some_air_baises
+		icon = GFX_goal_generic_build_airforce
+		x = 3
+		y = 3
+		prerequisite = {focus = SYR_study_foreign_plane_models}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_encourage_volunteers
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_the_syrian_free_army}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = syrian_free_army
+		}
+	}
+	focus = {
+		id = SYR_syrian_free_army_tactics
+		icon = GFX_goal_generic_cavalry
+		x = -2
+		y = 1
+		prerequisite = {focus = SYR_the_syrian_free_army}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	          cost_reduction = 0.5
+	          uses = 2
+	          category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = SYR_build_up_syrian_military
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_syrian_free_army_tactics}
+		prerequisite = {focus = SYR_encourage_volunteers}
+		prerequisite = {focus = SYR_modernization_of_weapons}
+		relative_position_id = SYR_the_syrian_free_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_syrian_navy
+		icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+		x = 47
+		y = 5
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 100
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_a_mediteranean_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		x = -2
+		y = 1
+		prerequisite = {focus = SYR_the_syrian_navy}
+		relative_position_id = SYR_the_syrian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	          cost_reduction = 0.5
+	          uses = 2
+	          category = naval_doctrine
+            }
+		}
+	}
+	focus = {
+		id = SYR_invest_in_naval_research
+		icon = GFX_goal_generic_navy_battleship
+		x = -1
+		y = 2
+		prerequisite = {focus = SYR_a_mediteranean_fleet}
+		relative_position_id = SYR_the_syrian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = cl_tech
+			}
+		}
+	}
+	focus = {
+		id = SYR_a_trade_protection_fleet
+		icon = GFX_goal_generic_navy_submarine
+		x = -2
+		y = 3
+		prerequisite = {focus = SYR_a_mediteranean_fleet}
+		relative_position_id = SYR_the_syrian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = SYR_protect_the_coasts
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = -3
+		y = 4
+		prerequisite = {focus = SYR_a_trade_protection_fleet}
+		prerequisite = {focus = SYR_build_some_air_baises}
+		relative_position_id = SYR_the_syrian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = mio_cat_all_light_aircraft_and_modules
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_syrian_dockyards
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_the_syrian_navy}
+		relative_position_id = SYR_the_syrian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_improve_the_bases
+		icon = GFX_focus_generic_cruiser2
+		x = 1
+		y = 2
+		prerequisite = {focus = SYR_expand_syrian_dockyards}
+		relative_position_id = SYR_the_syrian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_syria_in_the_world
+		icon = GFX_goal_onwards
+		x = 35
+		y = 5
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_lift_the_occupation
+		icon = GFX_goal_free_lebanon
+		x = -3
+		y = 1
+		prerequisite = {focus = SYR_syria_in_the_world}
+		mutually_exclusive = {focus = SYR_integrate_lebanon}
+		relative_position_id = SYR_syria_in_the_world
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			release_puppet = LEB
+			LEB = {
+				add_ideas = syrian_lebanon
+			}
+		}
+	}
+	focus = {
+		id = SYR_integrate_lebanon
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_syria_in_the_world}
+		mutually_exclusive = {focus = SYR_lift_the_occupation}
+		relative_position_id = SYR_syria_in_the_world
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 553
+			add_stability = -0.075
+		}
+	}
+	focus = {
+		id = SYR_intervention_in_palestine
+		icon = GFX_goal_end_the_aliyah
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_syria_in_the_world}
+		mutually_exclusive = {focus = SYR_lift_the_occupation}
+		relative_position_id = SYR_syria_in_the_world
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = ISR
+			ISR = {
+				has_war_with = PAL
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			news_event = news.3075
+			declare_war_on = {
+				type = topple_government
+				target = ISR
+			}
+		}
+	}
+	focus = {
+		id = SYR_born_from_nothing
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		x = 30
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SYR_focus_on_excavation
+		icon = GFX_focus_generic_resource_extraction
+		x = -2
+		y = 1
+		prerequisite = {focus = SYR_born_from_nothing}
+		mutually_exclusive = {focus = SYR_focus_on_the_real_economy}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = neutrality
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = focus_on_excavation
+		}
+	}
+	focus = {
+		id = SYR_increase_steel_production
+		icon = GFX_focus_generic_steel
+		x = -5
+		y = 2
+		prerequisite = {focus = SYR_focus_on_excavation}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			553 = {
+				controls_or_subject_of = yes
+			}
+			554 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			553 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = steel
+                 amount = 13
+                }
+			}
+			554 = {
+			    add_resource = {
+                 type = steel
+                 amount = 5
+                }
+			}
+		}
+	}
+	focus = {
+		id = SYR_syria_is_a_rich_country
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = -3
+		y = 2
+		prerequisite = {focus = SYR_focus_on_excavation}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = neutrality
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = focus_on_excavation
+				add_idea = focus_on_excavation2
+			}
+		}
+	}
+	focus = {
+		id = SYR_eastern_black_gold
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_syria_is_a_rich_country}
+		relative_position_id = SYR_syria_is_a_rich_country
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			968 = {
+				controls_or_subject_of = yes
+			}
+			680 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 17
+                }
+			}
+			680 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 8
+                }
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_oil_storages
+		icon = GFX_focus_generic_supply_line
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_syria_is_a_rich_country}
+		relative_position_id = SYR_syria_is_a_rich_country
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_oil_paradise
+		icon = GFX_focus_GER_autarky_ambitions
+		x = 2
+		y = 2
+		prerequisite = {focus = SYR_expand_oil_storages}
+		prerequisite = {focus = SYR_eastern_black_gold}
+		relative_position_id = SYR_syria_is_a_rich_country
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			968 = {
+				controls_or_subject_of = yes
+			}
+			680 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 12
+                }
+			}
+			680 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			    add_resource = {
+                 type = oil
+                 amount = 10
+                }
+			}
+			swap_ideas = {
+				remove_idea = focus_on_excavation2
+				add_idea = focus_on_excavation3
+			}
+		}
+	}
+	focus = {
+		id = SYR_vitalize_syrian_economy
+		icon = GFX_SOV_foreign_experts_ccp_2d_sov_compatibility
+		x = 10
+		y = 1
+		prerequisite = {focus = SYR_born_from_nothing}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.5
+				uses = 4
+			}
+		}
+	}
+	focus = {
+		id = SYR_develop_the_countryside
+		icon = GFX_focus_generic_farmland
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_vitalize_syrian_economy}
+		relative_position_id = SYR_vitalize_syrian_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			680 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SYR_connect_the_east
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_develop_the_countryside}
+		relative_position_id = SYR_develop_the_countryside
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			680 = {
+			add_building_construction = {
+             type = supply_node
+             level = 1
+             instant_build = yes
+             province = 2013
+            }
+			}
+		 build_railway = {
+          level = 2
+          build_only_on_allied = yes
+          fallback = yes
+          path = { 4111 7184 10383 12316 2013 }
+          start_province = 4111
+          target_province = 2013
+         }
+		}
+	}
+	focus = {
+		id = SYR_subside_agriculture
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_develop_the_countryside}
+		relative_position_id = SYR_develop_the_countryside
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = syrian_agriculture
+		}
+	}
+	focus = {
+		id = SYR_industrialization_of_the_west
+		icon = GFX_focus_DEN_limited_regulations
+		x = -3
+		y = 1
+		prerequisite = {focus = SYR_vitalize_syrian_economy}
+		relative_position_id = SYR_vitalize_syrian_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			677 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			554 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_damas_textile_manufactures
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_industrialization_of_the_west}
+		relative_position_id = SYR_industrialization_of_the_west
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			554 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_western_infrastructures
+		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_industrialization_of_the_west}
+		relative_position_id = SYR_industrialization_of_the_west
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			554 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			677 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			799 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_increase_productivity
+		icon = GFX_focus_generic_economic_recovery
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_industrialization_of_the_west focus = SYR_develop_the_countryside}
+		relative_position_id = SYR_industrialization_of_the_west
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				category = electronics
+				bonus = 0.5
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = SYR_focus_on_the_real_economy
+		icon = GFX_focus_generic_military_industry
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_born_from_nothing}
+		mutually_exclusive = {focus = SYR_focus_on_excavation}
+		relative_position_id = SYR_born_from_nothing
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = focus_on_the_real_economy
+		}
+	}
+	focus = {
+		id = SYR_expand_industrial_sector
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_focus_on_the_real_economy}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_tourism_sector
+		icon = GFX_focus_SWE_urbanization
+		x = -1
+		y = 2
+		prerequisite = {focus = SYR_expand_industrial_sector}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_massive_railroad_construction
+		icon = GFX_focus_generic_truck
+		x = 1
+		y = 2
+		prerequisite = {focus = SYR_expand_industrial_sector}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_industrialised_country
+		icon = GFX_focus_GER_wirtschaftswunder
+		x = -1
+		y = 3
+		prerequisite = {focus = SYR_massive_railroad_construction}
+		prerequisite = {focus = SYR_expand_tourism_sector}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = focus_on_the_real_economy
+				add_idea = focus_on_the_real_economy2
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_bare_minimum
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_focus_on_the_real_economy}
+		relative_position_id = SYR_focus_on_the_real_economy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			968 = {
+			    add_resource = {
+                 type = oil
+                 amount = 7
+                }
+			}
+			680 = {
+			    add_resource = {
+                 type = oil
+                 amount = 3
+                }
+			}
+			554 = {
+			    add_resource = {
+                 type = steel
+                 amount = 10
+                }
+			}
+			553 = {
+			    add_resource = {
+                 type = aluminium
+                 amount = 3
+                }
+			}
+		}
+	}
+	focus = {
+		id = SYR_ssnp_victory
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 50
+		y = 8
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_break_isolation
+		icon = GFX_goal_anschluss
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_ssnp_victory}
+		relative_position_id = SYR_ssnp_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = gen_join_italy
+			unlock_decision_tooltip = gen_join_prussia
+		}
+	}
+	focus = {
+		id = SYR_saadeh_new_syria
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_ssnp_victory}
+		relative_position_id = SYR_ssnp_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = SYR_unite_syrians
+		icon = GFX_focus_generic_fascist_propaganda
+		x = -3
+		y = 2
+		prerequisite = {focus = SYR_saadeh_new_syria}
+		relative_position_id = SYR_ssnp_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = unstable_union
+				}
+			swap_ideas = {
+				remove_idea = unstable_union
+				add_idea = saadeh_syria
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = unstable_union2
+				}
+			swap_ideas = {
+				remove_idea = unstable_union2
+				add_idea = saadeh_syria
+			}
+			}
+		}
+	}
+	focus = {
+		id = SYR_greater_syria_project
+		icon = GFX_focus_hol_united_netherlands
+		x = 3
+		y = 2
+		prerequisite = {focus = SYR_saadeh_new_syria}
+		relative_position_id = SYR_ssnp_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 10
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = SYR_our_lands_in_iraq
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_greater_syria_project}
+		relative_position_id = SYR_greater_syria_project
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 675
+			add_state_core = 676
+			add_state_core = 291
+			create_wargoal = {
+             target = IRQ
+             type = annex_everything
+            }
+		}
+	}
+	focus = {
+		id = SYR_our_lands_in_palestine
+		icon = GFX_goal_palestinian_free_army_focus
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_greater_syria_project}
+		relative_position_id = SYR_greater_syria_project
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = { 
+				type = annex_everything
+				target = PAL
+			}
+			create_wargoal = { 
+				type = annex_everything
+				target = ISR
+			}
+			add_state_core = 963
+			add_state_core = 454
+			add_state_core = 961
+			add_state_core = 960
+
+			add_state_core = 959
+			add_state_core = 962
+			add_state_core = 956
+			add_state_core = 957
+			add_state_core = 958
+		}
+	}
+	focus = {
+		id = SYR_take_jordania_and_sinai
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_greater_syria_project}
+		relative_position_id = SYR_greater_syria_project
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = { 
+				type = annex_everything
+				target = JOR
+			}
+			create_wargoal = { 
+				type = annex_everything
+				target = EGY
+			}
+			add_state_core = 455
+			add_state_core = 965
+			add_state_core = 966
+			add_state_core = 967
+
+			add_state_core = 453
+			add_state_core = 446
+		}
+	}
+	focus = {
+		id = SYR_lands_in_iran
+		icon = GFX_focus_generic_attack_iran
+		x = 2
+		y = 2
+		prerequisite = {focus = SYR_greater_syria_project}
+		relative_position_id = SYR_greater_syria_project
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 2
+			create_wargoal = { 
+				type = annex_everything
+				target = PER
+			}
+			add_state_core = 413
+			add_state_core = 421
+		}
+	}
+	focus = {
+		id = SYR_lands_in_turkey
+		icon = GFX_focus_generic_attack_turkey
+		x = 3
+		y = 1
+		prerequisite = {focus = SYR_greater_syria_project}
+		relative_position_id = SYR_greater_syria_project
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 2
+			create_wargoal = { 
+				type = annex_everything
+				target = TUR
+			}
+			add_state_core = 344
+			add_state_core = 350
+			add_state_core = 352
+		}
+	}
+	focus = {
+		id = SYR_natural_borders_of_greater_syria
+		icon = GFX_focus_SWE_the_lion_of_the_north
+		x = 1
+		y = 3
+		prerequisite = {focus = SYR_lands_in_turkey}
+		prerequisite = {focus = SYR_our_lands_in_palestine}
+		prerequisite = {focus = SYR_our_lands_in_iraq}
+		prerequisite = {focus = SYR_lands_in_iran}
+		prerequisite = {focus = SYR_take_jordania_and_sinai}
+		relative_position_id = SYR_greater_syria_project
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			set_cosmetic_tag = SYR_SSN
+		}
+	}
+	focus = {
+		id = SYR_massive_investments_on_education
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_unite_syrians}
+		relative_position_id = SYR_unite_syrians
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = public_school_for_everyone_funds
+				days = 350
+			}
+		}
+	}
+	focus = {
+		id = SYR_educated_country
+		icon = GFX_goal_generic_scientific_exchange
+		x = -2
+		y = 2
+		prerequisite = {focus = SYR_massive_investments_on_education}
+		relative_position_id = SYR_unite_syrians
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+			NOT = {
+				has_idea = public_school_for_everyone_funds
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = high_illiteracy
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SYR_saadeh_cult
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_unite_syrians}
+		relative_position_id = SYR_unite_syrians
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = saadeh_syria
+				add_idea = saadeh_syria2
+			}
+		}
+	}
+	focus = {
+		id = SYR_wake_up_syria
+		icon = GFX_focus_SWE_let_fly_all_guns
+		x = -1
+		y = 3
+		prerequisite = {focus = SYR_saadeh_cult}
+		relative_position_id = SYR_unite_syrians
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_nationalist_army
+		icon = GFX_focus_generic_fascist_troops
+		x = 1
+		y = 3
+		prerequisite = {focus = SYR_saadeh_cult}
+		relative_position_id = SYR_unite_syrians
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = for_the_country
+		}
+	}
+	focus = {
+		id = SYR_militarism
+		icon = GFX_focus_generic_fascist_troops
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_unite_syrians focus = SYR_greater_syria_project}
+		relative_position_id = SYR_ssnp_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = militarism
+		}
+	}
+	focus = {
+		id = SYR_suppress_leftist_opposition
+		icon = GFX_focus_GER_end_european_communism
+		x = -2
+		y = 3
+		prerequisite = {focus = SYR_unite_syrians focus = SYR_greater_syria_project}
+		relative_position_id = SYR_ssnp_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			has_government = ultra_nationalism
+			has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = -0.1
+			}
+
+		}
+	}
+	focus = {
+		id = SYR_hashemite_syria
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 35
+		y = 8
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_new_alignement
+		icon = GFX_goal_generic_dangerous_deal
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_hashemite_syria}
+		mutually_exclusive = {focus = SYR_our_close_friends}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			leave_faction = yes
+			unlock_decision_tooltip = gen_join_prussia
+		}
+	}
+	focus = {
+		id = SYR_our_close_friends
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 4
+		y = 1
+		prerequisite = {focus = SYR_hashemite_syria}
+		mutually_exclusive = {focus = SYR_new_alignement}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_crown_the_king
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_hashemite_syria}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_country_leader_trait = king_of_syria
+		}
+	}
+	focus = {
+		id = SYR_arrest_far_left_leaders
+		icon = GFX_goal_generic_war_with_comintern
+		x = -1
+		y = 2
+		prerequisite = {focus = SYR_crown_the_king}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.075
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.075
+			}
+		}
+	}
+	focus = {
+		id = SYR_reconciliation_with_saadeh
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 2
+		prerequisite = {focus = SYR_crown_the_king}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = ultra_nationalism 
+				popularity = -0.075
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.075
+			}
+		}
+	}
+	focus = {
+		id = SYR_a_new_model_for_an_independent_syria
+		icon = GFX_focus_generic_treaty
+		x = -4
+		y = 2
+		prerequisite = {focus = SYR_crown_the_king}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = SYR_use_oil_money_for_education
+		icon = GFX_focus_generic_currency_reforms
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_a_new_model_for_an_independent_syria}
+		relative_position_id = SYR_a_new_model_for_an_independent_syria
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+			has_resources_in_country = {
+              resource = oil
+              amount > 50
+              extracted = yes
+            }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = high_illiteracy
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SYR_apppoint_loyal_governors
+		icon = GFX_focus_CONGO_chefs_coutumiers
+		x = -2
+		y = 1
+		prerequisite = {focus = SYR_a_new_model_for_an_independent_syria}
+		relative_position_id = SYR_a_new_model_for_an_independent_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = unstable_union
+				}
+				remove_ideas = unstable_union
+			}
+			IF = {
+				limit = {
+					has_idea = unstable_union2
+				}
+				remove_ideas = unstable_union2
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_gold_of_the_regime
+		icon = GFX_focus_generic_resource_extraction
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_a_new_model_for_an_independent_syria}
+		relative_position_id = SYR_a_new_model_for_an_independent_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = black_gold
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+			}
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_iraqi_oil
+		icon = GFX_focus_generic_annex_country_2
+		x = -1
+		y = 2
+		prerequisite = {focus = SYR_the_gold_of_the_regime}
+		relative_position_id = SYR_a_new_model_for_an_independent_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+			NOT = {
+			291 = {
+			controls_or_subject_of = SYR
+			}
+			676 = {
+			controls_or_subject_of = SYR
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			291 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+			676 = {
+				add_resource = {
+					type = oil
+					amount = 14
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_expand_arabian_oil
+		icon = GFX_goal_generic_oil_refinery
+		x = 1
+		y = 2
+		prerequisite = {focus = SYR_the_gold_of_the_regime}
+		relative_position_id = SYR_a_new_model_for_an_independent_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+			NOT = {
+			859 = {
+			controls_or_subject_of = SYR
+			}
+			678 = {
+			controls_or_subject_of = SYR
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			859 = {
+				add_resource = {
+					type = oil
+					amount = 17
+				}
+			}
+			678 = {
+				add_resource = {
+					type = oil
+					amount = 18
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_first_oil_monarchy
+		icon = GFX_focus_generic_monarchist_sentiment
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_expand_arabian_oil}
+		prerequisite = {focus = SYR_expand_iraqi_oil}
+		relative_position_id = SYR_a_new_model_for_an_independent_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+			NOT = {
+			859 = {
+			controls_or_subject_of = SYR
+			}
+			678 = {
+			controls_or_subject_of = SYR
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = black_gold
+				add_idea = black_gold2
+			}
+		}
+	}
+	focus = {
+		id = SYR_rise_of_the_hashemite_dynasty
+		icon = GFX_focus_generic_home_defense
+		x = 4
+		y = 2
+		prerequisite = {focus = SYR_crown_the_king}
+		relative_position_id = SYR_hashemite_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = hashemite_in_charge
+			add_threat = 5
+		}
+	}
+	focus = {
+		id = SYR_unite_the_kingdoms
+		icon = GFX_focus_generic_royal_wedding
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_rise_of_the_hashemite_dynasty}
+		relative_position_id = SYR_rise_of_the_hashemite_dynasty
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			IRQ = {
+			has_country_leader = {
+	          name = "Ghazi I"
+	          ruling_only = yes
+            }
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			annex_country = {
+				target = IRQ
+				transfer_troops = yes
+			}
+			add_state_core = 675
+			add_state_core = 676
+			add_state_core = 291
+		}
+	}
+	focus = {
+		id = SYR_recover_hejaz
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 2
+		prerequisite = {focus = SYR_unite_the_kingdoms}
+		relative_position_id = SYR_rise_of_the_hashemite_dynasty
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 855
+			add_state_core = 679
+			add_state_core = 856
+
+			add_state_claim = 854
+			add_state_claim = 857
+			add_state_claim = 859
+			add_state_claim = 292
+			add_state_claim = 678
+			add_state_claim = 858
+
+			create_wargoal = { 
+				type = annex_everything
+				target = SAU
+			}
+		}
+	}
+	focus = {
+		id = SYR_meet_abdullah
+		icon = GFX_goal_tripartite_pact
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_rise_of_the_hashemite_dynasty}
+		relative_position_id = SYR_rise_of_the_hashemite_dynasty
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			JOR = {
+				country_event = {
+					id = syria.10
+					days = 1
+				}
+			}
+			add_state_core = 455
+			add_state_core = 965
+			add_state_core = 966
+			add_state_core = 967
+		}
+	}
+	focus = {
+		id = SYR_secure_the_holy_land
+		icon = GFX_goal_palestinian_free_army_focus
+		x = -2
+		y = 2
+		prerequisite = {focus = SYR_meet_abdullah}
+		relative_position_id = SYR_rise_of_the_hashemite_dynasty
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = { 
+				type = annex_everything
+				target = PAL
+			}
+			create_wargoal = { 
+				type = annex_everything
+				target = ISR
+			}
+			add_state_claim = 963
+			add_state_claim = 454
+			add_state_claim = 961
+			add_state_claim = 960
+
+			add_state_claim = 959
+			add_state_claim = 962
+			add_state_claim = 956
+			add_state_claim = 957
+			add_state_claim = 958
+		}
+	}
+	focus = {
+		id = SYR_the_hashemite_kingdom
+		icon = GFX_focus_IRQ_rally_behind_the_hashemite_dynasty
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_secure_the_holy_land}
+		prerequisite = {focus = SYR_recover_hejaz}
+		relative_position_id = SYR_rise_of_the_hashemite_dynasty
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = SYR_HAS
+			swap_ideas = {
+				remove_idea = hashemite_in_charge
+				add_idea = hashemite_kingdom
+			}
+		}
+	}
+	focus = {
+		id = SYR_anti_imperialist_syria
+		icon = GFX_focus_GER_align_middle_east
+		x = 21
+		y = 8
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_union_of_all_identities
+		icon = GFX_focus_generic_communist
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_anti_imperialist_syria}
+		relative_position_id = SYR_anti_imperialist_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = unstable_union
+				}
+			swap_ideas = {
+				remove_idea = unstable_union
+				add_idea = federative_socialist_republic_of_syria
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = unstable_union2
+				}
+			swap_ideas = {
+				remove_idea = unstable_union2
+				add_idea = federative_socialist_republic_of_syria
+			}
+			}
+		}
+	}
+	focus = {
+		id = SYR_join_the_european_internationale
+		icon = GFX_goal_hungarian_aid
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_anti_imperialist_syria}
+		relative_position_id = SYR_anti_imperialist_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = gen_join_united_workers_of_europe
+			leave_faction = yes
+		}
+	}
+	focus = {
+		id = SYR_union_of_ideas
+		icon = GFX_SOV_coup_detat_ccp_2d_sov_compatibility
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_union_of_all_identities}
+		relative_position_id = SYR_anti_imperialist_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = 0.075
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_undermine_foreign_ingerence
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_union_of_ideas}
+		relative_position_id = SYR_anti_imperialist_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.15
+			}
+			add_ideas = anti_hashemite_spirit
+		}
+	}
+	focus = {
+		id = SYR_pan_arab_idea
+		icon = GFX_goal_generic_demand_territory
+		x = -3
+		y = 2
+		prerequisite = {focus = SYR_union_of_all_identities}
+		relative_position_id = SYR_anti_imperialist_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_threat = 10
+		}
+	}
+	focus = {
+		id = SYR_smash_hashemite_dynasty
+		icon = GFX_focus_rom_handle_king
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_pan_arab_idea}
+		relative_position_id = SYR_pan_arab_idea
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			has_army_manpower = {
+				size > 200000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+             target = IRQ
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = JOR
+             type = annex_everything
+            }
+			add_state_claim = 455
+			add_state_claim = 967
+			add_state_claim = 965
+			add_state_claim = 966
+
+			add_state_claim = 675
+			add_state_claim = 676
+			add_state_claim = 291
+		}
+	}
+	focus = {
+		id = SYR_liberate_arabian_peninsula
+		icon = GFX_focus_generic_support_the_left_right
+		x = -1
+		y = 2
+		prerequisite = {focus = SYR_smash_hashemite_dynasty}
+		relative_position_id = SYR_pan_arab_idea
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+             target = SAU
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = YEM
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = OMA
+             type = annex_everything
+            }
+			add_state_claim = 854
+			add_state_claim = 855
+			add_state_claim = 679
+			add_state_claim = 857
+
+			add_state_claim = 292
+			add_state_claim = 859
+			add_state_claim = 678
+
+			add_state_claim = 858
+			add_state_claim = 856
+			add_state_claim = 293
+
+			add_state_claim = 292
+			add_state_claim = 294
+
+		}
+	}
+	focus = {
+		id = SYR_propose_union_with_palestine
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_pan_arab_idea}
+		relative_position_id = SYR_pan_arab_idea
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			country_exists = PAL
+			PAL = {
+				NOT = {
+					is_puppet = yes
+					has_war_with = ISR
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			PAL = {
+				country_event = {
+					id = syria.7
+					days = 1
+				}
+			}
+			add_state_claim = 963
+			add_state_claim = 454
+			add_state_claim = 961
+			add_state_claim = 960
+
+			add_state_claim = 961
+			add_state_claim = 962
+			add_state_claim = 956
+			add_state_claim = 957
+			add_state_claim = 958
+			add_state_claim = 959
+		}
+	}
+	focus = {
+		id = SYR_ignite_the_flames
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 1
+		y = 2
+		prerequisite = {focus = SYR_propose_union_with_palestine}
+		prerequisite = {focus = SYR_smash_hashemite_dynasty}
+		relative_position_id = SYR_pan_arab_idea
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			
+			has_army_manpower = {
+				size > 400000
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+             target = EGY
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = TUN
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = ALG
+             type = annex_everything
+            }
+
+			create_wargoal = {
+             target = MOR
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = SPR
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = FRA
+             type = annex_everything
+            }
+
+			create_wargoal = {
+             target = ITA
+             type = annex_everything
+            }
+			create_wargoal = {
+             target = ENG
+             type = annex_everything
+            }
+			add_state_claim = 453
+			add_state_claim = 446
+			add_state_claim = 907
+			add_state_claim = 447
+
+			add_state_claim = 452
+			add_state_claim = 552
+			add_state_claim = 456
+			add_state_claim = 457
+			add_state_claim = 656
+			add_state_claim = 765
+
+			add_state_claim = 658
+			add_state_claim = 659
+			add_state_claim = 450
+			add_state_claim = 451
+			add_state_claim = 448
+			add_state_claim = 449
+
+			add_state_claim = 661
+			add_state_claim = 662
+			add_state_claim = 663
+			add_state_claim = 273
+			add_state_claim = 458
+			add_state_claim = 665
+
+			add_state_claim = 459
+			add_state_claim = 460
+			add_state_claim = 513
+			add_state_claim = 514
+			add_state_claim = 461
+			add_state_claim = 462
+
+			add_state_claim = 290
+			add_state_claim = 783
+		}
+	}
+	focus = {
+		id = SYR_socialist_arabia_arise
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 3
+		y = 3
+		prerequisite = {focus = SYR_ignite_the_flames focus = SYR_liberate_arabian_peninsula focus = SYR_women_in_the_workforce focus = SYR_subside_poor_peasants focus = SYR_damas_state_university}
+		relative_position_id = SYR_pan_arab_idea
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = federative_socialist_republic_of_syria
+				add_idea = federative_socialist_republic_of_arabia
+			}
+		}
+	}
+	focus = {
+		id = SYR_transformation_of_syrian_society
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 3
+		y = 2
+		prerequisite = {focus = SYR_union_of_all_identities}
+		relative_position_id = SYR_anti_imperialist_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = SYR_etablish_a_healthcare
+		icon = GFX_focus_generic_field_hostpital
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_transformation_of_syrian_society}
+		relative_position_id = SYR_transformation_of_syrian_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = public_healthcare
+		}
+	}
+	focus = {
+		id = SYR_subside_poor_peasants
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_etablish_a_healthcare}
+		relative_position_id = SYR_transformation_of_syrian_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SYR_women_in_the_workforce
+		icon = GFX_goal_revolutionary_mobilization
+		x = -2
+		y = 2
+		prerequisite = {focus = SYR_etablish_a_healthcare}
+		relative_position_id = SYR_transformation_of_syrian_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = women_in_military
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			set_rule = {
+				can_generate_female_country_leaders = yes
+			}
+			set_rule = {
+				can_generate_female_unit_leaders = yes
+			}
+		}
+	}
+	focus = {
+		id = SYR_litteracy_campaign
+		icon = GFX_focus_generic_socialist_science
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_transformation_of_syrian_society}
+		relative_position_id = SYR_transformation_of_syrian_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = public_school_for_everyone_funds
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = SYR_damas_state_university
+		icon = GFX_focus_generic_university_3
+		x = 2
+		y = 2
+		prerequisite = {focus = SYR_litteracy_campaign}
+		relative_position_id = SYR_transformation_of_syrian_society
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			NOT = {
+				has_idea = public_school_for_everyone_funds
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = high_illiteracy
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SYR_national_bloc_triumph
+		icon = GFX_focus_SWE_refuge_from_war
+		x = 21
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SYR_a_free_syria
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SYR_nationalism_in_the_plural
+		icon = GFX_focus_generic_red_flags
+		x = 19
+		y = 1
+		prerequisite = {focus = SYR_national_bloc_triumph}
+		mutually_exclusive = {focus = SYR_towards_a_unitary_state}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = work_in_progress_summer
+		}
+	}
+	focus = {
+		id = SYR_towards_a_unitary_state
+		icon = GFX_goal_generic_national_unity
+		x = 21
+		y = 1
+		prerequisite = {focus = SYR_national_bloc_triumph}
+		mutually_exclusive = {focus = SYR_nationalism_in_the_plural}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+	           ruling_party = classical_liberalism
+			}
+			add_popularity = {
+			  ideology = democratic
+			  popularity = -0.1
+		    }
+			add_popularity = {
+			  ideology = classical_liberalism
+			  popularity = 0.1
+		    }
+		}
+	}
+	focus = {
+		id = SYR_local_assemblies_but_a_strong_executive
+		icon = GFX_goal_local_assemblies
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_towards_a_unitary_state}
+		relative_position_id = SYR_towards_a_unitary_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = unstable_union
+				}
+				swap_ideas = {
+					remove_idea = unstable_union
+					add_idea = centralized_executive
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = unstable_union2
+				}
+				swap_ideas = {
+					remove_idea = unstable_union2
+					add_idea = centralized_executive
+				}
+			}
+		}
+	}
+	focus = {
+		id = SYR_build_a_fair_syria
+		icon = GFX_focus_generic_social_democracy
+		x = -3
+		y = 2
+		prerequisite = {focus = SYR_local_assemblies_but_a_strong_executive}
+		mutually_exclusive = {focus = SYR_build_the_new_state}
+		relative_position_id = SYR_towards_a_unitary_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+	           ruling_party = social_democracy
+			}
+			add_popularity = {
+			  ideology = social_democracy
+			  popularity = 0.15
+		    }
+		}
+	}
+	focus = {
+		id = SYR_dirigist_politics
+		icon = GFX_focus_generic_currency_reforms
+		x = -2
+		y = 1
+		prerequisite = {focus = SYR_build_a_fair_syria}
+		relative_position_id = SYR_build_a_fair_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = dirigism
+		}
+	}
+	focus = {
+		id = SYR_priorize_economic_stability
+		icon = GFX_focus_SWE_form_rfsu
+		x = -2
+		y = 2
+		prerequisite = {focus = SYR_dirigist_politics}
+		relative_position_id = SYR_build_a_fair_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = dirigism
+				add_idea = dirigism2
+			}
+		}
+	}
+	focus = {
+		id = SYR_public_school_for_everyone
+		icon = GFX_focus_SWE_education_reform
+		x = -4
+		y = 2
+		prerequisite = {focus = SYR_dirigist_politics}
+		relative_position_id = SYR_build_a_fair_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = public_school_for_everyone_funds
+				days = 350
+			}
+			add_political_power = -100
+		}
+	}
+	focus = {
+		id = SYR_education_reform_completed
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = -4
+		y = 3
+		prerequisite = {focus = SYR_public_school_for_everyone}
+		relative_position_id = SYR_build_a_fair_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+			NOT = {
+				has_idea = public_school_for_everyone_funds
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = high_illiteracy
+		}
+	}
+	focus = {
+		id = SYR_respect_local_indentities
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_build_a_fair_syria}
+		relative_position_id = SYR_build_a_fair_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = centralized_executive
+				add_idea = harmonic_executive
+			}
+		}
+	}
+	focus = {
+		id = SYR_encourage_local_consumption
+		icon = GFX_focus_generic_farmland
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_respect_local_indentities}
+		prerequisite = {focus = SYR_priorize_economic_stability}
+		relative_position_id = SYR_build_a_fair_syria
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = dirigism2
+				add_idea = dirigism3
+			}
+		}
+	}
+	focus = {
+		id = SYR_defend_the_new_state
+		icon = GFX_focus_GER_gebirgsjager
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_build_a_fair_syria focus = SYR_build_the_new_state}
+		relative_position_id = SYR_towards_a_unitary_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = civilian_economy
+				}
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = low_economic_mobilisation
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+			swap_ideas = {
+				remove_idea = partial_economic_mobilisation
+				add_idea = war_economy
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = war_economy
+				}
+			 add_manpower = 75000
+			}
+		}
+	}
+	focus = {
+		id = SYR_cement_new_democratic_institutions
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		prerequisite = {focus = SYR_defend_the_new_state}
+		relative_position_id = SYR_defend_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+			  ideology = fascism
+			  popularity = -0.01
+		    }
+			add_popularity = {
+			  ideology = ultra_nationalism
+			  popularity = -0.05
+		    }
+			add_popularity = {
+			  ideology = communism
+			  popularity = -0.02
+		    }
+			add_popularity = {
+			  ideology = classical_marxism
+			  popularity = -0.02
+		    }
+		}
+	}
+	focus = {
+		id = SYR_new_school_programs
+		icon = GFX_focus_generic_university_1
+		x = 1
+		y = 1
+		prerequisite = {focus = SYR_defend_the_new_state}
+		relative_position_id = SYR_defend_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SYR_secularize_the_state
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = 0
+		y = 2
+		prerequisite = {focus = SYR_new_school_programs}
+		prerequisite = {focus = SYR_cement_new_democratic_institutions}
+		relative_position_id = SYR_defend_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SYR_the_syrian_state
+		icon = GFX_goal_a_new_syria
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_secularize_the_state}
+		prerequisite = {focus = SYR_encourage_local_consumption focus = SYR_westernization_of_syria}
+		relative_position_id = SYR_defend_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = harmonic_executive
+				}
+			swap_ideas = {
+				remove_idea = harmonic_executive
+				add_idea = harmonic_executive2
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = centralized_executive2
+				}
+			swap_ideas = {
+				remove_idea = centralized_executive2
+				add_idea = centralized_executive3
+			}
+			}
+		}
+	}
+	focus = {
+		id = SYR_build_the_new_state
+		icon = GFX_focus_generic_industrialists
+		x = 3
+		y = 2
+		prerequisite = {focus = SYR_local_assemblies_but_a_strong_executive}
+		relative_position_id = SYR_towards_a_unitary_state
+		mutually_exclusive = {focus = SYR_build_a_fair_syria}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+			  ideology = classical_liberalism
+			  popularity = 0.15
+		    }
+		}
+	}
+	focus = {
+		id = SYR_centralized_modern_state
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		prerequisite = {focus = SYR_build_the_new_state}
+		relative_position_id = SYR_build_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = centralized_executive
+				add_idea = centralized_executive2
+			}
+		}
+	}
+	focus = {
+		id = SYR_attract_foreign_investments
+		icon = GFX_focus_BEL_engine_of_the_economy
+		x = 2
+		y = 1
+		prerequisite = {focus = SYR_build_the_new_state}
+		relative_position_id = SYR_build_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = liberal_agenda_syr
+		}
+	}
+	focus = {
+		id = SYR_encourage_foreign_investments_on_university
+		icon = GFX_focus_research
+		x = 4
+		y = 2
+		prerequisite = {focus = SYR_attract_foreign_investments}
+		relative_position_id = SYR_build_the_new_state
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = high_illiteracy
+				add_idea = a_new_generation
+			}
+		}
+	}
+	focus = {
+		id = SYR_the_light_of_middle_east
+		icon = GFX_focus_generic_railroad
+		x = 4
+		y = 3
+		prerequisite = {focus = SYR_encourage_foreign_investments_on_university}
+		relative_position_id = SYR_build_the_new_state
+		cost = 14.4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = a_new_generation
+				add_idea = a_new_generation2
+			}
+		}
+	}
+	focus = {
+		id = SYR_mass_export
+		icon = GFX_focus_generic_monetary_union
+		x = 2
+		y = 2
+		prerequisite = {focus = SYR_attract_foreign_investments}
+		relative_position_id = SYR_build_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = liberal_agenda_syr
+				add_idea = liberal_agenda_syr2
+			}
+		}
+	}
+	focus = {
+		id = SYR_westernization_of_syria
+		icon = GFX_focus_GER_kdf_wagen
+		x = 0
+		y = 3
+		prerequisite = {focus = SYR_mass_export}
+		prerequisite = {focus = SYR_centralized_modern_state}
+		relative_position_id = SYR_build_the_new_state
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = liberal_agenda_syr2
+				add_idea = liberal_agenda_syr3
+			}
+		}
+	}
+}

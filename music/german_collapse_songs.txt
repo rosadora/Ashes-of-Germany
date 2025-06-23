@@ -116,3 +116,57 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "hava_nagila"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "raf_march"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "al_watan_al_akbar"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "lets_do_our_best"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "dadao_song"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "yugoslavian_partisan_song"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

@@ -3089,24 +3089,7 @@ characters = {
 		name = SOV_martemyan_ryutin
 		portraits = {
 			army = {
-				small = "GFX_idea_SOV_martemyan_ryutin_imprisoned"
-			}
-		}
-
-		allowed_civil_war = {
-			OR = {
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_liberate_ryutin
-				}
-				AND = {
-					SOV_is_right_opposition = yes 
-					has_completed_focus = SOV_liberate_ryutin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism
-				}
+				small = "GFX_idea_SOV_martemyan_ryutin"
 			}
 		}
 
@@ -3117,28 +3100,12 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
 			available = {
-				has_completed_focus = SOV_liberate_ryutin
 				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
 				}
 			}
 			traits = {
@@ -3157,6 +3124,7 @@ characters = {
 		allowed_civil_war = {
 			OR = {
 				has_government = neutrality 
+				has_government = ultra_nationalism
 				has_government = fascism
 			}
 		}
@@ -3166,12 +3134,6 @@ characters = {
 			idea_token = SOV_patriarch_sergy
 			allowed = {
 				original_tag = SOV
-			}
-			available = {
-				OR = {
-					has_completed_focus = SOV_patriarch_of_all_russia
-					has_completed_focus = SOV_the_declaration
-				}
 			}
 			traits = {
 				patriarch_of_moscow_and_all_russia 
@@ -3346,29 +3308,10 @@ characters = {
 				}
 			}
 			available = {
-				if = { 
-					limit = { tag = MAN }
-					custom_trigger_tooltip = {
-					 	tooltip = SOV_grigory_semyonov_man_tt
-					 	SOV_soviet_civil_war_not_started = yes 
-					 	NOT = { SOV = { has_completed_focus = SOV_approach_semyonov } }
-					}
-				}
-				
-				if = {
-					limit = { tag = SOV }
-					has_completed_focus = SOV_approach_semyonov
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
+				OR = {
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism
 				}
 			}
 			traits = {

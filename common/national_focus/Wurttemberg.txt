@@ -3638,7 +3638,6 @@
 			factor = 1
 		}
 		available = {
-			has_completed_focus =  WUR_strengthen_the_kingdom
 		}
 		bypass = {
 		}

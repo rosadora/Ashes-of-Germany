@@ -1,0 +1,16 @@
+characters={
+	JOR_Abdullah_Bin_Al_Hussein={
+		name="Abdullah I"
+		portraits={
+			civilian={
+				large=GFX_Abdullah_Bin_Al_Hussein
+				small=GFX_Abdullah_Bin_Al_Hussein_small
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+}

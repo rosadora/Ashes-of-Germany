@@ -1324,4 +1324,349 @@ spriteTypes = {
 		name = "GFX_Fritz_Gejza_small"
 		texturefile = "gfx/leaders/SLO/Fritz_Gejza_small.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Arthur_Grenfell_Wauchope"
+		texturefile = "gfx/leaders/PAL/Arthur_Grenfell_Wauchope.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Arthur_Grenfell_Wauchope_small"
+		texturefile = "gfx/leaders/PAL/Arthur_Grenfell_Wauchope_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Jabra_Nicola"
+		texturefile = "gfx/leaders/PAL/Jabra_Nicola.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Jabra_Nicola_small"
+		texturefile = "gfx/leaders/PAL/Jabra_Nicola_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Husayn_al_Khalidi"
+		texturefile = "gfx/leaders/PAL/Husayn_al_Khalidi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Husayn_al_Khalidi_small"
+		texturefile = "gfx/leaders/PAL/Husayn_al_Khalidi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Raghib_al_Nashashibi"
+		texturefile = "gfx/leaders/PAL/Raghib_al_Nashashibi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Raghib_al_Nashashibi_small"
+		texturefile = "gfx/leaders/PAL/Raghib_al_Nashashibi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Mohammed_Amin_al_Husseini"
+		texturefile = "gfx/leaders/PAL/Mohammed_Amin_al_Husseini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Mohammed_Amin_al_Husseini_small"
+		texturefile = "gfx/leaders/PAL/Mohammed_Amin_al_Husseini_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Fahmi_al_Abboushi"
+		texturefile = "gfx/leaders/PAL/Fahmi_al_Abboushi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Fahmi_al_Abboushi_small"
+		texturefile = "gfx/leaders/PAL/Fahmi_al_Abboushi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_David_Ben_Gurion"
+		texturefile = "gfx/leaders/ISR/David_Ben_Gurion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_David_Ben_Gurion_small"
+		texturefile = "gfx/leaders/ISR/David_Ben_Gurion_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yitzhak_Tabenkin"
+		texturefile = "gfx/leaders/ISR/Yitzhak_Tabenkin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yitzhak_Tabenkin_small"
+		texturefile = "gfx/leaders/ISR/Yitzhak_Tabenkin_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Pinchas_Rosen"
+		texturefile = "gfx/leaders/ISR/Pinchas_Rosen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Pinchas_Rosen_small"
+		texturefile = "gfx/leaders/ISR/Pinchas_Rosen_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Israel_Rokach"
+		texturefile = "gfx/leaders/ISR/Israel_Rokach.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Israel_Rokach_small"
+		texturefile = "gfx/leaders/ISR/Israel_Rokach_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Menachem_Begin"
+		texturefile = "gfx/leaders/ISR/Menachem_Begin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Menachem_Begin_small"
+		texturefile = "gfx/leaders/ISR/Menachem_Begin_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yehuda_Leib_Maimon"
+		texturefile = "gfx/leaders/ISR/Yehuda_Leib_Maimon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Yehuda_Leib_Maimon_small"
+		texturefile = "gfx/leaders/ISR/Yehuda_Leib_Maimon_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zeev_Jabotinsky"
+		texturefile = "gfx/leaders/ISR/Zeev_Jabotinsky.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zeev_Jabotinsky_small"
+		texturefile = "gfx/leaders/ISR/Zeev_Jabotinsky_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Abdullah_Bin_Al_Hussein"
+		texturefile = "gfx/leaders/JOR/Abdullah_Bin_Al_Hussein.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Abdullah_Bin_Al_Hussein_small"
+		texturefile = "gfx/leaders/JOR/Abdullah_Bin_Al_Hussein_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Oswald_Mosley"
+		texturefile = "gfx/leaders/ENG/Oswald_Mosley.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Oswald_Mosley_small"
+		texturefile = "gfx/leaders/ENG/Oswald_Mosley_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sylvia_Pankhurst"
+		texturefile = "gfx/leaders/ENG/Sylvia_Pankhurst.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sylvia_Pankhurst_small"
+		texturefile = "gfx/leaders/ENG/Sylvia_Pankhurst_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sultan_al_Atrash"
+		texturefile = "gfx/leaders/SYR/Sultan_al_Atrash.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Sultan_al_Atrash_small"
+		texturefile = "gfx/leaders/SYR/Sultan_al_Atrash_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Herbert_Samuel"
+		texturefile = "gfx/leaders/ENG/Herbert_Samuel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Herbert_Samuel_small"
+		texturefile = "gfx/leaders/ENG/Herbert_Samuel_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Vitomir_Korac"
+		texturefile = "gfx/leaders/YUG/Vitomir_Korac.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Vitomir_Korac_small"
+		texturefile = "gfx/leaders/YUG/Vitomir_Korac_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Aleksa_Stanojevic"
+		texturefile = "gfx/leaders/YUG/Aleksa_Stanojevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Aleksa_Stanojevic_small"
+		texturefile = "gfx/leaders/YUG/Aleksa_Stanojevic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Svetozar_Pribicevic"
+		texturefile = "gfx/leaders/YUG/Svetozar_Pribicevic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Svetozar_Pribicevic_small"
+		texturefile = "gfx/leaders/YUG/Svetozar_Pribicevic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Filip_Filipovic"
+		texturefile = "gfx/leaders/YUG/Filip_Filipovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Filip_Filipovic_small"
+		texturefile = "gfx/leaders/YUG/Filip_Filipovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Felix_Eboue"
+		texturefile = "gfx/leaders/CMR/Felix_Eboue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Felix_Eboue_small"
+		texturefile = "gfx/leaders/CMR/Felix_Eboue_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Leon_Geismar"
+		texturefile = "gfx/leaders/SEN/Leon_Geismar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Leon_Geismar_small"
+		texturefile = "gfx/leaders/SEN/Leon_Geismar_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Georges_Le_Beau"
+		texturefile = "gfx/leaders/ALG/Georges_Le_Beau.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Milovan_Djilas_small"
+		texturefile = "gfx/leaders/CRO/Milovan_Djilas_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Milovan_Djilas"
+		texturefile = "gfx/leaders/CRO/Milovan_Djilas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zivko_Topalovic_small"
+		texturefile = "gfx/leaders/CRO/Zivko_Topalovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Zivko_Topalovic"
+		texturefile = "gfx/leaders/CRO/Zivko_Topalovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Georges_Le_Beau_small"
+		texturefile = "gfx/leaders/ALG/Georges_Le_Beau_small.dds"
+	}
+
+	spriteType = {
+        name = "GFX_british_crown_colonies_icon"
+        textureFile = "gfx/interface/autonomy/british_crown_colonies.dds"
+    }
+
+	spriteType = {
+        name = "GFX_french_colonial_administration_icon"
+        textureFile = "gfx/interface/autonomy/french_colonial_administration.dds"
+    }
+
+	spriteType = {
+        name = "GFX_protectorate_icon"
+        textureFile = "gfx/interface/autonomy/protectorate.dds"
+    }
+
+	spriteType = {
+		name = "GFX_Ana_Pauker_small"
+		texturefile = "gfx/leaders/TRA/Ana_Pauker_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Ana_Pauker"
+		texturefile = "gfx/leaders/TRA/Ana_Pauker.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Stojan_Matic_small"
+		texturefile = "gfx/leaders/CRO/Stojan_Matic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Stojan_Matic"
+		texturefile = "gfx/leaders/CRO/Stojan_Matic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josip_Broz_Tito_small"
+		texturefile = "gfx/leaders/CRO/Josip_Broz_Tito_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Josip_Broz_Tito"
+		texturefile = "gfx/leaders/CRO/Josip_Broz_Tito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Doko_Jovanic_small"
+		texturefile = "gfx/leaders/CRO/Doko_Jovanic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Doko_Jovanic"
+		texturefile = "gfx/leaders/CRO/Doko_Jovanic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Arso_Jovanovic_small"
+		texturefile = "gfx/leaders/CRO/Arso_Jovanovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Arso_Jovanovic"
+		texturefile = "gfx/leaders/CRO/Arso_Jovanovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Koca_Popovic_small"
+		texturefile = "gfx/leaders/CRO/Koca_Popovic_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Koca_Popovic"
+		texturefile = "gfx/leaders/CRO/Koca_Popovic.dds"
+	}
 }

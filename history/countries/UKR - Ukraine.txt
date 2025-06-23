@@ -213,4 +213,3 @@ recruit_character = UKR_galina_kuzmenko
 recruit_character = UKR_Yevhen_Konovalets
 recruit_character = UKR_Iaroslav_Stetsko
 recruit_character = UKR_Andriy_Melnyk
-

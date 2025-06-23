@@ -1328,3 +1328,234 @@ news_event = { #Uraliin
 		name = news.3072.a
 	}
 }
+news_event = { #Israeli-Palestinian War
+	id = news.3073
+	title = news.3073.t
+	desc = news.3073.d
+	picture = GFX_news_collapse_of_the_mandate_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3073.a
+	}
+}
+news_event = { #Syrian Independance War
+	id = news.3074
+	title = news.3074.t
+	desc = news.3074.d
+	picture = GFX_news_event_042
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3074.a
+	}
+}
+news_event = { #Syrian-Israeli War
+	id = news.3075
+	title = news.3075.t
+	desc = news.3075.d
+	picture = GFX_news_collapse_of_the_mandate_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = al_watan_al_akbar
+		}
+	}
+	
+	option = {
+		name = news.3075.a
+	}
+}
+news_event = { #Ceasefire in Palestine
+	id = news.3076
+	title = news.3076.t
+	desc = news.3076.d
+	picture = GFX_news_collapse_of_the_mandate_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3076.a
+	}
+}
+news_event = { #Independance of Northern Ireland
+	id = news.3077
+	title = news.3077.t
+	desc = news.3077.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		NIR = {
+			owns_state = 119
+		}
+	}
+	
+	option = {
+		name = news.3077.a
+	}
+}
+news_event = { #Irish Unification
+	id = news.3078
+	title = news.3078.t
+	desc = news.3078.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		IRE = {
+			owns_state = 119
+		}
+	}
+	
+	option = {
+		name = news.3078.a
+	}
+}
+news_event = { #Japanese Civil War
+	id = news.3079
+	title = news.3079.t
+	desc = news.3079.d
+	picture = GFX_news_event_japanese_parade
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = lets_do_our_best
+		}
+	}
+	
+	option = {
+		name = news.3079.a
+	}
+}
+news_event = { #Jordanian Independance
+	id = news.3080
+	title = news.3080.t
+	desc = news.3080.d
+	picture = GFX_news_event_king_speech
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3080.a
+	}
+}
+news_event = { #Konigsberg Conference - Vilnius is Lithuanian
+	id = news.3081
+	title = news.3081.t
+	desc = news.3081.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3081.a
+	}
+}
+news_event = { #Konigsberg Conference - Vilnius is Lithuanian but Konigsberg is Demilitarized
+	id = news.3082
+	title = news.3082.t
+	desc = news.3082.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3082.a
+	}
+}
+news_event = { #Konigsberg Conference - Failure
+    id = news.3083
+	title = news.3083.t
+	desc = news.3083.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3083.a
+	}
+}
+news_event = { #Sino-Japanese War
+    id = news.3084
+	title = news.3084.t
+	desc = news.3084.d
+	picture = GFX_news_event_chinese_soldiers_city_ruin
+	
+	major = yes
+
+	trigger = {
+		JAP = {
+			has_war_with = CHI
+			has_idea = JAP_ichi_go
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			play_song = dadao_song
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = {
+		name = news.3084.a
+	}
+}
+news_event = { #Yugoslavian Peaceful Reunification
+    id = news.3085
+	title = news.3085.t
+	desc = news.3085.d
+	picture = GFX_news_event_eng_churchill_sign_treaty
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3085.a
+	}
+}
+news_event = { #Fascist Takeover in Croatia
+    id = news.3086
+	title = news.3086.t
+	desc = news.3086.d
+	picture = GFX_news_event_HUN_alliance_with_italy
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3086.a
+	}
+}

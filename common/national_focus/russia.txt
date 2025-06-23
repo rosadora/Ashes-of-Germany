@@ -104,7 +104,7 @@
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = cas_bomber
+				category = mio_cat_all_light_aircraft_and_modules
 			}
 		}
 	}
@@ -137,7 +137,7 @@
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = naval_bomber
+				category = mio_cat_all_naval_bomber_and_modules
 			}
 		}
 	}
@@ -168,11 +168,11 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = air_doctrine
-			}
+			add_doctrine_cost_reduction = {
+	         cost_reduction = 0.5
+	         uses = 2
+	         category = air_doctrine
+            }
 		}
 	}
 	focus = {
@@ -204,7 +204,7 @@
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = light_fighter
+				category = light_air
 			}
 		}
 	}
@@ -236,13 +236,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
-				uses = 1
-				category = tactical_bomber
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = cat_strategic_bomber
+				uses = 2
+				category = heavy_air
 			}
 		}
 	}
@@ -1820,7 +1815,14 @@
 				type = take_state_focus
 				target = BUL
 			}
+			add_state_core = 853
+			add_state_core = 102
 			CZE = {
+				every_core_state = {
+					add_claim_by = SOV
+				}
+			}
+			CRO = {
 				every_core_state = {
 					add_claim_by = SOV
 				}
@@ -2917,6 +2919,11 @@
           type = annex_everything
           target = BLR
 	     }
+		 create_wargoal = {
+          type = annex_everything
+          target = ROM
+	     }
+		 add_state_core = 78
 		 UKR = {
 			every_core_state = {
 				add_core_of = SOV

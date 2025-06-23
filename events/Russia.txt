@@ -449,3 +449,67 @@ country_event = {
 		}
 	}
 }
+country_event = { #Socialist Surrender
+	id = russia.15
+	title = russia.15.t
+	desc = russia.15.d
+	picture = GFX_report_event_chamberlain_announce
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = SOV 
+		has_war_with = USR 
+		USR = {
+		surrender_progress > 0.7
+		}
+	}
+
+	option = {
+		name = russia.15.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = {
+          target = USR
+          transfer_troops = no
+        }
+		hidden_effect = {
+		every_state = {
+			remove_core_of = USR
+		}
+		}
+	}
+}
+country_event = { #White Russia Surrender
+	id = russia.16
+	title = russia.16.t
+	desc = russia.16.d
+	picture = GFX_report_event_chamberlain_announce
+
+	fire_only_once = yes 
+
+	trigger = {
+		tag = USR 
+		has_war_with = SOV 
+		SOV = {
+		surrender_progress > 0.7
+		}
+	}
+
+	option = {
+		name = russia.16.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = {
+          target = SOV
+          transfer_troops = no
+        }
+		hidden_effect = {
+		every_state = {
+			remove_core_of = SOV
+		}
+		}
+	}
+}

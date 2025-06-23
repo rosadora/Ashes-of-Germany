@@ -33,6 +33,86 @@ ideas = {
 			}
 		}
 
+		revolutionary_fervor_idea = {
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.075
+				conscription = 0.01
+			}
+		}
+
+		autogestion_idea = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_masters_of_our_own_fate
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.04
+				compliance_gain = 0.01
+				non_core_manpower = 0.075
+			}
+		}
+
+		defensive_approach = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_federal_defense_council
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_core_defence_factor = 0.075
+			}
+		}
+
+		fruits_of_global_trade = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_ligas_patrioticas
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.15
+				consumer_goods_factor = -0.15
+				local_resources_factor = 0.1
+			}
+		}
+
+		democratic_volunteers = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_conservative_high_command
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+			}
+		}
+
 
 		continuous_air_production = {
 			allowed = {

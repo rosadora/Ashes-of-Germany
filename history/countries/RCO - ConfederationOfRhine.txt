@@ -143,6 +143,16 @@ create_country_leader = {
 }
 
 create_country_leader = {
+    name = "Konrad Adenauer"
+    desc = ""
+    picture = GFX_portrait_GER_konrad_adenauer
+    expire = "1965.1.1"
+    ideology = classical_liberalism_category
+    traits = {
+    }
+}
+
+create_country_leader = {
     name = "Paul Von Hindenburg"
     desc = ""
     picture = "gfx/leaders/Paul_von_Hindenburg.dds"
@@ -152,6 +162,75 @@ create_country_leader = {
     }
 }
 
+create_country_leader = {
+    name = "Paul Von Hindenburg"
+    desc = ""
+    picture = "gfx/leaders/Paul_von_Hindenburg.dds"
+    expire = "1965.1.1"
+    ideology = ultra_nationalism_category
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Gertrud Bäumer"
+    desc = ""
+    picture = "gfx/leaders/RCO/Gertrud_Baumer.dds"
+    expire = "1965.1.1"
+    ideology = social_liberalism_category
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Gertrud Bäumer"
+    desc = ""
+    picture = "gfx/leaders/RCO/Gertrud_Baumer.dds"
+    expire = "1965.1.1"
+    ideology = social_democracy_category
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Artur Becker"
+    desc = ""
+    picture = "gfx/leaders/RCO/Artur_Becker.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Artur Becker"
+    desc = ""
+    picture = "gfx/leaders/RCO/Artur_Becker.dds"
+    expire = "1965.1.1"
+    ideology = classical_marxism_category
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Artur Becker"
+    desc = ""
+    picture = "gfx/leaders/RCO/Artur_Becker.dds"
+    expire = "1965.1.1"
+    ideology = libertarian_socialism_category
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Friedrich Karl Florian"
+    desc = ""
+    picture = "gfx/leaders/RCO/Friedrich_Karl_Florian.dds"
+    expire = "1965.1.1"
+    ideology = nazism
+    traits = {
+    }
+}
 
 
 

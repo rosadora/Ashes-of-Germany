@@ -1,0 +1,566 @@
+ideas = {
+
+	country = {
+		eternal_regency_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eternal_regency
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_cost = 0.4
+				neutrality_drift = -0.01
+			}
+		}
+		eternal_regency_idea2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eternal_regency
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_cost = 0.2
+				democratic_drift = 0.01
+			}
+		}
+		belgrade_pact = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			OR = {
+				is_in_faction_with = ROM
+				is_in_faction_with = YUG
+				is_in_faction_with = GRE
+				is_in_faction_with = BUL
+				is_in_faction_with = ALB
+			}
+
+			picture = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_org_factor = 0.05
+			}
+		}
+		belgrade_pact2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			OR = {
+				is_in_faction_with = ROM
+				is_in_faction_with = YUG
+				is_in_faction_with = GRE
+				is_in_faction_with = BUL
+				is_in_faction_with = ALB
+			}
+
+			picture = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				army_org_factor = 0.075
+				army_defence_factor = 0.05
+			}
+		}
+		monarchist_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AUS_habsburg_monarchy_restored
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				political_power_cost = 0.1
+				neutrality_drift = 0.02
+			}
+		}
+		memories_of_the_2nd_july = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_of_alexander
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.1
+				classical_marxism_drift = 0.02
+				communism_drift = 0.01
+			}
+		}
+		memories_of_the_2nd_july_remember = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_of_alexander
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				political_power_factor = 0.1
+				classical_marxism_drift = -0.02
+				communism_drift = -0.01
+			}
+		}
+		memories_of_the_2nd_july_forgave = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_of_alexander
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				social_democracy_drift = 0.03
+				social_liberalism_drift = 0.01
+				classical_marxism_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+		memories_of_the_2nd_july_condemned = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = memories_of_alexander
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				classical_liberalism_drift = 0.03
+				social_democracy_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_marxism_drift = -0.01
+				communism_drift = -0.01
+			}
+		}
+		democratic_front_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = EST_democratic_opposition
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.02
+				social_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+			}
+		}
+		social_and_democratic_front = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.02
+				social_democracy_drift = 0.03
+				classical_marxism = 0.01
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		democratic_front_social_liberalism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_construction_guilds
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.03
+				social_democracy_drift = 0.01
+				consumer_goods_factor = -0.1
+			}
+		}
+		democratic_front_classical_liberalism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.2
+				classical_liberalism_drift = 0.03
+				social_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+		        industrial_capacity_dockyard = 0.1
+			}
+		}
+		prince_paul = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prince_paul_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				democratic_drift = 0.02
+				neutrality_drift = 0.01
+			}
+		}
+		peter_ii_idea = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = peter_ii
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.25
+				classical_liberalism_drift = 0.03
+				social_liberalism_drift = 0.01
+			}
+		}
+		private_infrastructure = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+		loyalty_to_the_king = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AUS_habsburg_monarchy_restored
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		firing_squads = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_private_military_complex
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				communism_drift = -0.01
+				classical_marxism_drift = -0.01
+				libertarian_socialism_drift = -0.01
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.01
+				conscription = 0.01
+			}
+		}
+		greenshirts = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_private_military_complex
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+				war_support_factor = 0.125
+				communism_drift = -0.01
+				classical_marxism_drift = -0.01
+				libertarian_socialism_drift = -0.01
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.04
+				conscription = 0.03
+				army_morale_factor = 0.1
+			}
+		}
+		national_rejuvenation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				neutrality_drift = 0.01
+				ultra_nationalism_drift = 0.01
+				fascism_drift = 0.02
+			}
+		}
+		national_rejuvenation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				neutrality_drift = 0.01
+				ultra_nationalism_drift = 0.02
+				fascism_drift = 0.05
+			}
+		}
+		national_rejuvenation3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.15
+				conscription = 0.02
+				neutrality_drift = 0.05
+			}
+		}
+		national_rejuvenation4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.15
+				war_support_factor = 0.2
+				conscription = 0.05
+				army_org_factor = 0.1
+				neutrality_drift = 0.05
+			}
+		}
+		subside_to_peasants = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.3
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		balkan_protection_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_yugoslavian_general_staff
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				army_defence_factor = 0.075
+			}
+		}
+		intervention_in_italian_civil_war = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+				ITA = {
+					OR = {
+					has_war_with = ILF
+					has_war_with = NLC
+					}
+				}
+				ILF = {
+					OR = {
+					has_war_with = ITA
+					has_war_with = NLC
+					}
+				}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_italian_irredentism
+
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 3
+				send_volunteers_tension = -1
+			}
+		}
+	}
+}

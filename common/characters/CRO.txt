@@ -40,6 +40,36 @@ characters = {
 
 	}
 
+	CRO_milovan_djilas={
+		name="Milovan Djilas"
+		portraits={
+			civilian={
+				large= GFX_Milovan_Djilas
+				small = GFX_Milovan_Djilas_small
+			}
+		}
+		country_leader={
+			ideology=classical_marxism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	CRO_Zivko_Topalovic={
+		name="Živko Topalović"
+		portraits={
+			civilian={
+				large= GFX_Zivko_Topalovic
+				small = GFX_Zivko_Topalovic_small
+			}
+		}
+		country_leader={
+			ideology=social_democracy_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	CRO_vladko_macek = {
 
 		name = CRO_vladko_macek
@@ -230,6 +260,229 @@ characters = {
 			#}
 		}
 		
+	}
+
+	CRO_Josip_Broz_Tito={
+		name="Josip Broz "Tito""
+		portraits={
+			army={
+				large="GFX_Josip_Broz_Tito"
+				small="GFX_Josip_Broz_Tito_small"
+			}
+			civilian={
+				large="GFX_Josip_Broz_Tito"
+				small="GFX_Josip_Broz_Tito_small"
+			}
+		}
+		field_marshal ={
+			traits={}
+			idea_token = Josip_military
+			skill=5
+			attack_skill=4
+			defense_skill=3
+			planning_skill=6
+			logistics_skill=6
+		}
+	}
+
+	CRO_Stojan_Matic={
+		name="Stojan Matić"
+		portraits={
+			army={
+				large="GFX_Stojan_Matic"
+				small="GFX_Stojan_Matic_small"
+			}
+			civilian={
+				large="GFX_Stojan_Matic"
+				small="GFX_Stojan_Matic_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CRO_Stojan_Matic
+			ledger = army
+			allowed = {
+				original_tag = CRO
+			}
+			traits = {
+				army_chief_organizational_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BAY_Stojan_Matic2
+			traits = {
+				guerilla_warfare_expert
+			}
+			allowed = {
+				original_tag = CRO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={media_personality}
+			skill=2
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+
+	CRO_Doko_Jovanic={
+		name="Đoko Jovanić"
+		portraits={
+			army={
+				large="GFX_Doko_Jovanic"
+				small="GFX_Doko_Jovanic_small"
+			}
+			civilian={
+				large="GFX_Doko_Jovanic"
+				small="GFX_Doko_Jovanic_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CRO_Doko_Jovanic
+			ledger = army
+			allowed = {
+				original_tag = CRO
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CRO_Doko_Jovanic2
+			traits = {
+				state_economy_partisan
+			}
+			allowed = {
+				original_tag = CRO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={}
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+
+	CRO_Arso_Jovanovic={
+		name="Arso Jovanović"
+		portraits={
+			army={
+				large="GFX_Arso_Jovanovic"
+				small="GFX_Arso_Jovanovic_small"
+			}
+			civilian={
+				large="GFX_Arso_Jovanovic"
+				small="GFX_Arso_Jovanovic_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CRO_Arso_Jovanovic
+			ledger = army
+			allowed = {
+				original_tag = CRO
+			}
+			traits = {
+				army_infantry_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CRO_Arso_Jovanovic2
+			traits = {
+				communist_orator
+			}
+			allowed = {
+				original_tag = CRO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={}
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+
+	CRO_Koca_Popovic={
+		name="Koča Popović"
+		portraits={
+			army={
+				large="GFX_Koca_Popovic"
+				small="GFX_Koca_Popovic_small"
+			}
+			civilian={
+				large="GFX_Koca_Popovic"
+				small="GFX_Koca_Popovic_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CRO_Koca_Popovic
+			ledger = army
+			allowed = {
+				original_tag = CRO
+			}
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CRO_Koca_Popovic2
+			traits = {
+				communist_theorist
+			}
+			allowed = {
+				original_tag = CRO
+			}
+			available = {
+			}
+			cost = 150
+		}
+		corps_commander ={
+			traits={}
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+		}
 	}
 
 }

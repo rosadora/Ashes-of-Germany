@@ -1,0 +1,29 @@
+
+state={
+	id=959
+	name="STATE_959"
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			13382 10 
+		}
+		victory_points = {
+			13384 2 
+		}
+		add_claim_by = ISR
+
+	}
+
+	provinces={
+		13379 13382 13383 13384 13385 13386 13387 
+	}
+	manpower=152342
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

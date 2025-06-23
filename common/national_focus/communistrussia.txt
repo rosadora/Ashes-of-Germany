@@ -1312,10 +1312,40 @@
 		prerequisite = {focus = USR_surrounded_by_ennemies}
 
 		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
+			IF = {
+				limit = {
+					OR = {
+				 HUN = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				 }
+				 BAY = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				 }
+				 AUS = {
+					OR = {
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+					}
+					is_faction_leader = yes
+				 }
+			     }
+				}
+				unlock_decision_tooltip = gen_join_united_workers_of_europe
 			}
-			create_faction = third_internationale
+			else = {
+			   create_faction = third_internationale
+			}
 		}
 	}
 	focus = {

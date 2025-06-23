@@ -1,4 +1,9 @@
 ﻿capital = 927
+set_autonomy = {
+	target = SYR
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
 
 if = {
 	limit = {
@@ -16,6 +21,36 @@ if = {
 }
 
 starting_train_buffer = 2
+
+set_autonomy = {
+	target = ALG
+	autonomous_state = french_colonial_administration
+}
+
+set_autonomy = {
+	target = SEN
+	autonomous_state = french_colonial_administration
+}
+
+set_autonomy = {
+	target = CMR
+	autonomous_state = french_colonial_administration
+}
+
+set_autonomy = {
+	target = VIN
+	autonomous_state = french_colonial_administration
+}
+
+set_autonomy = {
+	target = MOR
+	autonomous_state = protectorate
+}
+
+set_autonomy = {
+	target = TUN
+	autonomous_state = autonomy_colony
+}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

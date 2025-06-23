@@ -1,4 +1,13 @@
 on_actions = {
+	on_monthly = {
+		effect = {
+			every_country = {
+				set_rule = {
+					can_create_factions = no
+				}
+			}
+		}
+	}
 	on_state_control_changed = {
 		effect = {
 			if = {
@@ -77,6 +86,116 @@ on_actions = {
 		}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			PAL = {
+				controls_state = 957
+			}
+		}
+		set_province_name = { id = 1015 name = "'Aylat" }
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			ISR = {
+				controls_state = 957
+			}
+		}
+		set_province_name = { id = 1015 name = "Eylat" }
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			ISR = {
+				controls_state = 959
+			}
+		}
+		set_province_name = { id = 13386 name = "Jerusalem" }
+		set_province_name = { id = 13384 name = "Bethlehem" }
+		959 = {
+			set_state_name = "Jerusalem"
+		}
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			PAL = {
+				controls_state = 959
+			}
+		}
+		set_province_name = { id = 13386 name = "Jerusalem - Al-Quds" }
+		set_province_name = { id = 13384 name = "Beit Lahm" }
+		959 = {
+			set_state_name = "Jerusalem - Al-Quds"
+		}
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			ISR = {
+				controls_state = 961
+			}
+		}
+		set_province_name = { id = 13389 name = "Chékhem" }
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			PAL = {
+				controls_state = 961
+			}
+		}
+		set_province_name = { id = 13389 name = "Nablus" }
+		}
+		}
+	}	
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			PAL = {
+				controls_state = 962
+			}
+		}
+		set_province_name = { id = 13377 name = "Jaffa" }
+		962 = {
+			set_state_name = "Jaffa"
+		}
+		}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			ISR = {
+				controls_state = 962
+			}
+		}
+		set_province_name = { id = 13377 name = "Tel-Aviv" }
+		962 = {
+			set_state_name = "Tel-Aviv"
+		}
+		}
+		}
+	}
 	on_startup = {
   effect = {
 	every_possible_country = {
@@ -87,11 +206,6 @@ on_actions = {
 			can_join_factions = no
 		}
 	}
-    FRA = {
-    country_event = {
-     id = general.2
-    }
-   }
    every_country = {
     country_event = {
      id = general.1

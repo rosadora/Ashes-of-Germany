@@ -95,3 +95,38 @@ music = {
 	volume = 1
 }
 
+music = {
+	name = "hava_nagila"
+	file = "hava_nagila.ogg"
+	volume = 1
+}
+
+music = {
+	name = "raf_march"
+	file = "raf_march.ogg"
+	volume = 1
+}
+
+music = {
+	name = "al_watan_al_akbar"
+	file = "al_watan_al_akbar.ogg"
+	volume = 1
+}
+
+music = {
+	name = "lets_do_our_best"
+	file = "lets_do_our_best.ogg"
+	volume = 1
+}
+
+music = {
+	name = "dadao_song"
+	file = "dadao_song.ogg"
+	volume = 1
+}
+
+music = {
+	name = "yugoslavian_partisan_song"
+	file = "yugoslavian_partisan_song.ogg"
+	volume = 1
+}

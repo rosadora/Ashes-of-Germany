@@ -1,4 +1,18 @@
 characters={
+    ALG_Georges_Le_Beau={
+		name="Georges Lebeau"
+		portraits={
+			civilian={
+				large= GFX_Georges_Le_Beau
+				small = GFX_Georges_Le_Beau_small
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	ALG_ar={
 		advisor={
 			slot = high_command

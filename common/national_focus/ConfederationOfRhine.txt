@@ -19,7 +19,7 @@
 	
 	focus = {
 		id = RCO_democracy_in_deutschland
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_focus_GER_tend_to_the_future
 		x = 12
 		y = 0
 		prerequisite = {}
@@ -3010,7 +3010,7 @@
 	}
 	focus = {
 		id = RCO_unser_europa
-		icon = GFX_goal_unser_europa
+		icon = GFX_focus_generic_the_council_of_europe
 		relative_position_id = RCO_germany_united
 		x = 0
 		y = 3

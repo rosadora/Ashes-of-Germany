@@ -1597,18 +1597,6 @@
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -1824,10 +1812,6 @@
 		select_effect = {
 		}
 		bypass = {
-			NOT = {
-				country_exists = ITA
-			}
-
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1863,96 +1847,6 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = dockyard
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = dockyard
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = dockyard
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -2399,7 +2293,7 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_war_support = 0.25
+			add_war_support = 0.15
 		}
 	}
 	focus = {
@@ -2798,8 +2692,8 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_war_support = 0.15
-			add_stability = 0.15
+			add_war_support = 0.075
+			add_stability = 0.075
 		}
 	}
 	focus = {
@@ -2829,156 +2723,6 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -3726,6 +3470,42 @@
 		}
 	}
 	focus = {
+		id = FRA_blum_violette_proposal
+		icon = GFX_goal_blum_violette_proposal
+		x = 4
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {focus = FRA_blum_government}
+		cost = 8
+			ai_will_do = {
+			factor = 2
+		}
+		available = {
+			ALG = {
+				is_puppet_of = FRA
+			}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ALG = {
+			country_event = {
+				id = francenew.49
+				days = 2
+			}
+			}
+		}
+	}
+	focus = {
 		id = FRA_volunteers_in_the_civil_war
 		icon = GFX_focus_SOV_organization_centralization_discipline
 		x = -1
@@ -3775,10 +3555,6 @@
 			add_opinion_modifier = {
 				target = SOV
 				modifier = support_the_other_side_in_russian_civil_war
-			}
-			add_timed_idea = {
-			idea = volunteers_in_the_spanish_civil_war
-			days = 800
 			}
 		}
 	}
@@ -4994,17 +4770,6 @@
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -5037,7 +4802,7 @@
 			add_resource = {
            type = aluminium
            amount = 35
-           state = 21
+           state = 15
            }
 		}
 	}
@@ -5070,8 +4835,8 @@
 		completion_reward = {
 			add_resource = {
            type = tungsten
-           amount = 24
-           state = 571
+           amount = 17
+           state = 671
            }
 		}
 	}
@@ -5236,7 +5001,7 @@
 			add_tech_bonus = {
 				category = industry
 				bonus = 0.5
-				uses = 4
+				uses = 2
 			}
 		}
 	}
@@ -5323,18 +5088,6 @@
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 			custom_effect_tooltip = FRA_invest
 		}
 	}
@@ -5385,34 +5138,10 @@
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -5503,18 +5232,6 @@
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 			custom_effect_tooltip = FRA_invest
 		}
 	}
@@ -5566,22 +5283,10 @@
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -5615,18 +5320,6 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			random_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -5719,42 +5412,6 @@
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			custom_effect_tooltip = FRA_invest
 		}
 	}
@@ -5788,48 +5445,6 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			remove_ideas = invest_in_development
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					NOT = {
-					is_core_of = ROOT
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					NOT = {
-					is_core_of = ROOT
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					NOT = {
-					is_core_of = ROOT
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			random_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -6455,7 +6070,7 @@
 			factor = 1000
 		}
 		available = {
-			has_global_flag = commune_victory_in_french_civil_war
+			has_war_with = FRC
 		}
 		
 		bypass = {
@@ -6503,9 +6118,15 @@
 			factor = 1000
 		}
 		available = {
-			controls_state = 459
-			controls_state = 458
-			controls_state = 460
+			459 = {
+			controls_or_subject_of = yes
+			}
+			458 = {
+			controls_or_subject_of = yes
+			}
+			460 = {
+			controls_or_subject_of = yes
+			}
 		}
 		
 		bypass = {
@@ -6561,9 +6182,15 @@
 			factor = 1000
 		}
 		available = {
-			controls_state = 459
-			controls_state = 458
-			controls_state = 460
+			459 = {
+			controls_or_subject_of = yes
+			}
+			458 = {
+			controls_or_subject_of = yes
+			}
+			460 = {
+			controls_or_subject_of = yes
+			}
 		}
 		
 		bypass = {
@@ -6621,9 +6248,15 @@
 			factor = 1000
 		}
 		available = {
-			controls_state = 459
-			controls_state = 458
-			controls_state = 286
+			459 = {
+			controls_or_subject_of = yes
+			}
+			458 = {
+			controls_or_subject_of = yes
+			}
+			286 = {
+			controls_or_subject_of = yes
+			}
 		}
 		
 		bypass = {
@@ -6691,9 +6324,15 @@
 			factor = 1000
 		}
 		available = {
-			controls_state = 459
-			controls_state = 458
-			controls_state = 460
+			458 = {
+			controls_or_subject_of = yes
+			}
+			459 = {
+			controls_or_subject_of = yes
+			}
+			460 = {
+			controls_or_subject_of = yes
+			}
 		}
 		
 		bypass = {
@@ -6725,6 +6364,9 @@
 			factor = 1000
 		}
 		available = {
+			ALG = {
+				is_puppet_of = FRA
+			}
 		}
 		
 		bypass = {
@@ -6737,6 +6379,24 @@
 		prerequisite = {focus = FRA_call_verdun_lion}
 		completion_reward = {
 			add_stability = 0.15
+			ALG = {
+			   country_event = {
+				id = francenew.40
+				days = 1
+			   }
+			}
+			TUN = {
+			   country_event = {
+				id = francenew.43
+				days = 1
+			   }
+			}
+			MOR = {
+			   country_event = {
+				id = francenew.46
+				days = 1
+			   }
+			}
 		}
 	}
 	focus = {
@@ -6823,7 +6483,7 @@
 		completion_reward = {
 			add_political_power = -200
 			add_state_core = 460
-			add_state_core = 460
+			add_state_core = 459
 			add_state_core = 458
 			add_state_core = 461
 			add_state_core = 462

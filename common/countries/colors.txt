@@ -492,8 +492,8 @@ KOR = {
 	color_ui = rgb { 255 248 229 }	
 }
 ISR = {
-	color = rgb { 152  130  191 }
-	color_ui = rgb { 152  130  191 }
+	color = rgb { 0 40 158 }
+	color_ui = rgb { 0 40 158 }
 }
 CSA = {
 	color = rgb { 145 163 176  }

@@ -1,0 +1,26 @@
+
+state={
+	id=965
+	name="STATE_965"
+
+	history={
+		owner = JOR
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = JOR
+		victory_points = {
+			4115 1 
+		}
+
+	}
+
+	provinces={
+		4115 13397 13399 13400 
+	}
+	manpower=43257
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

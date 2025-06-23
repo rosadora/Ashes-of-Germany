@@ -1,0 +1,29 @@
+﻿###########################
+# Palestinian Events
+###########################
+add_namespace = israel
+
+country_event = {
+	id = israel.1
+	title = israel.1.t
+	desc = israel.1.d
+	picture = GFX_report_collapse_of_the_mandate_event
+
+	trigger = {
+		tag = ISR 
+		country_exists = PAL 
+		NOT = {
+			has_war_with = PAL
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = israel.1.a
+		ai_chance = {
+			base = 30
+		}
+		set_country_flag = israel_secured_its_independance
+	}
+}

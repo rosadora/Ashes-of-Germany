@@ -20,3 +20,75 @@ german_speakers_minority_cze_national_unity = {
 	state_resources_factor = -0.15
 	state_production_speed_buildings_factor = -0.15
 }
+
+bosnian_nationalism_yug_cro = {
+	enable = { always = yes }
+
+	available = {
+		OR = {
+			original_tag = CRO
+			original_tag = YUG
+		}
+	}
+
+	icon = GFX_modifiers_german_speakers_cze
+	
+	recruitable_population_factor = -0.35
+	local_building_slots_factor = -0.5
+	state_resources_factor = -0.35
+	state_production_speed_buildings_factor = -0.25
+}
+
+muslim_communities_oppressed_yug_cro = {
+	enable = { always = yes }
+
+	available = {
+		OR = {
+			original_tag = CRO
+			original_tag = YUG
+		}
+	}
+
+	icon = GFX_modifiers_german_speakers_cze
+	
+	recruitable_population_factor = -0.2
+	local_building_slots_factor = 0.1
+	state_resources_factor = 0.1
+	state_production_speed_buildings_factor = -0.1
+}
+
+montenegrin_nationalism_yug_cro = {
+	enable = { always = yes }
+
+	available = {
+		OR = {
+			original_tag = CRO
+			original_tag = YUG
+		}
+	}
+
+	icon = GFX_modifiers_german_speakers_cze
+	
+	recruitable_population_factor = -0.35
+	local_building_slots_factor = -0.5
+	state_resources_factor = -0.35
+	state_production_speed_buildings_factor = -0.25
+}
+
+macedonian_nationalism_yug_cro = {
+	enable = { always = yes }
+
+	available = {
+		OR = {
+			original_tag = CRO
+			original_tag = YUG
+		}
+	}
+
+	icon = GFX_modifiers_german_speakers_cze
+	
+	recruitable_population_factor = -0.35
+	local_building_slots_factor = -0.5
+	state_resources_factor = -0.35
+	state_production_speed_buildings_factor = -0.25
+}

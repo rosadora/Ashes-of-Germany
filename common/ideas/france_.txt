@@ -34,12 +34,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 			}
 			
 			targeted_modifier = {
 				tag = ENG
-                attack_bonus_against = 0.15
+                attack_bonus_against = 0.1
 			}
 		}
 		la_perfide_albion1 = {
@@ -56,12 +56,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.015
 			}
 			
 			targeted_modifier = {
 				tag = ENG
-                attack_bonus_against = 0.15
+                attack_bonus_against = 0.1
 				defense_bonus_against = 0.05
 			}
 		}
@@ -79,12 +79,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.02
 			}
 			
 			targeted_modifier = {
 				tag = ENG
-                attack_bonus_against = 0.2
+                attack_bonus_against = 0.15
 				defense_bonus_against = 0.15
 			}
 		}
@@ -104,7 +104,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_dockyard = -0.3
 				industrial_capacity_factory = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 
 			}
 		}
@@ -258,8 +258,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_org_factor = 0.15
-				conscription = 0.04
+				army_org_factor = 0.1
+				conscription = 0.015
 			}
 		}
 		training_of_colonial_troops = {
@@ -332,9 +332,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				global_building_slots_factor = 0.35
-				industrial_capacity_factory = 0.15
-				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.3
+				industrial_capacity_factory = 0.075
+				production_speed_buildings_factor = 0.05
 			}
 		}
 		invest_in_development = {
@@ -421,7 +421,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.02
 				war_support_factor = 0.075
 			}
 		}
@@ -590,7 +590,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.04
+				conscription = 0.02
 				fascism_drift = -0.01
 				neutrality_drift = -0.01
 			} 
@@ -611,7 +611,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.075
 				industrial_capacity_dockyard = 0.075
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.1
 			} 
 		}
 		forty_hours_a_week = {
@@ -746,6 +746,24 @@ ideas = {
 				tag = FRC 
 				attack_bonus_against = 0.35
 				defense_bonus_against = 0.1
+			}
+		}
+		code_de_lindigenat = {
+
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				is_puppet_of = FRA
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_target = 0.2
+				compliance_gain = -0.02
+				non_core_manpower = 0.1
+				local_resources_factor = 0.1
+				local_factories = 0.2
 			}
 		}
     }

@@ -1,0 +1,97 @@
+﻿focus_tree = {
+	id = transjordania_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = JOR
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = JOR_assert_independance
+		icon = GFX_focus_attack_britain
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = JOR_maintain_the_protectorate}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			ENG = {
+			end_puppet = JOR
+			}
+
+		}
+	}
+	focus = {
+		id = JOR_protect_palestine
+		icon = GFX_goal_palestinian_free_army_focus
+		x = 0
+		y = 1
+		prerequisite = {focus = JOR_assert_independance}
+		relative_position_id = JOR_assert_independance
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			ISR = {
+				has_war_with = PAL
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+				type = topple_government
+				target = ISR
+			}
+			load_focus_tree = generic_focus
+		}
+	}
+	focus = {
+		id = JOR_maintain_the_protectorate
+		icon = GFX_focus_chi_british_cooperation
+		x = 15
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = JOR_assert_independance}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			load_focus_tree = generic_focus
+			add_stability = 0.1
+		}
+	}
+}

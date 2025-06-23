@@ -351,19 +351,118 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_revolutionary_mobilization"
-		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+		name = "GFX_idea_balfour_declaration"
+		texturefile = "gfx/interface/ideas/balfour_declaration.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_revolutionary_mobilization"
-		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+		name = "GFX_idea_arab_attitude_negative"
+		texturefile = "gfx/interface/ideas/arab_attitude_negative.dds"
 	}
 
 	spriteType = {
-		name = "GFX_idea_revolutionary_mobilization"
-		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
+		name = "GFX_idea_arab_attitude_positive"
+		texturefile = "gfx/interface/ideas/arab_attitude_positive.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_zionist_militias_attitude_negative"
+		texturefile = "gfx/interface/ideas/zionist_militias_attitude_negative.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_zionist_militias_attitude_positive"
+		texturefile = "gfx/interface/ideas/zionist_militias_attitude_positive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_overshadowed_by_france"
+		texturefile = "gfx/interface/ideas/overshadowed_by_france.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mosley_ascendancy"
+		texturefile = "gfx/interface/ideas/mosley_ascendancy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_unstable_union"
+		texturefile = "gfx/interface/ideas/unstable_union.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_revolt_legacy"
+		texturefile = "gfx/interface/ideas/revolt_legacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_nationalist_majority"
+		texturefile = "gfx/interface/ideas/nationalist_majority.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_national_front_of_syria"
+		texturefile = "gfx/interface/ideas/national_front_of_syria.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_centralized_power_syr"
+		texturefile = "gfx/interface/ideas/centralized_power_syr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hava_nagila_idea"
+		texturefile = "gfx/interface/ideas/hava_nagila_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_anti_zionism"
+		texturefile = "gfx/interface/ideas/anti_zionism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_palestinian_free_army"
+		texturefile = "gfx/interface/ideas/palestinian_free_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_memories_of_alexander"
+		texturefile = "gfx/interface/ideas/memories_of_alexander.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_prince_paul_idea"
+		texturefile = "gfx/interface/ideas/prince_paul_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eternal_regency"
+		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+	}
 
 }

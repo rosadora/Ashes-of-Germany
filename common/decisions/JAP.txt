@@ -1,0 +1,535 @@
+
+JAP_1936_elections = {
+
+	JAP_1936_election_day = {
+
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 105
+		fire_only_once = yes
+
+		activation = {
+          NOT = {
+			has_global_flag = japanese_1936_elections
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = {
+				id = jap.1
+				days = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JAP_foundations_of_japanese_resurgence = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+        }
+		available = {
+			date > 1938.01.01
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_faction = daitoa_kyoeiken
+        }
+    }
+	JAP_invade_china = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+        }
+		available = {
+			date > 1937.05.01
+			has_army_manpower = {
+				size > 1000000
+			}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = PRC
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			add_timed_idea = {
+				idea = JAP_ichi_go 
+				days = 450
+			}
+         create_wargoal = {
+            target = CHI
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = SHX
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = YUN
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = GXC
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = XSM
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = PRC
+            type = annex_everything
+         }
+        }
+    }
+	JAP_imperial_arsenals = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+        }
+		available = {
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+	JAP_recover_far_eastern_republic = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+        }
+		available = {
+			date > 1938.01.01
+			NOT = {
+				FER = {
+					is_puppet_of = JAP
+				}
+			}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = FER
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = FER
+            type = annex_everything
+         }
+        }
+    }
+	JAP_protect_siberia = {
+
+		icon = GFX_decision_infiltrate_state
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+			}
+        }
+		available = {
+			date > 1942.01.01
+				408 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				409 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = SOV
+		will_lead_to_war_with = USR
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = SOV
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = USR
+            type = annex_everything
+         }
+        }
+    }
+	JAP_secure_southern_resources = {
+
+		icon = GFX_decision_rubber
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+        }
+		available = {
+			date > 1941.01.01
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = VIN
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = VIN
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = MAL
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = INS
+            type = annex_everything
+         }
+        }
+    }
+	JAP_pacific_dominance = {
+
+		icon = GFX_decision_generic_coastal_fortification
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = democratic
+			}
+        }
+		available = {
+			date > 1941.01.01
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = USA
+		will_lead_to_war_with = PHI
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = USA
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = PHI
+            type = annex_everything
+         }
+        }
+    }
+	JAP_ally_communist_china = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+        }
+		available = {
+			has_civil_war = no
+			country_exists = PRC
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_faction = asian_international
+		 PRC = {
+			country_event = {
+				id = jap.2
+				days = 1
+			}
+		 }
+        }
+    }
+	JAP_joint_attack = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+        }
+		available = {
+			has_civil_war = no
+			country_exists = PRC
+			has_army_manpower = {
+				size > 800000
+			}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = MEN
+		will_lead_to_war_with = MAN
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = CHI
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = SHX
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = SHX
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = YUN
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = GXC
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = XSM
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = MAN
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = MEN
+            type = annex_everything
+         }
+        }
+    }
+	JAP_save_the_russian_revolution = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+        }
+		available = {
+			SOV = {
+				has_war_with = USR
+			}
+		}
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+		will_lead_to_war_with = SOV
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+         create_wargoal = {
+            target = SOV
+            type = annex_everything
+         }
+        }
+    }
+}

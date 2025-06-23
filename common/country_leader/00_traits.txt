@@ -54,6 +54,86 @@ leader_traits = {
 		}
 	}
 
+	iron_lady = {
+		random = no
+		stability_factor = 0.1
+		resistance_target = -0.075
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	great_baronet_of_britain = {
+		random = no
+		army_org_factor = 0.05
+		army_attack_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	uz_marsala = {
+		random = no
+		army_org_factor = 0.05
+		conscription = 0.03
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kings_support = {
+		random = no
+		political_power_gain = 0.2
+		party_popularity_stability_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	divided_governance = {
+		random = no
+		political_power_factor = -0.075
+		army_org_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	king_of_syria = {
+		random = no
+		army_morale_factor = 0.1
+		conscription = 0.01
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	modern_robespierre = {
+		random = no
+		army_attack_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	marechal_de_france = {
+		random = no
+		weekly_manpower = 5000
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	old_fighter = {
+		random = no
+		army_org_factor = 0.05
+		army_org_regain = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
 	the_great_protector_of_slovakians = {
 		random = no
 		political_power_factor = 0.075
@@ -216,6 +296,16 @@ leader_traits = {
 		production_factory_efficiency_gain_factor = 0.25
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	voda = {
+		random = no
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		army_attack_factor = 0.05
 		ai_will_do = {
 			factor = 1
 		}

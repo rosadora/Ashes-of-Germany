@@ -1,0 +1,427 @@
+﻿###########################
+# Palestinian Events
+###########################
+add_namespace = palestine
+
+country_event = {
+	id = palestine.1
+	title = palestine.1.t
+	desc = palestine.1.d
+	picture = GFX_report_collapse_of_the_mandate_event
+
+	trigger = {
+		tag = PAL 
+		OR = {
+		has_idea = arab_attitude_uprising
+		has_idea = zionist_militias_attitude_uprising
+		}
+	}
+
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = PAL_mandate_collapse
+		drop_cosmetic_tag = yes
+		hidden_effect = {
+			ENG = {
+			set_autonomy = {
+             target = PAL
+             autonomous_state = autonomy_free
+		    }
+			}
+		ISR = {
+			transfer_state = 962
+			transfer_state = 454
+			transfer_state = 963
+			load_oob = ISR_civil_war
+			declare_war_on = {
+              target = PAL
+              type = annex_everything
+            }
+			add_ideas = hava_nagila
+		}
+		leave_faction = yes
+		add_state_core = 962
+		add_state_core = 454
+		add_state_core = 963
+		add_state_core = 961
+		add_state_core = 960
+		add_state_core = 959
+		add_state_core = 956
+		add_state_core = 957
+		add_state_core = 958
+		play_song = hava_nagila
+		remove_ideas = great_arab_revolt
+		remove_ideas = balfour_declaration
+		delete_unit_template_and_units = {
+          division_template = "Palestine Regiments"
+          disband = yes #will refund equipment and manpower
+         }
+		delete_unit_template_and_units = {
+          division_template = "Mandate Police"
+          disband = yes #will refund equipment and manpower
+         }
+		load_oob = PAL_civil_war
+		news_event = news.3073
+		retire_country_leader = yes
+		create_country_leader = {
+	      name = "Arab Higher Comittee"
+	      desc = ""
+	      picture = "gfx/leaders/PAL/Arab_Higher_Comittee.dds"
+	      expire = "1965.1.1"
+	      ideology = despotism
+	      traits = {
+              divided_governance
+	        }
+		}
+		set_party_name = {
+          ideology = neutrality
+          long_name = PAL_neutrality_independent_long
+          name = PAL_neutrality_independent
+        }
+		}
+	}
+
+	option = {
+		name = palestine.1.a
+		ai_chance = {
+			base = 30
+		}
+		ISR = {
+		change_tag_from = PAL
+		}
+	}
+
+	option = {
+		name = palestine.1.b
+		ai_chance = {
+			base = 30
+		}
+		
+	}
+}
+
+country_event = {
+	id = palestine.2
+	title = palestine.2.t
+	desc = palestine.2.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.2.a
+		ai_chance = {
+			base = 70
+		}
+		add_ideas = great_arab_revolt
+		add_manpower = -20000
+		set_country_flag = PAL_great_arab_revolt_occured
+	}
+
+	option = {
+		name = palestine.2.b
+		ai_chance = {
+			base = 30
+		}
+		add_ideas = great_arab_revolt
+		add_stability = -0.1
+		set_country_flag = PAL_great_arab_revolt_occured
+	}
+}
+
+country_event = {
+	id = palestine.3
+	title = palestine.3.t
+	desc = palestine.3.d
+	picture = GFX_report_event_panay_incident
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.3.a
+		ai_chance = {
+			base = 70
+		}
+		remove_ideas = balfour_declaration
+		add_political_power = -200
+		IF = {
+			limit = {
+				has_idea = zionist_militias_attitude_supportive
+			}
+			swap_ideas = {
+				remove_idea = zionist_militias_attitude_supportive
+				add_idea = zionist_militias_attitude_positive
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = zionist_militias_attitude_positive
+			}
+			swap_ideas = {
+				remove_idea = zionist_militias_attitude_positive
+				add_idea = zionist_militias_attitude_neutral
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = zionist_militias_attitude_neutral
+			}
+			swap_ideas = {
+				remove_idea = zionist_militias_attitude_neutral
+				add_idea = zionist_militias_attitude_negative
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = zionist_militias_attitude_negative
+			}
+			swap_ideas = {
+				remove_idea = zionist_militias_attitude_negative
+				add_idea = zionist_militias_attitude_hostile
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = zionist_militias_attitude_hostile
+			}
+			swap_ideas = {
+				remove_idea = zionist_militias_attitude_hostile
+				add_idea = zionist_militias_attitude_uprising
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = arab_attitude_uprising
+			}
+			swap_ideas = {
+				remove_idea = arab_attitude_uprising
+				add_idea = arab_attitude_hostile
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = arab_attitude_hostile
+			}
+			swap_ideas = {
+				remove_idea = arab_attitude_hostile
+				add_idea = arab_attitude_negative
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = arab_attitude_negative
+			}
+			swap_ideas = {
+				remove_idea = arab_attitude_negative
+				add_idea = arab_attitude_neutral
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = arab_attitude_neutral
+			}
+			swap_ideas = {
+				remove_idea = arab_attitude_neutral
+				add_idea = arab_attitude_positive
+			}
+		}
+		IF = {
+			limit = {
+				has_idea = arab_attitude_positive
+			}
+			swap_ideas = {
+				remove_idea = arab_attitude_positive
+				add_idea = arab_attitude_supportive
+			}
+		}
+	}
+}
+
+country_event = {
+	id = palestine.4
+	title = palestine.4.t
+	desc = palestine.4.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.4.a
+		ai_chance = {
+			base = 70
+		}
+	}
+}
+
+country_event = {
+	id = palestine.5
+	title = palestine.5.t
+	desc = palestine.5.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.5.a
+		ai_chance = {
+			base = 100
+		}
+		PAL = {
+			transfer_state = 290
+			transfer_state = 783
+			transfer_state = 699
+		}
+	}
+
+	option = {
+		name = palestine.5.b
+		ai_chance = {
+			base = 0
+		}
+		PAL = {
+			create_wargoal = {
+		        type = annex_everything
+		        target = SPR
+	        }
+		}
+	}
+}
+
+country_event = { # Ultimatum for Lebanon #
+	id = palestine.6
+	title = palestine.6.t
+	desc = palestine.6.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.6.a
+		ai_chance = {
+			base = 100
+		}
+		PAL = {
+			transfer_state = 553
+		}
+	}
+
+	option = {
+		name = palestine.6.b
+		ai_chance = {
+			base = 0
+		}
+		PAL = {
+			create_wargoal = {
+		        type = annex_everything
+		        target = ROOT
+	        }
+		}
+	}
+}
+
+country_event = { # Ultimatum for Syria #
+	id = palestine.7
+	title = palestine.7.t
+	desc = palestine.7.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.7.a
+		ai_chance = {
+			base = 100
+		}
+		PAL = {
+			transfer_state = 554
+			transfer_state = 677
+			transfer_state = 680
+			transfer_state = 968
+			transfer_state = 799
+			transfer_state = 964
+		}
+	}
+
+	option = {
+		name = palestine.7.b
+		ai_chance = {
+			base = 0
+		}
+		PAL = {
+			create_wargoal = {
+		        type = annex_everything
+		        target = ROOT
+	        }
+		}
+	}
+}
+country_event = { # Ultimatum for British withdrawal #
+	id = palestine.8
+	title = palestine.8.t
+	desc = palestine.8.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.8.a
+		ai_chance = {
+			base = 100
+		}
+		PAL = {
+			transfer_state = 656
+			transfer_state = 765
+			transfer_state = 658
+			transfer_state = 659
+			transfer_state = 906
+		}
+	}
+
+	option = {
+		name = palestine.8.b
+		ai_chance = {
+			base = 0
+		}
+		PAL = {
+			create_wargoal = {
+		        type = annex_everything
+		        target = ROOT
+	        }
+		}
+	}
+}
+country_event = { # Ultimatum for Jordania #
+	id = palestine.9
+	title = palestine.9.t
+	desc = palestine.9.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = palestine.9.a
+		ai_chance = {
+			base = 100
+		}
+		PAL = {
+			transfer_state = 455
+			transfer_state = 967
+			transfer_state = 965
+			transfer_state = 966
+		}
+	}
+
+	option = {
+		name = palestine.9.b
+		ai_chance = {
+			base = 0
+		}
+		PAL = {
+			create_wargoal = {
+		        type = annex_everything
+		        target = ROOT
+	        }
+		}
+	}
+}

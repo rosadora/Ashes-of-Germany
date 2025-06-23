@@ -1,0 +1,22 @@
+ideas = {
+
+	country = {
+		chinese_unity = {
+			
+			allowed = {
+			}
+
+			available = {
+				has_war = yes
+			}
+
+			picture = chi_chinese_unity
+
+			removal_cost = -1
+			
+			modifier = { 
+				surrender_limit = 0.2
+			} 
+		}
+	}
+}

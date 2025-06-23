@@ -1,0 +1,993 @@
+ideas = {
+
+	country = {
+		unstable_union = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = unstable_union
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = -0.1
+				required_garrison_factor = 0.2
+				resistance_target = 0.7
+				conscription_factor = -0.15
+			}
+		}
+		unstable_union2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = unstable_union
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.17
+				political_power_factor = -0.05
+				required_garrison_factor = 0.1
+				resistance_target = 0.5
+				conscription_factor = -0.075
+			}
+		}
+		saadeh_syria = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.075
+				political_power_factor = 0.1
+				required_garrison_factor = 0.05
+				resistance_target = 0.1
+				conscription = 0.03
+			}
+		}
+		saadeh_syria2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				conscription = 0.05
+			}
+		}
+		syrian_free_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 300
+				conscription = 0.02
+			}
+		}
+		militarism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = vittoria_mutilata
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.075
+				conscription_factor = 0.15
+				weekly_casualties_war_support = 0.006
+			}
+		}
+		federative_socialist_republic_of_syria = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_limited_democratic_principles
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				conscription_factor = -0.075
+			}
+		}
+		federative_socialist_republic_of_arabia = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_limited_democratic_principles
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				conscription_factor = 0.15
+				compliance_gain = 0.01
+			}
+		}
+		hashemite_in_charge = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.25
+				trade_opinion_factor = 0.4
+				classical_marxism_acceptance = -50
+				libertarian_socialism_acceptance = -50
+				communism_acceptance = -50
+				fascism_acceptance = -50
+			}
+		}
+		hashemite_kingdom = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.25
+				trade_opinion_factor = 0.6
+				resistance_target = -0.1
+				offence = 0.05
+				classical_marxism_acceptance = -50
+				libertarian_socialism_acceptance = -50
+				communism_acceptance = -50
+				fascism_acceptance = -50
+			}
+		}
+		black_gold = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fuel_reserves
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.1
+				trade_opinion_factor = 0.2
+			}
+		}
+		black_gold2 = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fuel_reserves
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.2
+				trade_opinion_factor = 0.2
+			}
+		}
+		anti_hashemite_spirit = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = communism
+					has_government = libertarian_socialism
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_army_of_aggression_focus
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = IRQ
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+		}
+		nationalist_education_isr = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_national_mobilization_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.2
+				stability_factor = -0.15
+				monthly_population = 0.5
+				army_org_factor = 0.05
+			}
+		}
+		nationalist_education_isr2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_national_mobilization_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = -0.05
+				monthly_population = 0.5
+				army_org_factor = 0.075
+			}
+		}
+		high_illiteracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.35
+				stability_factor = -0.1
+				monthly_population = 0.5
+			}
+		}
+		massive_illiteracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.225
+				stability_factor = -0.05
+				monthly_population = 0.35
+			}
+		}
+		towards_meritocracy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.125
+				stability_factor = -0.05
+				monthly_population = 0.15
+			}
+		}
+		towards_meritocracy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.05
+				monthly_population = -0.15
+			}
+		}
+		decentralized_education = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.15
+				stability_factor = 0.05
+				monthly_population = 0.35
+			}
+		}
+		decentralized_education2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = 0.075
+				monthly_population = 0.45
+			}
+		}
+		a_new_generation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_supremacy_of_technology
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				monthly_population = 0.25
+				stability_factor = -0.15
+			}
+		}
+		a_new_generation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_supremacy_of_technology
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+				monthly_population = 0.75
+				stability_factor = -0.1
+			}
+		}
+		public_school_for_everyone_funds = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_supremacy_of_technology
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		centralized_executive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = centralized_power_syr
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.06
+				political_power_factor = 0.1
+				required_garrison_factor = 0.025
+				resistance_target = 0.2
+				conscription_factor = 0.05
+			}
+		}
+		centralized_executive2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = centralized_power_syr
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.25
+				required_garrison_factor = 0.025
+				resistance_target = 0.2
+				conscription_factor = 0.35
+				conscription = 0.02
+			}
+		}
+		centralized_executive3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = centralized_power_syr
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.25
+				conscription_factor = 0.5
+				conscription = 0.035
+				army_org_factor = 0.075
+			}
+		}
+		harmonic_executive = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.15
+				required_garrison_factor = -0.05
+				conscription_factor = 0.15
+				compliance_gain = 0.01
+			}
+		}
+		harmonic_executive2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.25
+				political_power_factor = 0.15
+				required_garrison_factor = -0.05
+				conscription_factor = 0.45
+				compliance_gain = 0.01
+			}
+		}
+		dirigism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = new_economic_policy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.1
+				industrial_capacity_dockyard = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		dirigism2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = new_economic_policy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.1
+				industrial_capacity_dockyard = -0.075
+				industrial_capacity_factory = -0.075
+				line_change_production_efficiency_factor = 0.075
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		dirigism3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = new_economic_policy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				global_building_slots_factor = 0.25
+				industrial_capacity_dockyard = -0.15
+				industrial_capacity_factory = -0.15
+				line_change_production_efficiency_factor = 0.075
+				production_factory_start_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+				min_export = -0.15
+			}
+		}
+		1925_revolt_legacy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_puppet_of = FRA
+			}
+
+			picture = revolt_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = -0.01
+				conscription = -0.01
+			}
+		}
+		aljabhat_alwataniat_litahrir_suria = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					is_puppet_of = FRA
+					has_war_with = FRA
+				}
+			}
+
+			picture = national_front_of_syria
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				conscription = 0.05
+				supply_consumption_factor = -0.3
+				enemy_local_supplies = -0.3
+			}
+		}
+		nationalist_majority = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_puppet_of = FRA
+			}
+
+			picture = nationalist_majority
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		syrian_reparations = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		syrian_reparations_fra = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		liberal_agenda_syr = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		liberal_agenda_syr2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = 0.075
+				industrial_capacity_factory = 0.075
+				min_export = 0.1
+				trade_opinion_factor = 0.75
+				research_speed_factor = 0.05
+
+			}
+		}
+		liberal_agenda_syr3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.125
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				min_export = 0.15
+				trade_opinion_factor = 0.75
+				research_speed_factor = 0.1
+
+			}
+		}
+		focus_on_excavation = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		focus_on_excavation2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.25
+				trade_opinion_factor = 0.15
+			}
+		}
+		focus_on_excavation3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.4
+				trade_opinion_factor = 0.3
+			}
+		}
+		focus_on_the_real_economy = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_industrial_complex_factor = 0.075
+			}
+		}
+		focus_on_the_real_economy2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.25
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.1
+			}
+		}
+		syrian_agriculture = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_national_studs
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.2
+			}
+		}
+		syrian_lebanon = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_puppet_of = SYR
+			}
+
+			picture = ARG_war_division
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.25
+				conscription = 0.1
+			}
+		}
+	}
+}

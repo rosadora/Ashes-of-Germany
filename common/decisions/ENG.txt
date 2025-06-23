@@ -1,0 +1,157 @@
+#Category only allowed for ENG
+
+ENG_1936_elections = {
+
+	ENG_1936_election_day = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 250
+		fire_only_once = yes
+		priority = 10
+
+		activation = {
+          has_completed_focus = ENG_baldwin_resignation
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			set_country_flag = eng_election_1936_happened
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ENG_new_poll = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 2
+		priority = 10
+
+		activation = {
+          has_completed_focus = ENG_baldwin_resignation
+		  has_active_mission = ENG_1936_election_day
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			clear_variable = buf_pop
+			clear_variable = labour_pop
+			clear_variable = liberal_pop
+			clear_variable = nl_pop
+			clear_variable = tories_pop
+			clear_variable = wd_pop
+			clear_variable = cpgb_pop
+
+			set_variable = {
+             var = buf_pop
+             value = party_popularity@ultra_nationalism
+			}
+			add_to_variable = {
+             var = buf_pop
+             value = party_popularity@fascism
+			}
+
+			set_variable = {
+             var = labour_pop
+             value = party_popularity@social_democracy
+			}
+
+			set_variable = {
+             var = liberal_pop
+             value = party_popularity@classical_liberalism
+			}
+			set_variable = {
+             var = nl_pop
+             value = party_popularity@social_liberalism
+			}
+
+			set_variable = {
+             var = tories_pop
+             value = party_popularity@democratic
+			}
+
+			set_variable = {
+             var = wd_pop
+             value = party_popularity@classical_marxism
+			}
+			set_variable = {
+             var = cpgb_pop
+             value = party_popularity@communism
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+ENG_british_politics = {
+
+	ENG_intervention_in_continental_affairs = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+			any_country = {
+					is_in_faction_with = FRA
+					original_tag = FRA
+					OR = {
+				     controls_state = 64
+				     controls_state = 52
+				     controls_state = 59
+				    }
+			}
+		}
+
+		allowed = {
+			tag = ENG
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 60
+
+		ai_will_do = {
+         factor = 100
+        }
+		
+		complete_effect = {
+			create_wargoal = {
+              type = topple_government
+              target = FRA
+            }
+		}
+	}
+}

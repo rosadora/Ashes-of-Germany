@@ -1,0 +1,112 @@
+﻿###########################
+# Generic Events
+###########################
+add_namespace = gen
+
+country_event = { #Join United Worker's of Europe (Request)
+	id = gen.1
+	title = gen.1.t
+	desc = gen.1.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.1.a
+		ai_chance = {
+			base = 100
+		}
+        add_to_faction = FROM
+	}
+
+    option = {
+		name = gen.1.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = { #Join United Worker's of Europe (Accepts)
+	id = gen.2
+	title = gen.2.t
+	desc = gen.2.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.2.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Join United Worker's of Europe (Denies)
+	id = gen.3
+	title = gen.3.t
+	desc = gen.3.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.3.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #War Communism Demobilization - is no longer communist
+	id = gen.4
+	title = gen.4.t
+	desc = gen.4.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	trigger = {
+		has_idea = war_communism
+		OR = {
+		NOT = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+		}
+		}
+	}
+
+	option = {
+		name = gen.4.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = war_communism
+			add_idea = war_economy
+		}
+	}
+}
+
+country_event = { #War Communism Demobilization - Not at war
+	id = gen.5
+	title = gen.5.t
+	desc = gen.5.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	trigger = {
+		has_idea = war_communism
+		NOT = {
+			has_war = yes
+		}
+	}
+
+	option = {
+		name = gen.5.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = war_communism
+			add_idea = war_economy
+		}
+	}
+}

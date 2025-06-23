@@ -3,7 +3,7 @@
 ###########################
 add_namespace = eng
 
-country_event = {
+country_event = { #OUTDATED
 	id = eng.1
 	title = eng.1.t
 	desc = eng.1.d
@@ -25,6 +25,439 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}
+	}
+}
+country_event = { #Union strike
+	id = eng.2
+	title = eng.2.t
+	desc = eng.2.d
+	picture = GFX_report_event_generic_sign_treaty2
 
+	is_triggered_only = yes
+
+	option = {
+		name = eng.2.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = union_strike
+		hidden_effect = {
+			country_event = {
+				id = eng.3
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #Mosley's Strikebreakers
+	id = eng.3
+	title = eng.3.t
+	desc = eng.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.3.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = mosley_ascendancy
+			add_idea = mosley_ascendancy2
+		}
+		hidden_effect = {
+			country_event = {
+				id = eng.4
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #Battle of Cable Street
+	id = eng.4
+	title = eng.4.t
+	desc = eng.4.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = ENG_cable_street_battle
+		}
+	}
+
+	option = {
+		name = eng.4.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			popularity = -0.07
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = fascism
+		}
+		add_popularity = {
+			popularity = 0.04
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = 0.02
+			ideology = communism
+		}
+		set_country_flag = sided_with_socialists
+	}
+	option = {
+		name = eng.4.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.1
+		add_popularity = {
+			popularity = -0.03
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = -0.03
+			ideology = communism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.02
+			ideology = fascism
+		}
+	}
+	option = {
+		name = eng.4.c
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			popularity = 0.05
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = 0.02
+			ideology = fascism
+		}
+		add_popularity = {
+			popularity = -0.04
+			ideology = classical_marxism
+		}
+		add_popularity = {
+			popularity = -0.02
+			ideology = communism
+		}
+
+		set_country_flag = sided_with_mosley
+	}
+}
+country_event = { #Fascism in the UK beheaded
+	id = eng.5
+	title = eng.5.t
+	desc = eng.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.5.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Mosley Coup
+	id = eng.6
+	title = eng.6.t
+	desc = eng.6.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	trigger = {
+		tag = ENG
+		custom_trigger_tooltip = {
+			tooltip = ENG_mosley_coup_trigger_tt
+			set_temp_variable = { ENG_buf_support = party_popularity@fascism }
+			add_to_temp_variable = { ENG_buf_support = party_popularity@ultra_nationalism }
+			check_variable = { ENG_buf_support > 0.4 }
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = eng.6.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+	}
+}
+country_event = { #Socialist Revolution
+	id = eng.7
+	title = eng.7.t
+	desc = eng.7.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	trigger = {
+		tag = ENG
+		custom_trigger_tooltip = {
+			tooltip = ENG_rev_trigger_tt
+			set_temp_variable = { ENG_rev_support = party_popularity@communism }
+			add_to_temp_variable = { ENG_rev_support = party_popularity@classical_marxism }
+			add_to_temp_variable = { ENG_rev_support = party_popularity@libertarian_socialism }
+			check_variable = { ENG_rev_support > 0.4 }
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = eng.7.a
+		ai_chance = {
+			base = 100
+		}
+		remove_ideas = stiff_upper_lip
+		set_politics = {
+			ruling_party = classical_marxism
+		}
+		start_civil_war = {
+      ruling_party = classical_marxism
+      ideology = fascism
+      size = 0.5
+      capital = 132
+      states = {
+        128 132 130 129 122 123 338 931 131 121 133 136 120 932 119
+      }
+     }
+	 126 = {
+	 create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+		  create_unit = {
+           division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+           owner = ENG
+          }
+	 }
+	}
+}
+country_event = { #The Future of Northern Ireland
+	id = eng.8
+	title = eng.8.t
+	desc = eng.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Northern Ireland is Britain
+		name = eng.8.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_political_power = 50
+	}
+	option = { #Independance
+		name = eng.8.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		NIR = {
+			transfer_state = 119
+		}
+		give_guarantee = NIR
+		IRE = {
+			country_event = {
+				id = ire.1
+				days = 1
+			}
+		}
+	}
+	option = { #Irish Unification
+		name = eng.8.c
+		ai_chance = {
+			base = 100
+		}
+		add_manpower = 40000
+		119 = {
+			add_manpower = -500000
+		}
+		133 = {
+			add_manpower = 200000
+		}
+		121 = {
+			add_manpower = 300000
+		}
+		add_stability = 0.05
+		IRE = {
+			transfer_state = 119
+		}
+	}
+}
+country_event = { #The Fate of Scotland and Wales
+	id = eng.9
+	title = eng.9.t
+	desc = eng.9.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #United we are stronger
+		name = eng.9.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = decentralized_executive
+			add_idea = decentralized_executive2
+		}
+	}
+	option = { #Regional autonomy must be guaranteed
+		name = eng.9.b
+		ai_chance = {
+			base = 100
+		}
+		release_autonomy = {
+           target = SCO
+           autonomy_state = autonomy_integrated_puppet
+           freedom_level = 0.1
+        }
+		release_autonomy = {
+           target = WLS
+           autonomy_state = autonomy_integrated_puppet
+           freedom_level = 0.1
+        }
+	}
+}
+
+country_event = { #Alliance with Ethiopia (Request)
+	id = eng.10
+	title = eng.10.t
+	desc = eng.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = eng.10.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			add_to_faction = ETH
+			country_event = {
+			  id = eng.11
+			  days = 2
+		    }
+		}
+	}
+	option = { #Deny
+		name = eng.10.b
+		ai_chance = {
+			base = 0
+		}
+		ENG = {
+		country_event = {
+			id = eng.12
+			days = 2
+		}
+		}
+	}
+}
+country_event = { #Alliance with Ethiopia (Accept)
+	id = eng.11
+	title = eng.11.t
+	desc = eng.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = eng.11.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Alliance with Ethiopia (Denies)
+	id = eng.12
+	title = eng.12.t
+	desc = eng.12.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Denies
+		name = eng.12.a
+		ai_chance = {
+			base = 100
+		}
 	}
 }

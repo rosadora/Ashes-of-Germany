@@ -836,24 +836,14 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.32
 	title = francenew.32.t
 	desc = francenew.32.d
 	picture = GFX_report_commune_of_paris_event
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
-	trigger = {
-		original_tag = FRA
-		948 = {
-			any_neighbor_state = {
-				NOT = {
-				is_controlled_by = FRA
-				}
-			} 
-		}
-	}
 	option = {
 		name = francenew.32.a
 		ai_chance = {
@@ -981,19 +971,14 @@ country_event = {
         }
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.33
 	title = francenew.33.t
 	desc = francenew.33.d
 	picture = GFX_report_event_generic_sign_treaty2
 
-	trigger = {
-		original_tag = FRA
-		surrender_progress > 0.3
-		has_war_with = PRS
-	}
+	is_triggered_only = yes
 
-	fire_only_once = yes
 	option = {
 		name = francenew.33.a
 		ai_chance = {
@@ -1054,19 +1039,14 @@ country_event = {
 		} 
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.34
 	title = francenew.34.t
 	desc = francenew.34.d
 	picture = GFX_report_event_worker_protests
 
-	trigger = {
-		original_tag = FRA
-		surrender_progress > 0.05
-		has_war_with = PRS
-	}
+	is_triggered_only = yes
 
-	fire_only_once = yes
 	option = {
 		name = francenew.34.a
 		ai_chance = {
@@ -1078,15 +1058,13 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.35
 	title = francenew.35.t
 	desc = francenew.35.d
 	picture = GFX_report_event_french_resistance_02
 
 	is_triggered_only = yes
-
-	fire_only_once = yes
 
 	option = {
 		name = francenew.35.a
@@ -1096,19 +1074,14 @@ country_event = {
 	 remove_country_leader_trait = low_legitimacy
 	}
 }
-country_event = {
+country_event = { # OUTDATED #
 	id = francenew.36
 	title = francenew.36.t
 	desc = francenew.36.d
 	picture = GFX_report_event_panay_incident
 
-	trigger = {
-		original_tag = FRA
-		surrender_progress > 0.8
-		has_war_with = FRC
-	}
+	is_triggered_only = yes
 
-	fire_only_once = yes
 	option = {
 		name = francenew.36.a
 		ai_chance = {
@@ -1220,6 +1193,299 @@ country_event = {
 		name = francenew.39.b
 		ai_chance = {
 			base = 0
+		}
+	}
+}
+country_event = {
+	id = francenew.40
+	title = francenew.40.t
+	desc = francenew.40.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.40.a
+		ai_chance = {
+			base = 80
+		}
+		FRA = {
+			country_event = {
+				id = francenew.41
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = francenew.40.b
+		ai_chance = {
+			base = 20
+		}
+		FRA = {
+			country_event = {
+				id = francenew.42
+				days = 2
+			}
+			end_puppet = ALG
+		}
+		leave_faction = yes
+	}
+}
+country_event = {
+	id = francenew.41
+	title = francenew.41.t
+	desc = francenew.41.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.41.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+            target = ALG
+            transfer_troops = yes
+        }
+	}
+}
+country_event = {
+	id = francenew.42
+	title = francenew.42.t
+	desc = francenew.42.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.42.a
+		ai_chance = {
+			base = 80
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = ALG
+        }
+	}
+}
+country_event = {
+	id = francenew.43
+	title = francenew.43.t
+	desc = francenew.43.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.43.a
+		ai_chance = {
+			base = 80
+		}
+		FRA = {
+			country_event = {
+				id = francenew.44
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = francenew.43.b
+		ai_chance = {
+			base = 20
+		}
+		FRA = {
+			country_event = {
+				id = francenew.45
+				days = 2
+			}
+			end_puppet = TUN
+		}
+		leave_faction = yes
+	}
+}
+country_event = {
+	id = francenew.44
+	title = francenew.44.t
+	desc = francenew.44.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.44.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+            target = TUN
+            transfer_troops = yes
+        }
+	}
+}
+country_event = {
+	id = francenew.45
+	title = francenew.45.t
+	desc = francenew.45.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.45.a
+		ai_chance = {
+			base = 80
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = TUN
+        }
+	}
+}
+country_event = {
+	id = francenew.46
+	title = francenew.46.t
+	desc = francenew.46.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.46.a
+		ai_chance = {
+			base = 80
+		}
+		FRA = {
+			country_event = {
+				id = francenew.47
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = francenew.46.b
+		ai_chance = {
+			base = 20
+		}
+		FRA = {
+			country_event = {
+				id = francenew.48
+				days = 2
+			}
+			end_puppet = MOR
+		}
+		leave_faction = yes
+	}
+}
+country_event = {
+	id = francenew.47
+	title = francenew.47.t
+	desc = francenew.47.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.47.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+            target = MOR
+            transfer_troops = yes
+        }
+	}
+}
+country_event = {
+	id = francenew.48
+	title = francenew.48.t
+	desc = francenew.48.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = francenew.48.a
+		ai_chance = {
+			base = 80
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = MOR
+        }
+	}
+}
+country_event = { # Blum-Violette proposal - Request
+	id = francenew.49
+	title = francenew.49.t
+	desc = francenew.49.d
+	picture = GFX_report_event_AUS_military_march
+
+	is_triggered_only = yes
+
+	option = { # Sure, Sir Blum
+		name = francenew.49.a
+		ai_chance = {
+			base = 100
+		}
+		FRA = {
+			country_event = {
+				id = francenew.50
+				days = 2
+			}
+			add_state_core = 459
+			add_state_core = 460
+			add_state_core = 513
+			add_state_core = 514
+			annex_country = {
+				target = ALG
+				transfer_troops = yes
+			}
+		}
+	}
+	option = { # No
+		name = francenew.49.b
+		ai_chance = {
+			base = 0
+		}
+		FRA = {
+			country_event = {
+				id = francenew.51
+				days = 2
+			}
+			add_political_power = 100
+		}
+	}
+}
+
+country_event = { # Blum-Violette proposal - Algeria Accepts
+	id = francenew.50
+	title = francenew.50.t
+	desc = francenew.50.d
+	picture = GFX_report_event_AUS_military_march
+
+	is_triggered_only = yes
+
+	option = { # Nice
+		name = francenew.50.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { # Blum-Violette proposal - Algeria denies
+	id = francenew.51
+	title = francenew.51.t
+	desc = francenew.51.d
+	picture = GFX_report_event_AUS_military_march
+
+	is_triggered_only = yes
+
+	option = { # Sad
+		name = francenew.51.a
+		ai_chance = {
+			base = 100
 		}
 	}
 }

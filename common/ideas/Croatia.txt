@@ -1,0 +1,260 @@
+ideas = {
+
+	country = {
+		ustasa = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fascist_workers
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				conscription = -0.01
+				political_power_cost = 0.2
+				fascism_drift = 0.03
+			}
+		}
+		rightist_opposition = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_matignon_agreements
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				classical_marxism_drift = 0.02
+			}
+		}
+		beheaded_ustasa = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fascist_workers
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_cost = 0.1
+				fascism_drift = -0.02
+			}
+		}
+		partisan_spirit = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.12
+				army_org_factor = -0.05
+				resistance_damage_to_garrison_on_our_occupied_states = 0.2
+				resistance_target_on_our_occupied_states = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		defensive_doctrine = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_hedgehog_defense
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.1
+				max_dig_in = 10
+			}
+		}
+		yug_pioneers = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_torchbearers_of_tomorrow
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				conscription = 0.01
+			}
+		}
+		yug_pioneers2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_torchbearers_of_tomorrow
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.075
+				production_speed_buildings_factor = 0.075
+				conscription = 0.02
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		five_year_plan_military = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan_military
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+		        production_factory_efficiency_gain_factor = 0.05
+		        production_factory_start_efficiency_factor = 0.05
+		        line_change_production_efficiency_factor = 0.05
+			}
+		}
+		balkan_socialist_army = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ROM_balkans_dominance
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.025
+				army_core_defence_factor = 0.025
+				army_morale_factor = 0.1
+			}
+		}
+		exiled_partisans = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 200
+				army_org_factor = 0.1
+			}
+		}
+		dalmatian_tourism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = BEL_engine_of_the_economy
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		hungarian_training = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_wuw_HUN_hungarian_national_defense_association
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				breakthrough_factor = 0.1
+			}
+		}
+		domestic_training = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_mountain_defensive_training
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.15
+				command_power_gain_mult = 0.25
+				army_leader_start_level = 1 
+				army_leader_start_attack_level = 1 
+				army_leader_start_defense_level = 1 
+				army_leader_start_logistics_level = 1 
+				army_leader_start_planning_level = 1 
+				military_leader_cost_factor = -0.4
+			}
+		}
+	}
+}

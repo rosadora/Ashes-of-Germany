@@ -2257,6 +2257,10 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_country_leader_trait = wilhelm_ii_the_magnificent
+			add_country_leader_trait = {
+               ideology = ultra_nationalism
+               trait = wilhelm_ii_the_magnificent
+            }
 		}
 	}
 	focus = {
@@ -2733,7 +2737,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = defend_democracy
+			add_ideas = PRU_defend_democracy_idea
 		}
 	}
 	focus = {
@@ -3560,6 +3564,7 @@
 			add_state_claim = 56
 			add_state_claim = 59
 			add_state_claim = 57
+			add_state_claim = 944
 			MEK = {
 				add_timed_idea = {
 					days = 100
@@ -3755,11 +3760,54 @@
 			factor = 5
 		}
 		available = {
-			controls_state = 50
-			controls_state = 52
-			controls_state = 53
-			controls_state = 54
-			controls_state = 55
+			OR = {
+			NOT = {
+				country_exists = HAN
+			}
+			HAN = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = WUR
+			}
+			WUR = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = MEK
+			}
+			MEK = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = SAX
+			}
+			SAX = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = SHL
+			}
+			SHL = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = BAY
+			}
+			BAY = {
+				has_capitulated = yes
+			}
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no

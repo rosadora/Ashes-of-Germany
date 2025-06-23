@@ -81,6 +81,7 @@ set_technology = {
 	radio_detection = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	tech_trucks = 1
 }
 
 if = {
@@ -166,55 +167,118 @@ if = {
 }
 
 add_ideas = {
-	stiff_upper_lip
 	george_v
+	overshadowed_by_france
+	ENG_the_war_to_end_all_wars
+	mosley_ascendancy
 }
 	
 
 set_convoys = 800
 
-# DIPLOMACY
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = MAL
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = RAJ
-		autonomous_state = autonomy_colony
-		freedom_level = 0.35
-	}
-	set_autonomy = {
-		target = CAN
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = SAF
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = AST
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = NZL
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = MAL
-		puppet = RAJ
-	}
+set_autonomy = {
+	target = AST
+	autonomous_state = autonomy_dominion
 }
+
+set_autonomy = {
+	target = CAN
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = RAJ
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = EGY
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = SAF
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = NZL
+	autonomous_state = autonomy_dominion
+}
+
+set_autonomy = {
+	target = SUD
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = KEN
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = UGA
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = MLW
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = ZAM
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = ZIM
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = BOT
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = SOM
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = GAM
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = NGA
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = SIE
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = GHA
+	autonomous_state = british_crown_colonies
+}
+
+set_autonomy = {
+	target = MAL
+	autonomous_state = autonomy_integrated_puppet
+}
+set_autonomy = {
+	target = PAL
+	autonomous_state = autonomy_integrated_puppet
+}
+set_autonomy = {
+	target = JOR
+	autonomous_state = autonomy_integrated_puppet
+}
+
 
 
 if = {
@@ -231,12 +295,14 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 set_popularities = {
+	fascism = 6
+	ultra_nationalism = 21
 	neutrality = 2
-	democratic = 46
+	democratic = 20
 	classical_liberalism = 11
 	social_liberalism = 2
-	social_democracy = 36
-	classical_marxism = 2
+	social_democracy = 29
+	classical_marxism = 8
 	communism = 1
 }
 
@@ -256,6 +322,7 @@ add_to_faction = MAL
 #give_guarantee = CZE
 
 # Order matters - here Chamberlain becomes starting leader
+recruit_character = ENG_Sylvia_Pankhurst
 recruit_character = ENG_oswald_mosley
 recruit_character = ENG_stanley_baldwin
 recruit_character = ENG_winston_churchill

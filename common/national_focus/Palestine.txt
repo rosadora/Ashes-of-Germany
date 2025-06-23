@@ -1,0 +1,3504 @@
+﻿focus_tree = { ### FREEEEEEEEEEEEEEEEEEEEEEEEEEEEEE PALESTINE ###
+	id = palestine_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = PAL
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = PAL_accept_the_inevitable
+		icon = GFX_goal_prepare_the_end_of_the_mandate
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PAL_palestine_one_and_indivisible}
+		cost = 7
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_country_flag = PAL_great_arab_revolt_occured
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -75
+			IF = {
+				limit = {
+					has_idea = arab_attitude_neutral
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_neutral
+				  add_idea = arab_attitude_hostile
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_hostile
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_hostile
+				  add_idea = arab_attitude_uprising
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_positive
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_positive
+				  add_idea = arab_attitude_neutral
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_supportive
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_supportive
+				  add_idea = arab_attitude_positive
+			    }
+			}
+		}
+	}
+	focus = {
+		id = PAL_palestine_one_and_indivisible
+		icon = GFX_goal_towards_a_binational_state
+		x = 15
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PAL_accept_the_inevitable}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		allow_branch = {
+			always = no
+		}
+		available = {
+			has_country_flag = PAL_great_arab_revolt_occured
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = arab_attitude_hostile
+				add_idea = arab_attitude_neutral
+			}
+			swap_ideas = {
+				remove_idea = zionist_militias_attitude_positive
+				add_idea = zionist_militias_attitude_hostile
+			}
+		}
+	}
+	focus = {
+		id = PAL_end_the_aliyah2
+		icon = GFX_goal_end_the_aliyah
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_palestine_one_and_indivisible}
+		relative_position_id = PAL_palestine_one_and_indivisible
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = PAL_mandate_collapse
+			}
+		}
+		allow_branch = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = PAL_pay_attention
+			IF = {
+				limit = {
+					has_idea = arab_attitude_hostile
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_hostile
+				  add_idea = arab_attitude_neutral
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_uprising
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_uprising
+				  add_idea = arab_attitude_hostile
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_neutral
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_neutral
+				  add_idea = arab_attitude_positive
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = arab_attitude_positive
+				}
+				swap_ideas = {
+				  remove_idea = arab_attitude_positive
+				  add_idea = arab_attitude_supportive
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_hostile
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_hostile
+				  add_idea = zionist_militias_attitude_uprising
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_neutral
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_neutral
+				  add_idea = zionist_militias_attitude_hostile
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_positive
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_positive
+				  add_idea = zionist_militias_attitude_neutral
+			    }
+			}
+			IF = {
+				limit = {
+					has_idea = zionist_militias_attitude_supportive
+				}
+				swap_ideas = {
+				  remove_idea = zionist_militias_attitude_supportive
+				  add_idea = zionist_militias_attitude_positive
+			    }
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_end_of_an_era
+		icon = GFX_goal_new_era_palestine
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_accept_the_inevitable}
+		relative_position_id = PAL_accept_the_inevitable
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_anti_colonialist_spirit
+		icon = GFX_goal_anti_zionism
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = anti_zionism
+		}
+	}
+	focus = {
+		id = PAL_a_war_of_annihilation
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.15
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = PAL_create_the_palestinian_free_army
+		icon = GFX_goal_palestinian_free_army_focus
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			959 = {
+			create_unit = {
+                division = "name = \"Holy War Division\" division_template = \"Holy War Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+			create_unit = {
+                division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			957 = {
+			create_unit = {
+                division = "name = \"Holy War Division\" division_template = \"Holy War Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			958 = {
+			create_unit = {
+                division = "name = \"Holy War Division\" division_template = \"Holy War Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			956 = {
+			create_unit = {
+                division = "name = \"Arab Liberation Division\" division_template = \"Arab Liberation Division\" start_experience_factor = 0.5"
+                owner = PAL
+            }
+            }
+			add_ideas = palestinian_free_army
+		}
+	}
+	focus = {
+		id = PAL_appeal_to_internationalist_solidarity
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = 2
+		y = 2
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.075
+			}
+			add_equipment_to_stockpile = {
+             type = infantry_equipment
+             amount = 3000
+             producer = PAL
+            }
+		}
+	}
+	focus = {
+		id = PAL_turn_red_the_provisionary_government
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 2
+		y = 3
+		prerequisite = {focus = PAL_appeal_to_internationalist_solidarity}
+		mutually_exclusive = {focus = PAL_united_arab_front}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.025
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = 0.095
+			}
+			set_politics = {
+	           ruling_party = classical_marxism
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = PAL_the_invisible_arsenal
+		icon = GFX_focus_AUS_raid_military_storages
+		x = -2
+		y = 2
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	focus = {
+		id = PAL_united_arab_front
+		icon = GFX_goal_generic_national_unity
+		x = -2
+		y = 3
+		prerequisite = {focus = PAL_the_invisible_arsenal}
+		mutually_exclusive = {focus = PAL_turn_red_the_provisionary_government}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = united_arab_front
+		}
+	}
+	focus = {
+		id = PAL_end_the_aliyah
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 4
+		prerequisite = {focus = PAL_united_arab_front focus = PAL_turn_red_the_provisionary_government}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = end_the_aliyah 
+				days = 120
+			}
+		}
+	}
+	focus = {
+		id = PAL_destabilize_israel
+		icon = GFX_focus_BRA_utilize_security_law
+		x = -3
+		y = 1
+		prerequisite = {focus = PAL_the_end_of_an_era}
+		relative_position_id = PAL_the_end_of_an_era
+		cost = 3
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_war_with = ISR
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = palestian_resistance_spirit
+			ISR = {
+				add_stability = -0.1
+			}
+		}
+	}
+	focus = { ## OUTDATED ##
+		id = PAL_we_hold
+		icon = GFX_goal_generic_military_sphere
+		x = 20
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PAL_settler_expelled}
+		cost = 3
+		allow_branch = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = ISR
+			NOT = {
+			has_war_with = ISR
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_al_watan_al_akbar
+		icon = GFX_focus_IRQ_proclaim_united_arab_republic
+		x = 43
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			907 = {
+				controls_or_subject_of = yes
+			}
+			448 = {
+				controls_or_subject_of = yes
+			}
+			458 = {
+				controls_or_subject_of = yes
+			}
+			459 = {
+				controls_or_subject_of = yes
+			}
+			461 = {
+				controls_or_subject_of = yes
+			}
+			290 = {
+				controls_or_subject_of = yes
+			}
+			554 = {
+				controls_or_subject_of = yes
+			}
+
+			291 = {
+				controls_or_subject_of = yes
+			}
+			553 = {
+				controls_or_subject_of = yes
+			}
+			656 = {
+				controls_or_subject_of = yes
+			}
+
+			292 = {
+				controls_or_subject_of = yes
+			}
+			293 = {
+				controls_or_subject_of = yes
+			}
+			294 = {
+				controls_or_subject_of = yes
+			}
+
+			959 = {
+				controls_or_subject_of = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = PAL_annex_subjects
+			add_political_power = 100
+			IF = {
+				limit = {
+					EGY = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = EGY
+                 transfer_troops = yes
+                } 
+			}
+			IF = {
+				limit = {
+					LBA = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = LBA
+                 transfer_troops = yes
+                } 
+			}
+			IF = {
+				limit = {
+					ALG = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = ALG
+                 transfer_troops = yes
+                } 
+			}
+			IF = {
+				limit = {
+					TUN = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = TUN
+                 transfer_troops = yes
+                } 
+			}
+			IF = {
+				limit = {
+					MOR = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = MOR
+                 transfer_troops = yes
+                } 
+			}
+			IF = {
+				limit = {
+					JOR = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = JOR
+                 transfer_troops = yes
+                } 
+			}
+			IF = {
+				limit = {
+					SAU = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = SAU
+                 transfer_troops = yes
+				}
+			}
+			IF = {
+				limit = {
+					YEM = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = YEM
+                 transfer_troops = yes
+				}
+			}
+			IF = {
+				limit = {
+					OMA = {
+						is_puppet_of = PAL
+					}
+				}
+				annex_country = {
+                 target = OMA
+                 transfer_troops = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_drill_more_oil
+		icon = GFX_focus_PER_increase_oil_sales
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_al_watan_al_akbar}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 859
+			controls_state = 658
+			controls_state = 656
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			859 = {
+				add_resource = {
+				 type = oil
+				 amount = 21
+			    }
+			}
+			658 = {
+				add_resource = {
+				 type = oil
+				 amount = 15
+			    }
+			}
+			656 = {
+				add_resource = {
+				 type = oil
+				 amount = 13
+			    }
+			}
+		}
+	}
+	focus = {
+		id = PAL_encourage_exports
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -2
+		y = 3
+		prerequisite = {focus = PAL_drill_more_oil}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 859
+			controls_state = 658
+			controls_state = 656
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = black_gold
+		}
+	}
+	focus = {
+		id = PAL_arabia_in_the_world_stage
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 4
+		prerequisite = {focus = PAL_encourage_exports}
+		prerequisite = {focus = PAL_ceuta_muscat_railroad}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = gen_join_united_workers_of_europe
+			unlock_decision_tooltip = gen_join_prussia
+			unlock_decision_tooltip = gen_join_france
+		}
+	}
+	focus = {
+		id = PAL_build_a_nation
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_al_watan_al_akbar}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = PAL_develop_maghreb
+		icon = GFX_focus_IRQ_unite_maghreb
+		x = 0
+		y = 2
+		prerequisite = {focus = PAL_build_a_nation}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 459
+			controls_state = 460
+			controls_state = 461
+			controls_state = 458
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			459 = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			460 = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			461 = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			458 = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_expand_agriculture_in_egypt
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 2
+		y = 2
+		prerequisite = {focus = PAL_build_a_nation}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 907
+			controls_state = 456
+			controls_state = 447
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			907 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			456 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			447 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_expand_agriculture_in_mesopotamia
+		icon = GFX_focus_generic_farmland
+		x = 4
+		y = 2
+		prerequisite = {focus = PAL_build_a_nation}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			controls_state = 291
+			controls_state = 676
+			controls_state = 968
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			291 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			676 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			968 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_ceuta_muscat_railroad
+		icon = GFX_focus_generic_railroad
+		x = 2
+		y = 3
+		prerequisite = {focus = PAL_expand_agriculture_in_mesopotamia}
+		prerequisite = {focus = PAL_develop_maghreb}
+		prerequisite = {focus = PAL_expand_agriculture_in_egypt}
+		relative_position_id = PAL_al_watan_al_akbar
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = have_to_control_all_arab_lands_on_the_road
+			449 = {
+				add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 10117
+			    }
+			}
+			build_railway = {
+          level = 3
+          build_only_on_allied = yes
+          fallback = yes
+          path = { 10113 1194 7100 11987 4097 1111 989 4116 7132 11923 12760 9964 1145 11939 4131 13077 7065 12051 7081 1160 4163 9994 11969 7180 7162 4129 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 4076 7164 10073 7011 12049 1155 11979 4161 13367 13372 13371 13400 13405 4591 11976 12455 7970 5099 12758 10892 12813 12727 5081 8118 12740 5049 10760}
+          start_province = 9945
+          target_province = 10760
+         }
+		}
+	}
+	focus = {
+		id = PAL_from_oman_to_the_rif_arabia_will_be_free
+		icon = GFX_focus_IRQ_rally_the_arab_world
+		x = 35
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				country_exists = ISR
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_manpower = 20000
+			set_cosmetic_tag = ARA_UNIFIED
+		}
+	}
+	focus = {
+		id = PAL_prepare_the_army
+		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_from_oman_to_the_rif_arabia_will_be_free}
+		relative_position_id = PAL_from_oman_to_the_rif_arabia_will_be_free
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_stir_pan_arabist_sentiment
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_from_oman_to_the_rif_arabia_will_be_free}
+		relative_position_id = PAL_from_oman_to_the_rif_arabia_will_be_free
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = pan_arabian_volunteers
+		}
+	}
+	focus = {
+		id = PAL_the_anti_imperialist_mission
+		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
+		x = 0
+		y = 2
+		prerequisite = {focus = PAL_stir_pan_arabist_sentiment}
+		prerequisite = {focus = PAL_prepare_the_army}
+		relative_position_id = PAL_from_oman_to_the_rif_arabia_will_be_free
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = the_anti_imperialist_mission
+		}
+	}
+	focus = {
+		id = PAL_eastern_focus
+		icon = GFX_goal_generic_forceful_treaty
+		x = 3
+		y = 1
+		prerequisite = {focus = PAL_the_anti_imperialist_mission}
+		relative_position_id = PAL_the_anti_imperialist_mission
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = PAL_demand_lebanon
+		icon = GFX_goal_free_lebanon
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_eastern_focus}
+		relative_position_id = PAL_eastern_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 553
+			553 = {
+		  controller = { 
+            country_event = {
+				id = palestine.6
+				days = 2
+			}
+          }
+		 }
+		}
+	}
+	focus = {
+		id = PAL_free_the_peninsula
+		icon = GFX_focus_ETH_an_arabic_base
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_eastern_focus}
+		relative_position_id = PAL_eastern_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 855
+			add_state_claim = 854
+			add_state_claim = 856
+			add_state_claim = 857
+			add_state_claim = 858
+			add_state_claim = 859
+			add_state_claim = 292
+			add_state_claim = 679
+			add_state_claim = 678
+
+			add_state_claim = 293
+			add_state_claim = 294
+			add_state_claim = 675
+			add_state_claim = 676
+			add_state_claim = 291
+			create_wargoal = {
+		        type = annex_everything
+		        target = SAU
+	        }
+			create_wargoal = {
+		        type = annex_everything
+		        target = YEM
+	        }
+			create_wargoal = {
+		        type = annex_everything
+		        target = OMA
+	        }
+			create_wargoal = {
+		        type = annex_everything
+		        target = IRQ
+	        }
+		}
+	}
+	focus = {
+		id = PAL_demand_british_withdraw
+		icon = GFX_focus_attack_britain
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_free_the_peninsula}
+		relative_position_id = PAL_eastern_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 656
+			add_state_claim = 765
+			add_state_claim = 658
+			add_state_claim = 659
+			add_state_claim = 906
+			IF = {
+				limit = {
+					ENG = {
+						controls_state = 656
+			            controls_state = 765
+			            controls_state = 658
+			            controls_state = 659
+			            controls_state = 906
+					}
+				}
+				656 = {
+		  controller = { 
+            country_event = {
+				id = palestine.8
+				days = 2
+			}
+          }
+		}
+			}
+		}
+	}
+	focus = {
+		id = PAL_demand_syria
+		icon = GFX_focus_generic_attack_syria
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_demand_lebanon}
+		relative_position_id = PAL_eastern_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 554
+			add_state_claim = 677
+			add_state_claim = 680
+			add_state_claim = 968
+			add_state_claim = 799
+			554 = {
+		  controller = { 
+            country_event = {
+				id = palestine.7
+				days = 2
+			}
+          }
+		 }
+		}
+	}
+	focus = {
+		id = PAL_annex_jordania
+		icon = GFX_focus_IRQ_reach_out_to_jordan
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_the_anti_imperialist_mission}
+		relative_position_id = PAL_the_anti_imperialist_mission
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 455
+			add_state_claim = 967
+			add_state_claim = 965
+			add_state_claim = 966
+			455 = {
+		  controller = { 
+            country_event = {
+				id = palestine.9
+				days = 2
+			}
+          }
+		 }
+		}
+	}
+	focus = {
+		id = PAL_western_focus
+		icon = GFX_goal_generic_military_deal
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_the_anti_imperialist_mission}
+		relative_position_id = PAL_the_anti_imperialist_mission
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = PAL_support_a_coup_in_egypt
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_western_focus}
+		relative_position_id = PAL_western_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+					EGY = {
+						is_puppet = yes
+					}
+					}
+				}
+				EGY = {
+				add_ideas = pan_arabian_broadcasting
+				}
+			}
+			unlock_decision_tooltip = PAL_coup_the_egyptian_government
+		}
+	}
+	focus = {
+		id = PAL_organize_libyan_anti_colonialists
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_western_focus}
+		relative_position_id = PAL_western_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = PAL_anti_colonialist_war_in_libya
+		}
+	}
+	focus = {
+		id = PAL_organize_maghreb_resistance
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_organize_libyan_anti_colonialists}
+		relative_position_id = PAL_western_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = PAL_anti_colonialist_war_in_northern_africa
+		}
+	}
+	focus = {
+		id = PAL_demand_spanish_colonies_in_northern_africa
+		icon = GFX_focus_intervention_spain_republic
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_organize_libyan_anti_colonialists}
+		relative_position_id = PAL_western_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					SPR = {
+						owns_state = 290
+						owns_state = 783
+						owns_state = 699
+					}
+				}
+			SPR = {
+				country_event = {
+					id = palestine.5
+					days = 1
+				}
+			}
+			}
+			else = {
+				every_country = {
+	         limit = {
+				OR = {
+	          owns_state = 290
+			  owns_state = 783
+			  owns_state = 699
+				}
+	          }
+	         PAL = {
+		      create_wargoal = {
+		        type = annex_everything
+		        target = PREV
+	           }
+		      }
+             }
+			 add_state_claim = 290
+			 add_state_claim = 665
+			 add_state_claim = 783
+			 add_state_claim = 699
+			 add_state_claim = 513
+			 add_state_claim = 514
+			 add_state_claim = 461
+			 add_state_claim = 462
+			}
+		}
+	}
+	focus = {
+		id = PAL_mandate_economics
+		icon = GFX_focus_eng_decolonization
+		x = 0
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_ideas = palestinian_economics
+		}
+	}
+	focus = {
+		id = PAL_invest_in_electronics
+		icon = GFX_focus_generic_radio_communication
+		x = 3
+		y = 1
+		prerequisite = {focus = PAL_mandate_economics}
+		relative_position_id = PAL_mandate_economics
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = PAL_create_radio_palestine
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_invest_in_electronics}
+		relative_position_id = PAL_invest_in_electronics
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = radio_palestine
+		}
+	}
+	focus = {
+		id = PAL_urbanize_the_north
+		icon = GFX_focus_RAJ_special_economic_zones
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_invest_in_electronics}
+		relative_position_id = PAL_invest_in_electronics
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			454 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			963 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_industrialization_of_palestine
+		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+		x = -3
+		y = 1
+		prerequisite = {focus = PAL_mandate_economics}
+		relative_position_id = PAL_mandate_economics
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = PAL_expand_cisjordanian_farms
+		icon = GFX_focus_generic_farmland
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_industrialization_of_palestine}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			958 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			959 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_catch_up
+		icon = GFX_focus_research
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_industrialization_of_palestine}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PAL_begin_of_palestinian_industralization
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 3
+		y = 1
+		prerequisite = {focus = PAL_industrialization_of_palestine}
+		prerequisite = {focus = PAL_mandate_economics}
+		prerequisite = {focus = PAL_invest_in_electronics}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = palestinian_economics
+				add_idea = palestinian_economics2
+			}
+		}
+	}
+	focus = {
+		id = PAL_skilled_personnel
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_begin_of_palestinian_industralization}
+		relative_position_id = PAL_begin_of_palestinian_industralization
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			num_of_factories > 20
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PAL_iron_excavation_in_ramallah
+		icon = GFX_focus_generic_steel
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_skilled_personnel}
+		relative_position_id = PAL_begin_of_palestinian_industralization
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			960 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_excavation_in_the_south
+		icon = GFX_focus_generic_aluminum
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_skilled_personnel}
+		relative_position_id = PAL_begin_of_palestinian_industralization
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			957 = {
+				add_resource = {
+					type = oil
+					amount = 7
+				}
+			}
+			956 = {
+				add_resource = {
+					type = aluminium
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_dawn_of_a_modern_country
+		icon = GFX_focus_generic_aluminum
+		x = 0
+		y = 3
+		prerequisite = {focus = PAL_expand_aylat_port}
+		prerequisite = {focus = PAL_excavation_in_the_south}
+		prerequisite = {focus = PAL_iron_excavation_in_ramallah}
+		prerequisite = {focus = PAL_dams_on_jordan_river}
+		relative_position_id = PAL_begin_of_palestinian_industralization
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = palestinian_economics2
+				add_idea = palestinian_economics3
+			}
+		}
+	}
+	focus = {
+		id = PAL_soothe_the_south_north_divide
+		icon = GFX_goal_generic_construct_civilian
+		x = 6
+		y = 2
+		prerequisite = {focus = PAL_begin_of_palestinian_industralization}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			957 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			956 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_expand_aylat_port
+		icon = GFX_focus_generic_naval_discipline
+		x = 6
+		y = 3
+		prerequisite = {focus = PAL_soothe_the_south_north_divide}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			957 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					province =  1015
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_electrification_of_the_countryside
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 0
+		y = 2
+		prerequisite = {focus = PAL_begin_of_palestinian_industralization}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_dams_on_jordan_river
+		icon = GFX_focus_BEL_dam_the_consequences
+		x = 0
+		y = 3
+		prerequisite = {focus = PAL_electrification_of_the_countryside}
+		relative_position_id = PAL_industrialization_of_palestine
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			958 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_settler_expelled
+		icon = GFX_goal_generic_political_pressure
+		x = 23
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PAL_we_hold}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				country_exists = ISR
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+	focus = {
+		id = PAL_breakup_of_the_national_front
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_settler_expelled}
+		mutually_exclusive = {focus = PAL_consolidate_socialist_government}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -100
+			create_country_leader = {
+                 name = "Mohammed Amin al-Husseini"
+                 desc = ""
+	             picture = "gfx/leaders/PAL/Mohammed_Amin_al_Husseini.dds"
+                 expire = "1965.1.1"
+                 ideology = centrism
+                 traits = {
+                 }
+			}
+		}
+	}
+	focus = {
+		id = PAL_consolidate_socialist_government
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_settler_expelled}
+		mutually_exclusive = {focus = PAL_breakup_of_the_national_front}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = PAL_law_on_securalism_in_politics
+		icon = GFX_focus_PER_state_atheism
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_consolidate_socialist_government}
+		relative_position_id = PAL_consolidate_socialist_government
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = state_atheism
+		}
+	}
+	focus = {
+		id = PAL_a_land_for_all
+		icon = GFX_focus_PER_subserviant_to_noone
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_consolidate_socialist_government}
+		relative_position_id = PAL_consolidate_socialist_government
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = a_land_for_all_idea
+		}
+	}
+	focus = {
+		id = PAL_smash_tribalism
+		icon = GFX_focus_ITA_topple_amhara_rulers
+		x = 3
+		y = 1
+		prerequisite = {focus = PAL_a_land_for_all}
+		relative_position_id = PAL_a_land_for_all
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_promote_gender_equality
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_smash_tribalism}
+		relative_position_id = PAL_smash_tribalism
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = women_in_the_workforce
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			set_rule = {
+				can_generate_female_country_leaders = yes
+			}
+			set_rule = {
+				can_generate_female_unit_leaders = yes
+			}
+		}
+	}
+	focus = {
+		id = PAL_build_schools
+		icon = GFX_focus_NOR_moscows_education_centers
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_smash_tribalism}
+		relative_position_id = PAL_smash_tribalism
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = high_illiteracy
+				add_idea = massive_illiteracy
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_open_al_quds_university
+		icon = GFX_focus_SWE_education_reform
+		x = 2
+		y = 2
+		prerequisite = {focus = PAL_build_schools}
+		relative_position_id = PAL_smash_tribalism
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = massive_illiteracy
+				add_idea = socialist_education
+			}
+		}
+	}
+	focus = {
+		id = PAL_five_year_plan
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_a_land_for_all}
+		relative_position_id = PAL_a_land_for_all
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = five_year_plan
+				days = 1825
+			}
+		}
+	}
+	focus = {
+		id = PAL_take_the_country_out_of_feudalism
+		icon = GFX_focus_generic_military_industry
+		x = -1
+		y = 1
+		prerequisite = {focus = PAL_five_year_plan}
+		relative_position_id = PAL_five_year_plan
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_independance_from_the_west
+		icon = GFX_focus_generic_heavy_tank
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_five_year_plan}
+		relative_position_id = PAL_five_year_plan
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_focus_on_local_production
+		icon = GFX_SOV_cohesion_first_ccp_2d_sov_compatibility
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_independance_from_the_west}
+		relative_position_id = PAL_five_year_plan
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = palestinian_local_development
+		}
+	}
+	focus = {
+		id = PAL_palestinian_arab_party
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_breakup_of_the_national_front}
+		mutually_exclusive = {focus = PAL_hizb_al_islah}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.25
+			}
+		}
+	}
+	focus = {
+		id = PAL_traditionalism_and_progress
+		icon = GFX_goal_tripartite_pact
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PAL_promote_democratic_ideals
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = in_defence_of_democracy
+		}
+	}
+	focus = {
+		id = PAL_let_provinces_choose_education
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_desegregate_schools}
+		prerequisite = {focus = PAL_promote_democratic_ideals}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = massive_illiteracy
+				add_idea = decentralized_education
+			}
+		}
+	}
+	focus = {
+		id = PAL_palestinian_science
+		icon = GFX_focus_research
+		x = -2
+		y = 3
+		prerequisite = {focus = PAL_let_provinces_choose_education focus = PAL_fight_for_meritocracy}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = PAL_research_political
+			IF = {
+				limit = {
+					has_idea = decentralized_education
+				}
+			swap_ideas = {
+				remove_idea = decentralized_education
+				add_idea = decentralized_education2
+			}
+			}
+			IF = {
+				limit = {
+					has_idea = towards_meritocracy
+				}
+			swap_ideas = {
+				remove_idea = towards_meritocracy
+				add_idea = towards_meritocracy2
+			}
+			}
+		}
+	}
+	focus = {
+		id = PAL_law_against_settlement
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_promote_democratic_ideals}
+		prerequisite = {focus = PAL_traditionalism_and_progress}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = prevent_next_aliyahs
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = PAL_forge_palestinian_identity
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 3
+		prerequisite = {focus = PAL_law_against_settlement}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = PAL_meet_local_chiefs
+		icon = GFX_focus_ETH_sway_the_warlords
+		x = 3
+		y = 3
+		prerequisite = {focus = PAL_law_against_settlement}
+		relative_position_id = PAL_palestinian_arab_party
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+				OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = support_from_provinces
+		}
+	}
+	focus = {
+		id = PAL_hizb_al_islah
+		icon = GFX_goal_social_progressivism
+		x = -4
+		y = 2
+		prerequisite = {focus = PAL_breakup_of_the_national_front}
+		mutually_exclusive = {focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_settler_expelled
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democracy
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democracy 
+				popularity = 0.075
+			}
+			add_popularity = {
+				ideology = social_liberalism 
+				popularity = 0.03
+			}
+		}
+	}
+	focus = {
+		id = PAL_against_military_cheef_for_the_people
+		icon = GFX_focus_ETH_expand_the_levy
+		x = -2
+		y = 1
+		prerequisite = {focus = PAL_hizb_al_islah}
+		relative_position_id = PAL_hizb_al_islah
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.075
+			add_popularity = {
+				ideology = democratic 
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality 
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = PAL_desegregate_schools
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_hizb_al_islah focus = PAL_palestinian_arab_party}
+		relative_position_id = PAL_hizb_al_islah
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = high_illiteracy
+				add_idea = massive_illiteracy
+			}
+		}
+	}
+	focus = {
+		id = PAL_allow_women_in_the_workforce
+		icon = GFX_focus_SWE_education_reform
+		x = -2
+		y = 1
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = women_in_the_workforce
+		}
+	}
+	focus = {
+		id = PAL_subside_palestinian_independent_press
+		icon = GFX_focus_generic_welfare
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = PAL_fight_for_meritocracy
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		prerequisite = {focus = PAL_desegregate_schools}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = massive_illiteracy
+				add_idea = towards_meritocracy
+			}
+		}
+	}
+	focus = {
+		id = PAL_protect_jewish_minorities
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = protected_jewish_minorities
+		}
+	}
+	focus = {
+		id = PAL_rely_on_ourselves
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_against_military_cheef_for_the_people}
+		relative_position_id = PAL_against_military_cheef_for_the_people
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				OR = {
+				has_government = communism
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = PAL_palestinian_army
+		icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
+		x = -15
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 100
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_modernization_of_weapons
+		icon = GFX_goal_modernization_of_equipment
+		x = 2
+		y = 1
+		prerequisite = {focus = PAL_palestinian_army}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = PAL_study_foreign_plane_models
+		icon = GFX_goal_generic_air_fighter
+		x = 3
+		y = 2
+		prerequisite = {focus = PAL_modernization_of_weapons}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = light_air
+			}
+		}
+	}
+	focus = {
+		id = PAL_palestine_in_the_modern_warfare_era
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 3
+		prerequisite = {focus = PAL_study_foreign_plane_models}
+		prerequisite = {focus = PAL_build_up_syrian_military}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PAL_radio_on_battlefield
+		icon = GFX_focus_SWE_radiotjanst
+		x = 0
+		y = 5
+		prerequisite = {focus = PAL_palestine_in_the_modern_warfare_era}
+		prerequisite = {focus = PAL_protect_the_coasts}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_idea = radio_palestine
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = radio_palestine
+				add_idea = radio_palestine2
+			}
+		}
+	}
+	focus = {
+		id = PAL_build_some_air_baises
+		icon = GFX_goal_generic_build_airforce
+		x = 3
+		y = 3
+		prerequisite = {focus = PAL_study_foreign_plane_models}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_encourage_volunteers
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		prerequisite = {focus = PAL_palestinian_army}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = PAL_palestinian_free_army_tactics
+		icon = GFX_goal_generic_cavalry
+		x = -2
+		y = 1
+		prerequisite = {focus = PAL_palestinian_army}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	          cost_reduction = 0.5
+	          uses = 2
+	          category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = PAL_build_up_syrian_military
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 2
+		prerequisite = {focus = PAL_palestinian_free_army_tactics}
+		prerequisite = {focus = PAL_encourage_volunteers}
+		prerequisite = {focus = PAL_modernization_of_weapons}
+		relative_position_id = PAL_palestinian_army
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_palestinian_navy
+		icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+		x = -8
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 100
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_a_mediteranean_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		x = -2
+		y = 1
+		prerequisite = {focus = PAL_the_palestinian_navy}
+		relative_position_id = PAL_the_palestinian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	          cost_reduction = 0.5
+	          uses = 2
+	          category = naval_doctrine
+            }
+		}
+	}
+	focus = {
+		id = PAL_invest_in_naval_research
+		icon = GFX_goal_generic_navy_battleship
+		x = -1
+		y = 2
+		prerequisite = {focus = PAL_a_mediteranean_fleet}
+		relative_position_id = PAL_the_palestinian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = cl_tech
+			}
+		}
+	}
+	focus = {
+		id = PAL_a_trade_protection_fleet
+		icon = GFX_goal_generic_navy_submarine
+		x = -2
+		y = 3
+		prerequisite = {focus = PAL_a_mediteranean_fleet}
+		relative_position_id = PAL_the_palestinian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = PAL_protect_the_coasts
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = -3
+		y = 4
+		prerequisite = {focus = PAL_a_trade_protection_fleet}
+		prerequisite = {focus = PAL_build_some_air_baises}
+		relative_position_id = PAL_the_palestinian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = mio_cat_all_light_aircraft_and_modules
+			}
+		}
+	}
+	focus = {
+		id = PAL_expand_palestinian_dockyards
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 1
+		prerequisite = {focus = PAL_the_palestinian_navy}
+		relative_position_id = PAL_the_palestinian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_improve_the_bases
+		icon = GFX_focus_generic_cruiser2
+		x = 1
+		y = 2
+		prerequisite = {focus = PAL_expand_palestinian_dockyards}
+		relative_position_id = PAL_the_palestinian_navy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

@@ -16,10 +16,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		HUN = {
-			end_puppet = TRA
-		}
-		leave_faction = yes
 		add_ideas = civil_war
 		QTT = {
 			add_ideas = all_queer_uprising
@@ -40,10 +36,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		HUN = {
-			end_puppet = TRA
-		}
-		leave_faction = yes
 		add_ideas = civil_war
 		QTT = {
 			add_ideas = all_queer_uprising
@@ -124,7 +116,6 @@ country_event = {
 			}
 		}
 		remove_ideas = hungarian_puppet
-		leave_faction = yes
 	}
 }
 country_event = {
@@ -249,5 +240,24 @@ country_event = {
 			base = 80
 		}
 		add_to_faction = FROM
+	}
+}
+country_event = {
+	id = tra.11
+	title = tra.11.t
+	desc = tra.11.d
+	picture = GFX_report_event_gre_political_upheaval
+
+	is_triggered_only = yes
+
+	option = {
+		name = tra.11.a
+		ai_chance = {
+			base = 80
+		}
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.075
+		}
 	}
 }

@@ -1,4 +1,18 @@
 characters={
+	CMR_Felix_Eboue={
+		name="Félix Éboué"
+		portraits={
+			civilian={
+				large= GFX_Felix_Eboue
+				small = GFX_Felix_Eboue_small
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	CMR_aa2={
 		advisor={
 			slot = high_command

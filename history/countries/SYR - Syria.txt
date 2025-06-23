@@ -1,0 +1,144 @@
+﻿capital = 554
+
+oob = SYR_1936
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+IF = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	fascism = 2
+	ultra_nationalism = 9
+	neutrality = 34
+	democratic = 23
+	classical_liberalism = 7
+	social_liberalism = 5
+	social_democracy = 8
+	classical_marxism = 8
+	communism = 4
+}
+
+create_country_leader = {
+	name = "Muhammad Ali Bey al-Abid"
+	desc = ""
+	picture = "gfx/leaders/SYR/Muhammad_Ali_Bey_al_Abid.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Muhammad Ali Bey al-Abid"
+	desc = ""
+	picture = "gfx/leaders/SYR/Muhammad_Ali_Bey_al_Abid.dds"
+	expire = "1965.1.1"
+	ideology = classical_liberalism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Muhammad Ali Bey al-Abid"
+	desc = ""
+	picture = "gfx/leaders/SYR/Muhammad_Ali_Bey_al_Abid.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Muhammad Ali Bey al-Abid"
+	desc = ""
+	picture = "gfx/leaders/SYR/Muhammad_Ali_Bey_al_Abid.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ghazi I"
+	desc = ""
+	picture = "gfx/leaders/SYR/Ghazi_first.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Khalid Bakdash"
+	desc = ""
+	picture = "gfx/leaders/SYR/Khalid_Bakdash.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Khalid Bakdash"
+	desc = ""
+	picture = "gfx/leaders/SYR/Khalid_Bakdash.dds"
+	expire = "1965.1.1"
+	ideology = classical_marxism_category
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Antoun Saadeh"
+	desc = ""
+	picture = "gfx/leaders/SYR/Antoun_Saadeh.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	 traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Antoun Saadeh"
+	desc = ""
+	picture = "gfx/leaders/SYR/Antoun_Saadeh.dds"
+	expire = "1965.1.1"
+	ideology = ultra_nationalism_category
+	 traits = {
+	}
+}
+
+add_ideas = {
+	unstable_union
+	1925_revolt_legacy
+	nationalist_majority
+	high_illiteracy
+}
+
+recruit_character = SYR_sultan_al_atrash

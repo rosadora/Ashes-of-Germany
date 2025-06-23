@@ -1,0 +1,24 @@
+characters = {
+	SYR_sultan_al_atrash={
+		name="Sultan Al-Atrash"
+		portraits={
+			army={
+				large="GFX_Sultan_al_Atrash"
+				small="GFX_Sultan_al_Atrash_smol"
+			}
+			civilian={
+				large="GFX_Sultan_al_Atrash"
+				small="GFX_Sultan_al_Atrash_smol"
+			}
+		}
+		corps_commander ={
+			traits={ war_hero infantry_officer}
+			idea_token = SYR_sultan_al_atrash
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+}
