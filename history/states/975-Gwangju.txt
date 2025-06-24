@@ -1,23 +1,18 @@
 state={
-	id=525
-	name="STATE_525"
+	id=975
+	name="STATE_975"
 	provinces={
-		1100 7125 7221 10036 
+		4126 10110 11948 12085 
 	}
 	history={
 		owner = JAP
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
-			air_base = 4
-		}
-		victory_points = {
-			7125 10
 		}
 		add_core_of = KOR
 	}
-	manpower=3065179
+	manpower=2897120
+	state_category=town
 	buildings_max_level_factor=1.000
-	state_category=city
 	local_supplies=0.000
 }

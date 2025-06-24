@@ -10,10 +10,6 @@ ideas = {
 				always = yes
 			}
 
-			available = {
-				has_war = yes
-			}
-
 			picture = GER_wage_war_on_capitalism
 
 			removal_cost = -1

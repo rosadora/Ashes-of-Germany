@@ -76,7 +76,7 @@ country_event = {
 				ruling_party = classical_marxism
 				ideology = fascism
 				size = 0.4
-				states = {534 535 282 533 536 555 537 655 525 527 609 745 532}
+				states = {534 535 282 533 536 555 537 655 609 745 532}
 				hidden_effect = {
                 }
 			}
@@ -179,6 +179,16 @@ country_event = {
 		KOR = {
 			transfer_state = 525
 			transfer_state = 527
+			transfer_state = 969
+			transfer_state = 970
+			transfer_state = 971
+			transfer_state = 972
+			transfer_state = 973
+			transfer_state = 974
+			transfer_state = 975
+			transfer_state = 976
+			transfer_state = 977
+			transfer_state = 978
 			delete_units = {
               division_template = "Hohei Shidan"
               disband = yes

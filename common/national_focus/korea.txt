@@ -761,6 +761,7 @@
 				remove_idea = donghak_legacy 
 				add_idea = war_against_imperialism
 			}
+			add_ideas = CZE_revolutionary_mobilization
 		}
 	}
 	focus = {
