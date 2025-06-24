@@ -10,6 +10,9 @@ state={
 			infrastructure = 2
 		}
 		add_core_of = KOR
+		victory_points = {
+		    12011 2
+		}
 	}
 	manpower=1523472
 	state_category=town

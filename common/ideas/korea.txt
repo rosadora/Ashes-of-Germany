@@ -32,6 +32,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+			}
+
 			picture = AFG_democratic_graduates
 
 			removal_cost = -1
@@ -49,6 +57,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = communism
+				}
 			}
 
 			picture = POL_the_peasants_strike
@@ -70,6 +86,13 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+				}
 			}
 
 			picture = war_against_imperialism_juche
@@ -147,6 +170,13 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+				}
+			}
+
 			picture = trotskyite_plot_purged
 
 			removal_cost = -1
@@ -167,6 +197,13 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+				}
 			}
 
 			picture = trotskyite_plot_purged
@@ -191,6 +228,13 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+				}
+			}
+
 			picture = juche_idea
 
 			removal_cost = -1
@@ -210,6 +254,13 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+				}
 			}
 
 			picture = juche_idea
@@ -235,6 +286,13 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+				}
+			}
+
 			picture = generic_oppression
 
 			removal_cost = -1
@@ -252,6 +310,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = communism
+				}
 			}
 
 			picture = FIN_finnish_federation_of_trade_unions_heavy
@@ -273,6 +339,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+			}
+
 			picture = RAJ_just_good_business
 
 			removal_cost = -1
@@ -290,6 +364,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = communism
+				}
 			}
 
 			picture = FIN_socialist_welfare

@@ -14,6 +14,12 @@ state={
 		victory_points = {
 			7125 10
 		}
+		victory_points = {
+			7221 2
+		}
+		victory_points = {
+			10036 2
+		}
 		add_core_of = KOR
 	}
 	manpower=3065179

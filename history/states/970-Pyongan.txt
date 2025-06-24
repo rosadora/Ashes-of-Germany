@@ -13,6 +13,12 @@ state={
 			4052 = {
 				naval_base = 1
 			}
+			victory_points = {
+		     11835 2 
+		    }
+			victory_points = {
+		     6963 2 
+		    }
 		}
 		add_core_of = KOR
 	}

@@ -1,0 +1,30 @@
+﻿###########################
+# Korean Events
+###########################
+
+add_namespace = kor
+
+# Korean elections
+country_event = {
+	id = kor.1
+	title = kor.1.t
+	desc = kor.1.d
+	picture = GFX_report_event_ARG_coup_detat
+
+	trigger = {
+		classical_marxism > 0.3
+	}
+
+	fire_only_once = yes
+	
+	option = { #Communist Coup
+		name = kor.1.a
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = classical_marxism 
+			elections_allowed = yes
+		}
+	}
+}

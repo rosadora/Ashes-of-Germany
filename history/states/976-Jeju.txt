@@ -10,6 +10,9 @@ state={
 			infrastructure = 1
 		}
 		add_core_of = KOR
+		victory_points = {
+			1177 1
+		}
 	}
 	manpower=237000
 	state_category=rural
