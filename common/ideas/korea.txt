@@ -23,6 +23,46 @@ ideas = {
 				research_speed_factor = -0.05
 			} 
 		}
+		progress_cult = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_democratic_graduates
+
+			removal_cost = -1
+			
+			modifier = { 
+				social_liberalism_drift = 0.01
+				classical_liberalism_drift = 0.02
+				research_speed_factor = 0.1
+			} 
+		}
+		socialist_donghak = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_the_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = { 
+				social_democracy = 0.01
+				social_liberalism_drift = 0.01
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.1
+				research_speed_factor = 0.05
+			} 
+		}
 		war_against_imperialism = {
 			
 			allowed = {
@@ -59,6 +99,24 @@ ideas = {
 				monthly_population = -0.35
 				stability_factor = -0.05
 				political_power_factor = -0.15
+			} 
+		}
+		japanese_landlords_protest = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_militarism_shogun
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.3
+				political_power_factor = -0.75
 			} 
 		}
 		feudal_legacy = {
@@ -185,6 +243,63 @@ ideas = {
 				communism_drift = 0.03
 				classical_marxism_drift = 0.01
 				war_support_factor = 0.1
+			} 
+		}
+		pro_trade_unions_stance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_heavy
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = 0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+			} 
+		}
+		pro_business_stance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_just_good_business
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.075
+			} 
+		}
+		republic_of_equals = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_socialist_welfare
+
+			removal_cost = -1
+			
+			modifier = { 
+				war_support_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.05
 			} 
 		}
 	}
