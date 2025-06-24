@@ -1373,6 +1373,12 @@
  gen.5.t:0 "The End of War Communism"
  gen.5.d:0 "Our country is no longer at war, we have to demobilize."
  gen.5.a:0 "Ok"
+ gen.6.t:0 "Join Mao"
+ gen.6.d:0 ""
+ gen.6.a:0 "Ok"
+ gen.7.t:0 "Integration of Chinese Lands"
+ gen.7.d:0 ""
+ gen.7.a:0 ""
  ### JAPAN ###
  jap.1.t:0 "Japanese 1936 Elections"
  jap.1.d:0 ""
@@ -1506,3 +1512,4 @@
  kor.1.t:0 "WPK Coup!"
  kor.1.d:0 ""
  kor.1.a:0 "Juche for a New Era!"
+ 

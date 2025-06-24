@@ -110,3 +110,59 @@ country_event = { #War Communism Demobilization - Not at war
 		}
 	}
 }
+
+country_event = { #Japanese Chinese puppet annexed by Japan
+	id = gen.6
+	title = gen.6.t
+	desc = gen.6.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	trigger = {
+		is_in_faction_with = PRC 
+		OR = {
+			original_tag = CHI
+			original_tag = MEN
+			original_tag = MAN
+			original_tag = SHX
+			original_tag = XSM
+			original_tag = SIK
+			original_tag = YUN
+			original_tag = GXC
+			original_tag = TIB
+			original_tag = PRC
+		}
+	}
+
+	option = {
+		name = gen.6.a
+		ai_chance = {
+			base = 100
+		}
+		PRC = {
+			country_event = {
+				id = gen.7
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Japanese Chinese puppet annexed by Japan - PRC
+	id = gen.7
+	title = gen.7.t
+	desc = gen.7.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.7.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+	}
+}

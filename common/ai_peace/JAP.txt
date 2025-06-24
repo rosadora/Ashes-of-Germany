@@ -42,6 +42,20 @@ peace_ai_desires = {
         }
         ai_desire = -1000
     }
+    JAP_asian_solidarity = {
+        peace_action_type = { liberate }
+        enable = {
+            tag = JAP
+            JAP = {
+                OR = {
+                    has_government = communism 
+                    has_government = classical_marxism
+                    has_government = libertarian_socialism
+                }
+            }
+        }
+        ai_desire = 200
+    }
 
     # Try to grab cities and hainan
     JAP_take_chinese_cities_if_possible = {

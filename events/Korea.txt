@@ -12,6 +12,7 @@ country_event = {
 	picture = GFX_report_event_ARG_coup_detat
 
 	trigger = {
+		tag = KOR
 		classical_marxism > 0.3
 	}
 

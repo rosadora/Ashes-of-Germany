@@ -1,0 +1,3 @@
+
+PRC_asian_solidarity = {
+}

@@ -29,7 +29,7 @@
 		}
 		available = {
 			has_army_manpower = {
-				size > 200000
+				size > 300000
 			}
 		}
 		bypass = {
