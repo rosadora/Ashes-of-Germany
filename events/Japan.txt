@@ -55,38 +55,6 @@ country_event = {
 			popularity = 0.35
 		}
 	}
-	option = { #Socialists starts civil war
-		name = jap.1.e
-		ai_chance = {
-			base = 50
-		}
-				 set_popularities = {
-	             fascism = 6
-	             ultra_nationalism = 11
-	             democratic = 1
-	             classical_liberalism = 12
-	             social_liberalism = 4
-	             social_democracy = 22
-	             classical_marxism = 34
-	             libertarian_socialism = 3
-	             communism = 7
-                }
-				 set_cosmetic_tag = JAP_SOC
-		    start_civil_war = {
-				ruling_party = classical_marxism
-				ideology = fascism
-				size = 0.4
-				states = {534 535 282 533 536 555 537 655 609 745 532}
-				hidden_effect = {
-                }
-			}
-			end_puppet = MAN
-			end_puppet = MEN
-			news_event = {
-				id = news.3079
-				days = 1
-			}
-	}
 }
 
 # China-Japan Socialist Alliance (Request)

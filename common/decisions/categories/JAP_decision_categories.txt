@@ -16,3 +16,17 @@ JAP_1936_elections = {
 	visible = {
 	}
 }
+
+JAP_balance_of_power_category = {
+
+	icon = GFX_decision_category_power_struggle
+
+	priority = 50
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+}

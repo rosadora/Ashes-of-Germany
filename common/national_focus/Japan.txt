@@ -17,12 +17,115 @@
 	
 	default = no
 	focus = {
+		id = JAP_face_the_peace_preservation_law
+		icon = GFX_focus_BRA_repeale_national_security_law
+		x = 5
+		y = 0
+		mutually_exclusive = { focus = JAP_showa_era}
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.05
+		 add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		 }
+		 add_popularity = {
+			ideology = classical_marxism
+			popularity = 0.04
+		 }
+		}
+	}
+	focus = {
+		id = JAP_revive_the_socialist_party
+		icon = GFX_focus_spr_unify_the_london_bureau
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_face_the_peace_preservation_law}
+		relative_position_id = JAP_face_the_peace_preservation_law
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.05
+		 add_ideas = rising_japanese_socialist_party
+		 set_party_name = {
+           ideology = communism
+           long_name = JAP_jsp_maoist_wing_long
+           name = JAP_jsp_maoist_wing
+         }
+		 set_party_name = {
+           ideology = classical_marxism
+           long_name = JAP_jsp_sekirankai_wing_long
+           name = JAP_jsp_sekirankai_wing
+         }
+		 set_party_name = {
+           ideology = libertarian_socialism
+           long_name = JAP_jsp_sekirankai_wing_long
+           name = JAP_jsp_sekirankai_wing
+         }
+		 set_power_balance = {
+          id = JAP_power_balance
+          left_side = JAP_sekirankai_side
+          right_side = JAP_maoist_side
+         }
+		}
+	}
+	focus = {
+		id = JAP_reject_taisho_democracy
+		icon = GFX_goal_reject_taisho
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_face_the_peace_preservation_law}
+		relative_position_id = JAP_face_the_peace_preservation_law
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = -0.05
+		 add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = social_liberalism
+			popularity = -0.04
+		 }
+		}
+	}
+	focus = {
 		id = JAP_hanran
 		icon = GFX_goal_communist_offensive
 		x = 5
-		y = 0
-		prerequisite = {}
-		mutually_exclusive = {focus = JAP_fix_the_situation }
+		y = 2
+		prerequisite = {focus = JAP_reject_taisho_democracy}
+		prerequisite = {focus = JAP_revive_the_socialist_party}
 		cost = 2
 		ai_will_do = {
 			factor = 1
@@ -33,7 +136,6 @@
 				has_government = communism
 				has_government = libertarian_socialism
 			}
-			has_civil_war = yes
 		}
 		bypass = {
 		}
@@ -42,6 +144,46 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = hanran
+		 hidden_effect = {
+		 set_popularities = {
+	             fascism = 6
+	             ultra_nationalism = 11
+	             democratic = 11
+	             classical_liberalism = 22
+	             social_liberalism = 4
+	             social_democracy = 12
+	             classical_marxism = 24
+	             libertarian_socialism = 3
+	             communism = 7
+                }
+				 set_cosmetic_tag = JAP_SOC
+		    start_civil_war = {
+				ruling_party = classical_marxism
+				ideology = fascism
+				size = 0.4
+				states = {534 535 282 533 536 555 537 655 609 745 532}
+				hidden_effect = {
+                }
+			}
+			division_template = {
+             name = "Peasant Militia"
+             division_names_group = JAP_INF_01
+             priority = 0
+             template_counter = 0
+             regiments = {
+               irregular_infantry = { x = 0 y = 0 }
+               irregular_infantry = { x = 0 y = 1 }
+               irregular_infantry = { x = 0 y = 2 }
+               irregular_infantry = { x = 0 y = 3 }
+            }
+			end_puppet = MAN
+			end_puppet = MEN
+		 }
+			news_event = {
+				id = news.3079
+				days = 1
+			}
+		}
 		}
 	}
 	focus = {
@@ -163,18 +305,217 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = the_eastern_sun
-		 load_focus_tree = generic_focus
 		 remove_ideas = JAP_hirohito
 		}
 	}
 	focus = {
-		id = JAP_fix_the_situation
-		icon = GFX_focus_jap_pacific_guardian
+		id = JAP_post_civil_war_reconstruction
+		icon = GFX_goal_generic_construction2
 		x = 0
+		y = 1
+		prerequisite = {focus = JAP_new_dawn_for_socialism}
+		mutually_exclusive = {}
+		relative_position_id = JAP_new_dawn_for_socialism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = post_civil_war_reconstruction 
+			days = 150
+		 }
+		}
+	}
+	focus = {
+		id = JAP_red_japan_diplomacy
+		icon = GFX_goal_red_japan_diplomacy
+		x = 5
+		y = 1
+		prerequisite = {focus = JAP_post_civil_war_reconstruction}
+		mutually_exclusive = {}
+		relative_position_id = JAP_post_civil_war_reconstruction
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 50
+		}
+	}
+	focus = {
+		id = JAP_no_involvement_in_chinese_affairs
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_red_japan_diplomacy}
+		mutually_exclusive = {focus = JAP_support_mao}
+		relative_position_id = JAP_red_japan_diplomacy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_political_power = 200
+		  add_stability = 0.05
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.2
+            }
+		}
+	}
+	focus = {
+		id = JAP_limited_interventionism
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 1
+		y = 2
+		prerequisite = {focus = JAP_no_involvement_in_chinese_affairs}
+		mutually_exclusive = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_japan_diplomacy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_ideas = limited_japanese_interventionism
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.1
+            }
+		}
+	}
+	focus = {
+		id = JAP_red_edo
+		icon = GFX_goal_red_edo
+		x = 4
+		y = 2
+		prerequisite = {focus = JAP_no_involvement_in_chinese_affairs}
+		mutually_exclusive = {focus = JAP_limited_interventionism}
+		relative_position_id = JAP_red_japan_diplomacy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.25
+            }
+			add_ideas = red_japan_isolation
+		}
+	}
+	focus = {
+		id = JAP_support_mao
+		icon = GFX_focus_prc_maoism
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_red_japan_diplomacy}
+		mutually_exclusive = {focus = JAP_no_involvement_in_chinese_affairs}
+		relative_position_id = JAP_red_japan_diplomacy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_war_support = 0.05
+		  add_stability = -0.05
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.1
+            }
+		  unlock_decision_tooltip = JAP_ally_communist_china
+		  PRC = {
+			add_opinion_modifier = {
+              target = JAP
+              modifier = one_china_policy
+            }
+		  }
+		  add_opinion_modifier = {
+              target = PRC
+              modifier = one_china_policy
+            }
+		}
+	}
+	focus = {
+		id = JAP_showa_era
+		icon = GFX_focus_jap_showa_restoration
+		x = -5
 		y = 0
 		prerequisite = {}
-		mutually_exclusive = {focus = JAP_hanran}
-		cost = 30
+		mutually_exclusive = { focus = JAP_face_the_peace_preservation_law}
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -191,9 +532,8 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		 add_stability = 0.25
-		 add_war_support = 0.1
-		 load_focus_tree = generic_focus
+		 add_stability = 0.05
+		 add_political_power = 50
 		}
 	}
 }

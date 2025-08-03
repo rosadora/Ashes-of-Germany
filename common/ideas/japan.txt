@@ -1,6 +1,61 @@
 ideas = {
 
 	country = {
+		rising_japanese_socialist_party = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = HUN_resurgent_communist_party_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				classical_marxism_drift = 0.04
+				communism_drift = 0.03
+				libertarian_socialism_drift = 0.02
+			} 
+		}
+		post_civil_war_reconstruction = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_disjointed_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industry_repair_factor = 0.25
+			} 
+		}
+		limited_japanese_interventionism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_disjointed_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industry_repair_factor = 0.25
+			} 
+		}
 		japanese_ingerence = {
 			
 			allowed = {
@@ -684,13 +739,9 @@ ideas = {
 			}
 		}
 
-		JAP_anti_communist_volunteers = {
+		limited_japanese_interventionism = {
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
 			}
 			
 			removal_cost = -1
@@ -702,8 +753,9 @@ ideas = {
 			}
 			
 			modifier = {
-				send_volunteer_size = 3
-				send_volunteer_divisions_required = -1
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 7
+				send_volunteers_tension = -1
 			}
 		}
 

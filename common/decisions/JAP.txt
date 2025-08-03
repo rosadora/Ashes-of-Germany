@@ -381,6 +381,200 @@ JAP_1936_elections = {
          }
         }
     }
+}
+
+JAP_balance_of_power_category = {
+
+	JAP_protracted_warfare_tactics = {
+
+		icon = GFX_decision_CHL_mapuche_liberate_inuit
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+			has_civil_war = yes
+        }
+        priority = 1000
+
+		days_remove = 50
+	    days_re_enable = 1
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 30
+
+        modifier = {
+			army_core_defence_factor = 0.1
+        }
+
+		complete_effect = {
+			add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.075
+            }
+		}
+    }
+	JAP_raise_peasant_militia = {
+
+		icon = GFX_decision_generic_civil_support
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+			has_civil_war = yes
+        }
+        priority = 1000
+
+		days_remove = 50
+	    days_re_enable = 1
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 30
+
+        modifier = {
+			weekly_manpower = 1000
+        }
+
+		complete_effect = {
+			add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.075
+            }
+			random_controlled_state = {
+				limit = {
+					is_core_of = JAP
+				}
+			 create_unit = {
+              division = "name = \"Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5"
+              owner = JAP
+             }
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = JAP
+				}
+			 create_unit = {
+              division = "name = \"Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5"
+              owner = JAP
+             }
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = JAP
+				}
+			 create_unit = {
+              division = "name = \"Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5"
+              owner = JAP
+             }
+			}
+		}
+    }
+	JAP_rally_womens_movement = {
+
+		icon = GFX_decision_generic_speech
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+			has_civil_war = yes
+        }
+        priority = 1000
+
+		days_remove = 50
+	    days_re_enable = 1
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 30
+
+        modifier = {
+			weekly_manpower = 3000
+			stability_weekly = 0.005
+			political_power_factor = 0.15
+        }
+
+		complete_effect = {
+			add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.075
+            }
+		}
+    }
+	JAP_insist_on_collective_leadership = {
+
+		icon = GFX_decision_SOV_the_workers_dictatorship
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+			has_government = communism
+			}
+			has_civil_war = yes
+        }
+        priority = 1000
+
+		days_remove = 50
+	    days_re_enable = 1
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 30
+
+        modifier = {
+			war_support_weekly = 0.005
+			political_power_factor = 0.15
+        }
+
+		complete_effect = {
+			add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.075
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
 	JAP_ally_communist_china = {
 
 		icon = GFX_decision_hol_exchange_intelligence_data
@@ -397,6 +591,7 @@ JAP_1936_elections = {
 		available = {
 			has_civil_war = no
 			country_exists = PRC
+			has_completed_focus = JAP_support_mao
 		}
         priority = 1000
 
@@ -412,6 +607,10 @@ JAP_1936_elections = {
 
         complete_effect = {
          create_faction = asian_international
+		 add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.1
+            }
 		 PRC = {
 			country_event = {
 				id = jap.2
@@ -443,6 +642,7 @@ JAP_1936_elections = {
 			}
         }
 		available = {
+			has_civil_war = no
 			country_exists = KOR
 		}
         priority = 1000
@@ -549,6 +749,10 @@ JAP_1936_elections = {
 		cost = 50
 
         complete_effect = {
+			add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.1
+            }
 		 create_wargoal = {
             target = MAN
             type = annex_everything
@@ -597,6 +801,10 @@ JAP_1936_elections = {
 		cost = 50
 
         complete_effect = {
+			add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.1
+            }
          create_wargoal = {
             target = CHI
             type = annex_everything
@@ -640,6 +848,7 @@ JAP_1936_elections = {
 			SOV = {
 				has_war_with = USR
 			}
+			has_civil_war = no
 		}
         priority = 1000
 

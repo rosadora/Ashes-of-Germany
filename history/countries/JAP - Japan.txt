@@ -1494,13 +1494,12 @@ create_country_leader = {
                  }
 			}
 create_country_leader = {
-                 name = "Yamakawa Kikue"
+                 name = "Hotsumi Ozaki"
                  desc = ""
-	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
+	             picture = "gfx/leaders/JAP/Hotsumi_Ozaki.dds"
                  expire = "1965.1.1"
                  ideology = marxism
                  traits = {
-					Feminist
                  }
 			}
 create_country_leader = {

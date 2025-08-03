@@ -1,0 +1,103 @@
+JAP_power_balance = {
+	initial_value = 0.1
+	left_side = JAP_sekirankai_side
+	right_side = JAP_maoist_side
+	decision_category = JAP_balance_of_power_category
+
+	### Medium
+	range = {
+		id = JAP_equilibrum_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+
+	### Sekirankai Side
+	side = {
+		id = JAP_sekirankai_side	
+		icon = "GFX_bop_JAP_sekirankai_side"
+
+		range = {
+			id = JAP_strong_sekirankai_range
+			min = -0.6
+			max = -0.1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.075
+				political_power_factor = -0.1
+				army_org_factor = 0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = JAP_sekirankai_dominance_range
+			min = -1
+			max = -0.6
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.15
+				political_power_factor = -0.15
+				army_org_factor = 0.075
+				consumer_goods_expected_value = -0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+
+	### Maoist Side
+	side = {
+		id = JAP_maoist_side	
+		icon = "GFX_bop_JAP_maoist_side"
+
+		range = {
+			id = JAP_strong_maoists_range
+			min = 0.1
+			max = 0.6
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				conscription = 0.01
+				army_core_defence_factor = 0.05
+				army_attack_factor = -0.025
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = JAP_maoist_dominance_range
+			min = 0.6
+			max = 1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				conscription = 0.025
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_attack_factor = -0.05
+				consumer_goods_expected_value = 0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+}

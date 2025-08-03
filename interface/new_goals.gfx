@@ -1815,4 +1815,34 @@ spriteTypes = {
 	name = "GFX_goal_kim_koo_victory"
 	texturefile = "gfx/interface/goals/kim_koo_victory.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_reject_taisho"
+	texturefile = "gfx/interface/goals/reject_taisho.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_red_japan_diplomacy"
+	texturefile = "gfx/interface/goals/red_japan_diplomacy.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_red_edo"
+	texturefile = "gfx/interface/goals/red_edo.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_cho_bong_am_victory"
+	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_cho_bong_am_victory"
+	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_cho_bong_am_victory"
+	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	}
 }
