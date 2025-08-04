@@ -38,24 +38,6 @@ ideas = {
 				industry_repair_factor = 0.25
 			} 
 		}
-		limited_japanese_interventionism = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = POL_disjointed_industry
-
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_expected_value = 0.05
-				industry_repair_factor = 0.25
-			} 
-		}
 		japanese_ingerence = {
 			
 			allowed = {
@@ -73,6 +55,78 @@ ideas = {
 				weekly_stability = 0.005
 				classical_marxism_drift = 0.075
 				communism_drift = 0.025
+			} 
+		}
+		expell_the_westerners = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_a_tiger_unchained
+
+			removal_cost = -1
+			
+			modifier = { 
+				conscription = 0.02
+			}
+
+			targeted_modifier = {
+			 tag = USA
+			 attack_bonus_against = 0.1
+			 defense_bonus_against = 0.1
+		    }
+			targeted_modifier = {
+			 tag = FRA
+			 attack_bonus_against = 0.1
+			 defense_bonus_against = 0.1
+		    }
+			targeted_modifier = {
+			 tag = ENG
+			 attack_bonus_against = 0.1
+			 defense_bonus_against = 0.1
+		    }
+		}
+		the_great_wall_of_japan = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = great_wall_of_japan
+
+			removal_cost = -1
+			
+			modifier = { 
+				industrial_capacity_dockyard = 0.2
+				production_speed_dockyard_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.2
+				ai_focus_naval_factor = 0.75
+				ai_focus_peaceful_factor = 0.5
+			} 
+		}
+		japanese_advisors = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_militarism_showa
+
+			removal_cost = -1
+			
+			modifier = { 
+				army_org_factor = 0.075
+				army_defence_factor = 0.05
 			} 
 		}
 		the_eastern_sun = {
@@ -93,6 +147,27 @@ ideas = {
 				war_support_factor = 0.2
 				consumer_goods_expected_value = -0.05
 				conscription = 0.01
+			} 
+		}
+		the_eastern_sun2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_wage_war_on_capitalism
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				consumer_goods_expected_value = -0.075
+				conscription = 0.04
+				non_core_manpower = 0.1
 			} 
 		}
 		hanran = {

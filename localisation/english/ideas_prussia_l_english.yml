@@ -1423,6 +1423,11 @@
  post_civil_war_reconstruction:0 "Post-Civil War Reconstruction"
  limited_japanese_interventionism:0 "Limited Interventionism"
  red_japan_isolation:0 "Red Edo"
+ the_great_wall_of_japan:0 "The Great Naval Wall of Japan"
+ japanese_advisors:0 "Japanese Advisors"
+ expell_the_westerners:0 "Expell the Westerners"
+ the_eastern_sun:0 "The Eastern Sun"
+ the_eastern_sun2:0 "The Eastern Sun"
  ### CHINA ###
  chinese_unity:0 "Chinese Unity"
  ### CROATIA ###
@@ -1476,7 +1481,6 @@
  private_infrastructure:0 "Private Infrastructures"
  loyalty_to_the_king:0 "Loyalty to the King"
  loyalty_to_the_king_desc:0 "A loyal army and local citizens, that's what this country needs."
- the_eastern_sun:0 "The Eastern Sun"
  firing_squads:0 "Firing Squads"
  national_rejuvenation:0 "National Rejuvenation"
  national_rejuvenation_desc:0 "Monarchist Yugoslavia must not be frozen in time either, it must be alive and vigorous. In this world, where every nation throws itself at the other, we will suffer the same fate as Russia if we remain in the past."

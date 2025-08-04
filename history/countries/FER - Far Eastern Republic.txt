@@ -82,18 +82,114 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = democratic
+	ruling_party = social_liberalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 60
-	fascism = 0
-	communism = 40
+	communism = 4
+	classical_marxism = 12
+	libertarian_socialism = 2
+	social_democracy = 4
+	social_liberalism = 31
+	classical_liberalism = 7
+	democratic = 4
+	ultra_nationalism = 3
+	neutrality = 30
+	fascism = 3
 }
 
+create_country_leader = {
+	name = "Vasily Maklakov"
+	desc = "POLITICS_Vasily_Maklakov_DESC"
+	picture = "gfx/leaders/FER/Vasily_Maklakov.dds"
+	expire = "1960.1.16"
+	ideology = social_liberalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vasily Maklakov"
+	desc = "POLITICS_Vasily_Maklakov_DESC"
+	picture = "gfx/leaders/FER/Vasily_Maklakov.dds"
+	expire = "1960.1.16"
+	ideology = classical_liberalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vasily Maklakov"
+	desc = "POLITICS_Vasily_Maklakov_DESC"
+	picture = "gfx/leaders/FER/Vasily_Maklakov.dds"
+	expire = "1960.1.16"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vasily Maklakov"
+	desc = "POLITICS_Vasily_Maklakov_DESC"
+	picture = "gfx/leaders/FER/Vasily_Maklakov.dds"
+	expire = "1960.1.16"
+	ideology = social_democracy_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Grigory Semyonov"
+	desc = "POLITICS_Grigory_Semyonov_DESC"
+	picture = "gfx/leaders/FER/Grigory_Semyonov.dds"
+	expire = "1960.1.16"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Grigory Semyonov"
+	desc = "POLITICS_Grigory_Semyonov_DESC"
+	picture = "gfx/leaders/FER/Grigory_Semyonov.dds"
+	expire = "1960.1.16"
+	ideology = ultra_nationalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Pyotr Nikiforov"
+	desc = "POLITICS_Pyotr_Nikiforov_DESC"
+	picture = "gfx/leaders/FER/Pyotr_Nikiforov.dds"
+	expire = "1960.1.16"
+	ideology = classical_marxism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Pyotr Nikiforov"
+	desc = "POLITICS_Pyotr_Nikiforov_DESC"
+	picture = "gfx/leaders/FER/Pyotr_Nikiforov.dds"
+	expire = "1960.1.16"
+	ideology = marxism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Pyotr Nikiforov"
+	desc = "POLITICS_Pyotr_Nikiforov_DESC"
+	picture = "gfx/leaders/FER/Pyotr_Nikiforov.dds"
+	expire = "1960.1.16"
+	ideology = libertarian_socialism_category
+	traits = {
+	}
+}
 
 
 

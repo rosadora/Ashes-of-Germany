@@ -456,8 +456,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_eternal_regency"
-		texturefile = "gfx/interface/ideas/eternal_regency.dds"
+		name = "GFX_idea_great_wall_of_japan"
+		texturefile = "gfx/interface/ideas/great_wall_of_japan.dds"
 	}
 
 	spriteType = {

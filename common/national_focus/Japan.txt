@@ -131,11 +131,6 @@
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_government = classical_marxism
-				has_government = communism
-				has_government = libertarian_socialism
-			}
 		}
 		bypass = {
 		}
@@ -144,6 +139,10 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = hanran
+		 news_event = {
+				id = news.3079
+				days = 1
+			}
 		 hidden_effect = {
 		 set_popularities = {
 	             fascism = 6
@@ -179,10 +178,6 @@
 			end_puppet = MAN
 			end_puppet = MEN
 		 }
-			news_event = {
-				id = news.3079
-				days = 1
-			}
 		}
 		}
 	}
@@ -347,7 +342,7 @@
 		prerequisite = {focus = JAP_post_civil_war_reconstruction}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -375,7 +370,7 @@
 		prerequisite = {focus = JAP_red_japan_diplomacy}
 		mutually_exclusive = {focus = JAP_support_mao}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -407,8 +402,9 @@
 		y = 2
 		prerequisite = {focus = JAP_no_involvement_in_chinese_affairs}
 		mutually_exclusive = {focus = JAP_red_edo}
+		mutually_exclusive = {focus = JAP_red_wind}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -430,17 +426,19 @@
               id = JAP_power_balance
               value = -0.1
             }
+			custom_effect_tooltip = JAP_limited_interventionism_policy
 		}
 	}
 	focus = {
 		id = JAP_red_edo
 		icon = GFX_goal_red_edo
-		x = 4
+		x = 5
 		y = 2
 		prerequisite = {focus = JAP_no_involvement_in_chinese_affairs}
 		mutually_exclusive = {focus = JAP_limited_interventionism}
+		mutually_exclusive = {focus = JAP_red_wind}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -465,6 +463,112 @@
 		}
 	}
 	focus = {
+		id = JAP_peace_and_prosperity
+		icon = GFX_goal_generic_soviet_construction
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_edo
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		  }
+		  random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		  }
+		  random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		  }
+		  random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		  }
+		  add_stability = 0.05
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.1
+            }
+		}
+	}
+	focus = {
+		id = JAP_protect_the_island_from_foreign_ingerence
+		icon = GFX_goal_protect_from_foreign_ingerence
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_edo
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_ideas = the_great_wall_of_japan
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.1
+            }
+		}
+	}
+	focus = {
+		id = JAP_splendid_isolation
+		icon = GFX_goal_splendid_isolation
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_protect_the_island_from_foreign_ingerence}
+		prerequisite = {focus = JAP_peace_and_prosperity}
+		relative_position_id = JAP_red_edo
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_research_slot = 1
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = -0.1
+            }
+		}
+	}
+	focus = {
 		id = JAP_support_mao
 		icon = GFX_focus_prc_maoism
 		x = -1
@@ -472,7 +576,7 @@
 		prerequisite = {focus = JAP_red_japan_diplomacy}
 		mutually_exclusive = {focus = JAP_no_involvement_in_chinese_affairs}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -509,13 +613,591 @@
 		}
 	}
 	focus = {
+		id = JAP_red_wind
+		icon = GFX_goal_red_wind
+		x = -1
+		y = 2
+		prerequisite = {focus = JAP_support_mao focus = JAP_no_involvement_in_chinese_affairs}
+		mutually_exclusive = {focus = JAP_limited_interventionism}
+		mutually_exclusive = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_japan_diplomacy
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_war_support = 0.05
+		  add_power_balance_value = {
+              id = JAP_power_balance
+              value = 0.05
+            }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_threat = 5
+			custom_effect_tooltip = JAP_red_wind_policy
+		}
+	}
+	focus = {
+		id = JAP_ties_with_the_wpk
+		icon = GFX_goal_juche_diplomacy
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_red_wind focus = JAP_limited_interventionism}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  IF = {
+			limit = {
+				has_completed_focus = JAP_limited_interventionism
+			}
+		  unlock_decision_tooltip = JAP_give_weapons_to_wpk
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = JAP_red_wind
+			}
+		  unlock_decision_tooltip = JAP_give_weapons_to_wpk
+		  }
+
+		  custom_effect_tooltip = JAP_effect_depends_of_diplomatic_course
+		}
+	}
+	focus = {
+		id = JAP_taipei_summit
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		x = -2
+		y = 1
+		prerequisite = {focus = JAP_support_mao}
+		relative_position_id = JAP_support_mao
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+			is_in_faction_with = PRC
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  unlock_decision_tooltip = JAP_establish_peoples_republic
+		  unlock_decision_tooltip = JAP_joint_attack
+		}
+	}
+	focus = {
+		id = JAP_overthrow_siamese_government
+		icon = GFX_focus_rom_parties_end
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_red_wind focus = JAP_limited_interventionism}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+			SIA = {
+				OR = {
+				 has_government = classical_marxism
+				 has_government = communism
+				 has_government = libertarian_socialism
+			    }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  IF = {
+			limit = {
+				has_completed_focus = JAP_limited_interventionism
+			}
+		  unlock_decision_tooltip = JAP_revolutionary_thought_in_siam
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = JAP_red_wind
+			}
+		  unlock_decision_tooltip = JAP_overthrow_siam
+		  }
+
+		  custom_effect_tooltip = JAP_effect_depends_of_diplomatic_course
+		}
+	}
+	focus = {
+		id = JAP_bangkok_alliance
+		icon = GFX_goal_generic_alliance
+		x = -1
+		y = 2
+		prerequisite = {focus = JAP_overthrow_siamese_government}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SIA = {
+				OR = {
+				 has_government = classical_marxism
+				 has_government = communism
+				 has_government = libertarian_socialism
+			    }
+			}
+			is_in_faction = yes
+			is_faction_leader = yes
+		}
+		bypass = {
+			SIA = {
+				is_in_faction_with = JAP
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  SIA = {
+			country_event = {
+				id = jap.10
+				days = 1
+			}
+		  }
+		}
+	}
+	focus = {
+		id = JAP_secure_vladivostok
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 3
+		y = 1
+		prerequisite = {focus = JAP_red_wind focus = JAP_limited_interventionism}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+			FER = {
+				OR = {
+				 has_government = classical_marxism
+				 has_government = communism
+				 has_government = libertarian_socialism
+			    }
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  IF = {
+			limit = {
+				has_completed_focus = JAP_limited_interventionism
+			}
+		  unlock_decision_tooltip = JAP_stage_a_coup_in_vladivostok
+		  }
+
+		  IF = {
+			limit = {
+				has_completed_focus = JAP_red_wind
+			}
+		  unlock_decision_tooltip = JAP_recover_far_eastern_republic
+		  }
+
+		  custom_effect_tooltip = JAP_effect_depends_of_diplomatic_course
+		}
+	}
+	focus = {
+		id = JAP_send_japanese_advisors_in_transamur
+		icon = GFX_focus_generic_military_mission
+		x = 3
+		y = 2
+		prerequisite = {focus = JAP_secure_vladivostok}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FER = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			FER = {
+				country_event = {
+					id = jap.9
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_tsushima_proposal
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 2
+		prerequisite = {focus = JAP_ties_with_the_wpk}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			KOR = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  KOR = {
+			country_event = {
+				id = jap.6
+				days = 1
+			}
+		  }
+		  custom_effect_tooltip = JAP_tsushima_proposal_claims
+		}
+	}
+	focus = {
+		id = JAP_decolonization_focus
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = 1
+		y = 3
+		prerequisite = {focus = JAP_tsushima_proposal}
+		prerequisite = {focus = JAP_send_japanese_advisors_in_transamur}
+		prerequisite = {focus = JAP_bangkok_alliance}
+		relative_position_id = JAP_red_wind
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			KOR = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_war_support = 0.1
+		  add_ideas = expell_the_westerners
+		}
+	}
+	focus = {
+		id = JAP_the_french
+		icon = GFX_focus_attack_france
+		x = -3
+		y = 1
+		prerequisite = {focus = JAP_decolonization_focus}
+		will_lead_to_war_with = FRA
+		relative_position_id = JAP_decolonization_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 728
+				}
+			VIN = {
+			is_puppet_of = FRA
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+            target = FRA
+            type = puppet_wargoal_focus
+          }
+		  IF = {
+			limit = {
+				VIN = {
+			     is_puppet_of = FRA
+			    }
+			}
+			create_wargoal = {
+             target = VIN
+             type = puppet_wargoal_focus
+            }
+		  }
+		}
+	}
+	focus = {
+		id = JAP_the_dutch
+		icon = GFX_focus_hol_oranje_boven
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_decolonization_focus}
+		will_lead_to_war_with = FRA
+		relative_position_id = JAP_decolonization_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			INS = {
+			is_puppet_of = HOL
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  create_wargoal = {
+            target = INS
+            type = puppet_wargoal_focus
+          }
+		}
+	}
+	focus = {
+		id = JAP_the_british
+		icon = GFX_focus_attack_britain
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_decolonization_focus}
+		will_lead_to_war_with = ENG
+		relative_position_id = JAP_decolonization_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+			RAJ = {
+			is_puppet_of = ENG
+			}
+			MAL = {
+			is_puppet_of = ENG
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  IF = {
+			limit = {
+				RAJ = {
+			     is_puppet_of = ENG
+			    }
+			}
+			create_wargoal = {
+             target = RAJ
+             type = puppet_wargoal_focus
+            }
+		  }
+		  IF = {
+			limit = {
+				MAL = {
+			     is_puppet_of = ENG
+			    }
+			}
+			create_wargoal = {
+             target = MAL
+             type = puppet_wargoal_focus
+            }
+		  }
+		}
+	}
+	focus = {
+		id = JAP_the_american
+		icon = GFX_focus_generic_attack_usa
+		x = 3
+		y = 1
+		prerequisite = {focus = JAP_decolonization_focus}
+		will_lead_to_war_with = ENG
+		relative_position_id = JAP_decolonization_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+			USA = {
+				OR = {
+					has_government = communism
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+             target = USA
+             type = puppet_wargoal_focus
+            }
+		  IF = {
+			limit = {
+				PHI = {
+			     is_puppet_of = ENG
+			    }
+			}
+			create_wargoal = {
+             target = PHI
+             type = puppet_wargoal_focus
+            }
+		  }
+		}
+	}
+	focus = {
+		id = JAP_socialist_dream_achieved
+		icon = GFX_focus_ETH_callout_to_the_world
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_the_french}
+		prerequisite = {focus = JAP_the_dutch}
+		prerequisite = {focus = JAP_the_british}
+		prerequisite = {focus = JAP_the_american}
+		will_lead_to_war_with = ENG
+		relative_position_id = JAP_decolonization_focus
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			335 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			439 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			671 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			327 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_eastern_sun
+				add_idea = the_eastern_sun2
+			}
+		}
+	}
+	focus = {
 		id = JAP_showa_era
 		icon = GFX_focus_jap_showa_restoration
 		x = -5
 		y = 0
 		prerequisite = {}
 		mutually_exclusive = { focus = JAP_face_the_peace_preservation_law}
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

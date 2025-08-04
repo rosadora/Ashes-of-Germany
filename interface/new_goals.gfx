@@ -1832,17 +1832,42 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_cho_bong_am_victory"
-	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	name = "GFX_goal_protect_from_foreign_ingerence"
+	texturefile = "gfx/interface/goals/protect_from_foreign_ingerence.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_cho_bong_am_victory"
-	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	name = "GFX_goal_splendid_isolation"
+	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_cho_bong_am_victory"
-	texturefile = "gfx/interface/goals/cho_bong_am_victory.dds"			
+	name = "GFX_goal_red_wind"
+	texturefile = "gfx/interface/goals/red_wind.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_juche_diplomacy"
+	texturefile = "gfx/interface/goals/juche_diplomacy.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_splendid_isolation"
+	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_splendid_isolation"
+	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_splendid_isolation"
+	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_splendid_isolation"
+	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
 	}
 }

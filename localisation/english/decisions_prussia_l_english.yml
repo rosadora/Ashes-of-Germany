@@ -83,6 +83,10 @@
  JAP_raise_peasant_militia:0 "Raise Peasant Militias"
  JAP_stage_worker_strike:0 "Stage Worker Strikes"
  JAP_insist_on_collective_leadership:0 "Insist on Collective Leadership"
+ JAP_stage_a_coup_in_vladivostok:0 "Stage a Coup in Vladivostok"
+ JAP_revolutionary_thought_in_siam:0 "Revolution Thought in Siam"
+ JAP_overthrow_siam:0 "Overthrow the Siamese Government"
+ JAP_coup_in_vladivostok:0 "Coup in Vladivostok"
  ### france ###
  FRA_french_politics:0 "French Politics"
  FRA_give_damas_to_syria:0 "Transfer Damas to Syria"

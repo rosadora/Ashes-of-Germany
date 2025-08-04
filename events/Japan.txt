@@ -204,3 +204,160 @@ country_event = {
 		}
 	}
 }
+# Tsushima Proposal (Question)
+country_event = {
+	id = jap.6
+	title = jap.6.t
+	desc = jap.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.6.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			country_event = {
+				id = jap.7
+				days = 1
+			}
+		}
+	}
+
+	option = { 
+		name = jap.6.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.8
+				days = 1
+			}
+		}
+	}
+}
+# Tsushima Proposal (Approval)
+country_event = {
+	id = jap.7
+	title = jap.7.t
+	desc = jap.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.7.a
+		ai_chance = {
+			base = 100
+		}
+		979 = {
+			remove_claim_by = KOR
+		}
+		give_guarantee = KOR
+		528 = {
+			add_manpower = -171000
+		}
+		529 = {
+			add_manpower = -41000
+		}
+		978 = {
+			add_manpower = 171000
+		}
+		977 = {
+			add_manpower = 41000
+		}
+	}
+}
+# Tsushima Proposal (Refusal)
+country_event = {
+	id = jap.8
+	title = jap.8.t
+	desc = jap.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.8.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Japanese Advisors in Transamur
+country_event = {
+	id = jap.9
+	title = jap.9.t
+	desc = jap.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.9.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = japanese_advisors
+	}
+}
+# Bangkok Alliance - Communist
+country_event = {
+	id = jap.10
+	title = jap.10.t
+	desc = jap.10.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.10.a
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #Deny
+		name = jap.10.a
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+# Bangkok Alliance - Communist - Positive Answer
+country_event = {
+	id = jap.11
+	title = jap.11.t
+	desc = jap.11.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.11.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = SIA
+	}
+}
+# Bangkok Alliance - Communist - Negative Answer
+country_event = {
+	id = jap.12
+	title = jap.12.t
+	desc = jap.12.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.12.a
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 49
+	}
+}
