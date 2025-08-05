@@ -3,6 +3,11 @@ MAL_UK = {
     color_ui = rgb { 255 73 121 }
 }
 
+JAP_COM = {
+    color = rgb { 107 4 4 }
+    color_ui = rgb { 107 4 4 }
+}
+
 RAJ_UK = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }

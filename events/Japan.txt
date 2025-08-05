@@ -361,3 +361,61 @@ country_event = {
 		add_political_power = 49
 	}
 }
+# A New Capital?
+country_event = {
+	id = jap.13
+	title = jap.13.t
+	desc = jap.13.d
+	picture = GFX_report_event_SWE_summer_government
+
+	is_triggered_only = yes
+	
+	option = { #Tokyo
+		name = jap.13.a
+		ai_chance = {
+			base = 100
+		}
+		set_capital = {
+			state = 282
+		}
+		282 = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	option = { #Kyoto
+		name = jap.13.b
+		ai_chance = {
+			base = 0
+		}
+		set_capital = {
+			state = 531
+		}
+		531 = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	option = { #Nagoya
+		name = jap.13.c
+		ai_chance = {
+			base = 0
+		}
+		set_capital = {
+			state = 532
+		}
+		532 = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	option = { #Sapporo 
+		name = jap.13.e
+		ai_chance = {
+			base = 0
+		}
+		set_capital = {
+			state = 536
+		}
+		536 = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+}

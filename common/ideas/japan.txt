@@ -149,6 +149,66 @@ ideas = {
 				social_liberalism_drift = -0.01
 			} 
 		}
+		the_split_within = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.25
+				stability_factor = -0.2
+				communism_drift = -0.01
+				classical_marxism_drift = -0.01
+				libertarian_socialism_drift = 0.02
+			} 
+		}
+		democratic_centralism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = 0.1
+				stability_factor = -0.05
+				communism_drift = 0.02
+			} 
+		}
+		collective_leadership = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_system_decentralization
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.1
+				stability_factor = 0.05
+				classical_marxism_drift = 0.01
+				libertarian_socialism_drift = 0.01
+			} 
+		}
 		the_eastern_sun = {
 			
 			allowed = {
@@ -233,6 +293,106 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				trade_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
+			} 
+		}
+		state_zaibatsus2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_zaibatsu_control
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_expected_value = -0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = 0.075
+		        production_factory_efficiency_gain_factor = 0.05
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+			} 
+		}
+		state_zaibatsus3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_zaibatsu_control
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_expected_value = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+			} 
+		}
+		scientist_women = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_scientist_defect
+
+			removal_cost = -1
+			
+			modifier = { 
+				monthly_population = -0.01
+				research_speed_factor = 0.05
+			} 
+		}
+		senki = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_neutrality_graduates
+
+			removal_cost = -1
+			
+			modifier = { 
+				research_speed_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.1
+			} 
+		}
+		scientist_immigration = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_communist_graduates
+
+			removal_cost = -1
+			
+			modifier = { 
+				research_speed_factor = 0.075
+				monthly_population = 0.25
 			} 
 		}
 		pluralism = {

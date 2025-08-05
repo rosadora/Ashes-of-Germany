@@ -327,7 +327,7 @@ ideas = {
 			
 			modifier = {
 			justify_war_goal_time = -0.75
-			non_core_manpower = 0.25
+			non_core_manpower = 0.1
 			}
 		}
 		planned_uprisings = {

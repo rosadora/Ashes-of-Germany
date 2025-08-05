@@ -1700,3 +1700,11 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  KOR_republic_classical_marxism:0 "Democratic People's Republic of Korea"
  KOR_republic_communism:0 "Democratic People's Republic of Korea"
 
+ JAP_COM_classical_marxism:0 "People's Republic of Japan"
+ JAP_COM_classical_marxism_DEF:0 "Red Japan"
+ JAP_COM_communism:0 "People's Republic of Japan"
+ JAP_COM_communism_DEF:0 "Red Japan"
+ JAP_COM_libertarian_socialism:0 "People's Republic of Japan"
+ JAP_COM_libertarian_socialism_DEF:0 "Red Japan"
+ JAP_COM_ADJ:0 "Japanese"
+

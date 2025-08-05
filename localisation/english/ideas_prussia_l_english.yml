@@ -1418,6 +1418,8 @@
  ### JAPAN ###
  hanran:0 "Hanran!"
  state_zaibatsus:0 "State Zaibatsus"
+ state_zaibatsus2:0 "Collective Zaibatsus"
+ state_zaibatsus3:0 "State Zaibatsus"
  pluralism:0 "Pluralism"
  rising_japanese_socialist_party:0 "Rising Japanese Socialist Party"
  post_civil_war_reconstruction:0 "Post-Civil War Reconstruction"
@@ -1430,6 +1432,12 @@
  the_eastern_sun2:0 "The Eastern Sun"
  fading_taisho:0 "Fading Taishō"
  fading_taisho_desc:0 "The Taisho era brought a form of liberalization and democratization to Japan. But the Showa era is different: the military and ultra-nationalist forces are powerful, the parliament is weakened, and this interlude seems to be coming to an end. In the meantime, institutions are paralyzed..."
+ the_split_within:0 "The Split Within"
+ democratic_centralism:0 "Democratic Centralism"
+ collective_leadership:0 "Collective Leadership"
+ scientist_women:0 "Scientist Women"
+ senki:0 "Senki"
+ scientist_immigration:0 "Scientist Immigration"
  ### CHINA ###
  chinese_unity:0 "Chinese Unity"
  ### CROATIA ###

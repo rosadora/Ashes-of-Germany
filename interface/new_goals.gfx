@@ -1852,22 +1852,47 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_splendid_isolation"
-	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	name = "GFX_goal_old_order_failure"
+	texturefile = "gfx/interface/goals/old_order_failure.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_splendid_isolation"
-	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	name = "GFX_goal_peoples_republic_of_japan"
+	texturefile = "gfx/interface/goals/peoples_republic_of_japan.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_splendid_isolation"
-	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	name = "GFX_goal_smash_the_kokutai"
+	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_splendid_isolation"
-	texturefile = "gfx/interface/goals/splendid_isolation.dds"			
+	name = "GFX_goal_socialism_with_japanese_characteristics"
+	texturefile = "gfx/interface/goals/socialism_with_japanese_characteristics.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_smash_the_kokutai"
+	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_yamakawa_in_charge"
+	texturefile = "gfx/interface/goals/yamakawa_in_charge.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_black_winds"
+	texturefile = "gfx/interface/goals/black_winds.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_smash_the_kokutai"
+	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_smash_the_kokutai"
+	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
 	}
 }

@@ -48,6 +48,10 @@ ideas = {
 
 			removal_cost = -1
 
+			allowed = {
+				always = no
+			}
+
 			modifier = {
 				consumer_goods_expected_value = 0.4
 				production_speed_industrial_complex_factor = 0.3
@@ -71,6 +75,10 @@ ideas = {
 		}
 
 		isolation = {
+
+			visible = {
+				has_completed_focus = JAP_red_edo
+			}
 
 			allowed = {
 				always = no
