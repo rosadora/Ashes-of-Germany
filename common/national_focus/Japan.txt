@@ -431,6 +431,7 @@
 				type = nuclear_facility
 				level = 1
 				instant_build = yes
+				province = 11960
 			}
 		 }
 		}
@@ -562,6 +563,7 @@
 				type = land_facility
 				level = 1
 				instant_build = yes
+				province = 4100
 			}
 		 }
 		 add_tech_bonus = {
@@ -1367,7 +1369,11 @@
 				id = news.3079
 				days = 1
 			}
+			add_political_power = 100
 		 hidden_effect = {
+			end_puppet = MAN
+			end_puppet = MEN
+			end_puppet = FER
 		 set_popularities = {
 	             fascism = 6
 	             ultra_nationalism = 11
@@ -1399,8 +1405,6 @@
                irregular_infantry = { x = 0 y = 2 }
                irregular_infantry = { x = 0 y = 3 }
             }
-			end_puppet = MAN
-			end_puppet = MEN
 		 }
 		}
 		}
@@ -1537,7 +1541,7 @@
 		relative_position_id = JAP_new_dawn_for_socialism
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -1545,6 +1549,7 @@
 				has_government = communism
 				has_government = libertarian_socialism
 			}
+			has_civil_war = no
 		}
 		bypass = {
 		}
@@ -1568,7 +1573,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -1585,6 +1590,8 @@
 		completion_reward = {
 		 add_stability = 0.075
 		 set_cosmetic_tag = JAP_COM
+		 remove_ideas = fading_taisho
+		 remove_ideas = rising_japanese_socialist_party
 		 country_event = {
 			days = 1
 			id = jap.13
@@ -1601,7 +1608,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -1632,7 +1639,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -1661,7 +1668,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -1697,7 +1704,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -1733,7 +1740,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -1770,7 +1777,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -1811,7 +1818,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -1851,7 +1858,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -1895,7 +1902,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -1936,7 +1943,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -1974,7 +1981,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = libertarian_socialism
@@ -2025,7 +2032,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = libertarian_socialism
@@ -2053,7 +2060,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = libertarian_socialism
@@ -2084,7 +2091,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = classical_marxism
@@ -2112,7 +2119,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = classical_marxism
@@ -2139,7 +2146,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = classical_marxism
@@ -2162,7 +2169,7 @@
 		relative_position_id = JAP_smash_the_kokutai
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2196,7 +2203,7 @@
 		relative_position_id = JAP_empower_women
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2223,7 +2230,7 @@
 		relative_position_id = JAP_empower_women
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2258,7 +2265,7 @@
 		relative_position_id = JAP_empower_women
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2286,7 +2293,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -2328,7 +2335,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2363,7 +2370,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2399,7 +2406,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2448,7 +2455,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2481,7 +2488,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2511,7 +2518,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2534,7 +2541,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2557,7 +2564,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2604,7 +2611,7 @@
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			has_government = communism
@@ -2628,7 +2635,7 @@
 		relative_position_id = JAP_the_split_within
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			power_balance_value = {
@@ -2668,7 +2675,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2707,7 +2714,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2745,7 +2752,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2783,7 +2790,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2834,7 +2841,7 @@
 		relative_position_id = JAP_post_civil_war_reconstruction
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2851,6 +2858,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_political_power = 50
+		 create_faction = asian_international
 		}
 	}
 	focus = {
@@ -2863,7 +2871,7 @@
 		relative_position_id = JAP_red_japan_diplomacy
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2897,7 +2905,7 @@
 		relative_position_id = JAP_red_japan_diplomacy
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2931,7 +2939,7 @@
 		relative_position_id = JAP_red_japan_diplomacy
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2963,7 +2971,7 @@
 		relative_position_id = JAP_red_edo
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3006,7 +3014,7 @@
 		relative_position_id = JAP_red_edo
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3038,7 +3046,7 @@
 		relative_position_id = JAP_red_edo
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3070,7 +3078,7 @@
 		relative_position_id = JAP_red_japan_diplomacy
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3115,7 +3123,7 @@
 		relative_position_id = JAP_red_japan_diplomacy
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3172,7 +3180,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3213,7 +3221,7 @@
 		relative_position_id = JAP_support_mao
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3242,7 +3250,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3290,7 +3298,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			SIA = {
@@ -3329,7 +3337,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3377,7 +3385,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			FER = {
@@ -3411,7 +3419,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			KOR = {
@@ -3448,7 +3456,7 @@
 		relative_position_id = JAP_red_wind
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			KOR = {
@@ -3479,7 +3487,7 @@
 		relative_position_id = JAP_decolonization_focus
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3524,7 +3532,7 @@
 		relative_position_id = JAP_decolonization_focus
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3555,7 +3563,7 @@
 		relative_position_id = JAP_decolonization_focus
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -3607,7 +3615,7 @@
 		relative_position_id = JAP_decolonization_focus
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 		}
@@ -3654,7 +3662,7 @@
 		relative_position_id = JAP_decolonization_focus
 		cost = 7
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			335 = {
@@ -3691,9 +3699,10 @@
 		mutually_exclusive = { focus = JAP_face_the_peace_preservation_law}
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
+			always = no
 			NOT = {
 				has_government = classical_marxism
 				has_government = communism
