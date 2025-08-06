@@ -170,3 +170,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "roei_no_uta"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
