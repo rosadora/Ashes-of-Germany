@@ -1872,8 +1872,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_smash_the_kokutai"
-	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
+	name = "GFX_goal_expand_toyota"
+	texturefile = "gfx/interface/goals/expand_toyota.dds"			
 	}
 
 	SpriteType = {
@@ -1887,12 +1887,37 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_smash_the_kokutai"
-	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
+	name = "GFX_goal_ura_nihon"
+	texturefile = "gfx/interface/goals/ura_nihon.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_smash_the_kokutai"
-	texturefile = "gfx/interface/goals/smash_the_kokutai.dds"			
+	name = "GFX_goal_omote_nihon"
+	texturefile = "gfx/interface/goals/omote_nihon.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_ni_go_project"
+	texturefile = "gfx/interface/goals/ni_go_project.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_ura_nihon"
+	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_ura_nihon"
+	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_ura_nihon"
+	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_ura_nihon"
+	texturefile = "gfx/interface/goals/ura_nihon.dds"			
 	}
 }

@@ -11,6 +11,7 @@ set_research_slots = 4
 set_fuel_ratio = 1.0
 add_ideas = {
 	fading_taisho
+	marginalized_korean_immigration
 	state_shintoism
 	limited_exports
 	limited_conscription

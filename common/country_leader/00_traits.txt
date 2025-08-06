@@ -290,6 +290,16 @@ leader_traits = {
 		}
 	}
 
+	japanese_state_railways_compagny = {
+		random = no
+		production_speed_infrastructure_factor = 0.075
+		production_speed_supply_node_factor = 0.1
+		production_speed_rail_way_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	state_economy_partisan = {
 		random = no
 		production_factory_max_efficiency_factor = -0.075

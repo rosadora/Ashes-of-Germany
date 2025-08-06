@@ -129,7 +129,6 @@ country_event = { #Japanese Chinese puppet annexed by Japan
 			original_tag = YUN
 			original_tag = GXC
 			original_tag = TIB
-			original_tag = PRC
 		}
 	}
 
