@@ -465,4 +465,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/fading_taisho.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_seisen"
+		texturefile = "gfx/interface/ideas/seisen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hakko_ichiu_id"
+		texturefile = "gfx/interface/ideas/hakko_ichiu_id.dds"
+	}
+
 }

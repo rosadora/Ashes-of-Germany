@@ -1,6 +1,177 @@
 ideas = {
 
 	country = {
+		nanshin_ron = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_japanese_conflict
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+			} 
+		}
+		hokushin_ron = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_japanese_conflict
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+			} 
+		}
+		seisen = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = seisen
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				ai_desired_divisions_factor = 0.2
+				ai_focus_aggressive_factor = 0.5
+			} 
+		}
+		japan_rule_in_moscow = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_crowning_jewel_of_russia
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				war_support_weekly = 0.005
+				consumer_goods_expected_value = -0.1
+			} 
+		}
+		hakko_ichiu = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hakko_ichiu_id
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+				conscription = 0.05
+				ai_focus_aggressive_factor = 0.75
+			} 
+		}
+		reach_the_oural = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CZE_planning_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				ai_focus_aggressive_factor = 0.5
+				supply_consumption_factor = -0.1
+				winter_attrition_factor = -0.1
+				acclimatization_cold_climate_gain_factor = 0.1
+			} 
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = USR
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+		}
+		siberian_training = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_sub_zero_survival_training
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.3
+				winter_attrition_factor = -0.2
+				acclimatization_cold_climate_gain_factor = 0.2
+				training_time_factor = 0.15
+			} 
+		}
+		kantokuen = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_a_church_of_the_catacombs
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = USR
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+		}
 		marginalized_korean_immigration = {
 			
 			allowed = {
@@ -19,6 +190,27 @@ ideas = {
 				stability_factor = -0.1
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
+				research_speed_factor = -0.05
+			} 
+		}
+		cheap_korean_labor = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_partition_india_united
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 				research_speed_factor = -0.05
 			} 
 		}
@@ -343,9 +535,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				stability_factor = 0.2
-				war_support_factor = 0.2
-				consumer_goods_expected_value = -0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_expected_value = -0.025
 				conscription = 0.01
 			} 
 		}
@@ -363,11 +555,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				stability_factor = 0.2
-				war_support_factor = 0.2
-				consumer_goods_expected_value = -0.075
-				conscription = 0.04
-				non_core_manpower = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				conscription = 0.03
+				non_core_manpower = 0.05
 			} 
 		}
 		hanran = {
@@ -408,7 +600,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				consumer_goods_expected_value = -0.05
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				trade_laws_cost_factor = -0.25
@@ -429,7 +620,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				consumer_goods_expected_value = -0.1
+				consumer_goods_expected_value = -0.05
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				production_factory_max_efficiency_factor = 0.075
@@ -628,6 +819,28 @@ ideas = {
 			modifier = {
 				industry_air_damage_factor = -0.1
 				army_morale_factor = 0.1
+			}
+		}
+
+		state_shintoism2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				industry_air_damage_factor = -0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+				conscription_factor = 0.1
 			}
 		}
 
@@ -1019,7 +1232,8 @@ ideas = {
 				justify_war_goal_time = -0.2
 				research_speed_factor = -0.10
 				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				ai_desired_divisions_factor = 0.35
 			}
 		}
 
@@ -1385,6 +1599,22 @@ ideas = {
 			
 			modifier = {
 				air_agility_factor = 0.075
+			}
+		}
+
+		taisei_yokusankai_ascendancy = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fascism_drift_2
+			
+			modifier = {
+				ultra_nationalism_drift = 0.075
+				fascism_drift = 0.025
 			}
 		}
 

@@ -41,20 +41,6 @@ country_event = {
 			popularity = 0.15
 		}
 	}
-	option = { #Officiers Coup
-		name = jap.1.c
-		ai_chance = {
-			base = 50
-		}
-		set_politics = {
-			ruling_party = fascism 
-			elections_allowed = yes
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.35
-		}
-	}
 }
 
 # China-Japan Socialist Alliance (Request)
@@ -416,6 +402,221 @@ country_event = {
 		}
 		536 = {
 			add_extra_state_shared_building_slots = 2
+		}
+	}
+}
+# Pact with Prussia - Request
+country_event = {
+	id = jap.14
+	title = jap.14.t
+	desc = jap.14.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.14.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			country_event = {
+				id = jap.15
+				days = 1
+			}
+		}
+	}
+
+	option = { #Deny
+		name = jap.14.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.16
+				days = 1
+			}
+		}
+	}
+}
+# Pact with Prussia - Accept
+country_event = {
+	id = jap.15
+	title = jap.15.t
+	desc = jap.15.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.15.a
+		ai_chance = {
+			base = 100
+		}
+		give_guarantee = PRS
+		PRS = {
+			give_guarantee = JAP
+		}
+	}
+}
+# Pact with Prussia - Deny
+country_event = {
+	id = jap.16
+	title = jap.16.t
+	desc = jap.16.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.16.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Non-Agression Pact with Russia - Request
+country_event = {
+	id = jap.17
+	title = jap.17.t
+	desc = jap.17.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.17.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			country_event = {
+				id = jap.18
+				days = 1
+			}
+		}
+	}
+
+	option = { #Deny
+		name = jap.17.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.19
+				days = 1
+			}
+		}
+	}
+}
+# Non-Agression Pact with Russia - Accept
+country_event = {
+	id = jap.18
+	title = jap.18.t
+	desc = jap.18.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.18.a
+		ai_chance = {
+			base = 100
+		}
+		diplomatic_relation = {
+         country = SOV
+         relation = non_aggression_pact
+         active = yes
+        }
+	}
+}
+# Non-Agression Pact with Russia - Deny
+country_event = {
+	id = jap.19
+	title = jap.19.t
+	desc = jap.19.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.19.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Non-Agression Pact with Soviet Russia - Request
+country_event = {
+	id = jap.20
+	title = jap.20.t
+	desc = jap.20.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.20.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			country_event = {
+				id = jap.21
+				days = 1
+			}
+		}
+	}
+
+	option = { #Deny
+		name = jap.20.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.22
+				days = 1
+			}
+		}
+	}
+}
+# Non-Agression Pact with Soviet Russia - Accept
+country_event = {
+	id = jap.21
+	title = jap.21.t
+	desc = jap.21.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.18.a
+		ai_chance = {
+			base = 100
+		}
+		diplomatic_relation = {
+         country = USR
+         relation = non_aggression_pact
+         active = yes
+        }
+	}
+}
+# Non-Agression Pact with Soviet Russia - Deny
+country_event = {
+	id = jap.22
+	title = jap.22.t
+	desc = jap.22.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.22.a
+		ai_chance = {
+			base = 100
 		}
 	}
 }

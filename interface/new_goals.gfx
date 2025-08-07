@@ -1902,22 +1902,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_ura_nihon"
-	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	name = "GFX_goal_faith_in_taisho"
+	texturefile = "gfx/interface/goals/faith_in_taisho.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_ura_nihon"
-	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	name = "GFX_goal_minseito_victory"
+	texturefile = "gfx/interface/goals/minseito_victory.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_ura_nihon"
-	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	name = "GFX_goal_seiyukai_victory"
+	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_ura_nihon"
-	texturefile = "gfx/interface/goals/ura_nihon.dds"			
+	name = "GFX_goal_kodoha_coup"
+	texturefile = "gfx/interface/goals/kodoha_coup.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_daitoa_kyoeiken"
+	texturefile = "gfx/interface/goals/daitoa_kyoeiken.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_seisen_focus"
+	texturefile = "gfx/interface/goals/seisen_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_hakko_ichiu"
+	texturefile = "gfx/interface/goals/hakko_ichiu.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_seiyukai_victory"
+	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_seiyukai_victory"
+	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_seiyukai_victory"
+	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
 	}
 }

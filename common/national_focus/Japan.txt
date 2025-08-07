@@ -385,6 +385,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 custom_effect_tooltip = JAP_the_zero_tt
+		 remove_ideas = JAP_duplicate_research_efforts
 			hidden_effect = { 
 				if = {
 					limit = {
@@ -4557,6 +4558,1023 @@
 		}
 	}
 	focus = {
+		id = JAP_nanshin_ron
+		icon = GFX_focus_jap_pacific_guardian
+		x = -15
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			NOT = {
+				has_idea = hokushin_ron
+			}
+			has_completed_focus = JAP_expansionist_policies
+			is_puppet = no
+			MAN = {
+				is_puppet_of = JAP
+			}
+			FER = {
+				is_puppet_of = JAP
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = nanshin_ron
+			days = 800
+		 }
+		}
+	}
+	focus = {
+		id = JAP_pact_with_prussia
+		icon = GFX_goal_tripartite_pact
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_nanshin_ron}
+		relative_position_id = JAP_nanshin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			PRS = {
+				is_puppet = no
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 PRS = {
+			country_event = {
+				id = jap.14
+				days = 1
+			}
+		 }
+		}
+	}
+	focus = {
+		id = JAP_non_agression_pact_with_russia
+		icon = GFX_focus_SOV_third_rome
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_nanshin_ron}
+		relative_position_id = JAP_nanshin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			OR = {
+				country_exists = USR 
+				country_exists = SOV
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 IF = {
+			limit = {
+				country_exists = SOV
+			}
+			SOV = {
+			country_event = {
+				id = jap.17
+				days = 1
+			}
+			}
+		 }
+		 IF = {
+			limit = {
+				country_exists = USR
+			}
+			USR = {
+			country_event = {
+				id = jap.20
+				days = 1
+			}
+			}
+		 }
+		}
+	}
+	focus = {
+		id = JAP_ichi_go
+		icon = GFX_focus_attack_china
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_non_agression_pact_with_russia}
+		prerequisite = {focus = JAP_pact_with_prussia}
+		relative_position_id = JAP_nanshin_ron
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = PRC
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = YUN
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = JAP_ichi_go
+				days = 700
+			}
+			declare_war_on = {
+                target = CHI
+                type = annex_everything
+            }
+			declare_war_on = {
+                target = PRC
+                type = annex_everything
+            }
+			declare_war_on = {
+                target = XSM
+                type = annex_everything
+            }
+			declare_war_on = {
+                target = SHX
+                type = annex_everything
+            }
+			declare_war_on = {
+                target = YUN
+                type = annex_everything
+            }
+			declare_war_on = {
+                target = SIK
+                type = annex_everything
+            }
+		}
+	}
+	focus = {
+		id = JAP_bypass_the_philippines
+		icon = GFX_focus_generic_befriend_usa
+		x = -1
+		y = 3
+		prerequisite = {focus = JAP_ichi_go}
+		mutually_exclusive = {focus = JAP_secure_the_philippines}
+		relative_position_id = JAP_nanshin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_bypass_the_philippines
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+	focus = {
+		id = JAP_secure_the_philippines
+		icon = GFX_focus_generic_attack_usa
+		x = 1
+		y = 3
+		prerequisite = {focus = JAP_ichi_go}
+		mutually_exclusive = {focus = JAP_bypass_the_philippines}
+		relative_position_id = JAP_nanshin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+            target = PHI
+            type = annex_everything
+         }
+		}
+	}
+	focus = {
+		id = JAP_strike_south_doctrine
+		icon = GFX_focus_jap_strike_south
+		x = 0
+		y = 4
+		prerequisite = {focus = JAP_secure_the_philippines focus = JAP_bypass_the_philippines}
+		relative_position_id = JAP_nanshin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 create_wargoal = {
+            target = MAL
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = VIN
+            type = annex_everything
+         }
+		 create_wargoal = {
+            target = INS
+            type = annex_everything
+         }
+		}
+	}
+	focus = {
+		id = JAP_hokushin_ron
+		icon = GFX_focus_jap_cast_the_die
+		x = -21
+		y = 0
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			NOT = {
+				has_idea = nanshin_ron
+			}
+			has_completed_focus = JAP_expansionist_policies
+			is_puppet = no
+			MAN = {
+				is_puppet_of = JAP
+			}
+			FER = {
+				is_puppet_of = JAP
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = hokushin_ron
+			days = 800
+		 }
+		}
+	}
+	focus = {
+		id = JAP_prepare_the_frontline
+		icon = GFX_focus_generic_supply_line
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_hokushin_ron}
+		relative_position_id = JAP_hokushin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			MAN = {
+				is_puppet_of = JAP
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 761 = {
+			add_building_construction = {
+          type = supply_node
+          level = 1
+          instant_build = yes
+          province = 4745
+         }
+		 }
+		 714 = {
+			add_building_construction = {
+          type = supply_node
+          level = 1
+          instant_build = yes
+          province = 7832
+         }
+		 }
+		}
+	}
+	focus = {
+		id = JAP_siberian_training
+		icon = GFX_focus_FIN_the_cold_front
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_hokushin_ron}
+		relative_position_id = JAP_hokushin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = siberian_training
+		}
+	}
+	focus = {
+		id = JAP_kantokuen
+		icon = GFX_focus_generic_winter_warfare
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_siberian_training}
+		prerequisite = {focus = JAP_prepare_the_frontline}
+		relative_position_id = JAP_hokushin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		will_lead_to_war_with = SOV 
+		will_lead_to_war_with = USR
+		completion_reward = {
+		 add_timed_idea = {
+			idea = kantokuen
+			days = 700
+		 }
+		 IF = {
+			limit = {
+				country_exists = SOV
+			}
+			declare_war_on = {
+                target = SOV
+                type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = USR
+			}
+			declare_war_on = {
+                target = USR
+                type = annex_everything
+            }
+		 }
+		}
+	}
+	focus = {
+		id = JAP_establish_the_northern_resource_area
+		icon = GFX_goal_generic_construction2
+		x = -1
+		y = 3
+		prerequisite = {focus = JAP_kantokuen}
+		relative_position_id = JAP_hokushin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			has_tech = excavation1
+			564 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			657 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			408 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			560 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 657 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			408 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			560 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			564 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_great_far_eastern_republic
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 3
+		prerequisite = {focus = JAP_kantokuen}
+		relative_position_id = JAP_hokushin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			562 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			657 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			408 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			560 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			561 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			874 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			637 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = reach_the_oural
+				days = 500
+			}
+			FER = {
+				add_autonomy_score = {
+                value = -1000
+                }
+				transfer_state = 562
+			    transfer_state = 657
+			    transfer_state = 408
+			    transfer_state = 560
+			    transfer_state = 561
+			    transfer_state = 874
+			    transfer_state = 637
+			}
+		}
+	}
+	focus = {
+		id = JAP_capture_of_moscow
+		icon = GFX_focus_SOV_zemsky_sobor
+		x = 0
+		y = 4
+		prerequisite = {focus = JAP_great_far_eastern_republic}
+		prerequisite = {focus = JAP_establish_the_northern_resource_area}
+		relative_position_id = JAP_hokushin_ron
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			219 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = japan_rule_in_moscow
+				days = 400
+			}
+			IF = {
+				limit = {
+					has_idea = hokushin_ron
+				}
+				remove_ideas = hokushin_ron
+			}
+		}
+	}
+	focus = {
+		id = JAP_achieve_pan_asianist_dream
+		icon = GFX_focus_usa_focus_on_asia
+		x = 0
+		y = 4
+		prerequisite = {focus = JAP_strike_south_doctrine}
+		prerequisite = {focus = JAP_capture_of_moscow}
+		relative_position_id = JAP_seisen
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 IF = {
+			limit = {
+				country_exists = RAJ 
+			}
+			create_wargoal = {
+             target = RAJ
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = PAK 
+			}
+			create_wargoal = {
+             target = PAK
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = BEN 
+			}
+			create_wargoal = {
+             target = BEN
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = AST 
+			}
+			create_wargoal = {
+             target = AST
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = NZL 
+			}
+			create_wargoal = {
+             target = NZL
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = MON 
+			}
+			create_wargoal = {
+             target = MON
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = TIB 
+			}
+			create_wargoal = {
+             target = TIB
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = NEP 
+			}
+			create_wargoal = {
+             target = NEP
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = BHU 
+			}
+			create_wargoal = {
+             target = BHU
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = KAZ 
+			}
+			create_wargoal = {
+             target = KAZ
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = TAN 
+			}
+			create_wargoal = {
+             target = TAN
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = KYR 
+			}
+			create_wargoal = {
+             target = KYR
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = TAJ 
+			}
+			create_wargoal = {
+             target = TAJ
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = UZB 
+			}
+			create_wargoal = {
+             target = UZB
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = TMS 
+			}
+			create_wargoal = {
+             target = TMS
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = AFG 
+			}
+			create_wargoal = {
+             target = AFG
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = PER 
+			}
+			create_wargoal = {
+             target = PER
+             type = annex_everything
+            }
+		 }
+		 IF = {
+			limit = {
+				country_exists = PHI 
+			}
+			create_wargoal = {
+             target = PHI
+             type = annex_everything
+            }
+		 }
+		}
+	}
+	focus = {
+		id = JAP_hakko_ichiu
+		icon = GFX_goal_hakko_ichiu
+		x = 0
+		y = 5
+		prerequisite = {focus = JAP_achieve_pan_asianist_dream}
+		relative_position_id = JAP_seisen
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+			335 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			439 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			605 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			219 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = hakko_ichiu
+			every_other_country = {
+			ROOT = {
+			create_wargoal = {
+             target = PREV
+             type = annex_everything
+            }
+			}
+			}
+			every_state = {
+				add_claim_by = JAP
+			}
+		}
+	}
+	focus = {
+		id = JAP_seisen
+		icon = GFX_goal_seisen_focus
+		x = -3
+		y = 1
+		prerequisite = {focus = JAP_nanshin_ron focus = JAP_hokushin_ron}
+		relative_position_id = JAP_nanshin_ron
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = seisen
+		}
+	}
+	focus = {
+		id = JAP_spiritual_mobilization
+		icon = GFX_focus_jap_spiritual_mobilization
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_seisen}
+		relative_position_id = JAP_seisen
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = spiritual_mobilization_idea
+		 custom_effect_tooltip = peace_conference_spiritual_mob_modifier_japan
+		}
+	}
+	focus = {
+		id = JAP_warrior_spirit
+		icon = GFX_focus_generic_japanese_imperial_glory
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_seisen}
+		relative_position_id = JAP_seisen
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		    hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+			if = { 
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = cost_reduced_last_stand 
+			}
+		}
+	}
+	focus = {
+		id = JAP_strengthen_the_divine_wind
+		icon = GFX_goal_generic_secret_weapon
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_warrior_spirit}
+		prerequisite = {focus = JAP_spiritual_mobilization}
+		relative_position_id = JAP_seisen
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			is_special_project_completed = sp:sp_rocket_interceptor
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		   if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
+				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect
+				hidden_effect = { set_technology = { suicide_craft = 1 } }
+			}
+			else = {
+				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect_bba
+				hidden_effect = { set_technology = { suicide_charge = 1 popup = no} }
+			}
+		}
+	}
+	focus = {
 		id = JAP_showa_era
 		icon = GFX_focus_jap_showa_restoration
 		x = -5
@@ -4568,12 +5586,6 @@
 			factor = 2
 		}
 		available = {
-			always = no
-			NOT = {
-				has_government = classical_marxism
-				has_government = communism
-				has_government = libertarian_socialism
-			}
 		}
 		bypass = {
 		}
@@ -4583,6 +5595,440 @@
 		completion_reward = {
 		 add_stability = 0.05
 		 add_political_power = 50
+		}
+	}
+	focus = {
+		id = JAP_a_cure_to_weakness
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = -3
+		y = 1
+		prerequisite = {focus = JAP_showa_era}
+		mutually_exclusive = {focus = JAP_faith_in_taisho}
+		relative_position_id = JAP_showa_era
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = taisei_yokusankai_ascendancy
+			days = 100
+		 }
+		}
+	}
+	focus = {
+		id = JAP_kodoha_coup
+		icon = GFX_goal_kodoha_coup
+		x = -3
+		y = 2
+		prerequisite = {focus = JAP_a_cure_to_weakness}
+		relative_position_id = JAP_showa_era
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = ultra_nationalism
+			}
+		 news_event = {
+			id = news.3087
+			days = 1
+		 }
+		}
+	}
+	focus = {
+		id = JAP_showa_restoration
+		icon = GFX_focus_jap_showa_restoration
+		x = 0
+		y = 1
+		prerequisite = {focus = JAP_kodoha_coup}
+		relative_position_id = JAP_kodoha_coup
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = fading_taisho
+		}
+	}
+	focus = {
+		id = JAP_expansionist_policies
+		icon = GFX_goal_daitoa_kyoeiken
+		x = -2
+		y = 1
+		prerequisite = {focus = JAP_showa_restoration}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			create_faction = daitoa_kyoeiken
+			IF = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				add_ideas = extensive_conscription
+			}
+		}
+	}
+	focus = {
+		id = JAP_take_back_vladivostok
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 2
+		prerequisite = {focus = JAP_expansionist_policies}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			FER = {
+				NOT = {
+					is_puppet_of = JAP
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = FER
+            }
+		}
+	}
+	focus = {
+		id = JAP_take_back_manchuria
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -4
+		y = 2
+		prerequisite = {focus = JAP_expansionist_policies}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			MAN = {
+				NOT = {
+					is_puppet_of = JAP
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = MAN
+            }
+		}
+	}
+	focus = {
+		id = JAP_empower_zaibatsus
+		icon = GFX_focus_jap_zaibatsu
+		x = 0
+		y = 1
+		prerequisite = {focus = JAP_showa_restoration}
+		mutually_exclusive = {focus = JAP_challenge_zaibatsus}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = JAP_zaibatsus
+				add_idea = JAP_zaibatsus_empowered
+			}
+		}
+	}
+	focus = {
+		id = JAP_challenge_zaibatsus
+		icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		prerequisite = {focus = JAP_showa_restoration}
+		mutually_exclusive = {focus = JAP_empower_zaibatsus}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = JAP_zaibatsus
+				add_idea = JAP_zaibatsus_challenged
+			}
+		}
+	}
+	focus = {
+		id = JAP_strengthen_the_kokutai
+		icon = GFX_focus_AST_war_japan
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_empower_zaibatsus focus = JAP_challenge_zaibatsus}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = JAP_militarism
+				add_idea = JAP_militarism_shogunate
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_ban_foreign_cults
+		icon = GFX_focus_jap_spiritual_mobilization
+		x = 2
+		y = 2
+		prerequisite = {focus = JAP_empower_zaibatsus focus = JAP_challenge_zaibatsus}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = state_shintoism
+				add_idea = state_shintoism2
+			}
+		}
+	}
+	focus = {
+		id = JAP_expand_imperial_universities
+		icon = GFX_focus_research2
+		x = 2
+		y = 3
+		prerequisite = {focus = JAP_ban_foreign_cults}
+		prerequisite = {focus = JAP_strengthen_the_kokutai}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = JAP_exploit_korean_cheap_labour
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 0
+		y = 3
+		prerequisite = {focus = JAP_ban_foreign_cults}
+		prerequisite = {focus = JAP_strengthen_the_kokutai}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = marginalized_korean_immigration
+				add_idea = cheap_korean_labor
+			}
+		}
+	}
+	focus = {
+		id = JAP_crackdown_on_sekirankai
+		icon = GFX_goal_anti_comintern_pact
+		x = -2
+		y = 3
+		prerequisite = {focus = JAP_ban_foreign_cults}
+		prerequisite = {focus = JAP_strengthen_the_kokutai}
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.075
+			}
+			add_popularity = {
+				ideology = classical_marxism 
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = JAP_faith_in_taisho
+		icon = GFX_goal_faith_in_taisho
+		x = 3
+		y = 1
+		prerequisite = {focus = JAP_showa_era}
+		mutually_exclusive = {focus = JAP_a_cure_to_weakness}
+		relative_position_id = JAP_showa_era
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = JAP_minseito_victory
+		icon = GFX_goal_minseito_victory
+		x = -2
+		y = 1
+		prerequisite = {focus = JAP_faith_in_taisho}
+		mutually_exclusive = {focus = JAP_seiyukai_victory}
+		relative_position_id = JAP_faith_in_taisho
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+			has_government = classical_liberalism
+			has_government = social_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		}
+	}
+	focus = {
+		id = JAP_seiyukai_victory
+		icon = GFX_goal_seiyukai_victory
+		x = 2
+		y = 1
+		prerequisite = {focus = JAP_faith_in_taisho}
+		mutually_exclusive = {focus = JAP_minseito_victory}
+		relative_position_id = JAP_faith_in_taisho
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
 		}
 	}
 }
