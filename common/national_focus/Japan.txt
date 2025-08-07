@@ -2437,7 +2437,7 @@
 		prerequisite = {focus = JAP_post_civil_war_reconstruction}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2472,7 +2472,7 @@
 		prerequisite = {focus = JAP_the_peoples_republic_of_japan}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2503,7 +2503,7 @@
 		prerequisite = {focus = JAP_the_peoples_republic_of_japan}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2532,7 +2532,7 @@
 		prerequisite = {focus = JAP_the_split_within}
 		mutually_exclusive = {focus = JAP_collective_leadership}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2555,7 +2555,7 @@
 		completion_reward = {
 		 add_power_balance_value = {
             id = JAP_power_balance
-            value = 0.075
+            value = 0.15
          }
 		 add_ideas = democratic_centralism
 		}
@@ -2568,7 +2568,7 @@
 		prerequisite = {focus = JAP_the_split_within}
 		mutually_exclusive = {focus = JAP_push_for_democratic_centralism}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2591,7 +2591,7 @@
 		completion_reward = {
 		 add_power_balance_value = {
             id = JAP_power_balance
-            value = -0.075
+            value = -0.15
          }
 		 add_ideas = collective_leadership
 		}
@@ -2604,7 +2604,7 @@
 		prerequisite = {focus = JAP_collective_leadership focus = JAP_push_for_democratic_centralism}
 		mutually_exclusive = {focus = JAP_purge_the_intelligensia}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2627,7 +2627,7 @@
 		completion_reward = {
 		 add_power_balance_value = {
             id = JAP_power_balance
-            value = -0.075
+            value = -0.15
          }
 		 add_stability = 0.075
 		 custom_effect_tooltip = JAP_will_allow_you_mass_distribution_of_papers
@@ -2641,7 +2641,7 @@
 		prerequisite = {focus = JAP_collective_leadership focus = JAP_push_for_democratic_centralism}
 		mutually_exclusive = {focus = JAP_highlight_proletarian_litterature}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2664,7 +2664,7 @@
 		completion_reward = {
 		 add_power_balance_value = {
             id = JAP_power_balance
-            value = 0.075
+            value = 0.15
          }
 		 add_political_power = 150
 		 add_manpower = -10000
@@ -2682,7 +2682,7 @@
 		prerequisite = {focus = JAP_purge_the_intelligensia focus = JAP_highlight_proletarian_litterature}
 		mutually_exclusive = {focus = JAP_state_managed_collectivisation}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2722,7 +2722,7 @@
 		prerequisite = {focus = JAP_local_planification focus = JAP_state_managed_collectivisation}
 		mutually_exclusive = {focus = JAP_socialism_with_japanese_characteristics}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2766,7 +2766,7 @@
 		prerequisite = {focus = JAP_smash_the_kokutai}
 		mutually_exclusive = {focus = JAP_anarchist_winds}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2807,7 +2807,7 @@
 		prerequisite = {focus = JAP_smash_the_kokutai}
 		mutually_exclusive = {focus = JAP_yamakawa_in_charge}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2845,7 +2845,7 @@
 		y = 2
 		prerequisite = {focus = JAP_anarchist_winds}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2896,7 +2896,7 @@
 		y = 3
 		prerequisite = {focus = JAP_true_liberation}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2924,7 +2924,7 @@
 		y = 4
 		prerequisite = {focus = JAP_mobilize_everyone}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2955,7 +2955,7 @@
 		y = 2
 		prerequisite = {focus = JAP_yamakawa_in_charge}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2983,7 +2983,7 @@
 		y = 3
 		prerequisite = {focus = JAP_senki}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3010,7 +3010,7 @@
 		y = 4
 		prerequisite = {focus = JAP_marginalize_maoists}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3033,7 +3033,7 @@
 		y = 2
 		prerequisite = {focus = JAP_anarchist_winds focus = JAP_yamakawa_in_charge}
 		relative_position_id = JAP_smash_the_kokutai
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3067,7 +3067,7 @@
 		y = 1
 		prerequisite = {focus = JAP_empower_women }
 		relative_position_id = JAP_empower_women
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3094,7 +3094,7 @@
 		y = 1
 		prerequisite = {focus = JAP_empower_women }
 		relative_position_id = JAP_empower_women
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3129,7 +3129,7 @@
 		y = 2
 		prerequisite = {focus = JAP_equal_civil_rights }
 		relative_position_id = JAP_empower_women
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3157,7 +3157,7 @@
 		prerequisite = {focus = JAP_local_planification focus = JAP_state_managed_collectivisation}
 		mutually_exclusive = {focus = JAP_smash_the_kokutai}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3199,7 +3199,7 @@
 		y = 1
 		prerequisite = {focus = JAP_socialism_with_japanese_characteristics}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3234,7 +3234,7 @@
 		y = 2
 		prerequisite = {focus = JAP_purge_the_sekirankai}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3270,7 +3270,7 @@
 		y = 2
 		prerequisite = {focus = JAP_purge_the_sekirankai}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3319,7 +3319,7 @@
 		y = 3
 		prerequisite = {focus = JAP_mutual_development focus = JAP_reject_imperial_past}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3352,7 +3352,7 @@
 		prerequisite = {focus = JAP_create_womens_brigade}
 		mutually_exclusive = {focus = JAP_stability_prevails}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3382,7 +3382,7 @@
 		prerequisite = {focus = JAP_create_womens_brigade}
 		mutually_exclusive = {focus = JAP_japanese_cultural_revolution}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3405,7 +3405,7 @@
 		y = 3
 		prerequisite = {focus = JAP_mutual_development focus = JAP_reject_imperial_past}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3428,7 +3428,7 @@
 		y = 4
 		prerequisite = {focus = JAP_spirit_of_resistance focus = JAP_create_womens_brigade}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3475,7 +3475,7 @@
 		y = 4
 		prerequisite = {focus = JAP_spirit_of_resistance focus = JAP_create_womens_brigade}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3499,7 +3499,7 @@
 		prerequisite = {focus = JAP_purge_the_intelligensia focus = JAP_highlight_proletarian_litterature}
 		mutually_exclusive = {focus = JAP_highlight_proletarian_litterature}
 		relative_position_id = JAP_the_split_within
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3539,7 +3539,7 @@
 		prerequisite = {}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3578,7 +3578,7 @@
 		prerequisite = {focus = JAP_old_order_failure focus = JAP_post_civil_war_reconstruction}
 		mutually_exclusive = {focus = JAP_they_are_normal_citizen}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3600,7 +3600,7 @@
 		   add_ideas = behead_the_crown
 		   add_power_balance_value = {
               id = JAP_power_balance
-              value = -0.1
+              value = -0.2
             }
 		   hidden_effect = {
 		   kill_ideology_leader = ultra_nationalism
@@ -3616,7 +3616,7 @@
 		prerequisite = {focus = JAP_old_order_failure focus = JAP_post_civil_war_reconstruction}
 		mutually_exclusive = {focus = JAP_execute_the_royal_family}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3638,7 +3638,7 @@
 		   add_ideas = model_of_rehabilitation
 		   add_power_balance_value = {
               id = JAP_power_balance
-              value = 0.1
+              value = 0.2
             }
 		   hidden_effect = {
 		   retire_ideology_leader = fascism
@@ -3654,7 +3654,7 @@
 		prerequisite = {focus = JAP_they_are_normal_citizen focus = JAP_execute_the_royal_family}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3705,7 +3705,7 @@
 		prerequisite = {focus = JAP_post_civil_war_reconstruction focus = JAP_old_order_failure}
 		mutually_exclusive = {}
 		relative_position_id = JAP_post_civil_war_reconstruction
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3735,7 +3735,7 @@
 		prerequisite = {focus = JAP_red_japan_diplomacy}
 		mutually_exclusive = {focus = JAP_support_mao}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3769,7 +3769,7 @@
 		mutually_exclusive = {focus = JAP_red_edo}
 		mutually_exclusive = {focus = JAP_red_wind}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3803,7 +3803,7 @@
 		mutually_exclusive = {focus = JAP_limited_interventionism}
 		mutually_exclusive = {focus = JAP_red_wind}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3835,7 +3835,7 @@
 		y = 1
 		prerequisite = {focus = JAP_red_edo}
 		relative_position_id = JAP_red_edo
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3878,7 +3878,7 @@
 		y = 1
 		prerequisite = {focus = JAP_red_edo}
 		relative_position_id = JAP_red_edo
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3910,7 +3910,7 @@
 		prerequisite = {focus = JAP_protect_the_island_from_foreign_ingerence}
 		prerequisite = {focus = JAP_peace_and_prosperity}
 		relative_position_id = JAP_red_edo
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3942,7 +3942,7 @@
 		prerequisite = {focus = JAP_red_japan_diplomacy}
 		mutually_exclusive = {focus = JAP_no_involvement_in_chinese_affairs}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -3987,7 +3987,7 @@
 		mutually_exclusive = {focus = JAP_limited_interventionism}
 		mutually_exclusive = {focus = JAP_red_edo}
 		relative_position_id = JAP_red_japan_diplomacy
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4044,7 +4044,7 @@
 		y = 1
 		prerequisite = {focus = JAP_red_wind focus = JAP_limited_interventionism}
 		relative_position_id = JAP_red_wind
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4085,7 +4085,7 @@
 		y = 1
 		prerequisite = {focus = JAP_support_mao}
 		relative_position_id = JAP_support_mao
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4114,7 +4114,7 @@
 		y = 1
 		prerequisite = {focus = JAP_red_wind focus = JAP_limited_interventionism}
 		relative_position_id = JAP_red_wind
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4162,7 +4162,7 @@
 		y = 2
 		prerequisite = {focus = JAP_overthrow_siamese_government}
 		relative_position_id = JAP_red_wind
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4201,7 +4201,7 @@
 		y = 1
 		prerequisite = {focus = JAP_red_wind focus = JAP_limited_interventionism}
 		relative_position_id = JAP_red_wind
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4249,7 +4249,7 @@
 		y = 2
 		prerequisite = {focus = JAP_secure_vladivostok}
 		relative_position_id = JAP_red_wind
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4283,7 +4283,7 @@
 		y = 2
 		prerequisite = {focus = JAP_ties_with_the_wpk}
 		relative_position_id = JAP_red_wind
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
