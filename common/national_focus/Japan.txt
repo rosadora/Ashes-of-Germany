@@ -4733,6 +4733,9 @@
 				has_government = fascism
 			}
 			is_puppet = no
+			has_army_manpower = {
+				size > 600000
+			}
 		}
 		bypass = {
 		}
@@ -4789,6 +4792,9 @@
 				has_government = fascism
 			}
 			is_puppet = no
+			has_army_manpower = {
+				size > 1000000
+			}
 		}
 		bypass = {
 		}
@@ -4823,6 +4829,9 @@
 				has_government = fascism
 			}
 			is_puppet = no
+			has_army_manpower = {
+				size > 1200000
+			}
 		}
 		bypass = {
 		}
@@ -4854,6 +4863,9 @@
 				has_government = fascism
 			}
 			is_puppet = no
+			has_army_manpower = {
+				size > 1200000
+			}
 		}
 		bypass = {
 		}
@@ -5008,6 +5020,9 @@
 				has_government = fascism
 			}
 			is_puppet = no
+			has_army_manpower = {
+				size > 1000000
+			}
 		}
 		bypass = {
 		}
