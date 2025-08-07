@@ -812,6 +812,8 @@ ideas = {
 					has_government = democratic
 				}
 			}
+
+			picture = state_shintoism
 			
 			removal_cost = -1
 	
@@ -832,6 +834,8 @@ ideas = {
 					has_government = democratic
 				}
 			}
+
+			picture = state_shintoism
 			
 			removal_cost = -1
 	

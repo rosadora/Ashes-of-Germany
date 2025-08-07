@@ -2098,6 +2098,7 @@
 		available = {
 			OR = {
 				has_idea = JAP_zaibatsus_empowered
+				has_idea = JAP_zaibatsus_challenged
 			}
 		}
 		bypass = {
@@ -4593,7 +4594,7 @@
 		completion_reward = {
 		 add_timed_idea = {
 			idea = nanshin_ron
-			days = 800
+			days = 1000
 		 }
 		}
 	}
@@ -4620,6 +4621,12 @@
 			}
 		}
 		bypass = {
+			OR = {
+			NOT = {
+				country_exists = PRS
+			}
+			has_war_with = PRS
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4657,6 +4664,20 @@
 			}
 		}
 		bypass = {
+			OR = {
+				all = {
+					NOT = {
+				country_exists = USR
+			     }
+			    NOT = {
+				country_exists = SOV
+			    }
+				}
+				all = {
+			     has_war_with = USR
+			     has_war_with = SOV
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4890,7 +4911,7 @@
 		completion_reward = {
 		 add_timed_idea = {
 			idea = hokushin_ron
-			days = 800
+			days = 1000
 		 }
 		}
 	}
@@ -5644,6 +5665,10 @@
 		completion_reward = {
 			set_politics = {
 				ruling_party = ultra_nationalism
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.2
 			}
 		 news_event = {
 			id = news.3087
