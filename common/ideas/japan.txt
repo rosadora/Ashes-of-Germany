@@ -139,6 +139,25 @@ ideas = {
 				industry_repair_factor = 0.25
 			} 
 		}
+		masters_of_landings = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_naval_invasion
+
+			removal_cost = -1
+			
+			modifier = {
+				naval_invasion_penalty = -0.2
+				naval_invasion_planning_bonus_speed = 0.25
+				naval_invasion_capacity = 10
+			} 
+		}
 		japanese_ingerence = {
 			
 			allowed = {
@@ -1323,9 +1342,6 @@ ideas = {
 		}
 
 		JAP_superior_will = {
-			allowed = {
-				always = no
-			}
 
 			allowed_civil_war = {
 				always = yes
@@ -1336,9 +1352,39 @@ ideas = {
 			picture = jap_supremacy_of_will
 			
 			modifier = {
-				army_defence_factor = 0.1
-				army_attack_factor = 0.1
-				army_morale_factor = 0.1
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		expanded_refiting_capacities = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_coastal_defense_ships
+			
+			modifier = {
+				refit_speed = 0.2
+			}
+		}
+
+		japanese_agility = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = BRA_air_force
+			
+			modifier = {
+				air_agility_factor = 0.075
 			}
 		}
 
