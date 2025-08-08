@@ -1471,6 +1471,18 @@
  japan_rule_in_moscow:0 "Japanese Rule in Moscow"
  hakko_ichiu:0 "Hakkō Ichiu"
  hakko_ichiu_desc:0 "We will unite the world under a single flag, that of Pan-Asianism, that of Japan, freed from Western imperialism."
+ fading_taisho2:0 "Taishō Rebirth"
+ fading_taisho2_desc:0 ""
+ fading_taisho4:0 "Taishō Rebirth"
+ fading_taisho4_desc:0 ""
+ ban_on_paramilitary_organizations:0 "Ban on Paramilitary Organizations"
+ fading_taisho3:0 "Shōwa Democracy"
+ fading_taisho3_desc:0 "Democracy under Showa needs to change. In this time of military factions and political violence, democrats need to be on equal footing with nationalists and communists."
+ fading_taisho5:0 "Shōwa Democracy"
+ fading_taisho5_desc:0 "Democracy under Showa needs to change. In this time of military factions and political violence, democrats need to be on equal footing with nationalists and communists."
+ JAP_controlled_zaibatsus:0 "Controlled Zaibatsus"
+ zainichi_status:0 "Zainichi Status"
+ zainichi_status_desc:0 "Zainichi Koreans must be protected. They are not Japanese citizens, but we must ensure that persecution is limited while also preventing the national community from weakening."
  ### CHINA ###
  chinese_unity:0 "Chinese Unity"
  ### CROATIA ###

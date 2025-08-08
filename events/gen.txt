@@ -165,3 +165,71 @@ country_event = { #Japanese Chinese puppet annexed by Japan - PRC
 		}
 	}
 }
+
+country_event = { #Join Free Asia
+	id = gen.8
+	title = gen.8.t
+	desc = gen.8.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.8.a
+		ai_chance = {
+			base = 100
+		}
+        FROM = {
+			country_event = {
+				id = gen.9
+				days = 1
+			}
+		}
+	}
+
+    option = {
+		name = gen.8.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = {
+			country_event = {
+				id = gen.10
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Join Free Asia - Positive
+	id = gen.9
+	title = gen.9.t
+	desc = gen.9.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.9.a
+		ai_chance = {
+			base = 100
+		}
+        add_to_faction = FROM
+	}
+}
+
+country_event = { #Join Free Asia - Negative
+	id = gen.10
+	title = gen.10.t
+	desc = gen.10.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.10.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

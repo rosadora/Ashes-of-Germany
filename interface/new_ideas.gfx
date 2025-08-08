@@ -475,4 +475,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/hakko_ichiu_id.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_rebirth_taisho"
+		texturefile = "gfx/interface/ideas/rebirth_taisho.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_seisen"
+		texturefile = "gfx/interface/ideas/seisen.dds"
+	}
+
 }

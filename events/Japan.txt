@@ -620,3 +620,505 @@ country_event = {
 		}
 	}
 }
+# Kodoha Coup - Civil War for Democracy
+country_event = {
+	id = jap.23
+	title = jap.23.t
+	desc = jap.23.d
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.23.a
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+		end_puppet = MAN
+		end_puppet = MEN
+		end_puppet = FER
+		}
+		start_civil_war = {
+			ideology = fascism
+			size = 0.4
+			states = {534 535 282 533 536 555 537 655 609 745 532}
+			hidden_effect = {
+            }
+		}
+	}
+}
+# Pact with USA - Request
+country_event = {
+	id = jap.24
+	title = jap.24.t
+	desc = jap.24.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.24.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			country_event = {
+				id = jap.25
+				days = 1
+			}
+		}
+	}
+
+	option = { #Deny
+		name = jap.24.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.26
+				days = 1
+			}
+		}
+	}
+}
+# Pact with USA - Accept
+country_event = {
+	id = jap.25
+	title = jap.25.t
+	desc = jap.25.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.25.a
+		ai_chance = {
+			base = 100
+		}
+		give_guarantee = USA
+		USA = {
+			give_guarantee = JAP
+		}
+	}
+}
+# Pact with USA - Deny
+country_event = {
+	id = jap.26
+	title = jap.26.t
+	desc = jap.26.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.26.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Cooperation with Kuomintang
+country_event = {
+	id = jap.27
+	title = jap.27.t
+	desc = jap.27.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.27.a
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			country_event = {
+				id = jap.28
+				days = 1
+			}
+		}
+	}
+
+	option = { #Deny
+		name = jap.27.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = {
+				id = jap.29
+				days = 1
+			}
+		}
+	}
+}
+# Cooperation with Kuomintang - Accept
+country_event = {
+	id = jap.28
+	title = jap.28.t
+	desc = jap.28.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.28.a
+		ai_chance = {
+			base = 100
+		}
+		CHI = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				popularity = 0.6
+				ideology = democratic
+			}
+		}
+		IF = {
+			limit = {
+				controls_state = 609
+			}
+			CHI = {
+				transfer_state = 609
+			}
+		}
+		IF = {
+			limit = {
+				controls_state = 524
+			}
+			CHI = {
+				transfer_state = 524
+			}
+		}
+		IF = {
+			limit = {
+				controls_state = 745
+			}
+			CHI = {
+				transfer_state = 745
+			}
+		}
+		IF = {
+			limit = {
+				MAN = {
+					is_subject_of = JAP
+				}
+			}
+			CHI = {
+				annex_country = {
+                 target = MAN
+                 transfer_troops = yes
+                }
+			}
+		}
+		IF = {
+			limit = {
+				MEN = {
+					is_subject_of = JAP
+				}
+			}
+			CHI = {
+				annex_country = {
+                 target = MEN
+                 transfer_troops = yes
+                }
+			}
+		}
+	}
+}
+# Cooperation with Kuomintang - Deny
+country_event = {
+	id = jap.29
+	title = jap.29.t
+	desc = jap.29.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.26.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Treaty of Manilla
+country_event = {
+	id = jap.30
+	title = jap.30.t
+	desc = jap.30.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.30.a
+		ai_chance = {
+			base = 80
+		}
+		JAP = {
+			country_event = {
+				id = jap.31
+				days = 1
+			}
+		}
+		end_puppet = PHI
+	}
+
+	option = { #Deny
+		name = jap.30.b
+		ai_chance = {
+			base = 20
+		}
+		JAP = {
+			country_event = {
+				id = jap.32
+				days = 1
+			}
+		}
+	}
+}
+# Treaty of Manilla - Accept
+country_event = {
+	id = jap.31
+	title = jap.31.t
+	desc = jap.31.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.31.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+# Treaty of Manilla - Deny
+country_event = {
+	id = jap.32
+	title = jap.32.t
+	desc = jap.32.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.32.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Treaty of Hanoi
+country_event = {
+	id = jap.33
+	title = jap.33.t
+	desc = jap.33.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.33.a
+		ai_chance = {
+			base = 80
+		}
+		JAP = {
+			country_event = {
+				id = jap.34
+				days = 1
+			}
+		}
+		end_puppet = VIN
+	}
+
+	option = { #Deny
+		name = jap.33.b
+		ai_chance = {
+			base = 20
+		}
+		JAP = {
+			country_event = {
+				id = jap.35
+				days = 1
+			}
+		}
+	}
+}
+# Treaty of Hanoi - Accept
+country_event = {
+	id = jap.34
+	title = jap.34.t
+	desc = jap.34.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.34.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+# Treaty of Manilla - Deny
+country_event = {
+	id = jap.35
+	title = jap.35.t
+	desc = jap.35.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.35.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Treaty of Singapore
+country_event = {
+	id = jap.36
+	title = jap.36.t
+	desc = jap.36.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.36.a
+		ai_chance = {
+			base = 80
+		}
+		JAP = {
+			country_event = {
+				id = jap.34
+				days = 1
+			}
+		}
+		end_puppet = MAL
+	}
+
+	option = { #Deny
+		name = jap.36.b
+		ai_chance = {
+			base = 20
+		}
+		JAP = {
+			country_event = {
+				id = jap.35
+				days = 1
+			}
+		}
+	}
+}
+# Treaty of Singapore - Accept
+country_event = {
+	id = jap.37
+	title = jap.37.t
+	desc = jap.37.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.37.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+# Treaty of Singapore - Deny
+country_event = {
+	id = jap.38
+	title = jap.38.t
+	desc = jap.38.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.38.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+# Treaty of Batavia
+country_event = {
+	id = jap.39
+	title = jap.39.t
+	desc = jap.39.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = jap.39.a
+		ai_chance = {
+			base = 80
+		}
+		JAP = {
+			country_event = {
+				id = jap.34
+				days = 1
+			}
+		}
+		end_puppet = INS
+	}
+
+	option = { #Deny
+		name = jap.39.b
+		ai_chance = {
+			base = 20
+		}
+		JAP = {
+			country_event = {
+				id = jap.35
+				days = 1
+			}
+		}
+	}
+}
+# Treaty of Batavia - Accept
+country_event = {
+	id = jap.40
+	title = jap.40.t
+	desc = jap.40.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.40.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+# Treaty of Batavia - Deny
+country_event = {
+	id = jap.41
+	title = jap.41.t
+	desc = jap.41.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.41.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

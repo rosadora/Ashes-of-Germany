@@ -1937,13 +1937,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_seiyukai_victory"
-	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
+	name = "GFX_goal_challenge_kodoha"
+	texturefile = "gfx/interface/goals/challenge_kodoha.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_goal_seiyukai_victory"
-	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
+	name = "GFX_goal_minshuha"
+	texturefile = "gfx/interface/goals/minshuha.dds"			
 	}
 
 	SpriteType = {

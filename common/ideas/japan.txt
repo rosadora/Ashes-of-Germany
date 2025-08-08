@@ -10,6 +10,15 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+
 			picture = generic_japanese_conflict
 
 			removal_cost = -1
@@ -27,6 +36,15 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+
 			picture = generic_japanese_conflict
 
 			removal_cost = -1
@@ -42,6 +60,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
 			}
 
 			picture = seisen
@@ -64,6 +91,15 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+
 			picture = SOV_crowning_jewel_of_russia
 
 			removal_cost = -1
@@ -81,6 +117,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
 			}
 
 			picture = hakko_ichiu_id
@@ -101,6 +146,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
 			}
 
 			picture = CZE_planning_bonus
@@ -136,6 +190,15 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+
 			picture = tur_sub_zero_survival_training
 
 			removal_cost = -1
@@ -154,6 +217,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
 			}
 
 			picture = SOV_a_church_of_the_catacombs
@@ -193,6 +265,31 @@ ideas = {
 				research_speed_factor = -0.05
 			} 
 		}
+		zainichi_status = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_government = democratic
+			}
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = -0.025
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+				research_speed_factor = -0.025
+			} 
+		}
 		cheap_korean_labor = {
 			
 			allowed = {
@@ -200,6 +297,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = fascism 
+					has_government = ultra_nationalism
+					has_government = neutrality
+					has_government = democratic
+				}
 			}
 
 			picture = RAJ_partition_india_united
@@ -221,6 +327,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+			available = {
+				OR = {
+					has_government = social_liberalism 
+					has_government = social_democracy 
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = communism
+				}
 			}
 
 			picture = prc_low_popular_support3
@@ -303,6 +418,15 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = social_democracy 
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = HUN_resurgent_communist_party_idea
 
 			removal_cost = -1
@@ -382,6 +506,15 @@ ideas = {
 
 			removal_cost = -1
 			
+			available = {
+				OR = {
+					has_government = social_democracy 
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			modifier = { 
 				conscription = 0.02
 			}
@@ -409,6 +542,15 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_democracy 
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = great_wall_of_japan
@@ -461,6 +603,138 @@ ideas = {
 				social_liberalism_drift = -0.01
 			} 
 		}
+		fading_taisho2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_liberalism 
+					has_government = democratic
+				}
+			}
+
+			picture = rebirth_taisho
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			} 
+		}
+		fading_taisho3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_liberalism 
+					has_government = democratic
+				}
+			}
+
+			picture = rebirth_taisho
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.2
+				stability_factor = -0.15
+				democratic_drift = 0.01
+				social_liberalism_drift = 0.01
+			} 
+		}
+		fading_taisho4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_liberalism 
+					has_government = democratic
+				}
+			}
+
+			picture = rebirth_taisho
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				democratic_drift = 0.01
+				social_liberalism_drift = 0.01
+			} 
+		}
+		fading_taisho5 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					has_government = social_liberalism 
+					has_government = democratic
+				}
+			}
+
+			picture = rebirth_taisho
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				democratic_drift = 0.01
+				social_liberalism_drift = 0.01
+			} 
+		}
+		ban_on_paramilitary_organizations = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = social_liberalism 
+					has_government = democratic
+				}
+			}
+
+			picture = ARG_military_government
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_gain = 0.1
+				stability_factor = -0.2
+				ultra_nationalism_drift = -0.07
+				fascism_drift = -0.02
+			} 
+		}
 		the_split_within = {
 			
 			allowed = {
@@ -468,6 +742,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = generic_communism_drift_bonus
@@ -491,6 +773,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = FRA_scw_intervention_republicans_focus
 
 			removal_cost = -1
@@ -508,6 +798,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = SOV_system_decentralization
@@ -530,6 +828,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = GER_wage_war_on_capitalism
 
 			removal_cost = -1
@@ -548,6 +854,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = GER_wage_war_on_capitalism
@@ -586,6 +900,36 @@ ideas = {
 				conscription = 0.02
 			} 
 		}
+		JAP_controlled_zaibatsus = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+				}
+			}
+
+			picture = jap_zaibatsu_control
+
+			removal_cost = -1
+			
+			modifier = { 
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				trade_laws_cost_factor = 0.1
+				economy_cost_factor = 0.1
+			} 
+		}
 		state_zaibatsus = {
 			
 			allowed = {
@@ -593,6 +937,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = jap_zaibatsu_control
@@ -613,6 +965,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = jap_zaibatsu_control
@@ -638,6 +998,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = jap_zaibatsu_control
 
 			removal_cost = -1
@@ -660,6 +1028,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = SOV_scientist_defect
 
 			removal_cost = -1
@@ -676,6 +1052,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = AFG_neutrality_graduates
@@ -697,6 +1081,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = AFG_communist_graduates
 
 			removal_cost = -1
@@ -713,6 +1105,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = chi_war_of_resistance3
@@ -735,6 +1135,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = SOV_rehabilitated_military_ns_nsb_ccp_sov_compatibility
 
 			removal_cost = -1
@@ -751,6 +1159,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = FRA_army_of_aggression_focus
@@ -774,6 +1190,14 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = jap_hirohito
 
 			removal_cost = -1
@@ -792,6 +1216,17 @@ ideas = {
 				always = yes
 			}
 
+			available = {
+				OR = {
+					has_government = social_liberalism
+					has_government = democratic
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = communism
+					has_government = libertarian_socialism
+				}
+			}
+
 			picture = ARG_maintain_neutrality
 
 			removal_cost = -1
@@ -805,12 +1240,6 @@ ideas = {
 		state_shintoism = {
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = democratic
-				}
 			}
 
 			picture = state_shintoism

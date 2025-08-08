@@ -42,6 +42,366 @@ JAP_1936_elections = {
 			factor = 1
 		}
 	}
+	JAP_ally_china = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			CHI = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			CHI = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_siam = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			SIA = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			SIA = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_mongolia = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			MON = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			MON = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_philippines = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			PHI = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			PHI = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_malaya = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			MAL = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			MAL = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_indochina = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			VIN = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			VIN = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_indonesia = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			INS = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			INS = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_transamur = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			FER = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			FER = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
+	JAP_ally_korea = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			KOR = {
+				is_puppet = no
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				is_in_faction = no 
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_cooperate_with_democratic_asia
+		}
+
+		cost = 30
+
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			KOR = {
+				country_event = {
+					id = gen.8
+					days = 1
+				}
+			}
+		}
+	}
 	JAP_sue_for_peace_CHI = {
 
 		allowed = {
