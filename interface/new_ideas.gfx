@@ -326,6 +326,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ideology_anarcho_nihilism"
+		texturefile = "gfx/interface/ideologies/anarcho_nihilism.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_revolutionary_mobilization"
 		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
 	}

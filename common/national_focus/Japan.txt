@@ -1291,14 +1291,11 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		 531 = {
-			add_building_construction = {
-				type = nuclear_facility
-				level = 1
-				instant_build = yes
-				province = 11960
+		 add_tech_bonus = {
+				category = nuclear 
+				uses = 2
+				bonus = 0.75
 			}
-		 }
 		}
 	}
 	focus = {
@@ -1322,11 +1319,14 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_tech_bonus = {
-				category = nuclear 
-				uses = 2
-				bonus = 0.75
+			531 = {
+			add_building_construction = {
+				type = nuclear_facility
+				level = 1
+				instant_build = yes
+				province = 11960
 			}
+		 }
 		}
 	}
 	focus = {
@@ -2119,7 +2119,7 @@
 		prerequisite = {}
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 		}
@@ -2149,7 +2149,7 @@
 		relative_position_id = JAP_face_the_peace_preservation_law
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 		}
@@ -2192,7 +2192,7 @@
 		relative_position_id = JAP_face_the_peace_preservation_law
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 		}
@@ -2222,7 +2222,7 @@
 		prerequisite = {focus = JAP_revive_the_socialist_party}
 		cost = 2
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 		}
@@ -2287,7 +2287,7 @@
 		relative_position_id = JAP_hanran
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2316,7 +2316,7 @@
 		relative_position_id = JAP_hanran
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2347,7 +2347,7 @@
 		relative_position_id = JAP_hanran
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2380,7 +2380,7 @@
 		relative_position_id = JAP_hanran
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		available = {
 			OR = {
@@ -2838,6 +2838,10 @@
 			ruling_party = libertarian_socialism
 		 }
 		 add_stability = -0.05
+		 country_event = {
+			id = jap.42
+			days = 1
+		 }
 		}
 	}
 	focus = {
@@ -5741,6 +5745,7 @@
 			id = news.3087
 			days = 1
 		 }
+		 remove_ideas = JAP_hirohito
 		}
 	}
 	focus = {

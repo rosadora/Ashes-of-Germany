@@ -418,6 +418,9 @@ ideologies = {
 
 			libertarian_socialism_category = {
 			}
+
+			anarcho_nihilism = {
+			}
 			
 		}
 

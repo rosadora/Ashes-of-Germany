@@ -1122,3 +1122,44 @@ country_event = {
 		}
 	}
 }
+# Clash in the Sekirankai
+country_event = {
+	id = jap.42
+	title = jap.42.t
+	desc = jap.42.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = jap.42.a
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { 
+		name = jap.42.b
+		ai_chance = {
+			base = 100
+		}
+		create_country_leader = {
+	        name = "Fumiko Kaneko"
+	        desc = "POLITICS_FUMIKO_KANEKO_DESC"
+	        picture = "gfx/leaders/JAP/Fumiko_Kaneko.dds"
+	        expire = "1960.1.16"
+	        ideology = anarcho_nihilism
+	        traits = {
+	       }
+        }
+		set_cosmetic_tag = JAP_NIH
+		set_party_name = {
+           ideology = libertarian_socialism
+           long_name = JAP_annih_long
+           name = JAP_annih
+        }
+		remove_power_balance = {
+          id = JAP_power_balance
+        }
+	}
+}
