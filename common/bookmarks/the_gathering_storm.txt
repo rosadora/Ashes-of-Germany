@@ -64,18 +64,18 @@ bookmarks = {
 				HUN_liberal_empire
 			}
 		}
-		"RCO"={
-			history = "RCO_GATHERING_STORM_DESC"
+		"JAP"={
+			history = "JAP_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				treaty_of_koln
-				rise_of_nationalism
-				the_industrial_heart_of_germany
+				fading_taisho
+				marginalized_korean_immigration
+				JAP_militarism
 			}	
 			focuses = {
-				RCO_the_rhineland_under_the_french_flag
-				RCO_ensure_our_sovereignty
-				RCO_germany_united
+				JAP_hakko_ichiu
+				JAP_friendship_across_pacific
+				JAP_new_dawn_for_socialism
 			}	
 				
 		}
@@ -111,6 +111,23 @@ bookmarks = {
 
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		"RCO"={
+			minor = yes
+			history = "RCO_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				treaty_of_koln
+				rise_of_nationalism
+				the_industrial_heart_of_germany
+			}	
+			focuses = {
+				RCO_the_rhineland_under_the_french_flag
+				RCO_ensure_our_sovereignty
+				RCO_germany_united
+			}	
+				
 		}
 
 		"HAN"={
