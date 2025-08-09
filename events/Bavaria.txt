@@ -220,3 +220,70 @@ country_event = {
 	    }
 	}
 }
+country_event = { #Anschluss - Request
+	id = bavaria.10
+	title = bavaria.10.t
+	desc = bavaria.10.d
+	picture = GFX_report_event_FIN_kallio_president
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.10.a
+		ai_chance = {
+			base = 100
+		}
+		BAY = {
+		country_event = {
+			id = bavaria.11
+			days = 1
+		}
+		}
+	}
+	option = {
+		name = bavaria.10.b
+		ai_chance = {
+			base = 0
+		}
+		BAY = {
+		country_event = {
+			id = bavaria.12
+			days = 1
+		}
+		}
+	}
+}
+country_event = { #Anschluss - Success
+	id = bavaria.11
+	title = bavaria.11.t
+	desc = bavaria.11.d
+	picture = GFX_report_event_FIN_kallio_president
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.11.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = {
+			target = AUS
+			transfer_troops = yes
+		}
+	}
+}
+country_event = { #Anschluss - Failure
+	id = bavaria.12
+	title = bavaria.12.t
+	desc = bavaria.12.d
+	picture = GFX_report_event_FIN_kallio_president
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.12.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

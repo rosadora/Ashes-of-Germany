@@ -826,6 +826,17 @@
 				type = annex_everything
 				target = SWI
 			}
+			IF = {
+				limit = {
+					is_in_faction_with = AUS
+				}
+				AUS = {
+					country_event = {
+						id = bavaria.10
+						days = 1
+					}
+				}
+			}
 		}
 	}
 	focus = {
