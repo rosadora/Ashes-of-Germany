@@ -44,12 +44,46 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		gift_economy_law = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			visible = {
+				has_completed_focus = JAP_abolish_money
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				conversion_cost_civ_to_mil_factor = 0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				global_building_slots_factor = 0.3
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
 		red_japan_isolation = {
 
 			removal_cost = -1
 
 			allowed = {
 				always = no
+			}
+
+			visible = {
+				has_completed_focus = JAP_red_edo
 			}
 
 			modifier = {
@@ -59,7 +93,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.1
 				production_speed_dockyard_factor = -0.1
 				conversion_cost_civ_to_mil_factor = -0.1
-				conversion_cost_mil_to_civ_factor = 0.2
+				conversion_cost_mil_to_civ_factor = 0.1
 				generate_wargoal_tension = 1.00
 				join_faction_tension = 0.20
 				guarantee_tension = 0.75
@@ -75,10 +109,6 @@ ideas = {
 		}
 
 		isolation = {
-
-			visible = {
-				has_completed_focus = JAP_red_edo
-			}
 
 			allowed = {
 				always = no

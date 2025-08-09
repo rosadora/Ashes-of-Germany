@@ -801,31 +801,8 @@
 		}
 
 		completion_reward = {
-			create_faction = chinese_united_front
-			PRC = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			SHX = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			XSM = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			GXC = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			YUN = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			SIK = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			MEN = {
-				unlock_decision_tooltip = gen_defend_china
-			}
-			MAN = {
-				unlock_decision_tooltip = gen_defend_china
-			}
+			add_war_support = 0.1
+		}
 		}
 	}
 

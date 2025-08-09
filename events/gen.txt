@@ -120,6 +120,11 @@ country_event = { #Japanese Chinese puppet annexed by Japan
 	trigger = {
 		is_in_faction_with = PRC 
 		OR = {
+			has_government = classical_marxism
+			has_government = communism 
+			has_government = libertarian_socialism
+		}
+		OR = {
 			original_tag = CHI
 			original_tag = MEN
 			original_tag = MAN

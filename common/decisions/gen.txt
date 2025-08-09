@@ -982,30 +982,29 @@ gen_join_chinese_united_front = {
 
 		available = {
 			CHI = {
-				has_completed_focus = CHI_united_front
-				has_war_with = JAP
+				is_faction_leader = yes 
 			}
 		}
 
 		visible = {
 			OR = {
+				original_tag = XSM
 				original_tag = SHX
 				original_tag = SIK
-				original_tag = XSM
 				original_tag = YUN
+				original_tag = GXC
 				original_tag = MEN
 				original_tag = MAN
 				original_tag = PRC
-				original_tag = GXC
 			}
-			is_puppet = no
 			is_in_faction = no
+			is_subject = no
 		}
 
 		cancel_trigger = {
 		}
 
-		cost = 20
+		cost = 0
 		priority = 20
 		days_remove = 5
 		fire_only_once = yes

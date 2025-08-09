@@ -18,5 +18,17 @@ ideas = {
 				surrender_limit = 0.2
 			} 
 		}
+		china_under_attack = {
+			
+			allowed = {
+			}
+
+			picture = chi_wargaming_division
+
+			removal_cost = -1
+			
+			modifier = { 
+			} 
+		}
 	}
 }

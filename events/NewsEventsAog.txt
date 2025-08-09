@@ -1573,3 +1573,17 @@ news_event = { #Kodoha Coup in Japan
 		name = news.3087.a
 	}
 }
+news_event = { #Chinese United Front
+    id = news.3088
+	title = news.3088.t
+	desc = news.3088.d
+	picture = GFX_news_event_japanese_parade
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3088.a
+	}
+}

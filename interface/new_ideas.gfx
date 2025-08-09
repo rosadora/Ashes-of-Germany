@@ -486,8 +486,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_seisen"
-		texturefile = "gfx/interface/ideas/seisen.dds"
+		name = "GFX_idea_gift_economy_law"
+		texturefile = "gfx/interface/ideas/gift_economy_law.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_chaos_star"
+		texturefile = "gfx/interface/ideas/chaos_star.dds"
 	}
 
 }

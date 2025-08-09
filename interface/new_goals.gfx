@@ -1950,4 +1950,24 @@ spriteTypes = {
 	name = "GFX_goal_seiyukai_victory"
 	texturefile = "gfx/interface/goals/seiyukai_victory.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_fumiko_take_over"
+	texturefile = "gfx/interface/goals/fumiko_take_over.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_burn_everything_focus"
+	texturefile = "gfx/interface/goals/burn_everything_focus.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_burn_the_world"
+	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_minshuha"
+	texturefile = "gfx/interface/goals/minshuha.dds"			
+	}
 }

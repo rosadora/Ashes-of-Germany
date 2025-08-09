@@ -13,11 +13,12 @@ country_event = {
 
 	trigger = {
 		tag = CHI 
-		has_completed_focus = CHI_united_front
+		is_faction_leader = yes
 		has_war = no
+		NOT = {
+			has_idea = china_under_attack
+		}
 	}
-
-	fire_only_once = yes
 	
 	option = { #Dissolve the Faction
 		name = china.1.a
@@ -25,5 +26,534 @@ country_event = {
 			base = 50
 		}
 		dismantle_faction = yes
+	}
+}
+# China under Attack
+country_event = {
+	id = china.2
+	title = china.2.t
+	desc = china.2.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		tag = CHI 
+		NOT = {
+			is_faction_leader = yes
+			is_in_faction = yes
+		}
+		OR = {
+			AND = {
+			has_defensive_war = yes
+			has_war_with_major = yes
+			}
+			AND = {
+			PRC = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			XSM = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			GXC = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			SHX = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			YUN = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			XSM = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			SIK = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			MEN = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+			AND = {
+			MAN = {
+				is_subject = no
+				has_defensive_war = yes
+				has_war_with_major = yes
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+			}
+		}
+	}
+	
+	option = { #Create the United Front
+		name = china.2.a
+		ai_chance = {
+			base = 50
+		}
+		create_faction = chinese_united_front
+		add_timed_idea = {
+			idea = china_under_attack
+			days = 200
+		}
+		news_event = {
+			id = news.3088
+			days = 1
+		}
+			PRC = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			SHX = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			XSM = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			GXC = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			YUN = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			SIK = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			MEN = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+			MAN = {
+				unlock_decision_tooltip = gen_defend_china
+			}
+	}
+}
+# Japan offers Peace
+country_event = {
+	id = china.3
+	title = china.3.t
+	desc = china.3.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = { #Victory!
+		name = china.3.a
+		ai_chance = {
+			base = 50
+		}
+		IF = {
+			limit = {
+				MAN = {
+					is_subject_of = JAP
+				}
+				controls_state = 328
+			}
+			annex_country = {
+				target = MAN
+				transfer_troops = no
+			}
+		}
+		IF = {
+			limit = {
+				MAN = {
+					is_subject_of = JAP
+				}
+				PRC = {
+				controls_state = 328
+				}
+			}
+			PRC = {
+			annex_country = {
+				target = MAN
+				transfer_troops = no
+			}
+			}
+		}
+		IF = {
+			limit = {
+				MEN = {
+					is_subject_of = JAP
+				}
+				controls_state = 611
+			}
+			annex_country = {
+				target = MEN
+				transfer_troops = no
+			}
+		}
+		IF = {
+			limit = {
+				MEN = {
+					is_subject_of = JAP
+				}
+				PRC = {
+				controls_state = 611
+				}
+			}
+			PRC = {
+			annex_country = {
+				target = MEN
+				transfer_troops = no
+			}
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 609
+				}
+				controls_state = 609
+			}
+			transfer_state = 609
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 609
+				}
+				PRC = {
+				controls_state = 609
+				}
+			}
+			PRC = {
+			transfer_state = 609
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 745
+				}
+				controls_state = 745
+			}
+			transfer_state = 745
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 745
+				}
+				PRC = {
+				controls_state = 745
+				}
+			}
+			PRC = {
+			transfer_state = 745
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 716
+				}
+				controls_state = 716
+			}
+			transfer_state = 716
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 716
+				}
+				PRC = {
+				controls_state = 716
+				}
+			}
+			PRC = {
+			transfer_state = 716
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 610
+				}
+				controls_state = 610
+			}
+			transfer_state = 610
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 610
+				}
+				PRC = {
+				controls_state = 610
+				}
+			}
+			PRC = {
+			transfer_state = 610
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 715
+				}
+				controls_state = 715
+			}
+			transfer_state = 715
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 715
+				}
+				PRC = {
+				controls_state = 715
+				}
+			}
+			PRC = {
+			transfer_state = 715
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 328
+				}
+				controls_state = 328
+			}
+			transfer_state = 328
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 328
+				}
+				PRC = {
+				controls_state = 328
+				}
+			}
+			PRC = {
+			transfer_state = 328
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 717
+				}
+				controls_state = 717
+			}
+			transfer_state = 717
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 717
+				}
+				PRC = {
+				controls_state = 717
+				}
+			}
+			PRC = {
+			transfer_state = 717
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 714
+				}
+				controls_state = 714
+			}
+			transfer_state = 714
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 714
+				}
+				PRC = {
+				controls_state = 714
+				}
+			}
+			PRC = {
+			transfer_state = 714
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 761
+				}
+				controls_state = 761
+			}
+			transfer_state = 761
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 761
+				}
+				PRC = {
+				controls_state = 761
+				}
+			}
+			PRC = {
+			transfer_state = 761
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 612
+				}
+				controls_state = 612
+			}
+			transfer_state = 612
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 612
+				}
+				PRC = {
+				controls_state = 612
+				}
+			}
+			PRC = {
+			transfer_state = 612
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 611
+				}
+				controls_state = 611
+			}
+			transfer_state = 611
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 611
+				}
+				PRC = {
+				controls_state = 611
+				}
+			}
+			PRC = {
+			transfer_state = 611
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 524
+				}
+				controls_state = 524
+			}
+			transfer_state = 524
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 524
+				}
+				PRC = {
+				controls_state = 524
+				}
+			}
+			PRC = {
+			transfer_state = 524
+			}
+		}
+		IF = {
+			limit = {
+			JAP = {
+				owns_state = 525
+				owns_state = 973
+				owns_state = 974
+				owns_state = 975
+				owns_state = 976
+				owns_state = 977
+				owns_state = 978
+				owns_state = 527
+				owns_state = 971
+				owns_state = 972
+				owns_state = 969
+				owns_state = 970
+			}
+			}
+			JAP = {
+			release = KOR
+			}
+		}
+		IF = {
+			limit = {
+			FER = {
+				is_subject_of = JAP
+			}
+			}
+			JAP = {
+			end_puppet = FER
+			}
+		}
+		JAP = {
+			white_peace = CHI
+			white_peace = PRC
+			white_peace = SHX
+			white_peace = SIK
+			white_peace = XSM
+			white_peace = YUN
+			white_peace = GXC
+			white_peace = MEN
+			white_peace = MAN
+		}
 	}
 }

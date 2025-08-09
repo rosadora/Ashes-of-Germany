@@ -1483,8 +1483,12 @@
  JAP_controlled_zaibatsus:0 "Controlled Zaibatsus"
  zainichi_status:0 "Zainichi Status"
  zainichi_status_desc:0 "Zainichi Koreans must be protected. They are not Japanese citizens, but we must ensure that persecution is limited while also preventing the national community from weakening."
+ gift_economy_law:0 "Gift Economy"
+ burn_everything:0 "Burn Everything"
+ burn_everything_desc:0 "This world is rotten, we will hasten to destroy all structures that oppress human beings, including all governments around the world."
  ### CHINA ###
  chinese_unity:0 "Chinese Unity"
+ china_under_attack:0 "China under Attack"
  ### CROATIA ###
  ustasa:0 "Ustaša"
  partisan_spirit:0 "Partisan Spirit"
