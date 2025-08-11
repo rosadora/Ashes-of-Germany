@@ -5909,6 +5909,7 @@
  JAP_burn_everything_desc:0 "This world is rotten, we will hasten to destroy all structures that oppress human beings, including all governments around the world."
  JAP_burn_the_world:0 "Burn the World"
  JAP_burn_the_world_desc:0 "We will liberate the peoples of the world from state oppression. Let the proletarian militias advance!"
+ unlock_army_chief_hajime_sugiyama:0 "Unlocks §YArmy Chief§! : §YHajime Sugiyama§!"
  ### CROATIA ###
  CRO_has_give_up_yugoslavian_claims:0 "§RWe will give up our claims on Serbia and have claims on Bosnia!§!"
  CRO_recognize_rakosi:0 "Recognize Rakosi's Regime"

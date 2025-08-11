@@ -435,6 +435,16 @@ leader_traits = {
 		}
 	}
 
+	pacifist_democrat = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = -0.1
+		global_building_slots_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	the_tsar_of_the_tsar = {
 		random = no
 		political_power_factor = 0.15
@@ -2459,8 +2469,9 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		training_time_factor = -0.05
-		fascism_drift = 0.1
+		training_time_factor = -0.15
+		org_loss_at_low_org_factor = -0.1
+		fascism_drift = 0.02
 	}
 
 	devoted_corporatist = {
@@ -2509,6 +2520,14 @@ leader_traits = {
 
 		political_power_factor = 0.05
 		communism_drift = 0.1
+	}
+
+	marxist_planifier = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.15
 	}
 
 	marxist_priest = {

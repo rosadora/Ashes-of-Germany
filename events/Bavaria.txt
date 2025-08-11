@@ -167,6 +167,23 @@ country_event = {
 	}
 }
 country_event = {
+	id = bavaria.7
+	title = bavaria.7.t
+	desc = bavaria.7.d
+	picture = GFX_report_event_gre_city_devastated
+
+	is_triggered_only = yes
+
+	option = {
+		name = bavaria.7.a
+		ai_chance = {
+			base = 100
+		}
+		remove_ideas = tension_on_the_left
+		remove_ideas = tension_on_the_left2
+	}
+}
+country_event = {
 	id = bavaria.8
 	title = bavaria.8.t
 	desc = bavaria.8.d
@@ -196,28 +213,6 @@ country_event = {
 			base = 100
 		}
 		add_ideas = reactionary_offensive
-	}
-}
-country_event = {
-	id = bavaria.7
-	title = bavaria.7.t
-	desc = bavaria.7.d
-	picture = GFX_report_event_gre_city_devastated
-
-	is_triggered_only = yes
-
-	option = {
-		name = bavaria.7.a
-		ai_chance = {
-			base = 100
-		}
-		remove_ideas = tension_on_the_left
-		remove_ideas = tension_on_the_left2
-		start_civil_war = {
-        ideology = libertarian_socialism
-        size = 0.3
-        states = 52
-	    }
 	}
 }
 country_event = { #Anschluss - Request

@@ -1145,7 +1145,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				conscription = 0.03
+				conscription = 0.01
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 				production_speed_bunker_factor = 0.1
@@ -1267,6 +1267,10 @@ ideas = {
 				always = no
 			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
 			picture = state_shintoism
 			
 			removal_cost = -1
@@ -1284,9 +1288,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-					has_government = democratic
-				}
+				always = yes
 			}
 
 			picture = state_shintoism
@@ -2710,7 +2712,7 @@ ideas = {
 			}
 			
 			available = {
-				has_completed_focus = JAP_agility_focus
+				has_completed_focus = JAP_fighter_focus
 			}
 			
 			research_bonus = {

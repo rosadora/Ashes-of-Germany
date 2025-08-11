@@ -435,6 +435,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = japanese_agility
+		 unlock_military_industrial_organization_tooltip = mio:JAP_aichi_organization
 		}
 	}
 	focus = {
@@ -525,6 +526,7 @@
 				uses = 1
 				category = light_air	
 			}
+			unlock_military_industrial_organization_tooltip = mio:JAP_mitsubishi_organization
 		}
 	}
 	focus = {
@@ -705,6 +707,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 army_experience = 45
+		 custom_effect_tooltip = unlock_army_chief_hajime_sugiyama
 		}
 	}
 	focus = {
@@ -897,6 +900,7 @@
 				has_idea = state_zaibatsus
 				has_idea = state_zaibatsus2
 				has_idea = state_zaibatsus3
+				has_idea = JAP_controlled_zaibatsus
 			}
 		}
 		bypass = {
