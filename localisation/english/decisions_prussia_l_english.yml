@@ -111,6 +111,9 @@
  strike_prussia:0 "Strike Prussia"
  strike_rhineland:0 "Strike Rhineland"
  proclaim_german_unity:0 "Proclaim German Unity"
+ gen_potato_edition:0 "Ashes of Germany : Potato Edition"
+ gen_colonial_powers_annex_their_puppets_fra:0 "No French Puppets in Africa"
+ gen_colonial_powers_annex_their_puppets_eng:0 "No British Puppets in Africa"
  ### LITHUANIA ###
  LIT_lithuanian_politics:0 "Lithuanian Politics"
  LIT_konigsberg_conference:0 "Konigsberg Conference"

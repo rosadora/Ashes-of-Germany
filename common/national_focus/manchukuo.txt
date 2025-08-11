@@ -441,11 +441,9 @@
 	focus = {
 		id = MAN_obedience
 		icon = GFX_focus_CZE_german_puppet
-		prerequisite = { focus = MAN_army_modernization }
-		mutually_exclusive = { focus = MAN_assertiveness }
+		prerequisite = {  }
 		x = -2
-		y = 4
-		relative_position_id = MAN_army_modernization
+		y = 0
 
 		cost = 10
 
@@ -454,7 +452,10 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_idea = MAN_banditry
+			}
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -488,7 +489,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -535,7 +536,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -550,7 +551,10 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			country_event = wtt_manchukou.11
+			add_timed_idea = {
+				idea = five_year_plan 
+				days = 1825
+			}
 		}
 	}
 
@@ -569,7 +573,7 @@
 		}
 
 		available = {
-			NOT = { has_war_with = JAP }
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -629,6 +633,7 @@
 					is_fully_controlled_by = ROOT
 				}
 			}
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -738,7 +743,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -785,6 +790,7 @@
 
 		available = {
 			716 = { is_fully_controlled_by = ROOT }
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -826,7 +832,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -862,25 +868,9 @@
 		}
 
 		available = {
-			if = {
-				limit = { has_idea = MAN_five_year_plan_air }
-				NOT = { has_idea = MAN_five_year_plan_air }
-			}
-			if = {
-				limit = { has_idea = MAN_five_year_plan_tank }
-				NOT = { has_idea = MAN_five_year_plan_tank }
-			}
-			if = {
-				limit = { has_idea = MAN_five_year_plan_industry }
-				NOT = { has_idea = MAN_five_year_plan_industry }
-			}
-			if = {
-				limit = {
-					NOT = { has_idea = MAN_five_year_plan_air }
-					NOT = { has_idea = MAN_five_year_plan_tank }
-					NOT = { has_idea = MAN_five_year_plan_industry }
-				}
-				NOT = { has_idea = MAN_five_year_plan_air }
+			is_subject_of = JAP
+			NOT = {
+				has_idea = five_year_plan
 			}
 		}
 
@@ -896,7 +886,10 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			country_event = wtt_manchukou.11
+			add_timed_idea = {
+				days = 1825
+			    idea = five_year_plan_military
+			}
 		}
 	}
 
@@ -915,7 +908,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -950,6 +943,7 @@
 
 		available = {
 			716 = { is_fully_controlled_by = ROOT }
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -990,7 +984,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -1026,7 +1020,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -1066,7 +1060,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -1140,7 +1134,7 @@
 		}
 
 		available = {
-
+			is_subject_of = JAP
 		}
 
 		bypass = {
@@ -1213,56 +1207,11 @@
 	}
 
 	focus = {
-		id = MAN_assertiveness
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = MAN_trade_delegation }
-		mutually_exclusive = { focus = MAN_obedience }
-		x = 2
-		y = 4
-		relative_position_id = MAN_trade_delegation
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			always = no
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			MAN_low_legitimacy_level_down = yes
-			set_country_flag = MAN_assertiveness
-			if = {
-				limit = {
-					is_subject_of = JAP
-				}
-				JAP = { 
-					set_autonomy = {
-						target = MAN
-						autonomy_state = autonomy_wtt_imperial_subject
-					}
-				}
-			}			
-		}
-	}
-
-	focus = {
 		id = MAN_request_control_of_the_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = MAN_assertiveness }
-		x = 0
-		y = 1
-		relative_position_id = MAN_assertiveness
+		x = -12
+		y = 0
 
 		cost = 10
 
@@ -1271,6 +1220,7 @@
 		}
 
 		available = {
+			is_subject = no
 			OR = {
 				716 = {
 					is_fully_controlled_by = ROOT
@@ -1291,6 +1241,13 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality 
+			}
+			add_popularity = {
+				popularity = 0.55
+				ideology = neutrality
+			}
 			unlock_decision_tooltip = MAN_divert_machine_tools
 			if = {
 				limit = { 716 = { is_fully_controlled_by = ROOT } }
@@ -1765,12 +1722,6 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			if = {
-				limit = {
-					is_subject_of = JAP
-				}
-				unlock_decision_tooltip = MAN_prepare_to_seize_arms
-			}
 			add_stability = 0.1
 			
 			if = {
@@ -1828,10 +1779,6 @@
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				strength_ratio = { tag = JAP ratio < 0.3 }
-				factor = 0
-			}
 			
 		}
 
@@ -1840,7 +1787,6 @@
 		}
 
 		bypass = {
-			is_subject = no
 		}
 
 		cancel_if_invalid = no
@@ -1851,41 +1797,7 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			hidden_effect = { set_variable = { MAN_independence_target = OVERLORD } } #We're using a variable here because the saved event target becomes invalidated deep in ScopedEventTarget
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				add_country_leader_trait = nationalist_symbol
-			}
-			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
-			effect_tooltip = {		
-				if = {
-					limit = {
-						is_in_faction_with = OVERLORD
-					}
-					leave_faction = yes
-				}
-				declare_war_on = {
-					target = OVERLORD
-					type = puppet_wargoal_focus
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_in_faction_with = var:MAN_independence_target
-					}
-					leave_faction = yes
-				}
-				declare_war_on = {
-					target = var:MAN_independence_target 
-					type = puppet_wargoal_focus
-				}
-			}
-			hidden_effect = {
-				news_event = { id = wtt_news.48 days = 2 }
-			}
+			add_country_leader_trait = nationalist_symbol
 		}
 	}
 
@@ -2120,7 +2032,6 @@
 	focus = {
 		id = MAN_assert_our_authority
 		icon = GFX_goal_demand_sudetenland
-		mutually_exclusive = { focus = MAN_offer_vassalization }
 		prerequisite = { focus = MAN_reclaim_the_empire }
 		x = 1
 		y = 1
@@ -2161,48 +2072,6 @@
 			}
 		}
 	}
-
-	focus = {
-		id = MAN_offer_vassalization
-		icon = GFX_goal_generic_air_doctrine
-		mutually_exclusive = { focus = MAN_assert_our_authority }
-		prerequisite = { focus = MAN_reclaim_the_empire }
-		x = 3
-		y = 1
-		relative_position_id = MAN_reclaim_the_empire
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_chinese_warlord = yes
-					not = { tag = event_target:WTT_current_china_leader }
-				}
-				country_event = { id = wtt_manchukou.1 }
-			}
-		}
-	}
-
 
 
 	shared_focus = CHI_invite_foreign_investors

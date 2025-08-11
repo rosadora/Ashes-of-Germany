@@ -700,7 +700,6 @@
 		id = CHI_foreign_threats
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = CHI_nationalism }
-		mutually_exclusive = { focus = CHI_prioritize_the_interior }
 		x = -1
 		y = 1
 		relative_position_id = CHI_nationalism
@@ -733,7 +732,6 @@
 		id = CHI_prioritize_the_interior
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = CHI_nationalism }
-		mutually_exclusive = { focus = CHI_foreign_threats }
 		x = 1
 		y = 1
 		relative_position_id = CHI_nationalism
@@ -752,7 +750,9 @@
 		}
 
 		available = {
-
+			NOT = {
+				has_war_with = JAP
+			}
 		}
 
 		bypass = {

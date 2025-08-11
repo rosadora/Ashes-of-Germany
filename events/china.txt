@@ -557,3 +557,72 @@ country_event = {
 		}
 	}
 }
+# Tibet Integration
+country_event = {
+	id = china.4
+	title = china.4.t
+	desc = china.4.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = china.4.a
+		ai_chance = {
+			base = 50
+		}
+		FROM = {
+			puppet = ROOT
+			country_event = { id = china.5 }
+		}
+	}
+	option = { #Deny
+		name = china.4.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+			country_event = { id = china.6 }
+		}
+	}
+}
+# Tibet Integration - Success
+country_event = {
+	id = china.5
+	title = china.5.t
+	desc = china.5.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = china.5.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+# Tibet Integration - Failure
+country_event = {
+	id = china.6
+	title = china.6.t
+	desc = china.6.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = china.6.a
+		ai_chance = {
+			base = 50
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = TIB
+		}
+	}
+}

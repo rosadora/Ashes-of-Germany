@@ -166,8 +166,8 @@ CAN = {
 	color_ui = rgb { 155 62 51 }
 }
 CHI = {
-	color = hsv { 0.18 0.6 0.9 } #255 244 190
-	color_ui = hsv { 0.18 0.3 0.9 }
+	color = rgb { 0 73 156 } 
+	color_ui = rgb { 0 73 156 }
 }
 CHL = {
 	color = rgb { 155 101 107 }
@@ -258,8 +258,8 @@ SIA = {
 	color_ui = rgb { 222 247 198 }
 }
 SIK = {
-	color = rgb { 71 190 152 }
-	color_ui = rgb { 222 247 198 }
+	color = rgb { 50 135 108 }
+	color_ui = rgb { 50 135 108 }
 }
 TIB = {
 	color = rgb { 80 115 45}
@@ -274,8 +274,8 @@ VEN = {
 	color_ui = rgb { 222 247 198 }
 }
 YUN = {
-	color = rgb { 114 148 80 }
-	color_ui = rgb { 222 247 198 }
+	color = rgb { 84 97 84 }
+	color_ui = rgb { 84 97 84 }
 }
 USA = {
 	color = rgb { 20 133 237 }
@@ -338,8 +338,8 @@ PRC = {
 }
 
 GXC = {
-	color = rgb { 71 113 97 }
-	color_ui = rgb { 71 113 97 }
+	color = rgb { 69 99 69 }
+	color_ui = rgb { 69 99 69 }
 }
 
 SHX = {
@@ -348,8 +348,8 @@ SHX = {
 }
 
 XSM = {
-	color = rgb { 105 90 132 }
-	color_ui = rgb { 105 90 132 }
+	color = rgb { 79 68 99 }
+	color_ui = rgb { 79 68 99 }
 }
 
 LBA = {

@@ -324,6 +324,21 @@ bookmarks = {
 				CRO_balkan_dream
 			}
 		}
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				MAN_banditry
+	            MAN_low_legitimacy_5
+	            MAN_kwantung_veto
+			}
+			focuses = {
+				MAN_claim_the_mandate_of_heaven
+				MAN_the_two_emperors
+				MAN_independence_war
+			}
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

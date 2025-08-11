@@ -1809,7 +1809,7 @@ shared_focus = {
 	icon = GFX_goal_generic_improve_relations
 	prerequisite = { focus = CHI_one_china_policy }
 	mutually_exclusive = { focus = CHI_conquer_tibet }
-	x = -1
+	x = 0
 	y = 1
 	relative_position_id = CHI_one_china_policy
 
@@ -1833,76 +1833,14 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		TIB = { country_event = wtt_china.10 }
-	}
-}
-
-shared_focus = {
-	id = CHI_conquer_tibet
-	icon = GFX_goal_generic_demand_territory
-	prerequisite = { focus = CHI_one_china_policy }
-	mutually_exclusive = { focus = CHI_integrate_tibet }
-	x = 1
-	y = 1
-	relative_position_id = CHI_one_china_policy
-
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			any_country = {
-				is_major = yes
-				is_in_faction_with = TIB
-			}
-			factor = 0
-		}
-	}
-
-	available = {
-	}
-
-	bypass = {
-		OR = {
-			NOT = { country_exists = TIB }	
-			has_war_with = TIB
-			has_wargoal_against = TIB
-		}
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	completion_reward = {
-		if = {
-			limit = {
-				322 = { is_owned_and_controlled_by = TIB }
-			}
-			ROOT = {
-				create_wargoal = {
-					type = take_state_focus
-					target = TIB
-					expire = 0
-					generator = { 322 }
-				}
-			}
-		}
-		else = {
-			create_wargoal = {
-				type = annex_everything
-				target = TIB				
-				expire = 0
-			}
-		}
+		TIB = { country_event = china.4 }
 	}
 }
 
 shared_focus = {
 	id = CHI_renounce_the_mcmahon_line
 	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = CHI_integrate_tibet focus = CHI_conquer_tibet }
-	mutually_exclusive = { focus = CHI_indian_cooperation }
+	prerequisite = { focus = CHI_integrate_tibet }
 	x = 0
 	y = 2
 	relative_position_id = CHI_one_china_policy
@@ -2035,7 +1973,7 @@ shared_focus = {
 	id = CHI_guidance_and_support
 	icon = GFX_goal_generic_forceful_treaty
 	prerequisite = { focus = CHI_anti_imperialism }
-	x = 1
+	x = 0
 	y = 1
 	relative_position_id = CHI_anti_imperialism
 
@@ -2089,7 +2027,7 @@ shared_focus = {
 	id = CHI_commit_to_korean_independence
 	icon = GFX_goal_generic_national_unity
 	prerequisite = { focus = CHI_guidance_and_support }
-	x = 1
+	x = 0
 	y = 2
 	relative_position_id = CHI_anti_imperialism
 
@@ -2166,95 +2104,6 @@ shared_focus = {
 					}
 				}
 			}
-		}
-	}
-}
-
-shared_focus = {
-	id = CHI_indian_cooperation
-	icon = GFX_goal_generic_improve_relations
-	prerequisite = { focus = CHI_anti_imperialism }
-	mutually_exclusive = { focus = CHI_renounce_the_mcmahon_line }
-	x = -1
-	y = 2
-	relative_position_id = CHI_anti_imperialism
-
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		OR = {
-			is_faction_leader = yes
-			RAJ = { is_subject = yes }
-		}
-		RAJ = { NOT = { has_war_with = ROOT } }		
-	}
-
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	completion_reward = {
-		if = {
-			limit = {
-				ROOT = { is_faction_leader = yes }
-				RAJ = { is_subject = no }
-			}
-			RAJ = { country_event = { id = generic.5 } }
-		}
-		else = {
-			RAJ = { country_event = wtt_china_shared.1 }
-		}
-	}
-}
-
-shared_focus = {
-	id = CHI_influence_mongolia
-	icon = GFX_goal_generic_neutrality_focus
-	prerequisite = { focus = CHI_indian_cooperation }
-	x = 0
-	y = 1
-	relative_position_id = CHI_indian_cooperation
-
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		OR = {
-			is_faction_leader = yes
-			MON = { is_subject = yes }
-		}
-		MON = { NOT = { has_war_with = ROOT } }	
-	}
-
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	completion_reward = {
-		if = {
-			limit = {
-				ROOT = { is_faction_leader = yes }
-				MON = { is_subject = no }
-			}
-			MON = { country_event = { id = generic.5 } }
-		}
-		else = {
-			MON = { country_event = wtt_china_shared.1 }
 		}
 	}
 }
@@ -2381,7 +2230,10 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		JAP = { country_event = { id = wtt_china.10 } }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = JAP
+		}
 	}
 }
 

@@ -1,4 +1,4 @@
-#Category only allowed for CZE
+#Category allowed for Everyone
 
 gen_pick_a_side = {
 
@@ -1017,6 +1017,314 @@ gen_join_chinese_united_front = {
 
 		ai_will_do = {
 			factor = 1000
+		}
+	}
+}
+gen_potato_edition = {
+
+	gen_colonial_powers_annex_their_puppets_fra = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_ai = no
+		}
+
+		cancel_trigger = {
+		}
+
+		priority = 20
+		days_remove = 1
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			IF = {
+				limit = {
+					ALG = {
+						is_subject_of = FRA
+					}
+				}
+			  FRA = {
+				annex_country = {
+					target = ALG
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					MOR = {
+						is_subject_of = FRA
+					}
+				}
+			  FRA = {
+				annex_country = {
+					target = MOR
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					TUN = {
+						is_subject_of = FRA
+					}
+				}
+			  FRA = {
+				annex_country = {
+					target = TUN
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					SEN = {
+						is_subject_of = FRA
+					}
+				}
+			  FRA = {
+				annex_country = {
+					target = SEN
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					CMR = {
+						is_subject_of = FRA
+					}
+				}
+			  FRA = {
+				annex_country = {
+					target = CMR
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					SYR = {
+						is_subject_of = FRA
+					}
+				}
+			  FRA = {
+				annex_country = {
+					target = SYR
+					transfer_troops = no
+				}
+			  }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	gen_colonial_powers_annex_their_puppets_eng = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_ai = no
+		}
+
+		cancel_trigger = {
+		}
+
+		priority = 20
+		days_remove = 1
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			IF = {
+				limit = {
+					GAM = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = GAM
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					SIE = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = SIE
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					GHA = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = GHA
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					NGA = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = NGA
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					EGY = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = EGY
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					PAL = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = PAL
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					JOR = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = JOR
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					SOM = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = SOM
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					KEN = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = KEN
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					ZAM = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = ZAM
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					MLW = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = MLW
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					ZIM = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = ZIM
+					transfer_troops = no
+				}
+			  }
+			}
+			IF = {
+				limit = {
+					BOT = {
+						is_subject_of = ENG
+					}
+				}
+			  ENG = {
+				annex_country = {
+					target = BOT
+					transfer_troops = no
+				}
+			  }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }
