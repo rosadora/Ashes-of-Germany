@@ -1328,3 +1328,63 @@ gen_potato_edition = {
 		}
 	}
 }
+gen_join_ussr = {
+
+	gen_join_ussr_decision = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			USR = {
+				has_completed_focus = USR_proclaim_the_ussr
+			}
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = social_democracy
+			}
+			is_subject = no
+		}
+
+		visible = {
+			country_exists = USR
+			OR = {
+				original_tag = KAZ
+				original_tag = UZB
+				original_tag = KYR
+				original_tag = TAJ
+				original_tag = TMS
+				original_tag = GEO
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = FER
+				original_tag = TAN
+			}
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 50
+
+		priority = 20
+		days_remove = 10
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			USR = {
+				country_event = {
+					id = gen.11
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

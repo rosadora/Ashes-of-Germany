@@ -2519,6 +2519,7 @@
  FRA_continue_the_revolution_desc:0 "Even in the midst of turmoil, we will never be tempted to establish a dictatorship."
  FRA_bavarian_kpd_coup:0 "Restore the Order"
  FRA_bavarian_kpd_coup_desc:0 "The anarchists ruled the country for several decades, and it was only disorder and the defeat of the socialist revolution could have happened at any time. To let them have the power is too dangerous. We must intervene."
+ ### RUSSIA ###
  RUS_healing_our_wounds:0 "Healing our Wounds"
  RUS_healing_our_wounds_desc:0 "The Russian Empire has long been in a steady decline. It’s Monarchy is an ancient system, that is a fact. But many are split on if it is holding our nation back or is one of the last institutions standing between Russia and complete collapse. The Liberal-Socialist Coalition seeks to dismantle the Monarchy, standing against them is what remains of the Tsarist forces from the civil war and tensions are rising. The Economy has been in essentially a complete collapse since the civil war. Famine rocks the nation killing thousands every year, and what factories do exist barely can produce anything. The ruined economy just adds more issues for the out-dated and barely functional army. If Russia is to survive and become a major power once again these issues must be fixed."
  RUS_late_industrialization:0 "Late Industrialisation"
@@ -2590,6 +2591,7 @@
  RUS_the_second_russian_revolution_desc:0 "The Second Russian Revolution:The Monarchy has finally fallen! A bright future for Russia is now open to us! The extreme right couldn’t hold onto power against the will of the people. Now we can finally look into the future and establish a truly free Russia."
  RUS_the_tsar_consolidate_his_power:0 "§gThe Tsar Consolidate His Power§!"
  RUS_the_tsar_consolidate_his_power_desc:0 "The Tsardom must survive. It is a critical institution of the Russian Empire. There is no Russia without the Tsar. The civil war and rising tensions had made the next path clear. Liberalization has failed Russia, only under the strong central leadership of the Tsardom can Russia return to its place as a great power."
+ ### USSR ####
  USR_arsenal_of_the_revolution:0 "Arsenal of the Revolution"
  USR_arsenal_of_the_revolution_desc:0 "We need to increase our production to defeat the white armies."
  USR_revive_the_revolutionary_flame:0 "Revive the Revolutionary Flame"
@@ -2708,6 +2710,7 @@
  USR_forward_desc:0 "We are going to defeat the Vladivostok Pact and bring the separatist territories back into Russian hands."
  USR_proclaim_the_ussr:0 "Proclaim the USSR"
  USR_proclaim_the_ussr_desc:0 "We can now proclaim the Union of all Soviet Socialist Republics."
+ proclaim_ussr_puppets:0 "Former Russian Empire states with socialist government will be able to join us!"
  USR_revenge_on_finland:0 "Revenge on Finland"
  USR_revenge_on_finland_desc:0 "Finland took advantage of the civil war to intervene and seize several northern provinces. We are going to recover them, and in the process recover Finland as a whole."
  USR_secure_the_koenigsberg_minsk_railway:0 "Secure the Koenigsberg-Minsk Railway"
@@ -2765,6 +2768,7 @@
  defender_of_the_revolution:0 "Defender of the Revolution"
  peoples_commissar_of_trade_and_industry:0 "People's Commissar of Trade and Industry"
  third_internationale:0 "Third International"
+ ### RUSSIA ###
  iron_hand:0 "Iron Hand"
  fervent_anti_communist:0 "Fervent Anti-Communist"
  meticulous_manager:0 "Meticulous Manager"

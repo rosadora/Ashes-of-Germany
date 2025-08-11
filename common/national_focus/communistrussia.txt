@@ -1458,6 +1458,7 @@
 			add_ideas = union_of_soviet_socialist_republics
 			set_cosmetic_tag = USR_USSR
 			news_event = news.3043
+			custom_effect_tooltip = proclaim_ussr_puppets
 		}
 	}
 	focus = {

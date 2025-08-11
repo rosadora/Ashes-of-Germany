@@ -275,8 +275,8 @@ GER_german_monarchy = {
 }
 
 CHI_warlord_leader = {
-	color = hsv { 0.18 0.6 0.9 } #255 244 190
-	color_ui = hsv { 0.18 0.3 0.9 }
+	color = rgb { 0 73 156 } 
+	color_ui = rgb { 0 73 156 }
 }
 MAN_restored = {
 	color = rgb { 237 152 18 }

@@ -1420,6 +1420,9 @@
  gen.10.t:0 "[FROM.GetName] denies to join us!"
  gen.10.d:0 ""
  gen.10.a:0 "Oh no!"
+ gen.11.t:0 "[FROM.GetName] wants to join USSR"
+ gen.11.d:0 "The people of [FROM.GetName] decided, through its government, to join the Soviet Union by becoming its vassal. Friendship and socialism unite us all!"
+ gen.11.a:0 "Welcome Comrades!"
  ### JAPAN ###
  jap.1.t:0 "Japanese 1936 Elections"
  jap.1.d:0 ""
@@ -1575,6 +1578,10 @@
  jap.42.d:0 "Growing tensions within the Sekirankai are becoming apparent as time goes by, particularly on the issue of the alliance with the Maoists. The anarchist wing of the Sekirankai is itself divided, with Fumiko Kaneko wanting to break away from the party completely and remove the Maoists from positions of power in order to launch a true social revolution, and Ito Noe taking a more pragmatic approach."
  jap.42.a:0 "Ito Noe is right"
  jap.42.b:0 "Maoists must be eradicated"
+ ### MANCHURIA ###
+ manchuria.1.t:0 "Seize East Hebei"
+ manchuria.1.d:0 "While Japan is torn over its political future, we have an unprecedented opportunity to seize Eastern Hebei and Dalian."
+ manchuria.1.a:0 "First Step to Reclaim the Mandate of Heaven!"
  ### LITHUANIA ###
  lithuania.1.t:0 "Konigsberg Conference"
  lithuania.1.d:0 "Lithuania, after years of dispute over the return of Vilnius to their country, decided to open negotiations in Konigsberg with representatives of our nation. The Polish government has yet to announce its position on the matter."

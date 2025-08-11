@@ -238,3 +238,21 @@ country_event = { #Join Free Asia - Negative
 		}
 	}
 }
+
+country_event = { #Join USSR
+	id = gen.11
+	title = gen.11.t
+	desc = gen.11.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.11.a
+		ai_chance = {
+			base = 100
+		}
+		puppet = FROM
+		add_to_faction = FROM
+	}
+}

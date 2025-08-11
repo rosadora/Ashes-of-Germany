@@ -1,0 +1,31 @@
+﻿###########################
+# Manchurian Events
+###########################
+
+add_namespace = manchuria
+
+# Seize Japanese Territories in China
+country_event = {
+	id = manchuria.1
+	title = manchuria.1.t
+	desc = manchuria.1.d
+	picture = GFX_report_event_china_infiltration
+
+	trigger = {
+		tag = MAN
+		JAP = {
+			has_civil_war = yes
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = {
+		name = manchuria.1.a
+		ai_chance = {
+			base = 50
+		}
+		transfer_state = 609
+		transfer_state = 745
+	}
+}

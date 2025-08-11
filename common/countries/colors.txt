@@ -24,10 +24,6 @@ USR = {
 	color = rgb { 255 29 0 }
 	color_ui = rgb { 255 29 0 }
 }
-QTT = {
-	color = rgb { 77 0 135 }
-	color_ui = rgb { 77 0 135 }
-}
 SWE = {
 	color = rgb { 36 132 247 }
 	color_ui = rgb { 47 172 255 }

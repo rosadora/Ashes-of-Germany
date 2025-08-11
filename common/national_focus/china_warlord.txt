@@ -461,9 +461,12 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = enable_power_struggle
-			WTT_setup_political_struggle = yes
-			WTT_add_ROOT_to_political_struggle = yes
+			every_state = {
+				limit = {
+					is_core_of = CHI
+				}
+				add_core_of = ROOT
+			}
 		}
 	}
 
@@ -482,11 +485,18 @@
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-				WTT_has_politcal_support_points_30 = yes
-				WTT_is_ROOT_current_leader_of_china = yes
+			NOT = {
+				is_in_faction_with = CHI
 			}
+			owns_state = 608
+		    owns_state = 328
+		    owns_state = 611
+		    owns_state = 615
+		    owns_state = 622
+		    owns_state = 754
+		    owns_state = 617
+		    owns_state = 325
+		    owns_state = 594
 		}
 
 		bypass = {
@@ -500,12 +510,6 @@
 		completion_reward = {
 			load_focus_tree = china_nationalist_focus
 			set_cosmetic_tag = CHI_warlord_leader
-			every_state = {
-				limit = {
-					is_core_of = CHI
-				}
-				add_core_of = ROOT
-			}
 		}
 	}	
 

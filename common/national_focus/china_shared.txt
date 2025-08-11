@@ -1650,11 +1650,15 @@ shared_focus = {
 	}
 
 	available = {
-	}
-
-	bypass = {
-		NOT = { has_idea = CHI_nine_power_treaty }
-
+		owns_state = 608
+		owns_state = 328
+		owns_state = 611
+		owns_state = 615
+		owns_state = 622
+		owns_state = 754
+		owns_state = 617
+		owns_state = 325
+		owns_state = 594
 	}
 
 	cancel_if_invalid = yes

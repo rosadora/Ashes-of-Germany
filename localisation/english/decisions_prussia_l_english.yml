@@ -114,6 +114,8 @@
  gen_potato_edition:0 "Ashes of Germany : Potato Edition"
  gen_colonial_powers_annex_their_puppets_fra:0 "No French Puppets in Africa"
  gen_colonial_powers_annex_their_puppets_eng:0 "No British Puppets in Africa"
+ gen_join_ussr:0 "Join USSR"
+ gen_join_ussr_decision:0 "Join the Sphere"
  ### LITHUANIA ###
  LIT_lithuanian_politics:0 "Lithuanian Politics"
  LIT_konigsberg_conference:0 "Konigsberg Conference"
