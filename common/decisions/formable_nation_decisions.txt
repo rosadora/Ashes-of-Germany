@@ -1051,21 +1051,12 @@ form_austria_hungary_category = {
 				controls_state = 84
 				controls_state = 764
 				controls_state = 82
-				controls_state = 942
-				# Austria
 				controls_state = 848
 				controls_state = 153
 				controls_state = 152
 				controls_state = 4
 				controls_state = 975
 				controls_state = 976
-				controls_state = 940
-				controls_state = 941
-				controls_state = 937
-				controls_state = 938
-				controls_state = 939
-				
-				# Czechoslovakia
 				controls_state = 69
 				controls_state = 9
 				controls_state = 75
@@ -1076,16 +1067,21 @@ form_austria_hungary_category = {
 				controls_state = 71
 				controls_state = 73
 				controls_state = 972
-				
-				# Hungary
 				controls_state = 155
 				controls_state = 43
 				controls_state = 973
 				controls_state = 974
 				controls_state = 154
+
 				controls_state = 953
 				controls_state = 954
 				controls_state = 955
+				controls_state = 940
+				controls_state = 941
+				controls_state = 937
+				controls_state = 938
+				controls_state = 939
+				controls_state = 942
 			}
 			
 		}
