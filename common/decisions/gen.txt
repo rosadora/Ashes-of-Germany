@@ -251,7 +251,8 @@ gen_pick_a_side = {
 		icon = GFX_decision_hol_exchange_intelligence_data
 
 		available = {
-			AND = {
+			OR = {
+				AND = {
 				PRS = {
 					OR = {
 					has_government = neutrality
@@ -292,6 +293,7 @@ gen_pick_a_side = {
 					has_government = social_liberalism
 				}
 			    }
+		    }
 		}
 
 		visible = {

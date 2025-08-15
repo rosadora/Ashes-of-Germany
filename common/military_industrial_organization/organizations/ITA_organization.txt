@@ -1051,9 +1051,6 @@ ITA_officine_meccaniche_organization = {
 	}
 	
 	available = {
-		FROM = {
-			has_completed_focus = ITA_new_ricostruzione_industriale
-		}
 	}
 
 	equipment_type = {

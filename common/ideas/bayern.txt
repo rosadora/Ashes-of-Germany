@@ -812,7 +812,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_resources_factor = 0.15
+				local_resources_factor = 0.075
 				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
