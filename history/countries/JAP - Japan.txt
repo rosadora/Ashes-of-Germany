@@ -1318,7 +1318,7 @@ if = {
 		}	
 	}
 create_country_leader = {
-                 name = "Yamakawa Kikue"
+                 name = "Kikue Yamakawa"
                  desc = ""
 	             picture = "gfx/leaders/JAP/Yamakawa_Kikue.dds"
                  expire = "1965.1.1"
@@ -1328,7 +1328,7 @@ create_country_leader = {
                  }
 			}
 create_country_leader = {
-                 name = "Itō Noe"
+                 name = "Noe Itō"
                  desc = ""
 	             picture = "gfx/leaders/JAP/ito_noe.dds"
                  expire = "1965.1.1"
@@ -1338,7 +1338,7 @@ create_country_leader = {
                  }
 			}
 create_country_leader = {
-                 name = "Hotsumi Ozaki"
+                 name = "Ozaki Hotsumi"
                  desc = ""
 	             picture = "gfx/leaders/JAP/Hotsumi_Ozaki.dds"
                  expire = "1965.1.1"
@@ -1347,7 +1347,7 @@ create_country_leader = {
                  }
 			}
 create_country_leader = {
-                 name = "Machida Chūji"
+                 name = "Chūji Machida"
                  desc = ""
 	             picture = "gfx/leaders/JAP/Machida_Chuji.dds"
                  expire = "1965.1.1"
@@ -1356,7 +1356,7 @@ create_country_leader = {
                  }
 			}
 create_country_leader = {
-                 name = "Machida Chūji"
+                 name = "Chūji Machida"
                  desc = ""
 	             picture = "gfx/leaders/JAP/Machida_Chuji.dds"
                  expire = "1965.1.1"

@@ -739,9 +739,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.3
 				production_speed_buildings_factor = -0.5
 				stability_factor = -0.2
-				communism_drift = 0.02
-				libertarian_socialism_drift = 0.02
-				classical_marxism_drift = 0.02
+				communism_drift = 0.01
+				libertarian_socialism_drift = 0.01
+				classical_marxism_drift = 0.01
 			}
 		}
 		hyperinflation1 = {
@@ -763,9 +763,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.25
 				production_speed_buildings_factor = -0.4
 				stability_factor = -0.175
-				communism_drift = 0.02
-				libertarian_socialism_drift = 0.02
-				classical_marxism_drift = 0.02
+				communism_drift = 0.01
+				libertarian_socialism_drift = 0.01
+				classical_marxism_drift = 0.01
 			}
 		}
 		hyperinflation2 = {
@@ -787,9 +787,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.2
 				production_speed_buildings_factor = -0.3
 				stability_factor = -0.3
-				communism_drift = 0.03
-				libertarian_socialism_drift = 0.03
-				classical_marxism_drift = 0.03
+				communism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+				classical_marxism_drift = 0.02
 			}
 		}
 		hyperinflation3 = {
@@ -811,9 +811,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.15
 				production_speed_buildings_factor = -0.225
 				stability_factor = -0.45
-				communism_drift = 0.04
-				libertarian_socialism_drift = 0.04
-				classical_marxism_drift = 0.04
+				communism_drift = 0.03
+				libertarian_socialism_drift = 0.03
+				classical_marxism_drift = 0.03
 			}
 		}
 		hyperinflation4 = {
@@ -835,9 +835,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.125
 				stability_factor = -0.6
-				communism_drift = 0.05
-				libertarian_socialism_drift = 0.05
-				classical_marxism_drift = 0.05
+				communism_drift = 0.04
+				libertarian_socialism_drift = 0.04
+				classical_marxism_drift = 0.04
 			}
 		}
 		hyperinflation5 = {
@@ -859,9 +859,9 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.05
 				stability_factor = -0.8
-				communism_drift = 0.06
-				libertarian_socialism_drift = 0.06
-				classical_marxism_drift = 0.06
+				communism_drift = 0.05
+				libertarian_socialism_drift = 0.05
+				classical_marxism_drift = 0.05
 			}
 		}
 		cuts_in_education = {

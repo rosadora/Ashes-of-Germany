@@ -495,4 +495,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/chaos_star.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_genghis_spirit"
+		texturefile = "gfx/interface/ideas/genghis_spirit.dds"
+	}
+
 }

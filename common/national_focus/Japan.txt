@@ -2872,7 +2872,7 @@
 		}
 		allow_branch = {
 			has_country_leader = {
-              name = "Fumiko Kaneko"
+              name = "Kaneko Fumiko"
               ruling_only = yes
             }
 		}
@@ -2906,7 +2906,7 @@
 		}
 		allow_branch = {
 			has_country_leader = {
-              name = "Fumiko Kaneko"
+              name = "Kaneko Fumiko"
               ruling_only = yes
             }
 		}
@@ -2945,7 +2945,7 @@
 		}
 		allow_branch = {
 			has_country_leader = {
-              name = "Fumiko Kaneko"
+              name = "Kaneko Fumiko"
               ruling_only = yes
             }
 		}
@@ -2979,7 +2979,7 @@
 		}
 		allow_branch = {
 			has_country_leader = {
-              name = "Fumiko Kaneko"
+              name = "Kaneko Fumiko"
               ruling_only = yes
             }
 		}
@@ -2997,8 +2997,7 @@
 		icon = GFX_goal_burn_the_world
 		x = 0
 		y = 3
-		prerequisite = {focus = JAP_abolish_money}
-		prerequisite = {focus = JAP_dismiss_maoists}
+		prerequisite = {focus = JAP_burn_everything}
 		relative_position_id = JAP_overthrow_the_party
 		cost = 5
 		ai_will_do = {
@@ -3013,7 +3012,7 @@
 		}
 		allow_branch = {
 			has_country_leader = {
-              name = "Fumiko Kaneko"
+              name = "Kaneko Fumiko"
               ruling_only = yes
             }
 		}

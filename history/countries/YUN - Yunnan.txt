@@ -12,7 +12,6 @@ if = {
 	add_ideas = {
 		PRC_government_corruption
 		CHI_ineffective_bureaucracy_warlord
-		CHI_warlord_state_idea
 	}
 }
 

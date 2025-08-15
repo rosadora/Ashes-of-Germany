@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+		spirit_of_genghis_spirit = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = genghis_spirit
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				conscription_factor = 0.2
+			} 
+		}
+	}
+}

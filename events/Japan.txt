@@ -1144,7 +1144,7 @@ country_event = {
 			base = 100
 		}
 		create_country_leader = {
-	        name = "Fumiko Kaneko"
+	        name = "Kaneko Fumiko"
 	        desc = "POLITICS_FUMIKO_KANEKO_DESC"
 	        picture = "gfx/leaders/JAP/Fumiko_Kaneko.dds"
 	        expire = "1960.1.16"
