@@ -124,3 +124,6 @@
  ### CHINA ###
  gen_join_chinese_united_front:0 "Chinese United Front"
  gen_defend_china:0 "Join the United Front"
+ ### YUGOSLAVIA ###
+ YUG_yugoslavian_civil_war:0 "Yugoslavian Civil War"
+ YUG_ljubljana_ceasefire:0 "Ljubljana Ceasefire"

@@ -1,0 +1,46 @@
+#Category only allowed for ISR
+
+YUG_yugoslavian_civil_war = {
+
+	YUG_ljubljana_ceasefire = {
+
+		icon = GFX_decision_generic_protection
+        allowed = {
+            tag = YUG
+        }
+        visible = {
+            has_war_with = CRO 
+            has_war_with = AUS 
+            has_war_with = HUN
+        }
+        available = {
+            controls_state = 103
+            controls_state = 109
+            controls_state = 764
+            controls_state = 853
+            controls_state = 102
+            controls_state = 45
+        }
+        priority = 7
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 10
+
+        complete_effect = {
+            white_peace = CRO
+            transfer_state = 103
+            transfer_state = 109
+            transfer_state = 764
+            transfer_state = 853
+            transfer_state = 102
+            transfer_state = 45
+        }
+    }
+}
