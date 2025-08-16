@@ -1,0 +1,55 @@
+﻿###########################
+# Mongol Events
+###########################
+
+add_namespace = mongolia
+
+# Mongol Elections - MAN victory
+country_event = {
+	id = mongolia.1
+	title = mongolia.1.t
+	desc = mongolia.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #Hurrah!
+		name = mongolia.1.a
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = social_democracy 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.075
+		}
+	}
+}
+# Mongol Elections - KN victory
+country_event = {
+	id = mongolia.2
+	title = mongolia.2.t
+	desc = mongolia.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #The Mongol Empire arrives!
+		name = mongolia.2.a
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = neutrality 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.075
+		}
+		add_ideas = republican_resistance
+	}
+}

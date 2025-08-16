@@ -19,5 +19,42 @@ ideas = {
 				conscription_factor = 0.2
 			} 
 		}
+		legacy_of_the_khanate = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				neutrality_drift = 0.02
+			} 
+		}
+		republican_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.3
+				social_democracy_drift = 0.02
+			} 
+		}
 	}
 }

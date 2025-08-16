@@ -1,0 +1,135 @@
+
+MON_1936_elections = {
+
+	MON_1936_elections_day = {
+
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = MON
+		}
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 320
+		fire_only_once = yes
+
+		activation = {
+          NOT = {
+			has_global_flag = mongol_1936_elections
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { MON_man_coalition_support = party_popularity@communism }
+				     add_to_temp_variable = { MON_man_coalition_support = party_popularity@social_liberalism }
+				     add_to_temp_variable = { MON_man_coalition_support = party_popularity@social_democracy }
+					 add_to_temp_variable = { MON_man_coalition_support = party_popularity@classical_liberalism }
+					 add_to_temp_variable = { MON_man_coalition_support = party_popularity@classical_marxism }
+				     check_variable = { MON_man_coalition_support > 0.5 }
+			        }
+				}
+				country_event = {
+				   id = mongolia.1
+				   days = 1
+			    }
+			}
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { MON_khan_coalition_support = party_popularity@fascism }
+				     add_to_temp_variable = { MON_khan_coalition_support = party_popularity@ultra_nationalism }
+				     add_to_temp_variable = { MON_khan_coalition_support = party_popularity@neutrality }
+					 add_to_temp_variable = { MON_khan_coalition_support = party_popularity@democratic }
+				     check_variable = { MON_khan_coalition_support > 0.5 }
+			        }
+				}
+				country_event = {
+				   id = mongolia.2
+				   days = 1
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MON_new_poll = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = MON
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 2
+		priority = 2
+
+		activation = {
+			country_exists = MON
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			clear_variable = man_pop
+			clear_variable = khan_nam_pop
+			clear_variable = kn_pop
+
+		set_variable = {
+          var = man_pop
+          value = party_popularity@classical_marxism
+        }
+        add_to_variable = {
+          var = man_pop
+          value = party_popularity@communism
+        }
+        add_to_variable = {
+          var = man_pop
+          value = party_popularity@social_democracy
+        }
+
+        set_variable = {
+          var = khan_nam_pop
+          value = party_popularity@neutrality
+        }
+        add_to_variable = {
+          var = khan_nam_pop
+          value = party_popularity@democratic
+        }
+        add_to_variable = {
+          var = khan_nam_pop
+          value = party_popularity@ultra_nationalism
+        }
+        add_to_variable = {
+          var = khan_nam_pop
+          value = party_popularity@fascism
+        }
+
+        set_variable = {
+          var = kn_pop
+          value = party_popularity@classical_liberalism
+        }
+        add_to_variable = {
+          var = kn_pop
+          value = party_popularity@social_liberalism
+        }
+
+		}
+	}
+}

@@ -1488,7 +1488,11 @@
  burn_everything_desc:0 "This world is rotten, we will hasten to destroy all structures that oppress human beings, including all governments around the world."
  marxist_planifier:0 "Marxist Planifier"
  pacifist_democrat:0 "Pacifist Democrat"
+ ### MONGOLIA ###
  spirit_of_genghis_spirit:0 "Spirit of Genghis"
+ legacy_of_the_khanate:0 "Legacy of the Khanate"
+ legacy_of_the_khanate_desc:0 "Despite the end of the Mongol Khanate, it still has many supporters, particularly among the right wing, which supports a restoration. There is significant tension within the country between socialist revolutionaries, social democrats, and monarchists."
+ republican_resistance:0 "Republican Resistance"
  ### CHINA ###
  chinese_unity:0 "Chinese Unity"
  china_under_attack:0 "China under Attack"

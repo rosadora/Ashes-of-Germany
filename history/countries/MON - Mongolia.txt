@@ -34,6 +34,8 @@ recruit_character = MON_pai_yun_ti
 
 add_ideas = {
 	spirit_of_genghis_spirit
+	legacy_of_the_khanate
+	pluralism
 }
 
 set_politics = {
@@ -142,4 +144,43 @@ create_country_leader = {
 	ideology = fascism_ideology
 	traits = {
 	}
+}
+
+set_variable = {
+    var = man_pop
+    value = party_popularity@classical_marxism
+}
+add_to_variable = {
+    var = man_pop
+    value = party_popularity@communism
+}
+add_to_variable = {
+    var = man_pop
+    value = party_popularity@social_democracy
+}
+
+set_variable = {
+    var = khan_nam_pop
+    value = party_popularity@neutrality
+}
+add_to_variable = {
+    var = khan_nam_pop
+    value = party_popularity@democratic
+}
+add_to_variable = {
+    var = khan_nam_pop
+    value = party_popularity@ultra_nationalism
+}
+add_to_variable = {
+    var = khan_nam_pop
+    value = party_popularity@fascism
+}
+
+set_variable = {
+    var = kn_pop
+    value = party_popularity@classical_liberalism
+}
+add_to_variable = {
+    var = kn_pop
+    value = party_popularity@social_liberalism
 }
