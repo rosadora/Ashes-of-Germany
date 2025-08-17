@@ -103,10 +103,10 @@
 	}
 	focus = {
 		id = JAP_ally_liberals
-		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		icon = GFX_focus_ARG_defense_and_democracy
 		x = 2
 		y = 2
-		mutually_exclusive = {focus = JAP_promote_traditional_lifestyle}
+		mutually_exclusive = {focus = JAP_reassure_moderate_conservative}
 		prerequisite = {focus = JAP_focus_on_social_cohesion focus = JAP_promote_traditional_lifestyle}
 		relative_position_id = JAP_the_future_of_mongolia
 		cost = 7
@@ -130,6 +130,228 @@
 			popularity = 0.02
 		 }
 		 add_political_power = 50
+		}
+	}
+	focus = {
+		id = JAP_reassure_moderate_conservative
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 2
+		mutually_exclusive = {focus = JAP_ally_liberals}
+		prerequisite = {focus = JAP_focus_on_social_cohesion focus = JAP_promote_traditional_lifestyle}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = democratic 
+			popularity = 0.02
+		 }
+		 add_popularity = {
+			ideology = neutrality 
+			popularity = 0.02
+		 }
+		 add_stability = 0.02
+		}
+	}
+	focus = {
+		id = JAP_oppose_statism
+		icon = GFX_goal_generic_war_with_comintern
+		x = -2
+		y = 3
+		mutually_exclusive = {focus = JAP_appease_the_red_league}
+		prerequisite = {focus = JAP_reassure_moderate_conservative focus = JAP_ally_liberals}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = communism 
+			popularity = -0.04
+		 }
+		 add_stability = 0.02
+		}
+	}
+	focus = {
+		id = JAP_appease_the_red_league
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 2
+		y = 3
+		mutually_exclusive = {focus = JAP_oppose_statism}
+		prerequisite = {focus = JAP_reassure_moderate_conservative focus = JAP_ally_liberals}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.03
+		 }
+		 add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = JAP_promote_ancient_glory
+		icon = GFX_goal_generic_cavalry
+		x = -2
+		y = 4
+		mutually_exclusive = {focus = JAP_move_forward}
+		prerequisite = {focus = JAP_oppose_statism focus = JAP_appease_the_red_league}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.04
+		 }
+		 add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = JAP_move_forward
+		icon = GFX_focus_NORDIC_com_selector_civilian
+		x = 2
+		y = 4
+		mutually_exclusive = {focus = JAP_promote_ancient_glory}
+		prerequisite = {focus = JAP_oppose_statism focus = JAP_appease_the_red_league}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.04
+		 }
+		 random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_japanese_aid
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		x = -2
+		y = 5
+		mutually_exclusive = {focus = JAP_remember_the_civil_war}
+		prerequisite = {focus = JAP_promote_ancient_glory focus = JAP_move_forward}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				JAP = {
+					has_government = neutrality 
+					has_government = ultra_nationalism
+					has_government = fascism 
+					has_government = democratic
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = 0.075
+		 }
+		 add_political_power = -50
+		 add_opinion_modifier = {
+            target = JAP
+            modifier = huge_increase
+           }
+		 JAP = {
+			add_opinion_modifier = {
+            target = MON
+            modifier = huge_increase
+           }
+		 }
+		}
+	}
+	focus = {
+		id = JAP_remember_the_civil_war
+		icon = GFX_focus_generic_total_war
+		x = 2
+		y = 5
+		mutually_exclusive = {focus = JAP_japanese_aid}
+		prerequisite = {focus = JAP_promote_ancient_glory focus = JAP_move_forward}
+		relative_position_id = JAP_the_future_of_mongolia
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.075
+		 }
+		 add_war_support = 0.05
 		}
 	}
 }

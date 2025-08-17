@@ -41,16 +41,7 @@ MON_1936_elections = {
 				   days = 1
 			    }
 			}
-			IF = {
-				limit = {
-					custom_trigger_tooltip = {
-				     set_temp_variable = { MON_khan_coalition_support = party_popularity@fascism }
-				     add_to_temp_variable = { MON_khan_coalition_support = party_popularity@ultra_nationalism }
-				     add_to_temp_variable = { MON_khan_coalition_support = party_popularity@neutrality }
-					 add_to_temp_variable = { MON_khan_coalition_support = party_popularity@democratic }
-				     check_variable = { MON_khan_coalition_support > 0.5 }
-			        }
-				}
+			else = {
 				country_event = {
 				   id = mongolia.2
 				   days = 1
