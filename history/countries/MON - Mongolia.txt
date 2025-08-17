@@ -36,6 +36,7 @@ add_ideas = {
 	spirit_of_genghis_spirit
 	legacy_of_the_khanate
 	pluralism
+	women_in_military
 }
 
 set_politics = {
@@ -43,6 +44,16 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}
+set_rule = {
+	can_generate_female_country_leaders = yes
+}
+set_rule = {
+	can_generate_female_unit_leaders = yes
 }
 
 set_popularities = {
@@ -123,6 +134,7 @@ create_country_leader = {
 	expire = "1960.1.16"
 	ideology = despotism
 	traits = {
+		illegitimate_regent
 	}
 }
 

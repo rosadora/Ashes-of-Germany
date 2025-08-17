@@ -41,6 +41,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_mongolian_regency_event"
+		texturefile = "gfx/event_pictures/mongolian_regency_event.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_workers_government_cze_election_event"
 		texturefile = "gfx/event_pictures/workers_government_cze_election_event.dds"
 	}

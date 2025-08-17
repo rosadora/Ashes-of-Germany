@@ -53,3 +53,19 @@ country_event = {
 		add_ideas = republican_resistance
 	}
 }
+# Khanate Restoration - The Regency
+country_event = {
+	id = mongolia.3
+	title = mongolia.3.t
+	desc = mongolia.3.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #The Mongol Empire arrives!
+		name = mongolia.3.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}

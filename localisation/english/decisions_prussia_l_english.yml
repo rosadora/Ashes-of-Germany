@@ -132,3 +132,4 @@
  MON_1936_elections_desc:0 "The §ONation§! needs a strong leadership for next years. At a time when §Omonarchists are organizing to take back power§!, it's time to §Oelect a majority§! to guide our path.\n\n§OVote Projection:§!\n§gKhan Nam§! : [?khan_nam_pop|%]\n§YKhögjliin Nam§!: [?kn_pop|%]\n§tMongol Ardiin Nam§!: [?man_pop|%]"
  MON_1936_elections_day:0 "Election Day!"
  MON_new_poll:0 "New Poll"
+ MON_khanate_succession:0 "Khanate Regency"
