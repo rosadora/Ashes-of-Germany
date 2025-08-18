@@ -1967,7 +1967,32 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_minshuha"
-	texturefile = "gfx/interface/goals/minshuha.dds"			
+	name = "GFX_goal_the_khatan"
+	texturefile = "gfx/interface/goals/the_khatan.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_expand_the_green_palace"
+	texturefile = "gfx/interface/goals/expand_the_green_palace.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_burn_the_world"
+	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_burn_the_world"
+	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_burn_the_world"
+	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_burn_the_world"
+	texturefile = "gfx/interface/goals/burn_the_world.dds"			
 	}
 }

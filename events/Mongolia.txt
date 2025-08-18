@@ -69,3 +69,120 @@ country_event = {
 		}
 	}
 }
+# Khanate Restoration - The New King
+country_event = {
+	id = mongolia.4
+	title = mongolia.4.t
+	desc = mongolia.4.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = mongolia.4.a
+		ai_chance = {
+			base = 50
+		}
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = despotism
+	     traits = {
+	     }
+        }
+		hidden_effect = {
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = conservatism
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = ultra_nationalism_category
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = fascism_ideology
+	     traits = {
+	     }
+        }
+		}
+	}
+}
+# Khanate Restoration - The New Queen?
+country_event = {
+	id = mongolia.5
+	title = mongolia.5.t
+	desc = mongolia.5.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #Crown the Khatan
+		name = mongolia.5.a
+		ai_chance = {
+			base = 50
+		}
+		remove_country_leader_trait = illegitimate_regent
+		set_country_flag = genepil_khatanate
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { #Im a masculinist #not good #kys
+		name = mongolia.5.b
+		ai_chance = {
+			base = 50
+		}
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = despotism
+	     traits = {
+	     }
+        }
+		hidden_effect = {
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = conservatism
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = ultra_nationalism_category
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = fascism_ideology
+	     traits = {
+	     }
+        }
+		}
+	}
+}

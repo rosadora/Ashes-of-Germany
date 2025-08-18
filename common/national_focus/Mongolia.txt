@@ -574,8 +574,8 @@
 	}
 	focus = {
 		id = JAP_end_the_regency
-		icon = GFX_focus_AFG_contact_amanullah_loyalists
-		x = 1
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
 		y = 3
 		prerequisite = {focus = JAP_enforce_patriarchy focus = JAP_moderate_restoration}
 		mutually_exclusive = {focus = JAP_moderate_restoration}
@@ -598,7 +598,195 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			
+			IF = {
+				limit = {
+					NOT = {
+						has_country_flag = revised_succession_laws
+					}
+				}
+				country_event = {
+					id = mongolia.4
+					days 1
+				}
+			}
+			else = {
+			country_event = {
+				id = mongolia.5
+				days 1
+			}
+			}
+		}
+	}
+	focus = {
+		id = JAP_the_khatan
+		icon = GFX_goal_the_khatan
+		x = 5
+		y = 1
+		prerequisite = {focus = JAP_end_the_regency}
+		mutually_exclusive = {focus = JAP_the_khan}
+		relative_position_id = JAP_end_the_regency
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+	    allow_branch = {
+			has_country_flag = genepil_khatanate
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_country_leader_name = {
+	         ideology = neutrality
+	         name = "Khatan Genepil"
+            }
+			hidden_effect = {
+				set_country_leader_name = {
+	         ideology = democratic
+	         name = "Khatan Genepil"
+            }
+			set_country_leader_name = {
+	         ideology = ultra_nationalism
+	         name = "Khatan Genepil"
+            }
+			set_country_leader_name = {
+	         ideology = fascism
+	         name = "Khatan Genepil"
+            }
+			}
+		}
+	}
+	focus = {
+		id = JAP_the_khan
+		icon = GFX_focus_generic_monarchist_sentiment
+		x = 0
+		y = 1
+		prerequisite = {focus = JAP_end_the_regency}
+		mutually_exclusive = {focus = JAP_the_khatan}
+		relative_position_id = JAP_end_the_regency
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = legacy_of_the_khanate
+				add_idea = the_khanate_reborn
+			}
+		}
+	}
+	focus = {
+		id = JAP_prepare_the_cavalry
+		icon = GFX_focus_RAJ_a_tiger_unchained
+		x = 2
+		y = 2
+		prerequisite = {focus = JAP_the_khan focus = JAP_the_khatan}
+		relative_position_id = JAP_end_the_regency
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_expand_the_green_palace
+		icon = GFX_goal_expand_the_green_palace
+		x = 4
+		y = 2
+		prerequisite = {focus = JAP_the_khan focus = JAP_the_khatan}
+		relative_position_id = JAP_end_the_regency
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 }

@@ -133,3 +133,5 @@
  MON_1936_elections_day:0 "Election Day!"
  MON_new_poll:0 "New Poll"
  MON_khanate_succession:0 "Khanate Regency"
+ MON_revise_succession_laws:0 "Revise Succession Laws"
+ MON_revise_succession_laws_desc:0 "Mongolian succession laws are outdated. A new line of succession must be decided, and it is not up to a child of non-royal blood to determine it. The regent will be the queen."

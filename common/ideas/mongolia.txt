@@ -37,6 +37,24 @@ ideas = {
 				neutrality_drift = 0.02
 			} 
 		}
+		the_khanate_reborn = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = 0.04
+			} 
+		}
 		republican_resistance = {
 			
 			allowed = {
