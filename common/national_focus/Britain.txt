@@ -470,15 +470,6 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = women_in_military
-			set_rule = {
-				can_generate_female_aces = yes
-			}
-			set_rule = {
-				can_generate_female_country_leaders = yes
-			}
-			set_rule = {
-				can_generate_female_unit_leaders = yes
-			}
 		}
 	}
 	focus = {

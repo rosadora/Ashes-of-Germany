@@ -505,4 +505,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/khanate_legacy.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_women_in_military"
+		texturefile = "gfx/interface/ideas/women_in_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_volunteer_women"
+		texturefile = "gfx/interface/ideas/volunteer_women.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_women_military_nurse"
+		texturefile = "gfx/interface/ideas/women_military_nurse.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_women_in_military"
+		texturefile = "gfx/interface/ideas/no_women_in_military.dds"
+	}
+
 }

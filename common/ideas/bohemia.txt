@@ -876,25 +876,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.25
 			} 
 		}
-		women_in_military = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_women_in_the_army
-
-			removal_cost = -1
-			
-			modifier = { 
-				conscription_factor = 0.25
-				industrial_capacity_factory = -0.075
-				industrial_capacity_dockyard = -0.075
-			} 
-		}
 		attractive_country = {
 			
 			allowed = {
