@@ -187,6 +187,9 @@ add_ideas = {
 	agrarian_economy
 	bavarian_army_militias
 	general_staff
+	state_atheism
+	women_in_military
+	women_in_factories
 }
 
 create_equipment_variant = {

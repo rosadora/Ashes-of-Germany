@@ -709,25 +709,6 @@ ideas = {
 				political_power_gain = 0.1
 			}
 		}
-		state_atheism = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = PER_forced_secularization
-
-			removal_cost = -1
-			
-			modifier = {
-				political_power_gain = 0.15
-				stability_factor = 0.05
-				compliance_gain = 0.01
-			}
-		}
 		a_land_for_all_idea = {
 			
 			allowed = {

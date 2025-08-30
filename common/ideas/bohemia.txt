@@ -1032,28 +1032,6 @@ ideas = {
 			} 
 		}
 
-		enforced_patriarchy = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_oppression
-
-			removal_cost = -1
-			
-			modifier = { 
-				conscription_factor = -0.1
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
-				army_org_factor = 0.05
-				war_support_factor = 0.075
-			} 
-		}
-
 		hussite_army = {
 			
 			allowed = {

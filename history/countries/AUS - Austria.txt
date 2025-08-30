@@ -62,6 +62,9 @@ add_ideas = {
 	saint_germain_en_laye_treaty
 	dark_times
 	slovenian_resistance
+	state_atheism
+	women_in_military
+	women_in_factories
 }
 
 create_country_leader = {

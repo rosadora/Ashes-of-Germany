@@ -411,49 +411,6 @@ set_popularities = {
 	}
 }
 
-# Setting up 1939 Politics
-1939.1.1 = {
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1938.10.25"
-		election_frequency = 48
-		elections_allowed = yes
-	}
-
-	set_popularities = {
-		democratic = 80
-		communism = 10
-		fascism = 10
-	}
-
-	IF = {
-		limit = {
-			NOT = {
-				has_dlc = "Trial of Allegiance"
-			}
-		}
-		recruit_character = CHL_pedro_aguirre_cerda
-		promote_character = CHL_pedro_aguirre_cerda
-		retire_character = CHL_arturo_alessandri
-		ELSE_IF = {
-			limit = {
-				has_dlc = "Trial of Allegiance"
-			}
-			add_country_leader_role = {
-			    character = CHL_pedro_aguirre_cerda
-			    promote_leader = yes
-			    country_leader = {
-			        ideology = socialism
-			        expire = "1965.1.1.1"
-			        traits = { JUNO_gobernar_es_educar }
-			    }
-			}
-			retire_character = CHL_arturo_alessandri
-		}
-	}
-	
-}
-
 ### VARIANTS ###
 # 1936 Start #
 IF = {
@@ -597,4 +554,8 @@ IF = {
 			rear_1_custom_slot = empty
 		}
 	}
+}
+
+add_ideas = {
+	catholic_state
 }

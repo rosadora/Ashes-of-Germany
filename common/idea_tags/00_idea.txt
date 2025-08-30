@@ -67,6 +67,8 @@ idea_categories = {
 
 	society_laws = {
 		slot = womens_rights
+		slot = women_in_economy
+		slot = state_religion
 		
 		ledger = civilian
 		

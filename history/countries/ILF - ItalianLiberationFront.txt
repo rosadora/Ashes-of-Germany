@@ -8,6 +8,7 @@ add_ideas = {
 	limited_exports
 	service_by_requirement
 	partial_economic_mobilisation
+	catholic_state
 }
 
 recruit_character = ILF_Ivanoe_Bonomi

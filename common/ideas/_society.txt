@@ -1,0 +1,283 @@
+ideas = {
+
+	state_religion = {
+		law = yes
+		use_list_view = yes
+
+		pluralism = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+			default = yes
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				non_core_manpower = 0.05
+				army_org_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+		}
+		catholic_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.2
+				stability_factor = 0.1
+				democratic_drift = 0.02
+			}
+
+			cancel_if_invalid = no
+		}
+		orthodox_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.25
+				stability_factor = 0.05
+				war_support_factor = 0.075
+			}
+
+			cancel_if_invalid = no
+		}
+		protestant_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.15
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+
+			cancel_if_invalid = no
+		}
+		jewish_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.25
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+
+			cancel_if_invalid = no
+		}
+		sunni_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				conscription = 0.02
+			}
+
+			cancel_if_invalid = no
+		}
+		shia_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				army_org_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+		}
+		hindu_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+
+			cancel_if_invalid = no
+		}
+		theravada_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.125
+				war_support_factor = -0.1
+			}
+
+			cancel_if_invalid = no
+		}
+		mahayana_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				war_support_factor = -0.075
+			}
+
+			cancel_if_invalid = no
+		}
+		confucianist_state = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+
+			cancel_if_invalid = no
+		}
+		state_shintoism = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+				original_tag = JAP
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism
+				}
+			}
+
+			modifier = {
+				industry_air_damage_factor = -0.1
+				army_morale_factor = 0.1
+			}
+
+			cancel_if_invalid = no
+		}
+		state_shintoism2 = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+				original_tag = JAP
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism
+				}
+			}
+
+			visible = {
+				always = no
+			}
+
+			modifier = {
+				industry_air_damage_factor = -0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+				conscription_factor = 0.1
+			}
+
+			cancel_if_invalid = yes
+		}
+		state_atheism = {
+
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				research_speed_factor = 0.075
+				compliance_gain = 0.01
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+}

@@ -11,6 +11,9 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 	service_by_requirement
+	state_atheism
+	women_in_military
+	women_in_factories
 }
 
 create_country_leader = {

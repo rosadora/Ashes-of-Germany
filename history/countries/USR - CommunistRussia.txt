@@ -216,6 +216,9 @@ add_ideas = {
 	army_of_the_old_days
 	famines
 	extensive_conscription
+	state_atheism
+	women_in_factories
+	women_in_military
 }
 
 set_convoys = 50
