@@ -186,3 +186,37 @@ country_event = {
 		}
 	}
 }
+# Mahayana Brotherhood - Request
+country_event = {
+	id = mongolia.6
+	title = mongolia.6.t
+	desc = mongolia.6.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #Accept Mongol protection
+		name = mongolia.6.a
+		ai_chance = {
+			base = 80
+		}
+		MON = {
+			puppet = TIB
+		}
+	}
+	option = { #Refuse Mongol Protection
+		name = mongolia.6.b
+		ai_chance = {
+			base = 20
+		}
+		MON = {
+		create_wargoal = {
+            type = annex_everything
+            target = TIB
+        }
+		add_state_core = 322
+		add_state_core = 758
+		add_state_core = 757
+		}
+	}
+}

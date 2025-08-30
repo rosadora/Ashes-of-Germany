@@ -54,6 +54,15 @@ leader_traits = {
 		}
 	}
 
+	celestial_empress = {
+		random = no
+		army_org_factor = 0.1
+		stability_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	illegitimate_regent = {
 		random = no
 		stability_factor = -0.1

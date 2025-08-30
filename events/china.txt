@@ -223,6 +223,22 @@ country_event = {
 		}
 		IF = {
 			limit = {
+				MAN = {
+					is_subject_of = JAP
+				}
+				MON = {
+				controls_state = 328
+				}
+			}
+			MON = {
+			annex_country = {
+				target = MAN
+				transfer_troops = no
+			}
+			}
+		}
+		IF = {
+			limit = {
 				MEN = {
 					is_subject_of = JAP
 				}
@@ -243,6 +259,22 @@ country_event = {
 				}
 			}
 			PRC = {
+			annex_country = {
+				target = MEN
+				transfer_troops = no
+			}
+			}
+		}
+		IF = {
+			limit = {
+				MEN = {
+					is_subject_of = JAP
+				}
+				MON = {
+				controls_state = 611
+				}
+			}
+			MON = {
 			annex_country = {
 				target = MEN
 				transfer_troops = no
@@ -268,6 +300,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 609
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 609
+				}
+				MON = {
+				controls_state = 609
+				}
+			}
+			MON = {
 			transfer_state = 609
 			}
 		}
@@ -290,6 +335,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 745
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 745
+				}
+				MON = {
+				controls_state = 745
+				}
+			}
+			MON = {
 			transfer_state = 745
 			}
 		}
@@ -312,6 +370,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 716
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 716
+				}
+				MON = {
+				controls_state = 716
+				}
+			}
+			MON = {
 			transfer_state = 716
 			}
 		}
@@ -334,6 +405,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 610
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 610
+				}
+				MON = {
+				controls_state = 610
+				}
+			}
+			MON = {
 			transfer_state = 610
 			}
 		}
@@ -356,6 +440,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 715
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 715
+				}
+				MON = {
+				controls_state = 715
+				}
+			}
+			MON = {
 			transfer_state = 715
 			}
 		}
@@ -378,6 +475,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 328
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 328
+				}
+				MON = {
+				controls_state = 328
+				}
+			}
+			MON = {
 			transfer_state = 328
 			}
 		}
@@ -400,6 +510,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 717
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 717
+				}
+				MON = {
+				controls_state = 717
+				}
+			}
+			MON = {
 			transfer_state = 717
 			}
 		}
@@ -422,6 +545,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 714
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 714
+				}
+				MON = {
+				controls_state = 714
+				}
+			}
+			MON = {
 			transfer_state = 714
 			}
 		}
@@ -444,6 +580,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 761
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 761
+				}
+				MON = {
+				controls_state = 761
+				}
+			}
+			MON = {
 			transfer_state = 761
 			}
 		}
@@ -466,6 +615,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 612
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 612
+				}
+				MON = {
+				controls_state = 612
+				}
+			}
+			MON = {
 			transfer_state = 612
 			}
 		}
@@ -488,6 +650,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 611
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 611
+				}
+				MON = {
+				controls_state = 611
+				}
+			}
+			MON = {
 			transfer_state = 611
 			}
 		}
@@ -510,6 +685,19 @@ country_event = {
 				}
 			}
 			PRC = {
+			transfer_state = 524
+			}
+		}
+		IF = {
+			limit = {
+				JAP = {
+					owns_state = 524
+				}
+				MON = {
+				controls_state = 524
+				}
+			}
+			MON = {
 			transfer_state = 524
 			}
 		}
@@ -554,6 +742,7 @@ country_event = {
 			white_peace = GXC
 			white_peace = MEN
 			white_peace = MAN
+			white_peace = MON
 		}
 	}
 }

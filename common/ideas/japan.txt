@@ -443,15 +443,6 @@ ideas = {
 				always = yes
 			}
 
-			available = {
-				OR = {
-					has_government = social_democracy 
-					has_government = classical_marxism
-					has_government = communism
-					has_government = libertarian_socialism
-				}
-			}
-
 			picture = HUN_resurgent_communist_party_idea
 
 			removal_cost = -1
