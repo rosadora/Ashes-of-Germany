@@ -94,6 +94,24 @@ ideas = {
 				neutrality_drift = 0.1
 			} 
 		}
+		khesig = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_the_heroes_of_adwa_upgraded
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				army_speed_factor = 0.05
+			} 
+		}
 		republican_resistance = {
 			
 			allowed = {

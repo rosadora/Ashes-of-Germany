@@ -1977,8 +1977,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_burn_the_world"
-	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	name = "GFX_goal_mahayana_restoration"
+	texturefile = "gfx/interface/goals/mahayana_restoration.dds"			
 	}
 
 	SpriteType = {
