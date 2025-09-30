@@ -48,7 +48,7 @@ shared_focus = {
 		}
 	}
 	offset = {
-		x = -16
+		x = 2
 		y = 0
 		trigger = {
 			 tag = MAN 
@@ -88,7 +88,7 @@ shared_focus = {
 	x = -10
 	y = 1
 	relative_position_id = CHI_invite_foreign_investors
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -920,7 +920,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = CHI_mission_to_germany
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -1131,7 +1131,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = CHI_mission_to_the_soviet_union
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -1650,15 +1650,11 @@ shared_focus = {
 	}
 
 	available = {
-		owns_state = 608
-		owns_state = 328
-		owns_state = 611
-		owns_state = 615
-		owns_state = 622
-		owns_state = 754
-		owns_state = 617
-		owns_state = 325
-		owns_state = 594
+	}
+
+	bypass = {
+		NOT = { has_idea = CHI_nine_power_treaty }
+
 	}
 
 	cancel_if_invalid = yes
@@ -1813,7 +1809,7 @@ shared_focus = {
 	icon = GFX_goal_generic_improve_relations
 	prerequisite = { focus = CHI_one_china_policy }
 	mutually_exclusive = { focus = CHI_conquer_tibet }
-	x = 0
+	x = -1
 	y = 1
 	relative_position_id = CHI_one_china_policy
 
@@ -1837,14 +1833,76 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		TIB = { country_event = china.4 }
+		TIB = { country_event = wtt_china.10 }
+	}
+}
+
+shared_focus = {
+	id = CHI_conquer_tibet
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = CHI_one_china_policy }
+	mutually_exclusive = { focus = CHI_integrate_tibet }
+	x = 1
+	y = 1
+	relative_position_id = CHI_one_china_policy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			any_country = {
+				is_major = yes
+				is_in_faction_with = TIB
+			}
+			factor = 0
+		}
+	}
+
+	available = {
+	}
+
+	bypass = {
+		OR = {
+			NOT = { country_exists = TIB }	
+			has_war_with = TIB
+			has_wargoal_against = TIB
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		if = {
+			limit = {
+				322 = { is_owned_and_controlled_by = TIB }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = take_state_focus
+					target = TIB
+					expire = 0
+					generator = { 322 }
+				}
+			}
+		}
+		else = {
+			create_wargoal = {
+				type = annex_everything
+				target = TIB				
+				expire = 0
+			}
+		}
 	}
 }
 
 shared_focus = {
 	id = CHI_renounce_the_mcmahon_line
 	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = CHI_integrate_tibet }
+	prerequisite = { focus = CHI_integrate_tibet focus = CHI_conquer_tibet }
+	mutually_exclusive = { focus = CHI_indian_cooperation }
 	x = 0
 	y = 2
 	relative_position_id = CHI_one_china_policy
@@ -1977,7 +2035,7 @@ shared_focus = {
 	id = CHI_guidance_and_support
 	icon = GFX_goal_generic_forceful_treaty
 	prerequisite = { focus = CHI_anti_imperialism }
-	x = 0
+	x = 1
 	y = 1
 	relative_position_id = CHI_anti_imperialism
 
@@ -2031,7 +2089,7 @@ shared_focus = {
 	id = CHI_commit_to_korean_independence
 	icon = GFX_goal_generic_national_unity
 	prerequisite = { focus = CHI_guidance_and_support }
-	x = 0
+	x = 1
 	y = 2
 	relative_position_id = CHI_anti_imperialism
 
@@ -2108,6 +2166,95 @@ shared_focus = {
 					}
 				}
 			}
+		}
+	}
+}
+
+shared_focus = {
+	id = CHI_indian_cooperation
+	icon = GFX_goal_generic_improve_relations
+	prerequisite = { focus = CHI_anti_imperialism }
+	mutually_exclusive = { focus = CHI_renounce_the_mcmahon_line }
+	x = -1
+	y = 2
+	relative_position_id = CHI_anti_imperialism
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		OR = {
+			is_faction_leader = yes
+			RAJ = { is_subject = yes }
+		}
+		RAJ = { NOT = { has_war_with = ROOT } }		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		if = {
+			limit = {
+				ROOT = { is_faction_leader = yes }
+				RAJ = { is_subject = no }
+			}
+			RAJ = { country_event = { id = generic.5 } }
+		}
+		else = {
+			RAJ = { country_event = wtt_china_shared.1 }
+		}
+	}
+}
+
+shared_focus = {
+	id = CHI_influence_mongolia
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { focus = CHI_indian_cooperation }
+	x = 0
+	y = 1
+	relative_position_id = CHI_indian_cooperation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		OR = {
+			is_faction_leader = yes
+			MON = { is_subject = yes }
+		}
+		MON = { NOT = { has_war_with = ROOT } }	
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		if = {
+			limit = {
+				ROOT = { is_faction_leader = yes }
+				MON = { is_subject = no }
+			}
+			MON = { country_event = { id = generic.5 } }
+		}
+		else = {
+			MON = { country_event = wtt_china_shared.1 }
 		}
 	}
 }
@@ -2234,10 +2381,7 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = JAP
-		}
+		JAP = { country_event = { id = wtt_china.10 } }
 	}
 }
 
@@ -2332,7 +2476,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = CHI_reach_out_to_france
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -2615,56 +2759,25 @@ shared_focus = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOT = {
-						has_dlc = "By Blood Alone"
+					not = {
+						has_tech = early_fighter
 					}
 				}
-				if = {
-					limit = {
-						not = {
-							has_tech = early_fighter
-						}
-					}
-					set_technology = { early_fighter = 1 }
-				}
-				if = {
-					limit = {
-						has_completed_focus = CHI_british_cooperation
-						not = { has_war_with = ENG }
-					}
-					add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = ENG }
-				}
-				if = {
-					limit = {
-						has_completed_focus = CHI_mission_to_the_us
-						not = { has_war_with = USA }
-					}
-					add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = USA }
-				}
+				set_technology = { early_fighter = 1 }
 			}
-			else = {
-				if = {
-					limit = {
-						not = {
-							has_tech = iw_small_airframe
-						}
-					}
-					set_technology = { iw_small_airframe = 1 }
+			if = {
+				limit = {
+					has_completed_focus = CHI_british_cooperation
+					not = { has_war_with = ENG }
 				}
-				if = {
-					limit = {
-						has_completed_focus = CHI_british_cooperation
-						not = { has_war_with = ENG }
-					}
-					add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = 50 producer = ENG variant_name = "Gloster Gladiator"}
+				add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = ENG }
+			}
+			if = {
+				limit = {
+					has_completed_focus = CHI_mission_to_the_us
+					not = { has_war_with = USA }
 				}
-				if = {
-					limit = {
-						has_completed_focus = CHI_mission_to_the_us
-						not = { has_war_with = USA }
-					}
-					add_equipment_to_stockpile = { type = small_plane_airframe_1 amount = 50 producer = USA variant_name = "P-36A"}
-				}
+				add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = USA }
 			}
 		}
 	}
@@ -2937,22 +3050,10 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		if = {
-			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			add_tech_bonus = {
-				name = CHI_the_chu_x_po
-				ahead_reduction = 2
-				technology = advanced_small_airframe
-			}
-		}
-		else = {
-			add_tech_bonus = {
-				name = CHI_the_chu_x_po
-				ahead_reduction = 2
-				technology = fighter3				
-			}
+		add_tech_bonus = {
+			name = CHI_the_chu_x_po
+			ahead_reduction = 2
+			technology = fighter3				
 		}
 	}
 }
@@ -2966,7 +3067,7 @@ shared_focus = {
 	mutually_exclusive = { focus = CHI_collaboration_with_the_japanese }
 	relative_position_id = CHI_british_cooperation
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -3452,7 +3553,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = CHI_mission_to_the_us
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1

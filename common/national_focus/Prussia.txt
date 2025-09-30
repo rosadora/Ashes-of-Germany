@@ -1952,6 +1952,7 @@
 			}
 		}
 	}
+
 	focus = {
 		id = PRS_conservative_agenda
 		icon = GFX_goal_defend_the_land
@@ -2917,6 +2918,11 @@
 			add_named_threat = { threat = 5 name = GER_rhineland }
 			FRA = {
 				country_event = prussia.112
+			}
+			hidden_effect = {
+				SPR = {
+					country_event = prussia.133
+				}
 			}
 		}
 	}
