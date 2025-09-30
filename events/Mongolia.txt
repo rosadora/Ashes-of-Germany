@@ -220,3 +220,35 @@ country_event = {
 		}
 	}
 }
+# Zhangbei Proposal - Request
+country_event = {
+	id = mongolia.7
+	title = mongolia.7.t
+	desc = mongolia.7.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #Integration of Mengukuo
+		name = mongolia.7.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+			target = MEN
+			transfer_troops = yes
+		}
+	}
+	option = { #Refuse Mongol Protection
+		name = mongolia.7.b
+		ai_chance = {
+			base = 20
+		}
+		MON = {
+		create_wargoal = {
+            type = annex_everything
+            target = MEN
+        }
+		}
+	}
+}

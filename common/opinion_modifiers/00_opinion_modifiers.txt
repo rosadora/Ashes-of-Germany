@@ -18,6 +18,10 @@ opinion_modifiers = {
 		value = -100
 	}
 
+	demonstration_of_loyalty = {
+		value = 100
+	}
+
 	one_china_policy = {
 		value = 50
 	}

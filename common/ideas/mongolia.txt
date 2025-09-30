@@ -55,6 +55,25 @@ ideas = {
 				neutrality_drift = 0.04
 			} 
 		}
+		khanate_rises = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.15
+				army_attack_factor = 0.05
+			} 
+		}
 		the_great_khatanate = {
 			
 			allowed = {
@@ -148,6 +167,85 @@ ideas = {
 				political_power_factor = -0.1
 				stability_factor = -0.125
 				social_democracy_drift = 0.01
+			} 
+		}
+		the_green_palace_shining = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.15
+				army_speed_factor = 0.1
+			} 
+		}
+		puppet_governement = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			} 
+		}
+		puppet_governement2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.075
+				fascism_drift = 0.1
+			} 
+		}
+		japans_bodyguard = {
+			
+			allowed = {
+			}
+
+			available = {
+				is_in_faction_with = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_militarism_showa
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_against_major_factor = 0.075
+				army_defence_against_major_factor = 0.075
+				conscription = 0.05
 			} 
 		}
 	}
