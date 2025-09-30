@@ -5,7 +5,17 @@ oob = "MAN_1936"
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
-	tech_trucks = 1
+	gwtank = 1
+	basic_train = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
 }
 
 if = {
@@ -16,7 +26,8 @@ if = {
 	add_ideas = MAN_banditry
 	add_ideas = MAN_kwantung_veto
 	add_ideas = MAN_low_legitimacy_5
-	recruit_character = MAN_songgotu_zhanshan
+	add_ideas = MAN_kwantung_leader_ueda
+	add_ideas = MAN_south_manchuria_railway_company
 }
 
 recruit_character = MAN_aisin_gioro_puyi
@@ -24,18 +35,31 @@ recruit_character = MAN_zhang_haipeng
 recruit_character = MAN_zhang_jinghui
 recruit_character = MAN_aisin_gioro_xiqia
 recruit_character = MAN_yoshiko_kawashima
+recruit_character = MAN_yang_jingyu
 recruit_character = MAN_zhao_shangzhi
-recruit_character = MAN_changlin_linge
-recruit_character = MAN_kyoiji_tomonaga
-recruit_character = MAN_yonimitsu_kasahara
-recruit_character = MAN_deng_linge
-recruit_character = MAN_hung_zhehuang
-recruit_character = MAN_nakajima_kesago
+recruit_character = MAN_oikawa_koshiro
+recruit_character = MAN_heitaro_kimura
+recruit_character = MAN_yukio_kasahara
+recruit_character = MAN_urzhin_garmaev
+recruit_character = MAN_ding_chao
+recruit_character = MAN_tong_jixu
 recruit_character = MAN_yin_zuoqian
-recruit_character = MAN_hesehn_tiemei
-recruit_character = MAN_xian_yuan
-recruit_character = MAN_guan_xingde
-recruit_character = MAN_megata_toshiro
+
+recruit_character = MAN_ma_zhanshan
+recruit_character = MAN_zheng_xiaoxu
+recruit_character = MAN_yu_zhishan
+recruit_character = MAN_sun_quichang
+recruit_character = MAN_ruan_zhenduo
+recruit_character = MAN_lu_ronghuan
+recruit_character = MAN_yuan_jinkai
+recruit_character = MAN_zang_shiyi
+recruit_character = MAN_zhou_baozhong
+recruit_character = MAN_feng_zhongyun
+recruit_character = MAN_Peng_Shuzhi
+#recruit_character = JAP_kenji_doihara
+#somehow your agents aren't allowed to work in other countries for you
+
+
 if = {
 	limit = { has_dlc = "No Step Back" }
 	recruit_character = SOV_grigory_semyonov
@@ -61,6 +85,8 @@ set_convoys = 5
 761 = { #Hulunbuir
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
+
+starting_train_buffer = 2.0
 
 1939.1.1 = {
 
@@ -122,6 +148,7 @@ set_convoys = 5
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 
 		#industry
@@ -133,9 +160,6 @@ set_convoys = 5
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
-	}
-	complete_special_project = {
-		project = sp:sp_air_radar
 	}
 }
 
