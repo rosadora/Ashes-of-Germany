@@ -21,3 +21,131 @@ defined_text = { # Country
 		localization_key = ILF_FORZE_ARMATE_ITALIANE_NAME
 	}
 }
+
+defined_text = { # Country
+	name = MAN_socialist_coup_risk
+	text = {
+		trigger = {
+			check_variable = { man_soviet_influence < 0.08 }
+			NOT = { has_completed_focus = MAN_socialist_victory }
+		}
+		localization_key = MAN_risk_low
+	}
+	text = {
+		trigger = {
+			check_variable = { man_soviet_influence < 0.17 }
+			NOT = { has_completed_focus = MAN_socialist_victory }
+		}
+		localization_key = MAN_risk_medium
+	}
+	text = {
+		trigger = {
+			check_variable = { man_soviet_influence < 0.19 }
+			NOT = { has_completed_focus = MAN_socialist_victory }
+		}
+		localization_key = MAN_risk_high
+	}
+	text = {
+		trigger = {
+			check_variable = { man_soviet_influence < 0.25 }
+			NOT = { has_completed_focus = MAN_socialist_victory }
+		}
+		localization_key = MAN_risk_imminent
+	}
+	text = {
+		trigger = {
+			has_completed_focus = MAN_socialist_victory
+		}
+		localization_key = MAN_risk_succeed
+	}
+	text = {
+		localization_key = MAN_risk_null
+	}
+}
+
+
+
+defined_text = {
+	name = GetCHIPrepareResistanceName
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_nationalists
+		}
+		localization_key = CHI_NATI_RESISTANCE
+	}
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_communists
+		}
+		localization_key = CHI_COMI_RESISTANCE
+	}
+	text = {
+		localization_key = CHI_NORM_RESISTANCE
+	}
+}
+
+
+
+
+
+
+defined_text = {
+	name = GetCHINewDivisionsName
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_nationalists
+		}
+		localization_key = CHI_NATI_NEW_DIVS
+	}
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_communists
+		}
+		localization_key = CHI_COMI_NEW_DIVS
+	}
+	text = {
+		localization_key = CHI_NORM_NEW_DIVS
+	}
+}
+
+
+
+
+defined_text = {
+	name = GetCHIIntelligenceNetworkName
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_nationalists
+		}
+		localization_key = CHI_NATI_INF
+	}
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_communists
+		}
+		localization_key = CHI_COMI_INF
+	}
+	text = {
+		localization_key = CHI_NORM_INF
+	}
+}
+
+
+defined_text = {
+	name = GetCHIfactoriesName
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_nationalists
+		}
+		localization_key = CHI_NATI_FAC
+	}
+	text = {
+		trigger = {
+			has_completed_focus = CHI_cooperation_with_the_communists
+		}
+		localization_key = CHI_COMI_FAC
+	}
+	text = {
+		localization_key = CHI_NORM_FAC
+	}
+}
