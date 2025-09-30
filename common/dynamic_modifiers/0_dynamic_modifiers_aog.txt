@@ -1,3 +1,39 @@
+kwantung_exploit_the_land = { #Used as National Spirit
+	enable = { always = yes }
+
+	icon = GFX_idea_MEX_callistas
+
+	#political_power_gain = 0.05
+	production_speed_buildings_factor = man_construction_lvl
+	monthly_population = man_exploitation_lvl
+	industrial_capacity_factory = -0.05
+	stability_factor = -0.1
+
+}
+
+kwantung_gear_up_army = { #Used as National Spirit
+	enable = { always = yes }
+
+	icon = GFX_idea_HUN_secret_rearmament
+
+	industrial_capacity_factory = man_construction_lvl
+	local_resources_factor = 0.15
+	consumer_goods_factor = 0.1
+	conscription_factor = man_exploitation_lvl
+	production_speed_buildings_factor = -0.5
+	production_factory_efficiency_gain_factor = man_construction_lvl
+	
+}
+
+MAN_soviet_railway = { #Used as National Spirit
+	enable = { always = yes }
+
+	icon = GFX_idea_soviet_railways
+
+	consumer_goods_factor = man_soviet_influence
+	communism_drift = man_soviet_influence
+	
+}
 
 german_speakers_minority_cze = {
 	enable = { always = yes }
@@ -92,3 +128,66 @@ macedonian_nationalism_yug_cro = {
 	state_resources_factor = -0.35
 	state_production_speed_buildings_factor = -0.25
 }
+
+wl_planned_resistance = { 
+	enable = { always = yes }
+
+	icon = GFX_modifiers_SOV_invaders_must_die
+	
+	compliance_growth = -0.05
+	resistance_growth = 0.05
+	resistance_target = 0.15
+	resistance_decay = -0.30
+}
+IRE_transfer_overseen_by_ENG = {
+	enable = { always = yes }
+	
+	icon = GFX_modifiers_compliance
+	
+	compliance_gain = 0.05
+}
+
+IRE_unionist_tensions = {
+	enable = { always = yes }
+	
+	icon = GFX_modifiers_resistance
+	
+	resistance_growth = 0.05
+}
+
+IRE_protestant_tensions = {
+	enable = { always = yes }
+	icon = GFX_modifiers_resistance
+	
+	resistance_growth = 0.1
+}
+
+IRE_IRA_agitation = {
+	enable = { always = yes }
+	icon = GFX_modifiers_resistance
+	
+	resistance_growth = 0.5
+}
+
+IRE_unionist_cooperation = {
+	enable = { always = yes }
+	
+	icon = GFX_modifiers_compliance
+	
+	compliance_gain = 0.05
+}
+
+IRE_cooperation_with_the_gardai = {
+	enable = { always = yes }
+	
+	icon = GFX_modifiers_compliance
+	
+	resistance_growth = -0.25
+}
+	
+IRE_partial_core = {
+		enable = { always = yes }
+		
+		local_building_slots_factor = 0.5
+}	
+	
