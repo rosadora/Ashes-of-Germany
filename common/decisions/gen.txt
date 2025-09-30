@@ -867,6 +867,7 @@ gen_war_of_unification = {
 		}
 
 		remove_effect = {
+			add_state_core = 980
 			add_state_core = 64
 			add_state_core = 62
 			add_state_core = 65

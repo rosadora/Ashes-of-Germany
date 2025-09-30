@@ -6358,48 +6358,6 @@ foreign_support = {
 
 political_actions = {
 
-	CHI_suspend_the_inter_party_coordination_council = {
-		icon = oppression
-		available = {
-			has_idea = CHI_inter_party_coordination_council
-		}
-		visible = {
-			has_idea = CHI_inter_party_coordination_council
-		}
-		cost = 25
-		complete_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_government = democratic
-					}
-				}
-				add_stability = -0.05
-			}
-			remove_ideas = CHI_inter_party_coordination_council
-		}
-	}
-	CHI_reinstate_the_inter_party_coordination_council = {
-		icon = generic_political_discourse
-		available = {
-			NOT = { has_idea = CHI_inter_party_coordination_council }
-			NOT = {
-				has_government = democratic
-			}
-			has_completed_focus = CHI_inter_party_coordination_council
-		}
-		visible = {
-			NOT = { has_idea = CHI_inter_party_coordination_council }
-			NOT = {
-				has_government = democratic
-			}
-			has_completed_focus = CHI_inter_party_coordination_council
-		}
-		cost = 25
-		complete_effect = {
-			add_ideas = CHI_inter_party_coordination_council
-		}
-	}
 
 	CHI_join_united_front = {
 

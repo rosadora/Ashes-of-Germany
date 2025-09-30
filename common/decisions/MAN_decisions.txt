@@ -23,10 +23,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 714
-		} 
-}
+			highlight_state_targets = {
+				state = 714
+			} 
+		}
 
 		cost = 0
 
@@ -67,10 +67,10 @@ MAN_banditry_category = {
 		cost = 0
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 714
-		} 
-}
+			highlight_state_targets = {
+				state = 714
+			} 
+		}
 		visible = {
 			has_country_flag = MAN_northern_bandits
 		}
@@ -134,10 +134,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 714
-		} 
-}
+			highlight_state_targets = {
+					state = 714
+				} 
+		}
 
 		visible = {
 			
@@ -179,10 +179,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 717
-		} 
-}
+			highlight_state_targets = {
+				state = 717
+			} 
+		}
 
 		cost = 0
 
@@ -227,10 +227,10 @@ MAN_banditry_category = {
 		cost = 0
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 717
-		} 
-}
+			highlight_state_targets = {
+				state = 717
+			} 
+		}
 
 		is_good = yes
 
@@ -292,10 +292,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 717
-		} 
-}
+			highlight_state_targets = {
+				state = 717
+			} 
+		}
 
 		visible = {
 			
@@ -337,10 +337,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 610
-		} 
-}
+			highlight_state_targets = {
+				state = 610
+			} 
+		}
 
 		cost = 0
 
@@ -381,10 +381,10 @@ MAN_banditry_category = {
 		cost = 0
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 610
-		} 
-}
+			highlight_state_targets = {
+				state = 610
+			} 
+		}
 
 		visible = {
 			has_country_flag = MAN_western_bandits
@@ -450,10 +450,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 610
-		} 
-}
+			highlight_state_targets = {
+				state = 610
+			} 
+		}
 
 		visible = {
 			
@@ -471,6 +471,48 @@ MAN_banditry_category = {
 					NOT = { has_country_flag = MAN_northern_bandits }
 				}
 				remove_ideas = MAN_banditry
+			}
+		}
+	}
+
+	MAN_bandit_raids = {
+
+		icon = generic_civil_support
+
+		available = {
+			NOT = { has_idea = MAN_banditry }
+		}
+
+		days_mission_timeout = 180
+
+		activation = {
+			has_idea = MAN_banditry
+		}
+
+		visible = {
+			
+		}		
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			random_list = {
+				25 = {
+					country_event = wtt_manchukou_bandit_sabotage.21
+				}
+				25 = {
+					country_event = wtt_manchukou_bandit_sabotage.22
+				}
+				25 = {
+					country_event = wtt_manchukou_bandit_sabotage.23
+				}
+				25 = {
+					
+				}
 			}
 		}
 	}
@@ -836,7 +878,6 @@ MAN_war_preparations = {
 		available = {
 			has_completed_focus = MAN_local_arms_procurement
 			has_completed_focus = MAN_purge_the_general_affairs_council
-			has_war_with = JAP
 		}
 		visible = {
 			OR = {
@@ -849,7 +890,6 @@ MAN_war_preparations = {
 			NOT = {
 				has_idea = MAN_underground_gun_shops
 			}
-			has_war_with = JAP
 		}
 		cost = 50
 		ai_will_do = {
@@ -882,7 +922,7 @@ MAN_war_preparations = {
 	}
 	MAN_divert_machine_tools = {
 		available = {
-			
+			has_completed_focus = MAN_request_control_of_the_railways
 		}
 		visible = {
 			has_completed_focus = MAN_request_control_of_the_railways
@@ -936,16 +976,28 @@ MAN_war_preparations = {
 		}
 	}
 	MAN_prepare_to_seize_arms = {
+		
+		icon = decision_generic_prepare_civil_war
+		
 		available = {
-			has_completed_focus = MAN_purge_the_general_affairs_council
+			has_completed_focus = MAN_prepare_resistance
 			command_power > 29
 		}
 		visible = {
-			has_completed_focus = MAN_purge_the_general_affairs_council
+			has_completed_focus = MAN_prepare_resistance
 			check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than }
-			is_subject_of = JAP
 		}
 		cost = 0
+		
+		#MAN_prepare_to_seize_arms_cost:0 "£command_power  §Y30§!"
+ #MAN_prepare_to_seize_arms_cost_blocked:0 "£command_power  §R30§!"
+ 
+		custom_cost_trigger = {
+			command_power > 29
+		}
+		
+		custom_cost_text = MAN_prepare_to_seize_arms_cost
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -1016,27 +1068,13 @@ MAN_war_preparations = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						has_dlc = "No Step Back"
-					}
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 50 producer = JAP }
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = JAP }
 			}
-			else_if = { 
-				limit = {
-					has_dlc = "No Step Back"
-					check_variable = { var = MAN_seize_arms_prep value = 40 compare = greater_than_or_equals }
-				}
-				add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 50 producer = JAP variant_name = "Type 95 Ha-Go"}
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = JAP }
-			}
 			if = {
 				limit = {
-					NOT = {
-						has_dlc = "By Blood Alone"
-					}
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = JAP }
@@ -1049,14 +1087,6 @@ MAN_war_preparations = {
 					add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 25 producer = JAP }
 				}
 				add_equipment_to_stockpile = { type = CAS_equipment_1 amount = 50 producer = JAP }
-			}
-			else_if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
-				}
-				add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = 100 producer = JAP variant_name = "Ki-10" }
-				add_equipment_to_stockpile = { type = small_plane_cas_airframe_0 amount = 50 producer = JAP variant_name = "Ki-3"}
 			}
 			if = {
 				limit = {
@@ -1105,6 +1135,151 @@ MAN_war_preparations = {
 			}
 		}
 	}
+	
+	MAN_CHI_support = {
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 100
+		}
+
+		allowed = {
+		}
+
+		available = {
+			has_completed_focus = MAN_purge_the_general_affairs_council
+			original_tag = MAN
+			is_subject_of = JAP
+			NOT = {
+				has_country_flag = MAN_asking_support
+			}
+		}
+		
+		target_trigger = {
+			FROM = { tag = CHI }
+		}
+
+		days_remove = 30
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = MAN_seek_foreign_support
+			is_subject_of = JAP
+		}
+
+		cost = 50
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = MAN_asking_support
+			}
+		}
+
+		remove_effect = {
+			CHI = { country_event = man_foreign_support.1 }
+			clr_country_flag = MAN_asking_support
+		}
+	}
+
+	MAN_SOV_support = {
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 100
+		}
+
+		allowed = {
+		}
+
+		available = {
+			has_completed_focus = MAN_purge_the_general_affairs_council
+			original_tag = MAN
+			is_subject_of = JAP
+			NOT = {
+				has_country_flag = MAN_asking_support
+			}
+		}
+		
+		target_trigger = {
+			FROM = { tag = SOV }
+		}
+
+		days_remove = 30
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = MAN_seek_foreign_support
+			is_subject_of = JAP
+			SOV = {
+				has_completed_focus = SOV_the_path_of_marxism_leninism
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = MAN_asking_support
+			}
+		}
+
+		remove_effect = {
+			SOV = { country_event = man_foreign_support.2 }
+			clr_country_flag = MAN_asking_support
+		}
+	}
+		
+	MAN_USA_support = {
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 100
+		}
+
+		allowed = { 
+		}
+
+		available = {
+			has_completed_focus = MAN_purge_the_general_affairs_council
+			original_tag = MAN
+			is_subject_of = JAP
+			NOT = {
+				has_country_flag = MAN_asking_support
+			}
+		}
+		
+		target_trigger = {
+			FROM = { tag = USA }
+		}
+
+		days_remove = 30
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = MAN_seek_foreign_support
+			is_subject_of = JAP
+		}
+
+		cost = 50
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = MAN_asking_support
+			}
+		}
+
+		remove_effect = {
+			FROM = { country_event = man_foreign_support.3 }
+			clr_country_flag = MAN_asking_support
+		}
+	}
+	
 }
 
 prospect_for_resources = {
@@ -1121,10 +1296,10 @@ prospect_for_resources = {
 			has_tech = excavation1
 		}
 		highlight_states = {
- highlight_state_targets = {
-			state = 328
-		} 
-}
+			highlight_state_targets = {
+				state = 328
+			}
+		}
 
 		visible = {
 			has_completed_focus = MAN_develop_aluminum_sources
@@ -1168,10 +1343,10 @@ prospect_for_resources = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 716
-		} 
-}
+			highlight_state_targets = {
+				state = 716
+			}
+		}
 
 		available = {
 			has_tech = construction2
@@ -1212,3 +1387,918 @@ prospect_for_resources = {
 		}
 	}
 }
+
+political_actions = {
+	MAN_demonstrated_legitimacy = {
+
+		icon = generic_civil_support
+
+		ai_will_do = {
+			base = 100
+		}
+
+		allowed = {
+			original_tag = MAN
+		}
+
+		available = {
+			OR = {
+				has_idea = MAN_low_legitimacy_1
+				hidden_trigger = {
+					has_idea = MAN_low_legitimacy_2
+				}
+				hidden_trigger = {
+					has_idea = MAN_low_legitimacy_3
+				}				
+				hidden_trigger = {
+					has_idea = MAN_low_legitimacy_4
+				}
+				hidden_trigger = {
+					has_idea = MAN_low_legitimacy_5
+				}
+			}
+		}
+
+		days_remove = 200
+
+		visible = {
+			has_completed_focus = MAN_the_two_emperors
+			original_tag = MAN
+		}
+
+		cost = 150
+		
+		fire_only_once = no
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			MAN_low_legitimacy_level_down = yes
+		}
+	}
+	
+	MAN_restore_legitimacy_socialism = {
+
+		icon = generic_civil_support
+
+		priority = 49
+
+		allowed = {
+			tag = MAN
+		}
+		
+		available = {# Will Fail
+			always = no
+		}
+	
+		activation = {
+			hidden_trigger = { always = no }
+		}
+	
+		visible = {
+	
+		}
+
+		cancel_if_not_visible = no
+			
+		fire_only_once = yes
+	
+		is_good = yes   
+	
+		selectable_mission = no  
+	
+		days_mission_timeout = 1095 # 3 Years
+		
+		days_remove = 0
+		
+		modifier = {
+		}
+
+		complete_effect = {
+		}
+		
+		remove_effect = { #Mission Aftermath
+			MAN_low_legitimacy_clear_all = yes
+			custom_effect_tooltip = man_legitimacy_restored_tt
+		}
+	}
+}
+
+MAN_five_year_plan_cat = {
+	hoshinos_plan = {
+
+		icon = gre_paying_ifc_debt
+
+		priority = 49
+
+		allowed = {
+			tag = MAN
+		}
+		
+		available = {# Will Fail
+			always = no
+		}
+	
+		activation = {
+			hidden_trigger = { always = yes }
+		}
+	
+		visible = {
+	
+		}
+
+		cancel_if_not_visible = no
+			
+		fire_only_once = yes
+	
+		is_good = yes   
+	
+		selectable_mission = no  
+	
+		days_mission_timeout = 0
+		
+		days_remove = 435 #should end spring 1937
+		
+		modifier = {
+			industrial_capacity_factory = 0.1
+			production_speed_arms_factory_factor = 0.05
+		}
+
+		complete_effect = { #Mission Failed
+			#hidden_effect = {
+			#	activate_mission = MAN_five_years_plan_mis
+			#}
+			country_event = { id = wtt_manchukou.11 }
+		}
+		
+		remove_effect = { #Mission Aftermath
+			effect_tooltip = {
+				activate_mission = MAN_five_years_plan_mis
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = hoshinos_plan_flag
+					}
+					activate_mission = MAN_five_years_plan_mis_syndicalist
+				}
+				else_if = {
+					limit = {
+						has_country_flag = aikawas_plan_flag
+					}
+					activate_mission = MAN_five_years_plan_mis_state_focus
+				}
+				else = {
+					activate_mission = MAN_five_years_plan_mis
+				}
+			}
+			country_event = { id = wtt_manchukou.11 }
+			set_country_flag = man_hoshinos_plan_finished
+		}
+
+	}
+	
+	MAN_five_years_plan_mis = {
+
+		icon = gre_paying_ifc_debt
+
+		priority = 49
+
+		allowed = {
+			tag = MAN
+		}
+		
+		available = {# Will Fail
+			always = no
+		}
+	
+		activation = {
+			#NOT = {
+			#	OR = {
+			#		has_active_mission = MAN_five_years_plan_mis
+			#		has_active_mission = MAN_five_years_plan_mis_syndicalist
+			#		has_active_mission = MAN_five_years_plan_mis_state_focus
+			#	}
+			#}
+			hidden_trigger = { always = no }
+		}
+	
+		visible = {
+	
+		}
+
+		cancel_if_not_visible = no
+			
+		fire_only_once = yes
+	
+		is_good = yes   
+	
+		selectable_mission = no  
+	
+		days_mission_timeout = 0
+		
+		days_remove = 1825
+		
+		modifier = {
+			consumer_goods_factor = -0.025
+			industrial_concern_cost_factor = -0.1
+		}
+
+		complete_effect = { #Mission Failed, we'll get them next time! NO YOU WILL NOT!
+			hidden_effect = {
+				activate_mission = MAN_five_years_plan_mis
+			}
+		}
+		
+		remove_effect = {
+			effect_tooltip = {
+				activate_mission = MAN_five_years_plan_mis
+				remove_ideas = MAN_five_year_plan_industry
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = hoshinos_plan_flag
+					}
+					activate_mission = MAN_five_years_plan_mis_syndicalist
+				}
+				else_if = {
+					limit = {
+						has_country_flag = aikawas_plan_flag
+					}
+					activate_mission = MAN_five_years_plan_mis_state_focus
+				}
+				else = {
+					activate_mission = MAN_five_years_plan_mis
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_air }
+					remove_ideas = MAN_five_year_plan_air
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_tank }
+					remove_ideas = MAN_five_year_plan_tank
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_industry }
+					remove_ideas = MAN_five_year_plan_industry
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = MAN_second_five_year_plan }
+				}
+				set_country_flag = man_first_year_plan_finished
+			}
+			country_event = { id = wtt_manchukou.11 }
+		}
+
+	}
+	
+	MAN_five_years_plan_mis_syndicalist = {
+
+		icon = gre_paying_ifc_debt
+
+		priority = 49
+
+		allowed = {
+			tag = MAN
+		}
+		
+		available = {# Will Fail
+			always = no
+		}
+	
+		activation = {
+			#NOT = {
+			#	OR = {
+			#		has_active_mission = MAN_five_years_plan_mis
+			#		has_active_mission = MAN_five_years_plan_mis_syndicalist
+			#		has_active_mission = MAN_five_years_plan_mis_state_focus
+			#	}
+			#}
+			hidden_trigger = { always = no }
+		}
+	
+		visible = {
+	
+		}
+
+		cancel_if_not_visible = no
+			
+		fire_only_once = yes
+	
+		is_good = yes   
+	
+		selectable_mission = no  
+	
+		days_mission_timeout = 0
+		
+		days_remove = 1825
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_factory_max_efficiency_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+		}
+
+		complete_effect = { #Mission Failed, we'll get them next time! NO YOU WILL NOT!
+			hidden_effect = {
+				activate_mission = MAN_five_years_plan_mis
+			}
+		}
+		
+		remove_effect = {
+			effect_tooltip = {
+				activate_mission = MAN_five_years_plan_mis_syndicalist
+				remove_ideas = MAN_five_year_plan_industry
+			}
+			hidden_effect = {
+				activate_mission = MAN_five_years_plan_mis_syndicalist
+				if = {
+					limit = { has_idea = MAN_five_year_plan_air }
+					remove_ideas = MAN_five_year_plan_air
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_tank }
+					remove_ideas = MAN_five_year_plan_tank
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_industry }
+					remove_ideas = MAN_five_year_plan_industry
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = MAN_second_five_year_plan }
+				}
+				set_country_flag = man_first_year_plan_finished
+			}
+			country_event = { id = wtt_manchukou.11 }
+		}
+
+	}
+	
+	MAN_five_years_plan_mis_state_focus = {
+
+		icon = gre_paying_ifc_debt
+
+		priority = 49
+
+		allowed = {
+			tag = MAN
+		}
+		
+		available = {# Will Fail
+			always = no
+		}
+	
+		activation = {
+			#NOT = {
+			#	OR = {
+			#		has_active_mission = MAN_five_years_plan_mis
+			#		has_active_mission = MAN_five_years_plan_mis_syndicalist
+			#		has_active_mission = MAN_five_years_plan_mis_state_focus
+			#	}
+			#}
+			hidden_trigger = { always = no }
+		}
+	
+		visible = {
+	
+		}
+
+		cancel_if_not_visible = no
+			
+		fire_only_once = yes
+	
+		is_good = yes   
+	
+		selectable_mission = no  
+	
+		days_mission_timeout = 0
+		
+		days_remove = 1825
+		
+		modifier = {
+			production_speed_industrial_complex_factor = 0.15
+			industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		complete_effect = { #Mission Failed, we'll get them next time! NO YOU WILL NOT!
+			hidden_effect = {
+				activate_mission = MAN_five_years_plan_mis
+			}
+		}
+		
+		remove_effect = {
+			effect_tooltip = {
+				activate_mission = MAN_five_years_plan_mis_state_focus
+				remove_ideas = MAN_five_year_plan_industry
+			}
+			hidden_effect = {
+				activate_mission = MAN_five_years_plan_mis_state_focus
+				if = {
+					limit = { has_idea = MAN_five_year_plan_air }
+					remove_ideas = MAN_five_year_plan_air
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_tank }
+					remove_ideas = MAN_five_year_plan_tank
+				}
+				if = {
+					limit = { has_idea = MAN_five_year_plan_industry }
+					remove_ideas = MAN_five_year_plan_industry
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = MAN_second_five_year_plan }
+				}
+				set_country_flag = man_first_year_plan_finished
+			}
+			country_event = { id = wtt_manchukou.11 }
+		}
+
+	}
+	
+	MAN_mil_fac = {
+	
+		icon = generic_construction
+		
+		#fire_only_once = yes
+		
+		cost = 65
+		
+		days_remove = 105
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 716
+			}
+		}
+		
+		allowed = {
+			original_tag = MAN
+		}
+
+		visible = {
+			owns_state = 716
+			controls_state = 716
+			has_completed_focus = MAN_first_five_year_plan
+			NOT = { has_country_flag = MAN_plan_heavy_industry }
+			716 = {
+				#NOT = { has_state_flag = MAN_mil_fac_build }
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				#limit = {
+				#	is_fully_controlled_by = ROOT
+				#	free_building_slots = {
+				#		building = arms_factory
+				#		size > 0
+				#		include_locked = yes
+				#	}
+				#}
+			}
+			NOT = { has_country_flag = MAN_plan_heavy_industry }
+		}
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = MAN_plan_investment }
+			owns_state = 716
+			controls_state = 716
+		}
+		
+		complete_effect = {
+			set_country_flag = MAN_plan_investment
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		
+			716 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				#set_state_flag = MAN_mil_fac_build
+			}
+			hidden_effect = {
+				clr_country_flag = MAN_plan_investment
+			}
+			set_country_flag = MAN_plan_heavy_industry
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	MAN_civ_fac = {
+	
+		icon = ger_mefo_bills
+		
+		#fire_only_once = yes
+		
+		cost = 65
+		
+		days_remove = 105
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 715
+			}
+		}
+		
+		allowed = {
+			original_tag = MAN
+		}
+
+		visible = {
+			owns_state = 715
+			controls_state = 715
+			has_completed_focus = MAN_first_five_year_plan
+			NOT = { has_country_flag = MAN_plan_light_industry }
+			715 = {
+				#NOT = { has_state_flag = MAN_mil_fac_build }
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				#limit = {
+				#	is_fully_controlled_by = ROOT
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 0
+				#		include_locked = yes
+				#	}
+				#}
+			}
+			NOT = { has_country_flag = MAN_plan_light_industry }
+		}
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = MAN_plan_investment }
+			owns_state = 715
+			controls_state = 715
+		}
+		
+		complete_effect = {
+			set_country_flag = MAN_plan_investment
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		
+			715 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				#set_state_flag = MAN_mil_fac_build
+			}
+			hidden_effect = {
+				clr_country_flag = MAN_plan_investment
+			}
+			set_country_flag = MAN_plan_light_industry
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	MAN_coal_fac = {
+	
+		icon = generic_construction
+		
+		#fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 75
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 714
+			}
+		}
+		
+		allowed = {
+			original_tag = MAN
+		}
+
+		visible = {
+			owns_state = 714
+			controls_state = 714
+			has_completed_focus = MAN_first_five_year_plan
+			NOT = { has_country_flag = MAN_plan_coal_industry }
+			714 = {
+				#NOT = { has_state_flag = MAN_mil_fac_build }
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				#limit = {
+				#	is_fully_controlled_by = ROOT
+				#	free_building_slots = {
+				#		building = fuel_silo
+				#		size > 0
+				#		include_locked = yes
+				#	}
+				#}
+			}
+			NOT = { has_country_flag = MAN_plan_coal_industry }
+		}
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = MAN_plan_investment }
+			owns_state = 714
+			controls_state = 714
+		}
+		
+		complete_effect = {
+			set_country_flag = MAN_plan_investment
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		
+			714 = {
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				#set_state_flag = MAN_mil_fac_build
+			}
+			hidden_effect = {
+				clr_country_flag = MAN_plan_investment
+			}
+			set_country_flag = MAN_plan_coal_industry
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	MAN_plan_aircraft = {
+	
+		icon = generic_air
+		
+		#fire_only_once = yes
+		
+		cost = 65
+		
+		days_remove = 105
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 328
+			}
+		}
+		
+		allowed = {
+			original_tag = MAN
+		}
+
+		visible = {
+			owns_state = 328
+			controls_state = 328
+			has_completed_focus = MAN_first_five_year_plan
+			has_idea = MAN_five_year_plan_air
+			NOT = { has_country_flag = MAN_plan_focus }
+			NOT = { has_idea = MAN_plan_aircraft }
+			328 = {
+				#NOT = { has_state_flag = MAN_mil_fac_build }
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				#limit = {
+				#	is_fully_controlled_by = ROOT
+				#	free_building_slots = {
+				#		building = arms_factory
+				#		size > 0
+				#		include_locked = yes
+				#	}
+				#}
+			}
+			NOT = { has_country_flag = MAN_plan_focus }
+		}
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = MAN_plan_investment }
+			owns_state = 328
+			controls_state = 328
+		}
+		
+		complete_effect = {
+			set_country_flag = MAN_plan_investment
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		
+			328 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				#set_state_flag = MAN_mil_fac_build
+			}
+			hidden_effect = {
+				clr_country_flag = MAN_plan_investment
+			}
+			set_country_flag = MAN_plan_focus
+			add_timed_idea = { days = 285 idea = MAN_plan_aircraft }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	MAN_plan_tank = {
+	
+		icon = generic_tank
+		
+		#fire_only_once = yes
+		
+		cost = 65
+		
+		days_remove = 105
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 328
+			}
+		}
+		
+		allowed = {
+			original_tag = MAN
+		}
+
+		visible = {
+			owns_state = 328
+			controls_state = 328
+			has_completed_focus = MAN_first_five_year_plan
+			has_idea = MAN_five_year_plan_tank
+			NOT = { has_country_flag = MAN_plan_focus }
+			NOT = { has_idea = MAN_plan_tank }
+			328 = {
+				#NOT = { has_state_flag = MAN_mil_fac_build }
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				#limit = {
+				#	is_fully_controlled_by = ROOT
+				#	free_building_slots = {
+				#		building = arms_factory
+				#		size > 0
+				#		include_locked = yes
+				#	}
+				#}
+			}
+			NOT = { has_country_flag = MAN_plan_focus }
+		}
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = MAN_plan_investment }
+			owns_state = 328
+			controls_state = 328
+		}
+		
+		complete_effect = {
+			set_country_flag = MAN_plan_investment
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		
+			328 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				#set_state_flag = MAN_mil_fac_build
+			}
+			hidden_effect = {
+				clr_country_flag = MAN_plan_investment
+			}
+			set_country_flag = MAN_plan_focus
+			add_timed_idea = { days = 285 idea = MAN_plan_tank }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	MAN_plan_industry = {
+	
+		icon = generic_factory
+		
+		#fire_only_once = yes
+		
+		cost = 65
+		
+		days_remove = 105
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 328
+			}
+		}
+		
+		allowed = {
+			original_tag = MAN
+		}
+
+		visible = {
+			owns_state = 328
+			controls_state = 328
+			has_completed_focus = MAN_first_five_year_plan
+			has_idea = MAN_five_year_plan_industry
+			NOT = { has_country_flag = MAN_plan_focus }
+			NOT = { has_idea = MAN_plan_industry }
+			328 = {
+				#NOT = { has_state_flag = MAN_mil_fac_build }
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				#limit = {
+				#	is_fully_controlled_by = ROOT
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 0
+				#		include_locked = yes
+				#	}
+				#}
+			}
+			NOT = { has_country_flag = MAN_plan_focus }
+		}
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = MAN_plan_investment }
+			owns_state = 328
+			controls_state = 328
+		}
+		
+		complete_effect = {
+			set_country_flag = MAN_plan_investment
+		}
+		
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		
+			328 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				#set_state_flag = MAN_mil_fac_build
+			}
+			hidden_effect = {
+				clr_country_flag = MAN_plan_investment
+			}
+			set_country_flag = MAN_plan_focus
+			add_timed_idea = { days = 285 idea = MAN_plan_industry }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+

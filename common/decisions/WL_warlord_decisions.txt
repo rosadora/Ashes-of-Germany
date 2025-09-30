@@ -1,0 +1,182 @@
+foreign_politics = {
+	WL_purchase_foreign_arms_SOV = {
+		icon = GFX_decision_generic_industry
+		available = {
+			
+			#political_power > 50
+			has_completed_focus = CHI_opposition
+			has_completed_focus = CHI_factories
+		}
+		visible = {
+
+			is_chinese_warlord = yes
+			NOT = { has_completed_focus = CHI_cooperation_with_the_communists }
+			NOT = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+		}
+		days_re_enable = 90
+		cost = 50
+		complete_effect = {
+			#add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = SOV
+			}
+		}
+	}
+	WL_purchase_foreign_arms_USA = {
+		icon = GFX_decision_generic_industry
+		available = {
+			
+			#political_power > 50
+			has_completed_focus = CHI_opposition
+			has_completed_focus = CHI_factories
+		}
+		visible = {
+			is_chinese_warlord = yes
+			NOT = { has_completed_focus = CHI_cooperation_with_the_communists }
+			NOT = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+		}
+		days_re_enable = 90
+		cost = 50
+		complete_effect = {
+			#add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = USA
+			}
+		}
+	}
+	WL_purchase_foreign_arms_ENG = {
+		icon = GFX_decision_generic_industry
+		available = {
+			
+			#political_power > 50
+			has_completed_focus = CHI_opposition
+			has_completed_focus = CHI_factories
+		}
+		visible = {
+			is_chinese_warlord = yes
+			NOT = { has_completed_focus = CHI_cooperation_with_the_communists }
+			NOT = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+		}
+		days_re_enable = 90
+		cost = 50
+		complete_effect = {
+			#add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = ENG
+			}
+		}
+	}
+	WL_purchase_foreign_arms_FRA = {
+		icon = GFX_decision_generic_industry
+		available = {
+			
+			#political_power > 50
+			has_completed_focus = CHI_opposition
+			has_completed_focus = CHI_factories
+		}
+		visible = {
+			is_chinese_warlord = yes
+			NOT = { has_completed_focus = CHI_cooperation_with_the_communists }
+			NOT = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+		}
+		days_re_enable = 90
+		cost = 50
+		complete_effect = {
+			#add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+			}
+		}
+	}
+	WL_purchase_foreign_arms_GER = {
+		icon = GFX_decision_generic_industry
+		available = {
+			
+			#political_power > 50
+			has_completed_focus = CHI_opposition
+			has_completed_focus = CHI_factories
+		}
+		visible = {
+			is_chinese_warlord = yes
+			NOT = { has_completed_focus = CHI_cooperation_with_the_communists }
+			NOT = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+		}
+		days_re_enable = 90
+		cost = 50
+		complete_effect = {
+			#add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GER
+			}
+		}
+	}
+
+
+	WL_hire_mercs = {
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			
+			#political_power > 50
+			has_completed_focus = CHI_opposition
+			has_completed_focus = CHI_new_divisions
+		}
+		visible = {
+			is_chinese_warlord = yes
+			NOT = { has_completed_focus = CHI_cooperation_with_the_communists }
+			NOT = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+		}
+		days_re_enable = 300
+		cost = 150
+		complete_effect = {
+			division_template = {
+				name = "Mercenery Militia"
+				priority = 1
+				division_names_group = CHI_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+			
+	    			infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 1 y = 4 }
+			
+	    			infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					infantry = { x = 3 y = 3 }
+					infantry = { x = 3 y = 4 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1. Mercenery Militia\" division_template = \"Mercenery Militia\" start_experience_factor = 0.8" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Mercenery Militia\" division_template = \"Mercenery Militia\" start_experience_factor = 0.7" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Mercenery Militia\" division_template = \"Mercenery Militia\" start_experience_factor = 0.9" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+}
