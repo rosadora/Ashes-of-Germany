@@ -51,6 +51,7 @@ bookmarks = {
 			}		
 		}
 		"HUN"={
+			minor = yes
 			history = "HUN_GC_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {
@@ -78,6 +79,20 @@ bookmarks = {
 				JAP_new_dawn_for_socialism
 			}	
 				
+		}
+		"CHI"={
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_army_corruption_1
+				CHI_hyper_inflation_1
+				CHI_nine_power_treaty
+			}
+			focuses = {
+				CHI_restore_beiyang_government
+				CHI_right_wing_uprising
+				CHI_need_emperor
+			}
 		}
 		"FRA"={
 			history = "FRC_GATHERING_STORM_DESC"
@@ -334,11 +349,29 @@ bookmarks = {
 	            MAN_kwantung_veto
 			}
 			focuses = {
-				MAN_claim_the_mandate_of_heaven
-				MAN_the_two_emperors
+				MAN_chinese_leadership
+				MAN_pacify_the_countryside
 				MAN_independence_war
 			}
 		}
+
+		"IRE"={
+			minor = yes
+			history = "IRELAND_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				IRE_trade_war
+				IRE_autonomous_dominion
+				IRE_ira_3
+			}
+			focuses = {
+				IRE_the_new_state
+				IRE_confirm_ties_to_commonwealth
+				IRE_legacy_of_revolution
+			}
+		}
+		
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
