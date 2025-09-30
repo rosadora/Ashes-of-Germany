@@ -10,6 +10,15 @@
 
 opinion_modifiers = {
 
+	IRE_dual_monarchy = {
+		value = 100
+	}
+
+	CHI_anticolonialism = {
+		value = -20
+	}
+
+
 	cheat_opinion_modifier_good = {
 		value = 200
 	}
