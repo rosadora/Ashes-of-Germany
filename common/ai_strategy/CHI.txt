@@ -371,3 +371,4 @@ CHI_aifc_incompetent_officers = {
 		value = -30  # if we have enough doctrines, we can do a little.... 
 	}
 }
+
