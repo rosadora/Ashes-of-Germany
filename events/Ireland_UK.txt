@@ -1,0 +1,31 @@
+﻿###########################
+# ire Events
+###########################
+add_namespace = ire
+
+country_event = { #Protect Northern Ireland?
+	id = ire.1
+	title = ire.1.t
+	desc = ire.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { #Protect Northern Ireland
+		name = ire.1.a
+		ai_chance = {
+			base = 100
+		}
+        give_guarantee = NIR
+	}
+	option = { #Its time for Irish Unification
+		name = ire.1.b
+		ai_chance = {
+			base = 0
+		}
+        declare_war_on = {
+            target = NIR
+            type = annex_everything
+        }
+	}
+}

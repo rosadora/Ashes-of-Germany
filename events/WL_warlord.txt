@@ -1,0 +1,143 @@
+﻿add_namespace = WL_warlord
+
+# Manchukou demands warlord be puppeted
+country_event = {
+	id = WL_warlord.1
+	title = WL_warlord.1.t
+	desc = WL_warlord.1.desc
+	picture = GFX_report_event_manchukuo_army_2
+
+	is_triggered_only = yes
+	
+	#Accept puppet
+	option = {
+		name = WL_warlord.1.a
+		division_template = {
+			name = "Partisan Militia"
+			priority = 1
+			division_names_group = CHI_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+		
+	    		infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 1 y = 3 }
+				infantry = { x = 1 y = 4 }
+		
+	    		infantry = { x = 2 y = 0 }
+	    		infantry = { x = 2 y = 1 }
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+				division = "name = \"1. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"2. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"3. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"4. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"5. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"6. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"7. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"8. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = WL_warlord.2
+	title = WL_warlord.2.t
+	desc = WL_warlord.2.desc
+	picture = GFX_report_event_manchukuo_army_2
+
+	is_triggered_only = yes
+	
+	#Accept puppet
+	option = {
+		name = WL_warlord.2.a
+		division_template = {
+			name = "Partisan Militia"
+			priority = 1
+			division_names_group = CHI_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+		
+	    		infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 1 y = 3 }
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+				division = "name = \"1. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"2. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"3. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"4. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"5. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"6. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"7. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"8. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"9. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"10. Partisan Militia\" division_template = \"Partisan Militia\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+		}
+	}
+}

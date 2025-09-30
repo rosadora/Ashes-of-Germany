@@ -906,3 +906,47 @@ country_event = {
         } 
 	}
 }
+country_event = {
+	id = prussia.133
+	title = "The Galician Question"
+	desc = "With Galicia being taken by portugal after the great war, the time for question of retaking it has arose."
+	picture = GFX_report_event_SWE_defense_act
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We Must Retake It!"
+
+		ai_chance = {
+			base = 50
+		}
+
+		create_wargoal = {
+			target = POR
+			type = annex_everything
+		}
+	}
+
+	option = {
+		name = "It is ours no longer"
+
+		ai_chance = {
+			base = 50
+		}
+
+		start_civil_war = {
+			ideology = ROOT
+			size = 0.5
+		}
+
+		set_politics = {
+	      ruling_party = fascism
+        } 
+
+		declare_war_on = {
+			target = POR
+			type = annex_everything
+		}
+	}
+}
