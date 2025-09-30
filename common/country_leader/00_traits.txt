@@ -43,6 +43,140 @@
 
 leader_traits = {
 
+	#New China Stuff
+
+	steely_soldier = { #Yang Jingyu
+		random = no
+		surrender_limit = 0.1
+		army_core_defence_factor = 0.1
+		no_supply_grace = 72
+	}
+	
+	unorthodox_partisan = { #Zhao Shangzhi
+		army_attack_against_major_factor = 0.1
+		resistance_damage_to_garrison = -0.2
+		party_popularity_stability_factor = -0.1
+	}
+	
+	dongbei_partisan = { #Zhou Baozhong
+		random = no
+		command_power_gain_mult = 0.1
+		resistance_damage_to_garrison = -0.15
+		out_of_supply_factor = -0.1
+	}
+	
+	senate_leader = { #Zang Shiyi
+		political_power_gain = 0.1
+		party_popularity_stability_factor = 0.1
+	}
+	
+	prime_minister_zang = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		autonomy_gain = 0.1
+	}
+	
+	prime_minister_zhang = {
+		random = no
+		fascism_acceptance = 15
+		drift_defence_factor = 0.25
+	}
+	
+	japanese_lapdog = {
+		random = no
+		#fascism_acceptance = 15
+		
+		targeted_modifier = {
+			tag = JAP
+			extra_trade_to_target_factor = 0.25
+			attack_bonus_against = -0.1
+			defense_bonus_against = -0.1
+		}
+		
+		ai_strategy = {
+			type = befriend
+			id = "JAP"
+			value = 125
+		}
+	}
+
+	great_mentor_to_the_revolution = {
+		random = no
+		sprite = 12
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+		communism_drift = 0.05
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	prince_chichibu = {
+
+		random = no
+		sprite = 5
+		army_morale_factor = 0.04
+
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	hirohitos_brother = {
+		random = no
+
+		ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = 200
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	young_marshal = {
+		random = no
+		political_power_factor = -0.1
+		war_support_factor = 0.05
+		justify_war_goal_time = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	dislikes_japan = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = "JAP"
+			value = 200
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brilliant_strategist = {
+		random = no
+		political_power_factor = 0.15
+		defensive_war_stability_factor = 0.4
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Not New China Stuff
+
 	democrat_kaiser = {
 		random = no
 		political_power_factor = -0.075
@@ -206,6 +340,94 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+
+	empowered_taoiseach = {
+		random = no
+		political_power_factor = 0.1
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	IRE_foreign_king_1 = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		war_support_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	IRE_foreign_king_2 = {
+		random = no
+		political_power_factor = -0.2
+		stability_factor = -0.1
+		war_support_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	IRE_irish_king = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.15
+		war_support_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IRE_military_interest = {
+		random = no
+		command_power_gain_mult = 0.25
+		mobilization_speed = 0.1
+		max_planning = 0.15
+		high_command_cost_factor = -0.1
+		air_chief_cost_factor = -0.1
+		army_chief_cost_factor = -0.1
+		navy_chief_cost_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IRE_monarchist_plotter = {
+		random = no
+		stability_weekly = -0.005
+		war_support_weekly = 0.005
+		neutrality_drift = 0.01
+		political_advisor_cost_factor = 0.1
+	}
+	IRE_triumphant_monarchist = {
+		random = no
+		neutrality_drift = 0.01
+		political_advisor_cost_factor = -0.1
+		political_power_factor = 0.1
+	}
+	IRE_religiously_controversial = {
+		random = no
+		stability_factor = -0.1
+		political_power_factor = -0.05
+	}
+
+	ENG_IRE_diplomat = {
+		random = no
+		political_advisor_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		high_command_cost_factor = -0.1
+		air_chief_cost_factor = -0.1
+		army_chief_cost_factor = -0.1
+		navy_chief_cost_factor = -0.1
 	}
 
 	capo_supremo2 = {
@@ -6619,9 +6841,7 @@ leader_traits = {
 		random = no
 		# Boosts Communism
 		sprite = 13
-		communism_drift = 0.04
-		classical_marxism_drift = 0.03
-		libertarian_socialism_drift = 0.03
+		communism_drift = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -6636,10 +6856,7 @@ leader_traits = {
 		random = no
 		# Boosts Democracy
 		sprite = 13
-		democratic_drift = 0.03
-		classical_liberalism_drift = 0.03
-		social_liberalism_drift = 0.03
-		social_democracy_drift = 0.03
+		democratic_drift = 0.1
 
 		ai_will_do = {
 			factor = 0
@@ -7290,9 +7507,7 @@ leader_traits = {
 	liberal_journalist = {
 		sprite = 13
 		random = no
-		democratic_drift = 0.01
-		classical_liberalism_drift = 0.05
-		social_liberalism_drift = 0.02
+		democratic_drift = 0.05
 		political_power_factor = 0.1
 
 		ai_will_do = {
