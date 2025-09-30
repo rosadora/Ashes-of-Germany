@@ -1,0 +1,53 @@
+﻿l_english:
+ CHI_local_support_equipment_development:0 "Organize Divisional Support Sections"
+ CHI_local_support_equipment_development_desc:0 "Modern warfare is not fought with just guns. If we do not supply our militias and infantry with mortars, machine guns, grenades and the likes, we will most certainly be squashed."
+ CHI_wl_expanded_intelligence:0 "Infiltration Specialist"
+
+ WL_hire_mercs:0 "Hire Merceneries"
+ WL_purchase_foreign_arms_SOV:0 "Purchase Soviet Arms"
+ WL_purchase_foreign_arms_GER:0 "Purchase German Arms"
+ WL_purchase_foreign_arms_USA:0 "Purchase American Arms"
+ WL_purchase_foreign_arms_ENG:0 "Purchase British Arms"
+ WL_purchase_foreign_arms_FRA:0 "Purchase French Arms"
+ CHI_wl_personal_leadership:0 "Personal Leadership"
+ CHI_wl_personal_leadership_desc:0 "Having taken full control of the military, we now make decisions on our own!"
+ wl_planned_resistance:0 "Planned Resistance"
+ WL_HIRE_MERC_TT:0 "Unlocks §Ydecisions§! to purchase §YMercenery§! divisions."
+ WL_OBTAIN_FOREIGN_ARMS_TT:0 "Unlocks §Ydecisions§! to purchase §YForeign Infantry Equipment§!."
+
+ CHI_prepare_resistance:0 "[GetCHIPrepareResistanceName]"
+
+ CHI_NORM_RESISTANCE:0 "Prepare Resistance"
+ CHI_NATI_RESISTANCE:0 "Prepare KMT Resistance Pockets"
+ CHI_COMI_RESISTANCE:0 "Contact CPC Guerillas"
+ CHI_prepare_resistance_desc:0 "The shadow of Japanese imperialism is looming over us, the possibility of capitulation should be considered, but not that of surrender. We can prepare a network for guerilla warfare if the Japanese would be so foolish enough to invade us."
+
+
+ CHI_new_divisions:0 "[Root.GetCHINewDivisionsName]"
+
+ CHI_NORM_NEW_DIVS:0 "Hire Merceneries"
+ CHI_NATI_NEW_DIVS:0 "Request Reassignment"
+ CHI_COMI_NEW_DIVS:0 "Organize Communist Partisans"
+ CHI_new_divisions_desc:0 "We have to get a hold of new troops if we are to aid in the war against the Japanese!"
+
+ CHI_intelligence_network_focus:0 "[Root.GetCHIIntelligenceNetworkName]"
+
+ CHI_NORM_INF:0 "Recruit Infiltration Specialists"
+ CHI_NATI_INF:0 "KMT Infiltration Specialists"
+ CHI_COMI_INF:0 "Train Infiltration Partisans"
+ CHI_intelligence_network_focus_desc:0 "We have to hinder the Japanese in every way possible, infiltrating them and figuring out their weaknesses is the best thing we can do."
+
+ CHI_factories:0 "[Root.GetCHIfactoriesName]"
+
+ CHI_NORM_FAC:0 "Obtain Foreign Arms"
+ CHI_NATI_FAC:0 "National Industrial Handout"
+ CHI_COMI_FAC:0 "Steal Nationalist Arms"
+ CHI_factories_desc:0 "We cannot rely on others to supply us with rifles, if we acquire industry of some kind we can continue our own arms production, albe it elsewhere."
+
+ WL_warlord.1.t:0 "[CHI.GetLeader] transfers 8 divisions!"
+ WL_warlord.1.desc:0 "After our troops surrendered like cowards, [CHI.GetLeader] was wise enough to transfer new forces to our command so we may keep up the fight!"
+ WL_warlord.1.a:0 "We will get to work right away!"
+
+ WL_warlord.2.t:0 "10 Partisan Militias Organize!"
+ WL_warlord.2.desc:0 "After the losses of the land spread, partisans gathered in our defense and formed militias. The workers shall never be defeated!"
+ WL_warlord.2.a:0 "Into battle!"
