@@ -637,7 +637,7 @@
   #BOP Segments
   CHI_communist_side: "Communists"
   CHI_communist_side_low_control_range: "Low Communist Control"
-  CHI_democracy_low_control_range: "Low Democratic Control
+  CHI_democracy_low_control_range: "Low Democratic Control"
   CHI_communist_side_medium_control_range: "Medium Communist Control"
   CHI_communist_side_high_control_range: "High Communist Control"
   CHI_communist_side_total_control_range: "Complete Communist Control"
