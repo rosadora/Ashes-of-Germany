@@ -13,6 +13,39 @@ characters={
 			id=-1
 		}
 	}
+
+		IRE_WT_Cosgrave_social={
+		name="W. T. Cosgrave"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRE/r56_portrait_IRE_WT_Cosgrave.dds"
+				small="gfx/interface/ideas/idea_w_t_cosgrove.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = w_t_cosgrove
+			allowed  = {
+					original_tag  = IRE
+				}
+			available = {
+					if = {
+						limit = { has_dlc = "Man the Guns" }	
+						NOT = { has_autonomy_state = autonomy_supervised_state }
+					}
+				}
+			
+			traits  = {
+				figurehead_president
+			}
+		}
+		country_leader={
+			ideology=social_democracy_category 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	IRE_WT_Cosgrave={
 		name="W. T. Cosgrave"
 		portraits={
@@ -74,6 +107,38 @@ characters={
 			logistics_skill = 2
 		}
 	}
+
+	IRE_eoin_oduffy_national={
+		name="Eoin O'Duffy"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Ireland_Eoin_ODuffy.tga"
+			}
+			army = {
+				large ="gfx/leaders/IRE/Portrait_Ireland_Eoin_ODuffy.tga"
+				small = "gfx/interface/ideas/idea_Ireland_Eoin_ODuffy.dds"
+			}
+		}
+		country_leader={
+			ideology=ultra_nationalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				trait_reckless
+				fast_planner
+				organizer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
 	IRE_james_larkin={
 		name="James Larkin"
 		portraits={
