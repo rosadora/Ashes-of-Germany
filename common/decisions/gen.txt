@@ -42,6 +42,7 @@ gen_pick_a_side = {
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = PAL_arabia_in_the_world_stage
 				has_completed_focus = NLC_join_our_comrades
+				has_completed_focus = JAP_break_isolation
 			}
 			OR = {
 				has_government = classical_marxism
@@ -77,6 +78,7 @@ gen_pick_a_side = {
 				tag = BLR
 				tag = NLC
 				tag = USR
+				tag = MON
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -534,6 +536,7 @@ gen_pick_a_side = {
 			OR = {
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = JAP_the_lesser_evil
+				has_completed_focus = JAP_break_isolation
 			}
 			OR = {
 				tag = TIB

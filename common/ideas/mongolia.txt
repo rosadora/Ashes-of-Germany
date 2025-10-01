@@ -74,6 +74,52 @@ ideas = {
 				army_attack_factor = 0.05
 			} 
 		}
+		a_world_to_win = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension_against = -0.5
+				justify_war_goal_time = -0.5
+				required_garrison_factor = -0.25
+			} 
+		}
+		thousand_years_of_prosperity = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.1
+			} 
+		}
 		the_great_khatanate = {
 			
 			allowed = {

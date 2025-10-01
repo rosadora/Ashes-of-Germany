@@ -399,9 +399,6 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				has_active_mission = MON_1936_elections_day
-			}
 			OR = {
 				has_government = social_democracy
 				has_government = communism
@@ -418,6 +415,389 @@
 		completion_reward = {
 		 add_stability = -0.05
 		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = JAP_meet_the_red_league
+		icon = GFX_focus_GER_the_peoples_victory
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_the_revolution_continues }
+		relative_position_id = JAP_the_revolution_continues
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = classical_marxism
+			popularity = 0.1
+		 }
+		 add_manpower = 10000
+		}
+	}
+	focus = {
+		id = JAP_arrest_last_monarchists
+		icon = GFX_focus_PER_communist_afghanistan_intervention
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_the_revolution_continues }
+		relative_position_id = JAP_the_revolution_continues
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = neutrality
+			popularity = -0.1
+		 }
+		 add_popularity = {
+			ideology = ultra_nationalism
+			popularity = -0.1
+		 }
+		 add_political_power = -100
+		 remove_ideas = legacy_of_the_khanate
+		}
+	}
+	focus = {
+		id = JAP_follow_peace_and_prosperity_agenda
+		icon = GFX_focus_SWE_form_rfsu
+		x = 1
+		y = 2
+		prerequisite = {focus = JAP_arrest_last_monarchists }
+		prerequisite = {focus = JAP_meet_the_red_league }
+		mutually_exclusive = {focus = JAP_overthrow_weakness }
+		relative_position_id = JAP_the_revolution_continues
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = social_democracy
+			popularity = 0.1
+		 }
+		 add_stability = 0.1
+		}
+	}
+	focus = {
+		id = JAP_overthrow_weakness
+		icon = GFX_focus_SWE_the_beast_stirs
+		x = -2
+		y = 2
+		prerequisite = {focus = JAP_arrest_last_monarchists }
+		prerequisite = {focus = JAP_meet_the_red_league }
+		mutually_exclusive = {focus = JAP_follow_peace_and_prosperity_agenda }
+		relative_position_id = JAP_the_revolution_continues
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_popularity = {
+			ideology = social_democracy
+			popularity = -0.1
+		 }
+		 add_popularity = {
+			ideology = classical_marxism
+			popularity = 0.1
+		 }
+		 set_politics = {
+			ruling_party = classical_marxism
+			elections_allowed = no
+		 }
+		}
+	}
+	focus = {
+		id = JAP_reject_market_socialism
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_overthrow_weakness }
+		relative_position_id = JAP_overthrow_weakness
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 50
+		 add_popularity = {
+			ideology = social_democracy
+			popularity = -0.05
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		 }
+		}
+	}
+	focus = {
+		id = JAP_embrace_progress_cult
+		icon = GFX_focus_generic_socialist_science
+		x = -2
+		y = 2
+		prerequisite = {focus = JAP_reject_market_socialism }
+		relative_position_id = JAP_overthrow_weakness
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_research_slot = 1
+		 add_ideas = progress_cult
+		}
+	}
+	focus = {
+		id = JAP_ally_choibalsan
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_overthrow_weakness }
+		relative_position_id = JAP_overthrow_weakness
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = 0.1
+		 add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		 }
+		 army_experience = 50
+		}
+	}
+	focus = {
+		id = JAP_a_world_to_win
+		icon = GFX_focus_prc_infiltration
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_ally_choibalsan }
+		prerequisite = {focus = JAP_reject_market_socialism }
+		relative_position_id = JAP_overthrow_weakness
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = a_world_to_win
+		 add_ideas = CZE_revolutionary_mobilization
+		}
+	}
+	focus = {
+		id = JAP_break_isolation
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = -2
+		y = 1
+		prerequisite = {focus = JAP_a_world_to_win }
+		relative_position_id = JAP_a_world_to_win
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 unlock_decision_tooltip = gen_join_japan
+		 unlock_decision_tooltip = gen_join_united_workers_of_europe
+		}
+	}
+	focus = {
+		id = JAP_support_the_bolsheviks
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 0
+		y = 1
+		prerequisite = {focus = JAP_a_world_to_win }
+		relative_position_id = JAP_a_world_to_win
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+			USR = {
+				has_war_with = SOV
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = volunteers_in_russian_civil_war
+		}
+	}
+	focus = {
+		id = JAP_the_great_antifascist_war
+		icon = GFX_focus_AST_war_japan
+		x = 2
+		y = 1
+		prerequisite = {focus = JAP_a_world_to_win }
+		relative_position_id = JAP_a_world_to_win
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+			CHI = {
+				has_war_with = JAP
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			leave_faction = yes
+		 CHI = {
+			add_to_faction = MON
+		 }
 		}
 	}
 	focus = {
@@ -452,6 +832,214 @@
 		completion_reward = {
 		 add_stability = 0.05
 		 add_political_power = -100
+		}
+	}
+	focus = {
+		id = JAP_ally_the_center
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_preserve_the_republic }
+		relative_position_id = JAP_preserve_the_republic
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		 add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.075
+		 }
+		}
+	}
+	focus = {
+		id = JAP_dissolve_revolutionary_militias
+		icon = GFX_focus_AUS_frontmiliz_focus
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_preserve_the_republic }
+		relative_position_id = JAP_preserve_the_republic
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.1
+		 add_war_support = -0.1
+		 add_popularity = {
+			ideology = classical_marxism
+			popularity = -0.075
+		 }
+		}
+	}
+	focus = {
+		id = JAP_victory_of_peaceful_forces
+		icon = GFX_focus_SWE_refuge_from_war
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_ally_the_center }
+		prerequisite = {focus = JAP_dissolve_revolutionary_militias }
+		relative_position_id = JAP_preserve_the_republic
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 remove_ideas = legacy_of_the_khanate
+		}
+	}
+	focus = {
+		id = JAP_thousand_years_of_prosperity
+		icon = GFX_focus_RAJ_special_economic_zones
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_victory_of_peaceful_forces focus = JAP_follow_peace_and_prosperity_agenda}
+		relative_position_id = JAP_victory_of_peaceful_forces
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = thousand_years_of_prosperity
+		 random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_heaven_for_women_rights
+		icon = GFX_focus_ARG_women_in_industry
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_thousand_years_of_prosperity}
+		relative_position_id = JAP_thousand_years_of_prosperity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = total_equality
+		}
+	}
+	focus = {
+		id = JAP_heaven_for_research
+		icon = GFX_SOV_national_academies_of_sciences_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_thousand_years_of_prosperity}
+		relative_position_id = JAP_thousand_years_of_prosperity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = social_democracy
+				has_government = communism
+				has_government = classical_marxism
+				has_government = social_liberalism
+				has_government = classical_liberalism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 	focus = {
