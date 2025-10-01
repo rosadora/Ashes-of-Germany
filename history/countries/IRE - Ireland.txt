@@ -247,6 +247,8 @@ recruit_character = IRE_Éamon_de_valera
 recruit_character = IRE_eoin_oduffy
 recruit_character = IRE_james_larkin
 recruit_character = IRE_frank_macdermot
+recruit_character = IRE_eoin_oduffy_national
+recruit_character = IRE_WT_Cosgrave_social
 
 recruit_character = IRE_richard_mulcahy
 recruit_character = IRE_michael_costello
