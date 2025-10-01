@@ -185,9 +185,17 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			on_remove = {
+				set_politics = {
+					ruling_party = social_democracy
+					elections_allowed = yes
+				}
+			}
 			
 			modifier = {
 				stability_weekly = -0.005
+				social_democracy_drift = 0.08
 			}
 		}
 		IRE_rural_conscription = {
@@ -225,6 +233,7 @@ ideas = {
 				drift_defence_factor = 0.15
 				intelligence_agency_defense = 1
 				mobilization_speed = 0.05
+				ultra_nationalism_drift = 0.01
 			}
 		}
 		IRE_corporate_party_formed = {
@@ -242,7 +251,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				fascism_drift = 0.10
+				fascism_drift = 0.05
+				ultra_nationalism_drift = 0.05
 			}
 		}
 		IRE_workers_league_reformed = {
@@ -260,7 +270,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				communism_drift = 0.10
+				communism_drift = 0.05
+				libertarian_socialism_drift = 0.05
 			}
 		}
 		IRE_monarchist_society = {
@@ -569,6 +580,7 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.25
 				stability_factor = 0.1
+				ultra_nationalism_drift = 0.01
 			}
 		}
 		IRE_defend_the_republic = {
