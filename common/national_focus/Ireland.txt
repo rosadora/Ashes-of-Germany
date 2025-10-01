@@ -59,7 +59,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_MFR
-		icon = GFX_goal_agricultural_policies
+		icon = GFX_focus_generic_farmland
 		x = -4
 		y = 2
 		relative_position_id = IRE_IEAA
@@ -414,7 +414,7 @@ focus_tree = {
 	
 	focus = {
 		id = IRE_DBR
-		icon = GFX_IRE_Zinc
+		icon = GFX_focus_CONGO_gold_and_diamonds
 		x = 0
 		y = 3
 		relative_position_id = IRE_IEAA
@@ -453,7 +453,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_GGLF
-		icon = GFX_goal_military_research
+		icon = GFX_focus_generic_air_research_boost
 		x = 0
 		y = 5
 		relative_position_id = IRE_IEAA
@@ -586,7 +586,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_RTN
-		icon = GFX_goal_generic_build_housing
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 4
 		y = 1
 		relative_position_id = IRE_IEAA
@@ -4599,3 +4599,4 @@ focus_tree = {
 		}
 	}
 }
+
