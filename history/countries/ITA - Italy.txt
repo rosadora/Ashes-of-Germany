@@ -27,6 +27,9 @@ add_ideas = {
 	azione_antifascista
 	resistanza_moderata
 	esercito_dei_non_idonei
+	catholic_state
+	women_military_nurse
+	enforced_patriarchy
 }
 
 # RESISTANCE / COMPLIANCE

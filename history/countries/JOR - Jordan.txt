@@ -40,6 +40,10 @@ set_popularities = {
 	communism = 1
 }
 
+add_ideas = {
+	sunni_state
+}
+
 create_country_leader = {
 	name = "Hashim Kheir"
 	desc = ""

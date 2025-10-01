@@ -93,6 +93,7 @@ add_ideas = {
 	IRE_trade_war
 	IRE_autonomous_dominion
 	IRE_ira_3
+	catholic_state
 }
 set_variable = {
 	var = IRA_loyalty

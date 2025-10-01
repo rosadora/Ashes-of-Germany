@@ -41,6 +41,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_mongolian_regency_event"
+		texturefile = "gfx/event_pictures/mongolian_regency_event.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_workers_government_cze_election_event"
 		texturefile = "gfx/event_pictures/workers_government_cze_election_event.dds"
 	}
@@ -53,5 +58,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_collapse_of_the_mandate_news"
 		texturefile = "gfx/event_pictures/collapse_of_the_mandate_news.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_comet_sight_event"
+		texturefile = "gfx/event_pictures/comet_sight_event.dds"
 	}
 }

@@ -19,5 +19,280 @@ ideas = {
 				conscription_factor = 0.2
 			} 
 		}
+		legacy_of_the_khanate = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				neutrality_drift = 0.02
+			} 
+		}
+		the_khanate_reborn = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = 0.04
+			} 
+		}
+		khanate_rises = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.15
+				army_attack_factor = 0.05
+			} 
+		}
+		a_world_to_win = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = social_democracy
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = classical_marxism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension_against = -0.5
+				justify_war_goal_time = -0.5
+				required_garrison_factor = -0.25
+			} 
+		}
+		thousand_years_of_prosperity = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				consumer_goods_factor = -0.1
+			} 
+		}
+		the_great_khatanate = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = khanate_legacy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.025
+				neutrality_drift = 0.04
+				war_support_factor = 0.05
+			} 
+		}
+		mandate_of_heaven = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_low_legitimacy5
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				army_core_defence_factor = 0.1
+				neutrality_drift = 0.1
+			} 
+		}
+		khesig = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_the_heroes_of_adwa_upgraded
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				army_speed_factor = 0.05
+			} 
+		}
+		republican_resistance = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.3
+				social_democracy_drift = 0.02
+			} 
+		}
+		republican_resistance2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.125
+				social_democracy_drift = 0.01
+			} 
+		}
+		the_green_palace_shining = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.15
+				army_speed_factor = 0.1
+			} 
+		}
+		puppet_governement = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			} 
+		}
+		puppet_governement2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.075
+				fascism_drift = 0.1
+			} 
+		}
+		japans_bodyguard = {
+			
+			allowed = {
+			}
+
+			available = {
+				is_in_faction_with = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_militarism_showa
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_against_major_factor = 0.075
+				army_defence_against_major_factor = 0.075
+				conscription = 0.05
+			} 
+		}
 	}
 }

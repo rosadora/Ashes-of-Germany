@@ -245,7 +245,7 @@ ideas = {
 			
 			modifier = {
 				monthly_population = 0.45
-				consumer_goods_factor = 0.02
+				consumer_goods_expected_value = 0.02
 			}
 		}
 		fascist_education = {

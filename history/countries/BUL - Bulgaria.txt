@@ -347,3 +347,7 @@ if = {
 
 	
 }
+
+add_ideas = {
+	orthodox_state
+}

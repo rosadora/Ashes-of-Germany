@@ -82,6 +82,9 @@ add_ideas = {
 	autonomous_militias
 	unionist_opposition
 	backward_country
+	state_atheism
+	women_in_factories
+	volunteer_women
 }
 
 set_politics = {
