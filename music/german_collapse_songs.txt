@@ -179,3 +179,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "defend_the_yellow_river"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

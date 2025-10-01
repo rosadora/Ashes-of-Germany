@@ -136,3 +136,9 @@ music = {
 	file = "roei_no_uta.ogg"
 	volume = 1
 }
+
+music = {
+	name = "defend_the_yellow_river"
+	file = "defend_the_yellow_river.ogg"
+	volume = 1
+}
