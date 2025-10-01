@@ -375,7 +375,7 @@
 	
 	focus = {
 		id = MAN_collective_farms
-		icon = GFX_BUL_agriculture
+		icon = GFX_focus_generic_farmland
 		prerequisite = { focus = MAN_expand_the_textile_industry }
 		x = 0
 		y = 1
@@ -2993,3 +2993,4 @@
 
 	shared_focus = CHI_invite_foreign_investors #4
 }
+
