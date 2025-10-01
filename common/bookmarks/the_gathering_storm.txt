@@ -344,8 +344,9 @@ bookmarks = {
 			history = "MON_GATHERING_STORM_DESC"
 			ideology = social_democracy
 			ideas = {
-				spirit_of_genghis_spirit
+				MON_spirit_of_the_khans_initial
 	            legacy_of_the_khanate
+				MON_pastoral_society
 			}
 			focuses = {
 				JAP_restore_the_regency
