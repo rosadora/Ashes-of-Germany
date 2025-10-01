@@ -3626,7 +3626,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_MOBILE1
-		icon = GFX_goal_doctrine_tank_warfare
+		icon = GFX_focus_generic_truck
 		x = 3
 		y = 5
 		relative_position_id = IRE_ARMYTREE
@@ -3814,7 +3814,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_PATRIOTICMOVEMENT
-		icon = GFX_goal_mass_concentration_of_army
+		icon = GFX_focus_FIN_patriotic_peoples_movement
 		x = 3
 		y = 3
 		relative_position_id = IRE_ARMYTREE
@@ -4599,4 +4599,5 @@ focus_tree = {
 		}
 	}
 }
+
 
