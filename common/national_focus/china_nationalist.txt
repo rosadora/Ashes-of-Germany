@@ -8663,7 +8663,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_modern_empire
-		icon = GFX_Focus_Ideology_Liberty
+		icon = GFX_focus_AFG_a_modern_economy
 		prerequisite = { focus = CHI_new_national_identity }
 		x = 4
 		y = 8
@@ -8742,7 +8742,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_promise_return_goldera
-		icon = GFX_focus_qing_summer_palace_construction
+		icon = GFX_focus_chi_one_china_policy
 		prerequisite = { focus = CHI_find_heir}
 		x = -4
 		y = 5
