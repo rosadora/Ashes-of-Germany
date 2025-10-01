@@ -2152,7 +2152,6 @@ focus_tree = {
 			add_idea = CHI_sunwen2
 		}
 		add_popularity =  { ideology = democratic popularity = 0.05 }
-		add_popularity =  { ideology = social_democratic popularity = 0.05 }
 		}
 	}
 
