@@ -59,4 +59,9 @@ spriteTypes = {
 		name = "GFX_news_collapse_of_the_mandate_news"
 		texturefile = "gfx/event_pictures/collapse_of_the_mandate_news.dds"
 	}
+
+	spriteType = {
+		name = "GFX_report_comet_sight_event"
+		texturefile = "gfx/event_pictures/comet_sight_event.dds"
+	}
 }
