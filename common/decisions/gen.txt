@@ -595,9 +595,6 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = MEK
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			is_puppet = no
 			country_exists = WUR
@@ -648,9 +645,6 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = MEK
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			is_puppet = no
 			country_exists = HAN
@@ -704,9 +698,6 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = MEK
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			is_puppet = no
 			country_exists = BAY
@@ -812,9 +803,6 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = BAY
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			country_exists = MEK
 			is_puppet = no
@@ -865,9 +853,6 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = MEK
 				original_tag = BAY
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			country_exists = PRS
 			is_puppet = no
@@ -923,9 +908,6 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = MEK
 				original_tag = BAY
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			country_exists = PRS
 			is_puppet = no
@@ -1027,9 +1009,6 @@ gen_war_of_unification = {
 				original_tag = MEK
 				original_tag = BAY
 				original_tag = RCO
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 		}
 
