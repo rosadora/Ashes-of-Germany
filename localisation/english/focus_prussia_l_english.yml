@@ -7095,6 +7095,11 @@
  MON_state_university:0 "State University"
  MON_state_university_desc:0 "We must invest in the elite of the future."
 
+ choibalsan_coup:0 "§RChoibalsan & the Peasant Uprising§!"
+
+ JAP_the_sun_will_shine_again:0 "The Steppes will Rise Again"
+ JAP_the_sun_will_shine_again_desc:0 "The explosion that was the Second Russian Civil War spurred the uprising of the true socialists of this country, and once again the steppes rose up to bring about a true revolution."
+
  IRE_HONOURABLE_ARMY:0 "An Honourable Army"
  IRE_HONOURABLE_ARMY_desc:0 "The Irish army has chosen to adapt to the tactics and discipline of a professional army."
  IRE_PEOPLES_ARMY:0 "A People's Army"

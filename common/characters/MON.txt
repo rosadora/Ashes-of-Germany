@@ -109,8 +109,12 @@ characters = {
 				original_tag  = MON
 			}
 			available = {
-				#has_government = communism
-				NOT = { has_completed_focus = MON_end_the_purges }
+				OR = {
+					has_government = communism 
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = social_democracy
+				}
 			}
 			traits  = {
 				financial_expert
@@ -134,8 +138,12 @@ characters = {
 				original_tag  = MON
 			}
 			available = {
-				#has_government = communism
-				NOT = { has_completed_focus = MON_end_the_purges }
+				OR = {
+					has_government = communism 
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = social_democracy
+				}
 			}
 			traits  = {
 				silent_workhorse
@@ -163,15 +171,13 @@ characters = {
 					original_tag = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
-				hidden_trigger = {
-					MON_sukhbaataryn_yanjmaa = { is_country_leader = no }
-				}
 			}
 			available = {
-				#has_government = communism
-				hidden_trigger = {
-					MON_sukhbaataryn_yanjmaa = { is_country_leader = no }
+				OR = {
+					has_government = communism 
+					has_government = classical_marxism
+					has_government = libertarian_socialism
+					has_government = social_democracy
 				}
 			}
 			traits = {
@@ -725,15 +731,8 @@ characters = {
 				original_tag  = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
-				hidden_trigger = {
-					MON_yumjaagiin_tsedenbal = { is_country_leader = no }
-				}
 			}
 			available = {
-				has_completed_focus = MON_tenth_party_congress
-				NOT = { MON_yumjaagiin_tsedenbal = { is_country_leader = yes } }
 			}
 			traits  = {
 				economist
@@ -763,11 +762,8 @@ characters = {
 				original_tag  = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 			}
 			available = {
-				has_completed_focus = MON_support_the_global_struggle
 			}
 			traits  = {
 				quartermaster_general
@@ -793,11 +789,8 @@ characters = {
 					original_tag = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 			}
 			available = {
-				has_completed_focus = MON_tenth_party_congress
 			}
 			traits = {
 				propaganda_expert
@@ -823,11 +816,8 @@ characters = {
 					original_tag = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 			}
 			available = {
-				has_completed_focus = MON_rural_education
 			}
 			traits = {
 				education_reformer
@@ -853,11 +843,8 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 			}
 			available = {
-				has_completed_focus = MON_adopt_cyrillic
 			}
 			traits = {
 				editor

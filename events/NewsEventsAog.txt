@@ -1587,3 +1587,17 @@ news_event = { #Chinese United Front
 		name = news.3088.a
 	}
 }
+news_event = { #Choibalsan & the Peasant Uprising
+    id = news.3089
+	title = news.3089.t
+	desc = news.3089.d
+	picture = GFX_news_event_spr_spanish_civil_war
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3089.a
+	}
+}

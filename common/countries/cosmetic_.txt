@@ -13,6 +13,11 @@ JAP_SOC = {
     color_ui = rgb { 138 21 21 }
 }
 
+MON_REV = {
+    color = rgb { 166 86 86 }
+    color_ui = rgb { 166 86 86 }
+}
+
 PAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

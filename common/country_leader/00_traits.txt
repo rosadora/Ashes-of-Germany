@@ -1181,6 +1181,16 @@ leader_traits = {
 		}
 	}
 
+	first_lady_of_the_revolution = {
+		random = no
+		army_org_factor = 0.1
+		consumer_goods_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	inexperienced_imperialist = {
 		random = no
 		political_power_factor = -0.3

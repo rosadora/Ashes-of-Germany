@@ -387,6 +387,38 @@
 		}
 	}
 	focus = {
+		id = JAP_the_sun_will_shine_again
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = -2
+		y = 1
+		relative_position_id = JAP_victory_for_the_republic
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = choibalsan_coup
+			OR = {
+				has_government = communism 
+				has_government = classical_marxism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		 IF = {
+			limit = {
+				has_idea = legacy_of_the_khanate
+			}
+			remove_ideas = legacy_of_the_khanate
+		 }
+		}
+	}
+	focus = {
 		id = JAP_the_revolution_continues
 		icon = GFX_focus_generic_spur_communist_revolutions
 		x = 0
@@ -528,8 +560,8 @@
 		icon = GFX_focus_SWE_the_beast_stirs
 		x = -2
 		y = 2
-		prerequisite = {focus = JAP_arrest_last_monarchists }
-		prerequisite = {focus = JAP_meet_the_red_league }
+		prerequisite = {focus = JAP_arrest_last_monarchists focus = JAP_the_sun_will_shine_again}
+		prerequisite = {focus = JAP_meet_the_red_league focus = JAP_the_sun_will_shine_again}
 		mutually_exclusive = {focus = JAP_follow_peace_and_prosperity_agenda }
 		relative_position_id = JAP_the_revolution_continues
 		cost = 7
@@ -551,7 +583,13 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		 add_popularity = {
+		 IF = {
+			limit = {
+				NOT = {
+					has_country_flag = choibalsan_coup
+				}
+			}
+			add_popularity = {
 			ideology = social_democracy
 			popularity = -0.1
 		 }
@@ -562,6 +600,14 @@
 		 set_politics = {
 			ruling_party = classical_marxism
 			elections_allowed = no
+		 }
+		 }
+		 else = {
+			add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		 }
+		 add_manpower = 20000
 		 }
 		}
 	}
@@ -818,8 +864,6 @@
 			}
 			OR = {
 				has_government = social_democracy
-				has_government = communism
-				has_government = classical_marxism
 				has_government = social_liberalism
 				has_government = classical_liberalism
 			}
@@ -848,8 +892,6 @@
 		available = {
 			OR = {
 				has_government = social_democracy
-				has_government = communism
-				has_government = classical_marxism
 				has_government = social_liberalism
 				has_government = classical_liberalism
 			}
@@ -881,8 +923,6 @@
 		available = {
 			OR = {
 				has_government = social_democracy
-				has_government = communism
-				has_government = classical_marxism
 				has_government = social_liberalism
 				has_government = classical_liberalism
 			}
@@ -916,8 +956,6 @@
 		available = {
 			OR = {
 				has_government = social_democracy
-				has_government = communism
-				has_government = classical_marxism
 				has_government = social_liberalism
 				has_government = classical_liberalism
 			}
@@ -4963,6 +5001,7 @@
 		search_filters = {  }
 
 		completion_reward = {
+			add_research_slot = 1
 			if = {
 				limit = {
 					has_character = MON_gelegdorjiin_demid

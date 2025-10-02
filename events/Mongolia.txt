@@ -252,3 +252,77 @@ country_event = {
 		}
 	}
 }
+# Choibalsan & The Peasant Uprising
+country_event = {
+	id = mongolia.8
+	title = mongolia.8.t
+	desc = mongolia.8.d
+	picture = GFX_report_event_SOV_cossack_cavalry
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MON 
+		USR = {
+			has_war_with = SOV
+		}
+		NOT = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = choibalsan_coup
+		 start_civil_war = {
+			ideology = communism
+			size = 0.4
+			states = {329 818 820}
+			hidden_effect = {
+            }
+			set_popularities = {
+				communism = 43
+				classical_marxism = 22
+				social_democracy = 10
+				democratic = 3
+				social_liberalism = 4
+				classical_liberalism = 5
+				neutrality = 9
+				ultra_nationalism = 4
+			}
+			set_cosmetic_tag = MON_REV
+		 }
+		 news_event = {
+			id = news.3089
+			days = 1
+		 }
+		}
+	}
+	
+	option = { #Pick Choibalsan
+		name = mongolia.8.a
+		ai_chance = {
+			base = 80
+		}
+		IF = {
+		every_country = {
+			limit = {
+				original_tag = MON 
+				NOT = {
+					tag = MON
+				}
+			}
+			change_tag_from = MON
+		}
+		}
+	}
+	option = { #Stay Loyal
+		name = mongolia.8.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
