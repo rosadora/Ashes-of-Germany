@@ -349,7 +349,7 @@
 		completion_reward = {
 		 add_popularity = {
 			ideology = social_democracy 
-			popularity = 0.075
+			popularity = 0.03
 		 }
 		 add_war_support = 0.05
 		}

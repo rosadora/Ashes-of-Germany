@@ -4790,8 +4790,11 @@
 			MAN = {
 				is_puppet_of = JAP
 			}
+			OR = {
 			FER = {
 				is_puppet_of = JAP
+			}
+			controls_state = 408
 			}
 		}
 		bypass = {
@@ -5143,8 +5146,11 @@
 			MAN = {
 				is_puppet_of = JAP
 			}
+			OR = {
 			FER = {
 				is_puppet_of = JAP
+			}
+			controls_state = 408
 			}
 		}
 		bypass = {

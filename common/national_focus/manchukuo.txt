@@ -791,8 +791,6 @@
 					popularity = 0.2
 				}
 			}
-			#This will prevent a three-sided war Manchukuo AI won't win
-			add_ideas = MAN_disobedience
 		}
 	}
 	
@@ -2849,7 +2847,6 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_war_support = 0.1
-			set_rule = { can_create_factions = yes }
 			every_state = {
 				limit = { is_core_of = CHI }
 				add_core_of = ROOT

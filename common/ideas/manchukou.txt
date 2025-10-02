@@ -22,6 +22,24 @@ ideas = {
 			}
 		}
 
+		MAN_zhang_jinghui_premier = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = PER_unification_initiative_idea
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		
+
 		MAN_banditry = {
 
 			available = {
