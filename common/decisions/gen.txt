@@ -595,6 +595,9 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = MEK
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			is_puppet = no
 			country_exists = WUR
@@ -645,6 +648,9 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = MEK
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			is_puppet = no
 			country_exists = HAN
@@ -698,6 +704,9 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = MEK
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			is_puppet = no
 			country_exists = BAY
@@ -750,6 +759,9 @@ gen_war_of_unification = {
 				original_tag = BAY
 				original_tag = PRS
 				original_tag = MEK
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			country_exists = SHL
 			is_puppet = no
@@ -800,6 +812,9 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = PRS
 				original_tag = BAY
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			country_exists = MEK
 			is_puppet = no
@@ -850,6 +865,9 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = MEK
 				original_tag = BAY
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			country_exists = PRS
 			is_puppet = no
@@ -905,6 +923,9 @@ gen_war_of_unification = {
 				original_tag = SHL
 				original_tag = MEK
 				original_tag = BAY
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 			country_exists = PRS
 			is_puppet = no
@@ -934,6 +955,59 @@ gen_war_of_unification = {
 			factor = 1000
 		}
 	}
+	strike_Holstein = {
+
+		
+		icon = GFX_decision_infiltrate_state
+
+		available = {
+			date > 1940.01.01
+			NOT = {
+				has_war_with = DEN
+			}
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = PRS
+				original_tag = SPF
+				original_tag = HAN
+				original_tag = WUR
+				original_tag = SAX
+				original_tag = SHL
+				original_tag = MEK
+				original_tag = BAY
+			}
+			country_exists = PRS
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+			add_state_core = 909
+			add_state_core = 912
+			create_wargoal = {
+              type = annex_everything
+              target = DEN
+            }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
 	proclaim_german_unity = {
 
 		icon = GFX_decision_generic_speech
@@ -953,6 +1027,9 @@ gen_war_of_unification = {
 				original_tag = MEK
 				original_tag = BAY
 				original_tag = RCO
+				DEN = {
+					has_completed_focus = DEN_focus_germ
+				}
 			}
 		}
 
