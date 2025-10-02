@@ -59,7 +59,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_MFR
-		icon = GFX_goal_agricultural_policies
+		icon = GFX_focus_generic_farmland
 		x = -4
 		y = 2
 		relative_position_id = IRE_IEAA
@@ -414,7 +414,7 @@ focus_tree = {
 	
 	focus = {
 		id = IRE_DBR
-		icon = GFX_IRE_Zinc
+		icon = GFX_focus_CONGO_gold_and_diamonds
 		x = 0
 		y = 3
 		relative_position_id = IRE_IEAA
@@ -453,7 +453,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_GGLF
-		icon = GFX_goal_military_research
+		icon = GFX_focus_generic_air_research_boost
 		x = 0
 		y = 5
 		relative_position_id = IRE_IEAA
@@ -586,7 +586,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_RTN
-		icon = GFX_goal_generic_build_housing
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 4
 		y = 1
 		relative_position_id = IRE_IEAA
@@ -742,11 +742,10 @@ focus_tree = {
 		relative_position_id = IRE_prepare_industrial_growth
 		cost = 5
 		available = {
-			ENG = {
-				has_government = democratic
-			}	
+			
 			NOT ={
-				ENG = { has_completed_focus = ENG_a_change_in_course }
+				ENG = { has_completed_focus = ENG_workers_of_britain_arise
+						has_completed_focus = ENG_order_prevails }
 			}
 			has_government = democratic
 		}
@@ -790,8 +789,9 @@ focus_tree = {
 		relative_position_id = IRE_fine_gael
 		cost = 5
 		available = {
-			NOT = {
-				ENG = { has_completed_focus = ENG_a_change_in_course }
+			NOT ={
+				ENG = { has_completed_focus = ENG_workers_of_britain_arise
+						has_completed_focus = ENG_order_prevails }
 			}
 			OR = {
 				is_subject = no
@@ -897,8 +897,9 @@ focus_tree = {
 		relative_position_id = IRE_confirm_ties_to_commonwealth
 		cost = 10
 		available = {
-			NOT = {
-				ENG = { has_completed_focus = ENG_a_change_in_course }
+			NOT ={
+				ENG = { has_completed_focus = ENG_workers_of_britain_arise
+						has_completed_focus = ENG_order_prevails }
 			}
 		}
 		ai_will_do = {
@@ -951,8 +952,9 @@ focus_tree = {
 		relative_position_id = IRE_confirm_ties_to_commonwealth
 		cost = 10
 		available = {
-			ENG = {
-				NOT = { has_completed_focus = ENG_a_change_in_course }
+			NOT ={
+				ENG = { has_completed_focus = ENG_workers_of_britain_arise
+						has_completed_focus = ENG_order_prevails }
 			}
 		}
 		ai_will_do = {
@@ -2670,29 +2672,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = IRA_loyalty_up.tt
 		}
-	}	
-	focus = { # no IRA effect
-		id = IRE_atlantic_alliance
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = IRE_prepare_a_northern_campaign focus = IRE_request_ulster_lordship }
-		mutually_exclusive = { focus = IRE_draw_closer_to_britain }
-		mutually_exclusive = { focus = IRE_draw_closer_to_germany }
-		x = 1
-		y = 1
-		relative_position_id = IRE_prepare_a_northern_campaign
-		cost = 10
-		ai_will_do = {
-			factor = 20
-		}
-		available = {
-			is_in_faction = no
-		}
-		search_filters =  { FOCUS_FILTER_POLITICAL }
-		completion_reward  = {
-			create_faction = atlantic_alliance
-			custom_effect_tooltip = IRE_atlantic_alliance.tt
-		}
-	}	
+	}		
 	
 	focus = { # reduces IRA loyalty
 		id = IRE_draw_closer_to_britain
@@ -2700,7 +2680,7 @@ focus_tree = {
 		prerequisite = { focus = IRE_request_ulster_lordship }
 		mutually_exclusive = { focus = IRE_atlantic_alliance }
 		mutually_exclusive = { focus = IRE_draw_closer_to_germany }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = IRE_request_ulster_lordship
 		cost = 10
@@ -2742,7 +2722,7 @@ focus_tree = {
 		mutually_exclusive = { focus = IRE_draw_closer_to_britain}
 		mutually_exclusive = { focus = IRE_ignite_german_revolt }
 		mutually_exclusive = { focus = IRE_atlantic_alliance }
-		x = -1
+		x = -0
 		y = 1
 		relative_position_id = IRE_prepare_a_northern_campaign
 		cost = 10
@@ -2928,7 +2908,7 @@ focus_tree = {
 		id = IRE_fuse_the_kingdoms
 		icon = GFX_focus_hun_elect_a_king
 		prerequisite = { focus = IRE_an_equal_partner }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = IRE_an_equal_partner
 		cost = 10
@@ -2937,7 +2917,7 @@ focus_tree = {
 		}
 		available = {
 			num_of_factories > 39
-			ENG = { has_capitulated = no }
+			ENG = { has_capitulated = no is_in_faction_with = IRE }
 		}
 		search_filters =  { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
 		completion_reward  = {
@@ -3646,7 +3626,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_MOBILE1
-		icon = GFX_goal_doctrine_tank_warfare
+		icon = GFX_focus_generic_truck
 		x = 3
 		y = 5
 		relative_position_id = IRE_ARMYTREE
@@ -3834,7 +3814,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_PATRIOTICMOVEMENT
-		icon = GFX_goal_mass_concentration_of_army
+		icon = GFX_focus_FIN_patriotic_peoples_movement
 		x = 3
 		y = 3
 		relative_position_id = IRE_ARMYTREE
@@ -4619,3 +4599,5 @@ focus_tree = {
 		}
 	}
 }
+
+

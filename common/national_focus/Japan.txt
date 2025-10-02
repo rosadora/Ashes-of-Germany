@@ -4790,8 +4790,11 @@
 			MAN = {
 				is_puppet_of = JAP
 			}
+			OR = {
 			FER = {
 				is_puppet_of = JAP
+			}
+			controls_state = 408
 			}
 		}
 		bypass = {
@@ -4943,6 +4946,9 @@
 			is_puppet = no
 			has_army_manpower = {
 				size > 600000
+			}
+			NOT = {
+				has_idea = CHI_manchu_resistance_idea
 			}
 		}
 		bypass = {
@@ -5140,8 +5146,11 @@
 			MAN = {
 				is_puppet_of = JAP
 			}
+			OR = {
 			FER = {
 				is_puppet_of = JAP
+			}
+			controls_state = 408
 			}
 		}
 		bypass = {
