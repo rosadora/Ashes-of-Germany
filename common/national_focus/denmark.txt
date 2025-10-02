@@ -4514,13 +4514,6 @@ focus = {
 					    target = DEN
 					    value > 79
 					}
-					OR = {
-						NOT = { has_idea = undisturbed_isolation  }
-						NOT = { has_idea = isolation }
-						has_completed_focus = USA_focus_on_europe
-						has_completed_focus = USA_limited_intervention
-						has_completed_focus = USA_intervention_in_europe
-					}
 				}
 			}
 		}
@@ -6071,3 +6064,4 @@ focus = {
 		}
 	}
 }
+
