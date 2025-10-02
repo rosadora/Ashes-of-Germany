@@ -750,9 +750,6 @@ gen_war_of_unification = {
 				original_tag = BAY
 				original_tag = PRS
 				original_tag = MEK
-				DEN = {
-					has_completed_focus = DEN_focus_germ
-				}
 			}
 			country_exists = SHL
 			is_puppet = no
