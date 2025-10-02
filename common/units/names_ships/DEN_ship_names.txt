@@ -1,0 +1,136 @@
+﻿##### DENMARK NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+DEN_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "HDMS "
+	fallback_name = "T %d"					
+
+	unique = {											
+		"Dragen" "Hvalen" "Laxen" "Glenten" "Høgen" "Ørnen" "Springeren" "Maagen" "Haien" "Makrelen" "Nordkaperen" "Sælen" "Havkatten" "Narhvalen" "Støren" "Hvalrossen" "Havørnen" "Søløven" "Søbjørnen" "Søulven" "Søhunden" "Søhesten" "Søridderen" "Lindormen" "Lougen" "Laaland" "Falken" "Gribben" "Flyvefisken" "Sværdfisken" "Willemoes" "Tumleren" "Ormen" "Vindhunden" "Spækhuggeren"
+	}
+}
+
+DEN_MS_HISTORICAL = {
+	name = "Historical Mining Vessels"
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = ""
+	fallback_name = "Minebåd %d"					
+
+	unique = {											
+		"HDMS Kvintus" "HDMS Sixtus" "Minebåd 1" "Minebåd 2" "Minebåd 3" "Minebåd 4" "Minebåd 5" "Minebåd 6" "Minebåd 7" "Minebåd 8" "Minebåd 9" "Minebåd 10" "Minebåd 11" "Minebåd 12"
+	}
+}
+
+### LIGHT CRUISER NAMES###
+DEN_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "HDMS "
+	fallback_name = "K %d"
+
+	unique = {
+		"Islands Falk" "Hvidbjørnen" "Ingolf" "Beskytteren" "Fylla" "Vitus Bering" "Saltholm" "Skarven" "Ternen"  "Absalon" "Valkyrien" "Diana" "Hejmdal"
+	}
+}
+
+### HEAVY CRUISER NAMES###
+DEN_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "HDMS "
+	fallback_name = "P %d"
+
+	unique = {
+		"Herluf Trolle" "Olfert Fischer" "Peder Skram" "Hekla" "Niels Iuel" "Rolf Krake" "Gejser" "Esbern Snare" "Valdemar Sejr"  "Skjold" "Iver Hvitfeldt" "Tordenskjold" "Helgoland" "Odin" "Gorm"
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+DEN_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "HDMS "
+	fallback_name = "L %d"		
+
+	unique = {
+		"Sjælland" "Fyn" "Jylland"  "Danmark" "Dannebrog"
+	}
+}
+
+### BATTLECRUISER NAMES ###
+DEN_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "HDMS "
+	fallback_name = "SK %d"		
+
+	unique = {
+		"Skagerak" "Øresund" "Limfjorden" "Fynshav" "Østersøen" "Kattegat"
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+DEN_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "HDMS "
+	fallback_name = "H %d"	
+
+	unique = {
+		"Danmark" "Dannebrog" "Tordenskjold"
+	}
+}
+
+### SUBMARINES ###
+DEN_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { DEN }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "HDMS "
+	fallback_name = "U %d"
+	
+	unique = {
+		"Triton" "Ran" "Galathea" "Rota" "Bellona" "Flora" "Daphne" "Dryaden" "Havmanden" "Havfruen" "Havhesten" "Havkalen" "Nymfen" "Najaden" "Thetis" "Dykkeren"
+	}
+}
