@@ -1,6 +1,5 @@
 ﻿capital = 37
 
-
 oob = "DEN_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -12,85 +11,40 @@ if = {
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "DEN_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			photo_reconnaisance = 1
+			iw_small_airframe = 1
+			bba_early_transport_plane = 1
+		}
 	else = {
 		set_air_oob = "DEN_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
-			cv_early_fighter = 1
-
+			scout_plane1 = 1
+			early_fighter = 1
 		}
 	}
 }
-
-# Diplomacy
-IF = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = ICE
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	ELSE = {
-		puppet = ICE
-	}
-}
-
-#### COUNTRY LEADERS ####
-recruit_character = DEN_thorvald_stauning
-recruit_character = DEN_knud_bach
-recruit_character = DEN_knud_bach_2
-recruit_character = DEN_knud_bach_3
-
-recruit_character = DEN_aksel_larsen
-recruit_character = DEN_frits_clausen
-
-#### MILITARY LEADERS and ADVISORS ####
-
-recruit_character = DEN_william_wain_prior
-recruit_character = DEN_ebbe_gortz
-
-recruit_character = DEN_christian_frederik_von_schalburg
-recruit_character = DEN_hjalmar_rechnitzer
-recruit_character = DEN_aage_vedel
-
-recruit_character = DEN_carl_hammerich
-
-recruit_character = DEN_hans_a_rolsted
-recruit_character = DEN_kaj_birksted
-recruit_character = DEN_poul_sommer
-
-recruit_character = DEN_paul_sommer
-recruit_character = DEN_hans_lunding
-
-#### POLITICAL ADVISORS ####
-recruit_character = DEN_knud_kristensen
-recruit_character = DEN_emil_strobech
-recruit_character = DEN_ejnar_warum
-recruit_character = DEN_viggo_kampman
-
-
 
 set_research_slots = 3
 set_stability = 0.9
 set_war_support = 0.1
+puppet = ICE
 set_technology = {
+	tech_trucks = 1
+	motorised_infantry = 1
+	#bicycle_infantry = 1#
+	armored_car1 = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
-	tech_trucks = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	basic_train = 1
 }
-
-#### TECH SET UP
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
@@ -106,51 +60,256 @@ if = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
 		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
 		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_cruiser_armor_scheme = 1
-		basic_torpedo = 1
 		coastal_defense_ships = 1
+		#early_ship_hull_heavy = 1
+		basic_depth_charges = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
 		mtg_transport = 1
 	}
 }
 
 
-set_politics = {
-	ruling_party = social_democracy
-	last_election = "1935.5.19"
-	election_frequency = 60
-	elections_allowed = yes
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#Custom focus tree
+	complete_national_focus = DEN_The_armed_forces
+	unlock_national_focus = DEN_naval_effort
+	complete_national_focus = DEN_destroyers
+	complete_national_focus = DEN_minelaying
+	complete_national_focus = DEN_army_effort
+	complete_national_focus = DEN_Expand_the_general_staff
+	complete_national_focus = DEN_civil_defense
+	complete_national_focus = DEN_foreign_designs
+	unlock_national_focus = DEN_fighter_competition
+
+	unlock_national_focus = DEN_Industrialisation
+	complete_national_focus = DEN_Steel_production
+	complete_national_focus = DEN_Unite_the_nation
+	complete_national_focus = DEN_Economic_reform
+	complete_national_focus = DEN_Civilian_factories1
+	
+	oob = "DEN_1939"
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "DEN_1939_naval_mtg"
+		else = {
+			set_naval_oob = "DEN_1939_naval_legacy"
+		}
+	}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+			set_air_oob = "DEN_1939_air_bba"
+		else = {
+			set_air_oob = "DEN_1939_air_legacy"
+			set_technology = {
+				early_bomber = 1
+				fighter1 = 1
+				naval_bomber1 = 1
+			}
+		}
+	}
+	set_technology = {
+		#
+		gw_artillery = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		#air_superiority = 1
+		#grand_battle_plan = 1
+		#trench_warfare = 1
+		#fleet_in_being = 1
+		#convoy_sailing = 1
+		#submarine_operations = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			basic_ship_hull_submarine = 1
+		}
+	}
+	
 }
 
 set_popularities = {
-	fascism = 0
-	ultra_nationalism = 0
-	neutrality = 1
-	democratic = 21
-	classical_liberalism = 26
-	social_liberalism = 12
+	democratic = 30
+	libertarian_socialism = 5
+	fascism = 10
 	social_democracy = 40
-	classical_marxism = 0
-	libertarian_socialism = 0
-	communism = 0
+	social_liberalism = 9
+	ultra_nationalism = 2
+	communism = 2
+	neutrality = 2
+}
+
+set_politics = {
+	ruling_party = social_democracy
+	last_election = "1935.4.3"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+1939.1.1 = {
+	set_popularities = {
+		democratic = 40
+		fascism = 10
+		ultra_nationalism = 23
+		social_democracy = 20
+		communism = 4
+		neutrality = 3
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1939.4.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+
+set_convoys = 40
+
+add_ideas = {
+	DEN_constitutional_monarch
+	DEN_Disarmed_neutrality
+	DEN_agricultural_dependence
+	DEN_Patriotism
+	#disarmed_nation
+}
+
+### COUNTRY LEADERS ###
+recruit_character = DEN_thorvald_stauning
+recruit_character = DEN_frits_clausen
+recruit_character = DEN_aksel_larsen
+recruit_character = DEN_christian_x
+recruit_character = DEN_frits_clausen_nationalist
+recruit_character = DEN_frits_clausen
+
+recruit_character = DEN_john_christmas_moeller
+recruit_character = DEN_vilhelm_buhl
+
+### ADVISORS ###
+recruit_character = DEN_ejnar_warum
+recruit_character = DEN_knud_kristensen
+recruit_character = DEN_erik_scavenius
+recruit_character = DEN_peter_munch
+recruit_character = DEN_oluf_krag
+recruit_character = DEN_halfdan_hendriksen
+recruit_character = DEN_viggo_kampmann
+recruit_character = DEN_erik_victor_petersen
+recruit_character = DEN_ib_birkedal_hansen
+recruit_character = DEN_Arne_soerensen
+recruit_character = DEN_karl_kristian_steincke
+recruit_character = DEN_joergen_joergensen
+recruit_character = DEN_erik_westergaard
+recruit_character = DEN_t_k_thomsen
+
+### THEORISTS ###
+recruit_character = DEN_paul_sommer
+recruit_character = DEN_kaj_birksted
+recruit_character = DEN_christian_frederik_von_schalburg
+recruit_character = DEN_peter_horn
+recruit_character = DEN_harald_roy_andersen
+recruit_character = DEN_arne_johnny_langhoff_boege
+recruit_character = DEN_hans_lunding
+recruit_character = DEN_niels_bohr
+recruit_character = DEN_torben_grut
+
+
+### GENERALS ###
+recruit_character = DEN_wilhelm_wain_prior
+recruit_character = DEN_erik_with
+recruit_character = DEN_ebbe_goertz
+recruit_character = DEN_hans_aage_rolsted
+recruit_character = DEN_johan_daniel_von_stemann
+recruit_character = DEN_paul_louis_ramm
+recruit_character = DEN_erik_leschly
+recruit_character = DEN_aage_falking
+recruit_character = DEN_kristian_knudtzon
+recruit_character = DEN_carl_jacobsen
+recruit_character = DEN_erik_baron_bille_brahe
+recruit_character = DEN_charles_henry_rye
+
+recruit_character = DEN_prince_harald_christian_frederik
+recruit_character = DEN_crown_prince_frederik_carl_valdemar
+recruit_character = DEN_knud_boerge_martinsen
+recruit_character = DEN_vilhelm_goertz
+recruit_character = DEN_villy_fuglsang
+
+### ADMIRALS ###
+recruit_character = DEN_aage_helgesen_vedel
+recruit_character = DEN_hjalmer_rechnitzer
+recruit_character = DEN_carl_hammerich
+recruit_character = DEN_august_emil_arendrup
+recruit_character = DEN_christian_vilhelm_evers
+recruit_character = DEN_asger_valdemar_grandjean
+recruit_character = DEN_frederik_hempel_joergensen
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "O-Maskinen IO"
+		type = small_plane_airframe_0
+		#design_team = mio:ENG_hawker_organization
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			fixed_auxiliary_weapon_slot_1 = recon_camera
+		}
+		#obsolete = yes
+	}
 }
 
 
-set_convoys = 55
-
-### VARIANTS ###
-# 1936 Start #
+### NAVY ###
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
-	# Submarines #
+	# Submarines B #
 	create_equipment_variant = {
-		name = "Rota Class"								# represents Rota and Daphne classes
+		name = "B Klassen"
 		type = ship_hull_submarine_1
 		name_group = DEN_SS_HISTORICAL
 		parent_version = 0
@@ -159,11 +318,182 @@ if = {
 			fixed_ship_engine_slot = sub_ship_engine_1
 			rear_1_custom_slot = empty
 		}
+		obsolete = yes
 	}
-	# Heavy Cruisers #
+	# Submarines C #
 	create_equipment_variant = {
-		name = "Herluf Trolle Class"				
+		name = "C Klassen"
+		type = ship_hull_submarine_1
+		name_group = DEN_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+		obsolete = yes
+	}
+	# Submarines D #
+	create_equipment_variant = {
+		name = "D Klassen"
+		type = ship_hull_submarine_1
+		name_group = DEN_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	# MineLayer #
+	#create_equipment_variant = {
+	#	name = "Minebåd Klassen"
+	#	type = ship_hull_light_1
+	#	name_group = DEN_MS_HISTORICAL
+	#	parent_version = 0
+	#	modules = {
+	#		fixed_ship_battery_slot = ship_light_battery_1
+	#		fixed_ship_anti_air_slot = empty
+	#		fixed_ship_fire_control_system_slot = empty
+	#		fixed_ship_radar_slot = empty
+	#		fixed_ship_engine_slot = light_ship_engine_1
+	#		fixed_ship_torpedo_slot = empty
+	#		mid_1_custom_slot = ship_mine_layer_1
+	#		rear_1_custom_slot = empty
+	#	}
+	#}
+	# mineskib #
+	create_equipment_variant = {
+		name = "Mineskib Klassen"
+		type = ship_hull_light_1
+		name_group = DEN_MS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_mine_sweeper_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Springeren #
+	create_equipment_variant = {
+		name = "Springeren Klassen"
+		type = ship_hull_light_1
+		name_group = DEN_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# DD Dragen #
+	create_equipment_variant = {
+		name = "Dragen Klassen"
+		type = ship_hull_light_2
+		name_group = DEN_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_torpedo_1
+		}
+	}
+	# DD Glenten #
+	create_equipment_variant = {
+		name = "Glenten Klassen"
+		type = ship_hull_light_2
+		name_group = DEN_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_torpedo_1
+		}
+	}
+	# CL Inspektionsskib #
+	create_equipment_variant = {
+		name = "Inspektions Klassen"				
+		type = ship_hull_cruiser_1
+		name_group = DEN_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	# CL Artilleri #
+	create_equipment_variant = {
+		name = "Artilleri Klassen"				
+		type = ship_hull_cruiser_1
+		name_group = DEN_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_medium_battery_1
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+	}
+	# CA Herluf Trolle #
+	create_equipment_variant = {
+		name = "Herluf Trolle Klassen"				
 		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = DEN_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_torpedo_1
+		}
+		obsolete = yes
+	}
+	# CA Hekla #
+	create_equipment_variant = {
+		name = "Hekla Klassen"				
+		type = ship_hull_cruiser_1
 		name_group = DEN_CA_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -172,35 +502,46 @@ if = {
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_1_custom_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
 			mid_2_custom_slot = empty
-			rear_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
 		}
 		obsolete = yes
 	}
-	create_equipment_variant = {
-		name = "Niels Iuel Class"				
-		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = DEN_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			fixed_ship_secondaries_slot = empty
-			mid_1_custom_slot = ship_anti_air_1
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = ship_light_medium_battery_1
+}
+1939.1.1 = {
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Søløven Klassen"
+			type = ship_hull_light_2
+			#name_group = DEN_DD_HISTORICAL
+			#parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_depth_charge_1
+				rear_1_custom_slot = ship_light_battery_1
+			}
+		}
+		create_equipment_variant = {
+			name = "H Klassen"
+			type = ship_hull_submarine_2
+			#name_group = DEN_SS_HISTORICAL
+			#parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_2
+				rear_1_custom_slot = ship_torpedo_sub_1
+			}
 		}
 	}
-}
-
-add_equipment_to_stockpile = {
-	type = train_equipment_1
-	amount = 7
 }
