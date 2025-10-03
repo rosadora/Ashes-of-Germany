@@ -4064,6 +4064,9 @@
  USR_USSR_communism:0 "Union of Soviet Socialist Republics"
  USR_USSR_communism_DEF:0 "the Union of Soviet Socialist Republics"
  USR_USSR_communism_ADJ:0 "Soviet"
+ USR_USSR_classical_marxism:0 "Union of Soviet Socialist Republics"
+ USR_USSR_classical_marxism_DEF:0 "the Union of Soviet Socialist Republics"
+ USR_USSR_classical_marxism_ADJ:0 "Soviet"
 
  YUG_REP:0 "Republic of Yugoslavia"
  YUG_REP_DEF:0 "The Yugoslavian Republic"

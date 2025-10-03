@@ -17,6 +17,334 @@
 	
 	default = no
 	focus = {
+		id = JAP_the_economy_of_the_steppes
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		x = 25
+		y = 0
+		mutually_exclusive = {}
+		prerequisite = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		 }
+		}
+	}
+	focus = {
+		id = JAP_an_advisor_to_hungary
+		icon = GFX_focus_HUN_a_revolutionary_greater_hungary
+		x = -4
+		y = 1
+		mutually_exclusive = {focus = JAP_old_ways}
+		prerequisite = {focus = JAP_the_economy_of_the_steppes}
+		relative_position_id = JAP_the_economy_of_the_steppes
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = JAP_victory_for_the_republic
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 custom_effect_tooltip = unlock_mavag
+		 add_opinion_modifier = {
+            target = HUN
+            modifier = huge_increase
+           }
+		 HUN = {
+			add_opinion_modifier = {
+            target = MON
+            modifier = huge_increase
+           }
+		 }
+		}
+	}
+	focus = {
+		id = JAP_first_five_year_plan
+		icon = GFX_focus_generic_communist_industry
+		x = 0
+		y = 1
+		prerequisite = {focus = JAP_an_advisor_to_hungary}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = five_year_plan 
+			days = 1825
+		 }
+		}
+	}
+	focus = {
+		id = JAP_connect_the_outskirts
+		icon = GFX_focus_GER_kriegslokomotive
+		x = 4
+		y = 1
+		prerequisite = {focus = JAP_an_advisor_to_hungary focus = JAP_old_ways}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = connect_the_outskirts
+		}
+	}
+	focus = {
+		id = JAP_encourage_internal_migration
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
+		x = -2
+		y = 2
+		prerequisite = {focus = JAP_first_five_year_plan}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		 818 = {
+			add_manpower = -30000
+		 }
+		 820 = {
+			add_manpower = -10000
+		 }
+		 329 = {
+			add_manpower = -10000
+		 }
+		 817 = {
+			add_manpower = -1000
+		 }
+		 819 = {
+			add_manpower = -10000
+		 }
+		 330 = {
+			add_manpower = 61000
+			add_extra_state_shared_building_slots = 2
+		 }
+		}
+	}
+	focus = {
+		id = JAP_increase_mineral_production
+		icon = GFX_focus_generic_steel
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_first_five_year_plan}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.025
+			330 = {
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+			}
+		}
+	}
+	focus = {
+		id = JAP_inaugurate_the_ulan_bator_plant
+		icon = GFX_focus_generic_military_industry
+		x = 0
+		y = 3
+		prerequisite = {focus = JAP_increase_mineral_production focus = JAP_encourage_internal_migration}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.025
+			330 = {
+				add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_accessible_schools
+		icon = GFX_focus_NOR_moscows_education_centers
+		x = -2
+		y = 3
+		prerequisite = {focus = JAP_increase_mineral_production focus = JAP_encourage_internal_migration}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = JAP_rush_the_plan
+		icon = GFX_focus_generic_economic_recovery
+		x = -2
+		y = 4
+		prerequisite = {focus = JAP_accessible_schools focus = JAP_inaugurate_the_ulan_bator_plant}
+		mutually_exclusive = {focus = JAP_finish_the_five_year_plan}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			has_idea = five_year_plan
+			industrial_complex > 9
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = five_year_plan
+			add_timed_idea = {
+				idea = five_year_plan_rushed
+				days = 200
+			}
+			swap_ideas = {
+				remove_idea = pastoral_society
+				add_idea = semi_pastoral_society
+			}
+			set_country_flag = five_year_plan_completed
+		}
+	}
+	focus = {
+		id = JAP_finish_the_five_year_plan
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 4
+		prerequisite = {focus = JAP_accessible_schools focus = JAP_inaugurate_the_ulan_bator_plant}
+		mutually_exclusive = {focus = JAP_rush_the_plan}
+		relative_position_id = JAP_an_advisor_to_hungary
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+			has_idea = five_year_plan
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = five_year_plan
+			swap_ideas = {
+				remove_idea = pastoral_society
+				add_idea = semi_pastoral_society
+			}
+			set_country_flag = five_year_plan_completed
+		}
+	}
+	focus = {
+		id = JAP_old_ways
+		icon = GFX_focus_GER_optimize_reich_labour_service
+		x = 4
+		y = 1
+		mutually_exclusive = {focus = JAP_an_advisor_to_hungary}
+		prerequisite = {focus = JAP_the_economy_of_the_steppes}
+		relative_position_id = JAP_the_economy_of_the_steppes
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = JAP_restore_the_regency
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_popularity = {
+			ideology = neutrality 
+			popularity = 0.05
+		  }
+		  swap_ideas = {
+			remove_idea = pastoral_society
+			add_idea = pastoral_society2
+		  }
+		}
+	}
+	focus = {
 		id = JAP_the_future_of_mongolia
 		icon = GFX_goal_generic_national_unity
 		x = 15
@@ -524,12 +852,44 @@
 		}
 	}
 	focus = {
+		id = JAP_the_sun_will_shine_again
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = -2
+		y = 1
+		relative_position_id = JAP_victory_for_the_republic
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag = choibalsan_coup
+			OR = {
+				has_government = communism 
+				has_government = classical_marxism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		 IF = {
+			limit = {
+				has_idea = legacy_of_the_khanate
+			}
+			remove_ideas = legacy_of_the_khanate
+		 }
+		}
+	}
+	focus = {
 		id = JAP_overthrow_weakness
 		icon = GFX_focus_SWE_the_beast_stirs
 		x = -2
 		y = 2
-		prerequisite = {focus = JAP_arrest_last_monarchists }
-		prerequisite = {focus = JAP_meet_the_red_league }
+		prerequisite = {focus = JAP_arrest_last_monarchists focus = JAP_the_sun_will_shine_again }
+		prerequisite = {focus = JAP_meet_the_red_league focus = JAP_the_sun_will_shine_again }
 		mutually_exclusive = {focus = JAP_follow_peace_and_prosperity_agenda }
 		relative_position_id = JAP_the_revolution_continues
 		cost = 7
@@ -762,6 +1122,493 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = volunteers_in_russian_civil_war
+		}
+	}
+	focus = {
+		id = JAP_welcome_red_exiles
+		icon = GFX_focus_SOV_women_in_aviation
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_support_the_bolsheviks }
+		relative_position_id = JAP_a_world_to_win
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+			NOT = {
+			USR = {
+				has_war_with = SOV
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 custom_effect_tooltip = welcome_red_exiles_focus 
+		 add_timed_idea = {
+			idea = russian_exiles
+			days = 200
+		 }
+		 hidden_effect = {
+			USR = {
+			set_nationality = {
+             target_country = MON
+             character = USR_Vladimir_Smirnov
+            }
+			set_nationality = {
+             target_country = MON
+             character = USR_Andrei_Boubnov
+            }
+			set_nationality = {
+             target_country = MON
+             character = MAK_Nikolay_Krestinski
+            }
+			set_nationality = {
+             target_country = MON
+             character = USR_Alexandre_Beloborodov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_mikhail_kalinin
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikita_khrushchyov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_voznesensky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_voznesensky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_lazar_kaganovich
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_genrikh_yagoda
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_yezhov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_lavrenty_beriya
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vsevolod_merkulov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vyacheslav_molotov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_lev_trotsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_ivan_smirnov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_ivar_smilga
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_karl_radek
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_yevgeny_preobrazhensky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksandr_shlyapnikov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_bukharin
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksey_rykov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_mikhail_tomsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_grigory_sokolnikov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_grigory_zinovyev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_lev_kamenev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_martemyan_ryutin
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_patriarch_sergy
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_konstantin_rodzayevsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksandr_vasilevsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksandr_golovanov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksandr_gorbatov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksandr_novikov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_aleksandr_yegorov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_andrey_grechko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_andrey_vlasov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_andrey_yeryomenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_arseny_golovko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_boris_shaposhnikov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_dmitry_lelyushenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_filipp_golikov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_filipp_oktyabrsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_georgy_zakharov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_gordey_levchenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_grigory_kulik
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_igor_kurchatov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_issa_pliyev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_ivan_chernyakhovsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_ivan_fedyuninsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_ivan_konev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_ivan_yumashev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_kirill_meretskov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_kirill_moskalenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_kliment_voroshilov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_konstantin_rokossovsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_konstantin_vershinin
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_kuzma_galitsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_leonid_govorov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_maksim_purkayev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_markian_popov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_maks_reyter
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_mikhail_frinovsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_mikhail_tukhachevsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikandr_chibisov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_berzarin
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_vatutin
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_nikolay_kuznetsov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_pavel_rychagov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_pavel_zhigarev
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_pyotr_smirnov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_rodion_malinovsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_semyon_budyonny
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_semyon_timoshenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_sergey_khudyakov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_sergey_korolyov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_sergey_rudenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_sergey_gorshkov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_stepan_krasovsky
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vasily_blyukher
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vasily_chuykov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vasily_kuznetsov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vladimir_kasatonov
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vladimir_tributs
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_yakov_cherevichenko
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_yakov_smushkevich
+            }
+			set_nationality = {
+             target_country = MON
+             character = SOV_vitaly_primakov
+            }
+			}
+		 }
+		}
+	}
+	focus = {
+		id = JAP_reunite_the_politburo
+		icon = GFX_focus_generic_soviet_politics
+		x = -1
+		y = 1
+		prerequisite = {focus = JAP_welcome_red_exiles }
+		relative_position_id = JAP_welcome_red_exiles
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+			NOT = {
+			USR = {
+				has_war_with = SOV
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = USR_USSR
+			add_threat = 5
+			add_ideas = union_of_soviet_socialist_republics
+			SOV = {
+			every_core_state = {
+				add_core_of = MON
+			}
+		    }
+		}
+	}
+	focus = {
+		id = JAP_from_the_ashes_we_will_rise
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 1
+		y = 1
+		prerequisite = {focus = JAP_welcome_red_exiles }
+		relative_position_id = JAP_welcome_red_exiles
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+			NOT = {
+			USR = {
+				has_war_with = SOV
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment
+              amount = 10000
+            }
+		}
+	}
+	focus = {
+		id = JAP_beaten_never_defeated
+		icon = GFX_goal_beated_never_defeated
+		x = 0
+		y = 2
+		prerequisite = {focus = JAP_from_the_ashes_we_will_rise }
+		prerequisite = {focus = JAP_reunite_the_politburo }
+		relative_position_id = JAP_welcome_red_exiles
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+			NOT = {
+			USR = {
+				has_war_with = SOV
+			}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			every_country = {
+	         limit = {
+	          any_owned_state = {
+				is_core_of = MON
+			  }
+	          }
+	         MON = {
+		      create_wargoal = {
+		        type = annex_everything
+		        target = PREV
+	         }
+		    }
+           }
 		}
 	}
 	focus = {

@@ -92,3 +92,23 @@ macedonian_nationalism_yug_cro = {
 	state_resources_factor = -0.35
 	state_production_speed_buildings_factor = -0.25
 }
+
+pastoral_society = {
+	icon = POL_looming_peasants_strike
+
+	enable = { always = yes }
+
+	production_speed_infrastructure_factor = MON_pastoral_infra
+	production_speed_rail_way_factor = MON_pastoral_rail
+	production_speed_industrial_complex_factor = MON_pastoral_cic
+	production_speed_arms_factory_factor = MON_pastoral_mic
+	production_speed_synthetic_refinery_factor = MON_pastoral_synth
+	global_building_slots_factor = MON_pastoral_slots
+	local_resources_factor = MON_pastoral_resources
+	research_speed_factor = MON_pastoral_research
+	consumer_goods_factor = MON_pastoral_consumer
+	industrial_capacity_dockyard = MON_pastoral_prod_mil
+	industrial_capacity_factory = MON_pastoral_consumer_prod_dock
+	monthly_population =  MON_pastoral_pop
+	
+}
