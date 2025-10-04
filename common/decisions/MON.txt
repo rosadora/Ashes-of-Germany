@@ -10,7 +10,7 @@ MON_1936_elections = {
 		}
 
 		available = {
-			always = no
+			has_government = communism
 		}
 
 		days_mission_timeout = 320

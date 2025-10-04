@@ -1509,7 +1509,7 @@
 		completion_reward = {
 		 add_popularity = {
 			ideology = social_democracy 
-			popularity = 0.075
+			popularity = 0.02
 		 }
 		 add_war_support = 0.05
 		}
@@ -1743,7 +1743,17 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		 add_popularity = {
+			if = {
+				limit ={
+					has_completed_focus = JAP_the_sun_will_shine_again
+				}
+		 set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		 }
+		 }
+		 else = {
+			add_popularity = {
 			ideology = social_democracy
 			popularity = -0.1
 		 }
@@ -1754,6 +1764,7 @@
 		 set_politics = {
 			ruling_party = classical_marxism
 			elections_allowed = no
+		 }
 		 }
 		}
 	}
@@ -1973,6 +1984,7 @@
 			USR = {
 				has_war_with = SOV
 			}
+			country_exists = USR
 			}
 		}
 		bypass = {
