@@ -37,6 +37,67 @@ ideas = {
 				production_speed_supply_node_factor = 0.15
 			} 
 		}
+		connect_the_outskirts2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_roads
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rail_way_factor = 0.2
+				production_speed_supply_node_factor = 0.15
+				supply_node_range = 0.15
+			} 
+		}
+		connect_the_outskirts3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_roads
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+				production_speed_rail_way_factor = 0.2
+				production_speed_supply_node_factor = 0.15
+				supply_node_range = 0.15
+			} 
+		}
+		connect_the_outskirts4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_roads
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.075
+				production_speed_rail_way_factor = 0.2
+				production_speed_supply_node_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				supply_node_range = 0.15
+			} 
+		}
 		russian_exiles = {
 			
 			allowed = {
@@ -94,6 +155,108 @@ ideas = {
 				industrial_capacity_dockyard = -0.35
 			} 
 		}
+		semi_pastoral_society2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.175
+				global_building_slots_factor = -0.125
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_factory_max_efficiency_factor = 0.05
+			} 
+		}
+		mongolian_industrialization = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.1
+				global_building_slots_factor = -0.05
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_factory_max_efficiency_factor = 0.1
+			} 
+		}
+		mongolian_industrialization2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.05
+				global_building_slots_factor = 0.05
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				production_factory_max_efficiency_factor = 0.1
+			} 
+		}
+		mongolian_industrialization3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.15
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.15
+			} 
+		}
+		good_usage_of_resources = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources = 0.15
+				industrial_capacity_factory = -0.05
+				industrial_capacity_factory = -0.05
+			} 
+		}
 		pastoral_society2 = {
 			
 			allowed = {
@@ -113,6 +276,107 @@ ideas = {
 				global_building_slots_factor = -0.3
 				industrial_capacity_factory = -0.45
 				industrial_capacity_dockyard = -0.45
+			} 
+		}
+		pastoral_society3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				monthly_population = 0.35
+				global_building_slots_factor = -0.25
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
+			} 
+		}
+		pastoral_society4 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.075
+				stability_factor = 0.15
+				monthly_population = 0.45
+				global_building_slots_factor = -0.2
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
+			} 
+		}
+		pastoral_society5 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.15
+				monthly_population = 0.4
+				global_building_slots_factor = -0.125
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+			} 
+		}
+		tax_cuts = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = NOR_printing_money
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+			} 
+		}
+		child_labor = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_public_works_investment
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			} 
 		}
 		five_year_plan_rushed = {
