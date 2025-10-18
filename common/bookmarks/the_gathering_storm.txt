@@ -346,6 +346,7 @@ bookmarks = {
 			ideas = {
 				spirit_of_genghis_spirit
 	            legacy_of_the_khanate
+				pastoral_society
 			}
 			focuses = {
 				JAP_restore_the_regency

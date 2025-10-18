@@ -1669,4 +1669,14 @@ spriteTypes = {
 		name = "GFX_Koca_Popovic"
 		texturefile = "gfx/leaders/CRO/Koca_Popovic.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Suhbaataryn_Yanjmaa_small"
+		texturefile = "gfx/leaders/MON/Suhbaataryn_Yanjmaa_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Suhbaataryn_Yanjmaa"
+		texturefile = "gfx/leaders/MON/Suhbaataryn_Yanjmaa.dds"
+	}
 }

@@ -158,12 +158,20 @@ characters={
 					factor = 1.000
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Sükhbaataryn Yanjmaa"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_asia_3"
+				small="GFX_Suhbaataryn_Yanjmaa_small"
+				large="GFX_Suhbaataryn_Yanjmaa"
 			}
+		}
+		field_marshal ={
+			traits={ war_hero }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=4
 		}
 	}
 	MON_ganbaatar={

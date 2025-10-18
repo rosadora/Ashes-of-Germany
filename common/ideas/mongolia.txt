@@ -343,6 +343,49 @@ ideas = {
 				industrial_capacity_dockyard = -0.3
 			} 
 		}
+		pastoral_society6 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.125
+				monthly_population = 0.4
+				global_building_slots_factor = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			} 
+		}
+		pastoral_society7 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.075
+				stability_factor = 0.125
+				monthly_population = 0.35
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			} 
+		}
 		tax_cuts = {
 			
 			allowed = {
