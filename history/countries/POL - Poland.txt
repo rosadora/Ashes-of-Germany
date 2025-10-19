@@ -7,6 +7,24 @@ set_autonomy = {
 	autonomous_state = autonomy_integrated_puppet
 }
 
+diplomatic_relation = {
+    country = PRE
+    relation = military_access
+    active = yes
+}
+
+diplomatic_relation = {
+    country = PRE
+    relation = docking_rights
+    active = yes
+}
+
+diplomatic_relation = {
+    country = PRE
+    relation = guarantee
+    active = yes
+}
+
 oob = "POL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }

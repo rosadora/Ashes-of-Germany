@@ -1,4 +1,8 @@
-capital = 64
+capital = 763
+
+oob = PRE_1936
+
+country_lock_all_division_template = yes
 
 # Starting tech
 set_technology = {
@@ -83,20 +87,126 @@ set_stability = 0.75
 
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = classical_liberalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	democratic = 10
-	fascism = 5
-	communism = 10
-	neutrality = 75
+	fascism = 17
+	ultra_nationalism = 3
+	neutrality = 12
+	democratic = 5
+	classical_liberalism = 27
+	social_liberalism = 11
+	social_democracy = 20
+	classical_marxism = 2
+	communism = 3
 }
 
 add_ideas = {
+	catholic_state
+	treaty_of_koenigsberg
+}
+
+create_country_leader = {
+    name = "Heinrich Sahm"
+    desc = "Heinrich_Sahm_DESC"
+    picture = "gfx/leaders/PRE/Heinrich_Sahm.dds"
+    expire = "1965.1.1"
+    ideology = classical_liberalism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Heinrich Sahm"
+    desc = "Heinrich_Sahm_DESC"
+    picture = "gfx/leaders/PRE/Heinrich_Sahm.dds"
+    expire = "1965.1.1"
+    ideology = conservatism
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Otto Braun"
+    desc = "Otto_Braun_DESC"
+    picture = "gfx/leaders/PRE/Otto_Braun.dds"
+    expire = "1965.1.1"
+    ideology = social_democracy_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Otto Braun"
+    desc = "Otto_Braun_DESC"
+    picture = "gfx/leaders/PRE/Otto_Braun.dds"
+    expire = "1965.1.1"
+    ideology = social_liberalism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Wilhelm von Gayl"
+    desc = "Wilhelm_von_Gayl_DESC"
+    picture = "gfx/leaders/PRE/Wilhelm_von_Gayl.dds"
+    expire = "1965.1.1"
+    ideology = despotism
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Wilhelm von Gayl"
+    desc = "Wilhelm_von_Gayl_DESC"
+    picture = "gfx/leaders/PRE/Wilhelm_von_Gayl.dds"
+    expire = "1965.1.1"
+    ideology = ultra_nationalism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Käthe Latzke"
+    desc = "Kathe_Latzke_DESC"
+    picture = "gfx/leaders/PRE/Kathe_Latzke.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Käthe Latzke"
+    desc = "Kathe_Latzke_DESC"
+    picture = "gfx/leaders/PRE/Kathe_Latzke.dds"
+    expire = "1965.1.1"
+    ideology = libertarian_socialism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Käthe Latzke"
+    desc = "Kathe_Latzke_DESC"
+    picture = "gfx/leaders/PRE/Kathe_Latzke.dds"
+    expire = "1965.1.1"
+    ideology = classical_marxism_category
+    traits = {
+        #
+    }
 }
 
 recruit_character = PRE_eitel_friedrich

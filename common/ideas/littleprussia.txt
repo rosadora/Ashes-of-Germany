@@ -1,0 +1,24 @@
+ideas = {
+
+	country = {
+		treaty_of_koenigsberg = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -1
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+				disabled_ideas = 1
+			}
+		}
+	}
+}

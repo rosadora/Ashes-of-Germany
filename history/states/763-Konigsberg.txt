@@ -6,7 +6,7 @@ state={
 	state_category = city
 
 	history={
-		owner = LIT
+		owner = PRE
 		
 		victory_points = {
 			6332 10 
@@ -26,7 +26,8 @@ state={
 			}
 			air_base = 6
 		}
-		add_core_of = LIT
+		add_core_of = PRE
+		set_demilitarized_zone = yes
 	}
 
 	provinces={
