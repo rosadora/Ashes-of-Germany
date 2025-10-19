@@ -139,6 +139,7 @@ add_ideas = {
 	1925_revolt_legacy
 	nationalist_majority
 	high_illiteracy
+	sunni_state
 }
 
 recruit_character = SYR_sultan_al_atrash

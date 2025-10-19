@@ -57,13 +57,45 @@ characters={
 		name="Khorloogiin Choibalsan"
 		portraits={
 			civilian={
-				large=GFX_portrait_Khorloogiin_Choibalsan
+				large=GFX_Khorloogiin_Choibalsan
+			}
+			army={
+				large=GFX_Khorloogiin_Choibalsan
+				small=GFX_Khorloogiin_Choibalsan_small
 			}
 		}
 		country_leader={
 			ideology=stalinism
 			expire="1948.1.1.12"
 			id=-1
+		}
+		field_marshal ={
+			traits={ war_hero }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=5
+		}
+	}
+	MON_Dansranbilegiin_Dogsom={
+		name="Dansranbilegiin Dogsom"
+		portraits={
+			civilian={
+				large=GFX_Dansranbilegiin_Dogsom
+			}
+			army={
+				large=GFX_Dansranbilegiin_Dogsom
+				small=GFX_Dansranbilegiin_Dogsom_small
+			}
+		}
+		corps_commander ={
+			traits={ war_hero }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
 		}
 	}
 	MON_haidav={
@@ -158,12 +190,20 @@ characters={
 					factor = 1.000
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Sükhbaataryn Yanjmaa"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_asia_3"
+				small="GFX_Suhbaataryn_Yanjmaa_small"
+				large="GFX_Suhbaataryn_Yanjmaa"
 			}
+		}
+		corps_commander ={
+			traits={ war_hero }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=4
 		}
 	}
 	MON_ganbaatar={

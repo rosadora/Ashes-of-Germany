@@ -95,6 +95,10 @@ set_stability = 0.72
 set_war_support = 0.23
 set_convoys = 80
 
+add_ideas = {
+	orthodox_state
+}
+
 
 if = { 
 	limit = { has_dlc = "Battle for the Bosporus" }

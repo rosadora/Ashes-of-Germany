@@ -183,7 +183,10 @@ characters = {
 			idea_token = georgy_zhukov
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -219,7 +222,10 @@ characters = {
 			idea_token = konstantin_rokossovsky
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -257,7 +263,10 @@ characters = {
 			idea_token = aleksandr_vasilevsky
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -285,7 +294,10 @@ characters = {
 			idea_token = boris_shaposhnikov
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				military_theorist
@@ -337,7 +349,10 @@ characters = {
 			idea_token = ivan_konev
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -374,7 +389,10 @@ characters = {
 			slot = army_chief
 			idea_token = semyon_timoshenko
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -412,7 +430,10 @@ characters = {
 			slot = army_chief
 			idea_token = kliment_voroshilov
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -451,7 +472,10 @@ characters = {
 			idea_token = mikhail_tukhachevsky
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -1025,7 +1049,10 @@ characters = {
 			idea_token = sergey_gorshkov
 			ledger = navy
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -1059,7 +1086,10 @@ characters = {
 			idea_token = gordey_levchenko
 			ledger = navy
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -1099,7 +1129,10 @@ characters = {
 			idea_token = arseniy_golovko
 			ledger = navy
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -1139,7 +1172,10 @@ characters = {
 			idea_token = vladimir_kasatonov
 			ledger = navy
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 			}
@@ -1177,7 +1213,10 @@ characters = {
 			idea_token = stepan_krasovsky
 			ledger = air
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_air_combat_training_2
@@ -1203,7 +1242,10 @@ characters = {
 			idea_token = vladimir_tributs
 			ledger = navy
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				grand_fleet_proponent
@@ -1224,7 +1266,10 @@ characters = {
 			idea_token = sergei_khudyakov
 			ledger = air
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_close_air_support_2
@@ -1248,7 +1293,10 @@ characters = {
 			slot = air_chief
 			idea_token = konstantin_vershinin
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_chief_ground_support_2
@@ -1275,7 +1323,10 @@ characters = {
 			idea_token = sergei_rudenko
 			ledger = air
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			
 			traits = {
@@ -1296,7 +1347,10 @@ characters = {
 			slot = navy_chief
 			idea_token = ivan_yumashev
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				navy_chief_decisive_battle_2
@@ -1320,7 +1374,10 @@ characters = {
 			slot = navy_chief
 			idea_token = nikolay_kuznetsov
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				navy_chief_reform_2
@@ -1344,7 +1401,10 @@ characters = {
 			slot = air_chief
 			idea_token = yakov_smushkevich
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_chief_safety_2
@@ -1368,7 +1428,10 @@ characters = {
 			slot = air_chief
 			idea_token = pavel_rychagov
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -1394,7 +1457,10 @@ characters = {
 			idea_token = alexander_golovanov
 			ledger = air
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = { air_warfare_theorist }
 		}		
@@ -1412,7 +1478,10 @@ characters = {
 			slot = navy_chief
 			idea_token = mikhail_frinovsky
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				navy_chief_commerce_raiding_1
@@ -1438,7 +1507,10 @@ characters = {
 			idea_token = igor_kurchatov
 			ledger = army
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			research_bonus = {
 				nuclear = 0.150
@@ -1463,7 +1535,10 @@ characters = {
 			idea_token = sergei_korolev
 			ledger = air
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			research_bonus = {
 				rocketry = 0.150
@@ -1487,7 +1562,10 @@ characters = {
 			idea_token = pavel_zhigarev
 			ledger = air
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_airborne_1
@@ -1511,7 +1589,10 @@ characters = {
 			slot = navy_chief
 			idea_token = pyotr_smirnov
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			available = {
 				NOT = {
@@ -1540,7 +1621,10 @@ characters = {
 			slot = army_chief
 			idea_token = SOV_aleksandr_yegorov
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				army_chief_defensive_2
@@ -1575,7 +1659,10 @@ characters = {
 			slot = army_chief
 			idea_token = SOV_vasily_blyukher
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				army_chief_maneuver_2
@@ -1609,7 +1696,10 @@ characters = {
 			slot = air_chief
 			idea_token = alexander_novikov
 			allowed = {
+				OR = {
 				original_tag = USR
+				original_tag = MON
+				}
 			}
 			traits = {
 				air_chief_reform_3

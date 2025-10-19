@@ -1669,4 +1669,34 @@ spriteTypes = {
 		name = "GFX_Koca_Popovic"
 		texturefile = "gfx/leaders/CRO/Koca_Popovic.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Suhbaataryn_Yanjmaa_small"
+		texturefile = "gfx/leaders/MON/Suhbaataryn_Yanjmaa_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Suhbaataryn_Yanjmaa"
+		texturefile = "gfx/leaders/MON/Suhbaataryn_Yanjmaa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Khorloogiin_Choibalsan_small"
+		texturefile = "gfx/leaders/MON/Khorloogiin_Choibalsan_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Khorloogiin_Choibalsan"
+		texturefile = "gfx/leaders/MON/Khorloogiin_Choibalsan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Dansranbilegiin_Dogsom_small"
+		texturefile = "gfx/leaders/MON/Dansranbilegiin_Dogsom_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Dansranbilegiin_Dogsom"
+		texturefile = "gfx/leaders/MON/Dansranbilegiin_Dogsom.dds"
+	}
 }

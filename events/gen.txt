@@ -256,3 +256,47 @@ country_event = { #Join USSR
 		add_to_faction = FROM
 	}
 }
+
+country_event = { #Comet Sight
+	id = gen.12
+	title = gen.12.t
+	desc = gen.12.d
+	picture = GFX_report_comet_sight_event
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 4000
+	}
+
+	option = {
+		name = gen.12.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.01
+	}
+	option = {
+		name = gen.12.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.01
+	}
+	option = {
+		name = gen.12.c
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.01
+	}
+	option = {
+		name = gen.12.e
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.01
+	}
+}

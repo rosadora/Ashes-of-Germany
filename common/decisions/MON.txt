@@ -1,0 +1,157 @@
+
+MON_1936_elections = {
+
+	MON_1936_elections_day = {
+
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = MON
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		days_mission_timeout = 320
+		fire_only_once = yes
+
+		activation = {
+          NOT = {
+			has_global_flag = mongol_1936_elections
+		  }
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { MON_man_coalition_support = party_popularity@communism }
+				     add_to_temp_variable = { MON_man_coalition_support = party_popularity@social_liberalism }
+				     add_to_temp_variable = { MON_man_coalition_support = party_popularity@social_democracy }
+					 add_to_temp_variable = { MON_man_coalition_support = party_popularity@classical_liberalism }
+					 add_to_temp_variable = { MON_man_coalition_support = party_popularity@classical_marxism }
+				     check_variable = { MON_man_coalition_support > 0.5 }
+			        }
+				}
+				country_event = {
+				   id = mongolia.1
+				   days = 1
+			    }
+			}
+			else = {
+				country_event = {
+				   id = mongolia.2
+				   days = 1
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MON_new_poll = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = MON
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 2
+		priority = 2
+
+		activation = {
+			has_active_mission = MON_1936_elections_day
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			clear_variable = man_pop
+			clear_variable = khan_nam_pop
+			clear_variable = kn_pop
+
+		set_variable = {
+          var = man_pop
+          value = party_popularity@classical_marxism
+        }
+        add_to_variable = {
+          var = man_pop
+          value = party_popularity@communism
+        }
+        add_to_variable = {
+          var = man_pop
+          value = party_popularity@social_democracy
+        }
+
+        set_variable = {
+          var = khan_nam_pop
+          value = party_popularity@neutrality
+        }
+        add_to_variable = {
+          var = khan_nam_pop
+          value = party_popularity@democratic
+        }
+        add_to_variable = {
+          var = khan_nam_pop
+          value = party_popularity@ultra_nationalism
+        }
+        add_to_variable = {
+          var = khan_nam_pop
+          value = party_popularity@fascism
+        }
+
+        set_variable = {
+          var = kn_pop
+          value = party_popularity@classical_liberalism
+        }
+        add_to_variable = {
+          var = kn_pop
+          value = party_popularity@social_liberalism
+        }
+
+		}
+	}
+}
+MON_khanate_succession = {
+
+	MON_revise_succession_laws = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = MON
+        }
+        visible = {
+			has_completed_focus = JAP_moderate_restoration
+			NOT = {
+				has_completed_focus = JAP_end_the_regency
+			}
+        }
+        priority = 1000
+
+		days_remove = 10
+	    days_re_enable = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+        complete_effect = {
+		 set_country_flag = revised_succession_laws
+        }
+    }
+}

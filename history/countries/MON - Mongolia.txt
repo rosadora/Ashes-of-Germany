@@ -31,16 +31,34 @@ recruit_character = MON_gomgchigryn_bumtsend
 recruit_character = MON_dansrabilegyin_dogsam
 recruit_character = MON_yundunwangcug
 recruit_character = MON_pai_yun_ti
+recruit_character = MON_khorloogiin_choibalsan
+recruit_character = MON_Dansranbilegiin_Dogsom
 
 add_ideas = {
 	spirit_of_genghis_spirit
+	legacy_of_the_khanate
+	pastoral_society
+	pluralism
+	women_in_military
 }
+
+add_dynamic_modifier = pastoral_society
 
 set_politics = {
 	ruling_party = social_democracy
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}
+set_rule = {
+	can_generate_female_country_leaders = yes
+}
+set_rule = {
+	can_generate_female_unit_leaders = yes
 }
 
 set_popularities = {
@@ -121,6 +139,7 @@ create_country_leader = {
 	expire = "1960.1.16"
 	ideology = despotism
 	traits = {
+		illegitimate_regent
 	}
 }
 
@@ -143,3 +162,50 @@ create_country_leader = {
 	traits = {
 	}
 }
+
+
+######### VARIABLES #########
+
+set_variable = {
+    var = man_pop
+    value = party_popularity@classical_marxism
+}
+add_to_variable = {
+    var = man_pop
+    value = party_popularity@communism
+}
+add_to_variable = {
+    var = man_pop
+    value = party_popularity@social_democracy
+}
+
+set_variable = {
+    var = khan_nam_pop
+    value = party_popularity@neutrality
+}
+add_to_variable = {
+    var = khan_nam_pop
+    value = party_popularity@democratic
+}
+add_to_variable = {
+    var = khan_nam_pop
+    value = party_popularity@ultra_nationalism
+}
+add_to_variable = {
+    var = khan_nam_pop
+    value = party_popularity@fascism
+}
+
+set_variable = {
+    var = kn_pop
+    value = party_popularity@classical_liberalism
+}
+add_to_variable = {
+    var = kn_pop
+    value = party_popularity@social_liberalism
+}
+
+set_variable = { MON_pastoral_prod_mil = -0.5 }
+set_variable = { MON_pastoral_consumer_prod_dock = -0.5 }
+set_variable = { MON_pastoral_slots = -0.3 }
+set_variable = { MON_pastoral_pop = 0.25 }

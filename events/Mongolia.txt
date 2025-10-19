@@ -1,0 +1,328 @@
+﻿###########################
+# Mongol Events
+###########################
+
+add_namespace = mongolia
+
+# Mongol Elections - MAN victory
+country_event = {
+	id = mongolia.1
+	title = mongolia.1.t
+	desc = mongolia.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #Hurrah!
+		name = mongolia.1.a
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = social_democracy 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.075
+		}
+	}
+}
+# Mongol Elections - KN victory
+country_event = {
+	id = mongolia.2
+	title = mongolia.2.t
+	desc = mongolia.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #The Mongol Empire arrives!
+		name = mongolia.2.a
+		ai_chance = {
+			base = 50
+		}
+		set_politics = {
+			ruling_party = neutrality 
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.075
+		}
+		add_ideas = republican_resistance
+	}
+}
+# Khanate Restoration - The Regency
+country_event = {
+	id = mongolia.3
+	title = mongolia.3.t
+	desc = mongolia.3.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #The Mongol Empire arrives!
+		name = mongolia.3.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+# Khanate Restoration - The New King
+country_event = {
+	id = mongolia.4
+	title = mongolia.4.t
+	desc = mongolia.4.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = mongolia.4.a
+		ai_chance = {
+			base = 50
+		}
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = despotism
+	     traits = {
+	     }
+        }
+		hidden_effect = {
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = conservatism
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = ultra_nationalism_category
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = fascism_ideology
+	     traits = {
+	     }
+        }
+		}
+	}
+}
+# Khanate Restoration - The New Queen?
+country_event = {
+	id = mongolia.5
+	title = mongolia.5.t
+	desc = mongolia.5.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #Crown the Khatan
+		name = mongolia.5.a
+		ai_chance = {
+			base = 50
+		}
+		remove_country_leader_trait = illegitimate_regent
+		set_country_flag = genepil_khatanate
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { #Im a masculinist #not good #kys
+		name = mongolia.5.b
+		ai_chance = {
+			base = 50
+		}
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = despotism
+	     traits = {
+	     }
+        }
+		hidden_effect = {
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = conservatism
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = ultra_nationalism_category
+	     traits = {
+	     }
+        }
+		create_country_leader = {
+	     name = "Khan Mördorj"
+	     desc = "POLITICS_MORDORJ_DESC"
+	     picture = "gfx/leaders/MON/Khan_Mordorj.dds"
+	     expire = "1960.1.16"
+	     ideology = fascism_ideology
+	     traits = {
+	     }
+        }
+		}
+	}
+}
+# Mahayana Brotherhood - Request
+country_event = {
+	id = mongolia.6
+	title = mongolia.6.t
+	desc = mongolia.6.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #Accept Mongol protection
+		name = mongolia.6.a
+		ai_chance = {
+			base = 80
+		}
+		MON = {
+			puppet = TIB
+		}
+	}
+	option = { #Refuse Mongol Protection
+		name = mongolia.6.b
+		ai_chance = {
+			base = 20
+		}
+		MON = {
+		create_wargoal = {
+            type = annex_everything
+            target = TIB
+        }
+		add_state_core = 322
+		add_state_core = 758
+		add_state_core = 757
+		}
+	}
+}
+# Zhangbei Proposal - Request
+country_event = {
+	id = mongolia.7
+	title = mongolia.7.t
+	desc = mongolia.7.d
+	picture = GFX_report_mongolian_regency_event
+
+	is_triggered_only = yes
+	
+	option = { #Integration of Mengukuo
+		name = mongolia.7.a
+		ai_chance = {
+			base = 80
+		}
+		annex_country = {
+			target = MEN
+			transfer_troops = yes
+		}
+	}
+	option = { #Refuse Mongol Protection
+		name = mongolia.7.b
+		ai_chance = {
+			base = 20
+		}
+		MON = {
+		create_wargoal = {
+            type = annex_everything
+            target = MEN
+        }
+		}
+	}
+}
+# Choibalsan & The Peasant Uprising
+country_event = {
+	id = mongolia.8
+	title = mongolia.8.t
+	desc = mongolia.8.d
+	picture = GFX_report_event_SOV_cossack_cavalry
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MON 
+		USR = {
+			has_war_with = SOV
+		}
+		NOT = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = choibalsan_coup
+		 start_civil_war = {
+			ideology = communism
+			size = 0.4
+			states = {329 818 820}
+			hidden_effect = {
+            }
+			set_popularities = {
+				communism = 43
+				classical_marxism = 22
+				social_democracy = 10
+				democratic = 3
+				social_liberalism = 4
+				classical_liberalism = 5
+				neutrality = 9
+				ultra_nationalism = 4
+			}
+			set_cosmetic_tag = MON_REV
+		 }
+		 news_event = {
+			id = news.3089
+			days = 1
+		 }
+		}
+	}
+	
+	option = { #Pick Choibalsan
+		name = mongolia.8.a
+		ai_chance = {
+			base = 80
+		}
+		IF = {
+		every_country = {
+			limit = {
+				original_tag = MON 
+				NOT = {
+					tag = MON
+				}
+			}
+			change_tag_from = MON
+		}
+		}
+	}
+	option = { #Stay Loyal
+		name = mongolia.8.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}

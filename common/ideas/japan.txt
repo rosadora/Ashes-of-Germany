@@ -443,15 +443,6 @@ ideas = {
 				always = yes
 			}
 
-			available = {
-				OR = {
-					has_government = social_democracy 
-					has_government = classical_marxism
-					has_government = communism
-					has_government = libertarian_socialism
-				}
-			}
-
 			picture = HUN_resurgent_communist_party_idea
 
 			removal_cost = -1
@@ -1231,77 +1222,6 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 			} 
-		}
-		pluralism = {
-			
-			allowed = {
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			available = {
-				OR = {
-					has_government = social_liberalism
-					has_government = democratic
-					has_government = social_democracy
-					has_government = classical_marxism
-					has_government = communism
-					has_government = libertarian_socialism
-				}
-			}
-
-			picture = ARG_maintain_neutrality
-
-			removal_cost = -1
-			
-			modifier = { 
-				stability_factor = 0.05
-				non_core_manpower = 0.05
-				army_org_factor = 0.05
-			} 
-		}
-		state_shintoism = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = state_shintoism
-			
-			removal_cost = -1
-	
-
-			modifier = {
-				industry_air_damage_factor = -0.1
-				army_morale_factor = 0.1
-			}
-		}
-
-		state_shintoism2 = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = state_shintoism
-			
-			removal_cost = -1
-	
-
-			modifier = {
-				industry_air_damage_factor = -0.1
-				army_morale_factor = 0.1
-				army_org_factor = 0.05
-				conscription_factor = 0.1
-			}
 		}
 
 		JAP_public_awareness_of_war_ns = {

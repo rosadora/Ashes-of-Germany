@@ -1,0 +1,162 @@
+# possible - filters out achivements on game start so we dont have to check everything all the 
+#time
+## happened - checks if achivement happened
+#
+###########################
+## 1 VERY EASY ACHIEVEMENTS
+#############################
+
+unique_id = aog_achievements
+
+beaten_not_defeated = {
+	id = 1
+	
+	possible = {
+		difficulty > 1
+		tag = USR
+	}
+	
+	happened = {
+		has_war_with = SOv
+	}
+}
+
+the_tsar_of_the_tsars = {
+	id = 2
+	
+	possible = {
+		difficulty > 1
+		tag = SOV
+	}
+	
+	happened = {
+		has_completed_focus = RUS_the_tsar_of_the_tsar
+	}
+}
+
+###########################
+## 2 EASY ACHIEVEMENTS
+#############################
+
+sorry_this_will_be_the_last_time = {
+	id = 3
+	
+	possible = {
+		difficulty > 1
+		tag = SOV
+	}
+	
+	happened = {
+		NOT = {
+			country_exists = POL
+		}
+		owns_state = 10
+		owns_state = 98
+		owns_state = 87
+		owns_state = 90
+		owns_state = 92
+		owns_state = 97
+		owns_state = 95
+		owns_state = 94
+		owns_state = 93
+		owns_state = 784
+	}
+}
+
+a_federation_of_equals = {
+	id = 4
+	
+	possible = {
+		difficulty > 1
+		tag = SOV
+	}
+	
+	happened = {
+		has_completed_focus = RUS_eurasian_federation
+		owns_state = 10
+		owns_state = 202
+		owns_state = 206
+		owns_state = 11
+		owns_state = 808
+		owns_state = 812
+		owns_state = 111
+		owns_state = 231
+		owns_state = 742
+		owns_state = 408
+	}
+}
+
+wir_sind_die_arbeiter_von_wien = {
+	id = 6
+	
+	possible = {
+		difficulty > 1
+		tag = AUS
+	}
+	
+	happened = {
+		OR = {
+			has_government = social_democracy
+			has_government = communism 
+			has_government = classical_marxism 
+			has_government = libertarian_socialism
+		}
+		arms_factory > 100
+		num_planes_stationed_in_regions = {
+         value > 3000
+         regions = {21}
+        }
+	}
+}
+
+###########################
+## 3 CHAMPION ACHIEVEMENTS
+#############################
+
+slava_ukrayini = {
+	id = 5
+	
+	possible = {
+		difficulty > 1
+		tag = UKR
+	}
+	
+	happened = {
+		all_core_state = {
+			is_controlled_by = UKR
+		}
+	}
+}
+
+genghis_khatan = {
+	id = 5
+	
+	possible = {
+		difficulty > 1
+		tag = MON
+	}
+	
+	happened = {
+		controls_state = 608
+	}
+}
+
+###########################
+## 5 HARDCORE ACHIEVEMENTS
+#############################
+
+beated_once_again_but_never_defeated = {
+	id = 7
+	
+	possible = {
+		difficulty > 1
+		tag = MON
+	}
+	
+	happened = {
+		has_completed_focus = JAP_beaten_never_defeated
+		all_core_state = {
+			is_controlled_by = MON
+		}
+	}
+}

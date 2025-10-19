@@ -64,6 +64,9 @@ add_ideas = {
 	low_economic_mobilisation
 	partisan_spirit
 	rightist_opposition
+	state_atheism
+	women_in_military
+	women_in_factories
 }
 
 recruit_character = CRO_milovan_djilas

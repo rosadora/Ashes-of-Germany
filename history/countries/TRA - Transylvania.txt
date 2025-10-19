@@ -7,6 +7,9 @@ oob = "TRA_1936"
 add_ideas = {
 	unfinished_revolution
 	hungarian_puppet
+	state_atheism
+	volunteer_women
+	traditional_roles
 }
 
 # Starting tech

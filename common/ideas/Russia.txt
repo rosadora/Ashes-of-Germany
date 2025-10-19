@@ -1511,7 +1511,7 @@ ideas = {
 			
 			modifier = {
 				winter_attrition_factor = -0.5
-				army_attack_factor = 0.25
+				army_attack_factor = 0.1
 				ai_focus_aggressive_factor = 1
 			}
 		}
@@ -1530,9 +1530,9 @@ ideas = {
 
 			
 			modifier = {
-				army_org_factor = 0.15
-				army_attack_factor = 0.25
-				army_attack_speed_factor = 0.15
+				army_org_factor = 0.1
+				army_attack_factor = 0.1
+				army_attack_speed_factor = 0.1
 				ai_focus_aggressive_factor = 1
 			}
 		}
@@ -1551,9 +1551,9 @@ ideas = {
 
 			
 			modifier = {
-				army_org_factor = 0.35
-				army_attack_factor = 0.2
-				army_attack_speed_factor = 0.2
+				army_org_factor = 0.15
+				army_attack_factor = 0.1
+				army_attack_speed_factor = 0.1
 				ai_focus_aggressive_factor = 1
 			}
 		}
@@ -1572,9 +1572,9 @@ ideas = {
 
 			
 			modifier = {
-				army_org_factor = 0.35
-				army_attack_factor = 0.2
-				army_attack_speed_factor = 0.2
+				army_org_factor = 0.15
+				army_attack_factor = 0.1
+				army_attack_speed_factor = 0.1
 				ai_focus_aggressive_factor = 1
 			}
 		}
@@ -1593,8 +1593,8 @@ ideas = {
 
 			
 			modifier = {
-				army_org_factor = 0.5
-				army_attack_factor = 0.5
+				army_org_factor = 0.2
+				army_attack_factor = 0.2
 				army_attack_speed_factor = 0.35
 				enemy_army_bonus_air_superiority_factor = -1
 				ai_focus_aggressive_factor = 1

@@ -500,4 +500,113 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/genghis_spirit.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_khanate_legacy"
+		texturefile = "gfx/interface/ideas/khanate_legacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_women_in_military"
+		texturefile = "gfx/interface/ideas/women_in_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_volunteer_women"
+		texturefile = "gfx/interface/ideas/volunteer_women.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_women_military_nurse"
+		texturefile = "gfx/interface/ideas/women_military_nurse.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_women_in_military"
+		texturefile = "gfx/interface/ideas/no_women_in_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_enforced_patriarchy"
+		texturefile = "gfx/interface/ideas/enforced_patriarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_traditional_roles"
+		texturefile = "gfx/interface/ideas/traditional_roles.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_women_in_factories"
+		texturefile = "gfx/interface/ideas/women_in_factories.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_total_equality"
+		texturefile = "gfx/interface/ideas/total_equality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_pluralism"
+		texturefile = "gfx/interface/ideas/pluralism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_state_shintoism2"
+		texturefile = "gfx/interface/ideas/state_shintoism2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_catholic_state"
+		texturefile = "gfx/interface/ideas/catholic_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_orthodox_state"
+		texturefile = "gfx/interface/ideas/orthodox_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_protestant_state"
+		texturefile = "gfx/interface/ideas/protestant_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_state_atheism"
+		texturefile = "gfx/interface/ideas/state_atheism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sunni_state"
+		texturefile = "gfx/interface/ideas/sunni_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_shia_state"
+		texturefile = "gfx/interface/ideas/shia_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hindu_state"
+		texturefile = "gfx/interface/ideas/hindu_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_theravada_state"
+		texturefile = "gfx/interface/ideas/theravada_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mahayana_state"
+		texturefile = "gfx/interface/ideas/mahayana_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_confucianist_state"
+		texturefile = "gfx/interface/ideas/confucianist_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_jewish_state"
+		texturefile = "gfx/interface/ideas/jewish_state.dds"
+	}
 }

@@ -177,6 +177,7 @@ set_popularities = {
 }
 add_ideas = {
 	belgrade_pact
+	catholic_state
 }
 ### VARIANTS ###
 # 1936 Start #

@@ -42,6 +42,7 @@ gen_pick_a_side = {
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = PAL_arabia_in_the_world_stage
 				has_completed_focus = NLC_join_our_comrades
+				has_completed_focus = JAP_break_isolation
 			}
 			OR = {
 				has_government = classical_marxism
@@ -77,6 +78,7 @@ gen_pick_a_side = {
 				tag = BLR
 				tag = NLC
 				tag = USR
+				tag = MON
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -177,6 +179,7 @@ gen_pick_a_side = {
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = PAL_ties_with_italy
 				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
+				has_completed_focus = JAP_seek_allies_in_the_west
 			}
 				OR = {
 				tag = HOL
@@ -206,6 +209,7 @@ gen_pick_a_side = {
 				tag = UKR
 				tag = BLR
 				tag = ISR
+				tag = MON
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -308,6 +312,7 @@ gen_pick_a_side = {
 				has_completed_focus = USR_a_pact_with_rosa_luxemburg
 				has_completed_focus = YUG_a_world_to_liberate
 				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
+				has_completed_focus = JAP_seek_allies_in_the_west
 			}
 			OR = {
 				tag = HOL
@@ -339,6 +344,7 @@ gen_pick_a_side = {
 				tag = PAL
 				tag = ISR
 				tag = YUG
+				tag = MON
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -529,8 +535,10 @@ gen_pick_a_side = {
 		visible = {
 			OR = {
 				has_completed_focus = ideological_fanaticism
+				has_completed_focus = JAP_the_lesser_evil
+				has_completed_focus = JAP_break_isolation
 			}
-				OR = {
+			OR = {
 				tag = TIB
 				tag = SIA
 				tag = RAJ
@@ -542,7 +550,7 @@ gen_pick_a_side = {
 				tag = AST
 				tag = NZL
 				tag = MON
-			    }
+			}
 			is_in_faction = no
 			is_puppet = no
 		}

@@ -8,6 +8,16 @@ JAP_COM = {
     color_ui = rgb { 107 4 4 }
 }
 
+USR_USSR = {
+    color = rgb { 209 0 7 }
+    color_ui = rgb { 209 0 7 }
+}
+
+MON_khatanate = {
+    color = rgb { 56 48 39 }
+    color_ui = rgb { 56 48 39 }
+}
+
 JAP_NIH = {
     color = rgb { 41 41 41 }
     color_ui = rgb { 41 41 41 }

@@ -217,6 +217,7 @@ add_ideas = {
 	slow_industrialisation
 	army_of_the_old_days
 	famines
+	orthodox_state
 }
 
 set_convoys = 50

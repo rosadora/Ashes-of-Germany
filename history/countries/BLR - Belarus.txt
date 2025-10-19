@@ -112,6 +112,7 @@ add_ideas = {
 	polish_russian_division_of_belarus
 	belarus_popular_front
 	a_land_of_migrations
+	pluralism
 }
 
 set_stability = 0.35
