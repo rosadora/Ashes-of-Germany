@@ -1,0 +1,105 @@
+PRE_power_balance = {
+	initial_value = 0
+	left_side = PRE_lithuania_side
+	right_side = PRE_poland_side
+	decision_category = PRE_balance_of_power_category
+
+	### Medium
+	range = {
+		id = PRE_equilibrum_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+
+	### Lithuania Side
+	side = {
+		id = PRE_lithuania_side	
+		icon = "GFX_bop_PRE_lithuania_side"
+
+		range = {
+			id = PRE_strong_lithuanian_dominance_range
+			min = -0.6
+			max = -0.1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.1
+				consumer_goods_expected_value = -0.1
+				classical_liberalism_drift = 0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = PRE_lithuanian_dominance_range
+			min = -1
+			max = -0.6
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.15
+				political_power_factor = -0.2
+				consumer_goods_expected_value = -0.2
+				classical_liberalism_drift = 0.05
+			}
+			on_activate = {
+				country_event = {
+					id = pre.1
+					days = 1
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+
+	### Poland Side
+	side = {
+		id = PRE_poland_side	
+		icon = "GFX_bop_PRE_poland_side"
+
+		range = {
+			id = PRE_strong_polish_dominance_range
+			min = 0.1
+			max = 0.6
+			modifier = {
+				stability_factor = -0.05
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = PRE_polish_dominance_range
+			min = 0.6
+			max = 1
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = 0.1
+				war_support_factor = 0.15
+			}
+			on_activate = {
+				country_event = {
+					id = pre.2
+					days = 1
+				}
+			}
+			on_deactivate = {
+			}
+		}
+	}
+}

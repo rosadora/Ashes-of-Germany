@@ -1,0 +1,42 @@
+﻿###########################
+# little prussia Events
+###########################
+add_namespace = pre
+
+country_event = {
+	id = pre.1
+	title = pre.1.t
+	desc = pre.1.d
+	picture = GFX_report_event_SOV_litvinov_beck
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.1.a
+		ai_chance = {
+			base = 100
+		}
+		LIT = {
+			puppet = PRE
+		}
+	}
+}
+
+country_event = {
+	id = pre.2
+	title = pre.2.t
+	desc = pre.2.d
+	picture = GFX_report_event_SOV_litvinov_beck
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.2.a
+		ai_chance = {
+			base = 100
+		}
+		POL = {
+			puppet = PRE
+		}
+	}
+}

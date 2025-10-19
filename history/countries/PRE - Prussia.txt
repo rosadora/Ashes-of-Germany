@@ -108,6 +108,13 @@ set_popularities = {
 add_ideas = {
 	catholic_state
 	treaty_of_koenigsberg
+	the_visible_hand
+}
+
+set_power_balance = {
+    id = PRE_power_balance
+    left_side = PRE_lithuania_side
+    right_side = JAP_poland_side
 }
 
 create_country_leader = {
