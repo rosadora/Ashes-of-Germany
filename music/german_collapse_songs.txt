@@ -179,3 +179,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "the_red_banner"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

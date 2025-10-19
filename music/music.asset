@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "roei_no_uta.ogg"
+	file = "the_red_banner.ogg"
 	volume = 0.95
 }
 
