@@ -128,6 +128,19 @@ slava_ukrayini = {
 	}
 }
 
+genghis_khatan = {
+	id = 5
+	
+	possible = {
+		difficulty > 1
+		tag = MON
+	}
+	
+	happened = {
+		controls_state = 608
+	}
+}
+
 ###########################
 ## 5 HARDCORE ACHIEVEMENTS
 #############################

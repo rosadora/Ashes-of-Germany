@@ -2,6 +2,10 @@
 
 puppet = UKR 
 puppet = BLR
+set_autonomy = {
+	target = SIL
+	autonomous_state = autonomy_integrated_puppet
+}
 
 oob = "POL_1936"
 if = {

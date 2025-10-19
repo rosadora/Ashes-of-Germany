@@ -31,6 +31,8 @@ recruit_character = MON_gomgchigryn_bumtsend
 recruit_character = MON_dansrabilegyin_dogsam
 recruit_character = MON_yundunwangcug
 recruit_character = MON_pai_yun_ti
+recruit_character = MON_khorloogiin_choibalsan
+recruit_character = MON_Dansranbilegiin_Dogsom
 
 add_ideas = {
 	spirit_of_genghis_spirit
