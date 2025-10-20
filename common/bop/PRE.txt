@@ -1,5 +1,5 @@
 PRE_power_balance = {
-	initial_value = 0
+	initial_value = 0.1
 	left_side = PRE_lithuania_side
 	right_side = PRE_poland_side
 	decision_category = PRE_balance_of_power_category
@@ -19,7 +19,7 @@ PRE_power_balance = {
 
 	### Lithuania Side
 	side = {
-		id = PRE_lithuania_side	
+		id = PRE_lithuania_side
 		icon = "GFX_bop_PRE_lithuania_side"
 
 		range = {
@@ -64,7 +64,7 @@ PRE_power_balance = {
 
 	### Poland Side
 	side = {
-		id = PRE_poland_side	
+		id = PRE_poland_side
 		icon = "GFX_bop_PRE_poland_side"
 
 		range = {

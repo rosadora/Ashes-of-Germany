@@ -1,0 +1,44 @@
+﻿focus_tree = {
+	id = little_prussia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = PRE
+		}
+	}
+
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = PRE_denounce_koenigsberg_treaty
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		x = 10
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_timed_idea = {
+			idea = fading_zentrum
+			days = 100
+		 }
+		}
+	}
+}

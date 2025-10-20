@@ -217,4 +217,5 @@ create_country_leader = {
 }
 
 recruit_character = PRE_eitel_friedrich
+recruit_character = PRE_erich_ludendorff
 

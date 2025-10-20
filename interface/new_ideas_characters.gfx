@@ -1699,4 +1699,9 @@ spriteTypes = {
 		name = "GFX_Dansranbilegiin_Dogsom"
 		texturefile = "gfx/leaders/MON/Dansranbilegiin_Dogsom.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Erich_Ludendorff"
+		texturefile = "gfx/leaders/PRE/Erich_Ludendorff.dds"
+	}
 }

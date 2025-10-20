@@ -119,20 +119,96 @@ if = {
 85 = {
 	add_dynamic_modifier = { modifier = international_city }
 }
-
+add_ideas = {
+	guardian_of_europe
+	the_failed_coup
+	deadlock_sejm
+}
 set_convoys = 10
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = ultra_nationalism
 	last_election = "1935.9.8"
 	election_frequency = 36
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 32
-	fascism = 11
-	communism = 19
-	neutrality = 38
+	fascism = 3
+	ultra_nationalism = 28
+	neutrality = 7
+	democratic = 5
+	classical_liberalism = 11
+	social_liberalism = 7
+	social_democracy = 13
+	classical_marxism = 21
+	libertarian_socialism = 1
+	communism = 4
+}
+
+create_country_leader = {
+    name = "Wojciech Korfanty"
+    desc = "Wojciech_Korfanty_DESC"
+    picture = "gfx/leaders/POL/Wojciech_Korfanty.dds"
+    expire = "1965.1.1"
+    ideology = conservatism
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Wincenty Witos"
+    desc = "Wincenty_Witos_DESC"
+    picture = "gfx/leaders/POL/Wincenty_Witos.dds"
+    expire = "1965.1.1"
+    ideology = social_liberalism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Wincenty Witos"
+    desc = "Wincenty_Witos_DESC"
+    picture = "gfx/leaders/POL/Wincenty_Witos.dds"
+    expire = "1965.1.1"
+    ideology = classical_liberalism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Zygmunt Marek"
+    desc = "Zygmunt_Marek_DESC"
+    picture = "gfx/leaders/POL/Zygmunt_Marek.dds"
+    expire = "1965.1.1"
+    ideology = social_democracy_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Maria Koszutska"
+    desc = "Maria_Koszutska_DESC"
+    picture = "gfx/leaders/POL/Maria_Koszutska.dds"
+    expire = "1965.1.1"
+    ideology = classical_marxism_category
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Bolesław Bierut"
+    desc = "Boleslaw_Bierut_DESC"
+    picture = "gfx/leaders/POL/Boleslaw_Bierut.dds"
+    expire = "1965.1.1"
+    ideology = leninism
+    traits = {
+        #
+    }
 }
 
 recruit_character = POL_ignacy_moscicki

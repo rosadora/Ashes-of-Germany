@@ -1669,3 +1669,8 @@
  PRE_strong_polish_dominance_range:0 "Polish Dominance"
  PRE_polish_dominance_range:0 "Strong Polish Dominance"
  PRE_equilibrum_range:0 "Equilibrum"
+ fading_zentrum:0 "Fading Zentrum"
+ the_failed_coup:0 "The Failed Coup"
+ the_failed_coup_desc:0 "In May 1926, Marshal Pilduski attempted a coup d'état in response to a deadlocked parliament and the breakdown of the ruling coalition. The attempt failed in the face of popular resistance, including a general strike led by the Communist Party and a union of the parliamentary opposition. Since then, the army's influence on politics has been viewed with great suspicion."
+ deadlock_sejm:0 "Deadlock Sejm"
+ deadlock_sejm_desc:0 "The 1935 elections did not result in an absolute majority for either the center-left coalition or Sanacja, although the latter governed with the support of the ZLN and extreme right-wing forces in the lower house."

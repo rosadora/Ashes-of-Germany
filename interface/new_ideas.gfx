@@ -331,6 +331,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ideology_volkisch"
+		texturefile = "gfx/interface/ideologies/volkisch.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_revolutionary_mobilization"
 		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
 	}

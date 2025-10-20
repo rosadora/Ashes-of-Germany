@@ -40,5 +40,23 @@ ideas = {
 				communism_drift = 0.01
 			}
 		}
+		fading_zentrum = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_democracy_banned
+
+			removal_cost = -1
+			
+			modifier = {
+				classical_liberalism_drift = -0.02
+				democratic_drift = -0.01
+			}
+		}
 	}
 }
