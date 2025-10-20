@@ -30,5 +30,38 @@ ideas = {
 			modifier = { 
 			} 
 		}
+
+		mourning_chiang_h = {
+			allowed = {}
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				consumer_goods_factor = 0.75
+				weekly_manpower = 300
+				neutrality_drift = -0.03
+			}
+		}
+
+		mourning_chiang_m = {
+			allowed = {}
+			removal_cost = -1
+			picture = chi_war_of_resistance2
+			modifier = {
+				consumer_goods_factor = 0.50
+				weekly_manpower = 200
+				neutrality_drift = -0.02
+			}
+		}
+
+		mourning_chiang_s = {
+			allowed = {}
+			removal_cost = -1
+			picture = chi_war_of_resistance
+			modifier = {
+				consumer_goods_factor = 0.25
+				weekly_manpower = 100
+				neutrality_drift = -0.01
+			}
+		}
 	}
 }
