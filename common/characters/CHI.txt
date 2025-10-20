@@ -1,18 +1,4 @@
 characters={
-	CHI_chiang_kaishek={
-		name=CHI_chiang_kaishek
-		portraits={
-			civilian={
-				large=GFX_portrait_CHI_chiang_kaishek
-			}
-		}
-		country_leader={
-			ideology=despotism
-			traits={ generallissimo }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 	
 	CHI_zhang_guotao={
 		name=CHI_zhang_guotao
@@ -56,7 +42,9 @@ characters={
 			id=-1
 		}
 	}
-	
+
+	#NEW STARTING LEADER
+
 	CHI_tu_yuming={
 		name=CHI_tu_yuming
 		portraits={
@@ -65,6 +53,14 @@ characters={
 				small="GFX_idea_CHI_du_yuming"
 			}
 		}
+
+		country_leader={
+			ideology=despotism
+			traits={ military_leader heir_of_chiang }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
 		field_marshal={
 			traits={ trait_cautious harsh_leader armor_officer defensive_doctrine }
 			skill=4
