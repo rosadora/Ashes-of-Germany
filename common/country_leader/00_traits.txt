@@ -7198,6 +7198,19 @@ leader_traits = {
 		}
 	}
 
+	CHI_mourner = {
+		random = no
+		sprite = 13
+
+		stability_weekly = -0.005
+		ai_focus_peaceful_factor = 0.75
+		weekly_manpower = -50
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	### END BRITISH TRADE UNION MINISTER TRAITS ###
 
 	# HOL Netherlands Prince Bernhard trait
@@ -14802,4 +14815,5 @@ leader_traits = {
 		}
 	}
 }
+
 
