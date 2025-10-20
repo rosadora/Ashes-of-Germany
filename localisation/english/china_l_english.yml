@@ -2,3 +2,9 @@
  # TRAITS #
  military_leader:0 "Militaristic Leader"
  heir_of_chiang:0 "The Heir of Chiang Kai Chek"
+ CHI_mourner:0 "Mourner"
+
+  #IDEAS
+ mourning_chiang_h:0 "High Mourner Concessions"
+ mourning_chiang_m:0 "Medium Mourner Concessions"
+ mourning_chiang_s:0 "Small Mourner Concessions"
