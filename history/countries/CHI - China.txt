@@ -1,4 +1,4 @@
-capital = 613 # Nanjing
+﻿capital = 613 # Nanjing
 
 oob = "CHI_1936"
 if = {
@@ -148,7 +148,7 @@ if = {
 }
 
 add_ideas = {
-	
+	mourning_chiang_h
 }
 
 save_global_event_target_as = WTT_current_china_leader
@@ -164,9 +164,11 @@ set_politics = {
 }
 
 set_popularities = {
-	neutrality = 58
+	neutrality = 50
 	ultra_nationalism = 22
 	communism = 8
+	democratic = 4
+	social_democracy = 4
 	classical_marxism = 12
 }
 
