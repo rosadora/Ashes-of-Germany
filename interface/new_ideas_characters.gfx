@@ -1699,4 +1699,10 @@ spriteTypes = {
 		name = "GFX_Dansranbilegiin_Dogsom"
 		texturefile = "gfx/leaders/MON/Dansranbilegiin_Dogsom.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Soong_Mei_Ling"
+		textureFile = "gfx/leaders/Portrait_CHI_Soong_Mei_ling.png"
+	}
+
 }
