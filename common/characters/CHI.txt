@@ -71,6 +71,26 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+	#SECRET MOURNING LEADER
+
+	Soong_Mei_Ling = {
+		name= "Soong Mei Ling"
+		portraits = {
+			civilian = {
+				large = GFX_Soong_Mei_Ling
+			}
+		}
+
+		country_leader = {
+			ideology = despotism
+			id=1
+			expire = "1975.1.1.1"
+			traits = {
+				CHI_mourner
+			}
+		}
+	}
 	
 	CHI_hsueh_yueh={
 		name=CHI_hsueh_yueh
