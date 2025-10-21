@@ -1,6 +1,6 @@
 ﻿l_english:
  # TRAITS #
- military_leader:0 "Militaristic Leader"
+ military_leader:0 "Military Leader"
  heir_of_chiang:0 "The Heir of Chiang Kai Chek"
  CHI_mourner:0 "Mourner"
 
@@ -8,3 +8,9 @@
  mourning_chiang_h:0 "High Mourner Concessions"
  mourning_chiang_m:0 "Medium Mourner Concessions"
  mourning_chiang_s:0 "Small Mourner Concessions"
+ CHI_army_led_nation:0 "Army Led Nation"
+ CHI_ineffective_bureaucracy_ash:0 "Ineffective Bureaucracy"
+ CHI_internal_civilwar:0 "Internal Civil War"
+ CHI_famine:0 "Food Shortages"
+ CHI_recovery_fire:0 "Recovery of the Nanjing Fire"
+ CHI_communist_spies_ash:0 "Communist Spies"
