@@ -22,6 +22,7 @@ if = {
 
 recruit_character = CHI_zhang_guotao
 recruit_character = CHI_wang_jingwei
+recruit_character = CHI_wang_jingwei_ultra
 recruit_character = CHI_weng_wenhao
 recruit_character = CHI_tu_yuming #NEW STARTING LEADER
 recruit_character = CHI_hsueh_yueh
@@ -149,6 +150,12 @@ if = {
 
 add_ideas = {
 	mourning_chiang_h
+	CHI_army_led_nation
+	CHI_ineffective_bureaucracy_ash
+	CHI_internal_civilwar
+	CHI_famine
+	CHI_recovery_fire
+	CHI_communist_spies_ash
 }
 
 save_global_event_target_as = WTT_current_china_leader
@@ -158,21 +165,23 @@ set_convoys = 40
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1935.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 50
-	ultra_nationalism = 22
+	neutrality = 47
+	ultra_nationalism = 25
 	communism = 8
-	democratic = 4
-	social_democracy = 4
-	classical_marxism = 12
+	democratic = 5
+	social_democracy = 5
+	classical_marxism = 10
 }
 
 add_opinion_modifier = { target = PRC modifier = hostile_status }
+add_opinion_modifier = { target = MAN modifier = hostile_status }
+add_opinion_modifier = { target = MEN modifier = hostile_status }
 
 ### VARIANTS ###
 # 1936 Start #
