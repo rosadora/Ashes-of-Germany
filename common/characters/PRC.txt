@@ -21,7 +21,27 @@ characters={
 			legacy_id=-1
 		}
 		country_leader={
-			ideology=marxism
+			ideology=classical_marxism_category
+			traits={ cornered_fox }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	PRC_mao_zedong_com={
+		name=PRC_mao_zedong
+		portraits={
+			army={
+				large="GFX_portrait_prc_mao_zedong"
+				small=GFX_portrait_PRC_mao_zedong_small
+			}
+			civilian={
+				large="GFX_portrait_prc_mao_zedong"
+				small=GFX_portrait_PRC_mao_zedong_small
+			}
+		}
+			country_leader={
+			ideology = marxism
 			traits={ cornered_fox }
 			expire="1965.1.1.1"
 			id=-1

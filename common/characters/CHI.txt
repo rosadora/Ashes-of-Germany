@@ -19,11 +19,26 @@ characters={
 		name=CHI_wang_jingwei
 		portraits={
 			civilian={
-				large="GFX_portrait_chi_wang_jingwei"
+				large="GFX_Wang_Jingwei"
 			}
 		}
 		country_leader={
 			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	
+	CHI_wang_jingwei_ultra={
+		name=CHI_wang_jingwei
+		portraits={
+			civilian={
+				large="GFX_Wang_Jingwei"
+			}
+		}
+		country_leader={
+			ideology=ultra_nationalism_category
 			expire="1965.1.1.1"
 			id=-1
 		}
