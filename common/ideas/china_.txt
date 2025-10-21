@@ -78,7 +78,7 @@ ideas = {
 				}
 				ai_focus_military_advancements_factor = 0.25
 				weekly_manpower = -500
-				stability_weekly = -0.0025
+				stability_weekly = -0.0015
 				war_support_weekly = 0.0025
 				war_stability_factor = 0.15
 			}
