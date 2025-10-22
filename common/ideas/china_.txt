@@ -167,6 +167,25 @@ ideas = {
 			}
 		}
 
+		CHI_recovery_fire_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = BEL_scars_of_ww1
+
+			modifier = {
+				repair_speed_infrastructure_factor = -0.25
+				stability_factor = -0.05
+				hidden_modifier = {
+					ai_focus_peaceful_factor = 0.25
+				}
+			}
+		}
+
 		CHI_communist_spies_ash  = { #Didnt know if there was one in base game cuz theres a yellow underline on it without _ash
 			allowed = {
 				always = no
