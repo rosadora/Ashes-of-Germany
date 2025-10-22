@@ -4944,9 +4944,6 @@
 			has_army_manpower = {
 				size > 600000
 			}
-			NOT = {
-				has_idea = CHI_china_investments
-			}
 		}
 		bypass = {
 		}
