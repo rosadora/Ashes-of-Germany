@@ -844,7 +844,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "The Germans"
+		name = "The Prussians"
 		hidden_effect = {
 			set_country_flag = GER_Investments
 		}
