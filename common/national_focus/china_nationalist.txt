@@ -15,7 +15,7 @@
 
 	continuous_focus_position = { x = 100 y = 1275 }
 
-	#INDUSTRY AND RECOVERY PATHS
+	#INDUSTRY AND RECOVERY PATH STARTS
 
 	focus = {
 		id = CHI_foreign_intervention_ind
@@ -55,6 +55,10 @@
 		 }
 	}
 
+	###########################################################
+	######### INTERVENERS + FIRST MOUNER CONCESSIONS ##########
+	###########################################################
+
 	focus = {
 		id = CHI_take_mourner_concessions_first
 		icon = GFX_focus_generic_agricultural_subsidies
@@ -81,7 +85,7 @@
 		id = CHI_search_for_interventionists
 		icon = GFX_focus_GER_integration_of_puppet_economies
 		cost = 5
-		x = -3
+		x = -1
 		y = 1
 		prerequisite = {
 			focus = CHI_foreign_intervention_ind
@@ -246,11 +250,80 @@
 		 }
 	}
 
+	########################################
+	######## AVOID INTERVENTION PATH #######
+	########################################
+
 	focus = {
-		id = CHI_Begin_Recovery_INTERVENTION
+		id = CHI_nationalize_bank
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 7
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = CHI_avoid_intervention
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_civil_war = no
+		}
+		relative_position_id = CHI_avoid_intervention
+		completion_reward = {
+			add_ideas =  CHI_bank_nationalize
+		 }
+	}
+
+	focus = {
+		id = CHI_nationalize_farms
+		icon = GFX_focus_generic_farmland
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = CHI_avoid_intervention
+		prerequisite = {
+			focus = CHI_avoid_intervention
+		}
+		available = {
+			has_civil_war = no
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = CHI_farm_nationalize
+		 }
+	}
+
+	focus = {
+		id = CHI_root_out_spies_INDUSTRIAL_BRANCH
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		cost = 7
+		x = 0
+		y = 2
+		relative_position_id = CHI_avoid_intervention
+		completion_reward = {
+			remove_ideas = CHI_communist_spies_ash
+			add_political_power = 75
+		 }
+		 prerequisite = {
+			focus = CHI_nationalize_bank
+		 }
+		 prerequisite = {
+			focus = CHI_nationalize_farms
+		 }
+	}
+
+	########################################
+	####### SHARED AREA ####################
+	########################################
+
+	focus = {
+		id = CHI_Begin_Recovery_shared
 		icon = GFX_focus_RAJ_bathe_in_hellfire
 		cost = 7
-		relative_position_id = CHI_search_for_interventionists
+		relative_position_id = CHI_take_mourner_concessions_first
 		x = 0
 		y = 2
 		prerequisite = {
@@ -258,6 +331,10 @@
 			focus = CHI_JAP_Intervention
 			focus = CHI_American_Investments
 			focus = CHI_ENG_Intervention
+			focus = CHI_root_out_spies_INDUSTRIAL_BRANCH
+		}
+		prerequisite = {
+			focus = CHI_take_mourner_concessions_first
 		}
 		ai_will_do = {
 			factor = 10
