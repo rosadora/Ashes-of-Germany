@@ -199,6 +199,8 @@ ideas = {
 			modifier = {
 				communism_drift = 0.02
 				classical_marxism_drift = 0.03
+				stability_factor = -0.05
+				consumer_goods_factor = 0.15
 			}
 		}
 		CHI_avoid_intervention_idea = {
@@ -247,6 +249,41 @@ ideas = {
 			picture = LIT_invested_in_farms
 			modifier = {
 				political_power_gain = 0.15
+			}
+		}
+
+		CHI_bank_nationalize = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = tur_balkan_central_bank_wealthy_greece
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				resistance_decay = -0.05
+				compliance_gain = -0.05
+				political_power_gain = 0.65
+			}
+		}
+
+		CHI_farm_nationalize = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = LIT_invested_in_farms
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_factor = -0.15
+				political_power_gain = 0.25
 			}
 		}
 	}
