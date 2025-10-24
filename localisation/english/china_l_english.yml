@@ -31,6 +31,10 @@
  CHI_china_investments_desc:0 "Our industry has major investments in China, to invade them would be foolish."
  CHI_recovery_fire_2:0 "Further Recovery of the Nanjing Fire"
  CHI_recovery_fire_desc:0 "The Nanjing Fire, where Chiang Kai Chek died in November of last year, still plagues our nation, however, we have begun to rebuild Nanjing."
+ CHI_bank_nationalize:0 "Nationalized Banks"
+ CHI_bank_nationalize_desc:0 "Our Banks have been Nationalized."
+ CHI_farm_nationalize:0 "Nationalized Farms"
+ CHI_farm_nationalize_desc:0 "Our Farms have been Nationalized"
 
  #FOCUS
  CHI_foreign_intervention_ind:0 "Economic Intervention"
@@ -49,11 +53,17 @@
  CHI_JAP_Intervention_desc:0 "Japan, the largest non-colonial Pacific Power. If we align with their companies, not only would our navy be stronger, but the main industrial force would move into China. "
  CHI_American_Investments:0 "American Economic Intervention"
  CHI_American_Investments_desc:0 "America, the powerhouse of the first world war, still has her Global Power. If we can get some of the American Industrial base, our recovery will be swift from our continual crisis."
- CHI_Begin_Recovery_INTERVENTION:0 "Begin Recovery"
- CHI_Begin_Recovery_INTERVENTION:0 "Although it will be a long road, the path to rebuilding our nation from our hellscpae is open if we are to take it."
+ CHI_Begin_Recovery_shared:0 "Begin Recovery"
+ CHI_Begin_Recovery_shared_desc:0 "Although it will be a long road, the path to rebuilding our nation from our hellscape is open if we are to take it. We can begin with this by begining the final stages of the Nanjing Fire's recovery."
+ CHI_nationalize_bank:0 "Nationalize the Banks"
+ CHI_nationalize_bank_desc:0 "In Order to secure our monetary independance, we must nationalize our banks to help with the economical situation."
+ CHI_nationalize_farms:0 "Nationalize the Farms"
+ CHI_nationalize_farms_desc:0 "In order to secure our food supplies, we must nationalize our pre-existing farms to ensure this."
+ CHI_root_out_spies_INDUSTRIAL_BRANCH:0 "Root out the Spies"
+ CHI_root_out_spies_INDUSTRIAL_BRANCH_desc:0 "The Communist Spies, having been a reason for our instability, must be rooted out for our industrial base to not be influenced by our enemies. A stable nation will lead to a stable economy."
 
  #COUNTRY FLAGS
  ENG_Investments:0 "British Investments"
  USA_Investments:0 "American Investments"
  JAP_Investments:0 "Japanese Investments"
- GER_Investments:0 "German Investments"
+ GER_Investments:0 "Prussian Investments"
