@@ -307,6 +307,9 @@
 			remove_ideas = CHI_communist_spies_ash
 			add_political_power = 75
 		 }
+			ai_will_do = {
+			factor = 2
+		 }
 		 prerequisite = {
 			focus = CHI_nationalize_bank
 		 }
@@ -351,3 +354,4 @@
 		 }
 	}
 }
+
