@@ -79,12 +79,22 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 20
-	neutrality = 80
+	fascism = 8
+	ultra_nationalism = 12
+	neutrality = 32
+	democratic = 11
+	classical_liberalism = 15
+	social_liberalism = 5
+	social_democracy = 11
+	classical_marxism = 5
+	communism = 1
 }
 
 add_ideas = {
 	theravada_state
+	the_1932_revolution
+	syncretic_governance
+	anti_colonial_spirit
 }
 
 ### VARIANTS ###
