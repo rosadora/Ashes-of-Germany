@@ -1,5 +1,5 @@
 PRE_power_balance = {
-	initial_value = 0.1
+	initial_value = 0.15
 	left_side = PRE_lithuania_side
 	right_side = PRE_poland_side
 	decision_category = PRE_balance_of_power_category

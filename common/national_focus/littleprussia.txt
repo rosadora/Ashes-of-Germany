@@ -22,8 +22,8 @@
 		x = 10
 		y = 0
 		prerequisite = {}
-		mutually_exclusive = { }
-		cost = 2
+		mutually_exclusive = { focus = PRE_gamble_one_last_time }
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -38,6 +38,83 @@
 		 add_timed_idea = {
 			idea = fading_zentrum
 			days = 100
+		 }
+		}
+	}
+	focus = {
+		id = PRE_gamble_one_last_time
+		icon = GFX_goal_the_last_gambling
+		x = 20
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = { focus = PRE_denounce_koenigsberg_treaty }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = {
+			id = pre.3
+			days = 1
+		 }
+		}
+	}
+	focus = {
+		id = PRE_the_administration_language
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = -2
+		y = 1
+		prerequisite = {focus = PRE_gamble_one_last_time}
+		mutually_exclusive = {}
+		relative_position_id = PRE_gamble_one_last_time
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = {
+			id = pre.4
+			days = 1
+		 }
+		}
+	}
+	focus = {
+		id = PRE_the_question_of_corruption
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		x = 0
+		y = 1
+		prerequisite = {focus = PRE_gamble_one_last_time}
+		mutually_exclusive = {}
+		relative_position_id = PRE_gamble_one_last_time
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 country_event = {
+			id = pre.5
+			days = 1
 		 }
 		}
 	}

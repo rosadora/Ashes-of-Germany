@@ -40,3 +40,136 @@ country_event = {
 		}
 	}
 }
+
+country_event = { # The Great Chess Game
+	id = pre.3
+	title = pre.3.t
+	desc = pre.3.d
+	picture = GFX_report_event_gre_venizelos_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.3.a
+		ai_chance = {
+			base = 100
+		}
+		random_list = {
+            50 = {
+			 add_power_balance_value = {
+              id = PRE_power_balance
+              value = -0.15
+             }
+			}
+            50 = {
+			 add_power_balance_value = {
+              id = PRE_power_balance
+              value = 0.15
+             }
+			}
+        }
+	}
+}
+
+country_event = { # The Great Chess Game - Language in Administration
+	id = pre.4
+	title = pre.4.t
+	desc = pre.4.d
+	picture = GFX_report_event_tur_ataturk_writing_desk
+
+	is_triggered_only = yes
+
+	option = { # Lithuanian
+		name = pre.4.a
+		ai_chance = {
+			base = 100
+		}
+		add_power_balance_value = {
+            id = PRE_power_balance
+            value = -0.15
+        }
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		}
+	}
+
+	option = { # German
+		name = pre.4.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+	}
+
+	option = { # Polish
+		name = pre.4.c
+		ai_chance = {
+			base = 100
+		}
+		add_power_balance_value = {
+            id = PRE_power_balance
+            value = 0.15
+        }
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		}
+	}
+}
+
+country_event = { # The Great Chess Game - The Corruption
+	id = pre.5
+	title = pre.5.t
+	desc = pre.5.d
+	picture = GFX_report_event_gre_trial
+
+	is_triggered_only = yes
+
+	option = { # Lithuanian
+		name = pre.5.a
+		ai_chance = {
+			base = 100
+		}
+		add_power_balance_value = {
+            id = PRE_power_balance
+            value = -0.15
+        }
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		}
+	}
+
+	option = { # Allenstein Trials
+		name = pre.5.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_political_power = -150
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+	}
+
+	option = { # Polish
+		name = pre.5.c
+		ai_chance = {
+			base = 100
+		}
+		add_power_balance_value = {
+            id = PRE_power_balance
+            value = 0.15
+        }
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		}
+	}
+}
