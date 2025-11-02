@@ -1704,4 +1704,9 @@ spriteTypes = {
 		name = "GFX_Erich_Ludendorff"
 		texturefile = "gfx/leaders/PRE/Erich_Ludendorff.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Eduard_Pant"
+		texturefile = "gfx/leaders/SIL/Eduard_Pant.dds"
+	}
 }
