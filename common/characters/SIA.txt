@@ -11,21 +11,6 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-		country_leader={
-			ideology=ultra_nationalism_category
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=classical_liberalism_category
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=social_liberalism_category
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 	SIA_nangklao_chichalerm={
 		name="Nangklao Chichalerm"
@@ -35,9 +20,9 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=social_democracy_category
+			ideology=socialism
 			traits={ retired_officer financial_expert }
-			expire="1965.1.1.12"
+			expire="1948.1.1.12"
 			id=-1
 		}
 	}
@@ -49,19 +34,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=marxism
-			traits={ retired_officer }
-			expire="1942.1.1.12"
-			id=-1
-		}
-		country_leader={
-			ideology=libertarian_socialism_category
-			traits={ retired_officer }
-			expire="1942.1.1.12"
-			id=-1
-		}
-		country_leader={
-			ideology=classical_marxism_category
+			ideology=anarchist_communism
 			traits={ retired_officer }
 			expire="1942.1.1.12"
 			id=-1

@@ -10,29 +10,7 @@ characters = {
 			
 		}
 		country_leader = {
-			ideology = classical_liberalism_category
-			traits = { }
-			expire = "1953.1.1.1"
-			id = -1
-		}
-		country_leader = {
-			ideology = social_liberalism_category
-			traits = { }
-			expire = "1953.1.1.1"
-			id = -1
-		}
-	}
-
-	# Eduard Pant
-	SIL_Eduard_Pant = { 
-		name = "Eduard Pant"
-		portraits = {
-			civilian = {
-				large = GFX_Eduard_Pant
-			}
-		}
-		country_leader = {
-			ideology = conservatism
+			ideology = socialism
 			traits = { }
 			expire = "1953.1.1.1"
 			id = -1

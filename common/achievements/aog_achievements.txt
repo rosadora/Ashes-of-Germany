@@ -34,40 +34,9 @@ the_tsar_of_the_tsars = {
 	}
 }
 
-taisho_rebirth = {
-	id = 10
-	
-	possible = {
-		difficulty > 1
-		tag = JAP
-	}
-	
-	happened = {
-		has_completed_focus = JAP_reinforce_parliamentarism
-	}
-}
-
 ###########################
 ## 2 EASY ACHIEVEMENTS
 #############################
-
-akai_daijishin = {
-	id = 8
-	
-	possible = {
-		difficulty > 1
-		tag = JAP
-	}
-	
-	happened = {
-		OR = {
-			has_government = classical_marxism
-			has_government = communism 
-			has_government = libertarian_socialism
-		}
-		has_civil_war = no
-	}
-}
 
 sorry_this_will_be_the_last_time = {
 	id = 3
@@ -172,35 +141,6 @@ genghis_khatan = {
 	}
 }
 
-all_under_red_heaven = {
-	id = 3
-	
-	possible = {
-		difficulty > 1
-		tag = JAP
-	}
-	
-	happened = {
-		OR = {
-			has_government = classical_marxism
-			has_government = communism 
-			has_government = libertarian_socialism
-		}
-		335 = {
-			is_controlled_by_ROOT_or_ally = yes
-			}
-		439 = {
-			is_controlled_by_ROOT_or_ally = yes
-		}
-		671 = {
-			is_controlled_by_ROOT_or_ally = yes
-		}
-		327 = {
-			is_controlled_by_ROOT_or_ally = yes
-		}
-	}
-}
-
 ###########################
 ## 5 HARDCORE ACHIEVEMENTS
 #############################
@@ -217,25 +157,6 @@ beated_once_again_but_never_defeated = {
 		has_completed_focus = JAP_beaten_never_defeated
 		all_core_state = {
 			is_controlled_by = MON
-		}
-	}
-}
-
-burakumin_wind = {
-	id = 9
-	
-	possible = {
-		difficulty > 1
-		tag = JAP
-	}
-	
-	happened = {
-		has_country_leader = {
-            name = "Kaneko Fumiko"
-            ruling_only = yes
-        }
-		all_state = {
-			is_controlled_by_ROOT_or_ally = yes
 		}
 	}
 }

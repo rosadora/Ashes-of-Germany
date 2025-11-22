@@ -7,9 +7,6 @@ ideologies = {
 			nazism = {
 			}
 
-			volkisch = {
-			}
-
 			gen_nazism = {
 			}
 
