@@ -1,0 +1,32 @@
+# United Workers of Europe
+faction_template_united_workers_of_europe = {
+	name = united_workers_of_europe
+	icon = GFX_faction_logo_united_workers_of_europe
+	manifest = faction_manifest_spread_revolutionary_ideas_across_europe
+
+	goals = {
+
+		# Short term goals
+		faction_goal_stabilize_central_europe
+		
+		# Medium term goals
+		faction_goal_the_arteries_of_trade
+
+		# Long term goals
+		faction_goal_the_atomic_race
+		faction_goal_rule_the_waves
+
+	}
+
+
+	default_rules = {
+		joining_rule_non_fascist
+		joining_rule_has_no_offensive_war
+		faction_peace_rule_liberation_focus
+		government_in_exile_allowed
+		change_leader_rule_manifest_below_35
+		dismissal_rule_ideology_not_democratic
+		change_leader_rule_industry
+	}
+}
+

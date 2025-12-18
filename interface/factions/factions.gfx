@@ -12,6 +12,16 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_faction_icon_united_workers_of_europe"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_united_workers_of_europe.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_logo_united_workers_of_europe"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_united_workers_of_europe.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
 		name = "GFX_faction_icon_generic_communist"
 		texturefile = "gfx/interface/factions/faction_logos/faction_icon_generic_communist.dds"
 		noOfFrames = 2
@@ -156,6 +166,14 @@ spriteTypes = {
 		spriteType = {
 		name = "GFX_faction_icon_allies_miniature"
 		texturefile = "gfx/interface/factions/faction_logos/faction_icon_allies_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_united_workers_of_europe_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_united_workers_of_europe_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_logo_united_workers_of_europe_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_united_workers_of_europe_miniature.dds"
 	}
 		spriteType = {
 		name = "GFX_faction_icon_generic_communist_miniature"

@@ -30,6 +30,22 @@ faction_manifest_defense_of_democracy = {
 	}
 }
 
+# Spread Revolutionaries Ideas Across Europe
+faction_manifest_spread_revolutionary_ideas_across_europe = {
+	name = spread_revolutionary_ideas_across_europe_goal_name
+	description = spread_revolutionary_ideas_across_europe_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = 20
+		completed_amount_collection = collection:europe_socialist_countries
+			
+		scale = {
+			production_factory_max_efficiency_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+		}
+	}
+}
+
 # Defense of Democracy
 faction_manifest_defense_of_democracy_allies = {
 	name = defense_of_democracy_goal_name
