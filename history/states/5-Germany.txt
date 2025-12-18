@@ -12,12 +12,14 @@ state={
 		#victory_points = {
 		#	11386 1
 		#}
-		owner = POL
-		controller = POL
+		owner = PRE
+		add_core_of = PRE
 		
 		buildings = {
 			infrastructure = 3
 		}
+
+		set_demilitarized_zone = yes
 	}
 
 	provinces={

@@ -80,4 +80,14 @@ spriteTypes = {
 		name = "GFX_bop_JAP_sekirankai_side"
 		texturefile = "gfx/interface/bop/bop_JAP_sekirankai_side.dds"
 	}
+
+	spriteType = {
+		name = "GFX_bop_PRE_lithuania_side"
+		texturefile = "gfx/interface/bop/bop_PRE_lithuania_side.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_PRE_poland_side"
+		texturefile = "gfx/interface/bop/bop_PRE_poland_side.dds"
+	}
 }

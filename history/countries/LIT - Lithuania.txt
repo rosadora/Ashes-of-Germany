@@ -14,6 +14,24 @@ if = {
 
 set_research_slots = 3
 
+diplomatic_relation = {
+    country = PRE
+    relation = military_access
+    active = yes
+}
+
+diplomatic_relation = {
+    country = PRE
+    relation = docking_rights
+    active = yes
+}
+
+diplomatic_relation = {
+    country = PRE
+    relation = guarantee
+    active = yes
+}
+
 if = {
 	limit = {
 		has_DLC = "No Step Back"

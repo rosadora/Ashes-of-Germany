@@ -200,6 +200,12 @@ characters = {
 			expire="1965.1.1.1"
 			id=-1
 		}
+
+		country_leader = {
+			ideology=ultra_nationalism_category
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 
 	POL_walery_slawek = {
