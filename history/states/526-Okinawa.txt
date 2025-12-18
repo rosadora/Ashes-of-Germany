@@ -6,6 +6,10 @@ state={
 	
 	state_category = small_island
 
+	resources = {
+		coal = 4
+	}
+
 	history={
 		owner = JAP
 		add_core_of = JAP
