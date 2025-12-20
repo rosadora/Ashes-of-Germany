@@ -17,7 +17,121 @@
 #  #  # #   #  #   
 ####   #    #   #  
 #  #  # #   #    # 
-#  # #   # ### ##  
+#  # #   # ### ##
+
+faction_goal_win_the_third_balkan_war = {
+	name = win_the_third_balkan_war_goal_name
+	description = win_the_third_balkan_war_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+
+	}
+	available = {
+		
+	}
+	completed = {
+		107 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		46 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		48 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		47 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		add_faction_initiative = 1
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
+faction_goal_challenge_british_domination_over_the_seas = {
+	name = faction_goal_challenge_british_domination_over_the_seas_goal_name
+	description = faction_goal_challenge_british_domination_over_the_seas_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_NAVY_XP
+	visible = {
+
+	}
+	available = {
+		
+	}
+	completed = {
+		FRA = {
+			naval_strength_ratio = {
+             tag = ENG
+             ratio > 0.8
+            }
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		add_faction_initiative = 1
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
+faction_goal_the_continental_system = {
+	name = faction_goal_the_continental_system_goal_name
+	description = faction_goal_the_continental_system_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	available = {
+		
+	}
+	completed = {
+		64 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		41 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		2 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		add_faction_initiative = 1
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
 
 
 faction_goal_resource_control = {

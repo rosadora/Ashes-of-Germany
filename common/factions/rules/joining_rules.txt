@@ -114,6 +114,58 @@ joining_rule_non_communist = {
 	}
 }
 
+joining_rule_socialist_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	available = {
+		OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+		    has_government = communism
+		}
+	}
+	trigger = {
+		OR = {
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+		    has_government = communism
+		}
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
+joining_rule_liberal_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	available = {
+		OR = {
+			has_government = social_democracy
+			has_government = classical_liberalism
+		    has_government = social_liberalism 
+			has_government = democratic
+		}
+	}
+	trigger = {
+		OR = {
+			has_government = social_democracy
+			has_government = classical_liberalism
+		    has_government = social_liberalism 
+			has_government = democratic
+		}
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
 joining_rule_fascist_only = {
 	type = joining_rules
 	ai_will_do = {

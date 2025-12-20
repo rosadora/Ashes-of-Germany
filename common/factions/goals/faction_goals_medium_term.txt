@@ -19,7 +19,46 @@
 #  #  # #   #    # 
 #  # #   # ### ##  
 
-
+faction_goal_arsenal_of_european_revolution = {
+	name = faction_goal_arsenal_of_european_revolution_goal_name
+	description = faction_goal_arsenal_of_european_revolution_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	completed = {
+		any_allied_country = {
+			arms_factory > 100
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		every_faction_member = {
+			limit = {
+				original_tag = HUN
+			}
+			add_faction_initiative = 1
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_secure_our_position = {
+	name = faction_goal_secure_our_position_goal_name
+	description = faction_goal_secure_our_position_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	completed = {
+		faction_power_projection > 700
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		add_war_support = 0.1
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
 faction_goal_undo_versailles = {
 	name = undo_versailles_goal_name
 	description = undo_versailles_goal_desc

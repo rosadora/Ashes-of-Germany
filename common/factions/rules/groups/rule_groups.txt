@@ -26,6 +26,8 @@ rule_group_ideology = {
 		joining_rule_puppets_only
 		joining_rule_communist_only
 		joining_rule_support_percentage
+		joining_rule_socialist_only
+		joining_rule_liberal_only
 	}
 }
 

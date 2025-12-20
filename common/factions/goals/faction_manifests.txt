@@ -10,23 +10,12 @@ faction_manifest_defense_of_democracy = {
 		completed_amount_collection = collection:world_uncapitulated_democratic_countries_and_dominions
 			
 		scale = {
-			trade_opinion_factor = 0.20
+			trade_opinion_factor = 0.4
 		}
 		
 		#reversed = { #Scaled upwards as you approach 0% fulfillment
 		#	stability_factor = 0.50
 		#}
-		
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-	
-				modifier = { 
-					democratic_drift_from_guarantees = 0.05
-					can_guarantee_other_ideologies = 1
-				}
-			}
-		}
 	}
 }
 
@@ -42,6 +31,22 @@ faction_manifest_spread_revolutionary_ideas_across_europe = {
 		scale = {
 			production_factory_max_efficiency_factor = 0.1
 			production_speed_infrastructure_factor = 0.1
+		}
+	}
+}
+
+# Spread Revolutionaries Ideas Across Europe
+faction_manifest_master_of_the_continent = {
+	name = master_of_the_continent_goal_name
+	description = master_of_the_continent_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = 100
+		completed_amount_collection = collection:faction_states_in_europe
+			
+		scale = {
+			army_attack_factor = 0.075
+			army_speed_factor = 0.05
 		}
 	}
 }

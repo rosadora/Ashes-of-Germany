@@ -19,6 +19,29 @@
 #  #  # #   #    # 
 #  # #   # ### ##  
 
+faction_goal_renew_economic_growth = {
+	name = renew_economic_growth_goal_name
+	description = renew_economic_growth_goal_desc
+	category = short_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		always = no
+	}
+	completed = {
+		FRA = {
+			industrial_complex > 50
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 50
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+
 faction_goal_stabilize_central_europe = {
 	name = stabilize_central_europe_goal_name
 	description = stabilize_central_europe_goal_desc

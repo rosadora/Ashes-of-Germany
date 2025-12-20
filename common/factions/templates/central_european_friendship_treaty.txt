@@ -1,0 +1,27 @@
+# Central European Friendship Treaty
+faction_template_central_european_friendship_treaty = {
+	name = central_european_friendship_treaty
+	icon = GFX_faction_logo_central_european
+	manifest = faction_manifest_master_of_the_continent
+
+	goals = {
+
+		# Short term goals
+		faction_goal_renew_economic_growth
+		
+		# Medium term goals
+		faction_goal_secure_our_position
+
+		# Long term goals
+		faction_goal_challenge_british_domination_over_the_seas
+		faction_goal_the_continental_system
+
+	}
+
+
+	default_rules = {
+		joining_rule_liberal_only
+		joining_rule_same_continent_only
+	}
+}
+
