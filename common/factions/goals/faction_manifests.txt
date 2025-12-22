@@ -19,6 +19,39 @@ faction_manifest_defense_of_democracy = {
 	}
 }
 
+# The Shield stronger than the Sword
+faction_manifest_shield_stronger_than_sword = {
+	name = shield_stronger_than_sword_goal_name
+	description = shield_stronger_than_sword_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = 50
+		completed_amount_collection = collection:faction_states_in_balkans
+			
+		scale = {
+			army_defence_factor = 0.05
+			army_org_factor = 0.1
+		}
+	}
+}
+
+# A Place Under the Sun
+faction_manifest_a_place_under_the_sun = {
+	name = a_place_under_the_sun_goal_name
+	description = a_place_under_the_sun_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = 50
+		completed_amount_collection = collection:faction_states_in_europe
+			
+		scale = {
+			army_morale_factor = 0.1
+			army_org_factor = 0.05
+			army_speed_factor = 0.05
+		}
+	}
+}
+
 # Spread Revolutionaries Ideas Across Europe
 faction_manifest_spread_revolutionary_ideas_across_europe = {
 	name = spread_revolutionary_ideas_across_europe_goal_name
@@ -35,7 +68,7 @@ faction_manifest_spread_revolutionary_ideas_across_europe = {
 	}
 }
 
-# Spread Revolutionaries Ideas Across Europe
+# Master of the Continent
 faction_manifest_master_of_the_continent = {
 	name = master_of_the_continent_goal_name
 	description = master_of_the_continent_goal_desc

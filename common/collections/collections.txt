@@ -447,6 +447,23 @@ faction_states_in_the_nordics = {
 	name = COLLECTION_FACTION_CONTROLLED_STATES_IN_NORDICS
 }
 
+faction_states_in_balkans = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			OR = {
+				region = 24 
+				region = 27
+				region = 26
+				region = 25
+			}
+		}
+	}
+	name = "States Controlled in Balkans"
+}
+
 states_in_europe = {
 	input = game:all_states
 	operators = {

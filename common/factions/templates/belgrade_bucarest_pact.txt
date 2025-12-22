@@ -1,0 +1,29 @@
+# Belgrade-Bucarest Axis
+faction_template_belgrade_shield = {
+	name = "Balkan Shield"
+	manifest = faction_manifest_shield_stronger_than_sword
+
+	goals = {
+
+		# Short term goals
+		faction_goal_reinforce_the_shield
+		
+		# Medium term goals
+		faction_goal_cement_anti_communist_unity
+
+		# Long term goals
+		faction_goal_the_atomic_race
+		faction_goal_the_golden_shield
+
+	}
+
+
+	default_rules = {
+		joining_rule_non_communist
+		joining_rule_has_no_offensive_war
+		government_in_exile_allowed
+		joining_rule_balkans_only
+	}
+	
+	icon = GFX_faction_icon_balkan_shield
+}

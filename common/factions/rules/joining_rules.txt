@@ -65,7 +65,11 @@ joining_rule_non_democratic = {
 joining_rule_non_communist = {
 	type = joining_rules
 	visible = {
-		NOT = { has_government = communism }
+		OR = {
+			has_government = communism 
+			has_government = classical_marxism 
+			has_government = libertarian_socialism 
+		}
 	}
 	ai_will_do = {
 		base = 0
@@ -529,6 +533,9 @@ joining_rule_balkans_only = {
 			original_tag = ROM 
 			original_tag = TUR 
 			original_tag = GRE 
+			original_tag = YUG
+			original_tag = BUL
+			original_tag = ALB
 			capital_scope = {
 				OR = {
 					state = 102

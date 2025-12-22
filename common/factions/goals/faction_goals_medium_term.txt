@@ -19,6 +19,43 @@
 #  #  # #   #    # 
 #  # #   # ### ##  
 
+faction_goal_german_empire = {
+	name = german_empire_goal_name
+	description = german_empire_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	completed = {
+		PRS = {
+			controls_state = 65
+			controls_state = 61
+			controls_state = 58
+			controls_state = 65
+			controls_state = 56
+			controls_state = 59
+			controls_state = 57
+			controls_state = 51
+			controls_state = 42
+			controls_state = 50
+			controls_state = 57
+			controls_state = 56
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		every_faction_member = {
+			limit = {
+				original_tag = HUN
+			}
+			add_faction_initiative = 1
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_stability = 0.1
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
 faction_goal_arsenal_of_european_revolution = {
 	name = faction_goal_arsenal_of_european_revolution_goal_name
 	description = faction_goal_arsenal_of_european_revolution_goal_desc
@@ -54,6 +91,29 @@ faction_goal_secure_our_position = {
 	complete_effect = {
 		add_faction_power_projection = 100
 		add_war_support = 0.1
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+faction_goal_cement_anti_communist_unity = {
+	name = faction_goal_cement_anti_communist_unity_goal_name
+	description = faction_goal_cement_anti_communist_unity_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	completed = {
+		is_ally_with = GRE
+		is_ally_with = BUL
+		is_ally_with = ALB
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		add_war_support = 0.05
+		add_manpower = 100000
+		add_popularity = {
+			ideology = communism 
+			popularity = -0.05
+		}
 	}
 	ai_will_do = {
 		base = 1

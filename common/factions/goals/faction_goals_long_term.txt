@@ -133,6 +133,74 @@ faction_goal_the_continental_system = {
 	}
 }
 
+faction_goal_entente_defeated = {
+	name = entente_defeated_goal_name
+	description = entente_defeated_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	available = {
+		
+	}
+	completed = {
+		OR = {
+			USR = {
+				is_subject_of = PRS
+			}
+			SOV = {
+				is_subject_of = PRS
+			}
+		}
+		is_subject_of = FRA
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		add_faction_initiative = 1
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
+faction_goal_the_golden_shield = {
+	name = faction_goal_the_golden_shield_goal_name
+	description = faction_goal_the_golden_shield_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	available = {
+		
+	}
+	completed = {
+		NOT = {
+			country_exists = CRO
+			country_exists = TRA
+			country_exists = SER
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		add_faction_initiative = 1
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
 
 faction_goal_resource_control = {
 	name = resource_control_goal_name

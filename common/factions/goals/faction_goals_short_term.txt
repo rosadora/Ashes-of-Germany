@@ -19,6 +19,56 @@
 #  #  # #   #    # 
 #  # #   # ### ##  
 
+faction_goal_militarism = {
+	name = militarism_goal_name
+	description = militarism_goal_desc
+	category = short_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		always = no
+	}
+	completed = {
+		arms_factory = 15
+		has_army_manpower = {
+			size > 300000
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 50
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		add_war_support = 0.1
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+
+faction_goal_reinforce_the_shield = {
+	name = reinforce_the_shield_goal_name
+	description = reinforce_the_shield_goal_desc
+	category = short_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		always = no
+	}
+	completed = {
+		any_allied_country = {
+		has_army_manpower = {
+          size > 400000
+        }
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 50
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+
 faction_goal_renew_economic_growth = {
 	name = renew_economic_growth_goal_name
 	description = renew_economic_growth_goal_desc

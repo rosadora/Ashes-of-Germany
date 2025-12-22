@@ -1,6 +1,6 @@
 ﻿capital = 107
 
-create_faction = belgrade_bucarest_axis
+create_faction_from_template = faction_template_belgrade_shield
 add_to_faction = ROM
 
 if = {

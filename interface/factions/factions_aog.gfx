@@ -21,6 +21,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/faction_logos/faction_logo_central_european.dds"
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "GFX_faction_icon_balkan_shield"
+		texturefile = "gfx/interface/faction_logos/faction_icon_balkan_shield.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_reichspakt"
+		texturefile = "gfx/interface/faction_logos/faction_icon_reichspakt.dds"
+		noOfFrames = 2
+	}
 
 	### Faction Logos - Miniatures ###
 	spriteType = {
@@ -34,5 +44,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_faction_logo_central_european_miniature"
 		texturefile = "gfx/interface/faction_logos/faction_logo_central_european_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_balkan_shield_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_balkan_shield_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_reichspakt_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_reichspakt_miniature.dds"
 	}
 }
