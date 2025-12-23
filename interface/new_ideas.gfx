@@ -3,7 +3,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_a_disunited_nation"
 		texturefile = "gfx/interface/ideas/a_disunited_nation.dds"
-	}	
+	}
+
+	spriteType = {
+		name = "GFX_idea_resist_the_kurofune"
+		texturefile = "gfx/interface/ideas/resist_the_kurofune.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_ukrainian_popular_front"

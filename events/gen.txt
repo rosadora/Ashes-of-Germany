@@ -300,3 +300,70 @@ country_event = { #Comet Sight
 		add_stability = -0.01
 	}
 }
+country_event = { #Join the Balkan Shield
+	id = gen.13
+	title = gen.13.t
+	desc = gen.13.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.13.a
+		ai_chance = {
+			base = 100
+		}
+        FROM = {
+			country_event = {
+				id = gen.9
+				days = 1
+			}
+		}
+	}
+
+    option = {
+		name = gen.13.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = {
+			country_event = {
+				id = gen.10
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Join the Balkan Shield - Positive
+	id = gen.14
+	title = gen.14.t
+	desc = gen.14.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.14.a
+		ai_chance = {
+			base = 100
+		}
+        add_to_faction = FROM
+	}
+}
+
+country_event = { #Join the Balkan Shield - Negative
+	id = gen.15
+	title = gen.15.t
+	desc = gen.15.d
+	picture = GFX_report_event_bul_military_parade_vidin
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.15.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}

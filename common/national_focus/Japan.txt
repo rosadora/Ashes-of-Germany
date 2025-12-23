@@ -145,7 +145,7 @@
 	}
 	focus = {
 		id = JAP_carrier_program
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_focus_JAP_strengthen_the_kido_butai
 		x = -1
 		y = 2
 		mutually_exclusive = {}
@@ -531,7 +531,7 @@
 	}
 	focus = {
 		id = JAP_bomber_focus
-		icon = GFX_focus_SWE_marauder_bombers
+		icon = GFX_focus_JAP_z_bomber_project
 		x = 0
 		y = 1
 		mutually_exclusive = {}
@@ -764,7 +764,7 @@
 	}
 	focus = {
 		id = JAP_armored_divisions
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_JAP_reform_the_army
 		x = 0
 		y = 3
 		mutually_exclusive = {}
@@ -2146,7 +2146,7 @@
 	}
 	focus = {
 		id = JAP_revive_the_socialist_party
-		icon = GFX_focus_spr_unify_the_london_bureau
+		icon = GFX_focus_JAP_secretly_rebuild_the_party
 		x = -1
 		y = 1
 		prerequisite = {focus = JAP_face_the_peace_preservation_law}
@@ -2219,7 +2219,7 @@
 	}
 	focus = {
 		id = JAP_hanran
-		icon = GFX_goal_communist_offensive
+		icon = GFX_focus_JAP_raise_the_red_flag_high
 		x = 5
 		y = 2
 		prerequisite = {focus = JAP_reject_taisho_democracy}
@@ -2568,7 +2568,7 @@
 	}
 	focus = {
 		id = JAP_collective_leadership
-		icon = GFX_focus_spr_masters_of_our_own_fate
+		icon = GFX_focus_JAP_organize_the_student_movements
 		x = -1
 		y = 1
 		prerequisite = {focus = JAP_the_split_within}
@@ -3035,7 +3035,7 @@
 	}
 	focus = {
 		id = JAP_true_liberation
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		icon = GFX_focus_JAP_a_free_asia_pacific
 		x = -5
 		y = 2
 		prerequisite = {focus = JAP_anarchist_winds focus = JAP_overthrow_the_party}
@@ -3086,7 +3086,7 @@
 	}
 	focus = {
 		id = JAP_mobilize_everyone
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_JAP_form_pioneer_organizations
 		x = -5
 		y = 3
 		prerequisite = {focus = JAP_true_liberation}
@@ -3231,7 +3231,7 @@
 	}
 	focus = {
 		id = JAP_empower_women
-		icon = GFX_focus_ARG_women_in_industry
+		icon = GFX_focus_JAP_women_in_industry
 		x = -2
 		y = 2
 		prerequisite = {focus = JAP_anarchist_winds focus = JAP_yamakawa_in_charge focus = JAP_overthrow_the_party}
@@ -3549,11 +3549,10 @@
 	}
 	focus = {
 		id = JAP_japanese_cultural_revolution
-		icon = GFX_focus_SOV_women_in_aviation
+		icon = GFX_focus_JAP_social_and_cultural_revolution
 		x = 3
 		y = 4
 		prerequisite = {focus = JAP_create_womens_brigade}
-		mutually_exclusive = {focus = JAP_stability_prevails}
 		relative_position_id = JAP_socialism_with_japanese_characteristics
 		cost = 5
 		ai_will_do = {
@@ -3574,30 +3573,6 @@
 			idea = propaganda_campaigns
 			days = 400
 		 }
-		 add_research_slot = 1
-		}
-	}
-	focus = {
-		id = JAP_stability_prevails
-		icon = GFX_focus_SWI_helvetic_junta
-		x = 5
-		y = 4
-		prerequisite = {focus = JAP_create_womens_brigade}
-		mutually_exclusive = {focus = JAP_japanese_cultural_revolution}
-		relative_position_id = JAP_socialism_with_japanese_characteristics
-		cost = 5
-		ai_will_do = {
-			factor = 2
-		}
-		available = {
-			has_government = communism
-		}
-		bypass = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		completion_reward = {
 		 add_research_slot = 1
 		}
 	}
@@ -3696,7 +3671,7 @@
 	}
 	focus = {
 		id = JAP_state_managed_collectivisation
-		icon = GFX_focus_generic_communist_industry
+		icon = GFX_focus_JAP_ganbarou
 		x = 1
 		y = 3
 		prerequisite = {focus = JAP_purge_the_intelligensia focus = JAP_highlight_proletarian_litterature}
@@ -4029,6 +4004,146 @@
               value = -0.25
             }
 			add_ideas = red_japan_isolation
+		  news_event = {
+			id = news.3091
+			days = 1
+		  }
+		}
+	}
+	focus = {
+		id = JAP_revive_edo_culture
+		icon = GFX_goal_edo_culture_revival
+		x = 3
+		y = 1
+		prerequisite = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_edo
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_political_power = 100
+		  add_stability = 0.15
+		}
+	}
+	focus = {
+		id = JAP_denounce_the_sino_japanese_war
+		icon = GFX_goal_denounce_sino_japanese_war
+		x = 4
+		y = 2
+		prerequisite = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_edo
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  PRC = {
+			transfer_state = 524
+		  }
+		  add_opinion_modifier = {
+            target = PRC
+            modifier = huge_increase
+           }
+		   PRC = {
+			add_opinion_modifier = {
+            target = JAP
+            modifier = huge_increase
+           }
+		   }
+		   add_opinion_modifier = {
+            target = CHI
+            modifier = huge_increase
+           }
+		   CHI = {
+			add_opinion_modifier = {
+            target = JAP
+            modifier = huge_increase
+           }
+		   }
+		}
+	}
+	focus = {
+		id = JAP_amend_the_constitution
+		icon = GFX_focus_JAP_utilize_ainu_expertise
+		x = 2
+		y = 2
+		prerequisite = {focus = JAP_red_edo}
+		relative_position_id = JAP_red_edo
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = classical_marxism
+				has_government = communism
+				has_government = libertarian_socialism
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  news_event = {
+			id = news.3090
+			days = 1
+		  }
+		  set_faction_name = JP_CONF_FAC
+		  release_puppet = ANU
+		  release_puppet = OKN
+		  release = FSM
+		}
+	}
+	focus = {
+		id = JAP_resist_the_kurofune
+		icon = GFX_goal_resist_the_kurofune
+		x = 2
+		y = 3
+		prerequisite = {focus = JAP_splendid_isolation}
+		prerequisite = {focus = JAP_amend_the_constitution}
+		prerequisite = {focus = JAP_denounce_the_sino_japanese_war}
+		relative_position_id = JAP_red_edo
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_defensive_war = yes
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		  add_ideas = resist_the_kurofune
 		}
 	}
 	focus = {
@@ -5794,7 +5909,7 @@
 	}
 	focus = {
 		id = JAP_strengthen_the_divine_wind
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_JAP_the_divine_wind
 		x = 0
 		y = 2
 		prerequisite = {focus = JAP_warrior_spirit}
@@ -5857,7 +5972,7 @@
 	}
 	focus = {
 		id = JAP_a_cure_to_weakness
-		icon = GFX_focus_BRA_reach_out_to_military_dem
+		icon = GFX_focus_JAP_the_imperial_defense_plan
 		x = -5
 		y = 1
 		prerequisite = {focus = JAP_showa_era}
@@ -5883,7 +5998,7 @@
 	}
 	focus = {
 		id = JAP_imperial_return
-		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+		icon = GFX_focus_JAP_purge_the_kodoha_faction
 		x = -7
 		y = 2
 		prerequisite = {}

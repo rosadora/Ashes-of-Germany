@@ -1601,3 +1601,31 @@ news_event = { #Choibalsan & the Peasant Uprising
 		name = news.3089.a
 	}
 }
+news_event = { #Japonic-Native Confederation
+    id = news.3090
+	title = news.3090.t
+	desc = news.3090.d
+	picture = GFX_news_new_japanese_constitution_news
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3090.a
+	}
+}
+news_event = { #Second Sakoku
+    id = news.3091
+	title = news.3091.t
+	desc = news.3091.d
+	picture = GFX_news_second_sakoku_news
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3091.a
+	}
+}

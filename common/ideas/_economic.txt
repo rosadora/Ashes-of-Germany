@@ -89,6 +89,7 @@ ideas = {
 			}
 
 			modifier = {
+				min_export = -0.3
 				consumer_goods_expected_value = 0.4
 				production_speed_industrial_complex_factor = 0.3
 				production_speed_infrastructure_factor = 0.2

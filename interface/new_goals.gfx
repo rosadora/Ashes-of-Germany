@@ -1995,4 +1995,19 @@ spriteTypes = {
 	name = "GFX_goal_burn_the_world"
 	texturefile = "gfx/interface/goals/burn_the_world.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_edo_culture_revival"
+	texturefile = "gfx/interface/goals/edo_culture_revival.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_denounce_sino_japanese_war"
+	texturefile = "gfx/interface/goals/denounce_sino_japanese_war.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_resist_the_kurofune"
+	texturefile = "gfx/interface/goals/resist_the_kurofune.dds"			
+	}
 }

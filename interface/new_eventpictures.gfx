@@ -61,6 +61,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_news_new_japanese_constitution_news"
+		texturefile = "gfx/event_pictures/new_japanese_constitution_news.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_second_sakoku_news"
+		texturefile = "gfx/event_pictures/second_sakoku_news.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_comet_sight_event"
 		texturefile = "gfx/event_pictures/comet_sight_event.dds"
 	}
