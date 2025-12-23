@@ -26,6 +26,7 @@ faction_template_reichspakt = {
 		change_leader_rule_manifest_below_35
 		dismissal_rule_ideology_not_democratic
 		change_leader_rule_industry
+		joining_rule_same_continent_only
 	}
 	
 	icon = GFX_faction_icon_reichspakt

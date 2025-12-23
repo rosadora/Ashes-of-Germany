@@ -44,3 +44,5 @@
  joining_rule_eastern_europe_only:0 "Only Eastern Europe Countries Allowed"
  is_an_eastern_european_country:0 "Is Eastern European Country"
  JP_CONF_FAC:0 "Japonic-Ainu Confederation"
+ jap_edo_goal_name:0 "Pax Yamakawa"
+ jap_edo_goal_desc:0 ""

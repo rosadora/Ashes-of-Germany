@@ -2299,7 +2299,6 @@
 				has_government = communism
 				has_government = libertarian_socialism
 			}
-			has_civil_war = yes
 		}
 		bypass = {
 		}
@@ -4008,6 +4007,9 @@
 			id = news.3091
 			days = 1
 		  }
+		  set_faction_manifest = faction_manifest_jap_edo
+		  remove_faction_goal = faction_goal_align_china
+		  add_faction_initiative = 1
 		}
 	}
 	focus = {
