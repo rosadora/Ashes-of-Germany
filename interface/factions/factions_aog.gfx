@@ -31,6 +31,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/faction_logos/faction_icon_reichspakt.dds"
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "GFX_faction_icon_intermarium"
+		texturefile = "gfx/interface/faction_logos/faction_icon_intermarium.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_asian_international"
+		texturefile = "gfx/interface/faction_logos/faction_icon_asian_international.dds"
+		noOfFrames = 2
+	}
 
 	### Faction Logos - Miniatures ###
 	spriteType = {
@@ -52,5 +62,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_faction_icon_reichspakt_miniature"
 		texturefile = "gfx/interface/faction_logos/faction_icon_reichspakt_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_intermarium_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_intermarium_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_asian_international_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_asian_international_miniature.dds"
 	}
 }

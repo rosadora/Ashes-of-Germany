@@ -3927,7 +3927,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_political_power = 50
-		 create_faction = asian_international
+		 create_faction_from_template = faction_template_JAP_pan_asian_revolutuonary_front
 		}
 	}
 	focus = {
@@ -5988,7 +5988,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_war_support = 0.075
-			create_faction = daitoa_kyoeiken
+			create_faction_from_template = faction_template_geacps_faction
 			IF = {
 				limit = {
 					has_idea = limited_conscription
@@ -6783,7 +6783,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			create_faction = asian_peace_initiative
+			create_faction_from_template = faction_template_JAP_the_old_alliance
 		 USA = {
 			country_event = {
 				id = jap.24

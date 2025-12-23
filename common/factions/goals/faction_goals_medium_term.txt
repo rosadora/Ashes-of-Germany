@@ -19,6 +19,32 @@
 #  #  # #   #    # 
 #  # #   # ### ##  
 
+faction_goal_secure_baltics = {
+	name = secure_baltics_goal_name
+	description = secure_baltics_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	completed = {
+		is_in_faction_with = LAT
+		is_in_faction_with = LIT
+		is_in_faction_with = EST
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		every_faction_member = {
+			limit = {
+				original_tag = HUN
+			}
+			add_faction_initiative = 1
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_political_power = 100
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
 faction_goal_german_empire = {
 	name = german_empire_goal_name
 	description = german_empire_goal_desc

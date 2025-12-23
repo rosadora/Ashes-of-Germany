@@ -86,7 +86,7 @@ faction_template_JAP_sino_japanese_pact = {
 
 # Greater East Asia Co-Prosperity Sphere
 faction_template_geacps_faction = {
-	name = JAP_greater_east_asian_co_prosperity_sphere
+	name = "Dai-tō-a Kyōeiken"
 	manifest = faction_manifest_strategic_resource_control
 
 	goals = {
@@ -116,7 +116,7 @@ faction_template_geacps_faction = {
 
 # Pan-Asian Revolutionary Front
 faction_template_JAP_pan_asian_revolutuonary_front = {
-	name = JAP_pan_asian_revolutuonary_front
+	name = "Asian Anti-Imperialist Front"
 	manifest = faction_manifest_spread_of_communism
 
 	goals = {
@@ -137,7 +137,7 @@ faction_template_JAP_pan_asian_revolutuonary_front = {
 		change_leader_rule_industry
 	}
 	
-	icon = GFX_faction_icon_generic_communist
+	icon = GFX_faction_icon_asian_international
 }
 
 # Fifth Communist International
@@ -170,7 +170,7 @@ faction_template_JAP_alternative_communist_international = {
 
 # The Old Alliance 
 faction_template_JAP_the_old_alliance = {
-	name = JAP_the_old_alliance
+	name = "Asian Peace Initiative"
 	manifest = faction_manifest_defense_of_democracy
 
 	goals = {

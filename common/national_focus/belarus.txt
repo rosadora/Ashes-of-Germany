@@ -2381,18 +2381,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			POL = {
-				IF = {
-				limit = {
-					NOT = {
-					is_in_faction = yes 
-					}
-				}
-				create_faction = Intermarium
-				add_to_faction = BLR 
-				add_to_faction = UKR
-			 }
-			}
+			add_war_support = 0.1
 		}
 	}
 	focus = {

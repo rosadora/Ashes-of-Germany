@@ -843,7 +843,12 @@
 			set_rule = {
 				can_create_factions = yes
 			}
-			create_faction = axis_of_freedom
+			create_faction_from_template = {
+             template = faction_template_defensive_democratic
+             name = "Axis of Freedom"
+             icon = GFX_faction_logo_generic_3
+             color = { 100 100 150 }
+            }
 			release_puppet = LBA
 			CRO = {
 				transfer_state = 163

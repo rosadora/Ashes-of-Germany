@@ -523,6 +523,51 @@ joining_rule_nordics_only = {
 	}
 }
 
+joining_rule_eastern_europe_only = {
+	type = joining_rules
+
+	visible = {
+		OR = {
+			original_tag = ROM
+			original_tag = POL
+			original_tag = UKR 
+			original_tag = LIT 
+			original_tag = LAT
+			original_tag = EST
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = CZE
+		}
+	}
+	can_remove = {
+		faction_manifest_fulfillment > 0.85
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	modifier = {
+		army_core_defence_factor = 0.05
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = is_an_eastern_european_country
+			OR = {
+			original_tag = ROM
+			original_tag = POL
+			original_tag = UKR 
+			original_tag = LIT 
+			original_tag = LAT
+			original_tag = EST
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = CZE
+		    }
+		}
+	}
+}
+
 joining_rule_balkans_only = {
 	type = joining_rules
 

@@ -52,6 +52,23 @@ faction_manifest_a_place_under_the_sun = {
 	}
 }
 
+# Hegemony over Eastern Europe
+faction_manifest_hegemony_over_eastern_europe = {
+	name = hegemony_over_eastern_europe_goal_name
+	description = hegemony_over_eastern_europe_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = 50
+		completed_amount_collection = collection:faction_states_in_eastern_europe
+			
+		scale = {
+			conscription_factor = 0.15
+			army_org_factor = 0.05
+			political_power_factor = 0.05
+		}
+	}
+}
+
 # Spread Revolutionaries Ideas Across Europe
 faction_manifest_spread_revolutionary_ideas_across_europe = {
 	name = spread_revolutionary_ideas_across_europe_goal_name

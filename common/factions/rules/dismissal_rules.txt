@@ -55,8 +55,19 @@ dismissal_rule_ideology_not_democratic = {
 	}
 
 	dismiss_member_trigger = {
+		OR = {
 		NOT = {
 			has_government = democratic 
+		}
+		NOT = {
+			has_government = classical_liberalism 
+		}
+		NOT = {
+			has_government = social_liberalism 
+		}
+		NOT = {
+			has_government = social_democracy 
+		}
 		}
 	}
 }

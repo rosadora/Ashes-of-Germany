@@ -202,9 +202,6 @@ on_actions = {
 		set_rule = {
 			can_send_volunteers = yes
 		}
-		set_rule = {
-			can_join_factions = no
-		}
 	}
    every_country = {
     country_event = {

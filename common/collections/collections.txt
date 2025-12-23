@@ -486,6 +486,30 @@ faction_states_in_europe = {
 	name = COLLECTION_FACTION_CONTROLLED_STATES_IN_EUROPE
 }
 
+faction_states_in_eastern_europe = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			OR = {
+				region = 26 
+				region = 27
+				region = 22
+				region = 38
+				region = 8
+				region = 39
+				region = 130
+				region = 131
+				region = 37
+				region = 133
+				region = 132
+			}		
+		}
+	}
+	name = "States Controlled in Eastern Europe"
+}
+
 states_in_asia = {
 	input = game:all_states
 	operators = {

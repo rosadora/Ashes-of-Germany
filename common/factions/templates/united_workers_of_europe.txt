@@ -21,6 +21,7 @@ faction_template_united_workers_of_europe = {
 
 	default_rules = {
 		joining_rule_socialist_only
+		government_in_exile_allowed
 		joining_rule_same_continent_only
 	}
 }

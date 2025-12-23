@@ -1463,7 +1463,11 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			create_faction = axis_of_roma
+			create_faction_from_template = {
+             template = faction_template_generic_dominance
+             name = "Axis of Roma"
+             icon = GFX_faction_logo_generic_15
+            }
 			SPR = {
 				add_timed_idea = {
 					idea = fascist_influence
