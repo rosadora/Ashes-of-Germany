@@ -122,5 +122,35 @@ country_event = { # Konigsberg Conference - Failure
 		}
 		news_event = news.3083
 		add_war_support = 0.1
+		set_country_flag = take_vilnius_at_any_costs
+	}
+}
+
+country_event = { # Little Prussia sides with Poland
+	id = lithuania.5
+	title = lithuania.5.t
+	desc = lithuania.5.d
+	picture = GFX_report_event_romania_poland_visit
+
+	is_triggered_only = yes
+
+	option = { # This is an act of war!
+		name = lithuania.5.a
+		ai_chance = {
+			base = 50
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = PRE
+        }
+		add_war_support = 0.1
+	}
+
+	option = { # We will protest but there is nothing we can do :'
+		name = lithuania.5.a
+		ai_chance = {
+			base = 50
+		}
+		add_war_support = 0.1
 	}
 }

@@ -2544,7 +2544,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value > 0.1
+             value > 0.05
             }
 			OR = {
 				has_government = classical_marxism
@@ -2580,7 +2580,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value < -0.1
+             value < -0.05
             }
 			OR = {
 				has_government = classical_marxism
@@ -2616,7 +2616,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value < -0.2
+             value < -0.15
             }
 			OR = {
 				has_government = classical_marxism
@@ -2653,7 +2653,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value > 0.2
+             value > 0.15
             }
 			OR = {
 				has_government = classical_marxism
@@ -2694,7 +2694,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value < -0.3
+             value < -0.25
             }
 			OR = {
 				has_government = classical_marxism
@@ -2734,7 +2734,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value < -0.5
+             value < -0.3
             }
 			OR = {
 				has_government = classical_marxism
@@ -3366,7 +3366,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value > 0.5
+             value > 0.3
             }
 			OR = {
 				has_government = classical_marxism
@@ -3683,7 +3683,7 @@
 		available = {
 			power_balance_value = {
              id = JAP_power_balance
-             value > 0.3
+             value > 0.25
             }
 			OR = {
 				has_government = classical_marxism
@@ -4327,7 +4327,7 @@
 		  add_war_support = 0.05
 		  add_power_balance_value = {
               id = JAP_power_balance
-              value = 0.05
+              value = 0.2
             }
 			random_owned_state = {
 				limit = {

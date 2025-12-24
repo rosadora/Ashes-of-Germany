@@ -906,3 +906,75 @@ country_event = {
         } 
 	}
 }
+country_event = { # The Prussian Entente
+	id = prussia.133
+	title = prussia.133.t
+	desc = prussia.133.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.133.a
+		ai_chance = {
+			base = 100
+		}
+		PRE = {
+			id = prussia.134
+			days = 1
+		}
+        set_global_flag = prussian_entente_ok
+		give_guarantee = PRE
+	}
+	option = {
+		name = prussia.133.b
+		ai_chance = {
+			base = 0
+		}
+		PRE = {
+			id = prussia.134
+			days = 1
+		}
+        set_global_flag = prussian_entente_no
+	}
+}
+country_event = { # The Prussian Entente - Ok
+	id = prussia.134
+	title = prussia.134.t
+	desc = prussia.134.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.134.a
+		ai_chance = {
+			base = 100
+		}
+		PRE = {
+			id = prussia.134
+			days = 1
+		}
+        set_global_flag = prussian_entente
+	}
+}
+country_event = { # The Prussian Entente - No
+	id = prussia.135
+	title = prussia.135.t
+	desc = prussia.135.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.135.a
+		ai_chance = {
+			base = 100
+		}
+		PRE = {
+			id = prussia.135
+			days = 1
+		}
+        set_global_flag = prussian_entente
+	}
+}

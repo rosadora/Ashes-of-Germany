@@ -132,7 +132,7 @@ faction_template_JAP_pan_asian_revolutuonary_front = {
 	}
 
 	default_rules = {
-		joining_rule_communist_only
+		joining_rule_socialist_only
 		faction_peace_rule_puppeting_focus
 		change_leader_rule_industry
 	}

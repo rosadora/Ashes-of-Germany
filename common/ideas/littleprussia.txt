@@ -58,5 +58,24 @@ ideas = {
 				democratic_drift = -0.01
 			}
 		}
+		growing_cartels = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_red_in_the_shadows
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.2
+			}
+		}
 	}
 }

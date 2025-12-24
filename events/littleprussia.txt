@@ -173,3 +173,59 @@ country_event = { # The Great Chess Game - The Corruption
 		}
 	}
 }
+
+country_event = { # The Great Chess Game - Vilnius Stance
+	id = pre.6
+	title = pre.6.t
+	desc = pre.6.d
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+
+	option = { # Lithuanian
+		name = pre.6.a
+		ai_chance = {
+			base = 100
+		}
+		add_power_balance_value = {
+            id = PRE_power_balance
+            value = -0.15
+        }
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		}
+	}
+
+	option = { # Neutrality
+		name = pre.6.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_political_power = -150
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+	}
+
+	option = { # Polish
+		name = pre.6.c
+		ai_chance = {
+			base = 100
+		}
+		add_power_balance_value = {
+            id = PRE_power_balance
+            value = 0.15
+        }
+		add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		}
+	}
+}
