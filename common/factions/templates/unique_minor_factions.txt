@@ -532,7 +532,6 @@ faction_template_BALTIC_ENTENTE_FACTION = {
 	goals = {
 		
 		# Short term goals
-		# faction_goal_war_on_communism
 
 		# Medium term goals
 		faction_goal_convoy_escort_force

@@ -54,8 +54,8 @@ music = {
 }
 
 music = {
-	name = "farwell_of_slavianka_extract"
-	file = "farwell_of_slavianka_extract.ogg"
+	name = "farewell_of_slavianka"
+	file = "farewell_of_slavianka.ogg"
 	volume = 1.3
 }
 
@@ -140,5 +140,11 @@ music = {
 music = {
 	name = "the_red_banner"
 	file = "the_red_banner.ogg"
+	volume = 1
+}
+
+music = {
+	name = "zygis_i_vilniu"
+	file = "zygis_i_vilniu.ogg"
 	volume = 1
 }

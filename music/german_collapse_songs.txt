@@ -188,3 +188,30 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "zygis_i_vilniu"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "victory_day_song"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "farewell_of_slavianka"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

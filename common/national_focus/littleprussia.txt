@@ -17,37 +17,11 @@
 	
 	default = no
 	focus = {
-		id = PRE_denounce_koenigsberg_treaty
-		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
-		x = 10
-		y = 0
-		prerequisite = {}
-		mutually_exclusive = { focus = PRE_gamble_one_last_time }
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		}
-		bypass = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		completion_reward = {
-		 add_timed_idea = {
-			idea = fading_zentrum
-			days = 100
-		 }
-		}
-	}
-	focus = {
 		id = PRE_gamble_one_last_time
 		icon = GFX_goal_the_last_gambling
 		x = 20
 		y = 0
 		prerequisite = {}
-		mutually_exclusive = { focus = PRE_denounce_koenigsberg_treaty }
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -266,7 +240,6 @@
 			factor = 1
 		}
 		available = {
-			has_global_flag = prussian_entente_ok
 		}
 		bypass = {
 		}
@@ -334,6 +307,18 @@
            owner = PRE
           }
 		 }
+		 LIT = {
+			country_event = {
+				id = lithuania.5
+				days = 1
+			}
+		 }
+		 POL = {
+			country_event = {
+				id = polish.1
+				days = 1
+			}
+		 }
 		}
 	}
 	focus = {
@@ -399,10 +384,6 @@
 			factor = 1
 		}
 		available = {
-			power_balance_value = {
-             id = PRE_power_balance
-             value < -0.3
-            }
 		}
 		bypass = {
 		}
@@ -411,6 +392,212 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_state_core = 807
+		}
+	}
+	focus = {
+		id = PRE_fervor_from_the_baltics
+		icon = GFX_focus_SOV_baltic_security
+		x = 1
+		y = 2
+		prerequisite = {focus = PRE_landlock_poland}
+		relative_position_id = PRE_side_with_lithuania
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = guardian_of_konigsberg
+			5 = {
+			create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Infanterie-Division (mot.)\" division_template = \"Infanterie-Division (mot.)\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		 }
+		 763 = {
+			create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Kavallerie-Brigade\" division_template = \"Kavallerie-Brigade\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		 }
+		}
+	}
+	focus = {
+		id = PRE_a_bright_future
+		icon = GFX_focus_BEL_v_for_victory
+		x = 1
+		y = 3
+		prerequisite = {focus = PRE_ignite_the_flames focus = PRE_fervor_from_the_baltics focus = PRE_prussian_troops_under_polish_protection}
+		mutually_exclusive = {focus = PRE_occupation}
+		relative_position_id = PRE_side_with_lithuania
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				and = {
+			     is_subject = no
+				 has_completed_focus = PRE_assert_independance
+				}
+				is_subject = yes
+			}
+			has_war = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = guardian_of_konigsberg
+			5 = {
+			create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Infanterie-Division (mot.)\" division_template = \"Infanterie-Division (mot.)\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		 }
+		 763 = {
+			create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Kavallerie-Brigade\" division_template = \"Kavallerie-Brigade\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		 }
+		}
+	}
+	focus = {
+		id = PRE_occupation
+		icon = GFX_focus_CZE_german_puppet
+		x = -1
+		y = 3
+		prerequisite = {focus = PRE_ignite_the_flames focus = PRE_fervor_from_the_baltics focus = PRE_prussian_troops_under_polish_protection}
+		mutually_exclusive = {focus = PRE_a_bright_future}
+		relative_position_id = PRE_side_with_poland
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = yes
+			has_completed_focus = PRE_assert_independance
+			has_war = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.075
+			custom_effect_tooltip = PRE_note_this_will_open_the_road_to_a_revolution
+			country_event = {
+				id = pre.7
+				days = 20
+			}
+		}
+	}
+	focus = {
+		id = PRE_trouble_in_allenstein
+		icon = GFX_focus_POL_riot_of_37
+		x = 5
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.075
+			custom_effect_tooltip = PRE_note_this_will_open_the_road_to_a_revolution
+			country_event = {
+				id = pre.7
+				days = 20
+			}
+		}
+	}
+	focus = {
+		id = PRE_drum_links_zwei_drei
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
+		x = -5
+		y = 1
+		prerequisite = {focus = PRE_trouble_in_allenstein}
+		mutually_exclusive = {focus = PRE_the_last_germany}
+		relative_position_id = PRE_trouble_in_allenstein
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRE_the_last_germany
+		icon = GFX_focus_ger_oppose_hitler
+		x = 5
+		y = 1
+		prerequisite = {focus = PRE_trouble_in_allenstein}
+		mutually_exclusive = {focus = PRE_drum_links_zwei_drei}
+		relative_position_id = PRE_trouble_in_allenstein
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -484,6 +671,51 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_state_core = 188
+		}
+	}
+	focus = {
+		id = PRE_prussian_troops_under_polish_protection
+		icon = GFX_focus_POL_expand_polish_intelligence
+		x = -1
+		y = 2
+		prerequisite = {focus = PRE_cross_the_niemen}
+		relative_position_id = PRE_side_with_poland
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 5 = {
+			create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Infanterie-Division (mot.)\" division_template = \"Infanterie-Division (mot.)\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		 }
+		 763 = {
+			create_unit = {
+           division = "name = \"Infanterie-Division\" division_template = \"Infanterie-Division\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		  create_unit = {
+           division = "name = \"Kavallerie-Brigade\" division_template = \"Kavallerie-Brigade\" start_experience_factor = 0.3"
+           owner = PRE
+          }
+		 }
 		}
 	}
 }

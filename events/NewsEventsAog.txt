@@ -1110,7 +1110,7 @@ news_event = {
 	}
 
     immediate = {
-		play_song = "victory_day_song"
+		play_song = victory_day_song
 		hidden_effect = {
 		 SOV = {
 			remove_ideas = second_russian_civil_war
@@ -1148,7 +1148,7 @@ news_event = {
 
     immediate = {
 		hidden_effect = {
-			play_song = "farwell_of_slavianka"
+			play_song = farwell_of_slavianka
 		 SOV = {
 			remove_ideas = second_russian_civil_war
 		 }
@@ -1624,6 +1624,32 @@ news_event = { #Second Sakoku
 	major = yes
 
 	is_triggered_only = yes
+	
+	option = {
+		name = news.3091.a
+	}
+}
+news_event = { #Second Sakoku
+    id = news.3091
+	title = news.3091.t
+	desc = news.3091.d
+	picture = GFX_news_second_sakoku_news
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		LIT = {
+			has_war_with = POL
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			play_song = zygis_i_vilniu
+		}
+	}
 	
 	option = {
 		name = news.3091.a

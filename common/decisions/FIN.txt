@@ -33,7 +33,7 @@ FIN_intervention_in_russian_civil_war = {
 		}
 
 		remove_effect = {
-			play_song = "uraliin"
+			play_song = uraliin
 			transfer_state = 216
 			transfer_state = 215
 			transfer_state = 213

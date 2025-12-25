@@ -229,3 +229,78 @@ country_event = { # The Great Chess Game - Vilnius Stance
 		}
 	}
 }
+
+country_event = { # Strange symbols on the walls
+	id = pre.7
+	title = pre.7.t
+	desc = pre.7.d
+	picture = GFX_report_event_desertion_poster
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.7.a
+		ai_chance = {
+			base = 100
+		}
+		PRE = {
+			id = pre.8
+			days = 15
+		}
+	}
+}
+
+country_event = { # Volkisch adhesion is increasing
+	id = pre.8
+	title = pre.8.t
+	desc = pre.8.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.8.a
+		ai_chance = {
+			base = 100
+		}
+		PRE = {
+			id = pre.9
+			days = 10
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.1
+		}
+	}
+}
+
+
+country_event = { # KPD makes its mooves
+	id = pre.9
+	title = pre.9.t
+	desc = pre.9.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.9.a
+		ai_chance = {
+			base = 100
+		}
+		PRE = {
+			id = pre.10
+			days = 10
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = -0.1
+		}
+	}
+}
