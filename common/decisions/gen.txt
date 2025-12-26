@@ -951,7 +951,6 @@ gen_war_of_unification = {
 
 		visible = {
 			OR = {
-				original_tag = PRS
 				original_tag = SPF
 				original_tag = HAN
 				original_tag = WUR

@@ -19,6 +19,9 @@ country_event = {
 		LIT = {
 			puppet = PRE
 		}
+		remove_power_balance = {
+				id = PRE_power_balance
+			}
 	}
 }
 
@@ -37,6 +40,9 @@ country_event = {
 		}
 		POL = {
 			puppet = PRE
+		}
+		remove_power_balance = {
+			id = PRE_power_balance
 		}
 	}
 }
@@ -243,7 +249,7 @@ country_event = { # Strange symbols on the walls
 		ai_chance = {
 			base = 100
 		}
-		PRE = {
+		country_event = {
 			id = pre.8
 			days = 15
 		}
@@ -263,7 +269,7 @@ country_event = { # Volkisch adhesion is increasing
 		ai_chance = {
 			base = 100
 		}
-		PRE = {
+		country_event = {
 			id = pre.9
 			days = 10
 		}
@@ -276,7 +282,7 @@ country_event = { # Volkisch adhesion is increasing
 }
 
 
-country_event = { # KPD makes its mooves
+country_event = { # The Moderate wing of fascism
 	id = pre.9
 	title = pre.9.t
 	desc = pre.9.d
@@ -289,7 +295,7 @@ country_event = { # KPD makes its mooves
 		ai_chance = {
 			base = 100
 		}
-		PRE = {
+		country_event = {
 			id = pre.10
 			days = 10
 		}
@@ -301,6 +307,344 @@ country_event = { # KPD makes its mooves
 		add_popularity = {
 			ideology = social_democracy 
 			popularity = -0.1
+		}
+	}
+}
+
+country_event = { # Illimited Strikes in Allenstein 
+	id = pre.10
+	title = pre.10.t
+	desc = pre.10.d
+	picture = GFX_report_event_generic_strike
+
+	is_triggered_only = yes
+
+	option = {
+		name = pre.10.a
+		ai_chance = {
+			base = 100
+		}
+		country_event = {
+			id = pre.11
+			days = 2
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.1
+		}
+	}
+
+	option = {
+		name = pre.10.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.15
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.05
+		}
+		custom_effect_tooltip = PRE_disastrous_outcome_possible_for_allenstein
+
+		country_event = {
+			id = pre.12
+			days = 2
+		}
+	}
+}
+
+country_event = { # Workers Demands
+	id = pre.11
+	title = pre.11.t
+	desc = pre.11.d
+	picture = GFX_report_event_generic_strike
+
+	is_triggered_only = yes
+
+	option = { # We can concede on some points
+		name = pre.11.a
+		ai_chance = {
+			base = 100
+		}
+		country_event = {
+			id = pre.13
+			days = 10
+		}
+		add_ideas = public_healthcare
+		add_popularity = {
+			ideology = classical_liberalism 
+			popularity = 0.05
+		}
+	}
+
+	option = { # It would kill the economy
+		name = pre.11.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.15
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.05
+		}
+		custom_effect_tooltip = PRE_disastrous_outcome_possible_for_allenstein
+
+		country_event = {
+			id = pre.12
+			days = 10
+		}
+	}
+}
+
+country_event = { # Troubles in Allenstein
+	id = pre.12
+	title = pre.12.t
+	desc = pre.12.d
+	picture = GFX_report_event_spr_spanish_civil_war
+
+	is_triggered_only = yes
+
+	option = { # Policemen are deserting
+		name = pre.12.a
+		ai_chance = {
+			base = 100
+		}
+		country_event = {
+			id = pre.15
+			days = 10
+		}
+		add_stability = -0.15
+		complete_national_focus = PRE_trouble_in_allenstein
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.05
+		}
+	}
+
+	option = { # The state supports order
+		name = pre.12.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.15
+		complete_national_focus = PRE_trouble_in_allenstein
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.05
+		}
+		country_event = {
+			id = pre.14
+			days = 10
+		}
+	}
+}
+
+country_event = { # NSFP Issue
+	id = pre.13
+	title = pre.13.t
+	desc = pre.13.d
+	picture = GFX_report_event_generic_strike
+
+	is_triggered_only = yes
+
+	option = { # We have to dissolve the organization
+		name = pre.13.a
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -200
+		add_stability = -0.05
+		add_popularity = {
+			ideology = fascism 
+			popularity = -0.05
+		}
+	}
+
+	option = { # We can't do anything
+		name = pre.13.b
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.05
+		}
+		set_country_flag = PRE_we_cant_do_anything
+		custom_effect_tooltip = PRE_volkisch_coup_possible
+
+		country_event = {
+			id = pre.14
+			days = 10
+		}
+	}
+}
+
+country_event = { # Volkisch Coup
+	id = pre.14
+	title = pre.14.t
+	desc = pre.14.d
+	picture = GFX_report_event_ARG_coup_consolidating
+
+	trigger = {
+		tag = PRE 
+		has_country_flag = PRE_we_cant_do_anything
+		fascism > 0.35
+	}
+
+	fire_only_once = yes
+
+	option = { # Hurrah!
+		name = pre.14.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		complete_national_focus = PRE_trouble_in_allenstein
+		complete_national_focus = PRE_the_last_germany
+	}
+}
+
+country_event = { # Unrest is spreading in the whole country
+	id = pre.15
+	title = pre.15.t
+	desc = pre.15.d
+	picture = GFX_report_event_spr_spanish_civil_war
+
+	is_triggered_only = yes
+
+	option = { # Looks like we are cooked
+		name = pre.15.a
+		ai_chance = {
+			base = 100
+		}
+		country_event = {
+			id = pre.16
+			days = 10
+		}
+		complete_national_focus = PRE_trouble_in_allenstein
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { # SPD leaves the government
+	id = pre.16
+	title = pre.16.t
+	desc = pre.16.d
+	picture = GFX_report_event_romania_poland_visit
+
+	is_triggered_only = yes
+
+	option = { # Is this the end?
+		name = pre.16.a
+		ai_chance = {
+			base = 100
+		}
+		country_event = {
+			id = pre.17
+			days = 10
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = -0.075
+		}
+	}
+}
+
+country_event = { # Allenstein Rat assaults official buildings
+	id = pre.17
+	title = pre.17.t
+	desc = pre.17.d
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+
+	is_triggered_only = yes
+
+	option = { # Is this the end?
+		name = pre.17.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = classical_marxism
+			elections_allowed = no
+		}
+		complete_national_focus = PRE_drum_links_zwei_drei
+	}
+}
+
+country_event = { # Victory in Liberation War
+	id = pre.18
+	title = pre.18.t
+	desc = pre.18.d
+	picture = GFX_report_event_ARG_coup_consolidating
+
+	trigger = {
+		tag = PRE 
+		has_war_with = POL
+		POL = {
+			surrender_progress > 0.3
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { # We are at peace
+		name = pre.18.a
+		ai_chance = {
+			base = 100
+		}
+		set_global_flag = poland_lost_little_prussian_war
+		news_event = {
+			id = news.3092
+			days = 1
+		}
+		white_peace = POL
+		transfer_state = 807
+		IF = {
+			limit = {
+				PRS = {
+					has_war_with = POL
+					has_war_with = SIL
+				}
+			}
+			PRS = {
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 762
+				transfer_state = 86
+				white_peace = POL
+				white_peace = SIL
+			}
+		}
+		IF = {
+			limit = {
+				LIT = {
+					has_war_with = POL
+				}
+			}
+			LIT = {
+				transfer_state = 784
+				white_peace = POL
+			}
 		}
 	}
 }

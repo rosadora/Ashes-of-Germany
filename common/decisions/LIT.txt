@@ -11,6 +11,10 @@ LIT_lithuanian_politics = {
         }
 		available = {
 			date > 1937.05.01
+			NOT = {
+				owns_state = 784
+				has_war_with = POL
+			}
 		}
         priority = 1000
 

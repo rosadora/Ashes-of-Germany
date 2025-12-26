@@ -247,6 +247,9 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
+			remove_power_balance = {
+				id = PRE_power_balance
+			}
 			remove_ideas = treaty_of_koenigsberg
 			remove_ideas = the_visible_hand
 			country_lock_all_division_template = no
@@ -339,7 +342,7 @@
 		available = {
 			power_balance_value = {
              id = PRE_power_balance
-             value < -0.3
+             value < -0.29
             }
 		}
 		bypass = {
@@ -618,7 +621,7 @@
 		available = {
 			power_balance_value = {
              id = PRE_power_balance
-             value > 0.3
+             value > 0.29
             }
 		}
 		bypass = {
@@ -716,6 +719,39 @@
            owner = PRE
           }
 		 }
+		}
+	}
+	focus = {
+		id = PRE_write_a_constitution
+		icon = GFX_focus_generic_treaty
+		x = 30
+		y = 0
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no 
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+			OR = {
+			has_completed_focus = PRE_a_bright_future
+			has_completed_focus = PRE_occupation
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		 set_cosmetic_tag = PRE_REP
 		}
 	}
 }

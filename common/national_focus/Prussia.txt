@@ -3466,6 +3466,40 @@
 		}
 	}
 	focus = {
+		id = PRS_prussian_union
+		icon = GFX_focus_GER_prussian_legacy
+		x = 5
+		y = 3
+		prerequisite = {focus = PRS_the_electoral_campaign focus = PRS_crackdown_on_socialist_opposition}
+		relative_position_id = PRS_a_democratic_empire
+		cost = 7
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_global_flag = poland_lost_little_prussian_war
+			PRE = {
+				is_subject = no
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			PRE = {
+				country_event = {
+					id = prussia.136
+					days = 1
+				}
+			}
+			add_state_core = 807
+			add_state_core = 85
+			add_state_core = 5
+			add_state_core = 763
+			add_state_core = 188
+		}
+	}
+	focus = {
 		id = PRS_the_great_game
 		icon = GFX_goal_the_great_game
 		x = 8

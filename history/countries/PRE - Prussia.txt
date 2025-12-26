@@ -114,7 +114,7 @@ add_ideas = {
 set_power_balance = {
     id = PRE_power_balance
     left_side = PRE_lithuania_side
-    right_side = JAP_poland_side
+    right_side = PRE_poland_side
 }
 
 create_country_leader = {

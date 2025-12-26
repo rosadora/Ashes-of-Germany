@@ -189,7 +189,7 @@ country_event = { # Formation of the Baltic League
 	}
 
 	option = { # We will protest but there is nothing we can do :'
-		name = lithuania.6.a
+		name = lithuania.6.b
 		ai_chance = {
 			base = 0
 		}
@@ -210,14 +210,34 @@ country_event = { # Formation of the Baltic League
 			base = 100
 		}
 		LIT = {
-			add_to_faction = FROM
+			country_event = {
+				id = lithuania.8
+				days = 1
+			}
 		}
 	}
 
-	option = { # Against Foreign Invasion we Stand!
+	option = { # No
 		name = lithuania.7.b
 		ai_chance = {
 			base = 0
 		}
+	}
+}
+
+country_event = { # Formation of the Baltic League
+	id = lithuania.8
+	title = lithuania.8.t
+	desc = lithuania.8.d
+	picture = GFX_report_event_romania_poland_visit
+
+	is_triggered_only = yes
+
+	option = { # Against Foreign Invasion we Stand!
+		name = lithuania.8.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = FROM
 	}
 }

@@ -919,19 +919,23 @@ country_event = { # The Prussian Entente
 		ai_chance = {
 			base = 100
 		}
-		PRE = {
+		country_event = {
 			id = prussia.134
 			days = 1
 		}
         set_global_flag = prussian_entente_ok
 		give_guarantee = PRE
+		add_state_core = 86
+		add_state_core = 66
+		add_state_core = 67
+		add_state_core = 762
 	}
 	option = {
 		name = prussia.133.b
 		ai_chance = {
 			base = 0
 		}
-		PRE = {
+		country_event = {
 			id = prussia.134
 			days = 1
 		}
@@ -951,7 +955,7 @@ country_event = { # The Prussian Entente - Ok
 		ai_chance = {
 			base = 100
 		}
-		PRE = {
+		country_event = {
 			id = prussia.134
 			days = 1
 		}
@@ -971,10 +975,86 @@ country_event = { # The Prussian Entente - No
 		ai_chance = {
 			base = 100
 		}
-		PRE = {
+		country_event = {
 			id = prussia.135
 			days = 1
 		}
         set_global_flag = prussian_entente
+	}
+}
+country_event = { # The Prussian Union
+	id = prussia.136
+	title = prussia.136.t
+	desc = prussia.136.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.136.a
+		ai_chance = {
+			base = 70
+		}
+		PRS = {
+		country_event = {
+			id = prussia.137
+			days = 1
+		}
+		}
+	}
+
+	option = {
+		name = prussia.136.b
+		ai_chance = {
+			base = 30
+		}
+		PRS = {
+		country_event = {
+			id = prussia.138
+			days = 1
+		}
+		}
+	}
+}
+country_event = { # The Prussian Union - Successful
+	id = prussia.137
+	title = prussia.137.t
+	desc = prussia.137.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.137.a
+		ai_chance = {
+			base = 70
+		}
+		news_event = {
+			id = news.3093
+			days = 1
+		}
+		annex_country = {
+          target = PRE
+          transfer_troops = yes
+        }
+	}
+}
+country_event = { # The Prussian Union - Failure
+	id = prussia.138
+	title = prussia.138.t
+	desc = prussia.138.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.138.a
+		ai_chance = {
+			base = 70
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = PRE
+        }
 	}
 }
