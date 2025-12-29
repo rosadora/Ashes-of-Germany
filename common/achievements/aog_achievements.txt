@@ -140,6 +140,24 @@ wir_sind_die_arbeiter_von_wien = {
 	}
 }
 
+the_happiest_people_in_the_world = {
+	id = 11
+	
+	possible = {
+		difficulty > 1
+		tag = KOR
+	}
+	
+	happened = {
+		OR = {
+			has_government = communism 
+			has_government = classical_marxism 
+		}
+		arms_factory > 30
+		has_stability > 0.99
+	}
+}
+
 ###########################
 ## 3 CHAMPION ACHIEVEMENTS
 #############################
