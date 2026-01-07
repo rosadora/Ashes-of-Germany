@@ -648,3 +648,87 @@ country_event = { # Victory in Liberation War
 		}
 	}
 }
+
+country_event = { # SPD Victory in Elections
+	id = pre.19
+	title = pre.19.t
+	desc = pre.19.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Another Victory for Social-Traitors :'
+		name = pre.19.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+		complete_national_focus = PRE_spd_victory
+	}
+}
+
+country_event = { # Zentrum Victory in Elections
+	id = pre.20
+	title = pre.20.t
+	desc = pre.20.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Another Victory for the Establishment :'
+		name = pre.20.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = classical_liberalism
+			elections_allowed = yes
+		}
+		complete_national_focus = PRE_zentrum_victory
+	}
+}
+
+country_event = { # DNVP Victory in Elections
+	id = pre.21
+	title = pre.21.t
+	desc = pre.21.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Surprising :'
+		name = pre.21.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		complete_national_focus = PRE_dnvp_victory
+	}
+}
+
+country_event = { # NSFP Victory in Elections
+	id = pre.22
+	title = pre.22.t
+	desc = pre.22.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # Surprising :'
+		name = pre.22.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+		}
+		complete_national_focus = PRE_the_last_germany
+	}
+}

@@ -1,0 +1,153 @@
+
+PRE_parliamentary_elections = {
+
+	PRE_elections_day = {
+
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = PRE
+		}
+
+		available = {
+			has_completed_focus = PRE_trouble_in_allenstein
+		}
+
+		days_mission_timeout = 110
+		fire_only_once = yes
+
+		activation = {
+          has_completed_focus = PRE_move_forward
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { PRE_spd_coalition_support = party_popularity@social_democracy }
+				     add_to_temp_variable = { PRE_spd_coalition_support = party_popularity@social_liberalism }
+				     check_variable = { PRE_spd_coalition_support > PRE_zentrum_coalition_support }
+					 check_variable = { PRE_spd_coalition_support > PRE_nsfp_support }
+					 check_variable = { PRE_spd_coalition_support > PRE_dnvp_coalition_support }
+			        }
+				}
+				country_event = {
+				   id = pre.19
+				   days = 1
+			    }
+			}
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { PRE_zentrum_coalition_support = party_popularity@classical_liberalism }
+				     add_to_temp_variable = { PRE_zentrum_coalition_support = party_popularity@democratic }
+				     check_variable = { PRE_zentrum_coalition_support > PRE_spd_coalition_support }
+					 check_variable = { PRE_zentrum_coalition_support > PRE_nsfp_support }
+					 check_variable = { PRE_zentrum_coalition_support > PRE_dnvp_coalition_support }
+			        }
+				}
+				country_event = {
+				   id = pre.20
+				   days = 1
+			    }
+			}
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { PRE_dnvp_coalition_support = party_popularity@neutrality }
+				     add_to_temp_variable = { PRE_dnvp_coalition_support = party_popularity@ultra_nationalism }
+				     check_variable = { PRE_dnvp_coalition_support > PRE_spd_coalition_support }
+					 check_variable = { PRE_dnvp_coalition_support > PRE_nsfp_support }
+					 check_variable = { PRE_dnvp_coalition_support > PRE_zentrum_coalition_support }
+			        }
+				}
+				country_event = {
+				   id = pre.21
+				   days = 1
+			    }
+			}
+			IF = {
+				limit = {
+					custom_trigger_tooltip = {
+				     set_temp_variable = { PRE_nsfp_support = party_popularity@fascism }
+				     check_variable = { PRE_nsfp_support > PRE_spd_coalition_support }
+					 check_variable = { PRE_nsfp_support > PRE_zentrum_coalition_support }
+					 check_variable = { PRE_nsfp_support > PRE_dnvp_coalition_support }
+			        }
+				}
+				country_event = {
+				   id = pre.22
+				   days = 1
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRE_new_poll = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = PRE
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+		}
+
+		days_mission_timeout = 2
+		priority = 2
+
+		activation = {
+			has_active_mission = PRE_elections_day
+		}
+
+		is_good = no
+
+		timeout_effect = {
+			clear_variable = PRE_spd_coalition_support
+			clear_variable = PRE_zentrum_coalition_support
+			clear_variable = PRE_nsfp_support
+
+		set_variable = {
+          var = PRE_spd_coalition_support
+          value = party_popularity@social_democracy
+        }
+        add_to_variable = {
+          var = PRE_spd_coalition_support
+          value = party_popularity@social_liberalism
+        }
+
+        set_variable = {
+          var = PRE_zentrum_coalition_support
+          value = party_popularity@classical_liberalism
+        }
+        add_to_variable = {
+          var = PRE_zentrum_coalition_support
+          value = party_popularity@democratic
+        }
+        set_variable = {
+          var = PRE_nsfp_support
+          value = party_popularity@fascism
+        }
+
+        set_variable = {
+          var = PRE_dnvp_coalition_support
+          value = party_popularity@neutrality
+        }
+        add_to_variable = {
+          var = PRE_dnvp_coalition_support
+          value = party_popularity@ultra_nationalism
+        }
+
+		}
+	}
+}

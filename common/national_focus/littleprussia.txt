@@ -722,6 +722,102 @@
 		}
 	}
 	focus = {
+		id = PRE_the_provisional_government
+		icon = GFX_focus_NOR_continue_nygaardsvold_government
+		x = 26
+		y = 0
+		prerequisite = {}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war_with = POL
+				has_war_with = LIT
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = 100
+		}
+	}
+	focus = {
+		id = PRE_united_in_religion
+		icon = GFX_focus_ARG_state_atheism
+		x = -1
+		y = 1
+		prerequisite = {focus = PRE_the_provisional_government}
+		mutually_exclusive = {focus = PRE_preserve_the_status_quo}
+		relative_position_id = PRE_the_provisional_government
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+			OR = {
+				has_war_with = POL
+				has_war_with = LIT
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = pluralism
+		 add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		 }
+		}
+	}
+	focus = {
+		id = PRE_preserve_the_status_quo
+		icon = GFX_focus_generic_catholic_dominion
+		x = 1
+		y = 1
+		prerequisite = {focus = PRE_the_provisional_government}
+		mutually_exclusive = {focus = PRE_united_in_religion}
+		relative_position_id = PRE_the_provisional_government
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war_with = POL
+				has_war_with = LIT
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		 add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		 }
+		 add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		 }
+		}
+	}
+	focus = {
 		id = PRE_write_a_constitution
 		icon = GFX_focus_generic_treaty
 		x = 30
@@ -732,7 +828,6 @@
 			factor = 1
 		}
 		available = {
-			is_subject = no 
 			OR = {
 				has_government = democratic
 				has_government = classical_liberalism
@@ -752,6 +847,110 @@
 		completion_reward = {
 		 add_stability = 0.05
 		 set_cosmetic_tag = PRE_REP
+		}
+	}
+	focus = {
+		id = PRE_honor_heroes
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = -1
+		y = 1
+		prerequisite = {focus = PRE_write_a_constitution}
+		mutually_exclusive = {focus = PRE_controlled_democracy}
+		relative_position_id = PRE_write_a_constitution
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no 
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = honor_the_heroes
+		 add_popularity = {
+			ideology = classical_liberalism
+			popularity = 0.05
+		 }
+		}
+	}
+	focus = {
+		id = PRE_controlled_democracy
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		x = 1
+		y = 1
+		prerequisite = {focus = PRE_write_a_constitution}
+		mutually_exclusive = {focus = PRE_honor_heroes}
+		relative_position_id = PRE_write_a_constitution
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = yes 
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_political_power = -100
+		 add_popularity = {
+			ideology = classical_liberalism
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		 }
+		 add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		 }
+		}
+	}
+	focus = {
+		id = PRE_move_forward
+		icon = GFX_focus_generic_horse_studs
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_controlled_democracy focus = PRE_honor_heroes}
+		relative_position_id = PRE_write_a_constitution
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 custom_effect_tooltip = PRE_election_tooltip
 		}
 	}
 }

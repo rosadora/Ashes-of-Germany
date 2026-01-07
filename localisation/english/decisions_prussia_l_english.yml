@@ -145,3 +145,8 @@
  PRS_annex_silesia:0 "Annex Silesia"
  PRS_annex_mecklemburg:0 "Annex Mecklemburg"
  PRS_annex_schleswig:0 "Annex Schleswig"
+ ### LITTLE PRUSSIA ###
+ PRE_parliamentary_elections:0 "Parliamentary Elections"
+ PRE_elections_day:0 "Election Day"
+ PRE_parliamentary_elections_desc:0 "The §ONation§! needs a strong leadership for next years. It's time to §Oelect a majority§! to guide our nation.\n\n§OVote Projection:§!\n§tSPD§! : [?PRE_spd_coalition_support|%]\n§YZentrum§!: [?PRE_zentrum_coalition_support|%]\n§gDNVP§!: [?PRE_dnvp_coalition_support|%]\n§GNSFP§!: [?PRE_nsfp_support|%]"
+ PRE_new_poll:0 "New Poll"
