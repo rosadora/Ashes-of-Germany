@@ -178,6 +178,10 @@
 			days = 1
 			}
 		 }
+		 add_popularity = {
+			ideology = neutrality
+			popularity = 0.07
+		 }
 		}
 	}
 	focus = {
@@ -783,6 +787,74 @@
 		}
 	}
 	focus = {
+		id = PRE_womens_regiment
+		icon = GFX_focus_generic_women_in_military
+		x = -1
+		y = 2
+		prerequisite = {focus = PRE_united_in_religion focus = PRE_preserve_the_status_quo}
+		mutually_exclusive = {focus = PRE_women_in_factories}
+		relative_position_id = PRE_the_provisional_government
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war_with = POL
+				has_war_with = LIT
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = women_in_factories
+		 add_ideas = volunteer_women
+		 add_manpower = 20000
+		 add_popularity = {
+			ideology = social_democracy
+			popularity = 0.03
+		 }
+		 add_popularity = {
+			ideology = social_liberalism
+			popularity = 0.03
+		 }
+		 add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		 }
+		}
+	}
+	focus = {
+		id = PRE_women_in_factories
+		icon = GFX_focus_AUS_courting_the_princess_of_industry
+		x = 1
+		y = 2
+		prerequisite = {focus = PRE_united_in_religion focus = PRE_preserve_the_status_quo}
+		mutually_exclusive = {focus = PRE_womens_regiment}
+		relative_position_id = PRE_the_provisional_government
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war_with = POL
+				has_war_with = LIT
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = women_in_factories
+		}
+	}
+	focus = {
 		id = PRE_preserve_the_status_quo
 		icon = GFX_focus_generic_catholic_dominion
 		x = 1
@@ -818,12 +890,264 @@
 		}
 	}
 	focus = {
+		id = PRE_affirm_german_identity
+		icon = GFX_focus_GER_tend_to_the_future
+		x = 40
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PRE_distance_from_germany}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = PRE_move_forward
+				has_completed_focus = PRE_drum_links_zwei_drei
+				has_completed_focus = PRE_the_last_germany
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					in_faction_with = PRS
+				}
+				leave_faction = yes
+			}
+		 add_stability = -0.05
+		 add_war_support = 0.05
+		 PRS = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+			HAN = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+			SHL = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+			SAX = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+			MEK = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+			BAY = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+			WUR = {
+				every_core_state = {
+					add_core_of = PRE
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRE_remilitarize_the_country
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 1
+		y = 1
+		prerequisite = {focus = PRE_affirm_german_identity}
+		relative_position_id = PRE_affirm_german_identity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = PRE_move_forward
+				has_completed_focus = PRE_drum_links_zwei_drei
+				has_completed_focus = PRE_the_last_germany
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRE_reinstore_conscription
+		icon = GFX_focus_generic_advanced_military_studies
+		x = -1
+		y = 1
+		prerequisite = {focus = PRE_affirm_german_identity}
+		relative_position_id = PRE_affirm_german_identity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = PRE_move_forward
+				has_completed_focus = PRE_drum_links_zwei_drei
+				has_completed_focus = PRE_the_last_germany
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = service_by_requirement
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = PRE_dominance_on_the_baltics
+		icon = GFX_focus_generic_attack_baltics
+		x = 2
+		y = 2
+		prerequisite = {focus = PRE_reinstore_conscription}
+		prerequisite = {focus = PRE_remilitarize_the_country}
+		relative_position_id = PRE_affirm_german_identity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = PRE_move_forward
+				has_completed_focus = PRE_drum_links_zwei_drei
+				has_completed_focus = PRE_the_last_germany
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 188
+			create_wargoal = {
+              type = annex_everything
+              target = LIT
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = LAT
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = EST
+            }
+		}
+	}
+	focus = {
+		id = PRE_second_prussian_war
+		icon = GFX_focus_ger_oppose_hitler
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_reinstore_conscription}
+		prerequisite = {focus = PRE_remilitarize_the_country}
+		relative_position_id = PRE_affirm_german_identity
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = PRE_move_forward
+				has_completed_focus = PRE_drum_links_zwei_drei
+				has_completed_focus = PRE_the_last_germany
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = {
+              type = annex_everything
+              target = PRS
+            }
+		}
+	}
+	focus = {
+		id = PRE_distance_from_germany
+		icon = GFX_focus_GER_subdue_the_wehrmacht
+		x = 35
+		y = 0
+		prerequisite = {}
+		mutually_exclusive = {focus = PRE_affirm_german_identity}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = PRE_move_forward
+				has_completed_focus = PRE_drum_links_zwei_drei
+				has_completed_focus = PRE_the_last_germany
+			}
+			OR = {
+				has_government = democratic
+				has_government = classical_liberalism
+				has_government = social_liberalism
+				has_government = social_democracy
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_stability = 0.05
+		 add_war_support = -0.05
+		}
+	}
+	focus = {
 		id = PRE_write_a_constitution
 		icon = GFX_focus_generic_treaty
 		x = 30
 		y = 0
 		prerequisite = {}
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -857,7 +1181,7 @@
 		prerequisite = {focus = PRE_write_a_constitution}
 		mutually_exclusive = {focus = PRE_controlled_democracy}
 		relative_position_id = PRE_write_a_constitution
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -891,7 +1215,7 @@
 		prerequisite = {focus = PRE_write_a_constitution}
 		mutually_exclusive = {focus = PRE_honor_heroes}
 		relative_position_id = PRE_write_a_constitution
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -932,7 +1256,7 @@
 		y = 2
 		prerequisite = {focus = PRE_controlled_democracy focus = PRE_honor_heroes}
 		relative_position_id = PRE_write_a_constitution
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -951,6 +1275,72 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 custom_effect_tooltip = PRE_election_tooltip
+		}
+	}
+	focus = {
+		id = PRE_spd_victory
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		x = -2
+		y = 1
+		prerequisite = {focus = PRE_move_forward}
+		relative_position_id = PRE_move_forward
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRE_zentrum_victory
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 2
+		y = 1
+		prerequisite = {focus = PRE_move_forward}
+		relative_position_id = PRE_move_forward
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRE_dnvp_victory
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 6
+		y = 1
+		prerequisite = {focus = PRE_move_forward}
+		relative_position_id = PRE_move_forward
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
 		}
 	}
 }
