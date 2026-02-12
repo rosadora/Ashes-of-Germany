@@ -3,6 +3,11 @@ MAL_UK = {
     color_ui = rgb { 255 73 121 }
 }
 
+LBA_MUSSOLINI_FLED= {
+	color = rgb { 67 127 63 }
+	color_ui = rgb { 87 165 82 }
+}
+
 MON_khatanate = {
     color = rgb { 56 48 39 }
     color_ui = rgb { 56 48 39 }

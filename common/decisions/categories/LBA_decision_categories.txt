@@ -1,0 +1,26 @@
+LBA_raise_militias = {
+	priority = 50
+
+	picture = GFX_decision_category_ITA_colonial_management
+
+	allowed = {
+		tag = AML
+	}
+
+	visible = {
+		has_war_with = LBA
+	}
+}
+LBA_troops_from_italy = {
+		priority = 50
+
+	picture = GFX_decision_category_ITA_colonial_management
+
+	allowed = {
+		tag = LBA
+	}
+
+	visible = {
+		has_character = LBA_benito_mussolini
+	}
+}

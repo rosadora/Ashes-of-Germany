@@ -1,0 +1,240 @@
+add_namespace = LBA_events
+#Putting event loc here as there arent that many and no one else will prob touch this
+country_event = {
+	id = LBA_events.1
+	title = "Mussolini Escapes!"
+	desc = "We have attempted to storm the palace of Benito Mussolini, we managed to get thru to the office of Mussolini only for him to escape via helicopter East."
+	picture = GFX_report_event_generic_mussolini
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Rats!"
+		every_state = {
+					limit = {
+						is_core_of = LBA
+					}
+					add_core_of = AML
+				}
+				AML = {
+					transfer_state = 449
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 450
+					transfer_state = 451
+					declare_war_on = {
+						target = LBA
+						type = annex_everything
+					}
+				}
+	}
+}
+
+news_event = {
+	id = LBA_events.2
+	title = "Libya Crowns a King!"
+	desc = "After Libya has broken free from Italy during the Italian Civil war, been thru civil war, and deposed Mussolini, the nation has Crowned a King!"
+	picture = GFX_news_event_ITA_papal_coronation
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "Good for Them!"
+		trigger = {
+			NOT = {
+				tag = LBA
+			}
+		}
+	}
+
+	option = {
+		name = "To a new Era!"
+		trigger = {
+			tag = LBA
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.3
+	title = "The [LBA.GetAdjective]s request North Africa"
+	desc = "Lybia, the nation we allowed into our alliance, has requested control over our North African territories. Although it would weaken us, it will allow our ally to be more self-sufficient."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Absolutely Not!"
+		LBA = {
+			country_event = {
+				id = LBA_events.4
+				days = 2
+			}
+		}
+		 ai_chance = {
+        base = 75
+		}
+	}
+
+	option = {
+		name = "To a strong Ally!"
+		ai_chance = {
+			base = 25
+		}
+		LBA = {
+			country_event = {
+				id = LBA_events.5
+				days = 2
+			}
+		}
+		modifier = {
+            factor = 4 
+            FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value > 50
+                }
+            }
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = TUN
+			}
+			transfer_state_to = LBA
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = MOR
+			}
+			transfer_state_to = LBA
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = ALG
+			}
+			transfer_state_to = LBA
+		}
+
+	}
+
+}
+
+
+country_event = {
+	id = LBA_events.4
+	title = "The [FRA.GetAdjective] Deny!"
+	desc = "Although our request was reasonable, the French nation has denied our request of control over North Africa!"
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Oh Well!"
+	}
+
+	option = {
+		name = "Unnacceptable!"
+		LBA = {
+			leave_faction = yes
+			create_wargoal = {
+				target = FRA
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.5
+	title = "The [FRA.GetAdjective] Cave!"
+	desc = "The [FRA.GetAdjective] have caved to our so called demand over North Africa. In all honesty, we all doubted the decision of requesting North Africa, but, the Gambit worked!"
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "A Shocking Outcome!"
+	}
+}
+
+country_event = {
+	id = LBA_events.6
+	title = "Libya requests guns"
+	desc = "Libya, the newest edition to the Reikspact, has requested guns from Prussia. They argue it is so they can develop their armed forces, but, we are skeptical about it."
+	picture = GFX_report_event_tank_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "It is only a few guns"
+		PRS = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+				producer = PRS
+			}
+		}
+		LBA = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = PRS
+			}
+			country_event = {
+				id = LBA_events.7
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "They can fend for themselves."
+		LBA = {
+			country_event = {
+				id = LBA_events.8
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.7
+	title = "Prussia Accepts!"
+	desc = "The prussians have accepted our request for guns!"
+
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Splendid!"
+	}
+}
+
+country_event = {
+	id = LBA_events.8
+	title = "Prussia Denies!"
+	desc = "The prussians have Denied our request for guns!"
+
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = {
+		name = "Rats!"
+	}
+}

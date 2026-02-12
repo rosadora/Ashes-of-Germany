@@ -168,4 +168,17 @@ characters={
 			    }
 		}
 	}
+	PRE_erich_ludendorff={
+		name="Erich Ludendorff"
+		portraits={
+			civilian={
+				large="GFX_Erich_Ludendorff"
+			}
+		}
+		country_leader={
+			ideology=volkisch
+			expire="1965.1.1"
+			id=-1
+		}
+	}
 }

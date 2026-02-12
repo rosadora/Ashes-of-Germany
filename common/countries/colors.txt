@@ -73,6 +73,10 @@ FRC = {
 	color = rgb { 209 44 44 }
 	color_ui = rgb { 209 44 44 }
 }
+AML = {
+	color = rgb { 204 201 10 }
+	color_ui = rgb { 224 211 12 }
+}
 SPR = {
 	color = rgb { 242 205 94 }
 	color_ui = rgb { 255 255 122 }
@@ -702,10 +706,6 @@ BAY = {
 MEK = {
 	color = rgb { 186 245 86 }
 	color_ui = rgb { 186 245 86 }
-}
-PRE = {
-	color = rgb { 160  160  160 }
-	color_ui = rgb { 160  160  160 }
 }
 SAX = {
 	color = rgb { 102 102 0 }

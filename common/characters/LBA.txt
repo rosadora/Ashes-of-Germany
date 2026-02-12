@@ -1,0 +1,136 @@
+characters = {
+	
+	#Forgot tag here and didnt feel like changing it for character | the 2 at the end of duplicate Id's is for the civilwar
+	LIB_Idris_Senussi = {
+		name = "Idris Senussi"
+		portraits = {
+			civilian = {
+				large = "GFX_Idris_senussi"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			id = 1 
+			expire = "1965.1.1.1"
+		}
+	}
+
+	LIB_Idris_Senussi2 = {
+		name = "Idris Senussi"
+		portraits = {
+			civilian = {
+				large = "GFX_Idris_senussi"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			id = 1 
+			expire = "1965.1.1.1"
+		}
+	}
+	#
+
+	LBA_benito_mussolini = {
+		name = ITA_benito_mussolini
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_benito_mussolini
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		country_leader = {
+			ideology = ultra_nationalism_category
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+			visible = {
+				has_completed_focus = ITA_capo_supremo
+			}
+		}
+	}
+	LBA_benito_mussolini2 = {
+		name = ITA_benito_mussolini
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_benito_mussolini
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		country_leader = {
+			ideology = ultra_nationalism_category
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+			visible = {
+				has_completed_focus = ITA_capo_supremo
+			}
+		}
+	}
+
+	Bashir_es_Sadawi = {
+		name = "Bashir es Sadawi"
+		portraits = {
+			civilian = {
+				large = GFX_portrait__Bashir_es_Sadawi
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			traits = { }
+			expire = 1965.1.1.1
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { }
+			expire = 1965.1.1.1
+		}
+	}
+
+	Hassan_as_Senussi_LBA = {
+		name = "Hassan as Senussi"
+		portraits = {
+			civilian = {
+				large = GFX_Hassan_as_Senussi
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = { }
+			expire = 1965.1.1.1
+		}
+	}
+}

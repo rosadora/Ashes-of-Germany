@@ -1,0 +1,1467 @@
+focus_tree = {
+	id = LBA_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = LBA
+		}
+	 }
+	 continuous_focus_position = {
+		x = 1100
+		y = 400
+	 }
+
+
+	 focus = {
+		id = LBA_under_Mussolini
+		icon = GFX_focus_ger_assassinate_mussolini
+		cost = 7
+		x = 4
+		y = 0
+		available = {
+			has_character = LBA_benito_mussolini
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		allow_branch = {
+			has_character = LBA_benito_mussolini
+		}
+		cancelable = no
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_cosmetic_tag = LBA_MUSSOLINI_FLED
+		 }
+	 }
+
+	 focus = {
+		id = LBA_embrace_African_roots
+		icon = GFX_focus_generic_africa_liberation
+		cost = 10
+		x = 7
+		y = 1
+		mutually_exclusive = {
+			focus = LBA_oppose_Mussolini
+			focus = LBA_embrace_Mussolini
+		}
+		prerequisite = {
+			focus = LBA_under_Mussolini
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			load_focus_tree = generic_focus
+			drop_cosmetic_tag = yes
+			remove_ideas = flee_from_italy
+		 }
+	 }
+
+	 focus = {
+		id = LBA_embrace_Mussolini
+		icon = GFX_focus_SWI_embrace_panoramaheim
+		cost = 10
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = LBA_under_Mussolini
+		}
+		mutually_exclusive = {
+			focus = LBA_oppose_Mussolini
+			focus = LBA_embrace_African_roots
+		}
+		relative_position_id = LBA_under_Mussolini
+		completion_reward = {
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_timed_idea = {
+				idea = oppose_Mussolini
+				days = 180
+			}
+			hidden_effect = {
+				AML = {
+					set_popularities = {
+						neutrality = 0.9
+						ultra_nationalism = 0.07
+						fascism = 0.01
+						communism = 0.02
+					}
+				}
+			}
+			add_war_support = 0.1
+		 }
+	 }
+
+	 focus = {
+		id = LBA_oppose_Mussolini
+		icon = Oppose_Mussolini_LBA
+		cost = 10
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_under_Mussolini
+		}
+		mutually_exclusive = {
+			focus = LBA_embrace_Mussolini
+			focus = LBA_embrace_African_roots
+		}
+		relative_position_id = LBA_under_Mussolini
+		completion_reward = {
+			add_timed_idea = {
+				idea = oppose_Mussolini
+				days = 180
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.15
+				}
+
+				AML = {
+					set_popularities = {
+						fascism = 92
+						neutrality = 1
+						ultra_nationalism = 7
+					}
+
+					set_politics = {
+						ruling_party = fascism
+					}
+				}
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_prepare_for_uprising
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_oppose_Mussolini
+		prerequisite = {
+			focus = LBA_oppose_Mussolini
+		}
+		completion_reward = {
+			448 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				 add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				 }
+				add_extra_state_shared_building_slots = 4
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_raise_militia
+		icon = GFX_focus_SWE_revoke_militia_law
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_oppose_Mussolini
+		prerequisite = {
+			focus = LBA_oppose_Mussolini
+		}
+		completion_reward = {
+			custom_effect_tooltip = can_recruit_militias
+		 }
+	 }
+
+	 focus = {
+		id = LBA_overthrow_Mussolini
+		icon = GFX_focus_ITA_depose_mussolini
+		cost = 10
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_prepare_for_uprising
+		}
+		prerequisite = {
+			focus = LBA_raise_militia
+		}
+		relative_position_id = LBA_prepare_for_uprising
+		completion_reward = {
+			hidden_effect = {
+			country_event = {
+				id = LBA_events.1
+				days = 2
+			}
+			drop_cosmetic_tag = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			remove_ideas = flee_from_italy
+		 }
+	 }
+
+	 focus = {
+		id = LBA_starve_the_people
+		icon = GFX_focus_generic_farmland
+		cost = 7
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = LBA_embrace_Mussolini
+		}
+		relative_position_id = LBA_embrace_Mussolini
+		completion_reward = {
+			add_timed_idea = {
+				idea = starve_the_people
+				days = 180
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_denounce_Idris_Senussi
+		icon = GFX_focus_generic_government_in_exile
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_embrace_Mussolini
+		prerequisite = {
+			focus = LBA_embrace_Mussolini
+		}
+		completion_reward = {
+			add_stability = 0.05
+		 }
+	 }
+
+	 focus = {
+		id = LBA_finish_the_opposition
+		icon = GFX_SOV_left_opposition_coup_ccp_2d_sov_compatibility
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = LBA_starve_the_people
+		prerequisite = {
+			focus = LBA_starve_the_people
+		}
+		prerequisite = {
+			focus = LBA_denounce_Idris_Senussi
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = LBA
+					}
+					add_core_of = AML
+				}
+				AML = {
+					transfer_state = 449
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 450
+					transfer_state = 451
+					declare_war_on = {
+						target = LBA
+						type = annex_everything
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = LBA
+					}
+				}
+			}
+			remove_ideas = flee_from_italy
+		 }
+	 }
+
+	 focus = {
+		id = LBA_a_new_industry
+		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+		cost = 5
+		prerequisite = {
+			focus = LBA_finish_the_opposition
+			focus = LBA_overthrow_Mussolini
+		}
+		available = {
+			has_war = no
+		}
+		x = 2
+		y = 1
+		relative_position_id = LBA_finish_the_opposition
+		completion_reward = {
+			450= {
+				 add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				 }
+				 add_building_construction = {
+					type = infrastructure
+					level = 1
+				 }
+				add_extra_state_shared_building_slots = 3
+			}
+			448 = {
+				add_extra_state_shared_building_slots = 1
+				 add_building_construction = {
+					type = infrastructure
+					level = 1
+				 }
+			}
+		 }
+	 }
+	
+	 focus = {
+		id = LBA_prioritize_civilian_industries
+		icon = GFX_focus_generic_modernize_industry
+		cost = 7
+		x = 6
+		y = 0
+		relative_position_id = LBA_under_Mussolini
+		available = {
+			has_completed_focus = LBA_a_new_industry
+		}
+		allow_branch = {
+			has_character = LBA_benito_mussolini
+		}
+		mutually_exclusive = {
+			focus = LBA_prioritize_military_industries
+		}
+		completion_reward = {
+				random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				category = industry 
+				bonus = 1
+				uses = 2
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_construct_steel_mills
+		icon = GFX_SOV_steel_casting_industry_ccp_2d_sov_compatibility
+		cost = x
+		x = 3
+		y = 1
+		relative_position_id = LBA_prioritize_civilian_industries
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+			focus = LBA_prioritize_military_industries
+		}
+		completion_reward = {
+				add_resource = {
+					type = steel
+					amount = 18
+					state = 448
+				}
+				hidden_effect = {
+					448 = {
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+				add_ideas = closed_economy
+		 }
+	 }
+
+	 focus = {
+		id = LBA_prioritize_military_industries
+		icon = GFX_focus_generic_reorient_production
+		x = 6
+		y = 0
+		allow_branch = {
+			has_character = LBA_benito_mussolini
+		}
+		available = {
+			has_completed_focus = LBA_a_new_industry
+		}
+		mutually_exclusive = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_new_arms_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_prioritize_military_industries
+		prerequisite = {
+			focus = LBA_prioritize_military_industries
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_develop_fortifications
+		icon = GFX_SOV_fortify_mongolian_border_ccp_2d_sov_compatibility
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_prioritize_military_industries
+		prerequisite = {
+			focus = LBA_prioritize_military_industries
+		}
+		completion_reward = {
+			451 = {
+				add_building_construction = {
+				type = bunker
+				level = 4
+				province = 10120
+          	  instant_build = yes
+			}
+			}
+			663 = {
+				add_building_construction = {
+				type = bunker
+				level = 4
+				province = 4060
+          	  instant_build = yes
+			}
+			}
+			448 = {
+							add_building_construction = {
+				type = bunker
+				level = 4
+				province = 12039
+          	  instant_build = yes
+			}
+			}
+			661 = {
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 10067
+          	  instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 7154
+          	  instant_build = yes
+			}
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_make_guns_more_efficiently
+		icon = GFX_focus_SWE_let_fly_all_guns
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_new_arms_factories
+		prerequisite = {
+			focus = LBA_new_arms_factories
+		}
+		prerequisite = {
+			focus = LBA_develop_fortifications
+		}
+		completion_reward = {
+			add_ideas = extensive_conscription
+			add_timed_idea = {
+				idea = make_guns_more_effectively
+				days =1015
+			}
+		}
+	 }
+
+	 focus = {
+		id = LBA_construct_Tripoli_University
+		icon = GFX_focus_research
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_a_new_industry
+		}
+		relative_position_id = LBA_a_new_industry
+		completion_reward = {
+			add_research_slot = 1
+		 }
+	 }
+
+	 #NON MUSSOLINI BRANCH#
+
+	 focus = {
+		id = LBA_rally_around_the_crown
+		icon = GFX_focus_generic_monarchy_2
+		cost = 7
+		x = 22
+		y = 0
+		allow_branch = {
+			NOT = {
+				has_character = LBA_benito_mussolini
+			}
+		}
+		available = {
+			NOT = {
+				has_character = LBA_benito_mussolini
+			}
+		}
+		available = {
+			NOT = {
+				has_completed_focus = LBA_under_Mussolini
+			}
+		}
+		available = {
+			date > 1937.1.1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+		 }
+	 }
+
+	 focus = {
+		id = LBA_celebrate_our_independance
+		icon = GFX_goal_generic_political_pressure
+		x = 22
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_the_first_industry
+		}
+
+		prerequisite = {
+			focus = LBA_develop_weapons
+		}
+
+		prerequisite = {
+			focus = LBA_develop_arms_industry
+		}
+
+		prerequisite = {
+			focus = LBA_the_arsenal_of_independance
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.15
+			add_stability = 0.15
+			load_focus_tree = generic_focus
+		}
+	}
+	focus = {
+		id = LBA_develop_weapons
+		icon = GFX_focus_generic_little_entente
+		x = 19
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_industrial_research
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons 
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = LBA_the_arsenal_of_independance
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 25
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_develop_the_deserts
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = LBA_develop_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 23
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_develop_the_deserts
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = arms_factory
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = arms_factory
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	focus = {
+		id = LBA_industrial_research
+		icon = GFX_goal_generic_construction2
+		x = 20
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_rally_around_the_crown
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry 
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = LBA_the_first_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 21
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_industrial_research
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = LBA_develop_the_deserts
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 24
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		prerequisite = {
+			focus = LBA_rally_around_the_crown
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#END OF NON-MUSSOLINI#
+
+	focus = {
+		id = LBA_develop_Trippoli_industries
+		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+		cost = 10
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			448 = {
+				 add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				 }
+				 add_extra_state_shared_building_slots = 3
+			}
+
+			add_victory_points = {
+					province = 1149
+					value = 20
+				 }
+
+		 }
+	}
+	focus = {
+		id = LBA_develop_eastern_cities
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_prioritize_civilian_industries
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		completion_reward = {
+			add_victory_points = {
+				province = 11954
+				value = 2
+			}
+			add_victory_points = {
+				province = 1130
+				value = 5
+			}
+			450 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			451 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_national_building_projects
+		icon = GFX_goal_generic_consumer_goods
+		cost = 7
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_develop_Trippoli_industries
+		}
+		prerequisite = {
+			focus = LBA_develop_eastern_cities
+		}
+		relative_position_id = LBA_develop_Trippoli_industries
+		completion_reward = {
+			add_timed_idea = {
+				idea = national_building_projects_LBA
+				days = 1015
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_restoration_of_the_monarchy
+		icon = GFX_focus_generic_monarchy_2
+		cost = 7
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = LBA_overthrow_Mussolini
+		}
+		available = {
+			has_war = no
+		}
+		relative_position_id = LBA_overthrow_Mussolini
+		completion_reward = {
+			hidden_effect = {
+				recruit_character = LIB_Idris_Senussi
+			}
+			news_event = {
+				id = LBA_events.2
+				days = 2
+			}
+		 }
+	}
+
+	    focus = {
+        id = LBA_form_royal_guards
+        icon = GFX_goal_generic_small_arms
+		prerequisite = {
+			focus = LBA_restoration_of_the_monarchy
+		}
+		relative_position_id = LBA_restoration_of_the_monarchy
+        x = 0
+        y = 1
+        cost = 10
+		completion_reward = {
+			division_template = {
+				name = "Koninklike Wagte"
+				priority = 2
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+		
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 10 } #Warsaw
+				create_unit = {
+					division = "name = \"Oddział Gwardii Królewskiej\" division_template = \"Koninklike Wagte\" start_experience_factor = 1.0" 
+					owner = LBA
+				}
+				create_unit = {
+					division = "name = \"Oddział Gwardii Królewskiej\" division_template = \"Koninklike Wagte\" start_experience_factor = 1.0" 
+					owner = LBA
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_constitutional_monarchy
+        icon = GFX_goal_generic_constitutional_monarchy
+        relative_position_id = LBA_form_royal_guards
+		prerequisite = {
+			focus = LBA_form_royal_guards
+		}
+		mutually_exclusive = {
+			focus = LBA_true_monarchy
+		}
+        x = -2
+        y = 1
+        cost = 10
+		completion_reward = {
+			add_ideas = LBA_constitutional_monarchy
+		}
+    }
+
+    focus = {
+        id = LBA_true_monarchy
+        icon = GFX_focus_generic_monarchy_1
+		prerequisite = {
+			focus = LBA_form_royal_guards
+		}
+		mutually_exclusive = {
+			focus = LBA_constitutional_monarchy
+		}
+        relative_position_id = LBA_constitutional_monarchy
+        x = 4
+        y = 0
+        cost = 10
+		completion_reward = {
+			add_ideas = LBA_absolute_monarchy
+		}
+    }
+
+    focus = {
+        id = LBA_join_the_French
+        icon = GFX_focus_chi_reach_out_to_france
+        relative_position_id = LBA_constitutional_monarchy
+        x = -1
+        y = 1
+        cost = 7
+		prerequisite = {
+			focus = LBA_constitutional_monarchy
+		}
+
+		available = {
+			NOT = {
+				FRA = {
+					has_completed_focus = FRA_lift_the_law_of_exil
+				}
+			}
+			FRA = {
+				is_faction_leader = yes
+			}
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = {
+				id = generic.2
+				days = 3
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_dreams_of_a_united_Africa
+        icon = GFX_goal_dreams_of_united_africa
+        relative_position_id = LBA_form_royal_guards
+		prerequisite = {
+			focus = LBA_constitutional_monarchy
+			focus = LBA_true_monarchy
+		}
+        y = 2
+        cost = 10
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ALG
+						is_core_of = EGY
+						is_core_of = TUN
+						is_core_of = MOR
+					}
+				}
+				add_claim_by = LBA
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_ally_the_kaiser
+        icon = GFX_goal_under_the_kaiser
+        relative_position_id = LBA_true_monarchy
+        x = 1
+        y = 1
+        cost = 7
+		prerequisite = {
+			focus = LBA_true_monarchy
+		}
+		available = {
+			PRS = {
+				is_faction_leader = yes
+			}
+		}
+		completion_reward = {
+			PRS = {
+				country_event = {
+					id = generic.2
+					days = 7
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_request_French_north_africa
+        icon = GFX_generic_goal_beg_france_flag
+        relative_position_id = LBA_join_the_French
+        y = 1
+        cost = 10
+		prerequisite = {
+			focus = LBA_join_the_French
+		}
+
+		available = {
+			is_in_faction_with = FRA
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = LBA_events.3
+					days = 4
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_invade_north_Africa
+        icon = GFX_generic_goal_attack_africa
+        relative_position_id = LBA_dreams_of_a_united_Africa
+        y = 1
+        cost = 10
+		prerequisite = {
+			focus = LBA_dreams_of_a_united_Africa
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					ALG = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = ALG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					MOR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = MOR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					TUN = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = TUN
+					type = annex_everything
+				}
+			}
+			create_wargoal = {
+				target = FRA
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = ENG
+				type = puppet_wargoal_focus
+			}
+			if = {
+				limit = {
+					EGY = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = EGY
+					type = annex_everything
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_request_Prussian_guns
+        icon = GFX_goal_deutsches_heer
+        relative_position_id = LBA_ally_the_kaiser
+        y = 1
+		prerequisite = {
+			focus = LBA_ally_the_kaiser
+		}
+		available = {
+			is_in_faction_with = PRS
+		}
+        cost = 10
+		completion_reward = {
+			PRS = {
+				country_event = {
+					id = LBA_events.6
+					days = 14
+				}
+			}
+		}
+    }
+
+
+    focus = {
+        id = LBA_invade_Ethiopia
+        icon = GFX_focus_generic_attack_ethiopia
+        relative_position_id = LBA_invade_north_Africa
+        x = -2
+        y = 1
+        cost = 10
+		prerequisite = {
+			focus = LBA_invade_north_Africa
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = ETH
+				type = annex_everything
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_invade_the_Congo
+        icon = GFX_focus_CONGO_republic_of_congo
+        relative_position_id = LBA_invade_north_Africa
+		prerequisite = {
+			focus = LBA_invade_north_Africa
+		}
+        x = 2
+        y = 1
+        cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = COG
+				type = annex_everything
+			}
+		}
+    }
+
+
+    focus = {
+        id = LBA_restore_Al_Andalus
+		### For the Icon I couldnt find any good maps of Al Andalus so its this or a shitty icon###
+        icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+        relative_position_id = LBA_invade_north_Africa
+        y =1
+        cost = 10
+		available = {
+			controls_state = 459
+			controls_state = 458
+			controls_state = 461
+			controls_state = 789
+			controls_state = 907
+		}
+
+		prerequisite = {
+			focus = LBA_invade_north_Africa
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				add_core_of = LBA
+			}
+			every_state = {
+				limit = {
+					is_core_of = TUN
+				}
+				add_core_of = LBA
+			}
+			every_state = {
+				limit = {
+					is_core_of = MOR
+				}
+				add_core_of = LBA
+			}
+			every_state = {
+				limit = {
+					is_core_of = EGY
+				}
+				add_core_of = LBA
+			}
+			
+			173 = {
+				add_core_of = LBA
+			}
+			169 = {
+				add_core_of = LBA
+			}
+			789 = {
+				add_core_of = LBA
+			}
+			set_capital = {
+				state = 789
+			}
+			add_victory_points = {
+				province = 875
+				value = 15
+			}
+			set_cosmetic_tag = ADU
+			hidden_effect = {
+				news_event = { id = lar_news.281 hours = 6 }
+				set_global_flag = form_andalusia_flag
+				set_country_flag = country_formed_andalusia_flag
+			}
+		}
+
+    }
+
+	focus = {
+		id = LBA_proclaim_African_unity
+		icon = GFX_focus_generic_africa_liberation
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = LBA_restore_Al_Andalus
+		prerequisite = {
+			focus = LBA_invade_Ethiopia
+		}
+		prerequisite = {
+			focus = LBA_invade_the_Congo
+		}
+		completion_reward = {
+			set_cosmetic_tag = ETH_African_Union
+			every_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				add_core_of = LBA
+			}
+			create_wargoal = {
+				target = LIB
+				type = annex_everything
+			}
+		 }
+	}
+}

@@ -1,0 +1,54 @@
+capital = 450
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 20
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 49
+	communism = 1
+	neutrality = 50
+}
+
+create_country_leader = {
+	name = "Bashir es Sadawi"
+	desc = ""
+	picture = GFX_portrait_Bashir_es_Sadawi
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+recruit_character = LBA_benito_mussolini2
+
+recruit_character = LIB_Idris_Senussi2
+
+create_country_leader = {
+	name = "Hassan as-Senussi"
+	desc = ""
+	picture = GFX_portrait_Hassan_as_Senussi
+	ideology = leninism
+	traits = {
+		#
+	}
+}

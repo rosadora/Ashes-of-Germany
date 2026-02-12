@@ -1,0 +1,180 @@
+ideas = {
+	country = {
+		flee_from_italy = {
+			
+			allowed = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_shadow_of_mussolini
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+				weekly_manpower = 250
+				ultra_nationalism_drift = 0.02
+				stability_weekly = -0.002
+			}
+		}
+
+		morale_boost_ITA = {
+			allowed = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			targeted_modifier = {
+				tag = ITA
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+
+		}
+
+		oppose_Mussolini = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+			picture = generic_fascism_banned
+
+			removal_cost = -1
+
+			rule = {
+				can_join_factions = no
+			}
+
+			modifier = {
+				fascism_drift = -0.02
+				ultra_nationalism_drift = -0.03
+				democratic_drift = 0.02
+				neutrality_drift = 0.02
+				communism_drift = 0.02
+				social_democracy_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_marxism_drift = 0.01
+			}
+		}
+
+		starve_the_people = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				
+			}
+			picture = RAJ_state_of_famine_country
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = -0.3
+				monthly_population = -0.3
+				stability_weekly = 0.005
+			}
+		}
+
+		national_building_projects_LBA = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				
+			}
+			picture = SOV_third_five_year_plan_civilian
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.25
+			}
+		}
+
+		make_guns_more_effectively = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_volunteer_defence_corps
+
+			removal_cost = -1
+			
+			equipment_bonus = { infantry_equipment = { instant = yes build_cost_ic = -0.25 } } 
+		}
+
+		LBA_constitutional_monarchy = {
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GFX_idea_constitutional_monarchy
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.01
+				social_democracy_drift = 0.02
+				social_liberalism_drift = 0.02
+				neutrality_drift = 0.01
+			}
+
+		}
+
+		LBA_absolute_monarchy = {
+			allowed = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.08
+				ultra_nationalism_drift = 0.02
+			}
+		}
+	}
+}

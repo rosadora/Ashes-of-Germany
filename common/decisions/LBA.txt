@@ -1,0 +1,156 @@
+LBA_raise_militias = {
+	LBA_border_militias={
+		icon = GFX_decision_category_ITA_colonial_management
+
+		allowed = {
+			tag = AML
+		}
+		visible = {
+			has_war_with = LBA
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 10
+		days_re_enable = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 0
+
+		complete_effect = {
+			450 = {
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+			}
+
+			#Uomini di Mussolini
+		}
+	}
+}
+
+LBA_troops_from_italy = {
+	LBA_troop_spawns = {
+		icon = GFX_decision_category_ITA_colonial_management
+
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_character = LBA_benito_mussolini
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 10
+		days_re_enable = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 0
+
+		complete_effect = {
+			448 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+			450 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+			451 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+		}
+	}
+
+	LBA_civilwar_milita_mon = {
+		icon = GFX_decision_category_ITA_colonial_management
+
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			AND = {
+				has_war_with = AML
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 25
+
+		complete_effect = {
+			448 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+			661 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+		}
+	}
+}

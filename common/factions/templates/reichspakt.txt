@@ -1,0 +1,33 @@
+# The Reichspakt 
+faction_template_reichspakt = {
+	name = Reichspakt
+	manifest = faction_manifest_a_place_under_the_sun
+
+	goals = {
+
+		# Short term goals
+		faction_goal_militarism
+		
+		# Medium term goals
+		faction_goal_german_empire
+
+		# Long term goals
+		faction_goal_the_atomic_race
+		faction_goal_entente_defeated
+
+	}
+
+
+	default_rules = {
+		joining_rule_non_fascist
+		joining_rule_has_no_offensive_war
+		faction_peace_rule_liberation_focus
+		government_in_exile_allowed
+		change_leader_rule_manifest_below_35
+		dismissal_rule_ideology_not_democratic
+		change_leader_rule_industry
+	}
+	
+	icon = GFX_faction_icon_reichspakt
+}
+
