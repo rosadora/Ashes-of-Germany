@@ -77,6 +77,19 @@ IF = {
 	recruit_character = ETH_feodor_konovalov
 }
 
+if = {
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		add_ideas = ETH_on_our_own_idea_aat
+	}
+	if = {
+		limit = {
+			NOT = {	has_dlc = "Arms Against Tyranny" }
+		}
+		add_ideas = ETH_on_our_own_idea
+	}
+
 IF = { 
 	limit = { NOT = { has_dlc = "By Blood Alone" } }
 	recruit_character = ETH_fitawrari_yeebio_woldai

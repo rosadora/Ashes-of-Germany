@@ -1038,5 +1038,30 @@ on_actions = {
 				 }
 			}
 		}
+
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						458 = {
+							is_controlled_by = LBA
+						}
+						LBA = {
+							has_completed_focus = LBA_request_tunis
+						}
+						FRA = {
+							has_war_with = LBA
+						}
+						has_global_flag = aggressive_LBA
+					}
+				}
+				LBA = {
+					country_event = {
+						id = LBA_events.13
+						days = 30
+					}
+				}
+			}
+		}
 	}
 }

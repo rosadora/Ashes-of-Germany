@@ -8,8 +8,8 @@ focus_tree = {
 		}
 	 }
 	 continuous_focus_position = {
-		x = 1100
-		y = 400
+		x = 1850
+		y = 525
 	 }
 
 
@@ -1057,7 +1057,7 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 2
+		x = 8
 		y = 1
 		prerequisite = {
 			focus = LBA_overthrow_Mussolini
@@ -1183,8 +1183,8 @@ focus_tree = {
         id = LBA_join_the_French
         icon = GFX_focus_chi_reach_out_to_france
         relative_position_id = LBA_constitutional_monarchy
-        x = -1
         y = 1
+		x = -1
         cost = 7
 		prerequisite = {
 			focus = LBA_constitutional_monarchy
@@ -1240,8 +1240,8 @@ focus_tree = {
         id = LBA_ally_the_kaiser
         icon = GFX_goal_under_the_kaiser
         relative_position_id = LBA_true_monarchy
-        x = 1
         y = 1
+		x = 1
         cost = 7
 		prerequisite = {
 			focus = LBA_true_monarchy
@@ -1293,6 +1293,9 @@ focus_tree = {
         cost = 10
 		prerequisite = {
 			focus = LBA_dreams_of_a_united_Africa
+		}
+		available = {
+			has_manpower > 300000
 		}
 		completion_reward = {
 			if = {
@@ -1519,5 +1522,273 @@ focus_tree = {
 				type = annex_everything
 			}
 		 }
+	}
+
+	focus = {
+    	id = LBA_draft_a_constitution
+    	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    	relative_position_id = LBA_constitutional_monarchy
+    	x = -4
+    	y = 1
+		cost = 7
+    	prerequisite = { focus = LBA_constitutional_monarchy }
+    	completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_convince_the_king_towards_democracy
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_draft_a_constitution
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_draft_a_constitution }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_boost_democratic_parties
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_draft_a_constitution
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_draft_a_constitution }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_get_communist_support
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_convince_the_king_towards_democracy
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_convince_the_king_towards_democracy }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_state_catholicism
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_convince_the_king_towards_democracy
+	    x = 1
+	    y = 1
+		cost = 7
+		prerequisite = { focus = LBA_convince_the_king_towards_democracy }
+	    prerequisite = { focus = LBA_boost_democratic_parties }
+	    completion_reward = {
+			add_ideas = catholic_state
+		 }
+	}
+
+	focus = {
+	    id = LBA_get_european_support
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_boost_democratic_parties
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_boost_democratic_parties }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_enforce_constitutional_reform
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_state_catholicism
+	    x = 0
+	    y = 1
+		cost = 7
+		prerequisite = { focus = LBA_get_european_support }
+	    prerequisite = {focus = LBA_state_catholicism }
+		prerequisite = { focus = LBA_get_communist_support }
+	    completion_reward = {
+			add_ideas = women_in_military
+			set_politics = {
+				ruling_party = classical_liberalism
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_women_rights
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_enforce_constitutional_reform
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_enforce_constitutional_reform }
+	    completion_reward = {
+			add_ideas = total_equality
+		 }
+	}
+
+	focus = {
+	    id = LBA_modernize_the_industries
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_enforce_constitutional_reform
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_enforce_constitutional_reform }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_request_tunis
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_enforce_constitutional_reform
+	    x = 0
+	    y = 2
+		cost = 7
+		available = {
+			has_manpower > 150000
+		}
+	    prerequisite = { focus = LBA_women_rights }
+		prerequisite = { focus = LBA_modernize_the_industries }
+	    completion_reward = { 
+			FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = LBA_14
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_true_monarchy
+		cost = 7
+	    x = 4
+	    y = 1
+	    prerequisite = { focus = LBA_true_monarchy }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_15
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_14
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_14 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_16
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_14
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_14 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_17
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_15
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_15 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_18
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_15
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_15 focus = LBA_16 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_19
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_16
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_16 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_21
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_18
+	    x = 0
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_17 focus = LBA_18 focus = LBA_19 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_23
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_21
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = {focus = LBA_21 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_24
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_21
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_21 }
+	    completion_reward = { }
+	}
+
+	focus = {
+	    id = LBA_25
+	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    relative_position_id = LBA_23
+	    x = 1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_23 focus = LBA_24 }
+	    completion_reward = { }
+	}
+
+	focus = {
+		id = LBA_1
+		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_proclaim_African_unity
+		completion_reward = { }
+		prerequisite = {
+			focus = LBA_proclaim_African_unity
+		}
+	}
+	focus = {
+		id = LBA_10
+		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		cost = 7
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_proclaim_African_unity
+		}
+		relative_position_id = LBA_proclaim_African_unity
+		completion_reward = { }
 	}
 }

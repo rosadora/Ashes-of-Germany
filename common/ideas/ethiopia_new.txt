@@ -1,0 +1,68 @@
+ideas = {
+	country = {
+		ETH_hold_out_idea = {
+			allowed = {
+				has_war_with = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_army
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ITA
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				war_support_weekly = 0.003
+			}
+		}
+
+		Victory_over_ITA_ETH = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_the_lion_of_the_north
+
+			removal_cost = -1
+
+			modifier = {
+				defence = 0.15
+				war_support_weekly = 0.003
+				stability_weekly = 0.003
+				stability_factor = 0.15
+			}
+		}
+
+		ETH_global_italian_refugees = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ETH_italian_settlers
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 150
+				war_support_weekly = -0.005
+			}
+			targeted_modifier = {
+				tag = ITA
+				defense_bonus_against = -0.05
+			}
+		}
+	}
+}

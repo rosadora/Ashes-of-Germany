@@ -1,0 +1,306 @@
+focus_tree = {
+	id = Ethiopia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10000
+			tag = ETH
+		}
+
+	}
+
+	continuous_focus_position = { x = 55 y = 1500 }
+	
+	default = no
+
+
+
+	focus = {
+		id = ETH_rally_around_the_emperor
+		icon = GFX_focus_ETH_rally_around_the_emperor
+		x = 10
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = ETH_Victory_against_Italy
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+            NOT = {
+                has_war_with = ITA
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_push_them_back}
+		prerequisite = {focus = ETH_the_arsenal_of_independance}
+		prerequisite = {focus = ETH_develop_the_capital_region}
+		prerequisite = {focus = ETH_develop_cheap_guns}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+            add_ideas = Victory_over_ITA_ETH
+			add_political_power = 300
+			load_focus_tree = generic_focus
+                                            if = {
+	                                	limit = {
+	                                		has_dlc = "Arms Against Tyranny"
+	                                	}
+	                                	remove_ideas = ETH_on_our_own_idea_aat
+	                                }
+                                    if = {
+	                                	limit = {
+	                                		NOT = {	has_dlc = "Arms Against Tyranny" }
+	                                	}
+	                                	remove_ideas = ETH_on_our_own_idea
+	                                }
+		}
+	}
+	focus = {
+		id = ETH_accept_global_italian_refugees
+		icon = GFX_focus_ETH_invite_italian_settlers
+		x = 12
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_rally_around_the_emperor}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+                idea = ETH_global_italian_refugees
+                days = 120
+            }
+		}
+	}
+	focus = {
+		id = ETH_the_arsenal_of_independance
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 11
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_accept_global_italian_refugees }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			835 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			271 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ETH_develop_cheap_guns
+		icon = GFX_goal_generic_military_sphere
+		x = 13
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_accept_global_italian_refugees}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = cheap_guns 
+		}
+	}
+	focus = {
+		id = ETH_hold_out
+		icon = GFX_focus_ETH_in_the_name_of_the_people
+		x = 8
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_rally_around_the_emperor}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = ETH_hold_out_idea
+		}
+	}
+	focus = {
+		id = ETH_develop_the_capital_region
+		icon = GFX_focus_generic_energy
+		x = 7
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_hold_out}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			271 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = ETH_push_them_back
+		icon = GFX_focus_ETH_continuous_supporting_the_arbegnoch
+		x = 9
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = ETH_hold_out}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			every_state = {
+ 				limit = {
+ 					is_core_of = ETH
+	 			}
+	 			add_dynamic_modifier = {
+	 				modifier = ETH_state_local_offensive_dynamic_modifier
+	 				scope = ETH
+	 				days = 60
+	 			}
+	 		}
+		}
+	}
+}

@@ -64,4 +64,9 @@ spriteTypes = {
 		name = "GFX_report_comet_sight_event"
 		texturefile = "gfx/event_pictures/comet_sight_event.dds"
 	}
+
+	spriteType = {
+		name = "GFX_report_Tunis"
+		texturefile = "gfx/event_pictures/Tunis_Image.dds"
+	}
 }

@@ -266,3 +266,128 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = LBA_events.10
+	title = "Libya Requests Tunis"
+	desc = "The Republic of Libya has requested control over Tunis. This will allow them to be stronger, but, they will be in our debt §Rfiguratively.§R"
+	picture = GFX_report_Tunis
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We must deny"
+		LBA = {
+			country_event = {
+				days = 2
+				id = LBA_events.12
+			}
+		}
+		ai_chance = {
+			base = 65
+		}
+	}
+	option = {
+		name = "To a new Friendship!"
+		665 = {
+			transfer_state_to = LBA
+			add_core_of = LBA
+		}
+		458 = {
+			transfer_state_to = LBA
+			add_core_of = LBA
+		}
+		LBA = {
+			country_event = {
+				id = LBA_events.11
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.11
+	title = "Tunis is Ours!"
+	desc = "The French have accepted our request of overlordship over Tunis! Although we will be in their debt, it is worth it for control over the 2.5 Million people in the region. Should we ever need to use the land to defend ourselves, it is ours to do so with."
+	picture = GFX_report_event_generic_italian_celebration
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "To a new Libya!"
+	}
+}
+
+country_event = {
+	id = LBA_events.12
+	title = "France Says No!"
+	desc = "The French have not accepted our request of overlordship over Tunis! We have the option for war, but, in the end, we are a democratic nation and need permission from you, our president, to invade the Region of Tunis."
+	picture = GFX_report_event_fascist_gathering
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "To War!"
+		hidden_effect = {
+			set_global_flag = aggressive_LBA
+		}
+		if = {
+			limit = {
+				TUN = {
+					exists = no
+				}
+			 }
+			 create_wargoal = {
+				target = FRA
+				type = annex_everything
+			 }
+		}
+
+		if = {
+			limit = {
+				TUN = {
+					exists = yes
+				}
+			 }
+			 create_wargoal = {
+				target = TUN
+				type = annex_everything
+			 }
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.13
+	title = "France asks for Peace"
+	desc = "Following the fall of Tunis, the French Nation has requested a peace treaty. Should we accept, we will seize complete control over the city and regions we have attempted to take control over. If we deny, there may not be another chance to seek peace with the French."
+	picture = GFX_report_Tunis
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Keep Pushing!"
+	}
+
+	option = {
+		name = "An Acceptable Offer"
+		LBA = {
+			white_peace = FRA
+		}
+		665 = {
+			transfer_state_to = LBA
+			add_core_of = LBA
+		}
+		458 = {
+			transfer_state_to = LBA
+			add_core_of = LBA
+		}
+	}
+}
