@@ -69,4 +69,9 @@ spriteTypes = {
 		name = "GFX_report_Tunis"
 		texturefile = "gfx/event_pictures/Tunis_Image.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Idris_Senussi_Event"
+		texturefile = "gfx/event_pictures/Idris_Senussi_event.dds"
+	}
 }

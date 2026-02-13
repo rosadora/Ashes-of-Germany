@@ -108,6 +108,17 @@ Benito_Mussolini_Rebelious = {
 	recruitable_population_factor = -0.45
 }
 
+African_Wildfire_ = {
+	enable = {
+		always = yes
+	}
+	
+	icon = GFX_African_Wildfire
+
+	resistance_target = 0.75
+	recruitable_population_factor = -0.35
+}
+
 pastoral_society = {
 	icon = POL_looming_peasants_strike
 

@@ -15,4 +15,9 @@ spriteTypes = {
 		name = "GFX_Benito_Mussolini_Imprisoned"
 		texturefile = "gfx/interface/state_modifiers/Benito_Mussolini_Jailed_modifier.dds"
 	}
+
+	spriteType = {
+		name = "GFX_African_Wildfire"
+		texturefile = "gfx/interface/state_modifiers/African_Wildfire.dds"
+	}
 }

@@ -169,7 +169,7 @@ country_event = {
 country_event = {
 	id = LBA_events.6
 	title = "Libya requests guns"
-	desc = "Libya, the newest edition to the Reikspact, has requested guns from Prussia. They argue it is so they can develop their armed forces, but, we are skeptical about it."
+	desc = "Libya, the newest edition to the [Root.GetFactionName], has requested guns from [Root.GetName]. They argue it is so they can develop their armed forces, but, we are skeptical about it."
 	picture = GFX_report_event_tank_factory
 
 	is_triggered_only = yes
@@ -177,18 +177,17 @@ country_event = {
 
 	option = {
 		name = "It is only a few guns"
-		PRS = {
+		ROOT = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -5000
-				producer = PRS
 			}
 		}
 		LBA = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 5000
-				producer = PRS
+				producer = ROOT
 			}
 			country_event = {
 				id = LBA_events.7
@@ -210,8 +209,8 @@ country_event = {
 
 country_event = {
 	id = LBA_events.7
-	title = "Prussia Accepts!"
-	desc = "The prussians have accepted our request for guns!"
+	title = "[From.GetName]. Accepts!"
+	desc = "The [From.GetName]. have accepted our request for guns!"
 
 	picture = GFX_report_event_generic_factory
 
@@ -225,8 +224,8 @@ country_event = {
 
 country_event = {
 	id = LBA_events.8
-	title = "Prussia Denies!"
-	desc = "The prussians have Denied our request for guns!"
+	title = "[From.GetName]. Denies!"
+	desc = "The [From.GetName]. have Denied our request for guns!"
 
 	picture = GFX_report_event_generic_factory
 
@@ -389,5 +388,71 @@ country_event = {
 			transfer_state_to = LBA
 			add_core_of = LBA
 		}
+	}
+}
+
+country_event = {
+	id = LBA_events.14
+	title = "Libya Seeks Support"
+	desc = "The Libyan nation has requested our support in drafting a constitution. Should we accept, they will become a democratic nation that could rival European Democracy."
+	picture = GFX_report_event_communist_leader
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Do Not Send Support"
+	}
+
+	option = {
+		name = "Send them Support"
+		LBA = {
+			add_political_power = 150
+			country_event = {
+				id = LBA_events.15
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.15
+	title = "[From.GetName] sends support!"
+	desc = "The [From.GetName] have sent us support! Although we will be in their debt, we are almost prepared to Enforce Constitutional Reform."
+	picture = GFX_report_event_communist_leader
+
+	is_triggered_only = yes
+
+	option = {
+		name = "To Democracy!"
+	}
+}
+
+country_event = {
+	id = LBA_events.16
+	title = "The Question of Idris Senussi"
+	desc = "Idris Senussi, our former king, must be brought to justice. The only question is how? We could integrate him into everyday society, however, killing or exiling him will be good for the Nation's Morale"
+	picture = GFX_Idris_Senussi_Event
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Exile Him"
+		retire_character = LIB_Idris_Senussi
+	}
+
+	option = {
+		name = "Execute Him"
+		retire_character = LIB_Idris_Senussi
+		hidden_effect = {
+			AML = {
+			retire_character = LIB_Idris_Senussi2
+			}
+		}
+	}
+
+	option = {
+		name = "Integrate him to Society"
+		retire_character = LIB_Idris_Senussi
 	}
 }

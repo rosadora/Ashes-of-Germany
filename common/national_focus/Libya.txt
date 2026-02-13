@@ -583,7 +583,7 @@ focus_tree = {
 
 	 focus = {
 		id = LBA_rally_around_the_crown
-		icon = GFX_focus_generic_monarchy_2
+		icon = GFX_Idris_Senussi
 		cost = 7
 		x = 22
 		y = 0
@@ -1195,6 +1195,7 @@ focus_tree = {
 				FRA = {
 					has_completed_focus = FRA_lift_the_law_of_exil
 				}
+				has_completed_focus = LBA_communist_revolution
 			}
 			FRA = {
 				is_faction_leader = yes
@@ -1437,6 +1438,10 @@ focus_tree = {
 			focus = LBA_invade_north_Africa
 		}
 
+		available = {
+			has_manpower > 300000
+		}
+
 		completion_reward = {
 			every_state = {
 				limit = {
@@ -1509,6 +1514,9 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_invade_the_Congo
 		}
+		available = {
+			has_manpower > 500000
+		}
 		completion_reward = {
 			set_cosmetic_tag = ETH_African_Union
 			every_state = {
@@ -1519,6 +1527,14 @@ focus_tree = {
 			}
 			create_wargoal = {
 				target = LIB
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SAF
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AFA
 				type = annex_everything
 			}
 		 }
@@ -1532,7 +1548,9 @@ focus_tree = {
     	y = 1
 		cost = 7
     	prerequisite = { focus = LBA_constitutional_monarchy }
-    	completion_reward = { }
+    	completion_reward = {
+			add_ideas = LBA_drafting_the_constitution
+		 }
 	}
 
 	focus = {
@@ -1543,7 +1561,22 @@ focus_tree = {
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_draft_a_constitution }
-	    completion_reward = { }
+	    completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.12
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.12
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.12
+			}
+			add_stability = 0.15
+			add_war_support = -0.15
+		 }
 	}
 
 	focus = {
@@ -1554,18 +1587,25 @@ focus_tree = {
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_draft_a_constitution }
-	    completion_reward = { }
+	    completion_reward = {
+			add_ideas = LBA_convincing_democrats
+		 }
 	}
 
 	focus = {
 	    id = LBA_get_communist_support
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_goal_support_communism
 	    relative_position_id = LBA_convince_the_king_towards_democracy
 	    x = -1
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_convince_the_king_towards_democracy }
-	    completion_reward = { }
+	    completion_reward = {
+			add_timed_idea = {
+				idea = LBA_communist_support_rising
+				days = 365
+			}
+		 }
 	}
 
 	focus = {
@@ -1590,7 +1630,32 @@ focus_tree = {
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_boost_democratic_parties }
-	    completion_reward = { }
+	    completion_reward = {
+			ENG = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			FRA = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			POL = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			SPR = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+		 }
 	}
 
 	focus = {
@@ -1600,14 +1665,17 @@ focus_tree = {
 	    x = 0
 	    y = 1
 		cost = 7
+		mutually_exclusive = {
+			focus = LBA_enforce_constitutional_reform
+		}
 		prerequisite = { focus = LBA_get_european_support }
-	    prerequisite = {focus = LBA_state_catholicism }
-		prerequisite = { focus = LBA_get_communist_support }
+	    prerequisite = {focus = LBA_state_catholicism  focus = LBA_get_communist_support }
 	    completion_reward = {
 			add_ideas = women_in_military
 			set_politics = {
 				ruling_party = classical_liberalism
 			}
+			remove_ideas = LBA_drafting_the_constitution
 		 }
 	}
 
@@ -1630,9 +1698,24 @@ focus_tree = {
 	    relative_position_id = LBA_enforce_constitutional_reform
 	    x = 1
 	    y = 1
-		cost = 7
+		cost = 5
 	    prerequisite = { focus = LBA_enforce_constitutional_reform }
-	    completion_reward = { }
+	    completion_reward = {
+			add_tech_bonus = {
+				category = industry 
+				bonus = 1
+				uses = 2
+			}
+			448 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			451 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			450 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		 }
 	}
 
 	focus = {
@@ -1644,6 +1727,12 @@ focus_tree = {
 		cost = 7
 		available = {
 			has_manpower > 150000
+		}
+		bypass = {
+			any_state = {
+				is_core_of = TUN
+				is_controlled_by = LBA
+			}
 		}
 	    prerequisite = { focus = LBA_women_rights }
 		prerequisite = { focus = LBA_modernize_the_industries }
@@ -1768,27 +1857,287 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LBA_1
-		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		id = LBA_into_the_middle_east
+		icon = GFX_focus_ETH_an_arabic_base
 		cost = 7
 		x = -1
 		y = 1
 		relative_position_id = LBA_proclaim_African_unity
-		completion_reward = { }
+		completion_reward = {
+			if = {
+				limit = { JOR = {exists = yes} }
+				create_wargoal = {
+					target = JOR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { PAL = {exists = yes} }
+				create_wargoal = {
+					target = PAL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { ISR = {exists = yes} }
+				create_wargoal = {
+					target = ISR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { SAU = { exists = yes } }
+				create_wargoal = {
+					target = SAU
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = { YEM = { exists = yes } }
+				create_wargoal = {
+					target = YEM
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = { OMA = { exists = yes } }
+				create_wargoal = {
+					target = OMA
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = { SYR = { exists = yes } }
+				create_wargoal = {
+					target = SYR
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = { IRQ = { exists = yes } }
+				create_wargoal = {
+					target = IRQ
+					type = puppet_wargoal_focus
+				}
+			}
+		 }
 		prerequisite = {
 			focus = LBA_proclaim_African_unity
 		}
 	}
 	focus = {
-		id = LBA_10
-		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		cost = 7
+		id = LBA_into_Iberia
+		icon = GFX_focus_spr_maintain_the_republic
 		x = 1
 		y = 1
 		prerequisite = {
 			focus = LBA_proclaim_African_unity
 		}
 		relative_position_id = LBA_proclaim_African_unity
-		completion_reward = { }
+		completion_reward = {
+			create_wargoal = {
+				target = SPR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = POR
+				type = annex_everything
+			}
+		 }
+	}
+	#COMMUNIST#
+
+	focus = {
+		id = LBA_communist_revolution
+		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+		cost = 10
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = LBA_get_communist_support
+		}
+		mutually_exclusive = {
+			focus = LBA_enforce_constitutional_reform
+		}
+		relative_position_id = LBA_get_communist_support
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+		 }
+	}
+
+	focus = {
+	id = LBA_follow_Russian_communism
+    icon = GFX_goal_propaganda_poster
+    cost = 10
+    relative_position_id = LBA_communist_revolution
+    x = -4
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_African_Communism
+	}
+	available = {
+		USR = {
+			exists = yes
+			is_faction_leader = yes
+		}
+	}
+    prerequisite = { focus = LBA_communist_revolution }
+    completion_reward = {
+        add_stability = -0.03
+        add_war_support = 0.05
+        add_political_power = 75
+ 	   }
+	}
+
+	focus = {
+	    id = LBA_African_Communism
+	    icon = GFX_LBA_african_communism
+	    cost = 10
+	    relative_position_id = LBA_communist_revolution
+	    x =-0
+	    y = 1
+		mutually_exclusive = {
+			focus = LBA_follow_Russian_communism
+		}
+	    prerequisite = { focus = LBA_communist_revolution }
+	    completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_join_the_USR
+	    icon = GFX_focus_chi_mission_to_the_soviet_union
+	    cost = 10
+	    relative_position_id = LBA_follow_Russian_communism
+	    x = 0
+	    y = 1
+	    prerequisite = { focus = LBA_follow_Russian_communism }
+	    completion_reward = {
+	        USR = {
+				country_event = {
+					id = generic.2
+					days = 6
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_question_of_Idris_Senussi
+	    icon = GFX_Idris_Senussi
+	    cost = 10
+	    relative_position_id = LBA_follow_Russian_communism
+	    x = 2
+	    y = 1
+	    prerequisite = { focus = LBA_follow_Russian_communism focus = LBA_African_Communism}
+	    completion_reward = {
+			country_event = {
+				id = LBA_events.16
+				days = 2
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_spread_the_revolution
+	    icon = GFX_LBA_spread_the_revolution
+	    cost = 10
+	    relative_position_id = LBA_communist_revolution
+	    x = 0
+	    y = 2
+	    prerequisite = { focus = LBA_African_Communism }
+	    completion_reward = {
+			every_state = {
+				limit = {
+					is_on_continent = africa
+					NOT = {
+						is_controlled_by = LBA
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = African_Wildfire_
+					days = 1055
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_request_Soviet_Guns
+	    icon = GFX_focus_fra_loyalty_trotzky
+	    cost = 10
+	    relative_position_id = LBA_question_of_Idris_Senussi
+	    x = -1
+	    y = 1
+	    prerequisite = {
+	        focus = LBA_join_the_USR
+	    }
+		prerequisite = {
+			focus = LBA_question_of_Idris_Senussi
+		}
+	    completion_reward = {
+	        USR = {
+				country_event = {
+					id = LBA_events.6
+					days = 3
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_revolution_by_force
+	    icon = GFX_focus_focus_fra_revolution_utmost
+	    cost = 10
+	    relative_position_id = LBA_spread_the_revolution
+	    x = -1
+	    y = 1
+	    prerequisite = {
+	        focus = LBA_spread_the_revolution
+	    }
+		prerequisite = {
+			 focus = LBA_question_of_Idris_Senussi
+		}
+	    completion_reward = {
+			 every_country = {
+        limit = {
+            is_on_same_continent_as = LBA
+            NOT = { tag = ROOT }
+        }
+		LBA = {
+			create_wargoal = {
+            type = annex_everything
+            target = PREV
+      	  }
+		}
+    }
+			if = {
+				limit = { NOT = { has_completed_focus = LBA_invade_north_Africa } } 
+				complete_national_focus = LBA_invade_north_Africa
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_the_african_shield
+	    icon = GFX_goal_generic_defence
+	    cost = 10
+	    relative_position_id = LBA_question_of_Idris_Senussi
+	    x = 0
+	    y = 2
+	    prerequisite = {
+	        focus = LBA_request_Soviet_Guns
+	        focus = LBA_revolution_by_force
+	    }
+	    completion_reward = {
+	        add_war_support = 0.10
+	        add_ideas = LBA_the_african_shield
+	    }
 	}
 }

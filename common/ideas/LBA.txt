@@ -176,5 +176,80 @@ ideas = {
 				ultra_nationalism_drift = 0.02
 			}
 		}
+
+		LBA_drafting_the_constitution = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.003
+				political_power_factor = -0.05
+			}
+		}
+
+		LBA_convincing_democrats = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_weekly = -0.005
+				democratic_drift = 0.02
+				social_democracy_drift = 0.02
+				social_liberalism_drift = 0.01
+				political_power_gain = -0.50
+			}
+		}
+
+		LBA_communist_support_rising = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.005
+				communism_drift = 0.03
+				classical_marxism_drift = 0.03
+			}
+		}
+
+		LBA_the_african_shield = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ETH_joint_african_development_program
+
+			modifier = {
+				defence = 0.15
+			}
+		}
 	}
 }

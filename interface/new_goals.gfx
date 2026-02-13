@@ -2035,4 +2035,19 @@ spriteTypes = {
 		name = "GFX_generic_goal_attack_africa"
 		texturefile = "gfx/interface/goals/generic_attack_africa.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Idris_Senussi"
+		texturefile = "gfx/interface/goals/focus_LBA_Idris_Senussi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_african_communism"
+		texturefile = "gfx/interface/goals/LBA_african_communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_spread_the_revolution"
+		texturefile = "gfx/interface/goals/LBA_spread_communism_Africa.dds"
+	}
 }
