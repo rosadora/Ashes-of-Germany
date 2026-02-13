@@ -93,6 +93,21 @@ macedonian_nationalism_yug_cro = {
 	state_production_speed_buildings_factor = -0.25
 }
 
+Benito_Mussolini_Rebelious = {
+	enable = {
+		always = yes
+	}
+	available = {
+		original_tag = LBA
+	}
+
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+
+	resistance_target = 0.35
+	state_production_speed_buildings_factor = -0.5
+	recruitable_population_factor = -0.45
+}
+
 pastoral_society = {
 	icon = POL_looming_peasants_strike
 

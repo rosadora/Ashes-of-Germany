@@ -456,7 +456,11 @@
 			set_rule = {
 				can_create_factions = yes
 			}
-		 create_faction = haven_of_peace
+		 create_faction_from_template = {
+             template = faction_template_defensive_democratic
+             name = "Heaven of Peace"
+             icon = GFX_faction_logo_generic_2
+            }
 		}
 	}
 	focus = {
@@ -2390,7 +2394,11 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			create_faction = united_front_against_french_domination
+			create_faction_from_template = {
+             template = faction_template_defensive_democratic
+             name = "United Front Against French Domination"
+             icon = GFX_faction_logo_generic_2
+            }
         }
 	}
 	focus = {

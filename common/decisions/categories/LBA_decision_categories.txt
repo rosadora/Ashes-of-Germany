@@ -1,7 +1,7 @@
 LBA_raise_militias = {
 	priority = 50
 
-	picture = GFX_decision_category_ITA_colonial_management
+	icon = GFX_decision_category_ITA_colonial_management
 
 	allowed = {
 		tag = AML
@@ -14,7 +14,7 @@ LBA_raise_militias = {
 LBA_troops_from_italy = {
 		priority = 50
 
-	picture = GFX_decision_category_ITA_colonial_management
+	icon = GFX_decision_category_ITA_colonial_management
 
 	allowed = {
 		tag = LBA
@@ -22,5 +22,19 @@ LBA_troops_from_italy = {
 
 	visible = {
 		has_character = LBA_benito_mussolini
+	}
+}
+
+LBA_root_out_Mussolini_Loyalists = {
+	priority = 50
+
+	icon = GFX_Benito_Mussolini_Imprisoned
+
+	allowed = {
+		tag = LBA
+	}
+
+	visible = {
+		has_completed_focus = LBA_root_out_mussolinis_loyalists
 	}
 }

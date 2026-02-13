@@ -620,8 +620,6 @@ country_event = {
 			base = 100
 		}
 		add_stability = 0.05
-		create_faction = Intermarium
-		add_to_faction = UKR
 	}
 }
 country_event = {

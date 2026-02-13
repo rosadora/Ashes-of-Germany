@@ -24,20 +24,16 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 25
 	fascism = 20
-	communism = 5
-	neutrality = 50
-}
-
-create_country_leader = {
-	name = "Bashir es Sadawi"
-	desc = ""
-	picture = GFX_portrait_Bashir_es_Sadawi
-	ideology = liberalism
-	traits = {
-		#
-	}
+	ultra_nationalism = 3
+	neutrality = 30
+	democratic = 14
+	classical_liberalism = 6
+	social_liberalism = 2
+	social_democracy = 14
+	classical_marxism = 2
+	libertarian_socialism = 3
+	communism = 6
 }
 
 create_country_leader = {
@@ -50,22 +46,9 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Idris Senussi"
-	desc = ""
-	picture = GFX_portrait_Idris_Senussi
-	ideology = despotism
-	traits = {
-		#
-	}
-}
+recruit_character = Bashir_es_Sadawi
 
-create_country_leader = {
-	name = "Hassan as-Senussi"
-	desc = ""
-	picture = GFX_portrait_Hassan_as_Senussi
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+recruit_character = LIB_Idris_Senussi
+
+recruit_character = Hassan_as_Senussi_LBA
+

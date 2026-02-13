@@ -223,6 +223,29 @@ focus_tree = {
 	 }
 
 	 focus = {
+		id = LBA_root_out_mussolinis_loyalists
+		icon = GFX_goal_stand_up_and_fight
+		cost = 7
+		available = {
+			NOT = {
+				has_war_with = AML
+			}
+			any_owned_state = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		x = 0
+		prerequisite = {
+			focus = LBA_overthrow_Mussolini
+		}
+		y = 1
+		relative_position_id = LBA_overthrow_Mussolini
+		completion_reward = {
+			custom_effect_tooltip = destroy_mussolini_TT
+		 }
+	 }
+
+	 focus = {
 		id = LBA_starve_the_people
 		icon = GFX_focus_generic_farmland
 		cost = 7
@@ -306,7 +329,9 @@ focus_tree = {
 			focus = LBA_overthrow_Mussolini
 		}
 		available = {
-			has_war = no
+			NOT = {
+				has_war_with = AML
+			}
 		}
 		x = 2
 		y = 1
@@ -1038,16 +1063,35 @@ focus_tree = {
 			focus = LBA_overthrow_Mussolini
 		}
 		available = {
-			has_war = no
+			NOT = {
+				has_war_with = AML
+			}
 		}
 		relative_position_id = LBA_overthrow_Mussolini
 		completion_reward = {
-			hidden_effect = {
-				recruit_character = LIB_Idris_Senussi
-			}
 			news_event = {
 				id = LBA_events.2
 				days = 2
+			}
+			449 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			662 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			663 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			450 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			451 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
 			}
 		 }
 	}
@@ -1303,6 +1347,11 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
+			hidden_effect = {
+				set_rule = {
+				can_create_factions = yes
+				}	
+			}
 		}
     }
 
@@ -1427,7 +1476,14 @@ focus_tree = {
 				province = 875
 				value = 15
 			}
-			set_cosmetic_tag = ADU
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LBA_proclaim_African_unity
+					}
+				 }
+				set_cosmetic_tag = ADU
+			}
 			hidden_effect = {
 				news_event = { id = lar_news.281 hours = 6 }
 				set_global_flag = form_andalusia_flag

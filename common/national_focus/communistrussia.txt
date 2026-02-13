@@ -1344,7 +1344,7 @@
 				unlock_decision_tooltip = gen_join_united_workers_of_europe
 			}
 			else = {
-			   create_faction = third_internationale
+			   create_faction_from_template = faction_template_fourth_international
 			}
 		}
 	}

@@ -1161,6 +1161,12 @@ country_event = {
 			base = 100
 		}
 		create_faction = pact_of_strasbourg
+		create_faction_from_template = {
+             template = faction_template_regional
+             name = "Strasburg Pact"
+             icon = GFX_faction_logo_generic
+            }
+		
 		FRA = { add_to_faction = WUR }
     }
 	option = {

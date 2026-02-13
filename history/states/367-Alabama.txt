@@ -22,12 +22,10 @@ state={
 		victory_points = {
 			12735 1 
 		}
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 4
-			}
-		}
+	}
 
+	resources = {
+		coal = 8
 	}
 
 	provinces={

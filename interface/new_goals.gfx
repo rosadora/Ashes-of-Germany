@@ -1987,12 +1987,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_burn_the_world"
-	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	name = "GFX_goal_the_last_gambling"
+	texturefile = "gfx/interface/goals/the_last_gambling.dds"			
 	}
 
 	SpriteType = {
 	name = "GFX_goal_burn_the_world"
 	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_Idris_Senussi"
+	texturefile = "gfx/interface/goals/Idris_senussi_goal.dds"
+	}
+
+	spriteType = {
+		name = "Finish_the_Opposition"
+		texturefile = "gfx/interface/goals/Finish_the_Opposition.dds"
+	}
+
+	spriteType = {
+		name = "Oppose_Mussolini_LBA"
+		texturefile = "gfx/interface/goals/Oppose_Mussolini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_FOCUS_rally_around_crown"
+		texturefile = "gfx/interface/goals/generic_rally_around_crown.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_constitutional_monarchy"
+		texturefile = "gfx/interface/goals/constitutional_monarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_dreams_of_united_africa"
+		texturefile = "gfx/interface/goals/dreams_of_unified_africa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_goal_beg_france_flag"
+		texturefile = "gfx/interface/goals/generic_beg_france_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_goal_attack_africa"
+		texturefile = "gfx/interface/goals/generic_attack_africa.dds"
 	}
 }

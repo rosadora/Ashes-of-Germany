@@ -13,6 +13,10 @@ ideas = {
 			picture = SPR_anti_fascist_crusade
 
 			removal_cost = -1
+
+			rule = {
+				can_not_declare_war = yes
+			}
 			
 			modifier = {
 				stability_factor = -0.25

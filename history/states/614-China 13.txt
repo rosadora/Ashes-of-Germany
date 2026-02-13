@@ -6,6 +6,10 @@ state={
 	
 	state_category = town
 
+	resources = {
+		coal = 5
+	}
+
 	history={
 		owner = CHI
 		add_core_of = CHI

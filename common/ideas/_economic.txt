@@ -28,6 +28,7 @@ ideas = {
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
 				agency_upgrade_time = 1.0
+				factory_energy_consumption = -0.3
 			}
 
 			rule = {
@@ -65,6 +66,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = 0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				global_building_slots_factor = 0.3
+				factory_energy_consumption = -0.1
 			}
 
 			allowed_to_remove = {
@@ -99,6 +101,7 @@ ideas = {
 				guarantee_tension = 0.75
 				global_building_slots_factor = 0.3
 				research_speed_factor = 0.1
+				factory_energy_consumption = -0.3
 			}
 
 			allowed_to_remove = {
@@ -130,6 +133,7 @@ ideas = {
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
 				agency_upgrade_time = 0.8
+				factory_energy_consumption = -0.3
 			}
 
 			rule = {
@@ -160,6 +164,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = -0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+				factory_energy_consumption = -0.2
 			}
 
 			default = yes
@@ -181,6 +186,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
+				factory_energy_consumption = -0.075
 			}
 
 			cancel_if_invalid = no
@@ -222,6 +228,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor= 0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
+				factory_energy_consumption = 0.1
 			}
 
 			cancel_if_invalid = no
@@ -264,6 +271,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = 0.2
+				factory_energy_consumption = 0.25
 			}
 
 			cancel_if_invalid = no
@@ -365,6 +373,7 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = 0.3
+				factory_energy_consumption = 0.4
 			}
 
 			cancel_if_invalid = no
@@ -406,6 +415,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.125
 				stability_factor = -0.2
 				army_core_defence_factor = 0.1
+				factory_energy_consumption = 0.3
 			}
 		}
 

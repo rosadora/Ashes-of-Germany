@@ -71,6 +71,18 @@ country_event = { #The Civil War Starts
             }
 			load_oob = NLC_template
 		}
+		LBA = {
+			transfer_state = 448
+			transfer_state = 661
+			transfer_state = 449
+			transfer_state = 662
+			transfer_state = 450
+			transfer_state = 663
+			transfer_state = 451
+			transfer_state = 273
+			inherit_technology = ITA
+			set_research_slots = 2
+		}
 		transfer_units_fraction= {
 	     target = NLC
 	     navy_ratio = 0.4
@@ -111,6 +123,40 @@ country_event = { #The Civil War Starts
 		}
 		NLC = {
 		change_tag_from = ITA
+		}
+	}
+	option = {
+		name = italia.1.e
+		ai_chance = {
+			base = 80
+		}
+		hidden_effect = {
+				ITA = {
+			retire_country_leader = yes
+		}
+		ILF = {
+			country_event = italia.25
+		}
+		NLC = {
+			country_event = italia.25
+		}
+	LBA = {
+		add_ideas = flee_from_italy
+		set_politics = {
+			ruling_party = fascism
+		}
+		recruit_character = LBA_benito_mussolini
+		retire_country_leader = yes
+		set_popularities = {
+			fascism = 0.62
+			ultra_nationalism = 0.30
+			neutrality = 0.08
+		}
+			load_oob = LBA_country_spawns
+		}
+		}
+		LBA = {
+			change_tag_from = ITA
 		}
 	}
 }
@@ -861,6 +907,23 @@ country_event = {
 
 		hidden_effect = {
 			country_event = { days = 1 id = bba_news.108 }
+		}
+	}
+}
+
+country_event = {
+	id = italia.25
+	title = italia.25.t
+	desc = italia.25.d
+	picture = GFX_report_event_DEN_exiled_king
+
+	is_triggered_only = yes
+
+	option = {
+		name = italia.25.a
+		add_timed_idea = {
+			idea = morale_boost_ITA
+			days = 180
 		}
 	}
 }

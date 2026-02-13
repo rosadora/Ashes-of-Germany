@@ -226,7 +226,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = PRC_mao_faction
+				create_faction_from_template = faction_template_PRC_the_peoples_front
 			}
 		}
 	}

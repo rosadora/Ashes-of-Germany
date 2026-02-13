@@ -40,6 +40,22 @@ LBA_raise_militias = {
                   division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
                   owner = AML
                 }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
 			}
 
 			#Uomini di Mussolini
@@ -150,6 +166,185 @@ LBA_troops_from_italy = {
                   division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
                   owner = LBA
                 }
+			}
+		}
+	}
+}
+
+LBA_root_out_Mussolini_Loyalists = {
+	LBA_root_out_loyalists1 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			449 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 250
+
+
+		complete_effect = {
+			449 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists2 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			662 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 250
+
+
+		complete_effect = {
+			662 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists3 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			450 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 250
+
+		complete_effect = {
+			450 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists4 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			663 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 250
+
+		complete_effect = {
+			663 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists5 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			451 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 250
+
+		complete_effect = {
+			451 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
 			}
 		}
 	}

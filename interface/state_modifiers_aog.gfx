@@ -5,4 +5,14 @@ spriteTypes = {
 		name = "GFX_modifiers_german_speakers_cze"
 		texturefile = "gfx/interface/state_modifiers/modifiers_german_speakers_cze.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Benito_Mussolini_libyan_resurgence"
+		texturefile = "gfx/interface/state_modifiers/Benito_Mussolini_modifier.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Benito_Mussolini_Imprisoned"
+		texturefile = "gfx/interface/state_modifiers/Benito_Mussolini_Jailed_modifier.dds"
+	}
 }

@@ -11,6 +11,9 @@ ETH_triumph_over_mussolini = {
         visible = {
             has_war_with = ITA
 			has_global_flag = italian_civil_war
+            NOT = {
+                has_war_with = AFA
+            }
         }
         available = {
         }
@@ -62,7 +65,7 @@ ETH_triumph_over_mussolini = {
 		}
 
         complete_effect = {
-			create_wargoal = {
+			declare_war_on = {
                 target = AFA
                 type = annex_everything
             }

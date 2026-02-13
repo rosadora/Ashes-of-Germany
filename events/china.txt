@@ -144,7 +144,7 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		create_faction = chinese_united_front
+		create_faction_from_template = faction_template_chinese_united_front
 		add_timed_idea = {
 			idea = china_under_attack
 			days = 200

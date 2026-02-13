@@ -288,7 +288,7 @@
 	focus = {
 		id = ILF_defence_of_the_cities
 		icon = GFX_goal_fortify_the_westwall
-		x = -3
+		x = -4
 		y = 1
 		prerequisite = {focus = ILF_lessons_of_war}
 		mutually_exclusive = { }
@@ -352,7 +352,7 @@
 	focus = {
 		id = ILF_take_advantage_of_the_terrain
 		icon = GFX_focus_SWE_varnplikt
-		x = -1
+		x = -2
 		y = 1
 		prerequisite = {focus = ILF_lessons_of_war}
 		mutually_exclusive = { }
@@ -375,7 +375,7 @@
 	focus = {
 		id = ILF_the_last_delivery
 		icon = GFX_focus_ETH_freedom_at_gunpoint
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = {focus = ILF_lessons_of_war}
 		mutually_exclusive = { }
@@ -403,7 +403,7 @@
 	focus = {
 		id = ILF_reach_the_eternal_city
 		icon = GFX_focus_DEN_heavy_regulations
-		x = 3
+		x = 2
 		y = 1
 		prerequisite = {focus = ILF_lessons_of_war}
 		mutually_exclusive = { }
@@ -567,7 +567,7 @@
 	focus = {
 		id = ILF_partition_of_italy
 		icon = GFX_focus_eng_move_to_secure_the_dominions
-		x = -3
+		x = -4
 		y = 1
 		prerequisite = {focus = ILF_assert_independance}
 		relative_position_id = ILF_assert_independance
@@ -694,6 +694,30 @@
              target = ETH
             }
 		}
+	}
+	focus = {
+		id = ILF_retake_libya
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		relative_position_id = ILF_our_little_place_under_the_sun
+		cost = 5
+		prerequisite = {
+			focus = ILF_partition_of_italy
+		}
+		x = 2
+		y = x
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = LBA
+				}
+				add_claim_by = ITA
+			}
+
+			create_wargoal = {
+             type = take_state_focus
+             target = LBA
+            }
+		 }
 	}
 	focus = {
 		id = ILF_king_of_spain_aragon_italy_and_two_sicilies
@@ -843,7 +867,12 @@
 			set_rule = {
 				can_create_factions = yes
 			}
-			create_faction = axis_of_freedom
+			create_faction_from_template = {
+             template = faction_template_defensive_democratic
+             name = "Axis of Freedom"
+             icon = GFX_faction_logo_generic_3
+             color = { 100 100 150 }
+            }
 			release_puppet = LBA
 			CRO = {
 				transfer_state = 163

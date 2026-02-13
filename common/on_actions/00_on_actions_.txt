@@ -202,9 +202,6 @@ on_actions = {
 		set_rule = {
 			can_send_volunteers = yes
 		}
-		set_rule = {
-			can_join_factions = no
-		}
 	}
    every_country = {
     country_event = {
@@ -1021,6 +1018,25 @@ on_actions = {
 						}
 					}
             }
+		}
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = { 
+					ETH = {
+						has_war_with = ITA
+						controls_state = 908
+					}
+				 }
+				 ITA = {
+					country_event = {
+						id = LBA_events.9
+						days = 2
+					}
+				 }
+			}
 		}
 	}
 }

@@ -238,3 +238,31 @@ country_event = {
 		name = "Rats!"
 	}
 }
+
+country_event = {
+	id = LBA_events.9
+	title = "Ethiopia Requests Peace!"
+	desc = "Now that Ethiopia has taken over Aussa, they have requested a peace treaty with the Italian nation. Should we accept, §Rit will lead to them being stronger§R than they would be without them."
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We should accept"
+		ai_chance = {
+			base = 99
+		}
+		ETH = {
+			white_peace = ITA
+		}
+	}
+
+	option = {
+		name = "Never!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}

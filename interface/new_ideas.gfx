@@ -331,6 +331,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ideology_volkisch"
+		texturefile = "gfx/interface/ideologies/volkisch.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_revolutionary_mobilization"
 		texturefile = "gfx/interface/ideas/revolutionary_mobilization.dds"
 	}
@@ -608,5 +613,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_jewish_state"
 		texturefile = "gfx/interface/ideas/jewish_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_the_visible_hand"
+		texturefile = "gfx/interface/ideas/the_visible_hand.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mussolini"
+		texturefile = "gfx/interface/ideas/idea_mussolini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_constitutional_monarchy"
+		texturefile = "gfx/interface/ideas/constitutional_monarchy_idea.dds"
 	}
 }

@@ -3,6 +3,8 @@ capital = 271
 # add_ideas = {
 # }
 
+load_oob = ETH_1936
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
