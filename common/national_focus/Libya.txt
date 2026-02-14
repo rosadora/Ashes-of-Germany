@@ -1,3 +1,7 @@
+#############################################GFX CREDITS########################################
+#The user who nade the majority of the gfx (with excemption) is random_socialistdude on discord#
+################################################################################################
+
 focus_tree = {
 	id = LBA_focus_tree
 	country = {
@@ -1355,6 +1359,18 @@ focus_tree = {
 				set_rule = {
 				can_create_factions = yes
 				}	
+
+				every_state = {
+				limit = {
+					OR = {
+						is_core_of = ALG
+						is_core_of = EGY
+						is_core_of = TUN
+						is_core_of = MOR
+					}
+				}
+				add_core_of = LBA
+			}
 			}
 		}
     }
@@ -1439,34 +1455,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_manpower > 300000
+			has_manpower > 350000
 		}
 
 		completion_reward = {
-			every_state = {
-				limit = {
-					is_core_of = ALG
-				}
-				add_core_of = LBA
-			}
-			every_state = {
-				limit = {
-					is_core_of = TUN
-				}
-				add_core_of = LBA
-			}
-			every_state = {
-				limit = {
-					is_core_of = MOR
-				}
-				add_core_of = LBA
-			}
-			every_state = {
-				limit = {
-					is_core_of = EGY
-				}
-				add_core_of = LBA
-			}
 			
 			173 = {
 				add_core_of = LBA
@@ -1588,7 +1580,10 @@ focus_tree = {
 		cost = 7
 	    prerequisite = { focus = LBA_draft_a_constitution }
 	    completion_reward = {
-			add_ideas = LBA_convincing_democrats
+			add_timed_idea = {
+				idea =LBA_convincing_democrats
+				days = 365
+			} 
 		 }
 	}
 
@@ -1727,6 +1722,7 @@ focus_tree = {
 		cost = 7
 		available = {
 			has_manpower > 150000
+			is_in_faction_with = FRA
 		}
 		bypass = {
 			any_state = {
@@ -1747,8 +1743,8 @@ focus_tree = {
 	}
 
 	focus = {
-	    id = LBA_14
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    id = LBA_consolodate_Idris_Senussis_Rule
+	    icon = GFX_Idris_Senussi
 	    relative_position_id = LBA_true_monarchy
 		cost = 7
 	    x = 4
@@ -1760,22 +1756,22 @@ focus_tree = {
 	focus = {
 	    id = LBA_15
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_14
+	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
 	    x = -1
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_14 }
+	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
 	    completion_reward = { }
 	}
 
 	focus = {
 	    id = LBA_16
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_14
+	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
 	    x = 1
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_14 }
+	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
 	    completion_reward = { }
 	}
 
@@ -1956,6 +1952,11 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_get_communist_support
 		}
+		available = {
+			NOT = {
+				is_in_faction_with = FRA
+			}
+		}
 		mutually_exclusive = {
 			focus = LBA_enforce_constitutional_reform
 		}
@@ -1964,6 +1965,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = communism
 			}
+			remove_ideas = LBA_drafting_the_constitution
 		 }
 	}
 
@@ -2017,6 +2019,11 @@ focus_tree = {
 	    relative_position_id = LBA_follow_Russian_communism
 	    x = 0
 	    y = 1
+		available = {
+			USR = {
+				is_faction_leader = yes
+			}
+		}
 	    prerequisite = { focus = LBA_follow_Russian_communism }
 	    completion_reward = {
 	        USR = {
@@ -2053,16 +2060,24 @@ focus_tree = {
 	    y = 2
 	    prerequisite = { focus = LBA_African_Communism }
 	    completion_reward = {
+			create_faction = "African Liberation Front"
 			every_state = {
 				limit = {
 					is_on_continent = africa
 					NOT = {
 						is_controlled_by = LBA
+						tag = ETH
 					}
 				}
 				add_dynamic_modifier = {
 					modifier = African_Wildfire_
 					days = 1055
+				}
+			}
+			ETH = {
+				country_event = {
+					id = generic.2
+					days = 2
 				}
 			}
 	    }

@@ -109,7 +109,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = classical_liberalism
+			ideology = libyan_democracy_category
 			traits = { }
 			expire = 1965.1.1.1
 		}

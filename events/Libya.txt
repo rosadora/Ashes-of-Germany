@@ -3,7 +3,7 @@ add_namespace = LBA_events
 country_event = {
 	id = LBA_events.1
 	title = "Mussolini Escapes!"
-	desc = "We have attempted to storm the palace of Benito Mussolini, we managed to get thru to the office of Mussolini only for him to escape via helicopter East."
+	desc = "We have attempted to storm the palace of Benito Mussolini, we managed to get thru to the office of Mussolini only for him to escape via helicopter East. Following his escape, he has declared us as an illegal uprising and declared war on us as a terror group."
 	picture = GFX_report_event_generic_mussolini
 
 	is_triggered_only = yes
@@ -84,14 +84,7 @@ country_event = {
 		name = "To a strong Ally!"
 		ai_chance = {
 			base = 25
-		}
-		LBA = {
-			country_event = {
-				id = LBA_events.5
-				days = 2
-			}
-		}
-		modifier = {
+			modifier = {
             factor = 4 
             FROM = {
                 has_opinion = {
@@ -99,6 +92,13 @@ country_event = {
                     value > 50
                 }
             }
+		}
+		}
+		LBA = {
+			country_event = {
+				id = LBA_events.5
+				days = 2
+			}
 		}
 		
 		every_state = {
@@ -194,6 +194,9 @@ country_event = {
 				days = 2
 			}
 		}
+		ai_chance = {
+			base = 85
+		}
 	}
 
 	option = {
@@ -203,6 +206,9 @@ country_event = {
 				id = LBA_events.8
 				days = 2
 			}
+		}
+		ai_chance = {
+			base = 15
 		}
 	}
 }
@@ -304,6 +310,15 @@ country_event = {
 		}
 		ai_chance = {
 			base = 35
+			modifier = {
+            factor = 5
+            FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value > 80
+                }
+            }
+		}
 		}
 	}
 }
@@ -373,10 +388,16 @@ country_event = {
 
 	option = {
 		name = "Keep Pushing!"
+		ai_chance = {
+			base = 1
+		}
 	}
 
 	option = {
 		name = "An Acceptable Offer"
+		ai_chance = {
+			base = 99
+		}
 		LBA = {
 			white_peace = FRA
 		}
@@ -401,10 +422,25 @@ country_event = {
 
 	option = {
 		name = "Do Not Send Support"
+		ai_chance = {
+			base = 25
+			modifier = {
+            factor = 4 
+            FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value < -20
+                }
+            }
+		}
+		}
 	}
 
 	option = {
 		name = "Send them Support"
+		ai_chance = {
+			base = 75
+		}
 		LBA = {
 			add_political_power = 150
 			country_event = {

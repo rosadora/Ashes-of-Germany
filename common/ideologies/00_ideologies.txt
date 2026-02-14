@@ -223,6 +223,9 @@ ideologies = {
 			classical_liberalism_category = {
 			}
 
+			libyan_democracy_category = {			
+			}
+
 		}
 
 		dynamic_faction_names = {
