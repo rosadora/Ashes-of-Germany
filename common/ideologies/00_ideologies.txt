@@ -223,7 +223,8 @@ ideologies = {
 			classical_liberalism_category = {
 			}
 
-			libyan_democracy_category = {			
+			libyan_democracy_category = {		
+				can_be_randomly_selected = no	
 			}
 
 		}
