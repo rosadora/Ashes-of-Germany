@@ -1720,3 +1720,11 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  PRE_REP_social_liberalism:0 "Republic of Little Prussia"
  PRE_REP_social_democracy:0 "Republic of Little Prussia"
 
+ PRE_PRG_democratic:0 "Pregel Republic"
+ PRE_PRG_classical_liberalism:0 "Pregel Republic"
+ PRE_PRG_social_liberalism:0 "Pregel Republic"
+ PRE_PRG_social_democracy:0 "Pregel Republic"
+ PRE_PRG_classical_marxism:0 "Pregel Socialist Republic"
+ PRE_PRG_communism:0 "Pregel Socialist Republic"
+ PRE_PRG_libertarian_socialism:0 "Free Territory of Pregel"
+

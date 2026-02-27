@@ -1683,3 +1683,52 @@ news_event = { #Prussia integrates Little Prussia
 		name = news.3093.a
 	}
 }
+news_event = { #Wilhelm II Abdicates
+    id = news.3094
+	title = news.3094.t
+	desc = news.3094.d
+	picture = GFX_news_event_german_rally
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3094.a
+	}
+}
+news_event = { #Wilhelm II Dies
+    id = news.3095
+	title = news.3095.t
+	desc = news.3095.d
+	picture = GFX_news_event_german_rally
+	
+	major = yes
+
+	trigger = {
+		PRS = {
+			has_country_leader = {
+            name = "Wilhelm II"
+            ruling_only = yes
+            }
+		}
+		date > 1941.04.01
+	}
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			PRS = {
+				country_event = {
+					id = prussia.139
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = news.3095.a
+	}
+}

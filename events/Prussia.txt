@@ -1058,3 +1058,72 @@ country_event = { # The Prussian Union - Failure
         }
 	}
 }
+country_event = { # Wilhelm II Abdication
+	id = prussia.139
+	title = prussia.139.t
+	desc = prussia.139.d
+	picture = GFX_report_event_hol_cabinet_gerbrandy
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.139.a
+		ai_chance = {
+			base = 70
+		}
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRS/wilhelm_iv.dds"
+	        expire = "1960.1.16"
+	        ideology = social_democracy_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRS/wilhelm_iv.dds"
+	        expire = "1960.1.16"
+	        ideology = conservatism
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRS/wilhelm_iv.dds"
+	        expire = "1960.1.16"
+	        ideology = social_liberalism_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRS/wilhelm_iv.dds"
+	        expire = "1960.1.16"
+	        ideology = classical_liberalism_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRS/wilhelm_iv.dds"
+	        expire = "1960.1.16"
+	        ideology = ultra_nationalism_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRS/wilhelm_iv.dds"
+	        expire = "1960.1.16"
+	        ideology = despotism
+	        traits = {
+	       }
+        }
+	}
+}

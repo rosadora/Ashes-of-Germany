@@ -1689,3 +1689,6 @@
  ### LITTLE PRUSSIA ###
  honor_the_heroes:0 "Honor the Heroes"
  honor_the_heroes_desc:0 "We honor the heroes fallen in the independance war of Little Prussia."
+ anti_militarism:0 "Anti-Militarism"
+ peace_in_the_world:0 "Peace in the World"
+ reconstruction_through_remilitarization:0 "Reconstruction Through Remilitarization"

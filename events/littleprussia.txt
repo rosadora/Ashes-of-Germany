@@ -699,7 +699,7 @@ country_event = { # DNVP Victory in Elections
 
 	is_triggered_only = yes
 
-	option = { # Surprising :'
+	option = { # Surprising :' Let's Join Prussia
 		name = pre.21.a
 		ai_chance = {
 			base = 100
@@ -709,6 +709,74 @@ country_event = { # DNVP Victory in Elections
 			elections_allowed = yes
 		}
 		complete_national_focus = PRE_dnvp_victory
+	}
+
+	option = { # Surprising :' We will not act to quickly s/o Victoria 
+		name = pre.21.b
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		complete_national_focus = PRE_dnvp_victory
+		set_country_flag = PRS_road_to_viktoria_takeover
+		mark_focus_tree_layout_dirty = yes
+		create_country_leader = {
+	        name = "Viktoria I"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRE/Victoria_Louise.dds"
+	        expire = "1960.1.16"
+	        ideology = social_democracy_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Viktoria I"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRE/Victoria_Louise.dds"
+	        expire = "1960.1.16"
+	        ideology = conservatism
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Viktoria Luise"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRE/Victoria_Louise.dds"
+	        expire = "1960.1.16"
+	        ideology = social_liberalism_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Viktoria Luise"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRE/Victoria_Louise.dds"
+	        expire = "1960.1.16"
+	        ideology = classical_liberalism_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Viktoria Luise"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRE/Victoria_Louise.dds"
+	        expire = "1960.1.16"
+	        ideology = ultra_nationalism_category
+	        traits = {
+	       }
+        }
+		create_country_leader = {
+	        name = "Viktoria Luise"
+	        desc = "POLITICS_WILHELM_III_DESC"
+	        picture = "gfx/leaders/PRE/Victoria_Louise.dds"
+	        expire = "1960.1.16"
+	        ideology = despotism
+	        traits = {
+	       }
+        }
 	}
 }
 

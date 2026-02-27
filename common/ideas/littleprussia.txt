@@ -95,5 +95,70 @@ ideas = {
 				army_org_factor = 0.05
 			}
 		}
+		anti_militarism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.02
+				army_core_defence_factor = 0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+		peace_in_the_world = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = NORDIC_industry_democratic
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.01
+				army_core_defence_factor = 0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+				send_volunteer_size = 2
+				send_volunteers_tension = -0.2
+				send_volunteer_divisions_required = -0.5
+			}
+		}
+		reconstruction_through_remilitarization = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_rapid_militarization
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_infrastructure_factor = 0.15
+				consumer_goods_factor = -0.2
+			}
+		}
 	}
 }

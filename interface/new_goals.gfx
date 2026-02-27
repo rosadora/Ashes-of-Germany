@@ -2010,4 +2010,9 @@ spriteTypes = {
 	name = "GFX_goal_resist_the_kurofune"
 	texturefile = "gfx/interface/goals/resist_the_kurofune.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_highjack_the_dvnp"
+	texturefile = "gfx/interface/goals/highjack_the_dvnp.dds"			
+	}
 }
