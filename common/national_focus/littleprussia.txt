@@ -764,10 +764,6 @@
 		}
 		available = {
 			is_subject = no
-			OR = {
-				has_war_with = POL
-				has_war_with = LIT
-			}
 		}
 		bypass = {
 		}
@@ -799,10 +795,6 @@
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_war_with = POL
-				has_war_with = LIT
-			}
 		}
 		bypass = {
 		}
@@ -840,10 +832,6 @@
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_war_with = POL
-				has_war_with = LIT
-			}
 		}
 		bypass = {
 		}
@@ -867,10 +855,6 @@
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_war_with = POL
-				has_war_with = LIT
-			}
 		}
 		bypass = {
 		}
@@ -879,6 +863,10 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_stability = 0.05
+		 add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		 }
 		 add_popularity = {
 			ideology = democratic
 			popularity = 0.05
@@ -1581,6 +1569,170 @@
 		}
 	}
 	focus = {
+		id = PRE_workers_right_act
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 0
+		y = 1
+		prerequisite = {focus = PRE_spd_victory}
+		relative_position_id = PRE_spd_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = improved_worker_conditions
+		}
+	}
+	focus = {
+		id = PRE_promote_peaceful_diplomacy
+		icon = GFX_goal_colombe
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_workers_right_act}
+		relative_position_id = PRE_spd_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.1
+			add_ideas = neutrality_idea
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRE_focus_on_civilian_reconstruction
+		icon = GFX_focus_NORDIC_com_capstone_civilian
+		x = 2
+		y = 1
+		prerequisite = {focus = PRE_spd_victory focus = PRE_zentrum_victory}
+		relative_position_id = PRE_spd_victory
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = reconstruction_through_development
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = PRE_entrench_bipartism
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 0
+		y = 1
+		prerequisite = {focus = PRE_focus_on_civilian_reconstruction}
+		relative_position_id = PRE_focus_on_civilian_reconstruction
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+			  ideology = classical_liberalism
+			  popularity = 0.2
+		    }
+			add_popularity = {
+			  ideology = social_democracy
+			  popularity = 0.2
+		    }
+		}
+	}
+	focus = {
+		id = PRE_crackdown_on_cartels
+		icon = GFX_focus_ITA_banda_carita
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_entrench_bipartism}
+		relative_position_id = PRE_focus_on_civilian_reconstruction
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = growing_cartels
+			add_timed_idea = {
+				idea = cartels_unrest
+				days = 100
+			}
+		}
+	}
+	focus = {
 		id = PRE_zentrum_victory
 		icon = GFX_focus_ARG_defense_and_democracy
 		x = 2
@@ -1714,8 +1866,1044 @@
 		}
 	}
 	focus = {
+		id = PRE_cannibalize_the_center
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 1
+		prerequisite = {focus = PRE_reconstruction_through_militarisation}
+		relative_position_id = PRE_reconstruction_through_militarisation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			set_party_name = {
+				ideology = neutrality 
+				name = PRE_party_for_the_new_era
+				long_name = PRE_party_for_the_new_era_long
+			}
+			set_party_name = {
+				ideology = democratic 
+				name = PRE_party_for_the_new_era
+				long_name = PRE_party_for_the_new_era_long
+			}
+			set_party_name = {
+				ideology = classical_liberalism 
+				name = PRE_party_for_the_new_era
+				long_name = PRE_party_for_the_new_era_long
+			}
+			set_party_name = {
+				ideology = social_liberalism 
+				name = PRE_party_for_the_new_era
+				long_name = PRE_party_for_the_new_era_long
+			}
+		}
+	}
+	focus = {
+		id = PRE_crackdown_on_volkisch_movement
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = -1
+		y = 2
+		prerequisite = {focus = PRE_cannibalize_the_center}
+		prerequisite = {focus = PRE_ally_the_industrials}
+		relative_position_id = PRE_reconstruction_through_militarisation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+			add_manpower = -5000
+			add_popularity = {
+			  ideology = fascism
+			  popularity = -0.1
+		    }
+		}
+	}
+	focus = {
+		id = PRE_limited_union_rights
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 1
+		y = 2
+		prerequisite = {focus = PRE_cannibalize_the_center}
+		prerequisite = {focus = PRE_ally_the_industrials}
+		relative_position_id = PRE_reconstruction_through_militarisation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = limited_union_rights
+			add_popularity = {
+			  ideology = social_democracy
+			  popularity = 0.03
+		    }
+			add_popularity = {
+			  ideology = communism
+			  popularity = -0.01
+		    }
+			add_popularity = {
+			  ideology = classical_marxism
+			  popularity = -0.02
+		    }
+		}
+	}
+	focus = {
+		id = PRE_viktorian_constitution
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 3
+		y = 3
+
+		relative_position_id = PRE_reconstruction_through_militarisation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRE_reunification_is_achieved
+				OR = {
+			NOT = {
+				country_exists = HAN
+			}
+			HAN = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = WUR
+			}
+			WUR = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = MEK
+			}
+			MEK = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = SAX
+			}
+			SAX = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = SHL
+			}
+			SHL = {
+				has_capitulated = yes
+			}
+			}
+			OR = {
+			NOT = {
+				country_exists = BAY
+			}
+			BAY = {
+				has_capitulated = yes
+			}
+			}
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = viktorian_constitution
+			add_popularity = {
+			  ideology = neutrality
+			  popularity = 0.1
+		    }
+		}
+	}
+	focus = {
+		id = PRE_master_of_the_continent
+		icon = GFX_focus_ger_accept_british_naval_dominance
+		x = -2
+		y = 1
+
+		relative_position_id = PRE_viktorian_constitution
+		prerequisite = {focus = PRE_viktorian_constitution}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			ENG = {
+			 add_opinion_modifier = {
+              target = PRE
+              modifier = hostile_status
+             }
+			}
+			add_opinion_modifier = {
+              target = ENG
+              modifier = hostile_status
+             }
+		}
+	}
+	focus = {
+		id = PRE_humilitiated_no_more
+		icon = GFX_goal_die_wacht_am_rhein
+		x = 2
+		y = 1
+
+		relative_position_id = PRE_master_of_the_continent
+		prerequisite = {focus = PRE_challenge_the_british_navy focus = PRE_master_of_the_continent}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			42 = { set_demilitarized_zone = no }
+			51 = { set_demilitarized_zone = no }
+			add_state_core = 42
+			add_state_core = 51
+			add_state_core = 943
+			create_wargoal = {
+              type = annex_everything
+              target = RCO
+            }
+		}
+	}
+	focus = {
+		id = PRE_push_for_anschluss
+		icon = GFX_focus_GER_the_austrian_question
+		x = -1
+		y = 1
+
+		relative_position_id = PRE_humilitiated_no_more
+		prerequisite = {focus = PRE_humilitiated_no_more}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 848
+			add_state_core = 153
+			add_state_core = 937
+			add_state_core = 938
+			add_state_core = 152
+			add_state_core = 4
+			add_state_core = 940
+			add_state_core = 941
+			add_state_core = 939
+			add_state_core = 102
+			add_state_core = 853
+			create_wargoal = {
+              type = annex_everything
+              target = AUS
+            }
+		}
+	}
+	focus = {
+		id = PRE_push_for_bohemian_integration
+		icon = GFX_focus_generic_attack_czechoslovakia
+		x = 1
+		y = 1
+
+		relative_position_id = PRE_humilitiated_no_more
+		prerequisite = {focus = PRE_humilitiated_no_more}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_core = 69
+			add_state_core = 74
+			create_wargoal = {
+              type = annex_everything
+              target = CZE
+            }
+		}
+	}
+	focus = {
+		id = PRE_hegemony_over_the_germanic_world
+		icon = GFX_focus_GER_extend_mitteleuropa
+		x = 0
+		y = 3
+
+		relative_position_id = PRE_humilitiated_no_more
+		prerequisite = {focus = PRE_take_back_elsass_lothringen}
+		prerequisite = {focus = PRE_take_back_eastern_possessions}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = imperial_glory
+			set_cosmetic_tag = HRE_UNIFIED
+		}
+	}
+	focus = {
+		id = PRE_take_back_elsass_lothringen
+		icon = GFX_focus_GER_reinstate_imperial_possessions
+		x = -1
+		y = 2
+
+		relative_position_id = PRE_humilitiated_no_more
+		prerequisite = {focus = PRE_push_for_bohemian_integration}
+		prerequisite = {focus = PRE_push_for_anschluss}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 10
+			add_state_core = 28
+			add_state_core = 945
+			create_wargoal = {
+              type = annex_everything
+              target = FRA
+            }
+		}
+	}
+	focus = {
+		id = PRE_take_back_eastern_possessions
+		icon = GFX_focus_GER_eastern_grand_duchies
+		x = 1
+		y = 2
+
+		relative_position_id = PRE_humilitiated_no_more
+		prerequisite = {focus = PRE_push_for_bohemian_integration}
+		prerequisite = {focus = PRE_push_for_anschluss}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 10
+			add_state_core = 807
+			add_state_core = 86
+			add_state_core = 66
+			add_state_core = 67
+			add_state_core = 762
+			create_wargoal = {
+              type = annex_everything
+              target = POL
+            }
+			create_wargoal = {
+              type = annex_everything
+              target = SIL
+            }
+		}
+	}
+	focus = {
+		id = PRE_strengthen_our_military
+		icon = GFX_focus_RAJ_a_private_military
+		x = -3
+		y = 1
+
+		relative_position_id = PRE_master_of_the_continent
+		prerequisite = {focus = PRE_master_of_the_continent}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRE_protect_balkans
+		icon = GFX_focus_BUL_free_balkan_states
+		x = 0
+		y = 2
+
+		relative_position_id = PRE_strengthen_our_military
+		prerequisite = {focus = PRE_strengthen_our_military}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 10
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = ROM
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = SLO
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = TRA
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = SER
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = HUN
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = YUG
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = CRO
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = 48
+            }
+		}
+	}
+	focus = {
+		id = PRE_winter_preparations
+		icon = GFX_focus_generic_winter_warfare
+		x = 1
+		y = 1
+
+		relative_position_id = PRE_strengthen_our_military
+		prerequisite = {focus = PRE_strengthen_our_military}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = siberian_training 
+				days = 500
+			}
+		}
+	}
+	focus = {
+		id = PRE_the_eastern_campaign
+		icon = GFX_focus_GER_brest_litovsk_borders
+		x = 1
+		y = 3
+
+		relative_position_id = PRE_strengthen_our_military
+		prerequisite = {focus = PRE_winter_preparations}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 15
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = BLR
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = SOV
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = USR
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = UKR
+            }
+		}
+	}
+	focus = {
+		id = PRE_secure_benelux
+		icon = GFX_focus_generic_influence_benelux
+		x = -1
+		y = 1
+
+		relative_position_id = PRE_strengthen_our_military
+		prerequisite = {focus = PRE_strengthen_our_military}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 7
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = BEL
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = HOL
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = LUX
+            }
+		}
+	}
+	focus = {
+		id = PRE_road_to_the_straits
+		icon = GFX_focus_generic_free_iberia
+		x = -1
+		y = 3
+
+		relative_position_id = PRE_strengthen_our_military
+		prerequisite = {focus = PRE_secure_benelux}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_in_faction_with = ENG
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = POR
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = SPR
+            }
+		}
+	}
+	focus = {
+		id = PRE_challenge_the_british_navy
+		icon = GFX_focus_attack_britain
+		x = 2
+		y = 1
+
+		relative_position_id = PRE_viktorian_constitution
+		prerequisite = {focus = PRE_viktorian_constitution}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = challenge_the_british_navy
+		}
+	}
+	focus = {
+		id = PRE_reassert_claims_on_colonies
+		icon = GFX_goal_our_place_under_the_sun
+		x = 3
+		y = 1
+
+		relative_position_id = PRE_challenge_the_british_navy
+		prerequisite = {focus = PRE_challenge_the_british_navy}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 10
+			add_state_claim = 774
+			add_state_claim = 660
+			add_state_claim = 772
+			add_state_claim = 539
+			add_state_claim = 538
+			add_state_claim = 295
+			add_state_claim = 888
+			add_state_claim = 889
+			add_state_claim = 890
+			add_state_claim = 718
+			add_state_claim = 768
+			add_state_claim = 769
+			add_state_claim = 548
+			add_state_claim = 904
+			add_state_claim = 547
+			add_state_claim = 903
+			add_state_claim = 905
+			add_state_claim = 546
+			add_state_claim = 770
+			add_state_claim = 771
+			add_state_claim = 545
+			add_state_claim = 542
+			add_state_claim = 894
+			add_state_claim = 895
+			add_state_claim = 541
+			add_state_claim = 893
+			add_state_claim = 743
+			add_state_claim = 671
+			add_state_claim = 670
+			add_state_claim = 286
+			add_state_claim = 741
+			add_state_claim = 422
+			add_state_claim = 281
+			add_state_claim = 733
+			add_state_claim = 336
+			add_state_claim = 333
+		}
+	}
+	focus = {
+		id = PRE_emphasis_vittoria_mutilata
+		icon = GFX_focus_generic_italy_propaganda
+		x = 0
+		y = 2
+
+		relative_position_id = PRE_reassert_claims_on_colonies
+		prerequisite = {focus = PRE_reassert_claims_on_colonies}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+			ITA = {
+				OR = {
+					has_government = fascism
+					has_government = ultra_nationalism
+					has_government = social_liberalism
+					has_government = democratic
+					has_government = classical_liberalism
+				}
+				is_faction_leader = yes
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			unlock_decision_tooltip = join_italy
+		}
+	}
+	focus = {
+		id = PRE_scramble_for_africa
+		icon = GFX_focus_generic_africa_liberation
+		x = -1
+		y = 1
+
+		relative_position_id = PRE_reassert_claims_on_colonies
+		prerequisite = {focus = PRE_reassert_claims_on_colonies}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = training_of_colonial_troops
+		}
+	}
+	focus = {
+		id = PRE_avenge_colonial_injustice
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = -1
+		y = 3
+
+		relative_position_id = PRE_reassert_claims_on_colonies
+		prerequisite = {focus = PRE_scramble_for_africa}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = CMR
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = GHA
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = KEN
+            }
+		}
+	}
+	focus = {
+		id = PRE_take_back_qingdao
+		icon = GFX_focus_GER_request_the_return_of_qingdao
+		x = 1
+		y = 1
+
+		relative_position_id = PRE_reassert_claims_on_colonies
+		prerequisite = {focus = PRE_reassert_claims_on_colonies}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			every_country = {
+	         limit = {
+	          owns_state = 743
+	          }
+	         PRE = {
+		      create_wargoal = {
+		        type = take_state_focus
+		        target = PREV
+	            generator = { 743 }
+
+	         }
+		    }
+           }
+		}
+	}
+	focus = {
+		id = PRE_secure_asian_resources
+		icon = GFX_focus_GER_south_east_asian_natural_wealth
+		x = 1
+		y = 3
+
+		relative_position_id = PRE_reassert_claims_on_colonies
+		prerequisite = {focus = PRE_take_back_qingdao}
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = VIN
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = MAL
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = INS
+            }
+			create_wargoal = {
+              type = puppet_wargoal_focus
+              target = SIA
+            }
+		}
+	}
+	focus = {
+		id = PRE_ally_the_industrials
+		icon = GFX_focus_generic_monetary_union
+		x = 1
+		y = 1
+		prerequisite = {focus = PRE_reconstruction_through_militarisation}
+		relative_position_id = PRE_reconstruction_through_militarisation
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = {
+			  ideology = classical_liberalism
+			  popularity = 0.075
+		    }
+		}
+	}
+	focus = {
 		id = PRE_siblings_not_clones
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 1
 		prerequisite = {focus = PRE_highjack_dnvp_leadership}
@@ -1735,10 +2923,159 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_timed_idea = {
-				idea = reconstruction_through_remilitarization 
-				days = 365
-			}
+			add_political_power = 150
+			add_opinion_modifier = {
+			modifier = hostile_status
+			target = PRS
+		 }
+		 PRS = {
+			add_opinion_modifier = {
+			   modifier = hostile_status
+			   target = PRE
+		    }
+		 }
+		}
+	}
+	focus = {
+		id = PRE_reinstate_imperial_universities
+		icon = GFX_focus_NORDIC_com_capstone_research
+		x = 0
+		y = 1
+		prerequisite = {focus = PRE_siblings_not_clones}
+		relative_position_id = PRE_siblings_not_clones
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PRE_prussian_militarism_with_viktorian_characteristics
+		icon = GFX_focus_GER_appease_the_wehrmacht
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_reinstate_imperial_universities}
+		relative_position_id = PRE_siblings_not_clones
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_ideas = viktorian_prussian_militarism
+		}
+	}
+	focus = {
+		id = PRE_ties_with_britain
+		icon = GFX_focus_chi_british_cooperation
+		x = 2
+		y = 1
+		prerequisite = {focus = PRE_siblings_not_clones}
+		relative_position_id = PRE_siblings_not_clones
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_opinion_modifier = {
+			modifier = offered_support
+			target = ENG 
+		 }
+		 ENG = {
+			add_opinion_modifier = {
+			   modifier = offered_support
+			   target = PRE
+		    }
+		 }
+		}
+	}
+	focus = {
+		id = PRE_friendship_treaty_with_britain
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 2
+		y = 2
+		prerequisite = {focus = PRE_ties_with_britain}
+		mutually_exclusive = {focus = PRE_cross_the_rubicon}
+		relative_position_id = PRE_siblings_not_clones
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 diplomatic_relation = {
+          country = ENG
+          relation = non_aggression_pact
+          active = yes
+         }
+		}
+	}
+	focus = {
+		id = PRE_cross_the_rubicon
+		icon = GFX_focus_eng_imperial_federation
+		x = 4
+		y = 2
+		prerequisite = {focus = PRE_ties_with_britain}
+		mutually_exclusive = {focus = PRE_friendship_treaty_with_britain}
+		relative_position_id = PRE_siblings_not_clones
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = PRS_road_to_viktoria_takeover
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		 add_war_support = -0.05
+		 add_stability = -0.05
+		 unlock_decision_tooltip = gen_join_allies
 		}
 	}
 }

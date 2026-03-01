@@ -2387,7 +2387,6 @@
 		x = 25
 		y = 1
 		prerequisite = {}
-		mutually_exclusive = {focus = PRS_one_nation_one_kaiser}
 		cost = 7
 		ai_will_do = {
 			factor = 7

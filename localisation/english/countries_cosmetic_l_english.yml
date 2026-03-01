@@ -500,6 +500,7 @@
  RAT_UNIFIED_fascism_DEF:0 "the Rattanakosin Empire"
  RAT_UNIFIED_democratic_DEF:0 "the Rattanakosin Federation"
  RAT_UNIFIED_communism_DEF:0 "the Rattanakosin Socialist State"
+ HRE_UNIFIED:0 "Holy Roman Empire"
  HRE_UNIFIED_neutrality:0 "Holy Roman Empire"
  HRE_UNIFIED_fascism:0 "Nationalist Roman State"
  HRE_UNIFIED_democratic:0 "Secular Roman Federation"

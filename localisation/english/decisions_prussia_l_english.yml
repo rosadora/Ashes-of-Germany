@@ -116,6 +116,7 @@
  gen_colonial_powers_annex_their_puppets_eng:0 "No British Puppets in Africa"
  gen_join_ussr:0 "Join USSR"
  gen_join_ussr_decision:0 "Join the Sphere"
+ gen_join_allies:0 "Join Allies"
  ### LITHUANIA ###
  LIT_lithuanian_politics:0 "Lithuanian Politics"
  LIT_konigsberg_conference:0 "Konigsberg Conference"

@@ -158,9 +158,58 @@ the_happiest_people_in_the_world = {
 	}
 }
 
+siblings_not_allies = {
+	id = 12
+	
+	possible = {
+		difficulty > 1
+		tag = PRE
+	}
+	
+	happened = {
+		PRS = {
+		 has_country_leader = {
+            name = "Wilhelm III"
+            ruling_only = yes
+         }
+		}
+		has_country_leader = {
+            name = "Viktoria Luise"
+            ruling_only = yes
+        }
+		has_war_with = PRS
+	}
+}
+
 ###########################
 ## 3 CHAMPION ACHIEVEMENTS
 #############################
+
+holy_kaiserin = {
+	id = 12
+	
+	possible = {
+		difficulty > 1
+		tag = PRE
+	}
+	
+	happened = {
+		has_country_leader = {
+            name = "Viktoria Luise"
+            ruling_only = yes
+        }
+		2 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		797 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		219 = {
+			is_controlled_by_ROOT_or_ally = yes
+		}
+		has_completed_focus = PRE_hegemony_over_the_germanic_world
+	}
+}
 
 slava_ukrayini = {
 	id = 5

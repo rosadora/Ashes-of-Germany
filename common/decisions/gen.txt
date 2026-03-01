@@ -180,6 +180,7 @@ gen_pick_a_side = {
 				has_completed_focus = PAL_ties_with_italy
 				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
 				has_completed_focus = JAP_seek_allies_in_the_west
+				has_completed_focus = PRE_emphasis_vittoria_mutilata
 			}
 				OR = {
 				tag = HOL
@@ -210,6 +211,7 @@ gen_pick_a_side = {
 				tag = BLR
 				tag = ISR
 				tag = MON
+				tag = PRE
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -244,6 +246,123 @@ gen_pick_a_side = {
 				}
 			    }
 			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	gen_join_allies = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			OR = {
+				AND = {
+				ENG = {
+					OR = {
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = ultra_nationalism
+					has_government = fascism
+					has_government = neutrality
+				}
+				}
+				AND = {
+				ENG = {
+					OR = {
+					has_government = democratic
+					has_government = classical_liberalism
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = classical_liberalism
+					has_government = democratic
+				}
+				}
+				AND = {
+				ENG = {
+					OR = {
+					has_government = social_liberalism
+					has_government = social_democracy
+					}
+					is_faction_leader = yes
+				}
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberalism
+				}
+			    }
+		    }
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = why_we_fight
+				has_completed_focus = ideological_fanaticism
+				has_completed_focus = PRE_cross_the_rubicon
+			}
+			OR = {
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = SHL
+				tag = MEK
+				tag = SAX
+				tag = SWI
+				tag = SPR
+				tag = POR
+				tag = YUG
+				tag = ALB
+				tag = GRE
+				tag = ROM
+				tag = TUR
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = SWE
+				tag = NOR
+				tag = FIN
+				tag = DEN
+				tag = ENG
+				tag = IRE
+				tag = RCO
+				tag = UKR
+				tag = BLR
+				tag = PAL
+				tag = ISR
+				tag = YUG
+				tag = MON
+				tag = PRE
+			        }
+			is_in_faction = no
+			is_puppet = no
+		}
+
+		cancel_trigger = {
+		}
+
+		cost = 30
+		priority = 20
+		days_remove = 5
+		fire_only_once = yes
+
+		modifier = {
+		}
+
+		remove_effect = {
+				ENG = {
+				country_event = {
+					id = gen.1
+					days = 1
+				}
+			    }
 		}
 
 		ai_will_do = {
