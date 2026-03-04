@@ -569,7 +569,7 @@
 			factor = 1
 		}
 		available = {
-			controls_state = 980
+			controls_state = 64
 		}
 		bypass = {
 		}
@@ -577,7 +577,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			set_capital = {state = 980}
+			set_capital = {state = 64}
 			set_cosmetic_tag = GER_BAY
 			add_stability = 0.1
 			set_country_flag = BAY_germany_under_red_banner
