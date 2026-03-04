@@ -81,7 +81,8 @@ focus_tree = {
             add_ideas = Victory_over_ITA_ETH
 			add_political_power = 300
 			load_focus_tree = generic_focus
-                                            if = {
+			hidden_effect = {
+				if = {
 	                                	limit = {
 	                                		has_dlc = "Arms Against Tyranny"
 	                                	}
@@ -93,6 +94,7 @@ focus_tree = {
 	                                	}
 	                                	remove_ideas = ETH_on_our_own_idea
 	                                }
+			}
 		}
 	}
 	focus = {

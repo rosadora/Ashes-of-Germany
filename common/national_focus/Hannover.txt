@@ -1551,6 +1551,7 @@
 			add_state_core = 67
 			add_state_core = 763
 			add_state_core = 936
+			add_state_core = 980
 
           create_wargoal = {
               type = annex_everything

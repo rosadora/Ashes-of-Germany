@@ -138,7 +138,7 @@ ideas = {
 			equipment_bonus = { infantry_equipment = { instant = yes build_cost_ic = -0.25 } } 
 		}
 
-		LBA_constitutional_monarchy = {
+		LBA_constitutional_monarchy_idea = {
 			allowed = {
 			}
 
@@ -289,7 +289,7 @@ ideas = {
 		picture = GER_fan_prussian_militarism
 
 		modifier = {
-			ground_attack = 0.15
+			ground_attack_factor = 0.15
 			defence = 0.15
 			justify_war_goal_time = -0.25
 			political_power_gain = 0.15
