@@ -17,6 +17,7 @@
  starve_the_people:0 "Starving the People"
  LBA_denounce_Idris_Senussi:0 "Denounce Idris Senussi"
  LBA_denounce_Idris_Senussi_desc:0 "Idris Senussi, the main Anti-Italian political leader, although cannot be killed without risk of war, can certainly be denounced."
+ LBA_PRS_ally_focus:0 "Diplomatic Mission to Berlin"
 
   #Fix for something else rq
   COUNTRY_SELECTION_CHARACTER_DESC:0 ""
@@ -28,7 +29,7 @@
  AML_DEF:0 "the North African federation"
  AML_ADJ:0 "North African"
  LBA_civilwar_breakaway:0 "Loyalist Troops"
- LBA_country_spawns:0 "Mussolini's Guard"
+ LBA_country_spawns:0 "Loyalist Guard"
 
    #This can be either Non - aligned or fascist in the civilwar so those are the only loc entries I will add here#
 
@@ -74,9 +75,6 @@
  LBA_develop_arms_industry_desc:0 "In order to create weapons of survival, we must have factories to sustain our survival against anyone that may attempt to end our independance."
  LBA_the_arsenal_of_independance:0 "Develop Gun Factories"
  LBA_the_arsenal_of_independance_desc:0 "In order to survive in the world of this day, we must create an arsenal of independance by making Factories for our Guns."
-
-
- #
 
  LBA_prioritize_civilian_industries:0 "Prioritize Civilian Industries"
  LBA_prioritize_civilian_industries_desc:0 "In order to survive in the world of today, we must build a strong, independant industry reliant on no one."
@@ -190,6 +188,14 @@
  LBA_revolution_by_force_desc:0 "In order to fully expel the colonizers, we must bring the African Revolution by force. There will be no excemption to our invasions for total African control."
  LBA_request_tunis:0 "Request Tunisia"
  LBA_request_tunis_desc:0 "Tunisia, being home to the Strategic city of Tunis, if in our hand, could greatly boost our Industrial Capabilities. Although it is owned by the French, if we request it and have close relations with the French Nation, they may give it up without any bloodshed."
+ LBA_Consolidate_Idris_Senussis_Rule_IDEA:0 "Consolidating Idris Senussi's Rule"
+ LBA_Consolidate_Idris_Senussis_Rule_IDEA_desc:0 "Consolidating Idris Senussi's Rule will ensure that there is no chance of an uprising against our current leadership. This will ensure our survival as an independant monarchy."
+ LBA_consolodate_Idris_Senussis_Rule:0 "Consolidate Idris Senussi's Rule"
+ LBA_consolodate_Idris_Senussis_Rule_desc:0 "In order to ensure our survival as an independant monarchy, we must rally around our current leadership without compromise. This will ensure there is no chance of an uprising to unfold against our current leadership."
+ LBA_the_african_Prussia_idea:0 "The African Prussia"
+ LBA_the_african_Prussia_idea_desc:0 "The Libyan nation has Proclaimed themselves as the African Prussia."
+ LBA_Berlin_Mission:0 "Mission to Berlin"
+ LBA_Berlin_Mission_desc:0 "In order to ensure our survival as an independant African power, we must seek out allies who can protect us in the time of invasion. The [PRS.GetAdjective]s, although further away from us from other powers, once were a major power in European politics, and can still grow to become one yet again. They can offer the militant protection we desperatley need against the neighboring colonizers. "
 
 
  #ETHIOPIA CONTENT#

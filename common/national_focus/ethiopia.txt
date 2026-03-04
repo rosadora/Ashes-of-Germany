@@ -226,7 +226,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas = ETH_hold_out_idea
+			add_timed_idea = {
+				idea = ETH_hold_out_idea
+				days = 70
+			}
 		}
 	}
 	focus = {

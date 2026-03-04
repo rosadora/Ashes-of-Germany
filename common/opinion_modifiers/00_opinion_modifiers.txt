@@ -34,6 +34,10 @@ opinion_modifiers = {
 		value = -100
 	}
 
+	LBA_PRS_ally_focus = {
+		value = 50
+	}
+
 	holds_our_cores = {
 		value = -30
 	}

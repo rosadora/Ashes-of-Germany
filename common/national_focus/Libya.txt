@@ -1,4 +1,8 @@
 focus_tree = {
+	##################################################################################################################################################################################################################################### DELETE AFTER GFX IS MADE #####
+	##I couldn't find anyone for GFX so as of right now the majority of the trees gfx is Fill In until i find someone who can or until I make icons. If anyone wants to make icons go ahead, just know I would make them myself or find someone else to make them now.##
+	####################################################################################################################################################################################################################################################################
+
 	id = LBA_focus_tree
 	country = {
 		factor = 0
@@ -8,7 +12,7 @@ focus_tree = {
 		}
 	 }
 	 continuous_focus_position = {
-		x = 1655
+		x = 750
 		y = 450
 	 }
 
@@ -1057,17 +1061,18 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 4
-		y = 1
-		prerequisite = {
-			focus = LBA_overthrow_Mussolini
-		}
+		x = 24
+		y = 0
 		available = {
 			NOT = {
 				has_war_with = AML
 			}
+			has_completed_focus = LBA_overthrow_Mussolini
 		}
-		relative_position_id = LBA_overthrow_Mussolini
+		allow_branch = {
+			has_character = LBA_benito_mussolini
+		}
+
 		completion_reward = {
 			news_event = {
 				id = LBA_events.2
@@ -1108,7 +1113,7 @@ focus_tree = {
         cost = 10
 		completion_reward = {
 			division_template = {
-				name = "Koninklike Wagte"
+				name = "Senussian Royal Guard"
 				priority = 2
 				regiments = {
 					infantry = { x = 0 y = 0 }
@@ -1130,13 +1135,13 @@ focus_tree = {
 
 			random_owned_controlled_state = {
 				limit = { ROOT = { has_full_control_of_state = PREV } }
-				prioritize = { 10 } #Warsaw
+				prioritize = { 448 } #Tunis
 				create_unit = {
-					division = "name = \"Oddział Gwardii Królewskiej\" division_template = \"Koninklike Wagte\" start_experience_factor = 1.0" 
+					division = "name = \"Senussian Royal Guard\" division_template = \"Senussian Royal Guard\" start_experience_factor = 1.0" 
 					owner = LBA
 				}
 				create_unit = {
-					division = "name = \"Oddział Gwardii Królewskiej\" division_template = \"Koninklike Wagte\" start_experience_factor = 1.0" 
+					division = "name = \"Senussian Royal Guard\" division_template = \"Senussian Royal Guard\" start_experience_factor = 1.0" 
 					owner = LBA
 				}
 			}
@@ -1238,8 +1243,8 @@ focus_tree = {
     }
 
     focus = {
-        id = LBA_ally_the_kaiser
-        icon = GFX_goal_under_the_kaiser
+        id = LBA_Berlin_Mission
+        icon = GFX_goal_reichspakt
         relative_position_id = LBA_true_monarchy
         y = 1
 		x = 1
@@ -1253,10 +1258,14 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_opinion_modifier = {
+				target = PRS
+				modifier = LBA_PRS_ally_focus
+			}
 			PRS = {
-				country_event = {
-					id = generic.2
-					days = 7
+				add_opinion_modifier = {
+				target = LBA
+				modifier = LBA_PRS_ally_focus
 				}
 			}
 		}
@@ -1372,22 +1381,25 @@ focus_tree = {
     }
 
     focus = {
-        id = LBA_request_Prussian_guns
-        icon = GFX_goal_deutsches_heer
-        relative_position_id = LBA_ally_the_kaiser
+        id = LBA_ally_the_kaiser
+        icon = GFX_goal_under_the_kaiser
+        relative_position_id = LBA_consolodate_Idris_Senussis_Rule
         y = 1
+		x = -3
+        cost = 7
 		prerequisite = {
-			focus = LBA_ally_the_kaiser
-		}
+			focus = LBA_Berlin_Mission	
+			}
 		available = {
-			is_in_faction_with = PRS
+			PRS = {
+				is_faction_leader = yes
+			}
 		}
-        cost = 10
 		completion_reward = {
 			PRS = {
 				country_event = {
-					id = LBA_events.6
-					days = 14
+					id = generic.2
+					days = 7
 				}
 			}
 		}
@@ -1455,6 +1467,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
+
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ALG
+						is_core_of = EGY
+						is_core_of = TUN
+						is_core_of = MOR
+					}
+				}
+				add_core_of = LBA
+			}
 			
 			173 = {
 				add_core_of = LBA
@@ -1746,7 +1770,13 @@ focus_tree = {
 	    x = 4
 	    y = 1
 	    prerequisite = { focus = LBA_true_monarchy }
-	    completion_reward = { }
+	    completion_reward = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.15
+			}
+			add_ideas = LBA_Consolidate_Idris_Senussis_Rule_IDEA
+		 }
 	}
 
 	focus = {
@@ -1772,14 +1802,22 @@ focus_tree = {
 	}
 
 	focus = {
-	    id = LBA_17
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    id = LBA_request_Prussian_guns
+	    icon = GFX_goal_deutsches_heer
 	    relative_position_id = LBA_15
 	    x = -1
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_15 }
-	    completion_reward = { }
+		prerequisite = { focus = LBA_ally_the_kaiser	}
+	    completion_reward = {
+			PRS = {
+				country_event = {
+					id = LBA_events.6
+					days = 14
+				}
+			}
+		 }
 	}
 
 	focus = {
@@ -1811,7 +1849,8 @@ focus_tree = {
 	    x = 0
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_17 focus = LBA_18 focus = LBA_19 }
+	    prerequisite = { focus = LBA_request_Prussian_guns focus = LBA_19 }
+		prerequisite = { focus = LBA_18 }
 	    completion_reward = { }
 	}
 
@@ -1838,14 +1877,20 @@ focus_tree = {
 	}
 
 	focus = {
-	    id = LBA_25
+	    id = LBA_the_african_Prussia
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 	    relative_position_id = LBA_23
 	    x = 1
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_23 focus = LBA_24 }
-	    completion_reward = { }
+	    prerequisite = { focus = LBA_23 }
+		prerequisite = {
+			focus = LBA_24
+		}
+	    completion_reward = {
+			add_ideas = LBA_the_african_Prussia_idea
+			add_political_power = 150
+		 }
 	}
 
 	focus = {
@@ -1938,6 +1983,8 @@ focus_tree = {
 		 }
 	}
 	#COMMUNIST#
+
+	#Icons are Placeholders as of right now#
 
 	focus = {
 		id = LBA_communist_revolution

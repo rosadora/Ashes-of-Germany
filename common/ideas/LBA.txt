@@ -251,5 +251,49 @@ ideas = {
 				defence = 0.15
 			}
 		}
+	LBA_Consolidate_Idris_Senussis_Rule_IDEA = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+
+		picture = GFX_idea_LBA_Idris_Senussi
+
+		removal_cost = -1
+
+		modifier = {
+			stability_weekly = 0.01
+			democratic_drift = -0.01
+			social_democracy_drift = -0.02
+			social_liberalism_drift = -0.02
+			fascism_drift = 0.01
+			ultra_nationalism_drift = 0.01
+			communism_drift = -0.02
+			classical_marxism_drift = 0.01
+			neutrality_drift = -0.03
+		}
+		}
+
+		LBA_the_african_Prussia_idea = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1	
+
+		picture = GER_fan_prussian_militarism
+
+		modifier = {
+			ground_attack = 0.15
+			defence = 0.15
+			justify_war_goal_time = -0.25
+			political_power_gain = 0.15
+		}
+		}
 	}
 }

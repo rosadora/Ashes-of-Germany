@@ -2374,7 +2374,7 @@
 	}
 	focus = {
 		id = HAN_united_front_against_france
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_elite_corps
 		prerequisite = {focus = HAN_union_diplomacy}
 		relative_position_id = HAN_the_rise_of_hanover
 

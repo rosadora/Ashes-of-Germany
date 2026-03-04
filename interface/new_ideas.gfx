@@ -629,4 +629,8 @@ spriteTypes = {
 		name = "GFX_idea_constitutional_monarchy"
 		texturefile = "gfx/interface/ideas/constitutional_monarchy_idea.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_LBA_Idris_Senussi"
+		texturefile = "gfx/interface/ideas/idea_LBA_Idris_Senussi.dds"
+	}
 }

@@ -8542,7 +8542,6 @@ form_andalusia_category = {
 				original_tag = ALG
 				original_tag = TUN
 				original_tag = WES
-				original_tag = LBA
 				original_tag = RIF
 			}
 			has_dlc = "La Resistance"
