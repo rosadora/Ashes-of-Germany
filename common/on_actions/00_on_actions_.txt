@@ -1047,7 +1047,10 @@ on_actions = {
 							is_controlled_by = LBA
 						}
 						LBA = {
-							has_completed_focus = LBA_request_tunis
+							OR = {
+								has_completed_focus = LBA_request_tunis
+								has_completed_focus = LBA_invasion_of_Tunis
+							}
 						}
 						FRA = {
 							has_war_with = LBA

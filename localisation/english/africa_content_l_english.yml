@@ -20,6 +20,7 @@
  LBA_constitutional_monarchy_idea:0 "Forming a Constitutional Monarchy"
  LBA_constitutional_monarchy_idea_desc:0 "The Libyan Nation is actively encouraging a constitutional monarchy."
  LBA_PRS_ally_focus:0 "Diplomatic Mission to Berlin"
+ visit_to_london:0 "Diplomatic Mission to London"
  LBA_the_african_Prussia:0 "The African Prussia"
  LBA_the_african_Prussia_desc:0 "Now that we have aligned with the Prussian Nation, we can now proclaim the 'African Prussia'."
 
@@ -200,6 +201,21 @@
  LBA_the_african_Prussia_idea_desc:0 "The Libyan nation has Proclaimed themselves as the African Prussia."
  LBA_Berlin_Mission:0 "Mission to Berlin"
  LBA_Berlin_Mission_desc:0 "In order to ensure our survival as an independant African power, we must seek out allies who can protect us in the time of invasion. The [PRS.GetAdjective]s, although further away from us from other powers, once were a major power in European politics, and can still grow to become one yet again. They can offer the militant protection we desperatley need against the neighboring colonizers. "
+ LBA_contact_the_British_Crown:0 "Contact the British Crown"
+ LBA_contact_the_British_Crown_desc:0 "The British, being the most powerful colonial power in the world, are a strong potential ally. Although our alignment is with the Prussian State, we can still promote good relations with the British nation to attempt to ensure they will not pursue us for colonization. Alongside this, they may be able to offer us protection against the other neighboring colonial powers that the Prussians may not be able to protect us against."
+ LBA_execute_Italo_Balbo:0 "Execute Italo Balbo"
+ LBA_execute_Italo_Balbo_desc:0 "Whenever we capitulated Mussolini's force, Italo Balbo, the former governor of Libya was captured. Although he is a strong political figure, his influence is not needed in our new nation and as such, it would be best for our survival to execute him to ensure there is no chance of him attempting to stage a Counter-Revolution against our new regime."
+ LBA_rehabilitate_Italo_Balbo:0 "Rehabilitate Italo Balbo"
+ LBA_rehabilitate_Italo_Balbo_desc:0 "Although Italo Balbo is a controversial figure, his experience and knowledge could be beneficial to our nation. Rehabilitating him would show our commitment to forgiveness and unity, while also potentially gaining his support for our cause."
+ LBA_reconcile_the_Italians:0 "Reconcile with the Italians"
+ LBA_reconcile_the_Italians_desc:0 "Although the Italians have been our oppressors and are the reason for our current situation, in order as a show of good will, we should attempt Reconciliation with the nation. Although it will probably fail, it is worth atlest attempting to show the world we are not out for revenge, but instead are out for freedom and unity."
+ LBA_dreams_Of_Libyan_Empire:0 "Dreams of a Libyan Empire"
+ LBA_dreams_Of_Libyan_Empire_desc:0 "Although we are a strong power for Africa, we are still a weak power in the world. Our ambitions, although larger, must be contained to a more realistic level. Instead of dreaming big about a united Africa, we should be realistic and dream of a new, Libyan Empire."
+ LBA_invasion_of_Tunisia:0 "The Invasion of Tunisia"
+ LBA_invasion_of_Tunisia_desc:0 "Tunisia, being a former Italian ambition, is not only a strategic position in the Meditteranean, but is home to the city of Tunis. If Libya can secure the Tunisian steel mills, it will fund our industry for years to come."
+ LBA_fra_surrender_TT:0 "§Y Following the fall of Tunis, France will have the chance to surrender within one month. §Y"
+ LBA_proclaim_Libyan_empire:0 "Proclaim the Libyan Empire"
+ LBA_proclaim_Libyan_empire_desc:0 "Now that we have secured Tunisia, we can now proclaim the Libyan Empire. This will show to the world that we are a major power in the region and will ensure our survival long term."
 
 
  #ETHIOPIA CONTENT#

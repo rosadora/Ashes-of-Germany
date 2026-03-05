@@ -1722,4 +1722,12 @@ spriteTypes = {
 		name = "GFX_Hassan_as_Senussi"
 		texturefile = "gfx/leaders/Hassan_as_Senussi.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_italo_balbo_large"
+		texturefile = "gfx/leaders/Italo_Balbo_large.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Italo_Balbo_small"
+		texturefile = "gfx/leaders/Italo_Balbo_small.dds"
+	}
 }

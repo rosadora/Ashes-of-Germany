@@ -2050,4 +2050,20 @@ spriteTypes = {
 		name = "GFX_LBA_spread_the_revolution"
 		texturefile = "gfx/interface/goals/LBA_spread_communism_Africa.dds"
 	}
+
+	spriteType = {
+		#I found a few good pics of Italo Balbo so ig ima add a path for him.#
+		name = "GFX_focus_Italo_Balbo"
+		texturefile = "gfx/interface/goals/Italo_Balbo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_Execute_Italo_Balbo"
+		texturefile = "gfx/interface/goals/LBA_execute_Italo_Balbo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_flag_raised"
+		texturefile = "gfx/interface/goals/Libya_Flag_Raised.dds"
+	}
 }

@@ -145,6 +145,7 @@ country_event = { #The Civil War Starts
 		set_politics = {
 			ruling_party = fascism
 		}
+		set_country_flag = Mussolini_Fled
 		recruit_character = LBA_benito_mussolini
 		retire_country_leader = yes
 		set_popularities = {

@@ -30,7 +30,7 @@ focus_tree = {
 			factor = 5
 		}
 		allow_branch = {
-			has_character = LBA_benito_mussolini
+			has_country_flag = Mussolini_Fled
 		}
 		cancelable = no
 		completion_reward = {
@@ -213,6 +213,7 @@ focus_tree = {
 				id = LBA_events.1
 				days = 2
 			}
+			retire_character = LBA_benito_mussolini
 			drop_cosmetic_tag = yes
 			}
 			set_politics = {
@@ -374,7 +375,7 @@ focus_tree = {
 			has_completed_focus = LBA_a_new_industry
 		}
 		allow_branch = {
-			has_character = LBA_benito_mussolini
+			has_country_flag = Mussolini_Fled
 		}
 		mutually_exclusive = {
 			focus = LBA_prioritize_military_industries
@@ -433,7 +434,7 @@ focus_tree = {
 		y = 0
 		cost = 7
 		allow_branch = {
-			has_character = LBA_benito_mussolini
+			has_country_flag = Mussolini_Fled
 		}
 		available = {
 			has_completed_focus = LBA_a_new_industry
@@ -594,17 +595,12 @@ focus_tree = {
 		y = 0
 		allow_branch = {
 			NOT = {
-				has_character = LBA_benito_mussolini
+				has_country_flag = Mussolini_Fled
 			}
 		}
 		available = {
 			NOT = {
-				has_character = LBA_benito_mussolini
-			}
-		}
-		available = {
-			NOT = {
-				has_completed_focus = LBA_under_Mussolini
+				has_country_flag = Mussolini_Fled
 			}
 		}
 		available = {
@@ -996,7 +992,7 @@ focus_tree = {
 
 			add_victory_points = {
 					province = 1149
-					value = 20
+					value = 5
 				 }
 
 		 }
@@ -1062,7 +1058,7 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 24
+		x = 26
 		y = 0
 		available = {
 			NOT = {
@@ -1071,7 +1067,7 @@ focus_tree = {
 			has_completed_focus = LBA_overthrow_Mussolini
 		}
 		allow_branch = {
-			has_character = LBA_benito_mussolini
+			has_country_flag = Mussolini_Fled
 		}
 
 		completion_reward = {
@@ -1159,7 +1155,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = LBA_true_monarchy
 		}
-        x = -2
+        x = -4
         y = 1
         cost = 10
 		completion_reward = {
@@ -1180,7 +1176,7 @@ focus_tree = {
 			focus = LBA_constitutional_monarchy
 		}
         relative_position_id = LBA_constitutional_monarchy
-        x = 4
+        x = 8
         y = 0
         cost = 10
 		completion_reward = {
@@ -1229,6 +1225,10 @@ focus_tree = {
 			focus = LBA_constitutional_monarchy
 			focus = LBA_true_monarchy
 		}
+		mutually_exclusive = {
+			focus = LBA_dreams_Of_Libyan_Empire
+		}
+		x = -2
         y = 2
         cost = 10
 		completion_reward = {
@@ -1387,9 +1387,9 @@ focus_tree = {
     focus = {
         id = LBA_ally_the_kaiser
         icon = GFX_goal_under_the_kaiser
-        relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+        relative_position_id =LBA_Berlin_Mission
         y = 1
-		x = -3
+		x = -1
         cost = 7
 		prerequisite = {
 			focus = LBA_Berlin_Mission	
@@ -1778,36 +1778,82 @@ focus_tree = {
 	}
 
 	focus = {
-	    id = LBA_15
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    id = LBA_contact_the_British_Crown
+	    icon = GFX_goal_tfv_strengthen_commonwealth_ties
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = -1
+	    x = -2
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
-	    completion_reward = { }
+	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule focus = LBA_Berlin_Mission }
+	    completion_reward = {
+			add_relation_modifier = {
+				target = ENG
+				modifier = visit_to_london
+			}
+			ENG = {
+				add_relation_modifier = {
+					target = LBA
+					modifier = visit_to_london
+				}
+			}
+		 }
 	}
 
 	focus = {
-	    id = LBA_16
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    id = LBA_execute_Italo_Balbo
+	    icon = GFX_focus_Execute_Italo_Balbo
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = 1
+	    x = 2
 	    y = 1
 		cost = 7
+		mutually_exclusive = {
+			focus = LBA_rehabilitate_Italo_Balbo
+		}
 	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
-	    completion_reward = { }
+	    completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.05
+			add_political_power = 120
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		 }
+	}
+
+	#Im wanting to make a secret path for Italo Balbo but might not get to it#
+
+	focus = {
+		id = LBA_rehabilitate_Italo_Balbo
+		icon = GFX_focus_Italo_Balbo
+		cost = 7
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		mutually_exclusive = {
+			focus = LBA_execute_Italo_Balbo
+		}
+		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+		completion_reward = {
+			recruit_character = LBA_italo_balbo
+			add_political_power = -50
+		 }
 	}
 
 	focus = {
 	    id = LBA_request_Prussian_guns
 	    icon = GFX_goal_deutsches_heer
-	    relative_position_id = LBA_15
-	    x = -1
+	    relative_position_id = LBA_contact_the_British_Crown
 	    y = 1
+		x = -1
 		cost = 7
-	    prerequisite = { focus = LBA_15 }
-		prerequisite = { focus = LBA_ally_the_kaiser	}
+		available = {
+			is_in_faction_with = PRS
+		}
+		prerequisite = { focus = LBA_ally_the_kaiser}
+		prerequisite = { focus = LBA_contact_the_British_Crown }
 	    completion_reward = {
 			PRS = {
 				country_event = {
@@ -1819,71 +1865,126 @@ focus_tree = {
 	}
 
 	focus = {
-	    id = LBA_18
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_15
-	    x = 1
-	    y = 1
-		cost = 7
-	    prerequisite = { focus = LBA_15 focus = LBA_16 }
-	    completion_reward = { }
-	}
-
-	focus = {
-	    id = LBA_19
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_16
-	    x = 1
-	    y = 1
-		cost = 7
-	    prerequisite = { focus = LBA_16 }
-	    completion_reward = { }
-	}
-
-	focus = {
-	    id = LBA_21
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_18
+	    id = LBA_invasion_of_Tunisia
+	    icon = GFX_focus_attack_france
+	    relative_position_id = LBA_dreams_Of_Libyan_Empire
 	    x = 0
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_request_Prussian_guns focus = LBA_19 }
-		prerequisite = { focus = LBA_18 }
-	    completion_reward = { }
+	    prerequisite = { focus = LBA_dreams_Of_Libyan_Empire }
+	    completion_reward = {
+			every_country = {
+				limit = {
+					controls_state = 458
+				}
+				LBA = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			custom_effect_tooltip = LBA_fra_surrender_TT
+			hidden_effect = {
+				set_global_flag = aggressive_LBA
+			}
+		 }
 	}
 
 	focus = {
-	    id = LBA_23
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_21
-	    x = -1
-	    y = 1
+		id = LBA_proclaim_Libyan_empire
+		icon = GFX_LBA_flag_raised
 		cost = 7
-	    prerequisite = {focus = LBA_21 }
-	    completion_reward = { }
+		x = 0
+		y = 1
+		relative_position_id = LBA_invasion_of_Tunisia
+		prerequisite = {
+			focus = LBA_invasion_of_Tunisia
+		}
+		available = {
+			owns_state = 458
+		}
+		completion_reward = {
+			set_cosmetic_tag = LIBYAN_EMPIRE
+			452 = {
+				add_claim_by = LBA
+			}
+			every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				add_claim_by = LBA
+			}
+		 }
 	}
 
 	focus = {
-	    id = LBA_24
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_21
-	    x = 1
+	    id = LBA_reconcile_the_Italians
+	    icon = GFX_focus_befriend_italy
+	    relative_position_id = LBA_contact_the_British_Crown
+	    x = 5
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_21 }
-	    completion_reward = { }
+		available = {
+			has_global_flag = italian_civil_war_over
+		}
+	    prerequisite = { focus = LBA_execute_Italo_Balbo  focus = LBA_rehabilitate_Italo_Balbo}
+	    completion_reward = {
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 ITA = {
+					country_event = {
+					id = LBA_events.17
+					days = 2
+				 }	
+				 }
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				ILF = {
+					country_event = {
+					id = LBA_events.17
+					days = 2
+				 }	
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 NLC = {
+					country_event = {
+					id = LBA_events.17
+					days = 2
+				 }	
+				 }
+			}
+		 }
 	}
 
 	focus = {
 	    id = LBA_the_african_Prussia
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-	    relative_position_id = LBA_23
-	    x = 1
-	    y = 1
+	    icon = GFX_focus_GER_prussian_legacy
+	    relative_position_id = LBA_request_Prussian_guns
+	    x = 3
+	    y = -1
 		cost = 7
-	    prerequisite = { focus = LBA_23 }
+	    available = {
+			has_manpower > 250000
+			controls_state = 458
+		}
 		prerequisite = {
-			focus = LBA_24
+			focus = LBA_consolodate_Idris_Senussis_Rule
 		}
 	    completion_reward = {
 			add_ideas = LBA_the_african_Prussia_idea
@@ -2196,5 +2297,28 @@ focus_tree = {
 	        add_war_support = 0.10
 	        add_ideas = LBA_the_african_shield
 	    }
+	}
+	focus = {
+		id = LBA_dreams_Of_Libyan_Empire
+		icon = GFX_focus_IRQ_liberate_north_africa
+		cost = 7
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = LBA_constitutional_monarchy
+			focus = LBA_true_monarchy
+		}
+		mutually_exclusive = {
+			focus = LBA_dreams_of_a_united_Africa
+		}
+		relative_position_id = LBA_true_monarchy
+		completion_reward = {
+			every_state = {
+				limt = {
+					is_core_of = TUN
+				}
+				add_claim_by = LBA
+			}
+		 }
 	}
 }

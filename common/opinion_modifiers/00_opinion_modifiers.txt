@@ -38,6 +38,10 @@ opinion_modifiers = {
 		value = 50
 	}
 
+	visit_to_london = {
+		value = 50
+	}
+
 	holds_our_cores = {
 		value = -30
 	}

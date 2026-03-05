@@ -34,7 +34,9 @@ country_event = {
 news_event = {
 	id = LBA_events.2
 	title = "Libya Crowns a King!"
-	desc = "After Libya has broken free from Italy during the Italian Civil war, been thru civil war, and deposed Mussolini, the nation has Crowned a King!"
+	desc = "After Libya has broken free from Italy during the Italian Civil war, been thru civil war, and deposed Mussolini, the nation has Crowned a King! 
+	
+	Although they already had a 'King' in the form of Idris Senussi leading the rebellion, there was never a truly crowned king of Libya. What comes of the new Libyan king is yet to see, however, we can only asume that he wants peace on the African continent."
 	picture = GFX_news_event_ITA_papal_coronation
 	is_triggered_only = yes
 
@@ -473,13 +475,18 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Exile Him"
+		name = "Exile Him!"
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
 		retire_character = LIB_Idris_Senussi
 	}
 
 	option = {
-		name = "Execute Him"
+		name = "Execute Him!"
 		retire_character = LIB_Idris_Senussi
+		add_war_support = 0.05
 		hidden_effect = {
 			AML = {
 			retire_character = LIB_Idris_Senussi2
@@ -488,7 +495,72 @@ country_event = {
 	}
 
 	option = {
-		name = "Integrate him to Society"
+		name = "Integrate him to Society!"
 		retire_character = LIB_Idris_Senussi
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = LBA_events.17
+	title = "Libya Seeks Reconciliation"
+	desc = "Following the end of the Italian Civil War, Libya has attempted to reconcile with the Italian people. Should we accept, we will be able to work together with Italy and become stronger, however, they request we give up our claim to Libya in exchange."
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Lets also form an Alliance!"
+		trigger = {
+			is_faction_leader = yes
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			every_state = {
+			limit = {
+				is_core_of = LBA
+			}
+			remove_claim_by = ROOT
+			remove_core_of = ROOT
+		}
+		}
+		LBA = {
+			event = generic.2
+		}
+	}
+
+	option = {
+		name = "We will accept these conditions"
+		ai_chance = {
+			base = 50
+			modifier = {
+				modifier = {
+          	  factor = 2
+          	  FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value > 50
+                }
+            }
+		}
+			}
+		}
+		hidden_effect = {
+			every_state = {
+			limit = {
+				is_core_of = LBA
+			}
+			remove_claim_by = ROOT
+			remove_core_of = ROOT
+		}
+	}
+	}
+	option = {
+		ai_chance = {
+			base = 49
+		}
+		name = "We Must Deny!"
 	}
 }
