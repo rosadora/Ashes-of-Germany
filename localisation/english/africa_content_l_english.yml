@@ -129,7 +129,7 @@
  Benito_Mussolini_Rebelious_desc:0 "Benito Mussolini's Loyalists have taken refuge in this state!"
  LBA_root_out_mussolinis_loyalists:0 "Root Out Mussolini's Loyalists"
  LBA_root_out_mussolinis_loyalists_desc:0 "Mussolini's Loyalists, having taken refuge in the east, must be rooted out to ensure our stability."
- destroy_mussolini_TT:0 "§YDoing This Focus Unlocks Decisions to Remove Mussolini's Loyalists§Y"
+ destroy_mussolini_TT:0 "§Y Doing This Focus Unlocks Decisions to Remove Mussolini's Loyalists §Y"
  LBA_root_out_Mussolini_Loyalists:0 "Root Out Mussolini's Loyalists"
  LBA_root_out_loyalists1:0 "Root Out Loyalists in El Aghalei"
  LBA_root_out_loyalists2:0 "Root Out Loyalists in Sirte"
@@ -185,8 +185,8 @@
  LBA_the_african_Prussia_idea_desc:0 "The Libyan nation has Proclaimed themselves as the African Prussia."
  LBA_Berlin_Mission:0 "Mission to Berlin"
  LBA_Berlin_Mission_desc:0 "In order to ensure our survival as an independant African power, we must seek out allies who can protect us in the time of invasion. The [PRS.GetAdjective]s, although further away from us from other powers, once were a major power in European politics, and can still grow to become one yet again. They can offer the militant protection we desperatley need against the neighboring colonizers. "
- LBA_contact_the_British_Crown:0 "Contact the British Crown"
- LBA_contact_the_British_Crown_desc:0 "The British, being the most powerful colonial power in the world, are a strong potential ally. Although our alignment is with the Prussian State, we can still promote good relations with the British nation to attempt to ensure they will not pursue us for colonization. Alongside this, they may be able to offer us protection against the other neighboring colonial powers that the Prussians may not be able to protect us against."
+ LBA_contact_the_British_Crown:0 "Mission to London"
+ LBA_contact_the_British_Crown_desc:0 "The British, being the most powerful colonial power in the world, are a strong potential ally. Although our prefered alignment is with the Prussian State, we can still promote good relations with the British nation to attempt to ensure they will not pursue us for colonization. Alongside this, they may be able to offer us protection against the other neighboring colonial powers that the Prussians may not be able to protect us against. If we decide to truly ally with the British over the Prussians, this will be a strong step in that direction."
  LBA_execute_Italo_Balbo:0 "Execute Italo Balbo"
  LBA_execute_Italo_Balbo_desc:0 "Whenever we capitulated Mussolini's force, Italo Balbo, the former governor of Libya was captured. Although he is a strong political figure, his influence is not needed in our new nation and as such, it would be best for our survival to execute him to ensure there is no chance of him attempting to stage a Counter-Revolution against our new regime."
  LBA_rehabilitate_Italo_Balbo:0 "Rehabilitate Italo Balbo"
@@ -204,6 +204,12 @@
  reconcile_NLC:0 "Reconciliation with the [NLC.GetName]"
  reconcile_ILF:0 "Reconciliation with the [ILF.GetName]"
  reconcile_ITA:0 "Reconciliation with the [ITA.GetName]"
+ LBA_an_eternal_italian_enemy:0 "Eternal Italian Rivalry"
+ LBA_an_eternal_Italian_enemy:0 "An Eternal Italian Rivalry"
+ LBA_an_eternal_Italian_enemy_desc:0 "Although the Italians were once our overlords, the way they opressed our people has not been forgotten. We must never compromise with them via Reconciliation to ensure they never try to attempt an invasion of Libya again."
+ LBA_ally_the_British_Crown:0 "Align with the United Kingdom"
+ LBA_ally_the_British_Crown_desc:0 "The British, being the largest colonial power in the world, could offer Libya protection against other colonizers. Although many of our politicians wish to ally the Prussians, the British are able to protect us better than the Prussian nation can."
+ focus_unlock_LBA_ITA:0 "§Y Completing this focus unlocks new focuses depending on who won the Italian Civilwar! §Y §R WORK IN PROGRESS FOR UNLOCKING FOCUSES §R"
 
 
  #ETHIOPIA CONTENT#

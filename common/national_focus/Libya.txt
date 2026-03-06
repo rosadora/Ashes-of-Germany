@@ -1222,11 +1222,11 @@ focus_tree = {
         id = LBA_Berlin_Mission
         icon = GFX_goal_reichspakt
         relative_position_id = LBA_true_monarchy
-        y = 1
+        y = 2
 		x = 1
         cost = 7
 		prerequisite = {
-			focus = LBA_true_monarchy
+			focus = LBA_consolodate_Idris_Senussis_Rule
 		}
 		available = {
 			PRS = {
@@ -1275,7 +1275,7 @@ focus_tree = {
         icon = GFX_goal_under_the_kaiser
         relative_position_id =LBA_Berlin_Mission
         y = 1
-		x = -1
+		x = 1
         cost = 7
 		prerequisite = {
 			focus = LBA_Berlin_Mission	
@@ -1284,6 +1284,13 @@ focus_tree = {
 			PRS = {
 				is_faction_leader = yes
 			}
+			is_in_faction = no
+		}
+		mutually_exclusive = {
+			focus = LBA_ally_the_British_Crown
+		}
+		bypass = {
+			is_in_faction_with = PRS
 		}
 		completion_reward = {
 			PRS = {
@@ -1510,7 +1517,7 @@ focus_tree = {
 	    icon = GFX_Idris_Senussi
 	    relative_position_id = LBA_true_monarchy
 		cost = 7
-	    x = 4
+	    x = 5
 	    y = 1
 	    prerequisite = { focus = LBA_true_monarchy }
 	    completion_reward = {
@@ -1526,10 +1533,10 @@ focus_tree = {
 	    id = LBA_contact_the_British_Crown
 	    icon = GFX_goal_tfv_strengthen_commonwealth_ties
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = -2
+	    x = 0
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule focus = LBA_Berlin_Mission }
+	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
 	    completion_reward = {
 			add_opinion_modifier = {
 				target = ENG
@@ -1548,7 +1555,7 @@ focus_tree = {
 	    id = LBA_execute_Italo_Balbo
 	    icon = GFX_focus_Execute_Italo_Balbo
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = 2
+	    x = 3
 	    y = 1
 		cost = 7
 		mutually_exclusive = {
@@ -1566,13 +1573,28 @@ focus_tree = {
 		 }
 	}
 
+	focus = {
+		id = LBA_an_eternal_Italian_enemy
+		icon = GFX_focus_attack_italy
+		prerequisite = {
+			focus = LBA_execute_Italo_Balbo
+		}
+		relative_position_id = LBA_execute_Italo_Balbo
+		cost = 7
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = LBA_an_eternal_italian_enemy
+		 }
+	}
+
 	#Im wanting to make a secret path for Italo Balbo but might not get to it#
 
 	focus = {
 		id = LBA_rehabilitate_Italo_Balbo
 		icon = GFX_focus_Italo_Balbo
 		cost = 7
-		x = 4
+		x = 5
 		y = 1
 		prerequisite = {
 			focus = LBA_consolodate_Idris_Senussis_Rule
@@ -1592,13 +1614,12 @@ focus_tree = {
 	    icon = GFX_goal_deutsches_heer
 	    relative_position_id = LBA_contact_the_British_Crown
 	    y = 1
-		x = -1
+		x = -5
 		cost = 7
 		available = {
 			is_in_faction_with = PRS
 		}
-		prerequisite = { focus = LBA_ally_the_kaiser}
-		prerequisite = { focus = LBA_contact_the_British_Crown }
+		prerequisite = { focus = LBA_Berlin_Mission }
 	    completion_reward = {
 			PRS = {
 				country_event = {
@@ -1681,7 +1702,7 @@ focus_tree = {
 		available = {
 			has_global_flag = italian_civil_war_over
 		}
-	    prerequisite = { focus = LBA_execute_Italo_Balbo  focus = LBA_rehabilitate_Italo_Balbo}
+	    prerequisite = { focus = LBA_rehabilitate_Italo_Balbo}
 	    completion_reward = {
 			if = {
 				limit = {
@@ -1725,31 +1746,256 @@ focus_tree = {
 				 }
 				 set_country_flag = reconcile_NLC
 			}
+			custom_effect_tooltip = focus_unlock_LBA_ITA
 		 }
 	}
 
 	focus = {
 	    id = LBA_the_african_Prussia
 	    icon = GFX_focus_GER_prussian_legacy
-	    relative_position_id = LBA_request_Prussian_guns
-	    x = 3
-	    y = -1
+	    relative_position_id = LBA_ally_the_kaiser
+	    x = -1
+	    y = 1
 		cost = 7
 	    available = {
 			has_manpower > 150000
 			controls_state = 458
 		}
 		prerequisite = {
-			focus = LBA_consolodate_Idris_Senussis_Rule
+			focus = LBA_request_Prussian_guns
 		}
+		prerequisite = { focus = LBA_ally_the_kaiser}
 	    completion_reward = {
 			add_ideas = LBA_the_african_Prussia_idea
 			add_political_power = 120
 		 }
 		}
 
+		focus = {
+		    id = LBA_1
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_the_african_Prussia }
+		    relative_position_id = LBA_the_african_Prussia
+		    x = 0
+		    y = 1
+		    cost = 10
+		}
 
+		focus = {
+		    id = LBA_2
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_1 }
+		    relative_position_id = LBA_1
+		    x = -1
+		    y = 1
+		    cost = 10
+		}
 
+		focus = {
+		    id = LBA_3
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_1 }
+		    relative_position_id = LBA_1
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_4
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_2 }
+		    relative_position_id = LBA_2
+		    x = -1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_5
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_2 }
+			prerequisite = { focus = LBA_3 }
+		    relative_position_id = LBA_2
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_6
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_3 }
+		    relative_position_id = LBA_3
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_7
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_5 }
+		    relative_position_id = LBA_5
+		    x = 0
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_ally_the_British_Crown
+		    icon = GFX_focus_eng_god_save_the_king
+		    prerequisite = { focus = LBA_contact_the_British_Crown }
+		    relative_position_id = LBA_contact_the_British_Crown
+			mutually_exclusive = {focus = LBA_ally_the_kaiser}
+		    x = 0
+		    y = 1
+		    cost = 10
+			completion_reward = {
+				ENG = {
+					event = {
+						id = generic.2
+						days = 3
+					}
+				}
+			}
+		}
+
+		focus = {
+		    id = LBA_9
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_ally_the_British_Crown }
+		    relative_position_id = LBA_ally_the_British_Crown
+		    x = -1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_10
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_ally_the_British_Crown }
+		    relative_position_id = LBA_ally_the_British_Crown
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_11
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_9 }
+		    relative_position_id = LBA_9
+		    x = -1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_12
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_9 }
+			prerequisite = { focus = LBA_10 }
+		    relative_position_id = LBA_9
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_13
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_10 }
+		    relative_position_id = LBA_10
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_14
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_12 }
+		    relative_position_id = LBA_12
+		    x = 0
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_15
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_reconcile_the_Italians }
+		    relative_position_id = LBA_reconcile_the_Italians
+		    x = 0
+		    y = 1
+		    cost = 10
+			allow_branch = {
+				has_country_flag = reconcile_ITA
+				has_country_flag = Mussolini_Fled
+			}
+		}
+
+		focus = {
+		    id = LBA_16
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_15 }
+		    relative_position_id = LBA_15
+		    x = -1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_17
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_15 }
+		    relative_position_id = LBA_15
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_18
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_16 }
+		    relative_position_id = LBA_16
+		    x = -1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_19
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_16 }
+			prerequisite = { focus = LBA_17}
+		    relative_position_id = LBA_16
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_20
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_17 }
+		    relative_position_id = LBA_17
+		    x = 1
+		    y = 1
+		    cost = 10
+		}
+
+		focus = {
+		    id = LBA_21
+		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    prerequisite = { focus = LBA_19 }
+		    relative_position_id = LBA_19
+		    x = 0
+		    y = 1
+		    cost = 10
+		}
 
 
 	#COMMUNIST#
@@ -1945,10 +2191,6 @@ focus_tree = {
       	  }
 		}
     }
-			if = {
-				limit = { NOT = { has_completed_focus = LBA_invade_north_Africa } } 
-				complete_national_focus = LBA_invade_north_Africa
-			}
 	    }
 	}
 

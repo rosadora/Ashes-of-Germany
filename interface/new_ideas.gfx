@@ -633,4 +633,9 @@ spriteTypes = {
 		name = "GFX_idea_LBA_Idris_Senussi"
 		texturefile = "gfx/interface/ideas/idea_LBA_Idris_Senussi.dds"
 	}
+
+	spriteType = {
+		name = "LBA_generic_attack_enemy_IDEA"
+		texturefile = "gfx/interface/ideas/LBA_eternal_Italian_enemy.dds"
+	}
 }
