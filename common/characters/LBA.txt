@@ -160,7 +160,7 @@ characters = {
 		}
 		
 		advisor = {
-			slot = air_chief
+			slot = political_advisor
 			idea_token = italo_balbo
 			allowed = {
 			OR = {
@@ -173,7 +173,7 @@ characters = {
 			}
 			
 			traits = {
-				air_chief_all_weather_2
+				fascist_demagogue
 			}
 			cost = 100
 			ai_will_do = {

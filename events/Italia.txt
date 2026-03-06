@@ -83,6 +83,14 @@ country_event = { #The Civil War Starts
 			inherit_technology = ITA
 			set_research_slots = 2
 		}
+		ITA = {
+			every_state = {
+				limit = {
+					is_core_of = LBA
+				}
+				add_claim_by = ITA
+			}
+		}
 		transfer_units_fraction= {
 	     target = NLC
 	     navy_ratio = 0.4

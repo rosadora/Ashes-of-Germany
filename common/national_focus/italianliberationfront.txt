@@ -697,7 +697,7 @@
 	}
 	focus = {
 		id = ILF_retake_libya
-		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		icon = GFX_generic_attack_Libya
 		relative_position_id = ILF_our_little_place_under_the_sun
 		cost = 5
 		prerequisite = {

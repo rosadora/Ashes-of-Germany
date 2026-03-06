@@ -28,6 +28,39 @@ country_event = {
 						type = annex_everything
 					}
 				}
+
+				448 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+			661 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
 	}
 }
 
@@ -249,7 +282,7 @@ country_event = {
 country_event = {
 	id = LBA_events.9
 	title = "Ethiopia Requests Peace!"
-	desc = "Now that Ethiopia has taken over Aussa, they have requested a peace treaty with the Italian nation. Should we accept, §Rit will lead to them being stronger§R than they would be without them."
+	desc = "Now that Ethiopia has taken over Aussa, they have requested a peace treaty with the Italian nation. Although we are in a position to fight, our current circumstances may prove to us that peace is the best option."
 	picture = GFX_report_event_gre_cabinet_meeting
 
 	fire_only_once = yes

@@ -2066,4 +2066,9 @@ spriteTypes = {
 		name = "GFX_LBA_flag_raised"
 		texturefile = "gfx/interface/goals/Libya_Flag_Raised.dds"
 	}
+
+	spriteType = {
+		name = "GFX_generic_attack_Libya"
+		texturefile = "gfx/interface/goals/generic_invade_libya.dds"
+	}
 }

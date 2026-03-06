@@ -6668,7 +6668,8 @@ leader_traits = {
 		random = no
 		# Boosts Fascism
 		sprite = 13
-		fascism_drift = 0.1
+		fascism_drift = 0.08
+		ultra_nationalism_drift = 0.02
 
 		ai_will_do = {
 			factor = 1

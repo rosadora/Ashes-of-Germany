@@ -932,7 +932,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_retake_libya
-		icon = GFX_SOV_liberate_ryutin_ccp_2d_sov_compatibility
+		icon = GFX_generic_attack_Libya
 		cost = 5
 		x = 0
 		y = 1
