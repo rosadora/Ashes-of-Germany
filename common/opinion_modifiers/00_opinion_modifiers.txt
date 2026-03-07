@@ -42,6 +42,14 @@ opinion_modifiers = {
 		value = 50
 	}
 
+	distance_from_Italy = {
+		value = -50
+	}
+
+	visit_to_Rome = {
+		value = 50
+	}
+
 	holds_our_cores = {
 		value = -30
 	}

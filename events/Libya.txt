@@ -597,3 +597,45 @@ country_event = {
 		name = "We Must Deny!"
 	}
 }
+
+news_event = {
+	id = LBA_events.18
+	title = "Italo Balbo's Coup!"
+	desc = "Although Idris Senussi has attempted to Rehabilitate Italo Balbo, he has staged a counter-coup against the Monarchist government.
+	Although Idris Senussi has had the majority of the support of the nation, Italo Balbo and Mussolini's Loyalists have worked together to muster enough support to stage the coup successfully.
+	There is Rumour that Italo Balbo will still continue the Anti-Mussolini campaigns in Eastern Libya, However, these rumours are not yet confirmed."
+	is_triggered_only = yes
+	major = yes
+	picture = GFX_report_event_fascist_gathering
+
+	option = {
+		name = "To a New Age!"
+		trigger = {
+			tag = LBA
+		}
+	}
+
+	option = {
+		name = "Fascist Influence Spreads..."
+		trigger = {
+			NOT = {
+				tag = LBA
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.19
+	title = "Mussolini Returns!"
+	desc = "After Idris Senussi's coup in Libya, Mussolini has returned to Italy!"
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_mussolini
+
+	option = {
+		name = "To our Emperor!"
+		ITA = {
+			recruit_character = ITA_benito_mussolini
+		}
+	}
+}

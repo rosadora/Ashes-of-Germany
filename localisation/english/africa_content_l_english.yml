@@ -210,6 +210,16 @@
  LBA_ally_the_British_Crown:0 "Align with the United Kingdom"
  LBA_ally_the_British_Crown_desc:0 "The British, being the largest colonial power in the world, could offer Libya protection against other colonizers. Although many of our politicians wish to ally the Prussians, the British are able to protect us better than the Prussian nation can."
  focus_unlock_LBA_ITA:0 "§Y Completing this focus unlocks new focuses depending on who won the Italian Civilwar! §Y §R WORK IN PROGRESS FOR UNLOCKING FOCUSES §R"
+ LBA_rejoin_Italy:0 "Rejoin the Italians"
+ LBA_rejoin_Italy_desc:0 "Although our survival has been filled with ups and downs, the time for us to Re-Join the Italian nation is now. This will allow us to thrive now that we have developed our lands on our terms for some time now."
+ LBA_Italo_Balbos_Coup:0 "Italo Balbo's Coup"
+ LBA_Italo_Balbos_Coup_desc:0 "Although Idris Senussi has decided to Rehabilitate Italo Balbo, his ambitions have not been halted. Italo Balbo has begun the process of Staging a coup against the current Government of Idris Senussi. "
+ distance_from_Italy:0 "Distance from Italy"
+ visit_to_Rome:0 "Visit to Rome"
+ LBA_alliance_with_Italy:0 "Alliance with Italy"
+ LBA_alliance_with_Italy_desc:0 "In order to ensure there is not another counter-coup, we must ensure Italian support to defend our government agaisnt another coup from the Radical Idris Senussi."
+ LBA_distance_from_italy:0 "Distance from Italy"
+ LBA_distance_from_italy_desc:0 "Although Italian support would be nice, we mustn't risk them attempting to re-assert Control."
 
 
  #ETHIOPIA CONTENT#

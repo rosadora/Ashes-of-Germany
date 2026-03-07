@@ -2071,4 +2071,24 @@ spriteTypes = {
 		name = "GFX_generic_attack_Libya"
 		texturefile = "gfx/interface/goals/generic_invade_libya.dds"
 	}
+
+	spriteType = {
+		name = "GFX_libya_Italy_goal"
+		texturefile = "gfx/interface/goals/libya_Italian_Rejoin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_ITA_flags_FASCIST"
+		texturefile = "gfx/interface/goals/LBA_ITA_FASCIST_FLAGS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ITA_flag_reaching"
+		texturefile = "gfx/interface/goals/ITA_flag_reaching.dds"
+	}
+
+	spriteType = {
+		name = "GFX_FOCUS_fascist_Libya"
+		texturefile = "gfx/interface/goals/fascism_in_libya.dds"
+	}
 }

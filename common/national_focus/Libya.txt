@@ -1097,6 +1097,17 @@ focus_tree = {
 				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
 				remove_core_of = LBA
 			}
+			hidden_effect = {
+				if = {
+					limit = { ITA = {exists = yes} }
+				}
+				ITA = {
+					country_event = {
+						id = LBA_events.19
+						days = 2
+					}
+				}
+			}
 		 }
 	}
 
@@ -1285,6 +1296,9 @@ focus_tree = {
 				is_faction_leader = yes
 			}
 			is_in_faction = no
+			NOT = {
+				has_completed_focus = LBA_Italo_Balbos_Coup
+			}
 		}
 		mutually_exclusive = {
 			focus = LBA_ally_the_British_Crown
@@ -1533,7 +1547,7 @@ focus_tree = {
 	    id = LBA_contact_the_British_Crown
 	    icon = GFX_goal_tfv_strengthen_commonwealth_ties
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = 0
+	    x = 1
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
@@ -1614,7 +1628,7 @@ focus_tree = {
 	    icon = GFX_goal_deutsches_heer
 	    relative_position_id = LBA_contact_the_British_Crown
 	    y = 1
-		x = -5
+		x = -6
 		cost = 7
 		available = {
 			is_in_faction_with = PRS
@@ -1696,7 +1710,7 @@ focus_tree = {
 	    id = LBA_reconcile_the_Italians
 	    icon = GFX_focus_befriend_italy
 	    relative_position_id = LBA_contact_the_British_Crown
-	    x = 5
+	    x = 4
 	    y = 1
 		cost = 7
 		available = {
@@ -1746,7 +1760,63 @@ focus_tree = {
 				 }
 				 set_country_flag = reconcile_NLC
 			}
-			custom_effect_tooltip = focus_unlock_LBA_ITA
+		 }
+	}
+
+	focus = {
+		id = LBA_rejoin_Italy
+		icon = GFX_libya_Italy_goal
+		cost = 10
+		cancelable = no
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = LBA_reconcile_the_Italians
+		}
+		mutually_exclusive = {
+			focus = LBA_Italo_Balbos_Coup
+		}
+		relative_position_id = LBA_reconcile_the_Italians
+		completion_reward = {
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 ITA = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }	
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				ILF = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 NLC = {
+						annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
 		 }
 	}
 
@@ -1772,20 +1842,10 @@ focus_tree = {
 		}
 
 		focus = {
-		    id = LBA_1
+		    id = LBA_2
 		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 		    prerequisite = { focus = LBA_the_african_Prussia }
 		    relative_position_id = LBA_the_african_Prussia
-		    x = 0
-		    y = 1
-		    cost = 10
-		}
-
-		focus = {
-		    id = LBA_2
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_1 }
-		    relative_position_id = LBA_1
 		    x = -1
 		    y = 1
 		    cost = 10
@@ -1794,8 +1854,8 @@ focus_tree = {
 		focus = {
 		    id = LBA_3
 		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_1 }
-		    relative_position_id = LBA_1
+		    prerequisite = { focus = LBA_the_african_Prussia }
+		    relative_position_id = LBA_the_african_Prussia
 		    x = 1
 		    y = 1
 		    cost = 10
@@ -1851,6 +1911,14 @@ focus_tree = {
 		    x = 0
 		    y = 1
 		    cost = 10
+			available = {
+				NOT = {
+					has_completed_focus = LBA_Italo_Balbos_Coup
+				}
+			}
+			bypass = {
+			is_in_faction_with = ENG
+		}
 			completion_reward = {
 				ENG = {
 					event = {
@@ -1923,68 +1991,144 @@ focus_tree = {
 		}
 
 		focus = {
-		    id = LBA_15
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    id = LBA_Italo_Balbos_Coup
+		    icon = GFX_focus_generic_fascist_troops
 		    prerequisite = { focus = LBA_reconcile_the_Italians }
 		    relative_position_id = LBA_reconcile_the_Italians
-		    x = 0
+			mutually_exclusive = {
+				focus = LBA_rejoin_Italy
+			}
+		    x = 8
 		    y = 1
 		    cost = 10
-			allow_branch = {
+			available = {
+				NOT = {
+					OR = {
+						has_completed_focus = LBA_ally_the_British_Crown
+						has_completed_focus = LBA_ally_the_kaiser
+					}
+				}
 				has_country_flag = reconcile_ITA
-				has_country_flag = Mussolini_Fled
+			}
+			completion_reward = {
+				set_politics = {
+					ruling_party = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.15
+				}
+				remove_ideas = LBA_absolute_monarchy
+				hidden_effect = {
+					news_event = {
+					id = LBA_events.18
+					days = 2
+				}
+				}
 			}
 		}
 
 		focus = {
-		    id = LBA_16
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_15 }
-		    relative_position_id = LBA_15
+		    id = LBA_rapprochment_with_Mussolini
+		    icon = GFX_focus_ger_assassinate_mussolini
+		    prerequisite = { focus = LBA_Italo_Balbos_Coup }
+		    relative_position_id = LBA_Italo_Balbos_Coup
 		    x = -1
 		    y = 1
 		    cost = 10
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = visit_to_Rome
+				}
+				ITA = {
+					add_opinion_modifier = {
+						target = LBA
+						modifier = visit_to_Rome
+					}
+				}
+			}
 		}
 
 		focus = {
-		    id = LBA_17
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_15 }
-		    relative_position_id = LBA_15
+		    id = LBA_libyanize_the_Policies
+		    icon = GFX_FOCUS_fascist_Libya
+		    prerequisite = { focus = LBA_Italo_Balbos_Coup }
+		    relative_position_id = LBA_Italo_Balbos_Coup
 		    x = 1
 		    y = 1
-		    cost = 10
+		    cost = 5
+			completion_reward = {
+				add_political_power = 100
+				add_stability = 0.09
+				add_war_support = 0.09
+			}
 		}
 
 		focus = {
-		    id = LBA_18
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_16 }
-		    relative_position_id = LBA_16
-		    x = -1
-		    y = 1
+		    id = LBA_alliance_with_Italy
+		    icon = GFX_LBA_ITA_flags_FASCIST
+		    prerequisite = { focus = LBA_rapprochment_with_Mussolini }
+		    relative_position_id = LBA_Italo_Balbos_Coup
+		    x = -2
+		    y = 2
 		    cost = 10
+			mutually_exclusive = {
+				focus = LBA_distance_from_italy
+			}
+			available = {
+				ITA = {
+					is_faction_leader = yes
+					has_character = ITA_benito_mussolini
+				}
+			}
+			bypass = {
+			is_in_faction_with = ITA
+		}
+			completion_reward = {
+				ITA = {
+					country_event = {
+						id = generic.2
+						days = 3
+					}
+				}
+			}
 		}
 
 		focus = {
 		    id = LBA_19
 		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_16 }
-			prerequisite = { focus = LBA_17}
-		    relative_position_id = LBA_16
-		    x = 1
+		    prerequisite = { focus = LBA_rapprochment_with_Mussolini }
+			prerequisite = { focus = LBA_libyanize_the_Policies}
+		    relative_position_id = LBA_alliance_with_Italy
+		    x = 2
 		    y = 1
 		    cost = 10
 		}
 
 		focus = {
-		    id = LBA_20
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_17 }
-		    relative_position_id = LBA_17
-		    x = 1
-		    y = 1
+		    id = LBA_distance_from_italy
+		    icon = GFX_ITA_flag_reaching
+		    prerequisite = { focus = LBA_libyanize_the_Policies }
+		    relative_position_id = LBA_Italo_Balbos_Coup
+			mutually_exclusive = {
+				focus = LBA_alliance_with_Italy
+			}
+		    x = 2
+		    y = 2
 		    cost = 10
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = distance_from_Italy
+				}
+				ITA = {
+					add_opinion_modifier = {
+						target = LBA
+						modifier = distance_from_Italy
+					}
+				}
+			}
 		}
 
 		focus = {
