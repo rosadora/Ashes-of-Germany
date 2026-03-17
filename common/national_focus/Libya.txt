@@ -1115,11 +1115,18 @@ focus_tree = {
         id = LBA_form_royal_guards
         icon = GFX_goal_generic_small_arms
 		prerequisite = {
-			focus = LBA_restoration_of_the_monarchy
+			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		available = {
+			NOT = {
+				any_owned_state = {
+					has_dynamic_modifier =  Benito_Mussolini_Rebelious
+				}
+			}
 		}
 		relative_position_id = LBA_restoration_of_the_monarchy
-        x = 0
-        y = 1
+        x = -2
+        y = 2
         cost = 10
 		completion_reward = {
 			division_template = {
@@ -1161,51 +1168,30 @@ focus_tree = {
     focus = {
         id = LBA_constitutional_monarchy
         icon = GFX_goal_generic_constitutional_monarchy
-        relative_position_id = LBA_form_royal_guards
+        relative_position_id = LBA_convince_the_king_towards_democracy
 		prerequisite = {
-			focus = LBA_form_royal_guards
-		}
-		mutually_exclusive = {
-			focus = LBA_true_monarchy
+			focus = LBA_draft_a_constitution
 		}
         x = -2
-        y = 1
+        y = 0
         cost = 10
 		completion_reward = {
 			add_timed_idea = {
 				idea = LBA_constitutional_monarchy_idea
-				day = 365
+				days = 365
 			}
-		}
-    }
-
-    focus = {
-        id = LBA_true_monarchy
-        icon = GFX_focus_generic_monarchy_1
-		prerequisite = {
-			focus = LBA_form_royal_guards
-		}
-		mutually_exclusive = {
-			focus = LBA_constitutional_monarchy
-		}
-        relative_position_id = LBA_constitutional_monarchy
-        x = 4
-        y = 0
-        cost = 10
-		completion_reward = {
-			add_ideas = LBA_absolute_monarchy
 		}
     }
 
     focus = {
         id = LBA_join_the_French
         icon = GFX_focus_chi_reach_out_to_france
-        relative_position_id = LBA_constitutional_monarchy
+        relative_position_id = LBA_draft_a_constitution
         y = 1
-		x = -1
+		x = 4
         cost = 7
 		prerequisite = {
-			focus = LBA_constitutional_monarchy
+			focus = LBA_draft_a_constitution
 		}
 
 		available = {
@@ -1232,9 +1218,9 @@ focus_tree = {
     focus = {
         id = LBA_Berlin_Mission
         icon = GFX_goal_reichspakt
-        relative_position_id = LBA_true_monarchy
-        y = 2
-		x = 1
+        relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+        y = 1
+		x = -5
         cost = 7
 		prerequisite = {
 			focus = LBA_consolodate_Idris_Senussis_Rule
@@ -1263,6 +1249,7 @@ focus_tree = {
         icon = GFX_generic_goal_beg_france_flag
         relative_position_id = LBA_join_the_French
         y = 1
+		x=-1
         cost = 10
 		prerequisite = {
 			focus = LBA_join_the_French
@@ -1319,11 +1306,19 @@ focus_tree = {
 	focus = {
     	id = LBA_draft_a_constitution
     	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    	relative_position_id = LBA_constitutional_monarchy
-    	x = -4
+    	relative_position_id = LBA_reconcile_the_Italians
+    	x = 6
     	y = 1
 		cost = 7
-    	prerequisite = { focus = LBA_constitutional_monarchy }
+		available = {
+			has_country_flag = reconcile_ILF
+		}
+		mutually_exclusive = {
+				focus = LBA_rejoin_Italy
+				focus = LBA_Italo_Balbos_Coup
+				focus = LBA_get_communist_support
+			}
+    	prerequisite = { focus = LBA_reconcile_the_Italians }
     	completion_reward = {
 			add_ideas = LBA_drafting_the_constitution
 		 }
@@ -1333,7 +1328,7 @@ focus_tree = {
 	    id = LBA_convince_the_king_towards_democracy
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 	    relative_position_id = LBA_draft_a_constitution
-	    x = -1
+	    x = 0
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_draft_a_constitution }
@@ -1359,7 +1354,7 @@ focus_tree = {
 	    id = LBA_boost_democratic_parties
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 	    relative_position_id = LBA_draft_a_constitution
-	    x = 1
+	    x = 2
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_draft_a_constitution }
@@ -1374,11 +1369,19 @@ focus_tree = {
 	focus = {
 	    id = LBA_get_communist_support
 	    icon = GFX_goal_support_communism
-	    relative_position_id = LBA_convince_the_king_towards_democracy
-	    x = -1
+	    relative_position_id = LBA_reconcile_the_Italians
+	    x = 0
 	    y = 1
 		cost = 7
-	    prerequisite = { focus = LBA_convince_the_king_towards_democracy }
+		available = {
+			has_country_flag = reconcile_NLC
+		}
+		mutually_exclusive = {
+				focus = LBA_rejoin_Italy
+				focus = LBA_draft_a_constitution
+				focus = LBA_Italo_Balbos_Coup
+			}
+	    prerequisite = { focus = LBA_reconcile_the_Italians}
 	    completion_reward = {
 			add_timed_idea = {
 				idea = LBA_communist_support_rising
@@ -1391,11 +1394,11 @@ focus_tree = {
 	    id = LBA_state_catholicism
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 	    relative_position_id = LBA_convince_the_king_towards_democracy
-	    x = 1
+	    x = -1
 	    y = 1
 		cost = 7
 		prerequisite = { focus = LBA_convince_the_king_towards_democracy }
-	    prerequisite = { focus = LBA_boost_democratic_parties }
+		prerequisite = { focus = LBA_constitutional_monarchy }
 	    completion_reward = {
 			add_ideas = catholic_state
 		 }
@@ -1405,10 +1408,11 @@ focus_tree = {
 	    id = LBA_get_european_support
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 	    relative_position_id = LBA_boost_democratic_parties
-	    x = 1
+	    x = -1
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_boost_democratic_parties }
+		prerequisite = { focus = LBA_convince_the_king_towards_democracy }
 	    completion_reward = {
 			ENG = {
 				country_event = {
@@ -1441,14 +1445,11 @@ focus_tree = {
 	    id = LBA_enforce_constitutional_reform
 	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 	    relative_position_id = LBA_state_catholicism
-	    x = 0
+	    x = 1
 	    y = 1
 		cost = 7
-		mutually_exclusive = {
-			focus = LBA_enforce_constitutional_reform
-		}
 		prerequisite = { focus = LBA_get_european_support }
-	    prerequisite = {focus = LBA_state_catholicism  focus = LBA_get_communist_support }
+	    prerequisite = {focus = LBA_state_catholicism }
 	    completion_reward = {
 			add_ideas = women_in_military
 			set_politics = {
@@ -1529,17 +1530,20 @@ focus_tree = {
 	focus = {
 	    id = LBA_consolodate_Idris_Senussis_Rule
 	    icon = GFX_Idris_Senussi
-	    relative_position_id = LBA_true_monarchy
+	    relative_position_id = LBA_restoration_of_the_monarchy
 		cost = 7
-	    x = 5
+	    x = 0
 	    y = 1
-	    prerequisite = { focus = LBA_true_monarchy }
+	    prerequisite = { focus = LBA_restoration_of_the_monarchy }
 	    completion_reward = {
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.15
 			}
-			add_ideas = LBA_Consolidate_Idris_Senussis_Rule_IDEA
+			add_timed_idea = {
+				idea = LBA_Consolidate_Idris_Senussis_Rule_IDEA
+				days = 730
+			}
 		 }
 	}
 
@@ -1547,7 +1551,7 @@ focus_tree = {
 	    id = LBA_contact_the_British_Crown
 	    icon = GFX_goal_tfv_strengthen_commonwealth_ties
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = 1
+	    x = 0
 	    y = 1
 		cost = 7
 	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
@@ -1626,9 +1630,9 @@ focus_tree = {
 	focus = {
 	    id = LBA_request_Prussian_guns
 	    icon = GFX_goal_deutsches_heer
-	    relative_position_id = LBA_contact_the_British_Crown
+	    relative_position_id = LBA_Berlin_Mission
 	    y = 1
-		x = -6
+		x = -1
 		cost = 7
 		available = {
 			is_in_faction_with = PRS
@@ -1648,7 +1652,7 @@ focus_tree = {
 	    id = LBA_invasion_of_Tunisia
 	    icon = GFX_focus_attack_france
 	    relative_position_id = LBA_dreams_Of_Libyan_Empire
-	    x = 0
+	    x = -1
 	    y = 1
 		cost = 7
 		available = {
@@ -1683,7 +1687,7 @@ focus_tree = {
 		id = LBA_proclaim_Libyan_empire
 		icon = GFX_LBA_flag_raised
 		cost = 7
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = LBA_invasion_of_Tunisia
 		prerequisite = {
@@ -1694,6 +1698,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = LIBYAN_EMPIRE
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = TUN
+					}
+					add_core_of = LBA
+				}
+				#Added this as precaution#
+			}
 			452 = {
 				add_claim_by = LBA
 			}
@@ -1710,7 +1723,7 @@ focus_tree = {
 	    id = LBA_reconcile_the_Italians
 	    icon = GFX_focus_befriend_italy
 	    relative_position_id = LBA_contact_the_British_Crown
-	    x = 4
+	    x = 5
 	    y = 1
 		cost = 7
 		available = {
@@ -1768,13 +1781,15 @@ focus_tree = {
 		icon = GFX_libya_Italy_goal
 		cost = 10
 		cancelable = no
-		x = 10
+		x = 15
 		y = 1
 		prerequisite = {
 			focus = LBA_reconcile_the_Italians
 		}
 		mutually_exclusive = {
 			focus = LBA_Italo_Balbos_Coup
+			focus = LBA_draft_a_constitution
+			focus = LBA_get_communist_support
 		}
 		relative_position_id = LBA_reconcile_the_Italians
 		completion_reward = {
@@ -1915,13 +1930,17 @@ focus_tree = {
 				NOT = {
 					has_completed_focus = LBA_Italo_Balbos_Coup
 				}
+				ENG = {
+					is_faction_leader = yes
+				}
+				is_in_faction = no
 			}
 			bypass = {
 			is_in_faction_with = ENG
 		}
 			completion_reward = {
 				ENG = {
-					event = {
+					country_event = {
 						id = generic.2
 						days = 3
 					}
@@ -1970,22 +1989,13 @@ focus_tree = {
 		    cost = 10
 		}
 
-		focus = {
-		    id = LBA_13
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_10 }
-		    relative_position_id = LBA_10
-		    x = 1
-		    y = 1
-		    cost = 10
-		}
 
 		focus = {
 		    id = LBA_14
 		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
 		    prerequisite = { focus = LBA_12 }
 		    relative_position_id = LBA_12
-		    x = 0
+		    x = -1
 		    y = 1
 		    cost = 10
 		}
@@ -1997,8 +2007,10 @@ focus_tree = {
 		    relative_position_id = LBA_reconcile_the_Italians
 			mutually_exclusive = {
 				focus = LBA_rejoin_Italy
+				focus = LBA_draft_a_constitution
+				focus = LBA_get_communist_support
 			}
-		    x = 8
+		    x = 13
 		    y = 1
 		    cost = 10
 			available = {
@@ -2070,7 +2082,7 @@ focus_tree = {
 		    icon = GFX_LBA_ITA_flags_FASCIST
 		    prerequisite = { focus = LBA_rapprochment_with_Mussolini }
 		    relative_position_id = LBA_Italo_Balbos_Coup
-		    x = -2
+		    x = -1
 		    y = 2
 		    cost = 10
 			mutually_exclusive = {
@@ -2094,18 +2106,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		focus = {
-		    id = LBA_19
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_rapprochment_with_Mussolini }
-			prerequisite = { focus = LBA_libyanize_the_Policies}
-		    relative_position_id = LBA_alliance_with_Italy
-		    x = 2
-		    y = 1
-		    cost = 10
-		}
-
 		focus = {
 		    id = LBA_distance_from_italy
 		    icon = GFX_ITA_flag_reaching
@@ -2114,7 +2114,7 @@ focus_tree = {
 			mutually_exclusive = {
 				focus = LBA_alliance_with_Italy
 			}
-		    x = 2
+		    x = 1
 		    y = 2
 		    cost = 10
 			completion_reward = {
@@ -2131,17 +2131,6 @@ focus_tree = {
 			}
 		}
 
-		focus = {
-		    id = LBA_21
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_19 }
-		    relative_position_id = LBA_19
-		    x = 0
-		    y = 1
-		    cost = 10
-		}
-
-
 	#COMMUNIST#
 
 	#Icons are Placeholders as of right now#
@@ -2150,25 +2139,19 @@ focus_tree = {
 		id = LBA_communist_revolution
 		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
 		cost = 10
-		x = -1
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = LBA_get_communist_support
 		}
 		available = {
-			NOT = {
-				is_in_faction_with = FRA
-			}
-		}
-		mutually_exclusive = {
-			focus = LBA_enforce_constitutional_reform
+			communism > 0.4
 		}
 		relative_position_id = LBA_get_communist_support
 		completion_reward = {
 			set_politics = {
 				ruling_party = communism
 			}
-			remove_ideas = LBA_drafting_the_constitution
 		 }
 	}
 
@@ -2177,7 +2160,7 @@ focus_tree = {
     icon = GFX_goal_propaganda_poster
     cost = 10
     relative_position_id = LBA_communist_revolution
-    x = -4
+    x = -2
     y = 1
 	mutually_exclusive = {
 		focus = LBA_African_Communism
@@ -2201,7 +2184,7 @@ focus_tree = {
 	    icon = GFX_LBA_african_communism
 	    cost = 10
 	    relative_position_id = LBA_communist_revolution
-	    x =-0
+	    x =2
 	    y = 1
 		mutually_exclusive = {
 			focus = LBA_follow_Russian_communism
@@ -2259,27 +2242,28 @@ focus_tree = {
 	    icon = GFX_LBA_spread_the_revolution
 	    cost = 10
 	    relative_position_id = LBA_communist_revolution
-	    x = 0
+	    x = 2
 	    y = 2
 	    prerequisite = { focus = LBA_African_Communism }
 	    completion_reward = {
-			create_faction = "African Liberation Front"
-			every_state = {
-				limit = {
-					is_on_continent = africa
-					NOT = {
-						is_controlled_by = LBA
-						tag = ETH
+			IF = {
+				limit = { NOT = { is_faction_leader = yes } }
+				IF = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
 					}
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_ETH_african_union_faction
+					add_faction_initiative = 1
 				}
-				add_dynamic_modifier = {
-					modifier = African_Wildfire_
-					days = 1055
+				ELSE = {
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_ETH_african_union_faction
 				}
 			}
 			ETH = {
 				country_event = {
-					id = generic.2
+					id = generic.5
 					days = 2
 				}
 			}
@@ -2358,13 +2342,12 @@ focus_tree = {
 		id = LBA_dreams_Of_Libyan_Empire
 		icon = GFX_focus_IRQ_liberate_north_africa
 		cost = 7
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = {
-			focus = LBA_constitutional_monarchy
-			focus = LBA_true_monarchy
+			focus = LBA_an_eternal_Italian_enemy
 		}
-		relative_position_id = LBA_true_monarchy
+		relative_position_id = LBA_an_eternal_Italian_enemy
 		completion_reward = {
 			every_state = {
 				limit = {

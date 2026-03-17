@@ -220,6 +220,10 @@
  LBA_alliance_with_Italy_desc:0 "In order to ensure there is not another counter-coup, we must ensure Italian support to defend our government agaisnt another coup from the Radical Idris Senussi."
  LBA_distance_from_italy:0 "Distance from Italy"
  LBA_distance_from_italy_desc:0 "Although Italian support would be nice, we mustn't risk them attempting to re-assert Control."
+ LBA_rapprochment_with_Mussolini:0 "Rapprochment with Mussolini"
+ LBA_rapprochment_with_Mussolini_desc:0 "Although Mussolini was overthrown from rule in Libya, now that a fascist coup has unfolded, we may be able to reconcile with him."
+ LBA_libyanize_the_Policies:0 "Libyanize the Politics"
+ LBA_libyanize_the_Policies_desc:0 "Although our recent roots are with Italy, we must embrace our older roots in Africa to ensure our longevity on the continent."
 
 
  #ETHIOPIA CONTENT#
