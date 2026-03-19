@@ -1991,6 +1991,9 @@ focus_tree = {
 					is_in_faction_with = PRS
 				}
 			}
+			available = {
+				is_in_faction_with = PRS
+			}
 			completion_reward = {
 				PRS = {
 					country_event = {
@@ -2041,6 +2044,9 @@ focus_tree = {
 			mutually_exclusive = {
 				focus = LBA_maintain_our_independance
 			}
+			available = {
+				is_in_faction_with = ENG
+			}
 		    cost = 10
 			completion_reward = {
 				ENG = {
@@ -2085,7 +2091,7 @@ focus_tree = {
 		    x = -1
 		    y = 1
 			mutually_exclusive = {
-				focus = LBA_12
+				focus = LBA_British_Economic_Dependance
 			}
 		    cost = 10
 			completion_reward = {
@@ -2099,8 +2105,8 @@ focus_tree = {
 		}
 
 		focus = {
-		    id = LBA_12
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    id = LBA_British_Economic_Dependance
+		    icon = GFX_focus_generic_british_trade
 		    prerequisite = { focus = LBA_submit_to_Britain focus = LBA_maintain_our_independance }
 		    relative_position_id = LBA_submit_to_Britain
 		    x = 1
@@ -2109,17 +2115,44 @@ focus_tree = {
 				focus = LBA_asume_Egyptian_Control
 			}
 		    cost = 10
+			completion_reward = {
+				add_ideas = Libyan_ENG_economic_Dependance
+				448 = {
+					add_building_construction = {
+						type = dockyard
+						level = 2
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+					add_extra_state_shared_building_slots = 5
+				}
+			}
 		}
 
 
 		focus = {
-		    id = LBA_14
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_12 focus = LBA_asume_Egyptian_Control }
+		    id = LBA_towards_a_Libyan_navy
+		    icon = GFX_goal_generic_construct_naval_dockyard
+		    prerequisite = { focus = LBA_British_Economic_Dependance focus = LBA_asume_Egyptian_Control }
 		    relative_position_id = LBA_submit_to_Britain
 		    x = 0
 		    y = 2
 		    cost = 10
+			completion_reward = {
+				448 = {
+					add_building_construction = {
+						type = dockyard
+						level = 3
+					}
+					add_extra_state_shared_building_slots = 3
+					hidden_effect = {
+						set_state_category = metropolis
+					}
+				}
+				
+			}
 		}
 
 		focus = {

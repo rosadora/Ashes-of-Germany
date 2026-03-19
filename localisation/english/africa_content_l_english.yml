@@ -249,6 +249,12 @@
  maintain_our_independance:0 "Maintained Independance"
  LBA_asume_Egyptian_Control:0 "Request Egyptian Control"
  LBA_asume_Egyptian_Control_desc:0 "Although Egypt is an autonomous zone of the UK, we may be able to convince the British nation to give us control over it. If we manage to take control over the area, it will triple our power and allow us to maintain our independance longer than without Libya."
+ Libyan_ENG_economic_Dependance:0 "Libyan - British economic dependance"
+ Libyan_ENG_economic_Dependance_desc:0 ""
+ LBA_British_Economic_Dependance:0 "British Economic Dependance"
+ LBA_British_Economic_Dependance_desc:0 "Although we want to maintain our independance, our economy is not yet developed enough to ensure this. Although tying ourselves to a single power economically is foolish, the British, having one of the biggest economies in the world, are a strong option to lean on for economic support."
+ LBA_towards_a_Libyan_navy:0 "Towards a Libyan Navy"
+ LBA_towards_a_Libyan_navy_desc:0 "In order to protect ourselves, we must protect all of our fronts, including the naval aspect of our fronts."
 
 
 

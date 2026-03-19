@@ -5560,13 +5560,13 @@
 	focus = {
 		id = FRA_submarines
 		icon = GFX_goal_generic_navy_submarine
-		x = -6
+		x = -4
 		y = 2
 		cost = 8
 		relative_position_id = FRA_la_flotte_fantome
 		prerequisite = {focus = FRA_naval_tactics}
 		offset = {
-			x = -17
+			x = -15
 			y = 0
 		}
 
@@ -5586,13 +5586,13 @@
 	focus = {
 		id = FRA_destroyers
 		icon = GFX_focus_generic_destroyer
-		x = -4
+		x = -2
 		y = 2
 		cost = 8
 		relative_position_id = FRA_la_flotte_fantome
 		prerequisite = {focus = FRA_naval_tactics}
 		offset = {
-			x = -17
+			x = -15
 			y = 0
 		}
 
@@ -5609,32 +5609,7 @@
 			}
 		}
 	}
-	focus = {
-		id = FRA_cruisers
-		icon = GFX_focus_generic_cruiser2
-		x = -2
-		y = 2
-		cost = 8
-		relative_position_id = FRA_la_flotte_fantome
-		prerequisite = {focus = FRA_naval_tactics}
-		offset = {
-			x = -17
-			y = 0
-		}
 
-		bypass = {
-		}
-		select_effect = {
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				category = cl_tech
-				uses = 2
-				bonus = 1
-			}
-		}
-	}
 	focus = {
 		id = FRA_big_guns
 		icon = GFX_goal_generic_air_naval_bomber
@@ -5642,7 +5617,6 @@
 		y = 3
 		cost = 8
 		relative_position_id = FRA_la_flotte_fantome
-		prerequisite = {focus = FRA_cruisers}
 		prerequisite = {focus = FRA_destroyers}
 		prerequisite = {focus = FRA_submarines}
 		offset = {
