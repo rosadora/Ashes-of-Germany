@@ -2106,4 +2106,14 @@ spriteTypes = {
 		name = "GFX_Prussian_Flag_Raised_GOAL"
 		texturefile = "gfx/interface/goals/Prussia_Flag_Raised.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Libyan_Flag_Raised_Neutrality"
+		texturefile = "gfx/interface/goals/LBA_raised_flag_neutrality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_attack_Egypt"
+		texturefile = "gfx/interface/goals/generic_attack_egypt.dds"
+	}
 }

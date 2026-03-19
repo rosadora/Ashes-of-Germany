@@ -568,14 +568,13 @@ country_event = {
 		name = "We will accept these conditions"
 		ai_chance = {
 			base = 50
-			modifier = {
 				modifier = {
           	  factor = 2
           	  FROM = {
                 has_opinion = {
                     target = ROOT 
                     value > 50
-                }
+
             }
 		}
 			}
@@ -660,7 +659,6 @@ country_event = {
 		}
 		ai_chance = {
 			base = 20
-			modifier = {
 				modifier = {
           	  factor = 2
           	  FROM = {
@@ -670,7 +668,7 @@ country_event = {
                 }
             }
 		}
-			}
+			
 		}
 	}
 
@@ -689,7 +687,7 @@ country_event = {
 		}
 		ai_chance = {
 			base = 50
-			modifier = {
+
 				modifier = {
           	  factor = 2
           	  FROM = {
@@ -699,7 +697,7 @@ country_event = {
                 }
             }
 		}
-			}
+			
 		}
 	}
 }
@@ -707,7 +705,7 @@ country_event = {
 country_event = {
 	id = LBA_events.21
 	title = "Prussia Accepts!"
-	desc = "The Prussian Government has accepted our request to be joined with them! This will allow us to be protected against other, more ruthless, colonial powers."
+	desc = "The Prussian Government has accepted our request to be joined with them! This will allow us to be protected against other, more ruthless, colonial powers without Prussian support."
 	fire_only_once = yes
 	is_triggered_only = yes
 	picture = GFX_report_event_fascist_gathering
@@ -732,6 +730,85 @@ country_event = {
 		name = "Rats!"
 		hidden_effect = {
 			add_political_power = -150
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.23
+	title = "Libya Requests Egypt!"
+	desc = "The Libyan nation has requested control over the Egyptian nation. If we accept, it will grant them control of the Suez canal and undermine our influence in the region."
+	picture = GFX_report_Tunis
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh HELL no"
+		ai_chance = {
+			base = 5
+		}
+		LBA = {
+			country_event = {
+				id = LBA_events.24
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = "They are our Puppet..."
+		ai_chance = {
+			base = 95
+		}
+		LBA = {
+			every_state = {
+				limit = {
+					OR = {
+						is_controlled_by = EGY
+						is_controlled_by = ENG
+					}
+					is_core_of = EGY
+				}
+				transfer_state_to = LBA
+				add_core_of = LBA
+			}
+			country_event = {
+				id = LBA_events.25
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.24
+	title = "The UK Denies!"
+	desc = "The British Government has Denied our request to be joined with the egyptians!! This now leaves us vulnerable to other colonizers!."
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_fascist_gathering
+
+	option = {
+		name = "Rats!"
+		hidden_effect = {
+			add_political_power = -150
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.25
+	title = "The UK Accepts!"
+	desc = "The British Government has accepted our request to be joined with Egypt! This will allow us to be protected against other, more ruthless, colonial powers without needing the British army."
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_fascist_gathering
+
+	option = {
+		name = "To a new Age!"
+		hidden_effect = {
+			add_political_power = 150
 		}
 	}
 }

@@ -713,10 +713,28 @@
 				add_claim_by = ITA
 			}
 
-			create_wargoal = {
-             type = take_state_focus
-             target = LBA
+			if = {
+				limit = {
+					AML = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+          	   type = annex_everything
+        	     target = AML
             }
+			}
+			if = {
+				limit = {
+					LBA = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+          	   type = annex_everything
+        	     target = LBA
+            }
+			}
 		 }
 	}
 	focus = {

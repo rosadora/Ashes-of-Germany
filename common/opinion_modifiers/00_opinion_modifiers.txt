@@ -40,14 +40,22 @@ opinion_modifiers = {
 
 	visit_to_london = {
 		value = 50
+		months = 24
 	}
 
 	distance_from_Italy = {
 		value = -50
+		months = 24
 	}
 
 	visit_to_Rome = {
 		value = 50
+		months = 24
+	}
+
+	maintain_our_independance = {
+		value = -25
+		months = 12
 	}
 
 	holds_our_cores = {

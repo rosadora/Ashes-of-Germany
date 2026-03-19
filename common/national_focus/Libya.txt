@@ -1698,15 +1698,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = LIBYAN_EMPIRE
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = TUN
-					}
-					add_core_of = LBA
-				}
-				#Added this as precaution#
-			}
 			452 = {
 				add_claim_by = LBA
 			}
@@ -1874,6 +1865,30 @@ focus_tree = {
 		}
 
 		focus = {
+			id = LBA_prussian_Francophobia
+			icon = GFX_goal_elite_corps
+			cost = 7
+			x = 1
+			y = 1
+			    prerequisite = { focus = LBA_adopt_Prussian_doctrine }
+			prerequisite = {focus = LBA_Prussian_Protectorate}
+			relative_position_id = LBA_adopt_Prussian_doctrine
+			completion_reward = {
+					add_ideas = Libyan_francophobia
+					add_opinion_modifier = {
+       				target = FRA
+       			     modifier = francophobia
+         	   }
+			FRA = {
+				add_opinion_modifier = {
+             target = LBA
+             modifier = francophobia
+            }
+			}
+			 }
+		}
+
+		focus = {
 		    id = LBA_Erwin_Rommel #idk what else to do for an advisor here
 		    icon = GFX_focus_Rommel
 		    prerequisite = { focus = LBA_Prussian_Protectorate }
@@ -1919,8 +1934,8 @@ focus_tree = {
 	    icon = GFX_focus_attack_france
 	    relative_position_id = LBA_adopt_Prussian_doctrine
 	    x = 1
-	    y = 1
-		cost = 7
+	    y = 2
+		cost = 10
 		available = {
 			has_manpower > 100000
 		}
@@ -1928,12 +1943,17 @@ focus_tree = {
 			controls_state = 458
 			controls_state = 665
 		}
+		prerequisite = {focus = LBA_prussian_Francophobia}
 		will_lead_to_war_with = FRA
-	    prerequisite = { focus = LBA_adopt_Prussian_doctrine }
-		prerequisite = {
-			focus = LBA_Prussian_Protectorate
-		}
 	    completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LBA_invasion_of_Tunisia
+					}
+				}
+				complete_national_focus = LBA_invasion_of_Tunisia
+			}
 			every_country = {
 				limit = {
 					controls_state = 458
@@ -1981,35 +2001,6 @@ focus_tree = {
 		}
 
 		focus = {
-		    id = LBA_a_loyal_prussian_ally
-		    icon = GFX_focus_LBA_GER
-		    prerequisite = { focus = LBA_invasion_of_Tunisia_2 }
-		    relative_position_id = LBA_invasion_of_Tunisia_2
-		    x = 0
-		    y = 1
-		    cost = 10
-			completion_reward = {
-				every_state = {
-					limit = {
-						OR = {
-							is_core_of = ALG
-							is_core_of = EGY
-							is_core_of = MOR
-						}
-					}
-					add_core_of = LBA
-				}
-				every_state = {
-					limit = {
-						is_on_continent = africa
-					}
-					add_claim_by = LBA
-				}
-				add_political_power = 250
-			}
-		}
-
-		focus = {
 		    id = LBA_ally_the_British_Crown
 		    icon = GFX_focus_eng_god_save_the_king
 		    prerequisite = { focus = LBA_contact_the_British_Crown }
@@ -2041,43 +2032,82 @@ focus_tree = {
 		}
 
 		focus = {
-		    id = LBA_9
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    id = LBA_submit_to_Britain
+		    icon = GFX_focus_eng_the_sun_never_sets
 		    prerequisite = { focus = LBA_ally_the_British_Crown }
 		    relative_position_id = LBA_ally_the_British_Crown
 		    x = -1
 		    y = 1
+			mutually_exclusive = {
+				focus = LBA_maintain_our_independance
+			}
 		    cost = 10
+			completion_reward = {
+				ENG = {
+					puppet = LBA
+				}
+				add_political_power = -150
+			}
 		}
 
 		focus = {
-		    id = LBA_10
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    id = LBA_maintain_our_independance
+		    icon = GFX_Libyan_Flag_Raised_Neutrality
 		    prerequisite = { focus = LBA_ally_the_British_Crown }
 		    relative_position_id = LBA_ally_the_British_Crown
 		    x = 1
 		    y = 1
+			mutually_exclusive = {
+				focus = LBA_submit_to_Britain
+			}
 		    cost = 10
+
+			completion_reward = {
+				add_political_power = 150
+				add_opinion_modifier = {
+					target = ENG
+					modifier = maintain_our_independance
+				}
+				ENG = {
+					add_opinion_modifier = {
+						target = LBA
+						modifier = maintain_our_independance
+					}
+				}
+			}
 		}
 
 		focus = {
-		    id = LBA_11
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_9 }
-		    relative_position_id = LBA_9
+		    id = LBA_asume_Egyptian_Control
+		    icon = GFX_generic_attack_Egypt
+		    prerequisite = { focus = LBA_submit_to_Britain }
+		    relative_position_id = LBA_submit_to_Britain
 		    x = -1
 		    y = 1
+			mutually_exclusive = {
+				focus = LBA_12
+			}
 		    cost = 10
+			completion_reward = {
+				ENG = {
+					country_event = {
+						id = LBA_events.23
+						days = 2
+					}
+				}
+			}
 		}
 
 		focus = {
 		    id = LBA_12
 		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_9 }
-			prerequisite = { focus = LBA_10 }
-		    relative_position_id = LBA_9
+		    prerequisite = { focus = LBA_submit_to_Britain focus = LBA_maintain_our_independance }
+		    relative_position_id = LBA_submit_to_Britain
 		    x = 1
 		    y = 1
+			mutually_exclusive = {
+				focus = LBA_asume_Egyptian_Control
+			}
 		    cost = 10
 		}
 
@@ -2085,10 +2115,10 @@ focus_tree = {
 		focus = {
 		    id = LBA_14
 		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_12 }
-		    relative_position_id = LBA_12
-		    x = -1
-		    y = 1
+		    prerequisite = { focus = LBA_12 focus = LBA_asume_Egyptian_Control }
+		    relative_position_id = LBA_submit_to_Britain
+		    x = 0
+		    y = 2
 		    cost = 10
 		}
 

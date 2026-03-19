@@ -941,10 +941,29 @@ focus_tree = {
 			focus = ITA_the_eagle_rise
 		}
 		completion_reward = {
-			create_wargoal = {
-             type = take_state_focus
-             target = LBA
+			if = {
+				limit = {
+					LBA = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+          	   type = annex_everything
+        	     target = LBA
             }
+			}
+
+			if = {
+				limit = {
+					AML = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+          	   type = annex_everything
+        	     target = AML
+            }
+			}
 		 }
 	}
 	focus = {

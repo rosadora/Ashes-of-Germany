@@ -238,8 +238,19 @@
  LBA_less_attrition_desc:0 ""
  LBA_Prussian_Logistics:0 "Prussian Desert Logistics"
  LBA_Prussian_Logistics_desc:0 "Although the Prussians are in eruope, they still have specialists for parts of the world. One of these parts of the world is Libya, because of this, we could recruit some of these specialists to condition our forces for the deserts of Africa."
- LBA_a_loyal_prussian_ally:0 "A Loyal Prussian Ally"
- LBA_a_loyal_prussian_ally_desc:0 "Now that our worth has been shown to the Prussian state, we are now able to push towards a unified africa. Alongside this, we have now shown ourselves to be worthy of an alliance with Prussia, with their help, we have taken our goals in Tunisia. We must ensure our loyalty stays with those who are strong and those who truly care about the Libyan nation"
+ Libyan_francophobia:0 "Libyan Francophobia"
+ Libyan_francophobia_desc:0 "Following after the Prussians, the Libyans have developed a form of Francophobia."
+ LBA_prussian_Francophobia:0 "Adopt Prussian Francophobia"
+ LBA_prussian_Francophobia_desc:0 "The Prussians, being Francophobes alongside those who we've aligned with politically, have strong influence over our people. Because of this influence, our population has been developing a form of Francophobia of their own. France being one of our neighbors who are a colonizer, may attempt to subdue us, but, with Prussian forces we can fight them and seize control of North Africa."
+ LBA_submit_to_Britain:0 "Submit to Britain"
+ LBA_submit_to_Britain_desc:0 "In order to protect ourselves against both the Italians and French, we must, although not prefered, submit to the British empire. Although this will undermine our influence temporarily, we will be able to re-gain it thru diplomatic maneuvering."
+ LBA_maintain_our_independance:0 "Maintain Diplomatic Independance"
+ LBA_maintain_our_independance_desc:0 "Although we have allied with the British Crown, in order to ensure our survival longer than just temporary, we must maintain diplomatic independance to a degree."
+ maintain_our_independance:0 "Maintained Independance"
+ LBA_asume_Egyptian_Control:0 "Request Egyptian Control"
+ LBA_asume_Egyptian_Control_desc:0 "Although Egypt is an autonomous zone of the UK, we may be able to convince the British nation to give us control over it. If we manage to take control over the area, it will triple our power and allow us to maintain our independance longer than without Libya."
+
+
 
 
  #ETHIOPIA CONTENT#
