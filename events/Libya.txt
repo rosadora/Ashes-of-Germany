@@ -630,12 +630,108 @@ country_event = {
 	title = "Mussolini Returns!"
 	desc = "After Idris Senussi's coup in Libya, Mussolini has returned to Italy!"
 	is_triggered_only = yes
+	fire_only_once = yes
 	picture = GFX_report_event_generic_mussolini
 
 	option = {
 		name = "To our Emperor!"
 		ITA = {
 			recruit_character = ITA_benito_mussolini
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.20
+	title = "Libya Requests Protection!"
+	desc = "With Libya's recent joining of the reikspact, they have formally requested to become a Protectorate under the Prussian crown. 
+	Although they may not be as developed as other parts of Africa, having a colony on the continent may be of use to us in the future."
+	picture = GFX_report_event_south_africa_patrol
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We must refuse"
+		LBA = {
+			country_event = {
+				id = LBA_events.22
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				modifier = {
+          	  factor = 2
+          	  FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value < 50
+                }
+            }
+		}
+			}
+		}
+	}
+
+	option = {
+		name = "To a new Colony!"
+		PRS = {
+			puppet = {
+				target = LBA
+			}
+		}
+		LBA = {
+			country_event = {
+				id = LBA_events.21
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				modifier = {
+          	  factor = 2
+          	  FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value > 50
+                }
+            }
+		}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.21
+	title = "Prussia Accepts!"
+	desc = "The Prussian Government has accepted our request to be joined with them! This will allow us to be protected against other, more ruthless, colonial powers."
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_fascist_gathering
+
+	option = {
+		name = "To a new Age!"
+		hidden_effect = {
+			add_political_power = 150
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.22
+	title = "Prussia Denies!"
+	desc = "The Prussian Government has Denied our request to be joined with them! This now leaves us vulnerable to outside influence and invasion."
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_fascist_gathering
+
+	option = {
+		name = "Rats!"
+		hidden_effect = {
+			add_political_power = -150
 		}
 	}
 }

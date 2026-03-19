@@ -296,6 +296,30 @@ ideas = {
 		}
 		}
 
+		LBA_the_african_Prussia_idea2 = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1	
+
+		picture = GER_fan_prussian_militarism
+
+		modifier = {
+			ground_attack_factor = 0.15
+			defence = 0.15
+			justify_war_goal_time = -0.25
+			political_power_gain = 0.15
+			attrition = -0.15
+			heat_attrition = -0.15
+			supply_consumption_factor = -0.15
+			land_doctrine_cost_factor = -0.15
+		}
+		}
+
 		LBA_an_eternal_italian_enemy = {
 			allowed = {
 				always = yes
@@ -322,6 +346,24 @@ ideas = {
 				tag = NLC
 				attack_bonus_against = 0.15
 				defense_bonus_against = 0.15
+			}
+		}
+
+		LBA_less_attrition = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_supply_depot
+
+			modifier = {
+				supply_consumption_factor = -0.05
+				heat_attrition_factor = -0.35
 			}
 		}
 	}

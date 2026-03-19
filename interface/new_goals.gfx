@@ -2091,4 +2091,19 @@ spriteTypes = {
 		name = "GFX_FOCUS_fascist_Libya"
 		texturefile = "gfx/interface/goals/fascism_in_libya.dds"
 	}
+
+	spriteType = {
+		name = "GFX_focus_Rommel"
+		texturefile = "gfx/interface/goals/Rommel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_LBA_GER"
+		texturefile = "gfx/interface/goals/Ger_LBA_flags.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Prussian_Flag_Raised_GOAL"
+		texturefile = "gfx/interface/goals/Prussia_Flag_Raised.dds"
+	}
 }

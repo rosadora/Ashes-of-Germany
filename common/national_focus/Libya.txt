@@ -1857,64 +1857,156 @@ focus_tree = {
 		}
 
 		focus = {
-		    id = LBA_2
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    id = LBA_adopt_Prussian_doctrine
+		    icon = GFX_goal_army_upgrade
 		    prerequisite = { focus = LBA_the_african_Prussia }
 		    relative_position_id = LBA_the_african_Prussia
 		    x = -1
 		    y = 1
-		    cost = 10
+		    cost = 7
+			completion_reward = {
+				add_doctrine_cost_reduction = {
+	  		    cost_reduction = 0.75
+	  		    uses = 1
+			      category = cat_mobile_warfare
+         }
+			}
 		}
 
 		focus = {
-		    id = LBA_3
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		    id = LBA_Erwin_Rommel #idk what else to do for an advisor here
+		    icon = GFX_focus_Rommel
+		    prerequisite = { focus = LBA_Prussian_Protectorate }
+		    relative_position_id = LBA_the_african_Prussia
+		    x = 2
+		    y = 2
+		    cost = 7
+			bypass = {
+				NOT = {
+					is_in_faction_with = PRS
+				}
+			}
+			completion_reward = {
+				PRS = {
+					retire_character = PRS_erwin_rommel
+				}
+				recruit_character = LBA_erwin_rommel
+			}
+		}
+
+		focus = {
+		    id = LBA_Prussian_Logistics
+		    icon = GFX_focus_generic_reinforcing_the_supply_network
+		    prerequisite = { focus = LBA_adopt_Prussian_doctrine }
+		    relative_position_id = LBA_adopt_Prussian_doctrine
+		    x = -1
+		    y = 1
+		    cost = 7
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = LBA_the_african_Prussia_idea
+					add_idea = LBA_the_african_Prussia_idea2
+				}
+				add_timed_idea = {
+					idea = LBA_less_attrition
+					days = 1000
+				}
+			}
+		}
+
+		focus = {
+		id = LBA_invasion_of_Tunisia_2
+	    icon = GFX_focus_attack_france
+	    relative_position_id = LBA_adopt_Prussian_doctrine
+	    x = 1
+	    y = 1
+		cost = 7
+		available = {
+			has_manpower > 100000
+		}
+		bypass = {
+			controls_state = 458
+			controls_state = 665
+		}
+		will_lead_to_war_with = FRA
+	    prerequisite = { focus = LBA_adopt_Prussian_doctrine }
+		prerequisite = {
+			focus = LBA_Prussian_Protectorate
+		}
+	    completion_reward = {
+			every_country = {
+				limit = {
+					controls_state = 458
+				}
+				LBA = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			custom_effect_tooltip = LBA_fra_surrender_TT
+			hidden_effect = {
+				set_global_flag = aggressive_LBA
+				every_state = {
+					limit = {
+						is_core_of = TUN
+					}
+					add_core_of = LBA
+				}
+			}
+		 }
+		}
+
+		focus = {
+		    id = LBA_Prussian_Protectorate
+		    icon = GFX_Prussian_Flag_Raised_GOAL
 		    prerequisite = { focus = LBA_the_african_Prussia }
 		    relative_position_id = LBA_the_african_Prussia
 		    x = 1
 		    y = 1
-		    cost = 10
+		    cost = 7
+			bypass = {
+				NOT = {
+					is_in_faction_with = PRS
+				}
+			}
+			completion_reward = {
+				PRS = {
+					country_event = {
+						id = LBA_events.20
+					}
+				}
+			}
 		}
 
 		focus = {
-		    id = LBA_4
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_2 }
-		    relative_position_id = LBA_2
-		    x = -1
-		    y = 1
-		    cost = 10
-		}
-
-		focus = {
-		    id = LBA_5
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_2 }
-			prerequisite = { focus = LBA_3 }
-		    relative_position_id = LBA_2
-		    x = 1
-		    y = 1
-		    cost = 10
-		}
-
-		focus = {
-		    id = LBA_6
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_3 }
-		    relative_position_id = LBA_3
-		    x = 1
-		    y = 1
-		    cost = 10
-		}
-
-		focus = {
-		    id = LBA_7
-		    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-		    prerequisite = { focus = LBA_5 }
-		    relative_position_id = LBA_5
+		    id = LBA_a_loyal_prussian_ally
+		    icon = GFX_focus_LBA_GER
+		    prerequisite = { focus = LBA_invasion_of_Tunisia_2 }
+		    relative_position_id = LBA_invasion_of_Tunisia_2
 		    x = 0
 		    y = 1
 		    cost = 10
+			completion_reward = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = ALG
+							is_core_of = EGY
+							is_core_of = MOR
+						}
+					}
+					add_core_of = LBA
+				}
+				every_state = {
+					limit = {
+						is_on_continent = africa
+					}
+					add_claim_by = LBA
+				}
+				add_political_power = 250
+			}
 		}
 
 		focus = {

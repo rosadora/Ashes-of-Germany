@@ -13,6 +13,11 @@ characters = {
 			id = 1 
 			expire = "1965.1.1.1"
 		}
+		country_leader = {
+			ideology = ultra_nationalism_category
+			id = 1 
+			expire = "1965.1.1.1"
+		}
 	}
 
 	LIB_Idris_Senussi2 = {
@@ -192,6 +197,30 @@ characters = {
 			visible = {
 				always = yes
 			}
+		}
+	}
+	LBA_erwin_rommel={
+		name=PRS_erwin_rommel
+		portraits={
+			civilian={
+				small="GFX_portrait_small_erwin_rommel"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = erwin_rommel
+			traits = {
+				mobile_warfare_expert
+			}
+			    allowed = {
+					original_tag = PRS
+				}
+				traits = {
+				}
+			cost = 150
+			    ai_will_do = {
+				factor = 1.000
+			    }
 		}
 	}
 }
