@@ -2116,4 +2116,14 @@ spriteTypes = {
 		name = "GFX_generic_attack_Egypt"
 		texturefile = "gfx/interface/goals/generic_attack_egypt.dds"
 	}
+
+	spriteType = {
+		name = "GFX_GOAL_enforce_constitutional_reform"
+		texturefile = "gfx/interface/goals/LBA_enforce_constitutional_reform.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_Tunisia_Question"
+		texturefile = "gfx/interface/goals/Tunisia_Question.dds"
+	}
 }

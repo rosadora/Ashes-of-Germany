@@ -1326,7 +1326,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_convince_the_king_towards_democracy
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_goal_support_democracy
 	    relative_position_id = LBA_draft_a_constitution
 	    x = 0
 	    y = 1
@@ -1352,7 +1352,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_boost_democratic_parties
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_focus_AFG_parliamentary_democracy
 	    relative_position_id = LBA_draft_a_constitution
 	    x = 2
 	    y = 1
@@ -1392,7 +1392,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_state_catholicism
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_goal_state_catholicism_focus
 	    relative_position_id = LBA_convince_the_king_towards_democracy
 	    x = -1
 	    y = 1
@@ -1406,7 +1406,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_get_european_support
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_focus_generic_the_council_of_europe
 	    relative_position_id = LBA_boost_democratic_parties
 	    x = -1
 	    y = 1
@@ -1443,7 +1443,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_enforce_constitutional_reform
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_GOAL_enforce_constitutional_reform
 	    relative_position_id = LBA_state_catholicism
 	    x = 1
 	    y = 1
@@ -1461,7 +1461,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_women_rights
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_goal_womens_rights
 	    relative_position_id = LBA_enforce_constitutional_reform
 	    x = -1
 	    y = 1
@@ -1474,7 +1474,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_modernize_the_industries
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_goal_generic_construct_civ_factory
 	    relative_position_id = LBA_enforce_constitutional_reform
 	    x = 1
 	    y = 1
@@ -1500,7 +1500,7 @@ focus_tree = {
 
 	focus = {
 	    id = LBA_request_tunis
-	    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	    icon = GFX_goal_Tunisia_Question
 	    relative_position_id = LBA_enforce_constitutional_reform
 	    x = 0
 	    y = 2
