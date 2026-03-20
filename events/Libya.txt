@@ -25,7 +25,7 @@ country_event = {
 					transfer_state = 451
 					declare_war_on = {
 						target = LBA
-						type = annex_everything
+						type = civil_war
 					}
 				}
 
@@ -809,6 +809,42 @@ country_event = {
 		name = "To a new Age!"
 		hidden_effect = {
 			add_political_power = 150
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.26
+	title = "Idris Senussi Rises Up!"
+	desc = "Following a hunt for Idris Senussi, he has managed to escape our grasp and lead an uprising in the East. We must put this down as it is not just a threat to Mussolini, but to the ideology as a whole!"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Kill them All!"
+		hidden_effect = {
+			every_state = {
+					limit = {
+						is_core_of = LBA
+					}
+					add_core_of = AML
+				}
+				AML = {
+					transfer_state = 449
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 450
+					transfer_state = 451
+					declare_war_on = {
+						target = LBA
+						type = civil_war
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = LBA
+					}
+				}
 		}
 	}
 }

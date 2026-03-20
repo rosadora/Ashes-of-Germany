@@ -638,4 +638,9 @@ spriteTypes = {
 		name = "LBA_generic_attack_enemy_IDEA"
 		texturefile = "gfx/interface/ideas/LBA_eternal_Italian_enemy.dds"
 	}
+
+	spriteType = {
+		name = "GFX_colapse_of_mandate_of_palestine"
+		texturefile = "gfx/interface/ideas/collapse_of_mandate.dds"
+	}
 }

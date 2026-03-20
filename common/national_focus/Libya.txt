@@ -240,12 +240,12 @@ focus_tree = {
 				has_dynamic_modifier = Benito_Mussolini_Rebelious
 			}
 		}
-		x = 0
+		x = -4
 		prerequisite = {
-			focus = LBA_overthrow_Mussolini
+			focus = LBA_consolodate_Idris_Senussis_Rule
 		}
 		y = 1
-		relative_position_id = LBA_overthrow_Mussolini
+		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
 		completion_reward = {
 			custom_effect_tooltip = destroy_mussolini_TT
 		 }
@@ -298,31 +298,11 @@ focus_tree = {
 			focus = LBA_denounce_Idris_Senussi
 		}
 		completion_reward = {
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = LBA
-					}
-					add_core_of = AML
-				}
-				AML = {
-					transfer_state = 449
-					transfer_state = 662
-					transfer_state = 663
-					transfer_state = 450
-					transfer_state = 451
-					declare_war_on = {
-						target = LBA
-						type = annex_everything
-					}
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = LBA
-					}
-				}
-			}
 			remove_ideas = flee_from_italy
+			country_event = {
+				id = LBA_events.26
+				days = 3
+			}
 			custom_effect_tooltip = Libya_civilwar_tt
 		 }
 	 }
@@ -1069,8 +1049,9 @@ focus_tree = {
 			has_completed_focus = LBA_overthrow_Mussolini
 		}
 		allow_branch = {
-			has_country_flag = Mussolini_Fled
+			has_completed_focus = LBA_overthrow_Mussolini
 		}
+
 
 		completion_reward = {
 			news_event = {
@@ -1220,7 +1201,7 @@ focus_tree = {
         icon = GFX_goal_reichspakt
         relative_position_id = LBA_consolodate_Idris_Senussis_Rule
         y = 1
-		x = -5
+		x = -6
         cost = 7
 		prerequisite = {
 			focus = LBA_consolodate_Idris_Senussis_Rule
@@ -1307,7 +1288,7 @@ focus_tree = {
     	id = LBA_draft_a_constitution
     	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
     	relative_position_id = LBA_reconcile_the_Italians
-    	x = 6
+    	x = 5
     	y = 1
 		cost = 7
 		available = {
@@ -1573,7 +1554,7 @@ focus_tree = {
 	    id = LBA_execute_Italo_Balbo
 	    icon = GFX_focus_Execute_Italo_Balbo
 	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
-	    x = 3
+	    x = 2
 	    y = 1
 		cost = 7
 		mutually_exclusive = {
@@ -1612,7 +1593,7 @@ focus_tree = {
 		id = LBA_rehabilitate_Italo_Balbo
 		icon = GFX_focus_Italo_Balbo
 		cost = 7
-		x = 5
+		x = 4
 		y = 1
 		prerequisite = {
 			focus = LBA_consolodate_Idris_Senussis_Rule
@@ -1714,7 +1695,7 @@ focus_tree = {
 	    id = LBA_reconcile_the_Italians
 	    icon = GFX_focus_befriend_italy
 	    relative_position_id = LBA_contact_the_British_Crown
-	    x = 5
+	    x = 4
 	    y = 1
 		cost = 7
 		available = {
@@ -1772,7 +1753,7 @@ focus_tree = {
 		icon = GFX_libya_Italy_goal
 		cost = 10
 		cancelable = no
-		x = 15
+		x = 14
 		y = 1
 		prerequisite = {
 			focus = LBA_reconcile_the_Italians
@@ -2009,7 +1990,7 @@ focus_tree = {
 		    prerequisite = { focus = LBA_contact_the_British_Crown }
 		    relative_position_id = LBA_contact_the_British_Crown
 			mutually_exclusive = {focus = LBA_ally_the_kaiser}
-		    x = 0
+		    x = -1
 		    y = 1
 		    cost = 10
 			available = {
@@ -2165,7 +2146,7 @@ focus_tree = {
 				focus = LBA_draft_a_constitution
 				focus = LBA_get_communist_support
 			}
-		    x = 13
+		    x = 12
 		    y = 1
 		    cost = 10
 			available = {
@@ -2512,6 +2493,75 @@ focus_tree = {
 				}
 				add_claim_by = LBA
 			}
+		 }
+	}
+
+	#Mussolini Path#
+
+	focus = {
+		id = LBA_under_Mussolini_2
+		icon = GFX_focus_ITA_capo_supremo
+		cost = 10
+		x = 24
+		y = 0
+		available = {
+			has_completed_focus = LBA_finish_the_opposition
+			NOT = {
+				has_war_with = AML
+			}
+		}
+		allow_branch = {
+			has_completed_focus = LBA_finish_the_opposition
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+		 }
+	}
+
+	focus = {
+		id = LBA_rebuild_the_Fascist_party
+		icon = GFX_goal_support_fascism
+		cost = 7
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		relative_position_id = LBA_under_Mussolini_2
+		completion_reward = {
+			add_timed_idea = {
+				idea = rebuild_the_fascist_party_idea
+				days = 365
+			}
+			set_party_name = {
+				ideology = fascism
+				name = "PNF-Duce Wing"
+				long_name = "Partito Nazionale Fascista"
+			}
+			set_party_name = {
+				ideology = ultra_nationalism
+				name = "PNF-Lega dei Veterani"
+				long_name = "PNF-Lega dei Veterani"
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_rebuild_the_camicie_nere
+		icon = GFX_focus_ITA_blackshirts
+		cost = 7
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		x = 3
+		y = 1
+		relative_position_id = LBA_under_Mussolini_2
+		completion_reward = {
+			add_ideas = camicie_nere
 		 }
 	}
 }

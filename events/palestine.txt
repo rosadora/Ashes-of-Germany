@@ -39,6 +39,7 @@ country_event = {
               type = annex_everything
             }
 			add_ideas = hava_nagila
+			add_ideas = colapse_of_the_mandate
 		}
 		leave_faction = yes
 		add_state_core = 962
@@ -61,6 +62,9 @@ country_event = {
           division_template = "Mandate Police"
           disband = yes #will refund equipment and manpower
          }
+		 PAL = {
+			add_ideas = colapse_of_the_mandate
+		 }
 		load_oob = PAL_civil_war
 		news_event = news.3073
 		retire_country_leader = yes

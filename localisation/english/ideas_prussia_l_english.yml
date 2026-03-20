@@ -1405,6 +1405,8 @@
  israeli_economics:0 "Israeli Economics"
  israeli_economics2:0 "Israeli Economics"
  israeli_economics3:0 "Israeli Economics"
+ colapse_of_the_mandate:0 "Collapse of the Mandate"
+ colapse_of_the_mandate_desc:0 ""
  ### AUTONOMOUS STATES ###
  british_crown_colonies:0 "British Crown Colony"
  french_colonial_administration:0 "French Colonial Administration"

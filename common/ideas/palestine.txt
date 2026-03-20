@@ -727,5 +727,28 @@ ideas = {
 				weekly_manpower = 500
 			}
 		}
+
+		colapse_of_the_mandate = {
+			allowed = {
+				OR = {
+					has_war_with = PAL
+					has_war_with = ISR
+				}
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = GFX_colapse_of_mandate_of_palestine
+
+			removal_cost = -1
+
+			picture = GFX_colapse_of_mandate_of_palestine
+
+			rule = {
+				can_join_factions = no
+			}
+		}
 	}
 }

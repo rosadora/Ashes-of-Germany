@@ -255,10 +255,16 @@
  LBA_British_Economic_Dependance_desc:0 "Although we want to maintain our independance, our economy is not yet developed enough to ensure this. Although tying ourselves to a single power economically is foolish, the British, having one of the biggest economies in the world, are a strong option to lean on for economic support."
  LBA_towards_a_Libyan_navy:0 "Towards a Libyan Navy"
  LBA_towards_a_Libyan_navy_desc:0 "In order to protect ourselves, we must protect all of our fronts, including the naval aspect of our fronts."
+ #
+ LBA_under_Mussolini_2:0 "Rally around Mussolini"
+ LBA_under_Mussolini_2_desc:0 "Now that Mussolini has won the Libyan civilwar, we are now able to begin pursuing the goals of our Duce."
+ rebuild_the_fascist_party_idea:0 "Rebuilding the Fascist Party"
+ rebuild_the_fascist_party_idea_desc:0 "The fascist party is actively re-building in this nation"
+ LBA_rebuild_the_Fascist_party:0 "Rebuild the Fascist Party"
+ LBA_rebuild_the_Fascist_party_desc:0 "In order to secure our rule in Libya, we must begin a major effort to re-build the fascist party to ensure no more uprisings unfold."
 
 
-
-
+ 
  #ETHIOPIA CONTENT#
  ETH_hold_out_idea:0 "Hold out against Italy"
  Victory_over_ITA_ETH:0 "Victory in the Second Italo-Ethiopian war"
