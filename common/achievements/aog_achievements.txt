@@ -288,9 +288,7 @@ a_united_africa = {
 
 	happened = {
 		all_state = {
-			limit = {
-				is_on_continent = africa
-			}
+			is_on_continent = africa
 			is_controlled_by_ROOT_or_subject = yes
 		}
 	}
