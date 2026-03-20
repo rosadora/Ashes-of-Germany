@@ -239,3 +239,59 @@ burakumin_wind = {
 		}
 	}
 }
+
+the_roaring_lion = {
+	id = 11
+
+	possible = {
+		difficulty > 1
+		tag = ETH
+	}
+
+	happened = {
+		2 = {
+			is_controlled_by_ROOT_or_subject = yes
+		}
+	}
+}
+
+a_united_africa = {
+	id = 12
+
+	possible = {
+		difficulty > 1
+		or = {
+		tag = ETH
+		tag = AFA
+		tag = LBA
+		tag = LIB
+		tag = EGY
+		tag = KEN
+		tag = ZAM
+		tag = MLW
+		tag = ZIM
+		tag = BOT
+		tag = SAF
+		tag = COG
+		tag = CMR
+		tag = NGA
+		tag = SEN
+		tag = GHA
+		tag = GAM
+		tag = ALG
+		tag = MOR
+		tag = TUN
+		tag = SOM
+		}
+		
+	}
+
+	happened = {
+		all_state = {
+			limit = {
+				is_on_continent = africa
+			}
+			is_controlled_by_ROOT_or_subject = yes
+		}
+	}
+}

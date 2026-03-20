@@ -74,4 +74,9 @@ spriteTypes = {
 		name = "GFX_Idris_Senussi_Event"
 		texturefile = "gfx/event_pictures/Idris_Senussi_event.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idris_senussi_uprising_LBA"
+		texturefile = "gfx/events/LBA_depose_Idris_Senussi.dds"
+	}
 }

@@ -1,8 +1,4 @@
 focus_tree = {
-	##################################################################################################################################################################################################################################### DELETE AFTER GFX IS MADE #####
-	##I couldn't find anyone for GFX so as of right now the majority of the trees gfx is Fill In until i find someone who can or until I make icons. If anyone wants to make icons go ahead, just know I would make them myself or find someone else to make them now.##
-	####################################################################################################################################################################################################################################################################
-
 	id = LBA_focus_tree
 	country = {
 		factor = 0
