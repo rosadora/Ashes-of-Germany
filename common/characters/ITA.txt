@@ -312,11 +312,11 @@ characters = {
 		name = ITA_italo_balbo
 		portraits = {
 			army = {
-				small = GFX_portrait_ITA_italo_balbo_small
-				large = GFX_portrait_ITA_italo_balbo
+				small = GFX_portrait_Italo_Balbo_small
+				large = GFX_portrait_italo_balbo_large
 			}
 			civilian = {
-				large = GFX_portrait_ITA_italo_balbo_civilian
+				large = GFX_portrait_italo_balbo_large
 			}
 		}
 
@@ -346,7 +346,7 @@ characters = {
 		
 		field_marshal = {
 			traits = { career_officer politically_connected trait_reckless media_personality }
-			skill = 1
+			skill = 2
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1

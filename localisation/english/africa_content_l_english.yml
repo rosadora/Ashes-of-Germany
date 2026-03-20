@@ -62,7 +62,7 @@
  LBA_overthrow_Mussolini:0 "Overthrow Mussolini"
  LBA_overthrow_Mussolini_desc:0 "The time has come to overthrow Mussolini and restore a new Monarchy to Africa."
  LBA_a_new_industry:0 "The First Libyan Industry"
- LBA_a_new_industry_desc:0 "Now that any and all Opposition is gone, we can now begin to construct a new industry for our nation."
+ LBA_a_new_industry_desc:0 "Because we have fled Italy, the majority of our industry was left in Italy. Because of this, we must build a new industry to have any and all industrial capabilities."
 
  LBA_rally_around_the_crown:0 "Rally Around the Crown"
  LBA_rally_around_the_crown_desc:0 "Now that our monarchy has been restored, we can now rally around our crown to make future decisions for the good of our nation."
@@ -124,7 +124,7 @@
  LBA_ally_the_kaiser_desc:0 "The [PRS.GetAdjective]s, although further away from us from other powers, once were a major power in European politics, and can still grow to become one yet again. They can offer the militant protection we desperatley need against the neighboring major powers. "
  LBA_request_Prussian_guns:0 "Request [PRS.GetAdjective] Guns"
  LBA_request_Prussian_guns_desc:0 "The [PRS.GetAdjective] arms industry, although weekened, is still one of the Strongest military industries in europe, and as such they have guns. Although it is unlikely for them to give us weaponery, there is always still a chance they do"
- can_recruit_militias:0 "§RDoing this Focus allows you to recruit Militias during the civilwar!§R"
+ can_recruit_militias:0 "§RDoing this Focus will recruit  Militias during the civilwar!§R"
  Benito_Mussolini_Rebelious:0 "Benito Mussolini's Loyalists"
  Benito_Mussolini_Rebelious_desc:0 "Benito Mussolini's Loyalists have taken refuge in this state!"
  LBA_root_out_mussolinis_loyalists:0 "Root Out Mussolini's Loyalists"
@@ -262,6 +262,18 @@
  rebuild_the_fascist_party_idea_desc:0 "The fascist party is actively re-building in this nation"
  LBA_rebuild_the_Fascist_party:0 "Rebuild the Fascist Party"
  LBA_rebuild_the_Fascist_party_desc:0 "In order to secure our rule in Libya, we must begin a major effort to re-build the fascist party to ensure no more uprisings unfold."
+ LBA_smuggle_Italo_Balbo:0 "Re-Recruit Italo Balbo"
+ LBA_smuggle_Italo_Balbo_desc:0 "During the flee to Libya, Italo Balbo stayed in Italy under the Grand council of Facsism. Because of this, we must smuggle him to Libya to re-take the position of Governor of Libya."
+ grand_council_formation_LBA:0 "Upon completing this focus, the grand council of fascism will be re-formed and will take command if Mussolini is to be deposed or killed."
+ LBA_recreate_the_grand_council:0 "Re-Convene a Grand Council of Fascism"
+ LBA_recreate_the_grand_council_desc:0 "Although the council was in competition with Mussolini, it was a nessesary balance in Italian politics. Because of this, a choice has been made to re-convene a new, grand council of Fascism."
+ LBA_rebuild_the_camicie_nere:0 "Rebuild the Camicie Nere"
+ LBA_rebuild_the_camicie_nere_desc:0 "Although the Camicie Nere had more power than wanted in Italy, re-building them in Libya may prove to be a good idea for future military growth"
+ LBA_assasinate_Italo_Balbo:0 "Assasinate Italo Balbo"
+ LBA_assasinate_Italo_Balbo_desc:0 "Although Italo Balbo was the former governor of Libya, his power has proven to be much stronger than wanted. He has unfortunately remained in Italy so we cannot just imprison him. Because of this, we must send an assasin to assasinate Italo Balbo in Italy."
+ LBA_ensure_no_opposition:0 "Ensure No Opposition"
+ LBA_ensure_no_opposition_desc:0 "Mussolini's control, already delicate, cannot have any risk of opposition to the rule."
+
 
 
  

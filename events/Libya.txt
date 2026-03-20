@@ -842,12 +842,8 @@ country_event = {
 						type = civil_war
 					}
 				}
-				every_state = {
-					limit = {
-						is_controlled_by = LBA
-					}
 
-					448 = {
+				448 = {
 				create_unit = {
                   division = "name = \"Divisione di Mussolini\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
                   owner = LBA
@@ -879,7 +875,6 @@ country_event = {
                   owner = LBA
                 }
 			}
-				}
 		}
 	}
 }

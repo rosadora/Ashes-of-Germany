@@ -272,7 +272,7 @@ ideas = {
 			ultra_nationalism_drift = 0.01
 			communism_drift = -0.02
 			classical_marxism_drift = 0.01
-			neutrality_drift = -0.03
+			neutrality_drift = 0.03
 		}
 		}
 

@@ -640,7 +640,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_colapse_of_mandate_of_palestine"
+		name = "GFX_idea_colapse_of_mandate_of_palestine"
 		texturefile = "gfx/interface/ideas/collapse_of_mandate.dds"
 	}
 }

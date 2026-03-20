@@ -8,8 +8,8 @@ focus_tree = {
 		}
 	 }
 	 continuous_focus_position = {
-		x = 750
-		y = 450
+		x = 950
+		y = 550
 	 }
 
 
@@ -17,13 +17,13 @@ focus_tree = {
 		id = LBA_under_Mussolini
 		icon = GFX_focus_ger_assassinate_mussolini
 		cost = 7
-		x = 4
+		x = 1
 		y = 0
 		available = {
 			has_character = LBA_benito_mussolini
 		}
 		ai_will_do = {
-			factor = 5
+			factor = 95
 		}
 		allow_branch = {
 			has_country_flag = Mussolini_Fled
@@ -41,40 +41,16 @@ focus_tree = {
 	 }
 
 	 focus = {
-		id = LBA_embrace_African_roots
-		icon = GFX_focus_generic_africa_liberation
-		cost = 10
-		x = 7
-		y = 1
-		mutually_exclusive = {
-			focus = LBA_oppose_Mussolini
-			focus = LBA_embrace_Mussolini
-		}
-		prerequisite = {
-			focus = LBA_under_Mussolini
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			load_focus_tree = generic_focus
-			drop_cosmetic_tag = yes
-			remove_ideas = flee_from_italy
-		 }
-	 }
-
-	 focus = {
 		id = LBA_embrace_Mussolini
 		icon = GFX_focus_SWI_embrace_panoramaheim
 		cost = 10
-		x = -3
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = LBA_under_Mussolini
 		}
 		mutually_exclusive = {
 			focus = LBA_oppose_Mussolini
-			focus = LBA_embrace_African_roots
 		}
 		relative_position_id = LBA_under_Mussolini
 		completion_reward = {
@@ -91,7 +67,6 @@ focus_tree = {
 				days = 180
 			}
 			hidden_effect = {
-				recruit_character = LBA_italo_balbo
 				AML = {
 					set_popularities = {
 						neutrality = 0.9
@@ -109,14 +84,16 @@ focus_tree = {
 		id = LBA_oppose_Mussolini
 		icon = Oppose_Mussolini_LBA
 		cost = 10
-		x = 1
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = LBA_under_Mussolini
 		}
 		mutually_exclusive = {
 			focus = LBA_embrace_Mussolini
-			focus = LBA_embrace_African_roots
+		}
+		ai_will_do = {
+			factor = 5
 		}
 		relative_position_id = LBA_under_Mussolini
 		completion_reward = {
@@ -202,6 +179,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = LBA_raise_militia
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		relative_position_id = LBA_prepare_for_uprising
 		completion_reward = {
@@ -307,18 +287,15 @@ focus_tree = {
 		id = LBA_a_new_industry
 		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
 		cost = 5
-		prerequisite = {
-			focus = LBA_finish_the_opposition
-			focus = LBA_overthrow_Mussolini
+		allow_branch = {
+			has_country_flag = Mussolini_Fled
 		}
-		available = {
-			NOT = {
-				has_war_with = AML
-			}
+		ai_will_do = {
+			factor = 5
 		}
-		x = 2
-		y = 1
-		relative_position_id = LBA_finish_the_opposition
+		x = 4
+		y = -1
+		relative_position_id = LBA_prioritize_civilian_industries
 		completion_reward = {
 			450= {
 				 add_building_construction = {
@@ -347,7 +324,7 @@ focus_tree = {
 		icon = GFX_focus_generic_modernize_industry
 		cost = 7
 		x = 6
-		y = 0
+		y = 1
 		relative_position_id = LBA_under_Mussolini
 		available = {
 			has_completed_focus = LBA_a_new_industry
@@ -357,6 +334,12 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = LBA_a_new_industry
 		}
 		completion_reward = {
 				random_owned_state = {
@@ -390,6 +373,9 @@ focus_tree = {
 			focus = LBA_prioritize_civilian_industries
 			focus = LBA_prioritize_military_industries
 		}
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 				add_resource = {
 					type = steel
@@ -408,17 +394,23 @@ focus_tree = {
 	 focus = {
 		id = LBA_prioritize_military_industries
 		icon = GFX_focus_generic_reorient_production
-		x = 6
+		x = 8
 		y = 0
 		cost = 7
 		allow_branch = {
 			has_country_flag = Mussolini_Fled
+		}
+		ai_will_do = {
+			factor = 5
 		}
 		available = {
 			has_completed_focus = LBA_a_new_industry
 		}
 		mutually_exclusive = {
 			focus = LBA_prioritize_civilian_industries
+		}
+		prerequisite = {
+			focus = LBA_a_new_industry
 		}
 		relative_position_id = LBA_prioritize_civilian_industries
 		completion_reward = {
@@ -446,6 +438,9 @@ focus_tree = {
 		relative_position_id = LBA_prioritize_military_industries
 		prerequisite = {
 			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			factor = 5
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -483,6 +478,9 @@ focus_tree = {
 		relative_position_id = LBA_prioritize_military_industries
 		prerequisite = {
 			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			factor = 5
 		}
 		completion_reward = {
 			451 = {
@@ -539,6 +537,9 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_develop_fortifications
 		}
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			add_ideas = extensive_conscription
 			add_timed_idea = {
@@ -552,12 +553,13 @@ focus_tree = {
 		id = LBA_construct_Tripoli_University
 		icon = GFX_focus_research
 		cost = 10
-		x = 0
+		x = 5
 		y = 1
 		prerequisite = {
-			focus = LBA_a_new_industry
+			focus = LBA_prioritize_civilian_industries
+			focus = LBA_prioritize_military_industries
 		}
-		relative_position_id = LBA_a_new_industry
+		relative_position_id = LBA_prioritize_civilian_industries
 		completion_reward = {
 			add_research_slot = 1
 		 }
@@ -957,6 +959,9 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_prioritize_civilian_industries
 		}
+		ai_will_do = {
+			factor = 5
+		}
 		relative_position_id = LBA_prioritize_civilian_industries
 		completion_reward = {
 			448 = {
@@ -984,6 +989,9 @@ focus_tree = {
 		relative_position_id = LBA_prioritize_civilian_industries
 		prerequisite = {
 			focus = LBA_prioritize_civilian_industries
+		}
+		ai_will_do = {
+			factor = 5
 		}
 		completion_reward = {
 			add_victory_points = {
@@ -1020,6 +1028,9 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_develop_Trippoli_industries
 		}
+		ai_will_do = {
+			factor = 5
+		}
 		prerequisite = {
 			focus = LBA_develop_eastern_cities
 		}
@@ -1054,6 +1065,7 @@ focus_tree = {
 				id = LBA_events.2
 				days = 2
 			}
+			hidden_effect = {
 			449 = {
 				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
 				remove_core_of = LBA
@@ -1074,6 +1086,8 @@ focus_tree = {
 				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
 				remove_core_of = LBA
 			}
+			}
+			
 			hidden_effect = {
 				if = {
 					limit = { ITA = {exists = yes} }
@@ -1282,7 +1296,7 @@ focus_tree = {
 
 	focus = {
     	id = LBA_draft_a_constitution
-    	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    	icon = GFX_focus_POL_complete_april_constitution
     	relative_position_id = LBA_reconcile_the_Italians
     	x = 5
     	y = 1
@@ -2500,8 +2514,7 @@ focus_tree = {
 		cost = 10
 		x = 24
 		y = 0
-		available = {
-			has_completed_focus = LBA_finish_the_opposition
+		available = {			
 			NOT = {
 				has_war_with = AML
 			}
@@ -2545,6 +2558,28 @@ focus_tree = {
 			}
 		 }
 	}
+	
+	focus = {
+		id = LBA_smuggle_Italo_Balbo
+		icon = GFX_focus_Italo_Balbo
+		prerequisite = {
+			focus = LBA_rebuild_the_camicie_nere
+		}
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_rebuild_the_camicie_nere
+		mutually_exclusive = {
+			focus = LBA_execute_Italo_Balbo
+		}
+		completion_reward = {
+			add_political_power = -150
+			recruit_character = LBA_italo_balbo
+			ITA = {
+				retire_character = ITA_italo_balbo
+			}
+		 }
+	}
 
 	focus = {
 		id = LBA_rebuild_the_camicie_nere
@@ -2558,6 +2593,79 @@ focus_tree = {
 		relative_position_id = LBA_under_Mussolini_2
 		completion_reward = {
 			add_ideas = camicie_nere
+		 }
+	}
+
+	focus = {
+		id = LBA_assasinate_Italo_Balbo
+		icon = GFX_focus_Execute_Italo_Balbo
+		cost = 7
+		x = -3
+		y = 2
+		relative_position_id = LBA_under_Mussolini_2
+		prerequisite = {
+			focus = LBA_rebuild_the_Fascist_party
+		}
+		mutually_exclusive = {
+			focus = LBA_smuggle_Italo_Balbo
+		}
+		completion_reward = {
+			add_political_power = 150
+			ITA = {
+				retire_character = ITA_italo_balbo
+			}
+		 }
+	}
+	
+	focus = {
+		id = LBA_recreate_the_grand_council
+    	icon = GFX_focus_POL_complete_april_constitution
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_under_Mussolini_2
+		mutually_exclusive = {
+			focus = LBA_ensure_no_opposition
+		}
+		completion_reward = {
+			hidden_effect = {
+				recruit_character = LBA_grand_council
+			}
+			set_power_balance = {
+					id = ITA_power_balance
+					left_side = ITA_grand_council_side	
+					right_side = ITA_mussolini_side	
+				}
+			custom_effect_tooltip = grand_council_formation_LBA
+		 }
+	}
+
+	focus = {
+		id = LBA_ensure_no_opposition
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_under_Mussolini_2
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		mutually_exclusive = {
+			focus = LBA_recreate_the_grand_council
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.006
+			}
 		 }
 	}
 }

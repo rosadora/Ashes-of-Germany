@@ -740,11 +740,9 @@ ideas = {
 				always = no
 			}
 
-			picture = GFX_colapse_of_mandate_of_palestine
+			picture = GFX_idea_colapse_of_mandate_of_palestine
 
 			removal_cost = -1
-
-			picture = GFX_colapse_of_mandate_of_palestine
 
 			rule = {
 				can_join_factions = no

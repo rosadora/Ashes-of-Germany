@@ -221,7 +221,9 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			NOT = {
+				has_war_with = ITA
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -289,7 +291,9 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			NOT = {
+				has_war_with = ITA
+			}
 		}
 
 		cancel_if_invalid = yes
