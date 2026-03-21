@@ -259,7 +259,6 @@ a_united_africa = {
 	id = 12
 
 	possible = {
-		is_ironman = yes
 		difficulty > 3
 		or = {
 		tag = ETH

@@ -13,11 +13,6 @@ characters = {
 			id = 1 
 			expire = "1965.1.1.1"
 		}
-		country_leader = {
-			ideology = ultra_nationalism_category
-			id = 1 
-			expire = "1965.1.1.1"
-		}
 	}
 
 	LIB_Idris_Senussi2 = {

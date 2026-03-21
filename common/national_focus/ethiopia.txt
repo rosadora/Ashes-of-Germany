@@ -255,7 +255,9 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			NOT = {
+				controls_state = 271
+			}
 		}
 
 		cancel_if_invalid = yes

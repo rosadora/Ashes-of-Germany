@@ -49,7 +49,7 @@ ideas = {
 
 		}
 
-		oppose_Mussolini = {
+		oppose_mussolini_LBA_idea = {
 			allowed = {
 				always = yes
 			}
@@ -370,6 +370,7 @@ ideas = {
 		Libyan_francophobia = {
 			
 			allowed = {
+				is_in_faction_with = PRS
 			}
 
 			allowed_civil_war = {
@@ -389,6 +390,7 @@ ideas = {
 
 		Libyan_ENG_economic_Dependance = {
 			allowed = {
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -411,6 +413,7 @@ ideas = {
 
 		rebuild_the_fascist_party_idea = {
 			allowed = {
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -424,6 +427,46 @@ ideas = {
 				ultra_nationalism_drift = 0.02
 				stability_weekly = 0.003
 				war_support_weekly = 0.003
+			}
+		}
+
+		reformed_grand_council_of_fascism = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_fascism_drift_2
+			
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				stability_weekly = 0.003
+			}
+		}
+
+		military_dictatorship_LBA = {
+				allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_fascism_drift_2
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.003
+				war_support_weekly = -0.003
+				fascism_drift = 0.05
+				neutrality_drift = 0.03
 			}
 		}
 	}

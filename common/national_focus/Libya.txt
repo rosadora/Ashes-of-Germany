@@ -60,10 +60,10 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.15
+				popularity = 0.05
 			}
 			add_timed_idea = {
-				idea = oppose_Mussolini
+				idea = oppose_mussolini_LBA_idea
 				days = 180
 			}
 			hidden_effect = {
@@ -98,7 +98,7 @@ focus_tree = {
 		relative_position_id = LBA_under_Mussolini
 		completion_reward = {
 			add_timed_idea = {
-				idea = oppose_Mussolini
+				idea = oppose_mussolini_LBA_idea
 				days = 180
 			}
 			hidden_effect = {
@@ -201,6 +201,9 @@ focus_tree = {
 				popularity = 0.15
 			}
 			remove_ideas = flee_from_italy
+			hidden_effect = {
+				set_country_flag = LBA_Opose_Mussolini
+			}
 		 }
 	 }
 
@@ -280,6 +283,9 @@ focus_tree = {
 				days = 3
 			}
 			custom_effect_tooltip = Libya_civilwar_tt
+			hidden_effect = {
+				set_country_flag = LBA_stay_with_Mussolini
+			}
 		 }
 	 }
 
@@ -328,9 +334,6 @@ focus_tree = {
 		relative_position_id = LBA_under_Mussolini
 		available = {
 			has_completed_focus = LBA_a_new_industry
-		}
-		allow_branch = {
-			has_country_flag = Mussolini_Fled
 		}
 		mutually_exclusive = {
 			focus = LBA_prioritize_military_industries
@@ -397,9 +400,6 @@ focus_tree = {
 		x = 8
 		y = 0
 		cost = 7
-		allow_branch = {
-			has_country_flag = Mussolini_Fled
-		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -1047,16 +1047,37 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 24
+		x = 39
 		y = 0
 		available = {
 			NOT = {
 				has_war_with = AML
+				has_country_leader = {
+				character = LBA_benito_mussolini
 			}
-			has_completed_focus = LBA_overthrow_Mussolini
+			}
+			has_country_flag = LBA_Opose_Mussolini
 		}
 		allow_branch = {
-			has_completed_focus = LBA_overthrow_Mussolini
+			AND = {
+				has_country_flag = Mussolini_Fled
+			NOT = {
+				has_completed_focus = LBA_under_Mussolini_2
+			}
+			}
+			
+		}
+
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_restoration_of_the_monarchy
+			}
+			x = -14
+			y = 0
+		}
+
+		mutually_exclusive = {
+			focus = LBA_under_Mussolini_2
 		}
 
 
@@ -2512,7 +2533,7 @@ focus_tree = {
 		id = LBA_under_Mussolini_2
 		icon = GFX_focus_ITA_capo_supremo
 		cost = 10
-		x = 24
+		x = 23
 		y = 0
 		available = {			
 			NOT = {
@@ -2520,7 +2541,22 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			has_completed_focus = LBA_finish_the_opposition
+			AND = {
+				has_country_flag = Mussolini_Fled
+			NOT = {
+				has_completed_focus = LBA_restoration_of_the_monarchy
+			}
+			}
+			
+		}
+		mutually_exclusive = {
+			focus = LBA_restoration_of_the_monarchy
+		}
+		available = {
+			has_country_leader = {
+				character = LBA_benito_mussolini
+			}
+			has_country_flag = LBA_stay_with_Mussolini
 		}
 		completion_reward = {
 			add_popularity = {
@@ -2528,6 +2564,13 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_stability = 0.05
+			hidden_effect = {
+				set_power_balance = {
+					id = LBA_power_balance
+					left_side = ITA_mussolini_side
+					right_side = ITA_balbo_side
+				}
+			}
 		 }
 	}
 
@@ -2556,6 +2599,8 @@ focus_tree = {
 				name = "PNF-Lega dei Veterani"
 				long_name = "PNF-Lega dei Veterani"
 			}
+
+			custom_effect_tooltip = DEN_unlocks_bop_decisions_tt
 		 }
 	}
 	
@@ -2570,13 +2615,25 @@ focus_tree = {
 		y = 1
 		relative_position_id = LBA_rebuild_the_camicie_nere
 		mutually_exclusive = {
-			focus = LBA_execute_Italo_Balbo
+			focus = LBA_assasinate_Italo_Balbo_2
+		}
+		available = {
+			always = no
 		}
 		completion_reward = {
 			add_political_power = -150
-			recruit_character = LBA_italo_balbo
-			ITA = {
-				retire_character = ITA_italo_balbo
+			if= {
+				limit = {
+					NOT = {
+						has_completed_focus = LBA_recreate_the_grand_council
+					}
+				}
+				recruit_character = LBA_italo_balbo
+			}
+			if = {
+				limit = {
+					has_completed_focus = LBA_recreate_the_grand_council
+				}
 			}
 		 }
 	}
@@ -2593,11 +2650,12 @@ focus_tree = {
 		relative_position_id = LBA_under_Mussolini_2
 		completion_reward = {
 			add_ideas = camicie_nere
+				custom_effect_tooltip = DEN_unlocks_bop_decisions_tt
 		 }
 	}
 
 	focus = {
-		id = LBA_assasinate_Italo_Balbo
+		id = LBA_assasinate_Italo_Balbo_2
 		icon = GFX_focus_Execute_Italo_Balbo
 		cost = 7
 		x = -3
@@ -2609,14 +2667,20 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = LBA_smuggle_Italo_Balbo
 		}
+		available = {
+			always = no
+		}
 		completion_reward = {
 			add_political_power = 150
-			ITA = {
+			hidden_effect = {
+					ITA = {
 				retire_character = ITA_italo_balbo
 			}
+			}
+		
 		 }
 	}
-	
+
 	focus = {
 		id = LBA_recreate_the_grand_council
     	icon = GFX_focus_POL_complete_april_constitution
@@ -2634,11 +2698,7 @@ focus_tree = {
 			hidden_effect = {
 				recruit_character = LBA_grand_council
 			}
-			set_power_balance = {
-					id = ITA_power_balance
-					left_side = ITA_grand_council_side	
-					right_side = ITA_mussolini_side	
-				}
+			add_ideas = reformed_grand_council_of_fascism 
 			custom_effect_tooltip = grand_council_formation_LBA
 		 }
 	}

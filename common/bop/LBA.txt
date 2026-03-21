@@ -1,0 +1,125 @@
+LBA_power_balance = {
+	initial_value = 0.15
+	left_side = ITA_mussolini_side
+	right_side = ITA_balbo_side
+	decision_category = LBA_bop_decisions
+
+	range = {
+		id = LBA_equilibrum_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+			fascism_drift = 0.02
+			ultra_nationalism_drift = 0.02
+		}
+	}
+
+	#Tilt to Mussolini#
+
+	side = {
+		id = ITA_mussolini_side
+		icon = GFX_bop_LBA_mussolini_side
+	range = {
+		id = LBA_mussolini_in_control
+		min = -0.1
+		max = -0.30
+		modifier = {
+			fascism_drift = 0.02
+		}
+	}
+
+	range = {
+		id = LBA_mussolini_in_control_more
+		min = -0.3
+		max = -0.80
+		modifier = {
+			fascism_drift = 0.02
+			stability_weekly = 0.003
+			war_support_weekly = 0.005
+		}
+	}
+
+	range = {
+		id = LBA_mussolini_in_complete_control
+		min = -0.8
+		max = -0.99
+		modifier = {
+			power_balance_weekly = -0.005
+			fascism_drift = 0.04
+			stability_weekly = 0.004
+			fascism_acceptance = 75
+			war_support_weekly = 0.005
+		}
+	}
+
+	range = {
+		id = LBA_no_opposition_to_mussolini
+		min = -0.99
+		max = -1.00
+
+		on_activate = {
+			remove_power_balance = {
+				id = LBA_power_balance
+			}
+			retire_character = LBA_italo_balbo
+			complete_national_focus = LBA_assasinate_Italo_Balbo_2
+		}
+	}
+	}
+
+	
+
+	#Tilt to Balbo#
+
+	side = {
+		id = ITA_balbo_side
+		icon = "GFX_bop_LBA_balbo_side"
+
+	range = {
+		id = LBA_tilt_to_Balbo
+		min = 0.1
+		max = 0.30
+		modifier = {
+			ultra_nationalism_drift = 0.02
+		}
+	}
+
+	range = {
+		id = LBA_balbo_majority
+		min = 0.3
+		max = 0.80
+		modifier = {
+			ultra_nationalism_drift = 0.03
+			stability_weekly = -0.003
+			war_support_weekly = -0.005
+		}
+	}
+
+	range = {
+		id = LBA_italo_balbo_in_power
+		min = 0.8
+		max = 0.99
+		modifier = {
+			power_balance_weekly = 0.005
+			ultra_nationalism_drift = 0.04
+			stability_weekly = -0.004
+			ultra_nationalism_acceptance = 75
+			war_support_weekly = -0.005
+		}
+	}
+
+	range = {
+		id = LBA_italo_balbo_coup
+		min = 0.99
+		max = 1.00
+		on_activate = {
+			remove_power_balance = {
+				id = LBA_power_balance
+			}
+			retire_character = LBA_benito_mussolini
+			complete_national_focus = LBA_smuggle_Italo_Balbo
+		}
+	}
+	}
+
+}

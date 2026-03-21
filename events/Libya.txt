@@ -633,9 +633,10 @@ country_event = {
 	picture = GFX_report_event_generic_mussolini
 
 	option = {
-		name = "To our Emperor!"
+		name = "To our Duce!"
 		ITA = {
-			recruit_character = ITA_benito_mussolini
+			recruit_character = ITA_benito_mussolini_2
+			retire_character = ITA_grand_council
 		}
 	}
 }
@@ -876,5 +877,21 @@ country_event = {
                 }
 			}
 		}
+	}
+}
+
+country_event = {
+	id = LBA_events.27
+	title = "The Council Takes Over!"
+	desc = "Although our preperations were extensive, the Grand council of Fascism has managed to halt our attempt of a Coud De'tat. Italo Balbo has been imprisoned and a Military Dictatorship has taken over the nation under the council until the Crisis is over."
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_ITA_grand_council
+	immediate = {
+		add_ideas = military_dictatorship_LBA 
+	}
+
+	option = {
+		name = "Rats!"
 	}
 }

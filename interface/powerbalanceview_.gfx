@@ -90,4 +90,14 @@ spriteTypes = {
 		name = "GFX_bop_PRE_poland_side"
 		texturefile = "gfx/interface/bop/bop_PRE_poland_side.dds"
 	}
+
+	spriteType = {
+		name = "GFX_bop_LBA_mussolini_side"
+		texturefile = "gfx/interface/bop/bop_ITA_mussolini_side.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bop_LBA_balbo_side"
+		texturefile = "gfx/interface/bop/bop_LBA_balbo_side.dds"
+	}
 }

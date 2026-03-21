@@ -288,3 +288,67 @@ LBA_root_out_Mussolini_Loyalists = {
 		}
 	}
 }
+
+LBA_bop_decisions = {
+	LBA_empower_mussolini = {
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+		allowed = {
+			has_power_balance = {
+				id = LBA_power_balance
+			}
+		}
+		visible = {
+			has_power_balance = {
+				id = LBA_power_balance
+			}
+			has_completed_focus = LBA_rebuild_the_Fascist_party
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 50
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.1
+			}
+		}
+	}
+
+	LBA_empower_Italo_Balbo = {
+		icon = GFX_decision_icon_Italo_Balbo_BOP
+		allowed = {
+			has_power_balance = {
+				id = LBA_power_balance
+			}
+		}
+		visible = {
+			has_power_balance = {
+				id = LBA_power_balance
+			}
+			has_completed_focus = LBA_rebuild_the_camicie_nere
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 50
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = 0.1
+			}
+		}
+	}
+}

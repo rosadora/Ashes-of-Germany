@@ -5,4 +5,9 @@ spriteTypes = {
 		name = "GFX_decision_cat_picture_form_czechoslovakia"
 		texturefile = "gfx/interface/decisions/decision_cat_picture_form_czechoslovakia.dds"
 	}
+
+	spriteType = {
+		name = "GFX_decision_icon_Italo_Balbo_BOP"
+		texturefile = "gfx/interface/decisions/Italo_Balbo_BOP.dds"
+	}
 }

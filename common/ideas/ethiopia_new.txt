@@ -15,8 +15,14 @@ ideas = {
 
 			modifier = {
 				war_support_weekly = 0.003
-				defence = 0.15
 				stability_weekly = 0.003
+				surrender_limit = 0.75
+			}
+
+			targeted_modifier = {
+				tag = ITA
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
 			}
 		}
 
