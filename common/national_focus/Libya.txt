@@ -402,18 +402,22 @@ focus_tree = {
 			focus = LBA_a_new_industry
 		}
 		completion_reward = {
-				random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
+				450 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
+				}
+				448 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-			}
+				}
 			add_tech_bonus = {
 				category = industry 
 				bonus = 1
@@ -1110,14 +1114,19 @@ focus_tree = {
 				character = LBA_benito_mussolini
 			}
 			}
-			has_country_flag = LBA_Opose_Mussolini
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_under_Mussolini_2
+			}
+			X = -9
 		}
 		allow_branch = {
-			has_completed_focus = LBA_overthrow_Mussolini
-		}
-
-		mutually_exclusive = {
-			focus = LBA_under_Mussolini_2
+			or = {
+				has_completed_focus = LBA_overthrow_Mussolini
+				has_completed_focus = LBA_restoration_of_the_monarchy
+			}
+			
 		}
 
 
@@ -1157,6 +1166,17 @@ focus_tree = {
 					country_event = {
 						id = LBA_events.19
 						days = 2
+					}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							has_government = neutrality
+						}
+					}
+					set_politics = {
+						ruling_party = neutrality
 					}
 				}
 			}
@@ -2567,13 +2587,13 @@ focus_tree = {
 		 }
 	}
 
-	#Mussolini Path#
+	#Mussolini Paths#
 
 	focus = {
 		id = LBA_under_Mussolini_2
 		icon = GFX_focus_ITA_capo_supremo
 		cost = 10
-		x = 23
+		x = 25
 		y = 0
 		available = {			
 			NOT = {
@@ -2582,16 +2602,21 @@ focus_tree = {
 		}
 		allow_branch = {
 			has_completed_focus = LBA_finish_the_opposition
-			
+			NOT = {
+				has_country_leader = LBA_grand_council
+			}
 		}
-		mutually_exclusive = {
-			focus = LBA_restoration_of_the_monarchy
-		}
+
 		available = {
 			has_country_leader = {
 				character = LBA_benito_mussolini
 			}
-			has_country_flag = LBA_stay_with_Mussolini
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_restoration_of_the_monarchy
+			}
+			x = 10
 		}
 		completion_reward = {
 			add_popularity = {
@@ -2600,11 +2625,18 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			hidden_effect = {
-				set_power_balance = {
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					 }
+					set_power_balance = {
 					id = LBA_power_balance
 					left_side = ITA_mussolini_side
 					right_side = ITA_balbo_side
+					}
 				}
+				
+				mark_focus_tree_layout_dirty = yes
 			}
 		 }
 	}
@@ -2623,6 +2655,14 @@ focus_tree = {
 			add_timed_idea = {
 				idea = rebuild_the_fascist_party_idea
 				days = 365
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				 }
+				 complete_national_focus = LBA_assasinate_Italo_Balbo_2
 			}
 			set_party_name = {
 				ideology = fascism
@@ -2660,7 +2700,7 @@ focus_tree = {
 			if= {
 				limit = {
 					NOT = {
-						has_completed_focus = LBA_recreate_the_grand_council
+						has_character = LBA_grand_council
 					}
 				}
 				recruit_character = LBA_italo_balbo
@@ -2670,7 +2710,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = LBA_recreate_the_grand_council
+					has_character = LBA_grand_council
+				}
+				country_event = {
+					id = LBA_events.27
+					days = 3
 				}
 			}
 		 }
@@ -2687,6 +2731,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = LBA_under_Mussolini_2
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				 }
+				 complete_national_focus = LBA_smuggle_Italo_Balbo
+			}
 			add_ideas = camicie_nere
 				custom_effect_tooltip = DEN_unlocks_bop_decisions_tt
 		 }
@@ -2721,6 +2773,218 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LBA_return_to_Italy
+		icon = GFX_focus_generic_italy_propaganda
+		cost = 7
+		x = -5
+		y = -2
+		available = {
+			has_manpower > 250000
+			has_navy_size = {
+				size > 50
+			}
+		}
+		relative_position_id = LBA_assasinate_Italo_Balbo_2
+		allow_branch = {
+			has_completed_focus = LBA_mussolini_triumphant
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_core_of = LBA
+			}
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = ITA
+					type = annex_everything
+				 }
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = ILF
+					type = annex_everything
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = NLC
+					type = annex_everything
+				 }
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_push_to_the_Suez
+		icon = GFX_generic_attack_Egypt
+		cost = 7
+		x = 2
+		y = 1
+		relative_position_id = LBA_return_to_Italy
+		prerequisite = {
+			focus = LBA_return_to_Italy
+		}
+		available = {
+			controls_state = 2
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = EGY
+				}
+				add_claim_by = LBA
+			}
+			if = {
+				limit = {
+					EGY = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = EGY
+					type = annex_everything
+				 }
+			}
+			if = {
+				limit = {
+					EGY = {
+						exists = no
+					}
+				 }
+				 create_wargoal = {
+					target = ENG
+					type = annex_everything
+				 }
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_Tunisian_Question_1
+		icon = GFX_goal_Tunisia_Question
+		cost = 7
+		x = -2
+		y = 1
+		relative_position_id = LBA_return_to_Italy
+		prerequisite = {
+			focus = LBA_return_to_Italy
+		}
+		available = {
+			controls_state = 2
+		}
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_claim_Dalmatia
+		icon = GFX_generic_goal_Italian_Dalmatia
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_return_to_Italy
+		}
+		available = {
+			controls_state = 2
+		}
+		relative_position_id = LBA_return_to_Italy
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CRO
+				type = annex_everything
+			}
+			103 = {
+				add_claim_by = LBA
+			}
+			if = {
+				limit = {
+					853 = {
+						NOT = {
+							is_claimed_by = LBA
+						}
+					}
+				 }
+				 853 = {
+					add_claim_by = LBA
+				 }
+			}
+			if = {
+				limit = {
+					163 = {
+						NOT = {
+							is_claimed_by = LBA
+						}
+					}
+				 }
+				 163 = {
+					add_claim_by = LBA
+				 }
+			}
+			if = {
+				limit = {
+					736 = {
+						NOT = {
+							is_claimed_by = LBA
+						}
+					}
+				 }
+				 736 = {
+					add_claim_by = LBA
+				 }
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_proclaim_Italian_empire
+		icon = GFX_focus_ITA_greater_italy
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_claim_Dalmatia
+		prerequisite = {
+			focus = LBA_claim_Dalmatia
+		}
+		prerequisite = {
+			focus = LBA_push_to_the_Suez
+		}
+		prerequisite = {
+			focus = LBA_Tunisian_Question_1
+		}
+		completion_reward = {
+			set_cosmetic_tag = ITA_italian_empire
+		 }
+	}
+
+	focus = {
 		id = LBA_recreate_the_grand_council
     	icon = GFX_focus_POL_complete_april_constitution
 		prerequisite = {
@@ -2743,10 +3007,16 @@ focus_tree = {
 				recruit_character = LBA_grand_council
 			}
 			add_ideas = reformed_grand_council_of_fascism 
-			add_power_balance_value = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				 }	
+				add_power_balance_value = {
 				id = LBA_power_balance
-				value = -0.3
+				value = 0.15
+				}
 			}
+		
 			custom_effect_tooltip = grand_council_formation_LBA
 		 }
 	}
@@ -2774,10 +3044,16 @@ focus_tree = {
 				ideology = ultra_nationalism
 				popularity = 0.006
 			}
-			add_power_balance_value = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				 }
+				add_power_balance_value = {
 				id = LBA_power_balance
-				value = 0.3
+				value = -0.3
 			}
+			}
+			
 		 }
 	}
 
@@ -2793,6 +3069,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = mussolini_triumphant_idea
+			mark_focus_tree_layout_dirty = yes
 		 }
 	}
 
@@ -2808,7 +3085,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = {
-				has_completed_focus = LBA_recreate_the_grand_council
+				has_character = LBA_grand_council
 			}
 		}
 		completion_reward = {
@@ -2827,11 +3104,41 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_smuggle_Italo_Balbo
 		}
+		available = {
+			NOT = {
+				has_character = LBA_grand_council
+			}
+			has_government = ultra_nationalism
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = camicie_nere
 				add_idea = camicie_nere_LBA
 			}
+		 }
+	}
+
+	focus = {
+		id = LBA_integrate_the_Camicie_Nere
+		icon = GFX_goal_generic_major_alliance
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_empower_Camicie_Nere
+		}
+		prerequisite = {
+			focus = LBA_reform_Italian_african_administrative_force
+		}
+		relative_position_id = LBA_empower_Camicie_Nere
+		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = camicie_nere_LBA
+					add_idea = camicie_nere_LBA_2
+				}
+			}
+			custom_effect_tooltip = camicie_nere_integrated
 		 }
 	}
 
@@ -2845,9 +3152,242 @@ focus_tree = {
 		prerequisite = {
 			focus = LBA_smuggle_Italo_Balbo
 		}
+		available = {
+			NOT = {
+				has_character = LBA_grand_council
+			}
+			has_government = ultra_nationalism
+		}
 		completion_reward = {
 			add_ideas = reformed_colonial_thought
 		 }
 	}
+
+	focus = {
+		id = LBA_ensure_no_counter_coup
+		icon = GFX_focus_ITA_depose_mussolini
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_reform_Italian_african_administrative_force
+		prerequisite = {
+			focus = LBA_reform_Italian_african_administrative_force
+		}
+		prerequisite = {
+			focus = LBA_empower_Camicie_Nere
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+			news_event = {
+				id = LBA_events.28
+				days = 3
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_towards_a_meditteranean_bastion
+		icon = GFX_focus_generic_mediterranean_sea_focus
+		cost = 7
+		x = -5
+		y = -2
+		allow_branch = {
+			has_completed_focus = LBA_reform_Italian_african_administrative_force
+		}
+		available = {
+			has_manpower > 250000
+		}
+		relative_position_id = LBA_assasinate_Italo_Balbo_2
+		completion_reward = {
+			add_ideas = towards_a_meditteranean_bastion_idea
+		 }
+	}
+
+	focus = {
+		id = LBA_request_Egypt
+		icon = GFX_generic_attack_Egypt
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_towards_a_meditteranean_bastion
+		prerequisite = {
+			focus = LBA_towards_a_meditteranean_bastion
+		}
+		completion_reward = {
+			ENG = {
+					country_event = {
+						id = LBA_events.23
+						days = 2
+					}
+				}
+		 }
+	}
+
+	focus = {
+		id = LBA_request_french_north_africa_2
+		icon = GFX_generic_goal_beg_france_flag
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_towards_a_meditteranean_bastion
+		prerequisite = {
+			focus = LBA_towards_a_meditteranean_bastion
+		}
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = LBA_events.3
+					days = 4
+				}
+			}
+		 }
+	}
+
+
+
+	focus = {
+		id = LBA_council_vote
+		icon = GFX_focus_generic_election
+		cost = 7
+		x = 5
+		y = 0
+		relative_position_id = LBA_under_Mussolini_2
+		allow_branch = {
+			has_country_leader = LBA_grand_council
+			NOT = {
+				has_completed_focus = LBA_council_vote
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = LBA_events.29
+				days = 3
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_secure_council_control
+		icon = GFX_focus_generic_fascist_propaganda
+		cost = 7
+		x = -5
+		y = 0
+		allow_branch = {
+			has_completed_focus = LBA_secure_council_control
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_seek_external_support_council
+		icon = GFX_focus_ARG_join_the_allies
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_secure_council_control
+		prerequisite = {
+			focus = LBA_secure_council_control
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			FRA = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			POL = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			SPR = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			USA = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_consolodate_the_capital
+		icon = GFX_SOV_fortify_mongolian_border_ccp_2d_sov_compatibility
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_secure_council_control
+		prerequisite = {
+			focus = LBA_secure_council_control
+		}
+		completion_reward = {
+			448 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 1149
+					instant_build = yes
+				}
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_execute_Italo_Balbo2
+		icon = GFX_focus_Execute_Italo_Balbo
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_seek_external_support_council
+		prerequisite = {
+			focus = LBA_seek_external_support_council
+		}
+		prerequisite = {
+			focus = LBA_consolodate_the_capital
+		}
+		completion_reward = {
+			add_stability = 0.15
+		 }
+	}
+
+	focus = {
+		id = LBA_another_vote
+		icon = GFX_focus_generic_election
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_execute_Italo_Balbo2
+		prerequisite = {
+			focus = LBA_execute_Italo_Balbo2
+		}
+		completion_reward = {
+			country_event = {
+				id = LBA_events.30
+				days = 3
+			}
+		 }
+	}
+
+
 	
 }

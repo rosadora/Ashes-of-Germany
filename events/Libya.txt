@@ -310,7 +310,7 @@ country_event = {
 country_event = {
 	id = LBA_events.10
 	title = "Libya Requests Tunis"
-	desc = "The Republic of Libya has requested control over Tunis. This will allow them to be stronger, but, they will be in our debt §Rfiguratively.§R"
+	desc = "The Republic of Libya has requested control over Tunis. This will allow them to be stronger, but, they will be in our debt §R figuratively. §R"
 	picture = GFX_report_Tunis
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -384,7 +384,14 @@ country_event = {
 	option = {
 		name = "To War!"
 		hidden_effect = {
-			set_global_flag = aggressive_LBA
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = aggressive_LBA
+					}
+				 }
+				 set_global_flag = aggressive_LBA
+			}
 		}
 		if = {
 			limit = {
@@ -496,6 +503,18 @@ country_event = {
 
 	option = {
 		name = "To Democracy!"
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	option = {
+		name = "Splendid!"
+		trigger = {
+			has_government = fascism
+		}
 	}
 }
 
@@ -893,5 +912,148 @@ country_event = {
 
 	option = {
 		name = "Rats!"
+	}
+}
+
+
+#Mussolini is Executed
+news_event = { 
+	id = LBA_events.28
+	title = bba_news.101.t
+	desc = LBA_news_28.desc
+	picture = GFX_news_event_ITA_mussolini_execution
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bba_news.101.a
+	}
+}
+
+country_event = {
+	id = LBA_events.29
+	title = "The Leadership Election"
+	desc = "Following Italo Balbo's attempted coup, Benito Mussolini was killed following our succesful attempts to stop it. Because of Benito Mussolini's death, we must now vote on our next leader."
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	picture = GFX_report_event_election_vote
+
+	option = {
+		name = "Idris Senussi"
+		complete_national_focus = LBA_restoration_of_the_monarchy
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	option = {
+		name = "Remain in Power"
+		complete_national_focus = LBA_secure_council_control
+	}
+	
+	option = {
+		name = "Rejoin Italy"
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 ITA = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }	
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				ILF = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 NLC = {
+						annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
+	}
+}
+
+country_event = {
+	id = LBA_events.30
+	title = "The Leadership Election"
+	desc = "Now that Italo Balbo is dead, we can now hold yet another vote on our leadership."
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	picture = GFX_report_event_election_vote
+
+	option = {
+		name = "Idris Senussi"
+		complete_national_focus = LBA_restoration_of_the_monarchy
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	option = {
+		name = "Rejoin Italy"
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 ITA = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }	
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				ILF = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 NLC = {
+						annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
 	}
 }

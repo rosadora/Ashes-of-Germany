@@ -69,6 +69,17 @@ ETH_triumph_over_mussolini = {
                 target = AFA
                 type = annex_everything
             }
+            hidden_effect = {
+                550 = {
+                    add_core_of = ETH
+                }
+                559 = {
+                    add_core_of = ETH
+                }
+                844 = {
+                    add_core_of = ETH
+                }
+            }
         }
     }
 }

@@ -2,8 +2,7 @@ PRE_power_balance = {
 	initial_value = 0.15
 	left_side = PRE_lithuania_side
 	right_side = PRE_poland_side
-	decision_category = LBA_bop_decision_categories
-
+	decision_category = PRE_bop_balance
 	### Medium
 	range = {
 		id = PRE_equilibrum_range

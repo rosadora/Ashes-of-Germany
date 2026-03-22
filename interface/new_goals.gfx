@@ -2146,4 +2146,9 @@ spriteTypes = {
 		name = "GFX_goal_ITA_Africa_emblem"
 		texturefile = "gfx/interface/goals/Africa_Italian_Emblem.dds"
 	}
+
+	spriteType = {
+		name = "GFX_generic_goal_Italian_Dalmatia"
+		texturefile = "gfx/interface/goals/Italian_Dalmatia.dds"
+	}
 }

@@ -293,14 +293,9 @@ LBA_bop_decisions = {
 	LBA_empower_mussolini = {
 		icon = GFX_Benito_Mussolini_libyan_resurgence
 		allowed = {
-			has_power_balance = {
-				id = LBA_power_balance
-			}
+			tag = LBA
 		}
 		visible = {
-			has_power_balance = {
-				id = LBA_power_balance
-			}
 			has_completed_focus = LBA_rebuild_the_Fascist_party
 		}
 		available = {
@@ -324,14 +319,9 @@ LBA_bop_decisions = {
 	LBA_empower_Italo_Balbo = {
 		icon = GFX_decision_icon_Italo_Balbo_BOP
 		allowed = {
-			has_power_balance = {
-				id = LBA_power_balance
-			}
+			tag = LBA
 		}
 		visible = {
-			has_power_balance = {
-				id = LBA_power_balance
-			}
 			has_completed_focus = LBA_rebuild_the_camicie_nere
 		}
 		available = {
@@ -348,6 +338,93 @@ LBA_bop_decisions = {
 			add_power_balance_value = {
 				id = LBA_power_balance
 				value = 0.1
+			}
+		}
+	}
+
+	LBA_disband_the_Grand_council = {
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_character = LBA_grand_council
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 75
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.25
+			}
+			retire_character = LBA_grand_council
+			if = {
+				limit = { has_idea = reformed_grand_council_of_fascism }
+				remove_ideas = reformed_grand_council_of_fascism
+			}
+		}
+	}
+
+	raid_against_Italo_Balbo = {
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_completed_focus = LBA_ensure_no_opposition
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 75
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.25
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.06
+			}
+		}
+	}
+
+	orchestrate_attack_in_Tripoli = {
+		icon = GFX_decision_icon_Italo_Balbo_BOP
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_completed_focus = LBA_rebuild_the_Fascist_party
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 180
+
+		cost = 200
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = 0.35
 			}
 		}
 	}

@@ -293,7 +293,48 @@
  LBA_reform_Italian_african_administrative_force_desc:0 "Although not formed, the Africa Orientale Italiana had been planned to be created after Ethiopia's defeat. Some of the elements of this plan remain in Libya, because of this, we can re-vitalize the original idea of what was planned."
  reformed_colonial_thought:0 "Reformed Colonial Thought"
  reformed_colonial_thought_desc:0 ""
+ LBA_return_to_Italy:0 "Return to Italy"
+ LBA_disband_the_Grand_council:0 "Disband the Grand Council of Fascism"
+ raid_against_Italo_Balbo:0 "Rally against Italo Balbo"
+ orchestrate_attack_in_Tripoli:0 "Orchestrate Attack in Tripoli"
+ towards_a_meditteranean_bastion_idea:0 "Dreams of a United North Africa"
+ LBA_ensure_no_counter_coup:0 "Ensure No Counter Coup"
+ LBA_ensure_no_counter_coup_desc:0 "Although Mussolini is in jail, he cannot be trusted to not attempt a Counter Coup against the Libyan Nation. Because of this, we must ensure he does not have the chance to rally any support thru his death." 
+ LBA_return_to_Italy:0 "Return to Italy"
+ LBA_return_to_Italy_desc:0 "Now that we have mustered up a small army, the time has come to return to the Italian homeland."
+ LBA_claim_Dalmatia:0 "Advance to Dalmatia"
+ LBA_claim_Dalmatia_desc:0 "Dalmatia, one of the ambitions of Mare Nostrum, can now be taken following the Re-Capture of Rome."
+ LBA_Tunisian_Question_1:0 "Demand Tunisia"
+ LBA_Tunisian_Question_1_desc:0 "Tunisia, Being one of the most wanted African territories in the world, is under the Weekened French flag, because of this, we may be able to demand it with success."
+ LBA_push_to_the_Suez:0 "Push to the Suez"
+ LBA_push_to_the_Suez_desc:0 "The Suez Canal, being one of the most Important canals in the world, must be taken to ensure our undisputed access to the Meditteranean sea."
+ LBA_proclaim_Italian_empire:0 "Proclaim the Italian Empire Reborn!"
+ LBA_proclaim_Italian_empire_desc:0 "Now that we have realized our ambitions, we can now proclaim the Italian Empire reborn."
+ LBA_towards_a_meditteranean_bastion:0 "Push for a Unified North Africa"
+ LBA_towards_a_meditteranean_bastion_desc:0 "Although we could invade into the Italian Peninsula, Libya's history is not in Europe, but is in Africa. Although we could not invade the much larger colonial powers around us, good relations may be able to allow us to request territory from them."
+ LBA_request_french_north_africa_2:0 "Request French North Africa"
+ LBA_request_french_north_africa_2_desc:0 "The French, controlling most of North Africa, are in a crumbling state compared to their past. The British blockade around them has proven to severely cut them off from supplies in North Africa, because of this, the French may be willing to part with their lands so the British are unable to take it."
+ LBA_request_Egypt:0 "Request Egyptian Control"
+ LBA_request_Egypt_desc:0 "Although Unlikely, the Egyptian state is an extremely strategic location not only in africa, but in the world. If we manage to take control of it, not only will we have one of the most important canals in the world, we will have acess to the Extensive Egyptian population."
+ camicie_nere_LBA_2:0 "Integrated Camicie Nere"
+ camicie_nere_integrated:0 "Upon completing this focus, the Camicie Nere will be integrated into the government of the Libyan state and will operate in the background."
+ LBA_integrate_the_Camicie_Nere:0 "Integrate the Camicie Nere"
+ LBA_integrate_the_Camicie_Nere_desc:0 "The Camicie Nere, being the force Italo Balbo was in when Libya was under the Italian thumb, have now proven their worth. Because of this, the time has come to integrate them into the army in it's entirety."
+ LBA_secure_council_control:0 "Secure Council Control"
+ LBA_secure_council_control_desc:0 "The decision to remain in control will cause some controversy, because of this, we must secure our control before a rebelion unfolds."
+ LBA_seek_external_support_council:0 "Seek External Support"
+ LBA_seek_external_support_council_desc:0 "Although our grip of the country is able to hold, it will be wise to see support of outside nations in order to ensure no uprisings unfold under our control."
+ LBA_consolodate_the_capital:0 "Fortify the Capital"
+ LBA_consolodate_the_capital_desc:0 "Tripoli, our capital, where the council is held, is currently unfortified. Because of this, any foreign power could merely walk into our capital without resistance. To solve this, we must build fortifications not only thru out the city, but also in the Senate building."
+ LBA_execute_Italo_Balbo2:0 "Execute Italo Balbo"
+ LBA_execute_Italo_Balbo2_desc:0 "Italo Balbo, having had lead the coup against the Mussolini, is now in a position to be put down."
+
+
+  #EVENTS#
  
+  LBA_news_28.desc:0 "After being ousted from power in Italy, Benito Mussolini fled to Libya and was recently placed under house arrest for criminal incompetence and treason by inaction, awaiting his fate - which finally caught up with him. Early this morning, the former leader of Italy and Libya faced a firing squad in front of a small group of representatives from the government and was buried the same day in a private ceremony attended by his closest family."
+
+
  
  #BOP#
  LBA_power_balance:0 "Libyan Influence"

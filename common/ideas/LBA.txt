@@ -515,6 +515,7 @@ ideas = {
 				}
 			}
 		}
+		
 
 		reformed_colonial_thought = {
 			allowed = {
@@ -533,6 +534,56 @@ ideas = {
 				resistance_growth = -0.5
 				required_garrison_factor = -0.35
 				ultra_nationalism_drift = 0.02
+			}
+		}
+
+		towards_a_meditteranean_bastion_idea = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = GFX_idea_meditteranean
+
+			removal_cost = -1
+
+			modifier = {
+				ultra_nationalism_drift = 0.02
+				required_garrison_factor = -0.75
+				improve_relations_maintain_cost_factor = -0.75
+			}
+		}
+	}
+	hidden_ideas = {
+		camicie_nere_LBA_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_camicie_nere
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.02
+				conscription_factor = 0.30
+				army_attack_factor = 0.20
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				ultra_nationalism_drift = 0.03
+				heat_attrition_factor = -0.5
+				weekly_manpower = 250
+				hidden_modifier = {
+					resistance_growth = -0.75
+				}
 			}
 		}
 	}
