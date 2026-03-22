@@ -45,13 +45,6 @@ characters = {
 			id = -1
 		}
 
-		country_leader = {
-			ideology = ultra_nationalism_category
-			traits = { il_duce }
-			expire = "1965.1.1.1"
-			id = -1
-		}
-
 		corps_commander = {
 			traits={}
 			skill=1
@@ -75,13 +68,6 @@ characters = {
 
 		country_leader = {
 			ideology = fascism_ideology
-			traits = { il_duce }
-			expire = "1965.1.1.1"
-			id = -1
-		}
-
-		country_leader = {
-			ideology = ultra_nationalism_category
 			traits = { il_duce }
 			expire = "1965.1.1.1"
 			id = -1
@@ -145,16 +131,10 @@ characters = {
 				large = GFX_portrait_italo_balbo_large
 			}
 		}
-		country_leader = {
-			ideology = fascism_ideology
-			traits = { anti_communist }
-			expire = "1965.1.1.1"
-			id = -1
-		}
 
 		country_leader = {
 			ideology = ultra_nationalism_category
-			traits = { anti_communist }
+			traits = { anti_communist famous_aviator } 
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -235,4 +215,32 @@ characters = {
 			id = -1
 		}
 	}
+
+	
+	LBA_roberto_farinacci = {
+		name = ITA_roberto_farinacci
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_roberto_farinacci_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_roberto_farinacci
+			allowed = {
+				original_tag = LBA
+			}
+			available = {
+				OR = {
+				has_government = fascism
+				has_government = ultra_nationalism
+				}
+			}
+			traits = {
+				backroom_backstabber 
+			}
+		}
+	}
+
 }

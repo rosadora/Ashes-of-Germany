@@ -161,6 +161,7 @@ country_event = { #The Civil War Starts
 			ultra_nationalism = 0.30
 			neutrality = 0.08
 		}
+		recruit_character = LBA_roberto_farinacci
 			load_oob = LBA_country_spawns
 		}
 		}

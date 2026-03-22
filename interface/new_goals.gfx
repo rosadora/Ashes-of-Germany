@@ -2126,4 +2126,24 @@ spriteTypes = {
 		name = "GFX_goal_Tunisia_Question"
 		texturefile = "gfx/interface/goals/Tunisia_Question.dds"
 	}
+
+	spriteType = {
+		name = "GFX_mussolini_goal_icon"
+		texturefile = "gfx/interface/goals/mussolini_icon3.dds"
+	}
+
+	spriteType = {
+		name = "Generic_man_imprisoned"
+		texturefile = "gfx/interface/goals/generic_man_imprisoned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_blackshirts_ALT"
+		texturefile = "gfx/interface/goals/Blakshirt_ALT.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ITA_Africa_emblem"
+		texturefile = "gfx/interface/goals/Africa_Italian_Emblem.dds"
+	}
 }

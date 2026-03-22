@@ -280,6 +280,20 @@
  grand_council_formation_LBA:0 "Upon completing this focus, the Grand council of Fascism will be re-formed in Libya and will take power in the scenario of a coup against the current government."
  military_dictatorship_LBA:0 "Military Dictatorship"
  military_dictatorship_LBA_desc:0 "Following a failed coup by Italo Balbo, the Grand Council of Fascism has taken control of the Libyan nation."
+ mussolini_triumphant_idea:0 "Mussolini Triumphant!"
+ LBA_mussolini_triumphant:0 "Mussolini's Triumph"
+ LBA_mussolini_triumphant_desc:0 "Now that Italo Balbo is dead, there is little to no opposition for Mussolini. Because of this, a triumph has been made, the first triumph of many in Libya."
+ LBA_disband_the_council:0 "Disband the Grand Council of Fascism"
+ LBA_disband_the_council_desc:0 "The grand council, only having been made as a precaution of Italo Balbo, has now outlived its purpose. In order to ensure our absolute rule, we must disband this opposition we have made against ourselves."
+ LBA_empower_Camicie_Nere:0 "Empower the Camicie Nere"
+ LBA_empower_Camicie_Nere_desc:0 "Although the Camicie Nere has been re-formed, it is still weaker than ever before. Because of this, we must empower the Camicie Nere as they were once under heavy influence of Italo Balbo"
+ camicie_nere_LBA:0 "Camicie Nere"
+ camicie_nere_LBA_desc:0 "Although the Camicie nere were an Italian Invention, they are still of use in Libya."
+ LBA_reform_Italian_african_administrative_force:0 "Reform Italian Colonial Thought"
+ LBA_reform_Italian_african_administrative_force_desc:0 "Although not formed, the Africa Orientale Italiana had been planned to be created after Ethiopia's defeat. Some of the elements of this plan remain in Libya, because of this, we can re-vitalize the original idea of what was planned."
+ reformed_colonial_thought:0 "Reformed Colonial Thought"
+ reformed_colonial_thought_desc:0 ""
+ 
  
  #BOP#
  LBA_power_balance:0 "Libyan Influence"
