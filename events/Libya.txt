@@ -1066,3 +1066,67 @@ country_event = {
 			}
 	}
 }
+
+country_event = {
+	id = LBA_events.31
+	title = BBA_ethiopia_communist_events.05.t
+	desc = BBA_ethiopia_communist_events.05.desc
+	picture = GFX_report_event_gre_city_devastated
+	is_triggered_only = yes
+	# Exile HS
+	option = {
+		name = BBA_ethiopia_communist_events.05.a
+		ai_chance = {
+			base = 10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		ETH_provisional_government_effect = yes
+	}
+	# Imprison HS
+	option = {
+		name = BBA_ethiopia_communist_events.05.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				has_stability < 0.3				
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		ETH_haile_selassie = {
+			set_character_flag = ETH_imprisoned_flag
+		}
+		ETH_provisional_government_effect = yes
+	}
+}
+
+
+news_event = {
+	id = LBA_events.32
+	title = bba_news.4.t
+	desc = bba_news.4.desc
+	picture = GFX_news_event_ETH_ethiopian_warriors
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bba_news.4.a
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = bba_news.4.b
+		trigger = {
+			NOT = { has_government = communism }
+		}
+	}
+}

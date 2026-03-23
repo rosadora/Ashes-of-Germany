@@ -3023,6 +3023,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = ITA_italian_empire
+			load_focus_tree = ita_focus
 		 }
 	}
 
