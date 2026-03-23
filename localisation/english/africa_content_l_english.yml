@@ -269,8 +269,8 @@
  LBA_recreate_the_grand_council_desc:0 "Although the council was in competition with Mussolini, it was a nessesary balance in Italian politics. Because of this, a choice has been made to re-convene a new, grand council of Fascism."
  LBA_rebuild_the_camicie_nere:0 "Rebuild the Camicie Nere"
  LBA_rebuild_the_camicie_nere_desc:0 "Although the Camicie Nere had more power than wanted in Italy, re-building them in Libya may prove to be a good idea for future military growth"
- LBA_assasinate_Italo_Balbo_2:0 "Execute Italo Balbo"
- LBA_assasinate_Italo_Balbo_2_desc:0 "Although Italo Balbo was the former governor of Libya, his power has proven to be much stronger than wanted. Although there will be resistance to his death, it is a mere neccessity at this point to ensure our nations survival."
+ LBA_assasinate_Italo_Balbo_2:0 "Imprison Italo Balbo"
+ LBA_assasinate_Italo_Balbo_2_desc:0 "Although Italo Balbo was the former governor of Libya, his power has proven to be much stronger than wanted. Although there will be resistance to his Imprisonment, it is a mere neccessity at this point to ensure our nations survival."
  LBA_ensure_no_opposition:0 "Ensure No Opposition"
  LBA_ensure_no_opposition_desc:0 "Mussolini's control, already delicate, cannot have any risk of opposition to the rule."
  LBA_stay_with_Mussolini:0 "Remained with Mussolini"
@@ -297,6 +297,7 @@
  LBA_disband_the_Grand_council:0 "Disband the Grand Council of Fascism"
  raid_against_Italo_Balbo:0 "Rally against Italo Balbo"
  orchestrate_attack_in_Tripoli:0 "Orchestrate Attack in Tripoli"
+ LBA_council_takeover:0 "The Council of Fascism has Taken Over"
  towards_a_meditteranean_bastion_idea:0 "Dreams of a United North Africa"
  LBA_ensure_no_counter_coup:0 "Ensure No Counter Coup"
  LBA_ensure_no_counter_coup_desc:0 "Although Mussolini is in jail, he cannot be trusted to not attempt a Counter Coup against the Libyan Nation. Because of this, we must ensure he does not have the chance to rally any support thru his death." 
@@ -328,11 +329,16 @@
  LBA_consolodate_the_capital_desc:0 "Tripoli, our capital, where the council is held, is currently unfortified. Because of this, any foreign power could merely walk into our capital without resistance. To solve this, we must build fortifications not only thru out the city, but also in the Senate building."
  LBA_execute_Italo_Balbo2:0 "Execute Italo Balbo"
  LBA_execute_Italo_Balbo2_desc:0 "Italo Balbo, having had lead the coup against the Mussolini, is now in a position to be put down."
+ LBA_council_vote:0 "Council Vote"
+ LBA_council_vote_desc:0 "Now that the council is in complete control over the nation, we must hold a vote on our future leadership."
+ LBA_another_vote:0 "Hold Another Vote"
+ LBA_council_vote_desc:0 "Now that the council has outlived its purpose, we must now hold another vote for the future of our nation."
 
 
   #EVENTS#
  
   LBA_news_28.desc:0 "After being ousted from power in Italy, Benito Mussolini fled to Libya and was recently placed under house arrest for criminal incompetence and treason by inaction, awaiting his fate - which finally caught up with him. Early this morning, the former leader of Italy and Libya faced a firing squad in front of a small group of representatives from the government and was buried the same day in a private ceremony attended by his closest family."
+
 
 
  

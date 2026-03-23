@@ -141,12 +141,21 @@ country_event = { #The Civil War Starts
 		hidden_effect = {
 				ITA = {
 			retire_country_leader = yes
+			transfer_navy = {
+				target = LBA
+			}
 		}
 		ILF = {
 			country_event = italia.25
+			transfer_navy = {
+				target = LBA
+			}
 		}
 		NLC = {
 			country_event = italia.25
+			transfer_navy = {
+				target = LBA
+			}
 		}
 	LBA = {
 		add_ideas = flee_from_italy

@@ -1105,7 +1105,7 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 25
+		x = 35
 		y = 0
 		available = {
 			NOT = {
@@ -1115,14 +1115,8 @@ focus_tree = {
 			}
 			}
 		}
-		offset = {
-			trigger = {
-				has_completed_focus = LBA_under_Mussolini_2
-			}
-			X = -9
-		}
 		allow_branch = {
-			or = {
+			OR = {
 				has_completed_focus = LBA_overthrow_Mussolini
 				has_completed_focus = LBA_restoration_of_the_monarchy
 			}
@@ -2650,7 +2644,7 @@ focus_tree = {
 		allow_branch = {
 			has_completed_focus = LBA_finish_the_opposition
 			NOT = {
-				has_country_leader = LBA_grand_council
+				has_country_flag = LBA_council_takeover
 			}
 		}
 
@@ -2663,7 +2657,7 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = LBA_restoration_of_the_monarchy
 			}
-			x = 10
+			x = -5
 		}
 		completion_reward = {
 			add_popularity = {
@@ -2794,7 +2788,7 @@ focus_tree = {
 
 	focus = {
 		id = LBA_assasinate_Italo_Balbo_2
-		icon = GFX_focus_Execute_Italo_Balbo
+		icon = GFX_imprison_Italo_Balbo
 		cost = 7
 		x = -3
 		y = 2
@@ -3310,7 +3304,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = LBA_under_Mussolini_2
 		allow_branch = {
-			has_country_leader = LBA_grand_council
+			has_country_flag =  LBA_council_takeover
 		}
 		completion_reward = {
 			country_event = {
