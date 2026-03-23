@@ -1590,12 +1590,36 @@ focus_tree = {
 	    prerequisite = { focus = LBA_women_rights }
 		prerequisite = { focus = LBA_modernize_the_industries }
 	    completion_reward = { 
-			FRA = {
+			if = {
+				limit = {
+					TUN = {
+						NOT = {
+							is_puppet_of = FRA
+						}
+					}
+					TUN = {
 				country_event = {
 					id = LBA_events.10
 					days = 2
 				}
 			}
+				}
+			}
+
+			if = {
+				limit = {
+					TUN = {
+						is_puppet_of = FRA
+					}
+				}
+				FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+				}
+			}
+			
 		}
 	}
 
@@ -1907,7 +1931,6 @@ focus_tree = {
 		cost = 7
 	    available = {
 			has_manpower > 150000
-			controls_state = 458
 		}
 		prerequisite = {
 			focus = LBA_request_Prussian_guns
@@ -2102,6 +2125,7 @@ focus_tree = {
 						id = generic.2
 						days = 3
 					}
+					add_ideas = LBA_absolute_monarchy
 				}
 			}
 		}
@@ -2167,11 +2191,34 @@ focus_tree = {
 			}
 		    cost = 10
 			completion_reward = {
-				ENG = {
+				if = {
+					limit = {
+						EGY = {
+							is_puppet_of = ENG
+						}
+					}
+					ENG = {
 					country_event = {
 						id = LBA_events.23
 						days = 2
 					}
+				}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							EGY = {
+								is_puppet_of = ENG
+							}
+						}
+					}
+					EGY = {
+					country_event = {
+						id = LBA_events.23
+						days = 2
+					}
+				}
 				}
 			}
 		}
@@ -2716,6 +2763,7 @@ focus_tree = {
 					id = LBA_events.27
 					days = 3
 				}
+				mark_focus_tree_layout_dirty = yes
 			}
 		 }
 	}
@@ -2776,7 +2824,7 @@ focus_tree = {
 		id = LBA_return_to_Italy
 		icon = GFX_focus_generic_italy_propaganda
 		cost = 7
-		x = -5
+		x = -4
 		y = -2
 		available = {
 			has_manpower > 250000
@@ -2998,9 +3046,15 @@ focus_tree = {
 			focus = LBA_ensure_no_opposition
 		}
 		available = {
-			NOT = {
+			or = {
+				NOT = {
 				has_completed_focus = LBA_disband_the_council
 			}
+			NOT = {
+				has_completed_focus = LBA_smuggle_Italo_Balbo
+			}
+			}
+			
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -3192,7 +3246,7 @@ focus_tree = {
 		id = LBA_towards_a_meditteranean_bastion
 		icon = GFX_focus_generic_mediterranean_sea_focus
 		cost = 7
-		x = -5
+		x = -4
 		y = -2
 		allow_branch = {
 			has_completed_focus = LBA_reform_Italian_african_administrative_force
@@ -3257,15 +3311,13 @@ focus_tree = {
 		relative_position_id = LBA_under_Mussolini_2
 		allow_branch = {
 			has_country_leader = LBA_grand_council
-			NOT = {
-				has_completed_focus = LBA_council_vote
-			}
 		}
 		completion_reward = {
 			country_event = {
 				id = LBA_events.29
 				days = 3
 			}
+			mark_focus_tree_layout_dirty = yes
 		 }
 	}
 
@@ -3279,6 +3331,7 @@ focus_tree = {
 			has_completed_focus = LBA_secure_council_control
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.15
@@ -3385,6 +3438,7 @@ focus_tree = {
 				id = LBA_events.30
 				days = 3
 			}
+			mark_focus_tree_layout_dirty = yes
 		 }
 	}
 

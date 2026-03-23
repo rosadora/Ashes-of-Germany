@@ -64,6 +64,10 @@ ideologies = {
 
 			ultra_nationalism_category  = {
 			}
+
+			colonial_nationalist = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {

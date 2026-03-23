@@ -908,6 +908,7 @@ country_event = {
 	picture = GFX_report_event_ITA_grand_council
 	immediate = {
 		add_ideas = military_dictatorship_LBA 
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = {

@@ -264,7 +264,7 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-			stability_weekly = 0.01
+			stability_weekly = 0.005
 			democratic_drift = -0.01
 			social_democracy_drift = -0.02
 			social_liberalism_drift = -0.02

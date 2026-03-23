@@ -6680,6 +6680,19 @@ leader_traits = {
 			}
 		}
 	}
+
+	nationalist_aviator = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		ultra_nationalism_drift = 0.08
+		air_accidents_factor = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	staunch_monarchist = {
 		random = no
 		# Boosts Unaligned
