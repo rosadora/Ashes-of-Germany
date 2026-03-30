@@ -53,6 +53,11 @@ opinion_modifiers = {
 		months = 24
 	}
 
+	breach_italian_ties = {
+		Value = -75
+		months = 72
+	}
+
 	maintain_our_independance = {
 		value = -25
 		months = 12

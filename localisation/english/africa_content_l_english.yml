@@ -333,6 +333,9 @@
  LBA_council_vote_desc:0 "Now that the council is in complete control over the nation, we must hold a vote on our future leadership."
  LBA_another_vote:0 "Hold Another Vote"
  LBA_council_vote_desc:0 "Now that the council has outlived its purpose, we must now hold another vote for the future of our nation."
+ breach_italian_ties:0 "Break Italian Ties"
+ LBA_breach_Italian_Ties:0 "Break All Italian Ties"
+ LBA_breach_Italian_Ties_desc:0 "In order to ensure we are not looked down on by the italians as just another remnant of fascism, we must breach our current ties with the Italian Nations. Although it may be overkill, it is a neccessity to ensure they know we will not just bow under them if they ever attempt to re-invade our nation."
 
 
   #EVENTS#

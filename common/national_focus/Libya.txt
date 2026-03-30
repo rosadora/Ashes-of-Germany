@@ -2736,7 +2736,14 @@ focus_tree = {
 		available = {
 			always = no
 		}
+		allow_branch = {
+			has_completed_focus = LBA_finish_the_opposition
+			NOT = {
+				has_completed_focus = LBA_assasinate_Italo_Balbo_2
+			}
+		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			add_political_power = -150
 			if= {
 				limit = {
@@ -2757,7 +2764,6 @@ focus_tree = {
 					id = LBA_events.27
 					days = 3
 				}
-				mark_focus_tree_layout_dirty = yes
 			}
 		 }
 	}
@@ -2802,17 +2808,26 @@ focus_tree = {
 		available = {
 			always = no
 		}
+		allow_branch = {
+			has_completed_focus = LBA_finish_the_opposition
+			NOT = {
+				has_completed_focus = LBA_smuggle_Italo_Balbo
+			}
+		}
 		completion_reward = {
 			add_political_power = 150
 			hidden_effect = {
 					ITA = {
 				retire_character = ITA_italo_balbo
 			}
+			mark_focus_tree_layout_dirty = yes
 			set_global_flag = aggressive_LBA
 			}
 		
 		 }
 	}
+
+	#This is TEMPORARY content until i make an actual branch for Mussolini
 
 	focus = {
 		id = LBA_return_to_Italy
@@ -3237,65 +3252,6 @@ focus_tree = {
 		 }
 	}
 
-	focus = {
-		id = LBA_towards_a_meditteranean_bastion
-		icon = GFX_focus_generic_mediterranean_sea_focus
-		cost = 7
-		x = -4
-		y = -2
-		allow_branch = {
-			has_completed_focus = LBA_reform_Italian_african_administrative_force
-		}
-		available = {
-			has_manpower > 250000
-		}
-		relative_position_id = LBA_assasinate_Italo_Balbo_2
-		completion_reward = {
-			add_ideas = towards_a_meditteranean_bastion_idea
-		 }
-	}
-
-	focus = {
-		id = LBA_request_Egypt
-		icon = GFX_generic_attack_Egypt
-		cost = 7
-		x = 1
-		y = 1
-		relative_position_id = LBA_towards_a_meditteranean_bastion
-		prerequisite = {
-			focus = LBA_towards_a_meditteranean_bastion
-		}
-		completion_reward = {
-			ENG = {
-					country_event = {
-						id = LBA_events.23
-						days = 2
-					}
-				}
-		 }
-	}
-
-	focus = {
-		id = LBA_request_french_north_africa_2
-		icon = GFX_generic_goal_beg_france_flag
-		cost = 7
-		x = -1
-		y = 1
-		relative_position_id = LBA_towards_a_meditteranean_bastion
-		prerequisite = {
-			focus = LBA_towards_a_meditteranean_bastion
-		}
-		completion_reward = {
-			FRA = {
-				country_event = {
-					id = LBA_events.3
-					days = 4
-				}
-			}
-		 }
-	}
-
-
 
 	focus = {
 		id = LBA_council_vote
@@ -3436,6 +3392,363 @@ focus_tree = {
 			mark_focus_tree_layout_dirty = yes
 		 }
 	}
+
+	#Just making the layout right now, will potentially copy this layout to the other side and use it as a base after this side is complete#
+
+focus = {
+    id = LBA_breach_Italian_Ties
+    icon = GFX_focus_attack_italy
+	relative_position_id = LBA_integrate_the_Camicie_Nere
+    x = 1
+    y = 1
+	prerequisite = { focus = LBA_integrate_the_Camicie_Nere focus = LBA_ensure_no_counter_coup }
+    completion_reward = {
+		if = {
+			limit = {
+				ITA = {
+					exists = yes
+				}
+			 }
+			 ITA = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = breach_italian_ties
+				}
+			 }
+			 LBA = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = breach_italian_ties
+				}
+			 }
+		}
+
+		if = {
+			limit = {
+				ILF = {
+					exists = yes
+				}
+			 }
+			 ILF = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = breach_italian_ties
+				}
+			 }
+			 LBA = {
+				add_opinion_modifier = {
+					target = ILF
+					modifier = breach_italian_ties
+				}
+			 }
+		}
+
+		if = {
+			limit = {
+				NLC = {
+					exists = yes
+				}
+			 }
+			 NLC = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = breach_italian_ties
+				}
+			 }
+			 LBA = {
+				add_opinion_modifier = {
+					target = NLC
+					modifier = breach_italian_ties
+				}
+			 }
+		}
+	 }
+}
+
+focus = {
+    id = LBA_2
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_breach_Italian_Ties
+    x = -3
+    y = 1
+    prerequisite = { focus = LBA_breach_Italian_Ties }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_3
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_2
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_2 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_4
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_2
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_2 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_5
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_3
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_3 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_6
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_3
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_3 focus = LBA_4 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_7
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_4
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_4 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_8
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_5
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_5 focus = LBA_6 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_9
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_6
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_5 focus = LBA_6 focus = LBA_7 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_10
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_7
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_6 focus = LBA_7 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_11
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_8
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_8 focus = LBA_9 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_12
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_10
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_9 focus = LBA_10 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_13
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_11
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_11 focus = LBA_12 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_14
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_breach_Italian_Ties
+    x = 3
+    y = 1
+    prerequisite = { focus = LBA_breach_Italian_Ties }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_15
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_14
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_14 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_16
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_14
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_14 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_17
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_15
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_15 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_18
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_15
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_15 focus = LBA_16 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_19
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_16
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_16 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_20
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_17
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_17 focus = LBA_18 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_21
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_18
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_17 focus = LBA_18 focus = LBA_19 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_22
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_19
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_18 focus = LBA_19 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_23
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_20
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_20 focus = LBA_21 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_24
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_22
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_21 focus = LBA_22 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_25
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_23
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_23 focus = LBA_24 }
+    completion_reward = { }
+}
+
+#Planning for this segment to be "Never Again a shore" as of right now#
+
+
+focus = {
+    id = LBA_26
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_13
+    x = 3
+    y = 1
+    prerequisite = { focus = LBA_13 }
+	prerequisite = { focus = LBA_25 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_27
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_26
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_26}
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_28
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_26
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_26}
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_29
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_27
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_27 focus = LBA_28 }
+    completion_reward = { }
+}
+
 
 
 	
