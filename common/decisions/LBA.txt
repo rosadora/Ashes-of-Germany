@@ -134,7 +134,7 @@ LBA_root_out_Mussolini_Loyalists = {
 		ai_will_do = {
 			factor = 100
 		}
-		cost = 250
+		cost = 50
 
 
 		complete_effect = {
@@ -170,7 +170,7 @@ LBA_root_out_Mussolini_Loyalists = {
 		ai_will_do = {
 			factor = 100
 		}
-		cost = 250
+		cost = 50
 
 
 		complete_effect = {
@@ -206,7 +206,7 @@ LBA_root_out_Mussolini_Loyalists = {
 		ai_will_do = {
 			factor = 100
 		}
-		cost = 250
+		cost = 100
 
 		complete_effect = {
 			450 = {
@@ -241,7 +241,7 @@ LBA_root_out_Mussolini_Loyalists = {
 		ai_will_do = {
 			factor = 100
 		}
-		cost = 250
+		cost = 50
 
 		complete_effect = {
 			663 = {
@@ -276,7 +276,7 @@ LBA_root_out_Mussolini_Loyalists = {
 		ai_will_do = {
 			factor = 100
 		}
-		cost = 250
+		cost = 100
 
 		complete_effect = {
 			451 = {

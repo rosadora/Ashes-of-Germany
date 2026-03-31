@@ -58,6 +58,11 @@ opinion_modifiers = {
 		months = 72
 	}
 
+	Via_Balbia_Construction = {
+		value = 30
+		months = 24
+	}
+
 	maintain_our_independance = {
 		value = -25
 		months = 12

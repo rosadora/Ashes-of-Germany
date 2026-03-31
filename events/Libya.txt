@@ -1130,3 +1130,27 @@ news_event = {
 		}
 	}
 }
+
+country_event = {
+	id = LBA_events.33
+	title = "Italo Balbo seizes Power!"
+	desc = "Italo Balbo has taken control over the capital of the nation!"
+	picture = GFX_report_event_DEN_fascist_troops
+	immediate = {
+		recruit_character = LBA_italo_balbo
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "To a new Era!"
+		hidden_effect = {
+		set_politics = {
+		ruling_party = ultra_nationalism
+		}
+		promote_character = LBA_italo_balbo
+		}
+		
+	}
+}

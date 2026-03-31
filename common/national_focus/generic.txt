@@ -1749,6 +1749,12 @@ focus_tree = {
 	
 		available_if_capitulated = yes
 
+		allow_branch = {
+			NOT = {
+				tag = AML
+			}
+		}
+
 		available = {
 			NOT = {
 				original_tag = JAP

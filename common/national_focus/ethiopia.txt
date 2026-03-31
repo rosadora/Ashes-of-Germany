@@ -512,7 +512,6 @@ focus_tree = {
 					#infantry = { x = 1 y = 2 }
 				}				
 			}
-			custom_effect_tooltip = EHT_in_the_name_of_the_people_tt
 			hidden_effect = {
 				random_owned_controlled_state = {
 					limit = {

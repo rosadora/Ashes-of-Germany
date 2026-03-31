@@ -1043,6 +1043,22 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					AML = {
+						exists = no
+					}
+				 }
+				 every_state = {
+					limit = {
+						is_core_of = AML
+					}
+					remove_core_of = AML
+				 }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
 					AND = {
 						458 = {
 							is_controlled_by = LBA

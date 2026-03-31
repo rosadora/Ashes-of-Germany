@@ -2701,6 +2701,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_dlc = "By Blood Alone"
+						has_completed_focus = LBA_smuggle_Italo_Balbo
 					}
 				 }
 				 complete_national_focus = LBA_assasinate_Italo_Balbo_2
@@ -2751,9 +2752,9 @@ focus_tree = {
 						has_character = LBA_grand_council
 					}
 				}
-				recruit_character = LBA_italo_balbo
-				set_politics = {
-					ruling_party = ultra_nationalism
+				country_event = {
+					id = LBA_events.33
+					days = 2
 				}
 			}
 			if = {
@@ -2783,6 +2784,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_dlc = "By Blood Alone"
+						has_completed_focus = LBA_execute_Italo_Balbo2
 					}
 				 }
 				 complete_national_focus = LBA_smuggle_Italo_Balbo
@@ -3223,7 +3225,10 @@ focus_tree = {
 			has_government = ultra_nationalism
 		}
 		completion_reward = {
-			add_ideas = reformed_colonial_thought
+			add_timed_idea = {
+				idea = reformed_colonial_thought
+				days = 365
+			}
 		 }
 	}
 
@@ -3401,8 +3406,11 @@ focus = {
 	relative_position_id = LBA_integrate_the_Camicie_Nere
     x = 1
     y = 1
-	prerequisite = { focus = LBA_integrate_the_Camicie_Nere focus = LBA_ensure_no_counter_coup }
+	prerequisite = { focus = LBA_integrate_the_Camicie_Nere }
+	prerequisite = { focus = LBA_ensure_no_counter_coup }
     completion_reward = {
+		add_political_power = 125
+		add_stability = -0.05
 		if = {
 			limit = {
 				ITA = {
@@ -3466,32 +3474,121 @@ focus = {
 }
 
 focus = {
-    id = LBA_2
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_construct_the_Via_Balbia
+    icon = GFX_focus_generic_railroad
     relative_position_id = LBA_breach_Italian_Ties
     x = -3
     y = 1
+	cost = 7
     prerequisite = { focus = LBA_breach_Italian_Ties }
-    completion_reward = { }
+    completion_reward = {
+		if = {
+			limit = {
+				EGY = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = EGY
+				modifier = Via_Balbia_Construction
+			}
+			EGY = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			ENG = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = Via_Balbia_Construction
+			}
+		}
+
+		if = {
+			limit = {
+				TUN = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = TUN
+				modifier = Via_Balbia_Construction
+			}
+			TUN = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			FRA = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = Via_Balbia_Construction
+			}
+		}
+		450 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 11954
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		451 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 1130
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		build_railway = {
+			level = 2
+			path = { 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 7164 }
+			start_province = 11921
+			target_province = 7164
+		}
+	 }
 }
 
 focus = {
     id = LBA_3
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_2
+    relative_position_id = LBA_construct_the_Via_Balbia
     x = -1
     y = 1
-    prerequisite = { focus = LBA_2 }
+    prerequisite = { focus = LBA_construct_the_Via_Balbia }
     completion_reward = { }
 }
 
 focus = {
     id = LBA_4
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_2
+    relative_position_id = LBA_construct_the_Via_Balbia
     x = 1
     y = 1
-    prerequisite = { focus = LBA_2 }
+    prerequisite = { focus = LBA_construct_the_Via_Balbia }
     completion_reward = { }
 }
 

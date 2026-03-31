@@ -66,7 +66,6 @@ ideologies = {
 			}
 
 			colonial_nationalist = {
-				can_be_randomly_selected = no
 			}
 		}
 

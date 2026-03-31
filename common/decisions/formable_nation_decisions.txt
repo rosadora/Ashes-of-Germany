@@ -7873,8 +7873,6 @@ form_arabia_category = {
 				original_tag = OMA
 				# Egypt
 				original_tag = EGY
-				# Libya
-				original_tag = LBA
 				# Jordan
 				original_tag = JOR
 				# Palestine

@@ -336,6 +336,9 @@
  breach_italian_ties:0 "Break Italian Ties"
  LBA_breach_Italian_Ties:0 "Break All Italian Ties"
  LBA_breach_Italian_Ties_desc:0 "In order to ensure we are not looked down on by the italians as just another remnant of fascism, we must breach our current ties with the Italian Nations. Although it may be overkill, it is a neccessity to ensure they know we will not just bow under them if they ever attempt to re-invade our nation."
+ LBA_construct_the_Via_Balbia:0 "Construct the Via Balbia"
+ LBA_construct_the_Via_Balbia_desc:0 "The Via Balbia, already under construction under Benito Mussolini, is now in a position where it can be completed. Upon us completing the railroad, it will allow us to start shipping international goods into the country without the need of naval resources."
+ Via_Balbia_Construction:0 "Via Balbio Constructed"
 
 
   #EVENTS#
