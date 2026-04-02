@@ -30,7 +30,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 7
 		}
 
 		available = {
@@ -49,6 +49,26 @@ focus_tree = {
 			add_political_power = 100
 			add_stability = 0.1
 		}
+	}
+
+	focus = {
+		id = ETH_rally_the_people
+		icon = GFX_goal_stand_up_and_fight
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ETH_rally_around_the_emperor
+		prerequisite = {
+			focus = ETH_rally_around_the_emperor
+		}
+		bypass = {
+			NOT = {
+				has_war_with = ITA
+			}
+		}
+		completion_reward = {
+			add_manpower = 50000
+		 }
 	}
 	focus = {
 		id = ETH_Victory_against_Italy
@@ -405,7 +425,7 @@ focus_tree = {
 		}	
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 
 		completion_reward = {

@@ -1105,7 +1105,7 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 35
+		x = 25
 		y = 0
 		available = {
 			NOT = {
@@ -1115,6 +1115,14 @@ focus_tree = {
 			}
 			}
 		}
+
+		offset = {
+			trigger = {
+					has_completed_focus = LBA_under_Mussolini_2
+			}
+			x = 10
+		}
+
 		allow_branch = {
 			OR = {
 				has_completed_focus = LBA_overthrow_Mussolini
@@ -2657,7 +2665,7 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = LBA_restoration_of_the_monarchy
 			}
-			x = -5
+			x = -6
 		}
 		completion_reward = {
 			add_popularity = {
@@ -3164,17 +3172,15 @@ focus_tree = {
 		id = LBA_empower_Camicie_Nere
 		icon = GFX_goal_blackshirts_ALT
 		cost = 7
-		x = -1
+		x = 1
 		y = 1
-		relative_position_id = LBA_smuggle_Italo_Balbo
+		relative_position_id = LBA_3
 		prerequisite = {
-			focus = LBA_smuggle_Italo_Balbo
+			focus = LBA_3
+			focus = LBA_4
 		}
 		available = {
-			NOT = {
-				has_character = LBA_grand_council
-			}
-			has_government = ultra_nationalism
+			has_completed_focus = LBA_smuggle_Italo_Balbo
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -3192,9 +3198,6 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = LBA_empower_Camicie_Nere
-		}
-		prerequisite = {
-			focus = LBA_reform_Italian_african_administrative_force
 		}
 		relative_position_id = LBA_empower_Camicie_Nere
 		completion_reward = {
@@ -3214,15 +3217,10 @@ focus_tree = {
 		cost = 7
 		x = 1
 		y = 1
-		relative_position_id = LBA_smuggle_Italo_Balbo
+		relative_position_id = LBA_15
 		prerequisite = {
-			focus = LBA_smuggle_Italo_Balbo
-		}
-		available = {
-			NOT = {
-				has_character = LBA_grand_council
-			}
-			has_government = ultra_nationalism
+			focus = LBA_15
+			focus = LBA_16
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -3233,17 +3231,26 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LBA_21
+		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = LBA_reform_Italian_african_administrative_force
+		}
+		x = 0
+		y = 1
+		relative_position_id = LBA_reform_Italian_african_administrative_force
+		completion_reward = { }
+	}
+
+	focus = {
 		id = LBA_ensure_no_counter_coup
 		icon = GFX_focus_ITA_depose_mussolini
 		cost = 7
 		x = 0
 		y = 1
-		relative_position_id = LBA_reform_Italian_african_administrative_force
+		relative_position_id = LBA_breach_Italian_Ties
 		prerequisite = {
-			focus = LBA_reform_Italian_african_administrative_force
-		}
-		prerequisite = {
-			focus = LBA_empower_Camicie_Nere
+			focus = LBA_breach_Italian_Ties
 		}
 		completion_reward = {
 			add_popularity = {
@@ -3403,11 +3410,16 @@ focus_tree = {
 focus = {
     id = LBA_breach_Italian_Ties
     icon = GFX_focus_attack_italy
-	relative_position_id = LBA_integrate_the_Camicie_Nere
-    x = 1
+	relative_position_id = LBA_smuggle_Italo_Balbo
+    x = 0
     y = 1
-	prerequisite = { focus = LBA_integrate_the_Camicie_Nere }
-	prerequisite = { focus = LBA_ensure_no_counter_coup }
+	prerequisite = { focus = LBA_smuggle_Italo_Balbo }
+	available = {
+			NOT = {
+				has_character = LBA_grand_council
+			}
+			has_government = ultra_nationalism
+		}
     completion_reward = {
 		add_political_power = 125
 		add_stability = -0.05
@@ -3603,16 +3615,6 @@ focus = {
 }
 
 focus = {
-    id = LBA_6
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_3
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_3 focus = LBA_4 }
-    completion_reward = { }
-}
-
-focus = {
     id = LBA_7
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
     relative_position_id = LBA_4
@@ -3628,17 +3630,7 @@ focus = {
     relative_position_id = LBA_5
     x = 0
     y = 1
-    prerequisite = { focus = LBA_5 focus = LBA_6 }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_9
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_6
-    x = 0
-    y = 1
-    prerequisite = { focus = LBA_5 focus = LBA_6 focus = LBA_7 }
+    prerequisite = { focus = LBA_5 }
     completion_reward = { }
 }
 
@@ -3648,7 +3640,7 @@ focus = {
     relative_position_id = LBA_7
     x = 0
     y = 1
-    prerequisite = { focus = LBA_6 focus = LBA_7 }
+    prerequisite = { focus = LBA_7 }
     completion_reward = { }
 }
 
@@ -3658,7 +3650,7 @@ focus = {
     relative_position_id = LBA_8
     x = 1
     y = 1
-    prerequisite = { focus = LBA_8 focus = LBA_9 }
+    prerequisite = { focus = LBA_8 focus = LBA_integrate_the_Camicie_Nere }
     completion_reward = { }
 }
 
@@ -3668,7 +3660,7 @@ focus = {
     relative_position_id = LBA_10
     x = -1
     y = 1
-    prerequisite = { focus = LBA_9 focus = LBA_10 }
+    prerequisite = { focus = LBA_integrate_the_Camicie_Nere  focus = LBA_10 }
     completion_reward = { }
 }
 
@@ -3723,16 +3715,6 @@ focus = {
 }
 
 focus = {
-    id = LBA_18
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_15
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_15 focus = LBA_16 }
-    completion_reward = { }
-}
-
-focus = {
     id = LBA_19
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
     relative_position_id = LBA_16
@@ -3748,17 +3730,7 @@ focus = {
     relative_position_id = LBA_17
     x = 0
     y = 1
-    prerequisite = { focus = LBA_17 focus = LBA_18 }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_21
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_18
-    x = 0
-    y = 1
-    prerequisite = { focus = LBA_17 focus = LBA_18 focus = LBA_19 }
+    prerequisite = { focus = LBA_17  }
     completion_reward = { }
 }
 
@@ -3768,7 +3740,7 @@ focus = {
     relative_position_id = LBA_19
     x = 0
     y = 1
-    prerequisite = { focus = LBA_18 focus = LBA_19 }
+    prerequisite = { focus = LBA_19 }
     completion_reward = { }
 }
 
@@ -3806,33 +3778,36 @@ focus = {
 
 
 focus = {
-    id = LBA_26
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_never_again_a_shore
+    icon = GFX_Libyan_Flag_Raised_Neutrality
     relative_position_id = LBA_13
     x = 3
-    y = 1
-    prerequisite = { focus = LBA_13 }
-	prerequisite = { focus = LBA_25 }
-    completion_reward = { }
+    y = -1
+    prerequisite = { focus = LBA_21 }
+	prerequisite = { focus = LBA_integrate_the_Camicie_Nere }
+	prerequisite = { focus = LBA_20 focus = LBA_10 }
+    completion_reward = {
+		add_ideas = LBA_never_again_a_shore_idea
+	 }
 }
 
 focus = {
     id = LBA_27
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_26
+    relative_position_id = LBA_never_again_a_shore
     x = -1
     y = 1
-    prerequisite = { focus = LBA_26}
+    prerequisite = { focus = LBA_never_again_a_shore}
     completion_reward = { }
 }
 
 focus = {
     id = LBA_28
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_26
+    relative_position_id = LBA_never_again_a_shore
     x = 1
     y = 1
-    prerequisite = { focus = LBA_26}
+    prerequisite = { focus = LBA_never_again_a_shore}
     completion_reward = { }
 }
 

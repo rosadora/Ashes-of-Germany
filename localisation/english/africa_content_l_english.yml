@@ -336,9 +336,12 @@
  breach_italian_ties:0 "Break Italian Ties"
  LBA_breach_Italian_Ties:0 "Break All Italian Ties"
  LBA_breach_Italian_Ties_desc:0 "In order to ensure we are not looked down on by the italians as just another remnant of fascism, we must breach our current ties with the Italian Nations. Although it may be overkill, it is a neccessity to ensure they know we will not just bow under them if they ever attempt to re-invade our nation."
- LBA_construct_the_Via_Balbia:0 "Construct the Via Balbia"
- LBA_construct_the_Via_Balbia_desc:0 "The Via Balbia, already under construction under Benito Mussolini, is now in a position where it can be completed. Upon us completing the railroad, it will allow us to start shipping international goods into the country without the need of naval resources."
- Via_Balbia_Construction:0 "Via Balbio Constructed"
+ LBA_construct_the_Via_Balbia:0 "Construct the Strada Litoranea Libica"
+ LBA_construct_the_Via_Balbia_desc:0 "The Strada Litoranea Libica, already under construction under Benito Mussolini, is now in a position where it can be completed. Upon us completing the railroad, it will allow us to start shipping international goods into the country without the need of naval resources."
+ Via_Balbia_Construction:0 "Strada Litoranea Libica Constructed"
+ LBA_never_again_a_shore:0 "Never Again a Shore"
+ LBA_never_again_a_shore_desc:0 "Although the dreams of a 'Fourth Shore' were popular amongst the people, now that Mussolini is no longer the leader of Italy, there is no point in pursuing to align with a force that we cannot trust. Because of this, our dreams must end and we must ensure our independance on a long-term scale."
+ LBA_never_again_a_shore_idea:0 "Never Again a Shore"
 
 
   #EVENTS#
@@ -384,3 +387,5 @@
  ETH_develop_cheap_guns_desc:0 "Ethiopia isn't exactly a resource-filled nation, due to this, we must research how to make our gun production cheaper to ensure we are able to produce the same amount of weapons as our colonial neighbors."
  ETH_Victory_against_Italy:0 "Victory against Italy"
  ETH_Victory_against_Italy_desc:0 "Against all odds, we have managed to hold out against the Italian onslaught, we can now focus on other politics now that we are out of our existential crisis."
+ ETH_rally_the_people:0 "Rally the People"
+ ETH_rally_the_people_desc:0 "Italy, already being on the brink of collapse, is now in a position where all we must do is Hold out. To better ourselves, we can rally our people to secure our front long enough to hold out against the collapsing menace."
