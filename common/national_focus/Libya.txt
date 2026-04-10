@@ -2684,6 +2684,8 @@ focus_tree = {
 					right_side = ITA_balbo_side
 					}
 				}
+
+				set_global_flag = aggressive_LBA
 				
 				mark_focus_tree_layout_dirty = yes
 			}
@@ -2764,6 +2766,7 @@ focus_tree = {
 					id = LBA_events.33
 					days = 2
 				}
+							set_global_flag = aggressive_LBA
 			}
 			if = {
 				limit = {
@@ -2772,6 +2775,12 @@ focus_tree = {
 				country_event = {
 					id = LBA_events.27
 					days = 3
+				}
+			}
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Divisione di Fanteria"
+					disband = yes
 				}
 			}
 		 }
@@ -2831,7 +2840,6 @@ focus_tree = {
 				retire_character = ITA_italo_balbo
 			}
 			mark_focus_tree_layout_dirty = yes
-			set_global_flag = aggressive_LBA
 			}
 		
 		 }
@@ -3174,13 +3182,14 @@ focus_tree = {
 		cost = 7
 		x = 1
 		y = 1
-		relative_position_id = LBA_3
+		relative_position_id = LBA_finish_electrification_in_Tripoli_FASCISM
 		prerequisite = {
-			focus = LBA_3
-			focus = LBA_4
+			focus = LBA_finish_electrification_in_Tripoli_FASCISM
+			focus = LBA_desert_development
 		}
 		available = {
 			has_completed_focus = LBA_smuggle_Italo_Balbo
+			has_government = ultra_nationalism
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -3198,6 +3207,9 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = LBA_empower_Camicie_Nere
+		}
+		available = {
+			has_government = ultra_nationalism
 		}
 		relative_position_id = LBA_empower_Camicie_Nere
 		completion_reward = {
@@ -3217,9 +3229,9 @@ focus_tree = {
 		cost = 7
 		x = 1
 		y = 1
-		relative_position_id = LBA_15
+		relative_position_id = LBA_modernize_aircraft
 		prerequisite = {
-			focus = LBA_15
+			focus = LBA_modernize_aircraft
 			focus = LBA_16
 		}
 		completion_reward = {
@@ -3231,15 +3243,19 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LBA_21
-		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		id = LBA_a_libyan_airforce
+		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility
 		prerequisite = {
 			focus = LBA_reform_Italian_african_administrative_force
 		}
 		x = 0
 		y = 1
+		cost = 7
 		relative_position_id = LBA_reform_Italian_african_administrative_force
-		completion_reward = { }
+		completion_reward = {
+			air_experience = 30
+			add_ideas = LBA_air_force_balbo_1
+		 }
 	}
 
 	focus = {
@@ -3257,6 +3273,7 @@ focus_tree = {
 				ideology = fascism
 				popularity = -0.15
 			}
+			add_stability = 0.05
 			news_event = {
 				id = LBA_events.28
 				days = 3
@@ -3411,7 +3428,7 @@ focus = {
     id = LBA_breach_Italian_Ties
     icon = GFX_focus_attack_italy
 	relative_position_id = LBA_smuggle_Italo_Balbo
-    x = 0
+    x = 2
     y = 1
 	prerequisite = { focus = LBA_smuggle_Italo_Balbo }
 	available = {
@@ -3553,6 +3570,150 @@ focus = {
 				modifier = Via_Balbia_Construction
 			}
 		}
+		build_railway = {
+			level = 2
+			path = { 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 7164 }
+			start_province = 11921
+			target_province = 7164
+		}
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = train_tech
+			}
+	 }
+}
+
+focus = {
+    id = LBA_finish_electrification_in_Tripoli_FASCISM
+    icon = GFX_generic_electrification
+    relative_position_id = LBA_construct_the_Via_Balbia
+    x = -1
+    y = 1
+	cost = 7
+	available = {
+		controls_state = 448
+	}
+	bypass = {
+		NOT = {
+			owns_state = 448
+		}
+	}
+    prerequisite = { focus = LBA_construct_the_Via_Balbia }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_desert_development
+    icon = GFX_focus_generic_develop_libya
+    relative_position_id = LBA_construct_the_Via_Balbia
+    x = 1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_construct_the_Via_Balbia }
+    completion_reward = {
+		if = {
+			limit = { 
+				controls_state = 661
+			}
+			661 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		if = {
+			limit = { 
+				controls_state = 661
+			}
+			662 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		if = {
+			limit = { 
+				controls_state = 661
+			}
+			663 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_5
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_finish_electrification_in_Tripoli_FASCISM
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_finish_electrification_in_Tripoli_FASCISM }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_develop_desert_logistics
+    icon = GFX_focus_PER_desert_training
+    relative_position_id = LBA_desert_development
+    x = 1
+    y = 1
+	cost = 7
+	mutually_exclusive = {
+		focus = LBA_focus_on_air_logistics
+	}
+    prerequisite = { focus = LBA_desert_development }
+    completion_reward = {
+		add_timed_idea = {
+			idea = LBA_less_attrition
+			days = 760
+		}
+	 }
+}
+
+focus = {
+    id = LBA_8
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_5
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_5 }
+    completion_reward = {
+	 }
+}
+
+focus = {
+    id = LBA_national_logistic_programs
+    icon = GFX_goal_generic_research_logistics
+    relative_position_id = LBA_develop_desert_logistics
+    x = 0
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_develop_desert_logistics }
+    completion_reward = {
+		add_tech_bonus = {
+			uses = 1
+			category = train_tech
+			bonus = 0.5
+		}
 		450 = {
 			add_building_construction = {
 				type = supply_node
@@ -3575,73 +3736,7 @@ focus = {
 				level = 1
 			}
 		}
-		build_railway = {
-			level = 2
-			path = { 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 7164 }
-			start_province = 11921
-			target_province = 7164
-		}
 	 }
-}
-
-focus = {
-    id = LBA_3
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_construct_the_Via_Balbia
-    x = -1
-    y = 1
-    prerequisite = { focus = LBA_construct_the_Via_Balbia }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_4
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_construct_the_Via_Balbia
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_construct_the_Via_Balbia }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_5
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_3
-    x = -1
-    y = 1
-    prerequisite = { focus = LBA_3 }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_7
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_4
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_4 }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_8
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_5
-    x = 0
-    y = 1
-    prerequisite = { focus = LBA_5 }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_10
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_7
-    x = 0
-    y = 1
-    prerequisite = { focus = LBA_7 }
-    completion_reward = { }
 }
 
 focus = {
@@ -3657,10 +3752,10 @@ focus = {
 focus = {
     id = LBA_12
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_10
+    relative_position_id = LBA_national_logistic_programs
     x = -1
     y = 1
-    prerequisite = { focus = LBA_integrate_the_Camicie_Nere  focus = LBA_10 }
+    prerequisite = { focus = LBA_integrate_the_Camicie_Nere  focus = LBA_national_logistic_programs }
     completion_reward = { }
 }
 
@@ -3675,43 +3770,95 @@ focus = {
 }
 
 focus = {
-    id = LBA_14
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_modernize_the_Castel_Benito
+    icon = GFX_goal_generic_build_airforce
     relative_position_id = LBA_breach_Italian_Ties
     x = 3
     y = 1
+	cost = 7
+	available = {
+		controls_state = 448
+	}
+	bypass = {
+		NOT = {
+				controls_state = 448
+		}
+	}
     prerequisite = { focus = LBA_breach_Italian_Ties }
-    completion_reward = { }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+			}
+		}
+	 }
 }
 
 focus = {
-    id = LBA_15
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_14
+    id = LBA_modernize_aircraft
+    icon = GFX_focus_generic_air_research_boost
+    relative_position_id = LBA_modernize_the_Castel_Benito
     x = -1
     y = 1
-    prerequisite = { focus = LBA_14 }
-    completion_reward = { }
+	cost = 7
+    prerequisite = { focus = LBA_modernize_the_Castel_Benito }
+    completion_reward = {
+		add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = air_doctrine
+			}
+
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = light_air
+			}
+
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = medium_air
+			}
+
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = heavy_air
+			}
+	 }
 }
 
 focus = {
     id = LBA_16
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_14
+    relative_position_id = LBA_modernize_the_Castel_Benito
     x = 1
     y = 1
-    prerequisite = { focus = LBA_14 }
+	cost = 7
+    prerequisite = { focus = LBA_modernize_the_Castel_Benito }
     completion_reward = { }
 }
 
 focus = {
-    id = LBA_17
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_15
+    id = LBA_focus_on_air_logistics
+    icon = GFX_generic_air_logistic
+    relative_position_id = LBA_modernize_aircraft
     x = -1
     y = 1
-    prerequisite = { focus = LBA_15 }
-    completion_reward = { }
+	mutually_exclusive = {
+		focus = LBA_develop_desert_logistics
+	}
+	cost = 7
+    prerequisite = { focus = LBA_modernize_aircraft }
+    completion_reward = {
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = transport_planes_cat
+			}
+	 }
 }
 
 focus = {
@@ -3725,13 +3872,47 @@ focus = {
 }
 
 focus = {
-    id = LBA_20
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_17
+    id = LBA_modernize_eastern_airfields
+    icon = GFX_SOV_modernize_aircraft_facilities_ccp_2d_sov_compatibility
+    relative_position_id = LBA_focus_on_air_logistics
     x = 0
     y = 1
-    prerequisite = { focus = LBA_17  }
-    completion_reward = { }
+	cost = 7
+	bypass = {
+		NOT = {
+			controls_state = 450
+			controls_state = 451
+		}
+	}
+    prerequisite = { focus = LBA_focus_on_air_logistics  }
+    completion_reward = {
+		if = {
+			limit = {
+				controls_state = 450
+			}
+			450 = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+			}
+		}
+		}
+
+		if = {
+			limit = {
+				controls_state = 450
+			}
+			451 = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+			}
+		}
+		}
+		
+
+		
+	 }
 }
 
 focus = {
@@ -3747,10 +3928,13 @@ focus = {
 focus = {
     id = LBA_23
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_20
+    relative_position_id = LBA_modernize_eastern_airfields
     x = 1
     y = 1
-    prerequisite = { focus = LBA_20 focus = LBA_21 }
+    prerequisite = { focus = LBA_modernize_eastern_airfields }
+	prerequisite = {
+	 focus = LBA_a_libyan_airforce
+	}
     completion_reward = { }
 }
 
@@ -3760,7 +3944,10 @@ focus = {
     relative_position_id = LBA_22
     x = -1
     y = 1
-    prerequisite = { focus = LBA_21 focus = LBA_22 }
+	prerequisite = {
+	 focus = LBA_a_libyan_airforce
+	}
+    prerequisite = { focus = LBA_22 }
     completion_reward = { }
 }
 
@@ -3783,7 +3970,10 @@ focus = {
     relative_position_id = LBA_13
     x = 3
     y = -1
-    prerequisite = { focus = LBA_21 }
+	available = {
+		has_government = ultra_nationalism
+	}
+    prerequisite = { focus = LBA_a_libyan_airforce }
 	prerequisite = { focus = LBA_integrate_the_Camicie_Nere }
 	prerequisite = { focus = LBA_20 focus = LBA_10 }
     completion_reward = {
@@ -3792,33 +3982,83 @@ focus = {
 }
 
 focus = {
-    id = LBA_27
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_request_Tunisa
+    icon = GFX_goal_Tunisia_Question
     relative_position_id = LBA_never_again_a_shore
     x = -1
     y = 1
+	cost = 7
     prerequisite = { focus = LBA_never_again_a_shore}
-    completion_reward = { }
+    completion_reward = {
+		if = {
+				limit = {
+					TUN = {
+						NOT = {
+							is_puppet_of = FRA
+						}
+					}
+					TUN = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+			}
+				}
+			}
+
+			if = {
+				limit = {
+					TUN = {
+						is_puppet_of = FRA
+					}
+				}
+				FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+				}
+			}
+	 }
 }
 
 focus = {
-    id = LBA_28
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_invade_Sicily
+    icon = GFX_generic_attack_sicily
     relative_position_id = LBA_never_again_a_shore
     x = 1
     y = 1
+	bypass = {
+		owns_state = 115
+	}
+	cost = 7
     prerequisite = { focus = LBA_never_again_a_shore}
-    completion_reward = { }
+    completion_reward = {
+		every_country = {
+			limit = {
+				owns_state = 115
+			}
+			LBA = {
+				create_wargoal = {
+					target = PREV
+					type = take_state_focus
+					
+				}
+			}
+		}
+	 }
 }
 
 focus = {
     id = LBA_29
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_27
+    relative_position_id = LBA_request_Tunisa
     x = 1
     y = 1
-    prerequisite = { focus = LBA_27 focus = LBA_28 }
-    completion_reward = { }
+    prerequisite = { focus = LBA_request_Tunisa focus = LBA_invade_Sicily }
+    completion_reward = {
+
+	 }
 }
 
 

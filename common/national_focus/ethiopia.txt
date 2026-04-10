@@ -445,7 +445,10 @@ focus_tree = {
 		y = 1
 		
 		cost = 5
-		available = { has_war = yes }		
+
+		bypass = {
+			has_war = no
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
@@ -558,11 +561,12 @@ focus_tree = {
 						owner = ROOT
 					}
 				}
-			}
-			news_event = {
+				news_event = {
 				id = LBA_events.32
 				hours = 16
-			}		
+			}
+			}
+					
 		}
 	}
 

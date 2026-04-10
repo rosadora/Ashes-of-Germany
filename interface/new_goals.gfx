@@ -2156,4 +2156,24 @@ spriteTypes = {
 		name = "GFX_imprison_Italo_Balbo"
 		texturefile = "gfx/interface/goals/Imrpison_Italo_Balbo.dds"
 	}
+
+	spriteType = {
+		name = "GFX_generic_air_logistic"
+		texturefile = "gfx/interface/goals/generic_air_drop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_electrification"
+		texturefile = "gfx/interface/goals/construct_electrical_infrastructure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_attack_sicily"
+		texturefile = "gfx/interface/goals/Generic_Attack_Sicily.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_research_logistics"
+		texturefile = "gfx/interface/goals/research_logistics_generic.dds"
+	}
 }

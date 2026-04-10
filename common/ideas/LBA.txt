@@ -576,6 +576,25 @@ ideas = {
 				attack_bonus_against = 0.15
 			}
 		}
+
+		LBA_air_force_balbo_1 = {
+			allowed = {
+				has_government = ultra_nationalism
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_aircraft_support
+
+			removal_cost = -1
+			modifier = {
+				air_accidents_factor = -0.15
+				air_ace_generation_chance_factor = 0.15
+				production_cost_air_base_factor = -0.15
+			}
+		}
 	}
 	hidden_ideas = {
 		camicie_nere_LBA_2 = {

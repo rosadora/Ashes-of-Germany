@@ -1083,7 +1083,6 @@ country_event = {
 			ideology = communism
 			popularity = 0.05
 		}
-		ETH_provisional_government_effect = yes
 	}
 	# Imprison HS
 	option = {
@@ -1103,7 +1102,6 @@ country_event = {
 		ETH_haile_selassie = {
 			set_character_flag = ETH_imprisoned_flag
 		}
-		ETH_provisional_government_effect = yes
 	}
 }
 
