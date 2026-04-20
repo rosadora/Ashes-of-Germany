@@ -422,6 +422,15 @@
  ETH_anarchist_commune_idea:0 "Anarchist Council"
  ETH_anarchist_commune_idea_desc:0 "Ethiopia, being under a semi-anarchist council, has begun to internally collapse."
 
+ #ETHIOPIA COLLAPSE#
+ ETH_ethiopian_colapse:0 "Ethiopian Collapse"
+ Invasion_Of_Ethiopia_CL:0 "Strike Ethiopia"
+ Invasion_Of_Afar_CL:0 "Strike Aussa"
+ Invasion_Of_SID_CL:0 "Strike Sidama"
+ Invasion_Of_ERI_CL:0 "Strike Eritrea"
+ Invasion_Of_QEM_CL:0 "Strike The Qwara"
+ 
+
  #ETHIOPIA IDEOLOGY#
  ethiopian_commune:0 "Ethiopian Commune"
  ethiopian_commune_desc:0 "This is a commune created by the Ethiopian People, it is inspired by both communist ideals and ideas of the people. Because of this, the nation's stability has begun taking a hit because of the way the commune is structured among individual power instead of a centralized authority."
