@@ -12600,6 +12600,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 		}
 
@@ -12608,12 +12609,40 @@ form_horn_of_africa_africa_category = {
 				limit = {
 					original_tag = ETH
 				}
+				has_completed_focus = ETH_develop_the_horn_of_africa
 			}
-
+			ELSE_IF = {
+				limit = {
+					OR = {
+						original_tag = AFA
+						original_tag = ORO
+						original_tag = QEM
+						original_tag = TIG
+						original_tag = BEG
+						original_tag = HAR
+						original_tag = SID
+						original_tag = GBA
+					}
+				}
+				has_completed_focus = HOA_proclaim_east-african_hegemony
+			}
+			OR = {
 				original_tag = ETH # Ethiopia
-			
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
 			NOT = { has_global_flag = form_horn_of_africa_flag }
 
+			has_dlc = "By Blood Alone"
 		}
 
 		available = {
@@ -12621,6 +12650,7 @@ form_horn_of_africa_africa_category = {
 				limit = {
 					original_tag = ETH
 				}
+				has_completed_focus = ETH_develop_the_horn_of_africa
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -12638,7 +12668,55 @@ form_horn_of_africa_africa_category = {
 				controls_state = 559 # Somaliland
 				controls_state = 844 # Jubaland
 			}
-			
+			ELSE_IF = {
+				limit = {
+					OR = {
+						original_tag = AFA
+						original_tag = ORO
+						original_tag = QEM
+						original_tag = TIG
+						original_tag = BEG
+						original_tag = HAR
+						original_tag = SID
+						original_tag = GBA
+					}
+				}
+				has_completed_focus = HOA_proclaim_east-african_hegemony
+				controls_state = 842 # Tigray
+				controls_state = 843 # Wello
+				controls_state = 908 # Afar
+				controls_state = 841 # Begemder
+				controls_state = 840 # Gojjam
+				controls_state = 839 # Welega
+				controls_state = 838 # Illubabor-Kaffa
+				controls_state = 837 # Sidamo
+				controls_state = 271 # Shewa
+				controls_state = 836 # Bale
+				controls_state = 835 # Hararghe
+				controls_state = 550 # Eritrea
+				controls_state = 268 # French Somaliland
+				controls_state = 269 # British Somaliland
+				controls_state = 559 # Somaliland
+				controls_state = 844 # Jubaland
+			}
+			ELSE = {
+				controls_state = 842 # Tigray
+				controls_state = 843 # Wello
+				controls_state = 908 # Afar
+				controls_state = 841 # Begemder
+				controls_state = 840 # Gojjam
+				controls_state = 839 # Welega
+				controls_state = 838 # Illubabor-Kaffa
+				controls_state = 837 # Sidamo
+				controls_state = 271 # Shewa
+				controls_state = 836 # Bale
+				controls_state = 835 # Hararghe
+				controls_state = 550 # Eritrea
+				controls_state = 268 # French Somaliland
+				controls_state = 269 # British Somaliland
+				controls_state = 559 # Somaliland
+				controls_state = 844 # Jubaland
+			}
 		}
 
 		complete_effect = {
@@ -12708,7 +12786,220 @@ form_horn_of_africa_africa_category = {
 			base = 200
 		}
 	}
+
+	conquer_socotra = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = ETH # Ethiopia
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = ETH # Ethiopia
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
+			
+			has_global_flag = form_horn_of_africa_flag
+			NOT = { has_global_flag = socotra_conquered_flag }
+			has_dlc = "By Blood Alone"
+		}
+
+		available = {
+			controls_state = 906 # Socotra
+		}
+
+		complete_effect = {
+		
+			# Socotra
+			906 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				
+				set_global_flag = socotra_conquered_flag
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
 	}
+
+
+	integrate_the_south = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = ETH # Ethiopia
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = ETH # Ethiopia
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
+			
+			has_global_flag = form_horn_of_africa_flag
+			NOT = { has_global_flag = integrate_the_south_flag }
+
+		}
+
+		available = {
+			controls_state = 903 # Garissa
+			controls_state = 547 # Nairobi
+			controls_state = 905 # Mombasa
+			controls_state = 904 # Nyanza-Rift Valley
+			controls_state = 548 # Uganda
+		}
+
+		complete_effect = {
+		
+			# Garissa
+			903 = { add_core_of = ROOT }
+
+			# Nairobi
+			547 = { add_core_of = ROOT }
+
+			# Mombasa
+			905 = { add_core_of = ROOT }
+
+			# Nyanza-Rift Valley
+			904 = { add_core_of = ROOT }
+
+			# Uganda
+			548 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				
+				set_global_flag = integrate_the_south_flag
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+
+	the_upper_nile = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = ETH # Ethiopia
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = ETH # Ethiopia
+				original_tag = ERI # Eritrea
+				original_tag = SOM # Somalia
+				original_tag = TIG # Tigray
+				original_tag = QEM # Qemant State
+				original_tag = AFA # Afar
+				original_tag = HAR # Harar
+				original_tag = ORO # Oromia
+				original_tag = SID # Sidamo
+				original_tag = GBA # Gambela
+				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
+			}
+			
+			has_global_flag = form_horn_of_africa_flag
+			NOT = { has_global_flag = the_upper_nile_flag }
+
+			has_dlc = "By Blood Alone"
+		}
+
+		available = {
+			controls_state = 886 # Blue Nile
+			controls_state = 884 # Upper Nile
+		}
+
+		complete_effect = {
+		
+			# Blue Nile
+			886 = { add_core_of = ROOT }
+
+			# Upper Nile
+			884 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				
+				set_global_flag = the_upper_nile_flag
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+}
+
 
 	conquer_socotra = { 
 

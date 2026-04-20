@@ -23,6 +23,7 @@ recruit_character = ETH_desta_damtew
 recruit_character = ETH_ras_kassa 
 # Political Advisors
 recruit_character = ETH_makonnen_endelkatchew
+recruit_character = ETH_anarchist_council #Was DLC, moved it here tho.#
 # Military Advisors
 recruit_character = ETH_john_robinson
 
@@ -66,7 +67,7 @@ IF = {
 	recruit_character = ETH_senedu_gebru
 	recruit_character = ETH_random_sud_advisor
 	recruit_character = ETH_random_som_advisor
-	recruit_character = ETH_anarchist_council
+
 	recruit_character = ETH_prov_mil_admin
 	
 	# Military Advisors

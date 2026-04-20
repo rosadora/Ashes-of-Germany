@@ -431,6 +431,11 @@ ideologies = {
 
 			anarcho_nihilism = {
 			}
+
+			ethiopian_commune = {
+				color = { 144 103 211 }
+				can_be_randomly_selected = no
+			}
 			
 		}
 

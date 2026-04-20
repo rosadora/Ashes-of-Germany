@@ -2176,4 +2176,14 @@ spriteTypes = {
 		name = "GFX_goal_generic_research_logistics"
 		texturefile = "gfx/interface/goals/research_logistics_generic.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_generic_defend_shores"
+		texturefile = "gfx/interface/goals/generic_fortified_shore.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_develop_desert"
+		texturefile = "gfx/interface/goals/develop_desert.dds"
+	}
 }

@@ -83,3 +83,274 @@ ETH_triumph_over_mussolini = {
         }
     }
 }
+
+ETH_ethiopian_colapse = {
+    Invasion_Of_Ethiopia_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = ETH
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ORO
+            tag = SID
+            tag = AFA
+            tag = TIG
+            tag = QEM
+            tag = ERI
+            tag = GBA
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = ETH
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+        modifier = {
+            factor = 4
+            has_manpower > 100000
+        }
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = ETH
+            type = annex_everything
+        }
+       }
+    }
+
+    Invasion_Of_Afar_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = AFA
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ORO
+            tag = SID
+            tag = ETH
+            tag = TIG
+            tag = QEM
+            tag = ERI
+            tag = GBA
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = AFA
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = AFA
+            type = annex_everything
+        }
+       }
+    }
+
+     Invasion_Of_ORO_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = ORO
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ETH
+            tag = SID
+            tag = AFA
+            tag = TIG
+            tag = QEM
+            tag = ERI
+            tag = GBA
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = ORO
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = ORO
+            type = annex_everything
+        }
+       }
+    }
+
+     Invasion_Of_SID_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = SID
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ORO
+            tag = ETH
+            tag = AFA
+            tag = TIG
+            tag = QEM
+            tag = ERI
+            tag = GBA
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = SID
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = SID
+            type = annex_everything
+        }
+       }
+    }
+
+     Invasion_Of_ERI_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = ERI
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ETH
+            tag = SID
+            tag = AFA
+            tag = TIG
+            tag = ORO
+            tag = QEM
+            tag = GBA
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = ERI
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = ERI
+            type = annex_everything
+        }
+       }
+    }
+
+     Invasion_Of_QEM_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = QEM
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ETH
+            tag = SID
+            tag = AFA
+            tag = TIG
+            tag = ORO
+            tag = ERI
+            tag = GBA
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = QEM
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = QEM
+            type = annex_everything
+        }
+       }
+    }
+
+     Invasion_Of_GBA_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = GBA
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ETH
+            tag = SID
+            tag = AFA
+            tag = TIG
+            tag = QEM
+            tag = ERI
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = GBA
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = GBA
+            type = annex_everything
+        }
+       }
+    }
+}

@@ -82,6 +82,15 @@ focus_tree = {
 			factor = 1
 		}
 
+		offset = {
+			trigger = {
+				NOT = {
+					has_dlc = "By Blood Alone"
+				}
+			}
+			x = -2
+		}
+
 		available = {
             NOT = {
                 has_war_with = ITA
@@ -168,6 +177,9 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = ITA
+			}
 		}
 		
 		bypass = {
@@ -426,6 +438,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		allow_branch = {
+			has_dlc = "By Blood Alone"
 		}
 
 		completion_reward = {

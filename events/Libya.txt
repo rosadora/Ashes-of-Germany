@@ -1073,6 +1073,11 @@ country_event = {
 	desc = BBA_ethiopia_communist_events.05.desc
 	picture = GFX_report_event_gre_city_devastated
 	is_triggered_only = yes
+	immediate = {
+		set_politics = {
+			ruling_party = communism
+		}
+	}
 	# Exile HS
 	option = {
 		name = BBA_ethiopia_communist_events.05.a
@@ -1149,6 +1154,427 @@ country_event = {
 		}
 		promote_character = LBA_italo_balbo
 		}
+		
+	}
+}
+
+country_event = {
+	id = LBA_events.34
+	title = "Ethiopia Collapses!"
+	desc = "Following the formation of our council, the nation has slowly begun to collapse. Because of this, unrest has risen and the people has declared their own claims across the nation. If we stand down, it will de-escelate, but, we will lose most of our"
+	picture = GFX_report_event_spain_civil_war_soldiers
+
+	immediate = {
+		set_global_flag = Ethiopia_Collapsed
+		ORO = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+
+		SID = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+
+		AFA = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+		TIG = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+
+		QEM = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+		ERI = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+		GBA = {
+			division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	division_names_group = ETH_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+	}
+		}
+		if = {
+			limit = {
+				owns_state = 836
+			}
+			836 = {
+				transfer_state_to = ORO
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ORO
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ORO
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ORO
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 837
+			}
+			837 = {
+				transfer_state_to = SID
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = SID
+			}
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = SID
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 908
+			}
+			908 = {
+				transfer_state_to = AFA
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = AFA
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = AFA
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 843
+			}
+			843 = {
+				transfer_state_to = AFA
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = AFA
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = AFA
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 842
+			}
+			842 = {
+				transfer_state_to = TIG
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = TIG
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = TIG
+			}
+		}
+	}
+
+		if = {
+			limit = {
+				owns_state = 835
+			}
+			835 = {
+				transfer_state_to = ORO
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ORO
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ORO
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ORO
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 841
+			}
+			841 = {
+				transfer_state_to = QEM
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = QEM
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = QEM
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = QEM
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 550
+			}
+			550 = {
+				transfer_state_to = ERI
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ERI
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ERI
+			}
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = ERI
+			}
+			}
+		}
+
+		if = {
+			limit = {
+				owns_state = 838
+			}
+			838 = {
+				transfer_state_to = GBA
+				create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = GBA
+			}
+
+			create_unit = {
+				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
+                  owner = GBA
+			}
+			
+			}
+			
+				 
+
+		}
+
+
+
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We Must Stand Down..."
+	}
+
+	option = {
+		name = "This Will Not Stand!"
+		if = {
+			limit = {
+				GBA = {
+					exists = yes
+				}
+			 }
+			 declare_war_on = {
+			target = GBA
+			type = take_core_state
+		}
+		}
+
+		if = {
+			limit = {
+				AFA = {
+					exists = yes
+				}
+			 }
+			 declare_war_on = {
+			target = AFA
+			type = take_core_state
+		}
+		}
+
+		if = {
+			limit = {
+				ORO = {
+					exists = yes
+				}
+			 }
+			 declare_war_on = {
+			target = ORO
+			type = take_core_state
+		}
+		}
+		
+		if = {
+			limit = {
+				ERI = {
+					exists = yes
+				}
+			 }
+			 declare_war_on = {
+			target = ERI
+			type = take_core_state
+		}
+		}
+		
+		if = {
+			limit = { 
+				QEM = {
+					exists = yes
+				}
+			}
+			declare_war_on = {
+			target = QEM
+			type = take_core_state
+		}
+		}
+
+		if = {
+			limit = {
+				TIG = {
+					exists = yes
+				}
+			 }
+			 declare_war_on = {
+			target = TIG
+			type = take_core_state
+		}
+		}
+
+		if = {
+			limit = {
+				SID = {
+					exists = yes
+				}
+			 }
+			 declare_war_on = {
+			target = SID
+			type = take_core_state
+		}
+		}
+		
+		
+		
 		
 	}
 }

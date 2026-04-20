@@ -365,6 +365,14 @@
  LBA_national_logistic_programs_desc:0 "In order to ensure we are able to feed our armies, we must develop our supply nodes and farms to ensure not one soldier starves. "
  LBA_modernize_eastern_airfields:0 "Modernize the Eastern Airfields"
  LBA_modernize_eastern_airfields_desc:0 "The Eastern Libyan Airfields, although not as large as the Castel Bablo, are still important air fields to the security of our nation. Because of this, we must ensure they are up to date and able to accomodate our aircraft."
+ LBA_re-organize_the_army:0 "Re-Organize the Army"
+ LBA_re-organize_the_army_desc:0 "Although our army is in a fighting stance, it must be re-organized into an army that dosent fully resemble the Italian Army."
+ LBA_a_Libyan_navy:0 "Towards A Libyan Navy"
+ LBA_a_Libyan_navy_desc:0 "Now that Tripoli is fully electrified, we can now focus on developing a new naval foothold in the Meditteranean off of our coasts. The Regia Marina from the Italian Nation already give us naval dominance along our coasts, however, if we are to last as a nation, we must ensure our security across the Meditteranean Sea."
+ LBA_electrify_the_east: "Electrify the East"
+ LBA_electrify_the_east_desc:0 "Although our capital is now electrified, there are 2 major cities in the east that still are without electrification. In order to say we are moving into the future, we must electrify these cities to ensure they do not fall behind the rest of Libya."
+ LBA_electrify_the_deserts:0 "Electrify the Deserts"
+ LBA_electrify_the_deserts_desc:0 "Although our priority lies in our cities, our deserts still are home to many people and must be developed. Although our resources can be devoted elsewhere, it is a neccesary step to move forward in our national survival."
 
   #EVENTS#
  
@@ -404,10 +412,16 @@
  ETH_accept_global_italian_refugees:0 "Accept Italian Refugees"
  ETH_accept_global_italian_refugees_desc:0 "In order for us to show to the world we are the right people to win this war, we must be the bigger country and accept Italian refugees from abroad."
  ETH_the_arsenal_of_independance:0 "Develop a New Arsenal"
- ETH_the_arsenal_of_independance_desc:0 "In order to survive after this war, we must create a new arsenal to ensure our army is prepared for any future wars."
+ ETH_the_arsenal_of_independance_desc:0 "In order to survive after the Italian invasion, we must create a new arsenal to ensure our army is prepared for any future wars against our neighbors."
  ETH_develop_cheap_guns:0 "Develop Cheap Guns"
- ETH_develop_cheap_guns_desc:0 "Ethiopia isn't exactly a resource-filled nation, due to this, we must research how to make our gun production cheaper to ensure we are able to produce the same amount of weapons as our colonial neighbors."
+ ETH_develop_cheap_guns_desc:0 "Ethiopia isn't exactly a resource-filled nation, due to this, we must research how to make our gun production cheaper to ensure we are able to produce the same amount of weapons as our colonial neighbors should they attempt invasion."
  ETH_Victory_against_Italy:0 "Victory against Italy"
  ETH_Victory_against_Italy_desc:0 "Against all odds, we have managed to hold out against the Italian onslaught, we can now focus on other politics now that we are out of our existential crisis."
  ETH_rally_the_people:0 "Rally the People"
  ETH_rally_the_people_desc:0 "Italy, already being on the brink of collapse, is now in a position where all we must do is Hold out. To better ourselves, we can rally our people to secure our front long enough to hold out against the collapsing menace."
+ ETH_anarchist_commune_idea:0 "Anarchist Council"
+ ETH_anarchist_commune_idea_desc:0 "Ethiopia, being under a semi-anarchist council, has begun to internally collapse."
+
+ #ETHIOPIA IDEOLOGY#
+ ethiopian_commune:0 "Ethiopian Commune"
+ ethiopian_commune_desc:0 "This is a commune created by the Ethiopian People, it is inspired by both communist ideals and ideas of the people. Because of this, the nation's stability has begun taking a hit because of the way the commune is structured among individual power instead of a centralized authority."

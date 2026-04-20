@@ -1022,6 +1022,50 @@ on_actions = {
 	}
 
 	on_daily = {
+
+		effect = {
+			if = {
+				limit = {
+					ETH = {
+						has_government = libertarian_socialism
+					}
+				 }
+				 add_ideas = ETH_anarchist_commune_idea
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					ETH = {
+						has_government = libertarian_socialism
+						has_stability > 5
+					}
+				 }
+				 ETH = {
+					country_event = {
+						id = LBA_events.34
+						hours = 3
+					}
+				 }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					ETH = {
+						NOT = {
+
+								has_government = libertarian_socialism
+						}
+					
+					}
+				 }
+				 remove_ideas = ETH_anarchist_commune_idea
+			}
+		}
+		
 		effect = {
 			if = {
 				limit = { 
@@ -1038,6 +1082,24 @@ on_actions = {
 					}
 				 }
 			}
+		}
+
+		effect = {
+			if = {
+
+			limit = {
+				AML = {
+					is_puppet_of = LBA
+				}
+			}
+
+			LBA = {
+				annex_country = {
+					target = AML
+					transfer_troops = yes
+				}
+			}
+		}
 		}
 
 		effect = {

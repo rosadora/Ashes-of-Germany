@@ -11,13 +11,25 @@ ETH_triumph_over_mussolini = {
 	visible = {
 	}
 }
-form_horn_of_africa_africa_category = {
 
-	icon = generic_formable_nations
+ETH_ethiopian_colapse = {
+	icon = GFX_decision_category_ETH_disband_chitet
 
-	picture = GFX_decision_cat_picture_form_the_horn_of_africa
-	
 	allowed = {
-		has_dlc = "By Blood Alone"
+		OR = {
+			tag = ETH
+			tag = AFA
+			tag = ORO
+			tag = SID
+			tag = TIG
+			tag = QEM
+			tag = ERI
+		}
+	}
+
+	priority = 1000
+
+	visible = {
+		
 	}
 }
