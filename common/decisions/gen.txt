@@ -432,6 +432,7 @@ gen_pick_a_side = {
 				has_completed_focus = YUG_a_world_to_liberate
 				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
 				has_completed_focus = JAP_seek_allies_in_the_west
+				has_completed_focus = PRE_realpolitik
 			}
 			OR = {
 				tag = HOL
@@ -464,6 +465,7 @@ gen_pick_a_side = {
 				tag = ISR
 				tag = YUG
 				tag = MON
+				tag = PRE
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -547,6 +549,7 @@ gen_pick_a_side = {
 				has_completed_focus = PAL_arabia_in_the_world_stage
 				has_completed_focus = PAL_pick_a_side
 				has_completed_focus = YUG_a_world_to_liberate
+				has_completed_focus = PRE_realpolitik
 			}
 			OR = {
 				tag = HOL
@@ -578,6 +581,7 @@ gen_pick_a_side = {
 				tag = PAL
 				tag = ISR
 				tag = YUG
+				TAG = PRE
 			        }
 			is_in_faction = no
 			is_puppet = no

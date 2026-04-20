@@ -268,6 +268,25 @@ all_under_red_heaven = {
 	}
 }
 
+my_son_is_an_onnagata = {
+	id = 3
+	
+	possible = {
+		difficulty > 1
+		tag = JAP
+	}
+	
+	happened = {
+		OR = {
+			has_government = classical_marxism
+			has_government = communism 
+			has_government = libertarian_socialism
+		}
+		has_completed_focus = JAP_revive_edo_culture
+		has_completed_focus = JAP_equal_civil_rights
+	}
+}
+
 ###########################
 ## 5 HARDCORE ACHIEVEMENTS
 #############################

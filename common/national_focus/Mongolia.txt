@@ -1375,7 +1375,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		  swap_ideas = {
-			remove_idea = pastoral_society
+			remove_idea = pastoral_society2
 			add_idea = pastoral_society3
 		  }
 		}
