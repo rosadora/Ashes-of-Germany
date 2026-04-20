@@ -381,5 +381,101 @@ ideas = {
 				ai_focus_aggressive_factor = 0.5
 			}
 		}
+		widespread_chaos = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = RAJ_partition_chaos_bad
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				political_power_factor = -0.3
+				consumer_goods_factor = 0.8
+			}
+		}
+		patriotic_socialism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = socialist_science_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		hunt_down_the_traitors = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_prisoner
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				stability_weekly = -0.002
+				war_support_weekly = 0.005
+			}
+		}
+		promises_of_a_better_future = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = gre_agricultural_communes
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+				industrial_capacity_dockyard = 0.3
+				stability_weekly = -0.005
+			}
+		}
+		national_liberation_front = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_wargaming_division
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				classical_liberalism_drift = 0.01
+				social_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+			}
+		}
 	}
 }

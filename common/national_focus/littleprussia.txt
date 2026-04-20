@@ -555,10 +555,7 @@
 		completion_reward = {
 			add_stability = -0.075
 			custom_effect_tooltip = PRE_note_this_will_open_the_road_to_a_revolution
-			country_event = {
-				id = pre.7
-				days = 20
-			}
+			add_ideas = widespread_chaos
 		}
 	}
 	focus = {
@@ -582,6 +579,601 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
+			news_event = news.3096
+			hidden_effect = {
+				POL = {
+			end_puppet = PRE
+			}
+			LIT = {
+			end_puppet = PRE
+			}
+			leave_faction = yes
+			}
+			IF = {
+				limit = {
+					has_country_flag = PRE_is_puppet_of_POL
+				}
+				POL = {
+					declare_war_on = {
+                     target = PRE
+                     type = annex_everything
+                    }
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = PRE_is_puppet_of_LIT
+				}
+				LIT = {
+					declare_war_on = {
+                     target = LIT
+                     type = annex_everything
+                    }
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRE_arm_the_people
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 0
+		y = 1
+		prerequisite = {focus = PRE_drum_links_zwei_drei}
+		relative_position_id = PRE_drum_links_zwei_drei
+		cost = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = PRE_red_brigades_raised
+			hidden_effect = {
+			load_oob = PRE_red_brigades
+			763 = {
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+			}
+			5 = {
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+			}
+			}
+		}
+	}
+	focus = {
+		id = PRE_emphasize_ideology
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = -3
+		y = 2
+		prerequisite = {focus = PRE_arm_the_people}
+		mutually_exclusive = {focus = PRE_emphasize_unity}
+		relative_position_id = PRE_drum_links_zwei_drei
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+			add_ideas = war_communism
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = -0.2
+			}
+			create_country_leader = {
+	        name = "Ernst Thalmann"
+	        desc = "POLITICS_ERNST_THALMANN_DESC"
+	        picture = "gfx/leaders/PRE/Ernst_Thalmann.dds"
+	        expire = "1960.1.16"
+	        ideology = leninism
+	        traits = {
+	       }
+          }
+		}
+	}
+	focus = {
+		id = PRE_shut_down_the_liberal_chamber
+		icon = GFX_focus_GER_total_control_over_domestic_affairs
+		x = -1
+		y = 1
+		prerequisite = {focus = PRE_emphasize_ideology}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 150
+			add_popularity = {
+				ideology = classical_liberalism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = PRE_promote_patriotic_socialism
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 1
+		y = 1
+		prerequisite = {focus = PRE_emphasize_ideology}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_ideas = patriotic_socialism
+		}
+	}
+	focus = {
+		id = PRE_seize_occupier_assets
+		icon = GFX_focus_generic_communist_industry
+		x = 3
+		y = 1
+		prerequisite = {focus = PRE_emphasize_ideology focus = PRE_emphasize_unity}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRE_rally_socialist_intellectuals
+		icon = GFX_focus_generic_socialist_science
+		x = 3
+		y = 2
+		prerequisite = {focus = PRE_seize_occupier_assets}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = PRE_mobilization_of_the_society
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = 3
+		y = 3
+		prerequisite = {focus = PRE_rally_socialist_intellectuals}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = CZE_revolutionary_mobilization
+		}
+	}
+	focus = {
+		id = PRE_hunt_down_the_traitors
+		icon = GFX_focus_FIN_parmis_devils
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_promote_patriotic_socialism}
+		prerequisite = {focus = PRE_shut_down_the_liberal_chamber}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.15
+			}
+			add_timed_idea = {
+				idea = hunt_down_the_traitors 
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = PRE_the_revolution_of_the_working_people
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -1
+		y = 3
+		prerequisite = {focus = PRE_hunt_down_the_traitors}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = soviet_in_entreprise
+			add_ideas = collective_farms
+		}
+	}
+	focus = {
+		id = PRE_the_revolution_against_the_old_order
+		icon = GFX_focus_generic_catholic_dominion
+		x = 1
+		y = 3
+		prerequisite = {focus = PRE_hunt_down_the_traitors}
+		relative_position_id = PRE_emphasize_ideology
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = state_atheism
+		}
+	}
+	focus = {
+		id = PRE_emphasize_unity
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 3
+		y = 2
+		prerequisite = {focus = PRE_arm_the_people}
+		mutually_exclusive = {focus = PRE_emphasize_ideology}
+		relative_position_id = PRE_drum_links_zwei_drei
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = PRE_reconcile_with_the_spd
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		x = 1
+		y = 1
+		prerequisite = {focus = PRE_emphasize_unity}
+		relative_position_id = PRE_emphasize_unity
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = PRE_promises_of_a_better_future
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+		x = -1
+		y = 1
+		prerequisite = {focus = PRE_emphasize_unity}
+		relative_position_id = PRE_emphasize_unity
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = promises_of_a_better_future
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = PRE_expand_the_united_front
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		x = 0
+		y = 2
+		prerequisite = {focus = PRE_promises_of_a_better_future}
+		prerequisite = {focus = PRE_reconcile_with_the_spd}
+		relative_position_id = PRE_emphasize_unity
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = national_liberation_front
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = PRE_dialogue_with_thalmann
+		icon = GFX_focus_generic_communist
+		x = 1
+		y = 3
+		prerequisite = {focus = PRE_expand_the_united_front}
+		relative_position_id = PRE_emphasize_unity
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.075
+			add_popularity = {
+				popularity = 0.075
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = PRE_rally_the_unions
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = -1
+		y = 3
+		prerequisite = {focus = PRE_expand_the_united_front}
+		relative_position_id = PRE_emphasize_unity
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+
+			763 = {
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+			}
+			5 = {
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+				create_unit = {
+                 division = "name = \"Rote Brigaden\" division_template = \"Rote Brigaden\" start_experience_factor = 0.5"
+                 owner = PRE
+                }
+			}
 		}
 	}
 	focus = {

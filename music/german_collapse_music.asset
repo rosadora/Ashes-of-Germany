@@ -60,6 +60,12 @@ music = {
 }
 
 music = {
+	name = "einheitsfrontlied"
+	file = "einheitsfrontlied.ogg"
+	volume = 1.3
+}
+
+music = {
 	name = "giovinezza"
 	file = "giovinezza.ogg"
 	volume = 1.3

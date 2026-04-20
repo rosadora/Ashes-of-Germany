@@ -1,4 +1,61 @@
+PRE_independance_war = {
+	PRE_surrender_POL = {
 
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = PRE
+        }
+        visible = {
+        }
+		available = {
+			has_war_with = POL
+			surrender_limit > 0.3
+		}
+        priority = 1000
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        complete_effect = {
+         white_peace = POL
+		 POL = {
+			puppet = PRE
+		 }
+		 set_country_flag = PRE_is_puppet_of_POL
+        }
+    }
+	PRE_surrender_LIT = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            tag = PRE
+        }
+        visible = {
+        }
+		available = {
+			has_war_with = LIT
+			surrender_limit > 0.3
+		}
+        priority = 1000
+
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+        complete_effect = {
+         white_peace = LIT
+		 LIT = {
+			puppet = PRE
+		 }
+		 set_country_flag = PRE_is_puppet_of_LIT
+        }
+    }
+}
 PRE_parliamentary_elections = {
 
 	PRE_elections_day = {

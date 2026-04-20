@@ -1732,3 +1732,23 @@ news_event = { #Wilhelm II Dies
 		name = news.3095.a
 	}
 }
+news_event = { #Socialist Revolution in Little Prussia
+    id = news.3096
+	title = news.3096.t
+	desc = news.3096.d
+	picture = GFX_report_event_generic_communist_congress
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = einheitsfrontlied
+		}
+	}
+	
+	option = {
+		name = news.3096.a
+	}
+}

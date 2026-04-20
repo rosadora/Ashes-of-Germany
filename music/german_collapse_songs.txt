@@ -215,3 +215,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "einheitsfrontlied"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

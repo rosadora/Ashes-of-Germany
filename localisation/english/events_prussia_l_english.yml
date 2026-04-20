@@ -1870,6 +1870,9 @@
  prussia.138.t:0 "Little Prussia stays defiant!"
  prussia.138.d:0 "Little Prussia denies that we are the only legitimate rulers of Germany"
  prussia.138.a:0 "So it will be war!"
+ news.3096.t:0 "Latzke overthrow occupation authorities"
+ news.3096.d:0 "In Little Prussia, after a failed independance war a governor of occupation has been enpowered. In consequence, discontent grown day by day with nationalist parades and clashes between Volkisch movements and workers unions; the KPD gained momentum and got enpowered by the victorious worker's revolution. Nevertheless, the revolution is in a very dangerous position because the former governor is gathering support and prepare for a new war against the small republic."
+ news.3096.a: "Ok"
  ### POLAND ###
  polish.1.t:0 "Polish forces expelled from Koenigsberg!"
  polish.1.d:0 "This morning, Lithuanian troops drove Polish forces out of the cities, forcing them to withdraw from the country. This raises the question of Lithuanian's expansion into the region and the direct threat this poses to the security of the Baltic states."
