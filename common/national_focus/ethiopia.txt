@@ -482,9 +482,14 @@ focus_tree = {
 		relative_position_id = ETH_military_communism
 		x = 1
 		y = 1
+
+		bypass = {
+			not = {
+				has_government = neutrality
+			}
+		}
 		
-		cost = 5
-		available = { has_government = neutrality }		
+		cost = 5	
 
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 

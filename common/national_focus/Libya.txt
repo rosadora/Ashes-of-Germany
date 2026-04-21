@@ -127,7 +127,7 @@ focus_tree = {
 			focus = LBA_embrace_Mussolini
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		offset = {
 			trigger = {
@@ -357,7 +357,7 @@ focus_tree = {
 			controls_state = 448
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		x = 4
 		y = -1
@@ -396,7 +396,7 @@ focus_tree = {
 			focus = LBA_prioritize_military_industries
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		prerequisite = {
 			focus = LBA_a_new_industry
@@ -438,7 +438,7 @@ focus_tree = {
 			focus = LBA_prioritize_military_industries
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		completion_reward = {
 				add_resource = {
@@ -462,7 +462,7 @@ focus_tree = {
 		y = 0
 		cost = 7
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		mutually_exclusive = {
 			focus = LBA_prioritize_civilian_industries
@@ -538,7 +538,7 @@ focus_tree = {
 			focus = LBA_prioritize_military_industries
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		completion_reward = {
 			451 = {
@@ -596,7 +596,7 @@ focus_tree = {
 			focus = LBA_develop_fortifications
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		completion_reward = {
 			add_ideas = extensive_conscription
@@ -613,6 +613,9 @@ focus_tree = {
 		cost = 10
 		x = 5
 		y = 1
+		ai_will_do = {
+			base = 5
+		}
 		prerequisite = {
 			focus = LBA_prioritize_civilian_industries
 			focus = LBA_prioritize_military_industries
@@ -1018,7 +1021,7 @@ focus_tree = {
 			focus = LBA_prioritize_civilian_industries
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		relative_position_id = LBA_prioritize_civilian_industries
 		completion_reward = {
@@ -1049,7 +1052,7 @@ focus_tree = {
 			focus = LBA_prioritize_civilian_industries
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		completion_reward = {
 			add_victory_points = {
@@ -1087,7 +1090,7 @@ focus_tree = {
 			focus = LBA_develop_Trippoli_industries
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 		prerequisite = {
 			focus = LBA_develop_eastern_cities
@@ -3675,6 +3678,7 @@ focus = {
     relative_position_id = LBA_finish_electrification_in_Tripoli_FASCISM
     x = -1
     y = 1
+	cost = 7
     prerequisite = { focus = LBA_finish_electrification_in_Tripoli_FASCISM }
     completion_reward = {
 		450 = {
@@ -3719,6 +3723,7 @@ focus = {
     relative_position_id = LBA_electrify_the_east
     x = 0
     y = 1
+	cost = 7
     prerequisite = { focus = LBA_electrify_the_east }
     completion_reward = {
 		449 = {
@@ -3925,6 +3930,7 @@ focus = {
 	relative_position_id = LBA_re-organize_the_army
     x = 1
     y = 1
+	cost = 7
     prerequisite = { focus = LBA_re-organize_the_army }
        completion_reward = {
 		add_tech_bonus = {
@@ -4035,6 +4041,7 @@ focus = {
     id = LBA_never_again_a_shore
     icon = GFX_goal_generic_defend_shores
     relative_position_id = LBA_13
+	cost = 7
     x = 3
     y = -1
 	available = {

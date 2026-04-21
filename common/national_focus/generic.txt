@@ -1789,6 +1789,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
+				factor = 10
+				AND = {
+					tag = ETH
+					has_government = communism
+				}
+				
+			}	
+			modifier = {
 				factor = 1
 				OR = {
 					AND = {
@@ -1878,7 +1886,15 @@ focus_tree = {
 					is_major = yes
 					has_government = communism
 				}
-			}			
+			}		
+			modifier = {
+				factor = 10
+				AND = {
+					tag = ETH
+					has_government = communism
+				}
+				
+			}	
 			modifier = {
 				factor = 0
 				AND = {
@@ -2339,11 +2355,29 @@ focus_tree = {
 				ideology = libertarian_socialism
 				popularity = 0.4
 			}
-			start_civil_war = {
-             ruling_party = libertarian_socialism
-             ideology = fascism
-             size = 0.4
+			if = {
+				limit = {
+					NOT = {
+						tag = ETH
+					}
+				 }
+				 start_civil_war = {
+          		ruling_party = libertarian_socialism
+         	    ideology = fascism
+          	   size = 0.4
             }
+			}
+
+			if = {
+				limit = {
+					tag = ETH
+				 }
+				 country_event = {
+					id = LBA_events.34
+					hours = 37
+				 }
+			}
+			
 		}
 	}
 	focus = {
@@ -2415,11 +2449,28 @@ focus_tree = {
 				ideology = classical_marxism
 				popularity = 0.4
 			}
-			start_civil_war = {
-             ruling_party = classical_marxism
-             ideology = fascism
-             size = 0.4
+			if = {
+				limit = {
+					NOT = {
+						tag = ETH
+					}
+				 }
+				 start_civil_war = {
+          		ruling_party = libertarian_socialism
+         	    ideology = fascism
+          	   size = 0.4
             }
+			}
+
+			if = {
+				limit = {
+					tag = ETH
+				 }
+				 country_event = {
+					id = LBA_events.34
+					hours = 37
+				 }
+			}
 		}
 	}
 	focus = {

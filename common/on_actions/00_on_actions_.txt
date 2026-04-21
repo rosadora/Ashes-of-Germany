@@ -1037,26 +1037,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					ETH = {
-						AND = {
-							has_government = libertarian_socialism
-							has_stability > 0.05
-						}
-						
-					}
-				 }
-				 ETH = {
-					country_event = {
-						id = LBA_events.34
-						hours = 3
-					}
-				 }
-			}
-		}
-
-		effect = {
-			if = {
-				limit = {
 					any_country = {
 						NOT = {
 							tag = ETH
