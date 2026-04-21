@@ -1414,6 +1414,24 @@ country_event = {
 
 		if = {
 			limit = {
+				owns_state = 559
+			 }
+			 559 = {
+				transfer_state_to = SOM
+			 }
+		}
+
+		if = {
+			limit = {
+				owns_state = 844
+			 }
+			 844 = {
+				transfer_state_to = SOM
+			 }
+		}
+
+		if = {
+			limit = {
 				owns_state = 841
 			}
 			841 = {

@@ -72,7 +72,11 @@ ideas = {
 
 		ETH_anarchist_commune_idea = {
 			allowed = {
-				 always = yes
+				 tag = ETH
+			}
+
+			available = {
+				tag = ETH
 			}
 
 			allowed_civil_war = {

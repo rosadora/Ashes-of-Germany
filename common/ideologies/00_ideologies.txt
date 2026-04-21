@@ -433,7 +433,7 @@ ideologies = {
 			}
 
 			ethiopian_commune = {
-				color = { 144 103 211 }
+				color = { 130 0 0 }
 				can_be_randomly_selected = no
 			}
 			

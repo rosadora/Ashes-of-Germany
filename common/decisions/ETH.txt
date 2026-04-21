@@ -353,4 +353,39 @@ ETH_ethiopian_colapse = {
         }
        }
     }
+
+     Invasion_Of_SOM_CL = {
+        icon = GFX_decision_ETH_chitet
+       available = {
+        NOT = {
+            has_war_with = SOM
+        }
+       }
+
+       visible = {
+        OR = {
+            tag = ETH
+        }
+        has_global_flag = Ethiopia_Collapsed
+        country_exists = SOM
+       }
+
+       cost = 50
+       days_remove = 5
+       fire_only_once = yes
+
+       ai_will_do = {
+        factor = 25
+       }
+
+       remove_effect = {
+        declare_war_on = {
+            target = SOM
+            type = annex_everything
+        }
+       }
+    }
+
+
+    
 }

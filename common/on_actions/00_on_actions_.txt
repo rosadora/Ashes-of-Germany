@@ -1038,8 +1038,11 @@ on_actions = {
 			if = {
 				limit = {
 					ETH = {
-						has_government = libertarian_socialism
-						has_stability > 5
+						AND = {
+							has_government = libertarian_socialism
+							has_stability > 0.05
+						}
+						
 					}
 				 }
 				 ETH = {
@@ -1048,6 +1051,22 @@ on_actions = {
 						hours = 3
 					}
 				 }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						NOT = {
+							tag = ETH
+						}
+						has_idea = ETH_anarchist_commune_idea
+					}
+				}
+				PREV = {
+					remove_ideas = ETH_anarchist_commune_idea
+				}
 			}
 		}
 

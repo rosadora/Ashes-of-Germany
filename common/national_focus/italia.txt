@@ -842,6 +842,79 @@ focus_tree = {
              type = annex_everything
              target = ETH
             }
+			if = {
+				limit = {
+					ERI = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = ERI
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					AFA = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = AFA
+					type = annex_everything
+				}
+			}
+
+			if = {
+				limit = {
+					SID = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = SID
+					type = annex_everything
+				}
+			}
+
+			if = {
+				limit = {
+					QEM = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = QEM
+					type = annex_everything
+				}
+			}
+
+			if = {
+				limit = {
+					ORO = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = ORO
+					type = annex_everything
+				}
+			}
+
+			if = {
+				limit = {
+					GBA = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					target = GBA
+					type = annex_everything
+				}
+			}
+
+			
+
 			add_state_claim = 550
 			add_state_claim = 559
 			add_state_claim = 844
