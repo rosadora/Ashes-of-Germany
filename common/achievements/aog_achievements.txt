@@ -287,6 +287,25 @@ my_son_is_an_onnagata = {
 	}
 }
 
+we_hebben_een_serieus_probleem = {
+	id = 3
+	
+	possible = {
+		difficulty > 1
+		tag = HOL
+	}
+	
+	happened = {
+		OR = {
+			has_government = ultra_nationalism
+			has_government = fascism 
+		}
+		all_neighbor_country = { 
+			has_war_with = HOL 
+		}
+	}
+}
+
 ###########################
 ## 5 HARDCORE ACHIEVEMENTS
 #############################

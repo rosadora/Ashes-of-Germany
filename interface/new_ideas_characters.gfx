@@ -1709,4 +1709,34 @@ spriteTypes = {
 		name = "GFX_Eduard_Pant"
 		texturefile = "gfx/leaders/SIL/Eduard_Pant.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Leon_Trotsky_small"
+		texturefile = "gfx/leaders/USR/Leon_Trotsky_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Leon_Trotsky"
+		texturefile = "gfx/leaders/USR/Leon_Trotsky.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Maria_Spiridonova_small"
+		texturefile = "gfx/leaders/USR/Maria_Spiridonova_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Maria_Spiridonova"
+		texturefile = "gfx/leaders/USR/Maria_Spiridonova.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Boris_Kamkov_small"
+		texturefile = "gfx/leaders/USR/Boris_Kamkov_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Boris_Kamkov"
+		texturefile = "gfx/leaders/USR/Boris_Kamkov.dds"
+	}
 }

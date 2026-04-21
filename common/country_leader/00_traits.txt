@@ -4846,7 +4846,7 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.05
 		war_support_factor = 0.05
-		democratic_acceptance = 40
+		communism_drift = -0.01
 		drift_defence_factor = 0.1
 	}
 
@@ -5581,6 +5581,14 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+
+	revolutionary_feminist_figurehead = {
+		random = no
+		classical_marxism_drift = 0.01
+		political_power_gain = 0.05
+		conscription_factor = 0.15
+		stability_weekly = 0.005
 	}
 
 	ARG_socialist_feminist = {
@@ -10078,8 +10086,7 @@ leader_traits = {
 		random = no
 		sprite = 13 
 
-		communism_drift = 0.08
-		war_stability_factor = -0.1
+		communism_drift = 0.02
 		non_core_manpower = 0.05
 	}
 

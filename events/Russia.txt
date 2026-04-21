@@ -254,18 +254,12 @@ country_event = {
 		set_country_flag = second_russian_civil_war
 		USR = {
 			transfer_state = 219
-			transfer_state = 205
-			transfer_state = 223
 			transfer_state = 242
-			transfer_state = 243
 			transfer_state = 263
 			transfer_state = 264
 			transfer_state = 244
 			transfer_state = 208
 			transfer_state = 195
-			transfer_state = 254
-			transfer_state = 253
-			transfer_state = 248
 			transfer_state = 247
 			transfer_state = 246
 			load_oob = USR_civil_war
@@ -275,18 +269,27 @@ country_event = {
 				days = 300
 			}
 			inherit_technology = SOV
+			country_event = {
+				id = rus.26
+				days = 5
+			}
+			country_event = {
+				id = rus.27
+				days = 10
+			}
+			activate_mission = USR_fading_revolutionary_enthuasiasm
 		}
 		transfer_units_fraction= {
 	     target = USR
 	     air_ratio = 0.5
 		 navy_ratio = 0.5
 		}
-		add_ideas = second_russian_civil_war
-		load_oob = SOV_civil_war
 		declare_war_on = {
         target = USR
         type = annex_everything
         }
+		add_ideas = second_russian_civil_war
+		load_oob = SOV_civil_war
 		
 	}
 	option = {
@@ -311,18 +314,12 @@ country_event = {
 		USR = {
 			add_ideas = second_russian_civil_war
 			transfer_state = 219
-			transfer_state = 205
-			transfer_state = 223
 			transfer_state = 242
-			transfer_state = 243
 			transfer_state = 263
 			transfer_state = 264
 			transfer_state = 244
 			transfer_state = 208
 			transfer_state = 195
-			transfer_state = 254
-			transfer_state = 253
-			transfer_state = 248
 			transfer_state = 247
 			transfer_state = 246
 			load_oob = USR_civil_war
@@ -331,18 +328,27 @@ country_event = {
 				days = 300
 			}
 			inherit_technology = SOV
+			country_event = {
+				id = rus.26
+				days = 5
+			}
+			country_event = {
+				id = rus.27
+				days = 10
+			}
+			activate_mission = USR_fading_revolutionary_enthuasiasm
 		}
 		transfer_units_fraction= {
 	     target = USR
 	     air_ratio = 0.5
 		 navy_ratio = 0.5
 		}
-		add_ideas = second_russian_civil_war
-		load_oob = SOV_civil_war
 		declare_war_on = {
         target = USR
         type = annex_everything
         }
+		add_ideas = second_russian_civil_war
+		load_oob = SOV_civil_war
 		USR = {change_tag_from = SOV}
 	}
 }

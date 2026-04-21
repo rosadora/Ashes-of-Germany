@@ -115,6 +115,9 @@ recruit_character = SOV_yakov_smushkevich
 
 recruit_character = SOV_vitaly_primakov
 
+recruit_character = USR_Maria_Spiridonova
+recruit_character = USR_Boris_Kamkov
+
 
 
 set_research_slots = 3
@@ -219,6 +222,7 @@ add_ideas = {
 	state_atheism
 	women_in_factories
 	women_in_military
+	lack_of_leadership
 }
 
 set_convoys = 50
@@ -231,11 +235,21 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Leon Trotsky"
+	name = "Supreme Soviet"
 	desc = ""
-	picture = "gfx/leaders/Leon_Trotsky.dds"
+	picture = "gfx/leaders/USR/Supreme_Soviet.dds"
 	expire = "1980.1.1"
 	ideology = leninism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Supreme Soviet"
+	desc = ""
+	picture = "gfx/leaders/USR/Supreme_Soviet.dds"
+	expire = "1980.1.1"
+	ideology = classical_marxism_category
 	traits = {
 	}
 }

@@ -48,9 +48,462 @@
 		}
 	}
 	focus = {
+		id = USR_resist_balkanization
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = -3
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = USR_focus_on_the_tsarist_enemy
+		icon = GFX_focus_SOV_the_true_tsars
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_resist_balkanization}
+		mutually_exclusive = {focus = USR_everyone_gets_a_revolution}
+		relative_position_id = USR_resist_balkanization
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = 20
+			  tooltip = add_20_to_stalin
+		    }
+			add_to_variable = {
+			  var = USR_support_for_sr
+			  value = 10
+			  tooltip = add_10_to_sr
+		    }
+			custom_effect_tooltip = we_will_try_to_prevent_foreign_intervention
+		}
+	}
+	focus = {
+		id = USR_everyone_gets_a_revolution
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_resist_balkanization}
+		mutually_exclusive = {focus = USR_focus_on_the_tsarist_enemy}
+		relative_position_id = USR_resist_balkanization
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = 30
+			  tooltip = add_30_to_trotsky
+		    }
+			custom_effect_tooltip = will_lead_us_to_face_chaos
+			POL = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			BLR = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			UKR = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			EST = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			LAT = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			LIT = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			GEO = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			KAZ = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			UZB = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			TMS = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			KYR = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			TAJ = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			FER = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+			FIN = {
+				add_ideas = waves_of_the_second_russian_revolution
+			}
+		}
+	}
+	focus = {
+		id = USR_total_militarization
+		icon = GFX_focus_RAJ_a_private_military
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_everyone_gets_a_revolution}
+		relative_position_id = USR_everyone_gets_a_revolution
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = 30
+			  tooltip = add_30_to_trotsky
+		    }
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = USR_all_in
+		icon = GFX_focus_SOV_mobilization_plan
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_focus_on_the_tsarist_enemy}
+		relative_position_id = USR_focus_on_the_tsarist_enemy
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = 30
+			  tooltip = add_30_to_stalin
+		    }
+			195 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  }
+		  219 = {
+			create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  create_unit = {
+           division = "name = \"Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+		  }
+		}
+	}
+	focus = {
+		id = USR_bet_on_offensive
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_everyone_gets_a_revolution focus = USR_focus_on_the_tsarist_enemy}
+		mutually_exclusive = {focus = USR_methodical_approach}
+		relative_position_id = USR_everyone_gets_a_revolution
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = offensive_doctrine 
+				days = 300
+			}
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = 30
+			  tooltip = add_30_to_trotsky
+		    }
+			add_to_variable = {
+			  var = USR_support_for_sr
+			  value = 30
+			  tooltip = add_30_to_sr
+		    }
+		}
+	}
+	focus = {
+		id = USR_promote_tukhachevsky
+		icon = GFX_focus_SOV_approach_tukahchevsky
+		x = -1
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_bet_on_offensive focus = USR_methodical_approach}
+		mutually_exclusive = {focus = USR_bet_on_our_qualities}
+		relative_position_id = USR_everyone_gets_a_revolution
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = army_of_the_old_days
+				add_idea = doctrine_tukhachevsky
+			}
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = 30
+			  tooltip = add_30_to_trotsky
+		    }
+			add_to_variable = {
+			  var = USR_support_for_sr
+			  value = 10
+			  tooltip = add_10_to_sr
+		    }
+		}
+	}
+	focus = {
+		id = USR_bet_on_our_qualities
+		icon = GFX_focus_fra_loyalty_stalin
+		x = -3
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_bet_on_offensive focus = USR_methodical_approach}
+		mutually_exclusive = {focus = USR_promote_tukhachevsky}
+		relative_position_id = USR_everyone_gets_a_revolution
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = army_of_the_old_days
+				add_idea = stalin_doctrine
+			}
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = 30
+			  tooltip = add_30_to_stalin
+		    }
+		}
+	}
+	focus = {
+		id = USR_methodical_approach
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = -3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_everyone_gets_a_revolution focus = USR_focus_on_the_tsarist_enemy}
+		mutually_exclusive = {focus = USR_bet_on_offensive}
+		relative_position_id = USR_everyone_gets_a_revolution
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = methodical_warfare 
+				days = 300
+			}
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = 30
+			  tooltip = add_30_to_stalin
+		    }
+		}
+	}
+	focus = {
 		id = USR_plan_next_offensives
 		icon = GFX_goal_generic_position_armies
-		x = 0
+		x = 3
 		y = 3
 
 		cost = 3
@@ -203,6 +656,12 @@
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = USR_menshevik_have_been_destroyed
+			check_variable = {
+              USR_support_for_mensheviks > 10
+            }
+			}
 		}
 		
 		bypass = {
@@ -327,6 +786,12 @@
 				ideology = social_democracy
 			}
 			add_ideas = politburo
+			custom_effect_tooltip = expell_mensheviks_from_governance
+			add_to_variable = {
+			var = USR_support_for_mensheviks
+			value = -15
+			tooltip = remove_15_to_mensheviks
+		    }
 		}
 	}
 	focus = {
@@ -637,7 +1102,7 @@
 	focus = {
 		id = USR_the_first_congress
 		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 22
+		x = 24
 		y = 0
 
 		cost = 9

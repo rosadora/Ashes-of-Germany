@@ -1,0 +1,149 @@
+characters={
+	USR_Leon_Trotsky = {
+		name = USR_Leon_Trotsky_name
+		portraits = {
+			army = {
+				large = "GFX_Leon_Trotsky"
+				small = "GFX_Leon_Trotsky_small"
+			}
+		}
+		field_marshal = {
+			traits = { armor_officer politically_connected }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = leon_trotsky_military
+			ledger = army
+			allowed = {
+				original_tag = USR
+			}
+			available = {
+			}
+			traits = {
+				army_regrouping_2
+			}
+				cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_trotsky
+			      value = 30
+			      tooltip = add_30_to_trotsky
+		        }
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = leon_trotsky_civilian
+			traits = {
+				NOR_permanent_revolutionary
+			}
+			allowed = {
+				original_tag = USR
+			}
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_trotsky
+			      value = 30
+			      tooltip = add_30_to_trotsky
+		        }
+			}
+			cost = 150
+		}
+	}
+	USR_Maria_Spiridonova = {
+		name = USR_Maria_Spiridonova_name
+		portraits = {
+			army = {
+				large = "GFX_Maria_Spiridonova"
+				small = "GFX_Maria_Spiridonova_small"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = USR_Maria_Spiridonova
+			traits = {
+				revolutionary_feminist_figurehead
+			}
+			allowed = {
+				original_tag = USR
+			}
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_sr
+			      value = 30
+			      tooltip = add_30_to_sr
+		        }
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			cost = 150
+		}
+	}
+	USR_Boris_Kamkov = {
+		name = USR_Boris_Kamkov_name
+		portraits = {
+			army = {
+				large = "GFX_Boris_Kamkov"
+				small = "GFX_Boris_Kamkov_small"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = USR_Boris_Kamkov
+			traits = {
+				anti_soviet_socialist
+			}
+			allowed = {
+				original_tag = USR
+			}
+			available = {
+				OR = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_sr
+			      value = 30
+			      tooltip = add_30_to_sr
+		        }
+			}
+			cost = 150
+		}
+	}
+}

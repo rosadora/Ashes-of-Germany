@@ -145,3 +145,145 @@ country_event = {
 		
 	}
 }
+country_event = { #Leon Trotsky Returns! 
+	id = rus.26
+	title = rus.26.t
+	desc = rus.26.d
+	picture = GFX_report_event_NOR_trotsky_couple
+
+	is_triggered_only = yes
+
+	option = { 
+		name = rus.26.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.1
+		}
+		set_temp_variable = USR_support_for_trotsky
+		set_temp_variable = USR_support_for_stalin
+		set_temp_variable = USR_support_for_sr
+		set_temp_variable = USR_support_for_mensheviks
+		add_to_variable = {
+			var = USR_support_for_trotsky
+			value = 30
+			tooltip = add_30_to_trotsky
+		}
+		add_to_variable = {
+			var = USR_support_for_mensheviks
+			value = 15
+			tooltip = add_15_to_mensheviks
+		}
+		add_to_variable = {
+			var = USR_support_for_sr
+			value = 10
+			tooltip = add_10_to_sr
+		}
+	}
+}
+country_event = { #Left SRs Figureheads Returns!
+	id = rus.27
+	title = rus.27.t
+	desc = rus.27.d
+	picture = GFX_report_event_SOV_cossack_cavalry
+
+	is_triggered_only = yes
+
+	option = { 
+		name = rus.27.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = 0.1
+		}
+		add_to_variable = {
+			var = USR_support_for_sr
+			value = 10
+			tooltip = add_10_to_sr
+		}
+	}
+}
+country_event = { #Joseph Stalin and the Revolution
+	id = rus.28
+	title = rus.28.t
+	desc = rus.28.d
+	picture = GFX_report_event_stalin_meeting
+
+	is_triggered_only = yes
+
+	option = { 
+		name = rus.28.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.1
+		}
+		add_to_variable = {
+			var = USR_support_for_stalin
+			value = 20
+			tooltip = add_20_to_stalin
+		}
+	}
+}
+country_event = { #Growing Socialist Agitation
+	id = rus.29
+	title = rus.29.t
+	desc = rus.29.d
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_idea = waves_of_the_second_russian_revolution
+		communism > 0.2
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = rus.29.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+	}
+}
+country_event = { #Revolution Sweeps the Country!
+	id = rus.30
+	title = rus.30.t
+	desc = rus.30.d
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_idea = waves_of_the_second_russian_revolution
+		communism > 0.3
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = rus.30.a
+		ai_chance = {
+			base = 100
+		}
+		USR = {
+			set_autonomy = {
+			  target = FROM
+	          autonomous_state = autonomy_integrated_puppet
+            }
+		}
+		start_civil_war = {
+           ruling_party = communism
+           ideology = neutrality
+           size = 0.4
+        }
+	}
+}

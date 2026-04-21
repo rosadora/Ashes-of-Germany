@@ -17,16 +17,16 @@ characters={
 				original_tag = USR
 			}
 			available = {
-				OR = {
-				has_country_leader = {
-              name = "Leon Trotsky"
-              ruling_only = yes
-              }
-			  has_country_leader = {
-              name = "Nikolai Bukharin"
-              ruling_only = yes
-              }
-			  }
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_trotsky
+			      value = 30
+			      tooltip = add_30_to_trotsky
+		        }
 			}
 			cost = 150
 		}
@@ -49,16 +49,16 @@ characters={
 				original_tag = USR
 			}
 			available = {
-				OR = {
-				has_country_leader = {
-              name = "Leon Trotsky"
-              ruling_only = yes
-              }
-			  has_country_leader = {
-              name = "Nikolai Bukharin"
-              ruling_only = yes
-              }
-			  }
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_trotsky
+			      value = 30
+			      tooltip = add_30_to_trotsky
+		        }
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 			cost = 150
 		}
@@ -81,16 +81,16 @@ characters={
 				original_tag = USR
 			}
 			available = {
-				OR = {
-				has_country_leader = {
-              name = "Leon Trotsky"
-              ruling_only = yes
-              }
-			  has_country_leader = {
-              name = "Nikolai Bukharin"
-              ruling_only = yes
-              }
-			  }
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_trotsky
+			      value = 30
+			      tooltip = add_30_to_trotsky
+		        }
 			}
 			cost = 150
 		}
@@ -113,16 +113,16 @@ characters={
 				original_tag = USR
 			}
 			available = {
-				OR = {
-				has_country_leader = {
-              name = "Leon Trotsky"
-              ruling_only = yes
-              }
-			  has_country_leader = {
-              name = "Nikolai Bukharin"
-              ruling_only = yes
-              }
-			  }
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				add_to_variable = {
+			      var = USR_support_for_trotsky
+			      value = 30
+			      tooltip = add_30_to_trotsky
+		        }
 			}
 			cost = 150
 		}
