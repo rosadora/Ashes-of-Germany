@@ -30,6 +30,139 @@ USR_political_equilibrum_of_the_revolution = {
 		}
 	}
 }
+RUS_soviet_politics = {
+
+	RUS_change_stalin_portrait_1 = {
+
+		icon = GFX_decision_SOV_stalinist_state
+
+		visible = {
+		 has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+
+		cost = 0
+
+		days_remove = 2
+		
+		complete_effect = {
+			set_country_leader_portrait = {
+	         ideology = communism
+	         portrait = "gfx/leaders/USR/Joseph_Stalin_1.dds"
+            }
+        }
+
+		ai_will_do = {
+         factor = 100
+		}
+	}
+	RUS_change_stalin_portrait_2 = {
+
+		icon = GFX_decision_SOV_stalinist_state
+
+		visible = {
+		 has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+
+		cost = 0
+
+		days_remove = 2
+		
+		complete_effect = {
+			set_country_leader_portrait = {
+	         ideology = communism
+	         portrait = "gfx/leaders/USR/Joseph_Stalin_2.dds"
+            }
+        }
+
+		ai_will_do = {
+         factor = 100
+		}
+	}
+	RUS_change_stalin_portrait_3 = {
+
+		icon = GFX_decision_SOV_stalinist_state
+
+		visible = {
+		 has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+
+		cost = 0
+
+		days_remove = 2
+		
+		complete_effect = {
+			set_country_leader_portrait = {
+	         ideology = communism
+	         portrait = "gfx/leaders/USR/Joseph_Stalin_3.dds"
+            }
+        }
+
+		ai_will_do = {
+         factor = 100
+		}
+	}
+	RUS_change_stalin_portrait_4 = {
+
+		icon = GFX_decision_SOV_stalinist_state
+
+		visible = {
+		 has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+
+		cost = 0
+
+		days_remove = 2
+		
+		complete_effect = {
+			set_country_leader_portrait = {
+	         ideology = communism
+	         portrait = "gfx/leaders/USR/Joseph_Stalin_4.dds"
+            }
+        }
+
+		ai_will_do = {
+         factor = 100
+		}
+	}
+	RUS_change_stalin_portrait_5 = {
+
+		icon = GFX_decision_SOV_stalinist_state
+
+		visible = {
+		 has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+
+		cost = 0
+
+		days_remove = 2
+		
+		complete_effect = {
+			set_country_leader_portrait = {
+	         ideology = communism
+	         portrait = "gfx/leaders/USR/Joseph_Stalin_5.dds"
+            }
+        }
+
+		ai_will_do = {
+         factor = 100
+		}
+	}
+}
 RUS_civil_war = {
 
 	RUS_recover_the_reserves = {

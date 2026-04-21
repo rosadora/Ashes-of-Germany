@@ -17,6 +17,402 @@
 
 
 	focus = {
+		id = USR_secretary_iosif_jugashvili
+		icon = GFX_focus_SOV_stalins_cult_of_personality
+		x = -10
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = lack_of_leadership
+				add_idea = premier_iosif_jugashvili
+			}
+		}
+	}
+	focus = {
+		id = USR_ban_rightist_opposition
+		icon = GFX_goal_sr_banned
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_secretary_iosif_jugashvili
+		prerequisite = {focus = USR_secretary_iosif_jugashvili}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = {
+			  var = USR_support_for_sr
+			  value = -30
+			  tooltip = remove_30_to_sr
+		    }
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -0.1
+			}
+			add_ideas = one_party_state
+		}
+	}
+	focus = {
+		id = USR_emergency_rations
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_secretary_iosif_jugashvili
+		prerequisite = {focus = USR_secretary_iosif_jugashvili}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = famines
+				add_idea = famines2
+			}
+		}
+	}
+	focus = {
+		id = USR_enforce_party_discipline
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_secretary_iosif_jugashvili
+		prerequisite = {focus = USR_emergency_rations}
+		prerequisite = {focus = USR_ban_rightist_opposition}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = premier_iosif_jugashvili
+				add_idea = premier_iosif_jugashvili2
+			}
+		}
+	}
+	focus = {
+		id = USR_reorganize_the_society
+		icon = GFX_focus_generic_soviet_politics
+		x = -2
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_secretary_iosif_jugashvili
+		prerequisite = {focus = USR_enforce_party_discipline}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = USR_first_steps_of_agricultural_collectivization
+		icon = GFX_focus_ITA_peasants_rise
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_society
+		prerequisite = {focus = USR_reorganize_the_society}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = famines2
+				add_idea = famines3
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			random_controlled_state = {
+			create_unit = {
+           division = "name = \"Krestyanskaya militsiya\" division_template = \"Krestyanskaya militsiya\" start_experience_factor = 0.5"
+           owner = USR
+          }
+			}
+			SOV = {
+				add_stability = -0.1
+			}
+		}
+	}
+	focus = {
+		id = USR_industrial_planification
+		icon = GFX_SOV_socialist_emulation_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_society
+		prerequisite = {focus = USR_reorganize_the_society}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = slow_industrialisation
+				add_idea = state_managed_industrialization
+			}
+		}
+	}
+	focus = {
 		id = USR_a_call_to_masses
 		icon = GFX_goal_propaganda_poster
 		x = 0
@@ -603,6 +999,11 @@
 				}
 				add_ideas = volunteers_in_russian_civil_war
 			}
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = 30
+			  tooltip = add_30_to_trotsky
+		    }
 		}
 	}
 	focus = {
@@ -690,6 +1091,16 @@
               instant_build = yes
              }
 			}
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = 30
+			  tooltip = add_30_to_trotsky
+		    }
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = 30
+			  tooltip = add_30_to_stalin
+		    }
 		}
 	}
 	focus = {
@@ -826,6 +1237,11 @@
 				popularity = -0.15
 				ideology = ultra_nationalism
 			}
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = 30
+			  tooltip = add_30_to_stalin
+		    }
 		}
 	}
 	focus = {

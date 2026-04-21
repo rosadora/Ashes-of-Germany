@@ -265,6 +265,22 @@ country_event = { #Revolution Sweeps the Country!
 	trigger = {
 		has_idea = waves_of_the_second_russian_revolution
 		communism > 0.3
+		OR = {
+			tag = POL 
+			tag = BLR 
+			tag = UKR 
+			tag = EST 
+			tag = LIT 
+			tag = LAT 
+			tag = FIN 
+			tag = GEO 
+			tag = FER 
+			tag = KAZ 
+			tag = UZB 
+			tag = TMS 
+			tag = TAJ 
+			tag = KYR 
+		}
 	}
 
 	fire_only_once = yes
@@ -284,6 +300,84 @@ country_event = { #Revolution Sweeps the Country!
            ruling_party = communism
            ideology = neutrality
            size = 0.4
+        }
+	}
+}
+country_event = { #Stalin takes over the polituro
+	id = rus.31
+	title = rus.31.t
+	desc = rus.31.d
+	picture = GFX_report_event_stalin_01
+
+	fire_only_once = yes 
+
+	trigger = {
+		check_variable = {
+         var = USR_support_for_stalin
+         value = 100
+         compare = greater_than_or_equals
+        }
+		has_country_leader = {
+            name = "Supreme Soviet"
+            ruling_only = yes
+        }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = rus.31.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = stalin_takeover
+		create_country_leader = {
+	      name = "Joseph Stalin"
+	      desc = ""
+	      picture = "gfx/leaders/USR/Joseph_Stalin_1.dds"
+	      expire = "1980.1.1"
+	      ideology = stalinism
+	      traits = {
+	      }
+        }
+	}
+}
+country_event = { #Trotsky takes over the polituro
+	id = rus.32
+	title = rus.32.t
+	desc = rus.32.d
+	picture = GFX_report_event_NOR_trotsky_speech
+
+	fire_only_once = yes 
+
+	trigger = {
+		check_variable = {
+         var = USR_support_for_trotsky
+         value = 100
+         compare = greater_than_or_equals
+        }
+		has_country_leader = {
+            name = "Supreme Soviet"
+            ruling_only = yes
+        }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = rus.32.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = stalin_takeover
+		create_country_leader = {
+	      name = "Lev Trotsky"
+	      desc = ""
+	      picture = "gfx/leaders/USR/Leon_Trotsky.dds"
+	      expire = "1980.1.1"
+	      ideology = leninism
+	      traits = {
+	      }
         }
 	}
 }
