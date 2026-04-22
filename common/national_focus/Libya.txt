@@ -3313,7 +3313,7 @@ focus_tree = {
 		x = -5
 		y = 0
 		allow_branch = {
-			has_completed_focus = LBA_council_vote
+			has_country_flag = maintain_power_COUNCIL
 		}
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
@@ -3757,6 +3757,34 @@ focus = {
 }
 
 focus = {
+	id = LBA_Bengsai_research
+	icon = GFX_focus_research
+	cost = 7
+	relative_position_id = LBA_electrify_the_deserts
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = LBA_integrate_the_Camicie_Nere
+	}
+	prerequisite = {
+		focus = LBA_electrify_the_deserts
+	}
+	prerequisite = {
+		focus = LBA_national_logistic_programs
+	}
+	completion_reward = {
+		450 = {
+			add_building_construction = {
+				type = naval_facility
+				level = 1
+				province = 11954
+			}
+		}
+		add_research_slot = 1
+	 }
+}
+
+focus = {
     id = LBA_national_logistic_programs
     icon = GFX_goal_generic_research_logistics
     relative_position_id = LBA_develop_desert_logistics
@@ -3795,35 +3823,6 @@ focus = {
 	 }
 }
 
-focus = {
-    id = LBA_11
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_electrify_the_deserts
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_electrify_the_deserts focus = LBA_integrate_the_Camicie_Nere }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_12
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_national_logistic_programs
-    x = -1
-    y = 1
-    prerequisite = { focus = LBA_integrate_the_Camicie_Nere  focus = LBA_national_logistic_programs }
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_13
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_11
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_11 focus = LBA_12 }
-    completion_reward = { }
-}
 
 focus = {
     id = LBA_modernize_the_Castel_Benito
@@ -3989,49 +3988,97 @@ focus = {
 }
 
 focus = {
-    id = LBA_22
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_request_Malta
+    icon = GFX_goal_generic_Malta
     relative_position_id = LBA_a_Libyan_navy
+	cost = 7
     x = 0
     y = 1
     prerequisite = { focus = LBA_a_Libyan_navy }
-    completion_reward = { }
+    completion_reward = {
+		116 = {
+			add_claim_by = LBA
+		}
+		every_country = {
+			limit = {
+				owns_state = 116
+			}
+			if = {
+				limit = {
+					is_puppet = yes
+				 }
+				 OVERLORD = {
+					country_event = {
+				id = LBA_events.35
+				days = 3
+			}
+				 }
+			}
+			else = {
+				country_event = {
+				id = LBA_events.35
+				days = 3
+			}
+			}
+			
+		}
+	 }
 }
 
 focus = {
-    id = LBA_23
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_focus_on_airforce
+    icon = GFX_goal_generic_build_airforce
     relative_position_id = LBA_modernize_eastern_airfields
     x = 1
     y = 1
+	cost = 10
     prerequisite = { focus = LBA_modernize_eastern_airfields }
 	prerequisite = {
 	 focus = LBA_a_libyan_airforce
 	}
-    completion_reward = { }
+	mutually_exclusive = {
+		focus = LBA_focus_on_navy
+	}
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = LBA_air_force_balbo_1
+			add_idea = LBA_air_force_balbo_2
+		}
+		air_experience = 25
+	 }
 }
 
 focus = {
-    id = LBA_24
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_22
+    id = LBA_focus_on_navy
+    icon = GFX_goal_generic_navy_battleship
+    relative_position_id = LBA_request_Malta
     x = -1
     y = 1
+	cost = 10
 	prerequisite = {
 	 focus = LBA_a_libyan_airforce
 	}
-    prerequisite = { focus = LBA_22 }
-    completion_reward = { }
+	mutually_exclusive = {
+		focus = LBA_focus_on_airforce
+	}
+    prerequisite = { focus = LBA_request_Malta }
+    completion_reward = {
+		add_ideas = LBA_naval_focus
+	 }
 }
 
 focus = {
-    id = LBA_25
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_23
+    id = LBA_the_master_of_the_land
+    icon = GFX_goal_generic_army_doctrines
+    relative_position_id = LBA_focus_on_airforce
     x = 1
     y = 1
-    prerequisite = { focus = LBA_23 focus = LBA_24 }
-    completion_reward = { }
+	cost = 10
+    prerequisite = { focus = LBA_focus_on_airforce focus = LBA_focus_on_navy }
+    completion_reward = {
+		add_ideas = LBA_master_of_the_lands
+		army_experience = 25
+	 }
 }
 
 #Planning for this segment to be "Never Again a shore" as of right now#
@@ -4040,10 +4087,10 @@ focus = {
 focus = {
     id = LBA_never_again_a_shore
     icon = GFX_goal_generic_defend_shores
-    relative_position_id = LBA_13
+    relative_position_id = LBA_integrate_the_Camicie_Nere
 	cost = 7
     x = 3
-    y = -1
+    y = 1
 	available = {
 		has_government = ultra_nationalism
 	}
@@ -4124,14 +4171,37 @@ focus = {
 }
 
 focus = {
-    id = LBA_29
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_master_of_shores
+    icon = GFX_master_of_shores
     relative_position_id = LBA_request_Tunisa
     x = 1
     y = 1
+	cost = 10
+	available = {
+		controls_state = 115
+		controls_state = 458
+		controls_state = 665
+	}
     prerequisite = { focus = LBA_request_Tunisa focus = LBA_invade_Sicily }
     completion_reward = {
+		set_cosmetic_tag = LBA_master_of_shores
+		add_political_power = 120
+		115 = {
+			add_core_of = LBA
+		}
+		458 = {
+			add_core_of = LBA
+		}
+		665 = {
+			add_core_of = LBA
+		}
 
+		every_state = {
+			limit = {
+				is_coastal = yes
+			}
+			add_claim_by = LBA
+		}
 	 }
 }
 

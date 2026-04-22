@@ -1530,6 +1530,30 @@
  ITA_italian_empire_democratic_DEF:0 "the United Italian Empire"
  ITA_italian_empire_communism:0 "Grand Italian Union"
  ITA_italian_empire_communism_DEF:0 "the Grand Italian Union"
+ 
+ LBA_master_of_shores:0 "Master of the Shores"
+ LBA_master_of_shores_DEF:0 "the Master of the Shores of the Italo-Libyan State"
+ LBA_master_of_shores_neutrality:0 "Empire of the Shores"
+ LBA_master_of_shores_neutrality_DEF:0 "the Empire of the Shores"
+ LBA_master_of_shores_ultra_nationalism:0 "Master of the Shores"
+ LBA_master_of_shores_ultra_nationalism_DEF:0 "the Master of the Shores of the Italo-Libyan State"
+ LBA_master_of_shores_democratic:0 "Republic of the Shores"
+ LBA_master_of_shores_democratic_DEF:0 "the Republic of the Shores"
+ LBA_master_of_shores_fascism:0 "Master of the Shores"
+ LBA_master_of_shores_fascism_DEF:0 "the Master of the Shores of the Italo-Libyan State."
+ LBA_master_of_shores_classical_liberalism:0 "Republic of the Shores"
+ LBA_master_of_shores_classical_liberalism_DEF:0 "the Republic of the Shores"
+ LBA_master_of_shores_social_democracy:0 "Republic of the Shores"
+ LBA_master_of_shores_social_democracy_DEF:0 "the Republic of the Shores"
+ LBA_master_of_shores_social_liberalism:0 "Republic of the Shores"
+ LBA_master_of_shores_social_liberalism_DEF:0 "the Republic of the Shores"
+ LBA_master_of_shores_communism:0 "Soviet Republic of the Shores"
+ LBA_master_of_shores_communism_DEG:0 "the Soviet Republic of the Shores" 
+
+ 
+ 
+ 
+ 
 
 ICE_autonomy_aat_defense_council_member: "Icelandic Defense Zone"
 DEN_autonomy_aat_defense_council_member: "The Southern Deterrent Sector"

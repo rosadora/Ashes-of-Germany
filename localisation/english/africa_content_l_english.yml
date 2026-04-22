@@ -342,7 +342,9 @@
  LBA_never_again_a_shore:0 "Never Again a Shore"
  LBA_never_again_a_shore_desc:0 "Although the dreams of a 'Fourth Shore' were popular amongst the people, now that Mussolini is no longer the leader of Italy, there is no point in pursuing to align with a force that we cannot trust. Because of this, our dreams must end and we must ensure our independance on a long-term scale."
  LBA_never_again_a_shore_idea:0 "Never Again a Shore"
- LBA_air_force_balbo_1:0 "Prioritized Air Force"
+ LBA_air_force_balbo_1:0 "A Libyan Air Force"
+ LBA_air_force_balbo_2:0 "A Prioritized Libyan Air Force"
+ LBA_naval_focus:0 "A Prioritized Libyan Navy"
  LBA_a_libyan_airforce:0 "Prioritize the Air Force"
  LBA_a_libyan_airforce_desc:0 "Now that we have re-formed our administration, we can now focus on the creation of a true libyan air force. Although we have already put effort into an air force, it is no where near enough to say we are a nation with an air force worth fighting. "
  LBA_develop_desert_logistics:0 "Develop Desert Logistics"
@@ -373,10 +375,23 @@
  LBA_electrify_the_east_desc:0 "Although our capital is now electrified, there are 2 major cities in the east that still are without electrification. In order to say we are moving into the future, we must electrify these cities to ensure they do not fall behind the rest of Libya."
  LBA_electrify_the_deserts:0 "Electrify the Deserts"
  LBA_electrify_the_deserts_desc:0 "Although our priority lies in our cities, our deserts still are home to many people and must be developed. Although our resources can be devoted elsewhere, it is a neccesary step to move forward in our national survival."
+ LBA_request_Malta:0 "Request Maltan Ownership"
+ LBA_request_Malta_desc:0 "Malta, being one of the largest naval bases in the world, if in our control will allow us to secure the Central Meditteranean from outside forces."
+ LBA_focus_on_navy:0 "Prioritize The Navy"
+ LBA_focus_on_navy_desc:0 "Now that we have taken control over Malta, we are now in a position to prioritize the creation of a true Libyan Navy. Although we took the Italian Navy with us when we had left the peninsula, it has long since become outdated and because of this, our navy is currently unfit to be in real combat."
+ LBA_focus_on_airforce:0 "Prioritize The Air Force"
+ LBA_focus_on_airforce_desc:0 "Italo Balbo, being a staple member of the air force in Italy, has already begun to create an air force program. Because of this, if we prioritze the creation of an air force, we will not only appease Italo Balbo, but we will also be able to fight the European Armies by beating them in the air."
+ LBA_master_of_shores:0 "Proclaim the Master of the Shores"
+ LBA_master_of_shores_desc:0 "Although we have cut our ties with Italy and have never wanted to become a shore, we can become the master of the shores. The thought of the 'Fourth Shore' has never faded from the mind of Italo Balbo, although that was his initial ambition, the Master of the Shores will do in this place."
+ LBA_master_of_the_lands:0 "Master of the Land"
+ LBA_the_master_of_the_land:0 "Master of the Army"
+ LBA_the_master_of_the_land_desc:0 "Although we have already prioritized one of our main branches, there is no point in that branch being strong whenever our army itself cannot fight. In order not to rely on the already strengthened branch of the military, we must build our army and ensure it can hold its own in combat. If we fail to do this, we will just be another Invaded African State."
+ LBA_Bengsai_research:0 "Construct the Bengsai University"
+ LBA_Bengsai_research_desc:0 "Bengsai, being the largest eastern city, now having been electrified, is now in a position to have a new national university constructed in the heart of the city. Alongside this, its coastal location will allow for naval research to be conducted alongside other research projects."
 
   #EVENTS#
  
-  LBA_news_28.desc:0 "After being ousted from power in Italy, Benito Mussolini fled to Libya and was recently placed under house arrest for criminal incompetence and treason by inaction, awaiting his fate - which finally caught up with him. Early this morning, the former leader of Italy and Libya faced a firing squad in front of a small group of representatives from the government and was buried the same day in a private ceremony attended by his closest family."
+  LBA_news_28.desc:0 "After being ousted from power in Italy, Benito Mussolini fled to Libya and was recently placed under house arrest for criminal incompetence and treason by inaction in Italy, awaiting his fate - which finally caught up with him. Early this morning, the former leader of Italy and Libya faced a firing squad in front of a small group of representatives from the Italian and Libyan government and was buried the same day in a private ceremony attended by his closest family."
 
 
 

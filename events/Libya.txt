@@ -949,15 +949,20 @@ country_event = {
 		name = "Idris Senussi"
 		complete_national_focus = LBA_restoration_of_the_monarchy
 		hidden_effect = {
-			drop_cosmetic_tag = yes
+			LBA = {
+				drop_cosmetic_tag = yes
 			remove_ideas = reformed_grand_council_of_fascism 
 			mark_focus_tree_layout_dirty = yes
+			}
+			
 		}
 	}
 
 	option = {
 		name = "Remain in Power"
-		complete_national_focus = LBA_secure_council_control
+		LBA = {
+			set_country_flag = maintain_power_COUNCIL
+		}
 	}
 	
 	option = {
@@ -1379,14 +1384,15 @@ country_event = {
 				owns_state = 842
 			}
 			842 = {
-				transfer_state_to = TIG
+				transfer_state_to = ERI
 				create_unit = {
 				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
-                  owner = TIG
+                  owner = ERI
 			}
+			add_core_of = ERI
 			create_unit = {
 				division = "name = \"Independant Loyalists\" division_template = \"Kebur Zabagna\" start_experience_factor = 0.1"
-                  owner = TIG
+                  owner = ERI
 			}
 		}
 	}
@@ -1503,10 +1509,16 @@ country_event = {
 
 	option = {
 		name = "We Must Stand Down..."
+		ai_chance = {
+			base = 99
+		}
 	}
 
 	option = {
 		name = "This Will Not Stand!"
+		ai_chance = {
+			base = 1
+		}
 		if = {
 			limit = {
 				GBA = {
@@ -1594,5 +1606,128 @@ country_event = {
 		
 		
 		
+	}
+}
+
+country_event = {
+	id = LBA_events.35
+	title = "Libya Requests Malta"
+	desc = "After a meeting with Italo Balbo in Tripoli, the request of ownership over Malta had come up. If we allow them control over Malta, it will strengthen their hold in the meditteranean and put them in our debt."
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_baltic_entente_one
+
+	option = {
+		name = "Never!"
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 4
+				FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value < 50
+                }
+            }
+			}
+		}
+		LBA = {
+			country_event = {
+				id = LBA_events.37
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "Why Not?"
+		news_event = {
+			id = LBA_events.36
+			days = 3
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 4
+				 FROM = {
+                has_opinion = {
+                    target = ROOT 
+                    value > 50
+                }
+            }
+			}
+		}
+		116 = {
+			transfer_state_to = LBA
+		}
+		
+	}
+}
+
+news_event = {
+	id = LBA_events.36
+	title = "Libya Seizes Malta!"
+	desc = "After talks with the governing force of Malta, the Libyan state has announced earlier this morning that Malta is now under Libyan Control. What will come of this is yet to be seen, however, one can only assume it will be a major step towards Long-Term Libyan survival."
+	picture = GFX_news_event_italian_tank_desert
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "To Libya!"
+		trigger = {
+			tag = LBA
+		}
+		hidden_effect = {
+				116 = {
+					add_core_of = LBA
+				}
+		}
+	}
+
+	option = {
+		name = "Ok"
+		trigger = {
+			NOT = {
+				tag = LBA
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.37
+	title = "The [PREV.GetAdjective] have denied!"
+	desc = "Following the request of Malta, not only have the [PREV.GetAdjective] have denied our request of Malta, they have called us 'Insane' for asking about it, what shall we do?"
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We Must Strike!"
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 6
+				has_manpower > 100000
+			}
+		}
+		every_country = {
+			limit = {
+				controls_state = 116
+			}
+			LBA = {
+				create_wargoal = {
+					target = PREV
+					type = take_claimed_state
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Oh Well"
+		ai_chance = {
+			base = 45
+		}
 	}
 }
