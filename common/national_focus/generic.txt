@@ -2355,9 +2355,6 @@ focus_tree = {
 				ideology = libertarian_socialism
 				popularity = 0.4
 			}
-			set_politics = {
-				ruling_party = libertarian_socialism
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -2378,6 +2375,9 @@ focus_tree = {
 				 country_event = {
 					id = LBA_events.34
 					hours = 37
+				 }
+				 set_politics = {
+					ruling_party = libertarian_socialism
 				 }
 			}
 			

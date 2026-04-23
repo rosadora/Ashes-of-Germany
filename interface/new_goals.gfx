@@ -2196,4 +2196,14 @@ spriteTypes = {
 		name = "GFX_master_of_shores" #I only had a template for Ethiopia for the globe and idk how to make custom bits of the globe so ig its fine#
 		texturefile = "gfx/interface/goals/master_of_shores.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_quality_infantry"
+		texturefile = "gfx/interface/goals/generic_army_quality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_quantity_infantry"
+		texturefile = "gfx/interface/goals/generic_army_quantity.dds"
+	}
 }

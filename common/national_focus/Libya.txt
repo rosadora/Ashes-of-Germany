@@ -7,10 +7,7 @@ focus_tree = {
 			tag = LBA
 		}
 	 }
-	 continuous_focus_position = {
-		x =800
-		y = 550
-	 }
+
 
 
 	 focus = {
@@ -253,6 +250,7 @@ focus_tree = {
 			}
 			remove_ideas = flee_from_italy
 			hidden_effect = {
+				retire_character = LBA_roberto_farinacci
 				set_country_flag = LBA_Opose_Mussolini
 				mark_focus_tree_layout_dirty = yes
 			}
@@ -2750,6 +2748,7 @@ focus_tree = {
 		available = {
 			always = no
 		}
+		
 		allow_branch = {
 			has_completed_focus = LBA_finish_the_opposition
 			NOT = {
@@ -2821,6 +2820,7 @@ focus_tree = {
 		cost = 7
 		x = -3
 		y = 2
+		
 		relative_position_id = LBA_under_Mussolini_2
 		prerequisite = {
 			focus = LBA_rebuild_the_Fascist_party
@@ -3144,31 +3144,96 @@ focus_tree = {
 		 }
 	}
 
-	focus = {
-		id = LBA_mussolini_triumphant
-		icon = GFX_mussolini_goal_icon
-		cost = 7
-		relative_position_id = LBA_assasinate_Italo_Balbo_2
-		x = -1
-		y = 1
-		prerequisite = {
-			focus = LBA_assasinate_Italo_Balbo_2
+focus = {
+    id = LBA_construct_the_Via_Balbia_2
+    icon = GFX_focus_generic_railroad
+    relative_position_id = LBA_mussolini_triumphant
+    x = -2
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_mussolini_triumphant }
+    completion_reward = {
+		if = {
+			limit = {
+				EGY = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = EGY
+				modifier = Via_Balbia_Construction
+			}
+			EGY = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
 		}
-		completion_reward = {
-			add_ideas = mussolini_triumphant_idea
-			mark_focus_tree_layout_dirty = yes
-		 }
-	}
+		else = {
+			ENG = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = Via_Balbia_Construction
+			}
+		}
 
+		if = {
+			limit = {
+				TUN = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = TUN
+				modifier = Via_Balbia_Construction
+			}
+			TUN = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			FRA = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = Via_Balbia_Construction
+			}
+		}
+		build_railway = {
+			level = 2
+			path = { 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 7164 }
+			start_province = 11921
+			target_province = 7164
+		}
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = train_tech
+			}
+	 }
+}
 	focus = {
 		id = LBA_disband_the_council
 		icon = Generic_man_imprisoned
 		cost = 7
-		relative_position_id = LBA_assasinate_Italo_Balbo_2
-		x = 1
+		relative_position_id = LBA_mussolini_triumphant
+		x = 2
 		y = 1
 		prerequisite = {
-			focus = LBA_assasinate_Italo_Balbo_2
+			focus = LBA_mussolini_triumphant
 		}
 		bypass = {
 			NOT = {
@@ -3433,9 +3498,12 @@ focus = {
     id = LBA_breach_Italian_Ties
     icon = GFX_focus_attack_italy
 	relative_position_id = LBA_smuggle_Italo_Balbo
-    x = 2
+    x = 3
     y = 1
 	cost = 10
+	allow_branch = {
+		has_completed_focus = LBA_smuggle_Italo_Balbo
+	}
 	prerequisite = { focus = LBA_smuggle_Italo_Balbo }
 	available = {
 			NOT = {
@@ -3447,7 +3515,7 @@ focus = {
 			trigger = {
 				has_completed_focus = LBA_smuggle_Italo_Balbo
 			}
-			x = -2
+			x = -6
 		}
     completion_reward = {
 		add_political_power = 125
@@ -4203,6 +4271,417 @@ focus = {
 			add_claim_by = LBA
 		}
 	 }
+}
+
+
+
+focus = {
+    id = LBA_mussolini_triumphant
+	icon = GFX_mussolini_goal_icon
+    relative_position_id = LBA_assasinate_Italo_Balbo_2
+    x = -3
+    y = 1
+
+	allow_branch = {
+		has_completed_focus =  LBA_assasinate_Italo_Balbo_2
+	}
+
+	cost = 7
+
+	offset = {
+		trigger = {
+			has_completed_focus = LBA_assasinate_Italo_Balbo_2
+		}
+		x = 6
+	}
+	
+	prerequisite = {
+		focus = LBA_assasinate_Italo_Balbo_2
+	}
+	completion_reward = {
+			add_ideas = mussolini_triumphant_idea
+			mark_focus_tree_layout_dirty = yes
+		 }
+}
+
+focus = {
+    id = LBA_2
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_mussolini_triumphant
+    x = -4
+    y = 1
+    prerequisite = { focus = LBA_mussolini_triumphant }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_3
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_2
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_2 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_4
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_2
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_2 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_5
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_3
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_3 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_6
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_3
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_3 focus = LBA_4 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_7
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_4
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_4 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_8
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_5
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_5 focus = LBA_6 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_9
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_6
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_5 focus = LBA_6 focus = LBA_7 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_10
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_7
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_6 focus = LBA_7 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_11
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_8
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_8 focus = LBA_9 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_12
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_10
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_9 focus = LBA_10 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_13
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_11
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_11 focus = LBA_12 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_14
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_mussolini_triumphant
+    x = 4
+    y = 1
+    prerequisite = { focus = LBA_mussolini_triumphant }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_15
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_14
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_14 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_16
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_14
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_14 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_17
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_15
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_15 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_18
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_15
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_15 focus = LBA_16 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_19
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_16
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_16 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_20
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_17
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_17 focus = LBA_18 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_21
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_18
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_17 focus = LBA_18 focus = LBA_19 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_22
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_19
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_18 focus = LBA_19 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_23
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_20
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_20 focus = LBA_21 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_24
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_22
+    x = -1
+    y = 1
+    prerequisite = { focus = LBA_21 focus = LBA_22 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_25
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = LBA_23
+    x = 1
+    y = 1
+    prerequisite = { focus = LBA_23 focus = LBA_24 }
+    completion_reward = { }
+}
+
+focus = {
+    id = LBA_rally_the_Blackshirts
+    icon = GFX_goal_blackshirts_ALT
+    relative_position_id = LBA_mussolini_triumphant
+	prerequisite = {
+		focus = LBA_mussolini_triumphant
+	}
+	cost = 7
+    x = 0
+    y = 1
+    completion_reward = {
+		add_stability = -0.15
+		add_ideas = LBA_rally_blackshirts
+	 }
+}
+
+focus = {
+    id = LBA_quality_over_quantity
+    icon = GFX_goal_quality_infantry
+	cost = 7
+    relative_position_id = LBA_rally_the_Blackshirts
+    x = -1
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_quantity_over_quality
+	}
+    prerequisite = { focus = LBA_rally_the_Blackshirts}
+    completion_reward = {
+		add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+	 }
+}
+
+focus = {
+    id = LBA_quantity_over_quality
+    icon = GFX_goal_quantity_infantry
+    relative_position_id = LBA_rally_the_Blackshirts
+    x = 1
+    y = 1
+	cost = 7
+	mutually_exclusive = {
+		focus = LBA_quality_over_quantity
+	}
+    prerequisite = { focus = LBA_rally_the_Blackshirts}
+    completion_reward = {
+		448 = {
+			create_unit = {
+                  division = "name = \"Blackshirts\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Blackshirts\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+		}
+
+		450 = {
+			create_unit = {
+                  division = "name = \"Blackshirts\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+		}
+	 }
+}
+
+focus = {
+    id = LBA_disband_the_blackshirts
+    icon = GFX_focus_SWE_neither_death_nor_dishonor
+    relative_position_id = LBA_quality_over_quantity
+    x = 1
+	cost = 7
+    y = 1
+	available = {
+		has_war = no
+	}
+    prerequisite = { focus = LBA_quality_over_quantity focus = LBA_quantity_over_quality }
+    completion_reward = {
+		add_stability = 0.15
+		remove_ideas = LBA_rally_blackshirts
+	 }
+}
+
+focus = {
+	id = LBA_30
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	cost = 7
+	relative_position_id = LBA_10
+	x = 1
+	y = 1
+	prerequisite = {
+		focus = LBA_10
+		focus = LBA_20
+	}
+	completion_reward = { }
+}
+
+focus = {
+	id = LBA_31
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	cost = 7
+	prerequisite = {
+		focus = LBA_30
+	}
+	x = -1
+	y = 1
+	relative_position_id = LBA_30
+	completion_reward = { }
+}
+
+focus = {
+	id = LBA_32
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	cost = 7
+	prerequisite = {
+		focus = LBA_30
+	}
+	x = 1
+	y = 1
+	relative_position_id = LBA_30
+	completion_reward = { }
+}
+
+focus = {
+	id = LBA_33
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+	cost = 7
+	prerequisite = {
+		focus = LBA_31
+		focus = LBA_32
+	}
+	x = 0
+	y = 2
+	relative_position_id = LBA_30
+	completion_reward = { }
 }
 
 

@@ -579,7 +579,7 @@ country_event = {
 		}
 		}
 		LBA = {
-			event = generic.2
+			country_event = generic.2
 		}
 	}
 

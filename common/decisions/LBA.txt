@@ -419,7 +419,7 @@ LBA_bop_decisions = {
 		days_remove = 15
 		days_re_enable = 180
 
-		cost = 110
+		cost = 100
 
 		remove_effect = {
 			add_power_balance_value = {

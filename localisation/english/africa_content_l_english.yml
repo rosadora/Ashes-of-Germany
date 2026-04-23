@@ -338,6 +338,8 @@
  LBA_breach_Italian_Ties_desc:0 "In order to ensure we are not looked down on by the italians as just another remnant of fascism, we must breach our current ties with the Italian Nations. Although it may be overkill, it is a neccessity to ensure they know we will not just bow under them if they ever attempt to re-invade our nation."
  LBA_construct_the_Via_Balbia:0 "Construct the Strada Litoranea Libica"
  LBA_construct_the_Via_Balbia_desc:0 "The Strada Litoranea Libica, already under construction under Benito Mussolini, is now in a position where it can be completed. Upon us completing the railroad, it will allow us to start shipping international goods into the country without the need of naval resources."
+ LBA_construct_the_Via_Balbia_2:0 "Construct the Strada Litoranea Libica"
+ LBA_construct_the_Via_Balbia_2_desc:0 "The Strada Litoranea Libica, already under construction when we fled from the Italian Nation, once completed will not only encourage trade with the Libyan Nation, it will open many new opportunities for realizing the Italian Dream of ruling the Meditteranean."
  Via_Balbia_Construction:0 "Strada Litoranea Libica Constructed"
  LBA_never_again_a_shore:0 "Never Again a Shore"
  LBA_never_again_a_shore_desc:0 "Although the dreams of a 'Fourth Shore' were popular amongst the people, now that Mussolini is no longer the leader of Italy, there is no point in pursuing to align with a force that we cannot trust. Because of this, our dreams must end and we must ensure our independance on a long-term scale."
@@ -388,10 +390,19 @@
  LBA_the_master_of_the_land_desc:0 "Although we have already prioritized one of our main branches, there is no point in that branch being strong whenever our army itself cannot fight. In order not to rely on the already strengthened branch of the military, we must build our army and ensure it can hold its own in combat. If we fail to do this, we will just be another Invaded African State."
  LBA_Bengsai_research:0 "Construct the Bengsai University"
  LBA_Bengsai_research_desc:0 "Bengsai, being the largest eastern city, now having been electrified, is now in a position to have a new national university constructed in the heart of the city. Alongside this, its coastal location will allow for naval research to be conducted alongside other research projects."
+ LBA_rally_blackshirts:0 "Italian Blackshirts"
+ LBA_rally_the_Blackshirts:0 "Rally the Blackshirts"
+ LBA_rally_the_Blackshirts_desc:0 "The Blackshirts, having been an integral supporter of Mussolini, have also had a majority of its members flee to Libya with Mussolini. Because of this, rallying them will allow us to use them against those who may wish to put us down once and for all"
+ LBA_quality_over_quantity:0 "Quality over Quantity"
+ LBA_quality_over_quantity_desc:0 "Although we can always get men, we cannot always get better technology. Because of this, focusing on Quality over Quantity for now will benefit us more in the long term."
+ LBA_quantity_over_quality:0 "Quantity over Quality"
+ LBA_quantity_over_quality_desc:0 "Although our army's quality will eventually become outdated, for now we must create a large, strong army to repel anyone who may try to take advantage of our weak state. If the Italo-Libyan state is to fall to ourside forces, not only would it be then end of the Italian Fascist Party, it would be the end of Fascism as a whole across the world."
+ LBA_disband_the_blackshirts:0 "Disband the Blackshirts"
+ LBA_disband_the_blackshirts_desc:0 "The Blackshirts, having operated in our nation for some time, has slowly been causing our nations internal collapse. Because of this, although they are a vital part to our armed forces strength, they must be put down. This is not a matter of who likes who, this is a matter of survival as a whole state."
 
   #EVENTS#
  
-  LBA_news_28.desc:0 "After being ousted from power in Italy, Benito Mussolini fled to Libya and was recently placed under house arrest for criminal incompetence and treason by inaction in Italy, awaiting his fate - which finally caught up with him. Early this morning, the former leader of Italy and Libya faced a firing squad in front of a small group of representatives from the Italian and Libyan government and was buried the same day in a private ceremony attended by his closest family."
+  LBA_news_28.desc:0 "After being ousted from power in Italy, Benito Mussolini fled to Libya and was recently placed under house arrest for criminal incompetence and treason by inaction in Italy, awaiting his fate - which finally caught up with him. Early this morning, the former leader of Italy and Libya faced a firing squad in front of a small group of representatives from the Italian and Libyan government and was buried the same day in a private ceremony in Italy attended by his closest family."
 
 
 
@@ -401,8 +412,7 @@
  LBA_equilibrum_range:0 "Equal Influence"
  LBA_mussolini_in_control:0 "Slight Mussolini Control"
  LBA_mussolini_in_control_more:0 "Moderate Mussolini Control"
- LBA_mussolini_in_control_more:0 "Majority Mussolini Control"
- LBA_mussolini_in_complete_control:0 "Complete Mussolini Control"
+ LBA_mussolini_in_complete_control:0 "Majority Mussolini Control"
  LBA_no_opposition_to_mussolini:0 "Crush Mussolini's Opposition"
 
  LBA_tilt_to_Balbo:0 "Slight Italo Balbo Control"

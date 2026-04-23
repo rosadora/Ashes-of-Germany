@@ -663,6 +663,27 @@ ideas = {
 				experience_gain_infantry_combat_factor = 0.35
 			}
 		}
+
+		LBA_rally_blackshirts = {
+			allowed = {
+				has_government = fascism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_fascist_workers
+			removal_cost = -1
+
+			modifier = {
+				heat_attrition = -0.15
+				supply_consumption_factor = -0.15
+				required_garrison_factor = -0.15
+				weekly_manpower = 100
+				stability_weekly = -0.002
+			}
+		}
 	}
 	hidden_ideas = {
 		camicie_nere_LBA_2 = {
