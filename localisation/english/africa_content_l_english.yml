@@ -410,12 +410,10 @@
  #BOP#
  LBA_power_balance:0 "Libyan Influence"
  LBA_equilibrum_range:0 "Equal Influence"
- LBA_mussolini_in_control:0 "Slight Mussolini Control"
  LBA_mussolini_in_control_more:0 "Moderate Mussolini Control"
  LBA_mussolini_in_complete_control:0 "Majority Mussolini Control"
  LBA_no_opposition_to_mussolini:0 "Crush Mussolini's Opposition"
 
- LBA_tilt_to_Balbo:0 "Slight Italo Balbo Control"
  LBA_balbo_majority:0 "Moderate Italo Balbo Control"
  LBA_italo_balbo_in_power:0 "Majority Italo Balbo Control"
  LBA_italo_balbo_coup:0 "Italo Balbo's Coup"

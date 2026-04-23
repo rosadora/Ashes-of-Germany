@@ -3498,7 +3498,7 @@ focus = {
     id = LBA_breach_Italian_Ties
     icon = GFX_focus_attack_italy
 	relative_position_id = LBA_smuggle_Italo_Balbo
-    x = 3
+    x = 0
     y = 1
 	cost = 10
 	allow_branch = {
@@ -3511,12 +3511,7 @@ focus = {
 			}
 			has_government = ultra_nationalism
 		}
-		offset = {
-			trigger = {
-				has_completed_focus = LBA_smuggle_Italo_Balbo
-			}
-			x = -6
-		}
+
     completion_reward = {
 		add_political_power = 125
 		add_stability = -0.05
@@ -4279,7 +4274,7 @@ focus = {
     id = LBA_mussolini_triumphant
 	icon = GFX_mussolini_goal_icon
     relative_position_id = LBA_assasinate_Italo_Balbo_2
-    x = -3
+    x = 0
     y = 1
 
 	allow_branch = {
@@ -4287,13 +4282,6 @@ focus = {
 	}
 
 	cost = 7
-
-	offset = {
-		trigger = {
-			has_completed_focus = LBA_assasinate_Italo_Balbo_2
-		}
-		x = 6
-	}
 	
 	prerequisite = {
 		focus = LBA_assasinate_Italo_Balbo_2
