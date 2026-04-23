@@ -56,6 +56,9 @@ characters={
 					has_government = communism 
 					has_government = libertarian_socialism
 				}
+				NOT = {
+					has_completed_focus = USR_expell_trotskysts_from_the_politburo
+				}
 			}
 			ai_will_do = {
 				factor = 1.000

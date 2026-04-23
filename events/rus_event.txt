@@ -244,8 +244,6 @@ country_event = { #Growing Socialist Agitation
 		communism > 0.2
 	}
 
-	fire_only_once = yes
-
 	option = {
 		name = rus.29.a
 		ai_chance = {
@@ -282,8 +280,6 @@ country_event = { #Revolution Sweeps the Country!
 			tag = KYR 
 		}
 	}
-
-	fire_only_once = yes
 
 	option = {
 		name = rus.30.a
@@ -323,8 +319,6 @@ country_event = { #Stalin takes over the polituro
         }
 	}
 
-	fire_only_once = yes
-
 	option = {
 		name = rus.31.a
 		ai_chance = {
@@ -347,8 +341,6 @@ country_event = { #Trotsky takes over the polituro
 	title = rus.32.t
 	desc = rus.32.d
 	picture = GFX_report_event_NOR_trotsky_speech
-
-	fire_only_once = yes 
 
 	trigger = {
 		check_variable = {
@@ -379,5 +371,45 @@ country_event = { #Trotsky takes over the polituro
 	      traits = {
 	      }
         }
+	}
+}
+country_event = { #Trotsky criticizes Stalinist policy #looser
+	id = rus.33
+	title = rus.33.t
+	desc = rus.33.d
+	picture = GFX_report_event_NOR_trotsky_speech
+
+	fire_only_once = yes 
+
+	is_triggered_only = yes
+
+	option = {
+		name = rus.33.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = communism 
+			popularity = -0.075
+		}
+	}
+}
+country_event = { #Kulaks
+	id = rus.34
+	title = rus.34.t
+	desc = rus.34.d
+	picture = GFX_report_event_peasant_revolt
+
+	fire_only_once = yes 
+
+	is_triggered_only = yes
+
+	option = {
+		name = rus.34.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = communism_kulaks_idea
 	}
 }

@@ -2020,4 +2020,9 @@ spriteTypes = {
 	name = "GFX_goal_sr_banned"
 	texturefile = "gfx/interface/goals/sr_banned.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_reconcile_with_sr"
+	texturefile = "gfx/interface/goals/reconcile_with_sr.dds"			
+	}
 }

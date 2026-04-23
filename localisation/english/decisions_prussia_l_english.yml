@@ -167,6 +167,8 @@
  remove_30_to_sr:0 "Remove §O30§! points of §OSocialist Revolutionary Strength§!"
  remove_15_to_mensheviks:0 "Remove §O15§! points of §OMenshevik Strength§!"
  add_30_to_stalin:0 "Gain §O30§! points of §OStalinist Strength§!"
+ remove_30_to_stalin:0 "Remove §O30§! points of §OStalinist Strength§!"
+ remove_50_to_trotsky:0 "Remove §O50§! points of §OTrotskyst Strength§!"
  RUS_change_stalin_portrait_1:0 "Change Stalin Portrait : 1"
  RUS_change_stalin_portrait_2:0 "Change Stalin Portrait : 2"
  RUS_change_stalin_portrait_3:0 "Change Stalin Portrait : 3"

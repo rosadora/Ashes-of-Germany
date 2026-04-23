@@ -17,6 +17,210 @@
 
 
 	focus = {
+		id = USR_secretary_lev_trotsky
+		icon = GFX_focus_fra_loyalty_trotzky
+		x = -18
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Lev Trotsky"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = lack_of_leadership
+				add_idea = premier_lev_trotsky
+			}
+		}
+	}
+	focus = {
+		id = USR_reconcile_with_left_sr
+		icon = GFX_goal_reconcile_with_sr_shine
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Lev Trotsky"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_secretary_lev_trotsky}
+		relative_position_id = USR_secretary_lev_trotsky
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				popularity = 0.075
+				ideology = classical_marxism
+			}
+			add_to_variable = {
+			  var = USR_support_for_stalin
+			  value = -30
+			  tooltip = remove_30_to_stalin
+		    }
+			add_to_variable = {
+			  var = USR_support_for_sr
+			  value = 30
+			  tooltip = add_30_to_sr
+		    }
+		}
+	}
+	focus = {
+		id = USR_requisition_of_farms
+		icon = GFX_goal_collective_farms
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Lev Trotsky"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_secretary_lev_trotsky}
+		relative_position_id = USR_secretary_lev_trotsky
+
+		completion_reward = {
+			add_ideas = collective_farms
+			swap_ideas = {
+				remove_idea = famines
+				add_idea = famines3
+			}
+			country_event = {
+				id = rus.34
+				days = 10
+			}
+		}
+	}
+	focus = {
+		id = USR_all_power_to_soviets
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Lev Trotsky"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_reconcile_with_left_sr}
+		prerequisite = {focus = USR_requisition_of_farms}
+		relative_position_id = USR_secretary_lev_trotsky
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = premier_lev_trotsky
+				add_idea = premier_lev_trotsky2
+			}
+			add_country_leader_trait = all_power_to_the_soviet
+			add_popularity = {
+				popularity = 0.075
+				ideology = communism
+			}
+		}
+	}
+	focus = {
+		id = USR_permanent_revolution
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Lev Trotsky"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = USR_all_power_to_soviets}
+		relative_position_id = USR_all_power_to_soviets
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_country_leader_trait = permanent_revolutionary
+		}
+	}
+	focus = {
 		id = USR_secretary_iosif_jugashvili
 		icon = GFX_focus_SOV_stalins_cult_of_personality
 		x = -10
@@ -171,6 +375,195 @@
 			swap_ideas = {
 				remove_idea = premier_iosif_jugashvili
 				add_idea = premier_iosif_jugashvili2
+			}
+		}
+	}
+	focus = {
+		id = USR_reorganize_the_party
+		icon = GFX_SOV_inheritor_of_the_mantle_of_lenin_ccp_2d_sov_compatibility
+		x = 2
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_secretary_iosif_jugashvili
+		prerequisite = {focus = USR_enforce_party_discipline}
+
+		completion_reward = {
+			country_event = {
+				id = rus.33
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = USR_reinforce_secretary_powers
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_party
+		prerequisite = {focus = USR_reorganize_the_party}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = USR_undermine_local_soviet_influence
+		icon = GFX_focus_generic_soviet_politics
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_party
+		prerequisite = {focus = USR_reorganize_the_party}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = USR_expell_trotskysts_from_the_politburo
+		icon = GFX_focus_fra_loyalty_trotzky
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_party
+		prerequisite = {focus = USR_reinforce_secretary_powers}
+		prerequisite = {focus = USR_undermine_local_soviet_influence}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = premier_iosif_jugashvili2
+				add_idea = premier_iosif_jugashvili3
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_to_variable = {
+			  var = USR_support_for_trotsky
+			  value = -50
+			  tooltip = remove_50_to_trotsky
+		    }
+		}
+	}
+	focus = {
+		id = USR_ally_cossacks
+		icon = GFX_focus_SOV_restore_cossack_units
+		x = -2
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_party
+		prerequisite = {focus = USR_massification_of_the_komsomol focus = USR_expell_trotskysts_from_the_politburo}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = stalin_doctrine
+				add_idea = stalin_doctrine2
 			}
 		}
 	}
@@ -409,6 +802,44 @@
 			swap_ideas = {
 				remove_idea = slow_industrialisation
 				add_idea = state_managed_industrialization
+			}
+		}
+	}
+	focus = {
+		id = USR_massification_of_the_komsomol
+		icon = GFX_SOV_the_komsomol_ccp_2d_sov_compatibility
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_leader = {
+            name = "Joseph Stalin"
+            ruling_only = yes
+         }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = USR_reorganize_the_society
+		prerequisite = {focus = USR_industrial_planification focus = USR_first_steps_of_agricultural_collectivization}
+
+		completion_reward = {
+			add_ideas = komsomol
+			add_popularity = {
+				popularity = 0.1
+				ideology = communism
 			}
 		}
 	}

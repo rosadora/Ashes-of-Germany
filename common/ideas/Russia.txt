@@ -209,6 +209,25 @@ ideas = {
 				global_building_slots_factor = -0.5
 			}
 		}
+		komsomol = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = komsomol
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				production_speed_buildings_factor = 0.05
+				drift_defence_factor = 0.3
+			}
+		}
 		slow_industrialisation = {
 			
 			allowed = {
@@ -476,6 +495,30 @@ ideas = {
 				supply_factor = -0.1
 				army_core_defence_factor = 0.05
 				conscription = 0.02
+			}
+		}
+		stalin_doctrine2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_politicised_army_2
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.2
+				army_morale_factor = -0.15
+				experience_gain_army_factor = -0.25
+				supply_factor = -0.05
+				army_core_defence_factor = 0.05
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+				conscription = 0.03
 			}
 		}
 		army_of_the_old_days = {
@@ -1484,6 +1527,10 @@ ideas = {
 
 			removal_cost = -1
 
+			available = {
+				has_war = yes
+			}
+
 			rule = {
 				can_join_factions = no
 				can_puppet = no
@@ -1955,6 +2002,48 @@ ideas = {
 				army_org_factor = -0.05
 			}
 		}
+		premier_lev_trotsky = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_leon_trotsky
+
+			removal_cost = -1
+
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.2
+				offensive_war_stability_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		premier_lev_trotsky2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_leon_trotsky
+
+			removal_cost = -1
+
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				offensive_war_stability_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
 		premier_iosif_jugashvili = {
 			
 			allowed = {
@@ -2002,6 +2091,31 @@ ideas = {
 				political_power_factor = -0.025
 				stability_factor = -0.1
 				defensive_war_stability_factor = 0.1
+			}
+		}
+		premier_iosif_jugashvili3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_government = communism
+			}
+
+			picture = SOV_soviet_hegemony
+
+			removal_cost = -1
+
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.025
+				defensive_war_stability_factor = 0.1
+				communism_drift = 0.01
 			}
 		}
 		offensive_doctrine = {

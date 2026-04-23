@@ -624,4 +624,9 @@ spriteTypes = {
 		name = "GFX_idea_the_visible_hand"
 		texturefile = "gfx/interface/ideas/the_visible_hand.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_komsomol"
+		texturefile = "gfx/interface/ideas/komsomol.dds"
+	}
 }
