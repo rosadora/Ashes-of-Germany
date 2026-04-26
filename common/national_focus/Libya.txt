@@ -8,6 +8,11 @@ focus_tree = {
 		}
 	 }
 
+	 continuous_focus_position = {
+		x = -150
+		y = 1000
+	 }
+
 
 
 	 focus = {
@@ -347,7 +352,6 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				has_completed_focus = LBA_overthrow_Mussolini
-				has_completed_focus = LBA_finish_the_opposition
 			}
 		}
 		available = {
@@ -357,9 +361,9 @@ focus_tree = {
 		ai_will_do = {
 			base = 5
 		}
-		x = 4
+		x = 12
 		y = -1
-		relative_position_id = LBA_prioritize_civilian_industries
+		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
 		completion_reward = {
 			450= {
 				 add_building_construction = {
@@ -387,9 +391,9 @@ focus_tree = {
 		id = LBA_prioritize_civilian_industries
 		icon = GFX_focus_generic_modernize_industry
 		cost = 7
-		x = 4
+		x = -4
 		y = 1
-		relative_position_id = LBA_under_Mussolini
+		relative_position_id = LBA_a_new_industry
 		mutually_exclusive = {
 			focus = LBA_prioritize_military_industries
 		}
@@ -421,6 +425,49 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_electrify_the_east_MON
+		icon = GFX_focus_generic_electrification
+		cost = 7
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		available = {
+			controls_state = 450
+			controls_state = 451
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			450 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		451 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
 		 }
 	 }
 
@@ -1013,13 +1060,16 @@ focus_tree = {
 		id = LBA_develop_Trippoli_industries
 		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
 		cost = 10
-		x = -1
-		y = 1
+		x = -2
+		y = 2
 		prerequisite = {
-			focus = LBA_prioritize_civilian_industries
+			focus = LBA_electrification_of_Tripoli_MON
 		}
 		ai_will_do = {
 			base = 5
+		}
+		available = {
+			controls_state = 448
 		}
 		relative_position_id = LBA_prioritize_civilian_industries
 		completion_reward = {
@@ -1043,11 +1093,11 @@ focus_tree = {
 		id = LBA_develop_eastern_cities
 		icon = GFX_goal_generic_construct_civilian
 		cost = 7
-		x = 1
-		y = 1
+		x = 2
+		y = 2
 		relative_position_id = LBA_prioritize_civilian_industries
 		prerequisite = {
-			focus = LBA_prioritize_civilian_industries
+			focus = LBA_electrify_the_east_MON
 		}
 		ai_will_do = {
 			base = 5
@@ -1079,19 +1129,51 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LBA_electrification_of_Tripoli_MON
+		icon = GFX_generic_electrification
+		cost = 7
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		ai_will_do = {
+			base = 5
+		}
+		available = {
+			controls_state = 448
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			448 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+			}
+		 }
+	}
+
+	focus = {
 		id = LBA_national_building_projects
 		icon = GFX_goal_generic_consumer_goods
 		cost = 7
-		x = 1
-		y = 1
+		x = 2
+		y = 0
 		prerequisite = {
-			focus = LBA_develop_Trippoli_industries
+			focus = LBA_electrification_of_Tripoli_MON
 		}
 		ai_will_do = {
 			base = 5
 		}
 		prerequisite = {
-			focus = LBA_develop_eastern_cities
+			focus = LBA_electrify_the_east_MON
 		}
 		relative_position_id = LBA_develop_Trippoli_industries
 		completion_reward = {
@@ -1106,7 +1188,7 @@ focus_tree = {
 		id = LBA_restoration_of_the_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 7
-		x = 25
+		x = 15
 		y = 0
 		available = {
 			NOT = {
@@ -2314,6 +2396,8 @@ focus_tree = {
 					days = 2
 				}
 				}
+
+				custom_effect_tooltip = not_intended_path
 			}
 		}
 
@@ -2643,7 +2727,7 @@ focus_tree = {
 		id = LBA_under_Mussolini_2
 		icon = GFX_focus_ITA_capo_supremo
 		cost = 10
-		x = 25
+		x = 14
 		y = 0
 		available = {			
 			NOT = {
@@ -3681,6 +3765,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 	 }
 }
@@ -3749,6 +3839,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 
 		451 = {
@@ -3756,6 +3852,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 		
 	 }
@@ -3794,6 +3896,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 
 		661 = {
@@ -3801,6 +3909,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 
 		662 = {
@@ -3808,6 +3922,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 
 		663 = {
@@ -3815,6 +3935,12 @@ focus = {
 				type = infrastructure
 				level = 1
 			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
 		}
 	 }
 }
@@ -4293,53 +4419,110 @@ focus = {
 }
 
 focus = {
-    id = LBA_2
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_invite_the_IRI
+    icon = GFX_focus_ETH_invite_italian_settlers
+	cost = 7
     relative_position_id = LBA_mussolini_triumphant
     x = -4
     y = 1
     prerequisite = { focus = LBA_mussolini_triumphant }
-    completion_reward = { }
+    completion_reward = {
+		add_ideas = the_iri
+	 }
 }
 
 focus = {
-    id = LBA_3
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_2
+    id = LBA_electrification_of_Tripoli
+    icon = GFX_generic_electrification
+	cost = 7
+    relative_position_id = LBA_invite_the_IRI
     x = -1
     y = 1
-    prerequisite = { focus = LBA_2 }
-    completion_reward = { }
+	available = {
+		controls_state = 448
+	}
+    prerequisite = { focus = LBA_invite_the_IRI }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+		}
+	 }
 }
 
 focus = {
     id = LBA_4
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_2
+    relative_position_id = LBA_invite_the_IRI
     x = 1
+	cost = 7
     y = 1
-    prerequisite = { focus = LBA_2 }
+    prerequisite = { focus = LBA_invite_the_IRI }
     completion_reward = { }
 }
 
 focus = {
-    id = LBA_5
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_3
+    id = LBA_electrify_the_east_Mus
+    icon = GFX_focus_generic_electrification
+    relative_position_id = LBA_electrification_of_Tripoli
     x = -1
     y = 1
-    prerequisite = { focus = LBA_3 }
-    completion_reward = { }
+	cost = 7
+	available = {
+		controls_state = 450
+		controls_state = 451
+	}
+    prerequisite = { focus = LBA_electrification_of_Tripoli }
+    completion_reward = {
+		450 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		451 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+	 }
 }
 
 focus = {
-    id = LBA_6
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_3
-    x = 1
-    y = 1
-    prerequisite = { focus = LBA_3 focus = LBA_4 }
-    completion_reward = { }
+    id = LBA_empower_the_IRI
+    icon = GFX_goal_generic_investment
+    relative_position_id = LBA_invite_the_IRI
+	cost = 7
+    x = 0
+    y = 2
+    prerequisite = { focus = LBA_4 }
+	prerequisite = { focus = LBA_electrification_of_Tripoli }
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = the_iri
+			add_idea = the_iri3
+		}
+	 }
 }
 
 focus = {
@@ -4355,20 +4538,20 @@ focus = {
 focus = {
     id = LBA_8
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_5
+    relative_position_id = LBA_electrify_the_east_Mus
     x = 1
     y = 1
-    prerequisite = { focus = LBA_5 focus = LBA_6 }
+    prerequisite = { focus = LBA_electrify_the_east_Mus focus = LBA_empower_the_IRI }
     completion_reward = { }
 }
 
 focus = {
     id = LBA_9
     icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_6
+    relative_position_id = LBA_empower_the_IRI
     x = 1
     y = 1
-    prerequisite = { focus = LBA_5 focus = LBA_6 focus = LBA_7 }
+    prerequisite = { focus = LBA_5 focus = LBA_empower_the_IRI focus = LBA_7 }
     completion_reward = { }
 }
 
@@ -4378,7 +4561,7 @@ focus = {
     relative_position_id = LBA_7
     x = 1
     y = 1
-    prerequisite = { focus = LBA_6 focus = LBA_7 }
+    prerequisite = { focus = LBA_empower_the_IRI focus = LBA_7 }
     completion_reward = { }
 }
 

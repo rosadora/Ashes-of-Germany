@@ -104,7 +104,7 @@
  LBA_develop_Trippoli_industries:0 "Develop Tripoli Industries"
  LBA_develop_Trippoli_industries_desc:0 "Tripoli, our largest city, must have its industry developed to turn it into a modern city of the world of tomorrow. This expansion will ensure our city is not forgotten to time."
  LBA_develop_eastern_cities:0 "Develop the Eastern Citites"
- LBA_develop_eastern_cities_desc:0 "In order for our nation to survive in the 1930's and 40's, we must ensure our cities are sufficiently developed for our industry to not only survive, but to thrive."
+ LBA_develop_eastern_cities_desc:0 "In order for our nation to survive in the 1930's and 40's, we must ensure our cities are sufficiently developed for our industry to not only survive, but to thrive. Although electrified, the eastern expanses of our nation must be developed more than just via electrification, to do this we will not only build up our cities, but the quality of life in the cities."
  LBA_national_building_projects:0 "Start National Building Projects"
  LBA_national_building_projects_desc:0 "Now that our cities are developed, we must ensure that the rest of the nation is built up from the desert it sits on."
  LBA_restoration_of_the_monarchy:0 "Truly Restore the Monarchy"
@@ -375,6 +375,8 @@
  LBA_a_Libyan_navy_desc:0 "Now that Tripoli is fully electrified, we can now focus on developing a new naval foothold in the Meditteranean off of our coasts. The Regia Marina from the Italian Nation already give us naval dominance along our coasts, however, if we are to last as a nation, we must ensure our security across the Meditteranean Sea."
  LBA_electrify_the_east: "Electrify the East"
  LBA_electrify_the_east_desc:0 "Although our capital is now electrified, there are 2 major cities in the east that still are without electrification. In order to say we are moving into the future, we must electrify these cities to ensure they do not fall behind the rest of Libya."
+ LBA_electrify_the_east_MON:0 "Electrify the East"
+ LBA_electrify_the_east_MON_desc:0 "Our eastern cities, being home to around 120 thousand people, must be electrified to show that we are not just another african nation where all the wealth is in our quite vulnerable capital."
  LBA_electrify_the_deserts:0 "Electrify the Deserts"
  LBA_electrify_the_deserts_desc:0 "Although our priority lies in our cities, our deserts still are home to many people and must be developed. Although our resources can be devoted elsewhere, it is a neccesary step to move forward in our national survival."
  LBA_request_Malta:0 "Request Maltan Ownership"
@@ -399,6 +401,15 @@
  LBA_quantity_over_quality_desc:0 "Although our army's quality will eventually become outdated, for now we must create a large, strong army to repel anyone who may try to take advantage of our weak state. If the Italo-Libyan state is to fall to ourside forces, not only would it be then end of the Italian Fascist Party, it would be the end of Fascism as a whole across the world."
  LBA_disband_the_blackshirts:0 "Disband the Blackshirts"
  LBA_disband_the_blackshirts_desc:0 "The Blackshirts, having operated in our nation for some time, has slowly been causing our nations internal collapse. Because of this, although they are a vital part to our armed forces strength, they must be put down. This is not a matter of who likes who, this is a matter of survival as a whole state."
+ LBA_invite_the_IRI:0 "Invite the IRI"
+ LBA_invite_the_IRI_desc:0 "The IRI, otherwise known as the Istituto per la Ricostruzione Industriale in Italy, was founded under Benito Mussolini to help the Italian Economy. Now that we are in Libya, an area with prime real estate and investment opportunities, the IRI may now be inclined in working with Benito Mussolini yet again."
+ LBA_empower_the_IRI:0 "Strenghten the IRI"
+ LBA_empower_the_IRI_desc:0 "The IRI, having helped our economic situation, has earned the reward of being strengthened in the nation of Libya. By strengthening them, they will be able to not only have more power over our nation, they will also be in our debt"
+ LBA_electrification_of_Tripoli:0 "Electrify Tripoli"
+ LBA_electrification_of_Tripoli_desc:0 "Although this concern is beneath us, we must still appease the Duce by electrifying the capital region of the Italo-Libyan state."
+ not_intended_path:0 "§Y This is NOT the intended path to play with Italo Balbo as your country leader! §Y"
+ LBA_electrification_of_Tripoli_MON:0 "Electrification of Tripoli"
+ LBA_electrification_of_Tripoli_MON_desc:0 "Tripoli, being the heart of the Libyan Nation, must be electrified in order to show the world that we are not just another backwarded african nation."
 
   #EVENTS#
  

@@ -2206,4 +2206,9 @@ spriteTypes = {
 		name = "GFX_goal_quantity_infantry"
 		texturefile = "gfx/interface/goals/generic_army_quantity.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_generic_investment"
+		texturefile = "gfx/interface/goals/generic_investment.dds"
+	}
 }

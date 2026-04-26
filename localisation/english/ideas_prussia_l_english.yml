@@ -1172,6 +1172,8 @@
  the_iri_desc:0 "The aim of the Institut de Reconstruction Industriel is to save failing companies, in particular by buying them out, which makes the IRI a de facto network of state-owned companies."
  the_iri2:0 "Istituto per la Ricostruzione Industriale"
  the_iri2_desc:0 "The aim of the Institut de Reconstruction Industriel is to save failing companies, in particular by buying them out, which makes the IRI a de facto network of state-owned companies."
+ the_iri3:0 "Istituto per la Ricostruzione Industriale"
+ the_iri3_desc "The aim of the Institut de Reconstruction Industriel is normally to save failing companies, however, in the Libyan state it has been empowered and given permission to use Libya as an operating ground for its own manufactured goods."
  natalist_policies:0 "Natalist Policies"
  fascist_education:0 "Fascist Education"
  fascist_education_desc:0 "With fascist school education and fascist vacation centers, we're building a generation of young nationalists devoted to their homeland."
@@ -1276,6 +1278,7 @@
  pan_arabian_volunteers:0 "Pan-Arabianist Volunteers"
  the_anti_imperialist_mission:0 "Anti-Imperialist Struggle"
  pan_arabian_broadcasting:0 "Pan-Arabian Broadcasting"
+### LIBYA ###
  conflict_in_libya:0 "Conflict in Libya"
  conflict_in_northern_africa:0 "Conflict in Northern Africa"
  ### BRITAIN ###
