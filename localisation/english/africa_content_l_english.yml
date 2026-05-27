@@ -25,6 +25,8 @@
  LBA_the_african_Prussia:0 "The African Prussia"
  LBA_the_african_Prussia_desc:0 "Now that we have aligned with the Prussian Nation, we can now proclaim the 'African Prussia'."
 
+ ita_focus:0 "The Italian Focus Tree"
+
   #Fix for something else rq
   COUNTRY_SELECTION_CHARACTER_DESC:0 ""
   #
@@ -390,8 +392,8 @@
  LBA_master_of_the_lands:0 "Master of the Land"
  LBA_the_master_of_the_land:0 "Master of the Army"
  LBA_the_master_of_the_land_desc:0 "Although we have already prioritized one of our main branches, there is no point in that branch being strong whenever our army itself cannot fight. In order not to rely on the already strengthened branch of the military, we must build our army and ensure it can hold its own in combat. If we fail to do this, we will just be another Invaded African State."
- LBA_Bengsai_research:0 "Construct the Bengsai University"
- LBA_Bengsai_research_desc:0 "Bengsai, being the largest eastern city, now having been electrified, is now in a position to have a new national university constructed in the heart of the city. Alongside this, its coastal location will allow for naval research to be conducted alongside other research projects."
+ LBA_Bengsai_research:0 "Construct the Tripoli University"
+ LBA_Bengsai_research_desc:0 "Tripoli, being the largest city in the nation, now having been electrified, is now in a position to have a new national university constructed in the heart of the city. Alongside this, its coastal location will allow for naval research to be conducted alongside other research projects."
  LBA_rally_blackshirts:0 "Italian Blackshirts"
  LBA_rally_the_Blackshirts:0 "Rally the Blackshirts"
  LBA_rally_the_Blackshirts_desc:0 "The Blackshirts, having been an integral supporter of Mussolini, have also had a majority of its members flee to Libya with Mussolini. Because of this, rallying them will allow us to use them against those who may wish to put us down once and for all"
@@ -410,6 +412,16 @@
  not_intended_path:0 "§Y This is NOT the intended path to play with Italo Balbo as your country leader! §Y"
  LBA_electrification_of_Tripoli_MON:0 "Electrification of Tripoli"
  LBA_electrification_of_Tripoli_MON_desc:0 "Tripoli, being the heart of the Libyan Nation, must be electrified in order to show the world that we are not just another backwarded african nation."
+ LBA_electrify_the_east_Mus:0 "Electrify the East"
+ LBA_electrify_the_east_Mus_desc:0 "In order to maintain our people do not try to rebel again, we must tend to their ungrateful needs of electrification."
+ LBA_callout_to_the_world:0 "Callout to the World"
+ LBA_callout_to_the_world_desc:0 "Although we were the largest fascist nation in Europe, there are still other fascists across the world. Now that we have been forced to flee, we must call out to the other Fascist nations in the world for support, even though it will be seen as a sign of weakness."
+ LBA_evaluate_libyan_workforce:0 "Evaluate the Libyan Workforce"
+ LBA_evaluate_libyan_workforce_desc:0 "The Libyan workforce, being new to modernization, must be evaluated to see where they fit in the country. By doing this, we can find out what our men are good at and what they aren't skilled at."
+ LBA_develop_tripoli_industries:0 "Develop Tripoli Industries"
+ LBA_develop_tripoli_industries_desc:0 "Now that we know what our men are capable of, we are now able to put them into new factories that are fitted to their specialties."
+ LBA_use_Prussian_contacts:0 "Use Prussian Contacts"
+ LBA_use_Prussian_contacts_desc:0 "The Prussians, having had our help re-form the government after the great war, have many sympathizers in their government. Because of this, some of our limited advisors have suggested we reach out to them and request weapons, however, there is a chance of their denial which could squander all potential diplomatic opportunities in the future."
 
   #EVENTS#
  

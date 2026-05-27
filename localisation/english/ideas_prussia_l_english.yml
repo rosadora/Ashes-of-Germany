@@ -1173,7 +1173,7 @@
  the_iri2:0 "Istituto per la Ricostruzione Industriale"
  the_iri2_desc:0 "The aim of the Institut de Reconstruction Industriel is to save failing companies, in particular by buying them out, which makes the IRI a de facto network of state-owned companies."
  the_iri3:0 "Istituto per la Ricostruzione Industriale"
- the_iri3_desc "The aim of the Institut de Reconstruction Industriel is normally to save failing companies, however, in the Libyan state it has been empowered and given permission to use Libya as an operating ground for its own manufactured goods."
+ the_iri3_desc:0 "The aim of the Institut de Reconstruction Industriel is normally to save failing companies, however, in the Libyan state it has been empowered and given permission to use Libya as an operating ground for its own manufactured goods."
  natalist_policies:0 "Natalist Policies"
  fascist_education:0 "Fascist Education"
  fascist_education_desc:0 "With fascist school education and fascist vacation centers, we're building a generation of young nationalists devoted to their homeland."
@@ -1233,7 +1233,7 @@
  the_latvian_sun_in_the_sky:0 "The Sun Shines Equally"
  the_latvian_sun_in_the_sky_desc:0 "Thanks to the alternation and successive participation of social democrats in the various governments, the country has achieved a high level of social protection, while on the other hand, the country remains militarized for obvious reasons. The Latvian people are imaginative and look to the future."
  women_in_the_workforce:0 "Women in the Workforce"
- women_in_the_workforce_desc:0 "The emancipation of women means emancipation in the home: women must be able to work and be independent. "
+ women_in_the_workforce_desc:0 "The emancipation of women means emancipation in the home; women must be able to work and be independent. "
  volunteers_in_russian_civil_war:0 "Volunteers in Russian Civil War"
  politburo:0 "Politburo"
  ### PALESTINE ###
@@ -1400,7 +1400,7 @@
  zionist_terror:0 "Zionist Terror"
  special_powers:0 "Militia's Government"
  palestine_epuration:0 "Epuration of Palestinians"
- colonization_of_palestine:0 "Sixth Aliyah"
+ colonization_of_palestine:0  "Sixth Aliyah"
  the_ethno_state:0 "The Ethno-State"
  nationalist_education_isr:0 "Nationalist Education"
  nationalist_education_isr2:0 "Nationalist Education"
@@ -1409,7 +1409,6 @@
  israeli_economics2:0 "Israeli Economics"
  israeli_economics3:0 "Israeli Economics"
  colapse_of_the_mandate:0 "Collapse of the Mandate"
- colapse_of_the_mandate_desc:0 ""
  ### AUTONOMOUS STATES ###
  british_crown_colonies:0 "British Crown Colony"
  french_colonial_administration:0 "French Colonial Administration"
@@ -1689,6 +1688,6 @@
  ### SILESIA ###
  home_of_nationalities:0 "Home of Nationalities"
  home_of_nationalities_desc:0 "Silesia is a region where peoples of different languages and national identities coexist, with guaranteed autonomy and freedoms."
- ### LIBTA ###
+ ### LIBYA ###
  flee_from_italy:0 "Fled from Italy"
  flee_from_italy_desc:0 "The Italian Leader, Mussolini, has fled from the Italian Peninsula to Libya."

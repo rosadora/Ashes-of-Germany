@@ -24,6 +24,7 @@ ETH_ethiopian_colapse = {
 			tag = TIG
 			tag = QEM
 			tag = ERI
+			tag = GBA
 		}
 	}
 

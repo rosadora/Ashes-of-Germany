@@ -250,8 +250,8 @@ country_event = {
 
 country_event = {
 	id = LBA_events.7
-	title = "[From.GetName]. Accepts!"
-	desc = "The [From.GetName]. have accepted our request for guns!"
+	title = "[From.GetName] Accepts!"
+	desc = "The [From.GetName]ns have accepted our request for guns!"
 
 	picture = GFX_report_event_generic_factory
 
@@ -265,8 +265,8 @@ country_event = {
 
 country_event = {
 	id = LBA_events.8
-	title = "[From.GetName]. Denies!"
-	desc = "The [From.GetName]. have Denied our request for guns!"
+	title = "[From.GetName] Denies!"
+	desc = "The [From.GetName]ns have Denied our request for guns!"
 
 	picture = GFX_report_event_generic_factory
 
@@ -1696,8 +1696,8 @@ news_event = {
 
 country_event = {
 	id = LBA_events.37
-	title = "The [PREV.GetAdjective] have denied!"
-	desc = "Following the request of Malta, not only have the [PREV.GetAdjective] have denied our request of Malta, they have called us 'Insane' for asking about it, what shall we do?"
+	title = "The [FROM.GetAdjective] have denied!"
+	desc = "Following the request of Malta, not only have the [FROM.GetAdjective] have denied our request of Malta, they have called us 'Insane' for asking about it, what shall we do?"
 	picture = GFX_report_event_generic_handshake
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1728,6 +1728,133 @@ country_event = {
 		name = "Oh Well"
 		ai_chance = {
 			base = 45
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.38
+	title = "Mussolini Calls Out"
+	desc = "Mussolini, having have fled the Italian nation upon the civilwar's start, has called out to the world for foreign support."
+	is_triggered_only = yes
+
+	picture = GFX_report_event_generic_mussolini
+
+	option = {
+		name = "No"
+		ai_chance = {
+			base = 5
+		}
+	}
+
+	option = {
+		name = "To Our Brothers!"
+
+		ai_chance = {
+			base = 95
+		}
+
+		LBA = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+			}
+			country_event = {
+				id = LBA_events.39
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.39
+	title = "The [FROM.GetAdjective] Send Support!"
+	desc = "The [FROM.GetAdjective] have sent us support in the form of military equipment!"
+
+	picture = GFX_report_event_generic_truck
+	is_triggered_only = yes
+
+	option = {
+		name = "Splendid!"
+	}
+}
+
+country_event = {
+	id = LBA_events.40
+	title = "The Libyan Workforce"
+	desc = "Now that the IRI is in libya, the workforce must be evaluated to ensure there is value to be used in our limited workforce."
+	picture = GFX_report_event_DEN_fascist_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "They can fight!"
+		add_manpower = 25000
+	}
+
+	option = {
+		name = "They can Work!"
+		448 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	option = {
+		name = "They are Peaceful!"
+		add_stability = 0.05
+	}
+}
+
+
+country_event = {
+	id = LBA_events.41
+	title = "Libya requests guns"
+	desc = "Mussolini, having had fled to Libya upon the outbreak of the Italian civilwar, has requested our support in the form of weapons. Although we do not have formal ties with Libya, some of our generals have requested we send some weapons due to us being in their debt from their assistance in a previous matter."
+	picture = GFX_report_event_tank_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "It is only a few guns"
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+		}
+		LBA = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = ROOT
+			}
+			country_event = {
+				id = LBA_events.7
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 85
+		}
+	}
+
+	option = {
+		name = "They can fend for themselves."
+		LBA = {
+			country_event = {
+				id = LBA_events.8
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 15
 		}
 	}
 }

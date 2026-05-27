@@ -68,13 +68,17 @@ LBA_troops_from_italy = {
 		icon = GFX_decision_category_ITA_colonial_management
 
 		allowed = {
-			tag = LBA
+			NOT = {
+				has_war_with = AML
+			}
 		}
 		visible = {
 			has_character = LBA_benito_mussolini
 		}
 		available = {
-			always = yes
+			NOT = {
+				has_war_with = AML
+			}
 		}
 		priority = 1
 		days_remove = 10
@@ -87,7 +91,7 @@ LBA_troops_from_italy = {
 		}
 		cost = 0
 
-		complete_effect = {
+		remove_effect = {
 			448 = {
 				create_unit = {
                   division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"

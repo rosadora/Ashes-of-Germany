@@ -33,7 +33,7 @@ LBA_power_balance = {
 
 	range = {
 		id = LBA_mussolini_in_complete_control
-		min = -0.95
+		min = -0.99
 		max = -0.75
 		modifier = {
 			fascism_drift = 0.04
@@ -46,7 +46,7 @@ LBA_power_balance = {
 	range = {
 		id = LBA_no_opposition_to_mussolini
 		min = -1
-		max = -0.95
+		max = -0.99
 
 		on_activate = {
 			remove_power_balance = {
@@ -81,7 +81,7 @@ LBA_power_balance = {
 	range = {
 		id = LBA_italo_balbo_in_power
 		min = 0.75
-		max = 0.95
+		max = 0.99
 		modifier = {
 			ultra_nationalism_drift = 0.04
 			stability_weekly = -0.004
@@ -92,7 +92,7 @@ LBA_power_balance = {
 
 	range = {
 		id = LBA_italo_balbo_coup
-		min = 0.95
+		min = 0.99
 		max = 1.00
 		on_activate = {
 			remove_power_balance = {
