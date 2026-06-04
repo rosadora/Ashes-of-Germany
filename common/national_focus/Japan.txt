@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 1000
+			add = 2000
 			original_tag = JAP
 		}
 	}
@@ -5910,7 +5910,7 @@
 		}
 	}
 	focus = {
-		id = JAP_strengthen_the_divine_wind
+		id = JAP_strengthen_the_divine_wind_focus
 		icon = GFX_focus_JAP_the_divine_wind
 		x = 0
 		y = 2
@@ -5947,6 +5947,35 @@
 				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect_bba
 				hidden_effect = { set_technology = { suicide_charge = 1 popup = no} }
 			}
+		}
+	}
+	focus = {
+		id = JAP_momotaro_tales
+		icon = GFX_focus_JAP_fund_propaganda_films
+		x = 0
+		y = 3
+		prerequisite = {focus = JAP_warrior_spirit}
+		prerequisite = {focus = JAP_spiritual_mobilization}
+		relative_position_id = JAP_seisen
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_government = ultra_nationalism
+				has_government = neutrality 
+				has_government = fascism
+			}
+			is_puppet = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+		   add_war_support = 0.1
 		}
 	}
 	focus = {

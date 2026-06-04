@@ -236,6 +236,11 @@ characters={
 			traits = {
 				army_regrouping_2
 			}
+			available = {
+				NOT = {
+					has_completed_focus = RUS_shuffle_the_military_staff
+				}
+			}
 			cost = 100
 			ai_will_do = {
 				factor = 8.000
@@ -322,6 +327,11 @@ characters={
 			}
 			traits = {
 				army_cavalry_3
+			}
+			available = {
+				NOT = {
+					has_completed_focus = RUS_shuffle_the_military_staff
+				}
 			}
 			cost = 100
 			ai_will_do = {
@@ -430,6 +440,11 @@ characters={
 			}
 			traits = {
 				mass_assault_expert
+			}
+			available = {
+				NOT = {
+					has_completed_focus = RUS_shuffle_the_military_staff
+				}
 			}
 			cost = 100
 			ai_will_do = {

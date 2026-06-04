@@ -519,3 +519,308 @@ country_event = { #White Russia Surrender
 		}
 	}
 }
+country_event = { #Partiya Ordena Infighting
+	id = russia.17
+	title = russia.17.t
+	desc = russia.17.d
+	picture = GFX_report_event_tur_politician_march
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.17.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = neutrality 
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = -0.05
+		}
+	}
+}
+country_event = { #March of Progressives in Moscow
+	id = russia.18
+	title = russia.18.t
+	desc = russia.18.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { # Benefits to Progressives
+		name = russia.18.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = classical_liberalism 
+			popularity = 0.1
+		}
+	}
+	option = { # Benefits to Kadets
+		name = russia.18.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = classical_liberalism 
+			popularity = 0.025
+		}
+	}
+}
+country_event = { #Kerensky rally Workers Unions
+	id = russia.19
+	title = russia.19.t
+	desc = russia.19.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = { # Crackdown on Unions
+		name = russia.19.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.035
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = -0.01
+		}
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = -0.01
+		}
+		add_popularity = {
+			ideology = libertarian_socialism 
+			popularity = -0.01
+		}
+	}
+	option = { The Conquest of Power will be a Victory for Workers
+		name = russia.19.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = -0.025
+		}
+		add_popularity = {
+			ideology = classical_marxism 
+			popularity = -0.025
+		}
+		add_popularity = {
+			ideology = libertarian_socialism 
+			popularity = -0.025
+		}
+	}
+}
+country_event = { #Dissolution of the Ordena Partiya
+	id = russia.20
+	title = russia.20.t
+	desc = russia.20.d
+	picture = GFX_report_event_por_return_of_the_monarchy
+
+	is_triggered_only = yes
+
+	option = { 
+		name = russia.20.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = neutrality 
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = ultra_nationalism 
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = democratic 
+			popularity = 0.1
+		}
+	}
+}
+country_event = { #Kadets back to their Roots?
+	id = russia.21
+	title = russia.21.t
+	desc = russia.21.d
+	picture = GFX_report_event_tur_political_rally
+
+	is_triggered_only = yes
+
+	option = { # Right faction prevails
+		name = russia.21.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = democratic 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.025
+		}
+	}
+	option = { # Republican Faction Prevails
+		name = russia.21.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = -0.05
+		}
+	}
+}
+country_event = { #Party of Order and Progress Emerges
+	id = russia.22
+	title = russia.22.t
+	desc = russia.22.d
+	picture = GFX_report_event_tur_political_rally
+
+	is_triggered_only = yes
+
+	option = { # They are not relevant anymore
+		name = russia.22.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.03
+		}
+		set_party_name = {
+			ideology = fascism 
+			name = SOV_fascism_ultra
+			long_name = SOV_fascism_ultra_long
+		}
+	}
+	option = { # Russian Ultras are Consolidating
+		name = russia.22.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.1
+		}
+		set_party_name = {
+			ideology = fascism 
+			name = SOV_fascism_ultra
+			long_name = SOV_fascism_ultra_long
+		}
+	}
+}
+country_event = { #Progressive lack of Leadership
+	id = russia.23
+	title = russia.23.t
+	desc = russia.23.d
+	picture = GFX_report_event_tur_political_rally
+
+	is_triggered_only = yes
+
+	option = { 
+		name = russia.23.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_liberalism 
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = russia.23.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = democratic 
+			popularity = 0.1
+		}
+	}
+}
+country_event = { #A Call from Abroad
+	id = russia.24
+	title = russia.24.t
+	desc = russia.24.d
+	picture = GFX_report_event_NOR_trotsky_speech
+
+	is_triggered_only = yes
+
+	option = { # Who is this guy?
+		name = russia.24.a
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = 0.1
+		}
+	}
+	option = { #Workers of Russia, unite!
+		name = russia.24.b
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democracy 
+			popularity = -0.1
+		}
+	}
+}
+country_event = { #Election Day
+	id = russia.25
+	title = russia.25.t
+	desc = russia.25.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = { # And the Winner is...
+		name = russia.25.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_temp_variable = { RUS_kadets_support = party_popularity@social_liberalism }
+		add_to_temp_variable = { RUS_menshevik_support = party_popularity@social_democracy }
+		add_to_temp_variable = { RUS_octobrist_support = party_popularity@democratic }
+		set_country_flag = elections_over
+	}
+}

@@ -22,6 +22,27 @@ ideas = {
 				libertarian_socialism_drift = 0.02
 			}
 		}
+		memories_of_the_civil_war2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.4
+				communism_drift = 0.02
+				classical_marxism_drift = 0.01
+				libertarian_socialism_drift = 0.01
+			}
+		}
 		the_second_russian_revolution = {
 			
 			allowed = {
@@ -539,6 +560,26 @@ ideas = {
 				army_morale_factor = -0.25
 				experience_gain_army_factor = -0.35
 				supply_factor = -0.2
+			}
+		}
+		russian_army_rebirth = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CZE_army_bop_plus_1
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.15
+				experience_gain_army_factor = -0.1
+				supply_factor = -0.15
 			}
 		}
 		army_of_the_old_days2 = {

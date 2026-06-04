@@ -15,41 +15,11 @@
 	default = no
 
 
-
-	focus = {
-		id = RUS_healing_our_wounds
-		icon = GFX_goal_healing_our_wounds
-		x = 10
-		y = 0
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 200
-			add_stability = 0.05
-		}
-	}
 	focus = {
 		id = RUS_imperial_airforce
 		icon = GFX_goal_generic_build_airforce
 		x = 35
-		y = 1
+		y = 0
 
 		cost = 8
 
@@ -68,7 +38,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_healing_our_wounds}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -245,7 +214,7 @@
 		id = RUS_imperial_navy
 		icon = GFX_focus_generic_refit_civilian_ships
 		x = 30
-		y = 1
+		y = 0
 
 		cost = 8
 
@@ -264,7 +233,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_healing_our_wounds}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -501,7 +469,7 @@
 		id = RUS_rebuild_the_imperial_army
 		icon = GFX_focus_SOV_restore_cossack_units
 		x = 20
-		y = 1
+		y = 0
 
 		cost = 8
 
@@ -520,7 +488,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_healing_our_wounds}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -991,8 +958,8 @@
 	focus = {
 		id = RUS_the_second_russian_civil_war
 		icon = GFX_focus_spr_crush_the_revolution
-		x = 10
-		y = 10
+		x = 11
+		y = 00
 
 		cost = 8
 
@@ -1024,7 +991,7 @@
 	focus = {
 		id = RUS_civil_war_plans
 		icon = GFX_goal_generic_position_armies
-		x = 0
+		x = -3
 		y = 1
 
 		cost = 2
@@ -1034,12 +1001,46 @@
 		}
 
 		available = {
-			has_country_flag = second_russian_civil_war
+			OR = {
+				has_government = neutrality 
+				has_government = ultra_nationalism
+				has_government = fascism
+			}
 		}
-		
-		bypass = {
-         has_global_flag = second_russian_civil_war_is_over
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_the_second_russian_civil_war}
+		relative_position_id = RUS_the_second_russian_civil_war
+		mutually_exclusive = {focus = RUS_yellow_plan}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_command_power = 100
 		}
+	}
+	focus = {
+		id = RUS_yellow_plan
+		icon = GFX_SOV_capital_of_the_tsars_ccp_2d_sov_compatibility
+		x = 3
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				has_government = classical_liberalism 
+				has_government = social_liberalism
+				has_government = democratic
+			}
+		}
+
+		mutually_exclusive = {focus = RUS_civil_war_plans}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1056,7 +1057,7 @@
 		id = RUS_war_against_the_reds
 		icon = GFX_goal_generic_war_with_comintern
 		x = -2
-		y = 2
+		y = 1
 
 		cost = 4
 
@@ -1076,7 +1077,7 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		relative_position_id = RUS_the_second_russian_civil_war
+		relative_position_id = RUS_civil_war_plans
 		prerequisite = {focus = RUS_civil_war_plans}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1115,7 +1116,7 @@
 		id = RUS_white_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 2
-		y = 2
+		y = 1
 
 		cost = 4
 
@@ -1137,7 +1138,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_civil_war_plans}
-		relative_position_id = RUS_the_second_russian_civil_war
+		relative_position_id = RUS_civil_war_plans
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -1163,7 +1164,7 @@
 		id = RUS_moving_industries_to_the_urals
 		icon = GFX_goal_generic_construction2
 		x = 2
-		y = 3
+		y = 2
 
 		cost = 4
 
@@ -1191,7 +1192,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_white_arsenal}
-		relative_position_id = RUS_the_second_russian_civil_war
+		relative_position_id = RUS_civil_war_plans
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -1229,7 +1230,7 @@
 		id = RUS_destroy_the_separatism
 		icon = GFX_goal_generic_political_pressure
 		x = 0
-		y = 2
+		y = 1
 
 		cost = 4
 
@@ -1251,7 +1252,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_civil_war_plans}
-		relative_position_id = RUS_the_second_russian_civil_war
+		relative_position_id = RUS_civil_war_plans
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -1289,7 +1290,7 @@
 		id = RUS_anti_communist_focus
 		icon = GFX_focus_SOV_the_last_purge
 		x = -2
-		y = 3
+		y = 2
 
 		cost = 4
 
@@ -1309,7 +1310,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_war_against_the_reds}
-		relative_position_id = RUS_the_second_russian_civil_war
+		relative_position_id = RUS_civil_war_plans
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -1323,7 +1324,7 @@
 		id = RUS_the_white_army
 		icon = GFX_focus_SOV_panslavic_nationalism
 		x = 0
-		y = 4
+		y = 3
 
 		cost = 8
 
@@ -1344,7 +1345,7 @@
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_moving_industries_to_the_urals}
 		prerequisite = {focus = RUS_anti_communist_focus}
-		relative_position_id = RUS_the_second_russian_civil_war
+		relative_position_id = RUS_civil_war_plans
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -1355,7 +1356,7 @@
 		id = RUS_save_the_monarchy
 		icon = GFX_goal_save_the_monarchy
 		x = 0
-		y = 1
+		y = 0
 
 		cost = 5
 
@@ -1373,8 +1374,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_healing_our_wounds}
-		relative_position_id = RUS_healing_our_wounds
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -2484,8 +2483,8 @@
 	}
 	focus = {
 		id = RUS_the_second_russian_revolution
-		icon = GFX_goal_second_russian_revolution
-		x = -2
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = -8
 		y = 1
 
 		cost = 5
@@ -2512,15 +2511,15 @@
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = memories_of_the_civil_war1
-				add_idea = the_second_russian_revolution
+				add_idea = memories_of_the_civil_war2
 			}
 		}
 	}
 	focus = {
-		id = RUS_united_socialist_front
-		icon = GFX_focus_por_workers_of_iberia
-		x = -4
-		y = 2
+		id = RUS_empower_the_duma
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = -1
+		y = 1
 
 		cost = 5
 
@@ -2539,20 +2538,26 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_the_second_russian_revolution}
-		relative_position_id = RUS_save_the_monarchy
+		relative_position_id = RUS_the_second_russian_revolution
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.15
-			add_political_power = 100
-
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
-		id = RUS_eliminate_the_influence_of_aristocracy
-		icon = GFX_focus_rom_parties_end
-		x = -2
-		y = 2
+		id = RUS_shuffle_the_military_staff
+		icon = GFX_focus_RAJ_military_into_the_workforce
+		x = 1
+		y = 1
 
 		cost = 5
 
@@ -2571,25 +2576,25 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		prerequisite = {focus = RUS_the_second_russian_revolution}
-		relative_position_id = RUS_save_the_monarchy
+		relative_position_id = RUS_the_second_russian_revolution
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.05
 			add_popularity = {
-				ideology = neutrality
+				ideology = ultra_nationalism
 				popularity = -0.1
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.075
+			swap_ideas = {
+				remove_idea = army_of_the_old_days
+				add_idea = russian_army_rebirth
 			}
 		}
 	}
 	focus = {
-		id = RUS_proclamation_of_the_second_russian_republic
-		icon = GFX_goal_kerensky_republic
-		x = -3
+		id = RUS_distance_from_the_electoral_race
+		icon = GFX_focus_RAJ_a_policy_of_silence
+		x = -2
 		y = 3
 
 		cost = 5
@@ -2608,23 +2613,128 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_united_socialist_front}
-		prerequisite = {focus = RUS_eliminate_the_influence_of_aristocracy}
-		relative_position_id = RUS_save_the_monarchy
+		prerequisite = {focus = RUS_empower_the_duma}
+		prerequisite = {focus = RUS_shuffle_the_military_staff}
+		relative_position_id = RUS_the_second_russian_revolution
+		mutually_exclusive = {focus = RUS_support_the_octobrists}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			set_country_flag = return_to_calm
-			swap_ideas = {
-				remove_idea = the_second_russian_revolution
-				add_idea = the_second_russian_revolution2
-			}
-			set_cosmetic_tag = RUS_DEM
+			add_political_power = 100
 		}
 	}
 	focus = {
-		id = RUS_dissolve_fascist_groups
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		id = RUS_support_the_octobrists
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 2
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_empower_the_duma}
+		prerequisite = {focus = RUS_shuffle_the_military_staff}
+		mutually_exclusive = {focus = RUS_distance_from_the_electoral_race}
+		relative_position_id = RUS_the_second_russian_revolution
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = RUS_dissolve_the_parliament
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_empower_the_duma}
+		prerequisite = {focus = RUS_shuffle_the_military_staff}
+		relative_position_id = RUS_the_second_russian_revolution
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = elections_will_take_place_in_hundred_days
+			hidden_effect = {
+			country_event = {
+				id = russia.17
+				days = 10
+			}
+			country_event = {
+				id = russia.18
+				days = 20
+			}
+			country_event = {
+				id = russia.19
+				days = 30
+			}
+			country_event = {
+				id = russia.20
+				days = 40
+			}
+			country_event = {
+				id = russia.21
+				days = 50
+			}
+			country_event = {
+				id = russia.22
+				days = 60
+			}
+			country_event = {
+				id = russia.23
+				days = 70
+			}
+			country_event = {
+				id = russia.24
+				days = 80
+			}
+			country_event = {
+				id = russia.25
+				days = 100
+			}
+			}
+		}
+	}
+	focus = {
+		id = RUS_menshevik_victory
+		icon = GFX_focus_generic_social_democracy
 		x = -3
 		y = 4
 
@@ -2635,41 +2745,13 @@
 		}
 
 		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_proclamation_of_the_second_russian_republic}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_stability = -0.1
-			swap_ideas = {
-				remove_idea = the_second_russian_revolution2
-				add_idea = the_second_russian_revolution3
+			custom_trigger_tooltip  = {
+				tooltip  = menshevik_victory_tooltip
+			 check_variable = { RUS_menshevik_support > RUS_kadets_support }
+		     check_variable = { RUS_menshevik_support > RUS_octobrist_support }
+			 has_country_flag = elections_over
 			}
 		}
-	}
-	focus = {
-		id = RUS_public_healthcare
-		icon = GFX_focus_ITA_devaluate_the_lire
-		x = -3
-		y = 5
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
 		
 		bypass = {
 
@@ -2678,428 +2760,17 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_dissolve_fascist_groups}
-		relative_position_id = RUS_save_the_monarchy
+		relative_position_id = RUS_the_second_russian_revolution
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas = public_healthcare
+			add_political_power = 100
 		}
 	}
 	focus = {
-		id = RUS_increase_taxes
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = -5
-		y = 5
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_dissolve_fascist_groups}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_ideas = increase_taxes
-		}
-	}
-	focus = {
-		id = RUS_interventionist
-		icon = GFX_focus_usa_focus_on_europe
-		x = -1
-		y = 6
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_public_healthcare}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_country_leader_trait = interventionist
-			set_rule = {
-            can_declare_war_on_same_ideology = yes
-           }
-		}
-	}
-	focus = {
-		id = RUS_appoint_left_wing_ministers
-		icon = GFX_focus_spr_unify_the_london_bureau
-		x = -3
-		y = 6
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_public_healthcare}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_Viktor_Tchernov
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_Bukharin_small
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_Savinkov_small
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_Gots_small
-			
-		}
-	}
-	focus = {
-		id = RUS_no_more_split
-		icon = GFX_focus_spr_class_war
-		x = -3
-		y = 7
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_appoint_left_wing_ministers}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = the_second_russian_revolution3
-				add_idea = the_second_russian_revolution4
-			}
-		}
-	}
-	focus = {
-		id = RUS_defend_the_revolution
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = -5
-		y = 7
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_appoint_left_wing_ministers}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_ideas = defend_the_revolution
-		}
-	}
-	focus = {
-		id = RUS_eurasian_federation
-		icon = GFX_focus_generic_support_the_left_right
-		x = -4
-		y = 8
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_defend_the_revolution}
-		prerequisite = {focus = RUS_no_more_split}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_threat = 7
-			create_faction_from_template = {
-             template = faction_template_generic_dominance
-             name = "Eurasian Federation"
-             icon = GFX_faction_logo_generic_democratic
-            }
-			set_cosmetic_tag = RUS_EUR
-			add_stability = 0.1
-			add_political_power = 150
-		}
-	}
-	focus = {
-		id = RUS_revenge_on_vistula
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -5
-		y = 9
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_eurasian_federation}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			create_wargoal = {
-          type = annex_everything
-          target = UKR
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = BLR
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = ROM
-	     }
-		 add_state_core = 78
-		 UKR = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		 BLR = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		}
-	}
-	focus = {
-		id = RUS_recover_our_oil
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -4
-		y = 10
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_eurasian_federation}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-		 create_wargoal = {
-          type = annex_everything
-          target = GEO
-	     }
-		 GEO = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		}
-	}
-	focus = {
-		id = RUS_end_eastern_imperialism
-		icon = GFX_focus_attack_japan
-		x = -4
-		y = 11
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_recover_our_oil}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_threat = 5
-			create_wargoal = {
-          type = annex_everything
-          target = JAP
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = FER
-	     }
-		 FER = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		}
-	}
-	focus = {
-		id = RUS_expedition_in_central_asia
-		icon = GFX_goal_generic_major_war
-		x = -3
-		y = 9
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_eurasian_federation}
-		relative_position_id = RUS_save_the_monarchy
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			create_wargoal = {
-          type = annex_everything
-          target = KAZ
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = KYR
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = TMS
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = UZB
-	     }
-		 create_wargoal = {
-          type = annex_everything
-          target = TAJ
-	     }
-		 KAZ = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		 KYR = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		 TMS = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		 UZB = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		 TAJ = {
-			every_core_state = {
-				add_core_of = SOV
-			}
-		 }
-		}
-	}
-	focus = {
-		id = RUS_socialist_education
-		icon = GFX_focus_generic_socialist_science
-		x = -5
+		id = RUS_kadets_victory
+		icon = GFX_goal_kadets_victory
+		x = 0
 		y = 4
 
 		cost = 5
@@ -3109,6 +2780,12 @@
 		}
 
 		available = {
+			custom_trigger_tooltip  = {
+				tooltip  = kadets_victory_tooltip
+			 check_variable = { RUS_kadets_support > RUS_menshevik_support }
+		     check_variable = { RUS_kadets_support > RUS_octobrist_support }
+			 has_country_flag = elections_over
+			}
 		}
 		
 		bypass = {
@@ -3118,20 +2795,54 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_proclamation_of_the_second_russian_republic}
-		relative_position_id = RUS_save_the_monarchy
+		relative_position_id = RUS_the_second_russian_revolution
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_research_slot = 1
+			add_political_power = 50
 			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = RUS_octobrist_victory
+		icon = GFX_goal_generic_defence
+		x = 3
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip  = {
+				tooltip  = octobrist_victory_tooltip
+			 check_variable = { RUS_octobrist_support > RUS_menshevik_support }
+		     check_variable = { RUS_octobrist_support > RUS_kadets_support }
+			 has_country_flag = elections_over
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_the_second_russian_revolution
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
 		}
 	}
 	focus = {
 		id = RUS_late_industrialization
 		icon = GFX_focus_generic_armored_air_support
-		x = -10
-		y = 1
+		x = -20
+		y = 0
 
 		cost = 5
 
@@ -3150,8 +2861,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		prerequisite = {focus = RUS_healing_our_wounds}
-		relative_position_id = RUS_healing_our_wounds
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {

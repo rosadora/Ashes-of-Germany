@@ -929,3 +929,12 @@ create_country_leader = {
 	traits = {
 	}
 }
+create_country_leader = {
+	name = "Pavel Milyukov"
+	desc = ""
+	picture = "gfx/leaders/SOV/Pavel_Milyukov.dds"
+	expire = "1980.1.1"
+	ideology = social_liberalism_category
+	traits = {
+	}
+}

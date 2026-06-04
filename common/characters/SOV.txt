@@ -1853,11 +1853,8 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = RUS_shuffle_the_military_staff
 				}
 			}				
 			traits = {

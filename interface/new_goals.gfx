@@ -2025,4 +2025,9 @@ spriteTypes = {
 	name = "GFX_goal_reconcile_with_sr"
 	texturefile = "gfx/interface/goals/reconcile_with_sr.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_kadets_victory"
+	texturefile = "gfx/interface/goals/kadets_victory.dds"			
+	}
 }
