@@ -164,7 +164,7 @@ country_event = {
 
 country_event = {
 	id = LBA_events.4
-	title = "The [FRA.GetAdjective] Deny!"
+	title = "The French Deny!"
 	desc = "Although our request was reasonable, the French nation has denied our request of control over North Africa!"
 	picture = GFX_report_event_generic_read_write
 
@@ -189,8 +189,8 @@ country_event = {
 
 country_event = {
 	id = LBA_events.5
-	title = "The [FRA.GetAdjective] Cave!"
-	desc = "The [FRA.GetAdjective] have caved to our so called demand over North Africa. In all honesty, we all doubted the decision of requesting North Africa, but, the Gambit worked!"
+	title = "The French Cave!"
+	desc = "The French have caved to our so called demand over North Africa. In all honesty, we all doubted the decision of requesting North Africa, but, the Gambit worked!"
 	picture = GFX_report_event_generic_rally
 
 	is_triggered_only = yes
@@ -1754,6 +1754,12 @@ country_event = {
 			base = 95
 		}
 
+		hidden_effect = {
+			ROOT = {
+				set_country_flag = Mussolini_Sympathies
+			}
+		}
+
 		LBA = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
@@ -1839,6 +1845,10 @@ country_event = {
 				id = LBA_events.7
 				days = 2
 			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 		}
 		ai_chance = {
 			base = 85
@@ -1855,6 +1865,26 @@ country_event = {
 		}
 		ai_chance = {
 			base = 15
+		}
+	}
+}
+
+country_event = {
+	id = LBA_events.42
+	title = "Mussolini Calls Foreign Fighters!"
+	desc = "Mussolini, having had us support him diplomatically in Libya, has used his newfound influence over our country to call upon our men to go to Libya to fight under his banner!"
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Rats!"
+		LBA = {
+			add_manpower = 10000
+		}
+
+		ROOT = {
+			add_manpower = -10000
 		}
 	}
 }

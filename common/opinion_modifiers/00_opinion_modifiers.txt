@@ -53,6 +53,11 @@ opinion_modifiers = {
 		months = 24
 	}
 
+	visit_to_Berlin = {
+		value = 50
+		months = 24
+	}
+
 	breach_italian_ties = {
 		Value = -75
 		months = 72

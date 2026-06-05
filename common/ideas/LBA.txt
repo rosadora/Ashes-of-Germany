@@ -411,6 +411,29 @@ ideas = {
 			}
 		}
 
+		Libyan_ENG_economic_support = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = ARG_british_influences
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				hidden_modifier = {
+					democratic_drift = 0.02
+					social_democracy_drift = 0.02
+					classical_liberalism_drift = 0.02
+				}
+			}
+		}
+
 		rebuild_the_fascist_party_idea = {
 			allowed = {
 				always = yes
