@@ -2801,6 +2801,106 @@
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
+			set_politics = {
+				ruling_party = social_liberalism
+				elections_allowed = yes
+			}
+			add_ideas = vladimir_tsar
+		}
+	}
+	focus = {
+		id = RUS_decentralization_reform
+		icon = GFX_focus_generic_treaty
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_kadets_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_kadets_victory}
+
+		completion_reward = {
+			add_ideas = decentralization
+		}
+	}
+	focus = {
+		id = RUS_undermine_extremism
+		icon = GFX_focus_PRC_petition_for_freedom
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_kadets_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_kadets_victory}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = memories_of_the_civil_war2
+				add_idea = memories_of_the_civil_war3
+			}
+		}
+	}
+	focus = {
+		id = RUS_push_for_tsar_abdication
+		icon = GFX_focus_rom_handle_king
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_kadets_victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_undermine_extremism}
+		prerequisite = {focus = RUS_decentralization_reform}
+
+		completion_reward = {
+			remove_ideas = vladimir_tsar
+			set_cosmetic_tag = SOV_FED
 		}
 	}
 	focus = {

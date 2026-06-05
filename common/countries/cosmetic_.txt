@@ -3,6 +3,11 @@ MAL_UK = {
     color_ui = rgb { 255 73 121 }
 }
 
+SOV_FED = {
+    color = rgb { 17 51 24 }
+    color_ui = rgb { 17 51 24 }
+}
+
 MON_khatanate = {
     color = rgb { 56 48 39 }
     color_ui = rgb { 56 48 39 }

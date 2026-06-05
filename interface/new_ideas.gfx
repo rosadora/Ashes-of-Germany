@@ -629,4 +629,9 @@ spriteTypes = {
 		name = "GFX_idea_komsomol"
 		texturefile = "gfx/interface/ideas/komsomol.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_vladimir_tsar_idea"
+		texturefile = "gfx/interface/ideas/vladimir_tsar_idea.dds"
+	}
 }

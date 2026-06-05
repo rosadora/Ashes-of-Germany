@@ -509,6 +509,7 @@
  HRE_UNIFIED_fascism_DEF:0 "the Nationalist Roman State"
  HRE_UNIFIED_democratic_DEF:0 "the Secular Roman Federation"
  HRE_UNIFIED_communism_DEF:0 "the Socialist Roman Republic"
+ SOV_FED:0 "Russian Federation"
  CHI_JAP_fascism_autonomy_puppet:0 "Reorganized Government of China"
  CHI_JAP_fascism_autonomy_reichsprotectorate:0 "Reorganized Government of China"
  CHI_JAP_fascism_autonomy_integrated_puppet:0 "Chinese Provisional Authority"
