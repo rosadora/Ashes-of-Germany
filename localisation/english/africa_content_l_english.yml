@@ -358,6 +358,8 @@
  LBA_desert_development_desc:0 "Now that the Strada Litoranea Libica is constructed, we can now focus on developing the interior of Libya. By developing our interior, it will allow us begin pushing urbanization away from the coasts."
  LBA_modernize_the_Castel_Benito:0 "Modernize the Castel Benito"
  LBA_modernize_the_Castel_Benito_desc:0 "The Castel Bentio, being the largest airfield in Libya, must be modernized to compete with our new enemies. Alongside this, we must de-mussolinify the Libyan nation regardless, this can be done by re-naming the Air Field to the Castel Balbo."
+ LBA_modernize_the_Castel_Benito2:0 "Modernize the Castel Benito"
+ LBA_modernize_the_Castel_Benito2_desc:0 "The Castel Bentio, being the largest airfield in Libya, must be modernized to compete with our much stronger neighboring powers. Although this will not begin our air force construction, it will lay the road for it to begin."
  LBA_modernize_aircraft:0 "Modernize The Air Force"
  LBA_modernize_aircraft_desc:0 "Italo Balbo, being an active air marshal, has requested the modernization of the air force. Although we are not in a position to focus on modernizing an air force, we will need one if the Italian Nation attempt to re-invade the Libyan Nation."
  LBA_focus_on_air_logistics:0 "Develop Air Logistics"
@@ -441,6 +443,13 @@
  LBA_exploit_foreign_sympathizers_desc:0 "Following our callout to the world, the nations that have accepted our callout have had slow, but effective propoganda in their major cities. We are now in a position to exploit those who are in a position to fight for our cause."
  LBA_develop_Tripoli_university:0 "Develop the Tripoli University"
  LBA_develop_Tripoli_university_desc:0 "The Tripoli University, being in our capital, must be developed to catch up with the rest of the Italo-Libyan state. "
+ LBA_develop_Tripoli_university_MUS:0 "Develop the Tripoli University"
+ LBA_develop_Tripoli_university_MUS_desc:0 "The Tripoli University, being in our capital, must be developed to catch up with the rest of the rapidly developing Italo-Libyan state. "
+ LBA_develop_Tripoli_shipyards:0 "Develop Tripoli Dockyards"
+ LBA_develop_Tripoli_shipyards_desc:0 "Although our navy is currently not our priority, it is still an integral part of our nation."
+ LBA_a_Libyan_economy_idea:0 "Autonomous True Italo-Libyan Economy"
+ LBA_a_Libyan_economy:0 "An Autonomous Italo-Libyan Economy"
+ LBA_a_Libyan_economy_desc:0 "Now that our major cities and industries have been developed, we are now in a position to allow the majority of the industries to operate autonomously from the government. Although it will losen our control over the company's, it will bolster the companies to support the governmental ideas not only abroad but in the Italo-Libyan state."
 
   #EVENTS#
  

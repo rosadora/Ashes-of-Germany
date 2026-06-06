@@ -4668,8 +4668,8 @@ focus = {
 }
 
 focus = {
-    id = LBA_9
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_modernize_the_Castel_Benito2
+    icon = GFX_goal_generic_build_airforce
     relative_position_id = LBA_empower_the_IRI
     x = 1
 	cost = 7
@@ -4678,60 +4678,70 @@ focus = {
 	prerequisite = {
 		focus = LBA_empower_the_IRI
 	}
-    completion_reward = { }
+	available = {
+		controls_state = 448
+	}
+	bypass = {
+		NOT = {
+				controls_state = 448
+		}
+	}
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+			}
+		}
+	 }
 }
 
 focus = {
-    id = LBA_10
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_develop_Tripoli_shipyards
+    icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
     relative_position_id = LBA_develop_tripoli_industries
     x = 1
 	cost = 7
     y = 1
     prerequisite = { focus = LBA_develop_tripoli_industries }
-    completion_reward = { }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = dockyard
+				level = 2
+			}
+			add_extra_state_shared_building_slots = 2
+		}
+	 }
 }
 
 focus = {
-    id = LBA_11
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = LBA_develop_Tripoli_university_MUS
+    icon = GFX_focus_research
     relative_position_id = LBA_electrify_the_deserts2
-    x = 1
+    x = 2
 	cost = 7
     y = 1
-    prerequisite = { focus = LBA_electrify_the_deserts2 }
+    prerequisite = { focus = LBA_electrify_the_deserts2 focus = LBA_develop_Tripoli_shipyards }
 	prerequisite = {
-		focus = LBA_9 
+		focus = LBA_modernize_the_Castel_Benito2
 	}
-    completion_reward = { }
+    completion_reward = {
+		add_research_slot = 1
+	 }
 }
 
 focus = {
-    id = LBA_12
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_10
-    x = -1
+    id = LBA_a_Libyan_economy
+    icon = GFX_focus_AFG_a_modern_economy
+    relative_position_id = LBA_develop_Tripoli_university_MUS
+    x = 0
 	cost = 7
     y = 1
-    prerequisite = { focus = LBA_10 }
-	prerequisite = {
-		focus = LBA_9
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = LBA_13
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = LBA_11
-    x = 1
-	cost = 7
-    y = 1
-    prerequisite = { focus = LBA_11 }
-	prerequisite = {
-		focus = LBA_12
-	}
-    completion_reward = { }
+    prerequisite = { focus = LBA_develop_Tripoli_university_MUS }
+    completion_reward = {
+		add_ideas = LBA_a_Libyan_economy_idea
+	 }
 }
 
 focus = {

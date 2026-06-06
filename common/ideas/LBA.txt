@@ -707,6 +707,27 @@ ideas = {
 				stability_weekly = -0.002
 			}
 		}
+
+		LBA_a_Libyan_economy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_recovering_economy
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.75
+				stability_weekly = 0.003
+				war_support_weekly = 0.003
+				fascism_drift = 0.03
+				ultra_nationalism_drift = 0.02
+			}
+		}
 	}
 	hidden_ideas = {
 		camicie_nere_LBA_2 = {
