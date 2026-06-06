@@ -21,7 +21,7 @@ create_country_leader = {
     desc = ""
     picture = "gfx/leaders/SOV/Alexandr_Kerensky_Military.dds"
     expire = "1965.1.1"
-    ideology = social_democracy_category
+    ideology = classical_marxism_category
     traits = {
     }
 }
@@ -935,6 +935,15 @@ create_country_leader = {
 	picture = "gfx/leaders/SOV/Pavel_Milyukov.dds"
 	expire = "1980.1.1"
 	ideology = social_liberalism_category
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Julius Martov"
+	desc = ""
+	picture = "gfx/leaders/SOV/Julius_Martov.dds"
+	expire = "1980.1.1"
+	ideology = social_democracy_category
 	traits = {
 	}
 }

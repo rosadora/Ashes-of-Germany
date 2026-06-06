@@ -1953,10 +1953,6 @@ ideas = {
 		}
 
 		HUN_interventionism = {
-			allowed = {
-				original_tag = HUN
-				always = no
-			}
 			picture = FRA_scw_intervention_republicans_focus
 
 			modifier = {

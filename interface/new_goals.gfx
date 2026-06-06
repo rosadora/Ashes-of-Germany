@@ -2030,4 +2030,9 @@ spriteTypes = {
 	name = "GFX_goal_kadets_victory"
 	texturefile = "gfx/interface/goals/kadets_victory.dds"			
 	}
+
+	SpriteType = {
+	name = "GFX_goal_Julius_Martov"
+	texturefile = "gfx/interface/goals/Julius_Martov.dds"			
+	}
 }

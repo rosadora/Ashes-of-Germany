@@ -2735,7 +2735,7 @@
 	focus = {
 		id = RUS_menshevik_victory
 		icon = GFX_focus_generic_social_democracy
-		x = -3
+		x = -4
 		y = 4
 
 		cost = 5
@@ -2765,6 +2765,241 @@
 
 		completion_reward = {
 			add_political_power = 100
+		}
+	}
+	focus = {
+		id = RUS_to_break_from_the_past
+		icon = GFX_focus_RAJ_a_tiger_unchained
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_menshevik_victory
+		prerequisite = {focus = RUS_menshevik_victory}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = memories_of_the_civil_war1
+				add_idea = menshevik_russia
+			}
+		}
+	}
+	focus = {
+		id = RUS_build_the_socialist_russia
+		icon = GFX_focus_GER_the_peoples_victory
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_to_break_from_the_past
+		prerequisite = {focus = RUS_to_break_from_the_past}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = RUS_social_reforms
+		icon = GFX_goal_40_hours_a_week
+		x = -2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_to_break_from_the_past
+		prerequisite = {focus = RUS_build_the_socialist_russia}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = forty_hours_a_week
+		}
+	}
+	focus = {
+		id = RUS_dismantle_aristocratic_domains
+		icon = GFX_focus_JAP_central_agricultural_association
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_social_reforms
+		prerequisite = {focus = RUS_redistribute_the_lands}
+		prerequisite = {focus = RUS_social_reforms}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = famines2
+				add_idea = peoples_agriculture
+			}
+		}
+	}
+	focus = {
+		id = RUS_develop_productive_forces
+		icon = GFX_focus_generic_worker_expansion
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_social_reforms
+		prerequisite = {focus = RUS_social_reforms}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = great_works
+		}
+	}
+	focus = {
+		id = RUS_success_of_democratic_socialism
+		icon = GFX_focus_por_workers_of_iberia
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_civilian_factories > 99
+			has_stability > 0.7
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_social_reforms
+		prerequisite = {focus = RUS_develop_productive_forces}
+		prerequisite = {focus = RUS_dismantle_aristocratic_domains}
+		mutually_exclusive = {focus = RUS_russia_of_equals}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = peoples_agriculture
+				add_idea = peoples_agriculture2
+			}
+			swap_ideas = {
+				remove_idea = menshevik_russia
+				add_idea = menshevik_russia2
+			}
+		}
+	}
+	focus = {
+		id = RUS_move_towards_sr
+		icon = GFX_goal_reconcile_with_sr
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_menshevik_victory
+		prerequisite = {focus = RUS_menshevik_victory}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				popularity = 0.08
+				ideology = classical_marxism
+			}
 		}
 	}
 	focus = {
@@ -2872,9 +3107,177 @@
 		}
 	}
 	focus = {
+		id = RUS_build_a_republican_russia
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_undermine_extremism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_undermine_extremism}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = RUS_promote_freedom
+		icon = GFX_focus_generic_democratic_europe
+		x = 2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_undermine_extremism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_build_a_republican_russia}
+
+		completion_reward = {
+			add_ideas = vanguard_of_freedom
+		}
+	}
+	focus = {
+		id = RUS_end_feudalism
+		icon = GFX_focus_RAJ_seven_shackles
+		x = 1
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = RUS_redistribute_the_lands
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_undermine_extremism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_promote_freedom}
+		prerequisite = {focus = RUS_shuffle_the_administration}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = famines2
+				add_idea = free_peasants
+			}
+		}
+	}
+	focus = {
+		id = RUS_state_interventionism
+		icon = GFX_focus_generic_economic_recovery
+		x = 3
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_undermine_extremism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_promote_freedom}
+
+		completion_reward = {
+			add_ideas = HUN_interventionism
+		}
+	}
+	focus = {
+		id = RUS_russia_of_equals
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		x = 2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_stability > 0.9
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_undermine_extremism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_state_interventionism}
+		prerequisite = {focus = RUS_end_feudalism}
+		mutually_exclusive = {focus = RUS_success_of_democratic_socialism}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = free_peasants
+				add_idea = free_peasants2
+			}
+			swap_ideas = {
+				remove_idea = memories_of_the_civil_war3
+				add_idea = russia_of_equals
+			}
+		}
+	}
+	focus = {
 		id = RUS_push_for_tsar_abdication
 		icon = GFX_focus_rom_handle_king
-		x = 0
+		x = -2
 		y = 2
 
 		cost = 5
@@ -2895,12 +3298,171 @@
 		available_if_capitulated = yes
 		relative_position_id = RUS_kadets_victory
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = {focus = RUS_undermine_extremism}
-		prerequisite = {focus = RUS_decentralization_reform}
+		prerequisite = {focus = RUS_undermine_extremism focus = RUS_move_towards_sr}
+		prerequisite = {focus = RUS_decentralization_reform focus = RUS_to_break_from_the_past}
 
 		completion_reward = {
 			remove_ideas = vladimir_tsar
 			set_cosmetic_tag = SOV_FED
+		}
+	}
+	focus = {
+		id = RUS_redistribute_the_lands
+		icon = GFX_focus_generic_farmland
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_push_for_tsar_abdication
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_push_for_tsar_abdication}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = famines
+				add_idea = famines2
+			}
+		}
+	}
+	focus = {
+		id = RUS_undermine_orthodox_influence
+		icon = GFX_focus_GRE_an_orthodox_state
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_push_for_tsar_abdication
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_push_for_tsar_abdication}
+
+		completion_reward = {
+			add_ideas = pluralism
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = RUS_expand_women_rights
+		icon = GFX_focus_AUS_womens_education_initiative
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_push_for_tsar_abdication
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_undermine_orthodox_influence}
+
+		completion_reward = {
+			add_ideas = volunteer_women
+			add_ideas = women_in_factories
+		}
+	}
+	focus = {
+		id = RUS_literacy_campaigns
+		icon = GFX_focus_generic_education
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_push_for_tsar_abdication
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_undermine_orthodox_influence}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = literacy_campaigns
+				days = 800
+			}
+		}
+	}
+	focus = {
+		id = RUS_shuffle_the_administration
+		icon = GFX_focus_generic_worker_administration
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		relative_position_id = RUS_push_for_tsar_abdication
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {focus = RUS_push_for_tsar_abdication}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 	focus = {
