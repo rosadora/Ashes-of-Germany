@@ -2961,8 +2961,6 @@ focus_tree = {
 		 }
 	}
 
-	#This is TEMPORARY content until i make an actual branch for Mussolini
-
 	focus = {
 		id = LBA_return_to_Italy
 		icon = GFX_focus_generic_italy_propaganda
