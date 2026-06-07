@@ -28,7 +28,10 @@
 		}
 
 		available = {
-			has_completed_focus = RUS_save_the_monarchy
+			OR = {
+			has_country_flag = return_to_calm
+			has_completed_focus = RUS_shuffle_the_military_staff
+			}
 		}
 		
 		bypass = {
@@ -223,7 +226,10 @@
 		}
 
 		available = {
-			has_completed_focus = RUS_save_the_monarchy
+			OR = {
+			has_country_flag = return_to_calm
+			has_completed_focus = RUS_shuffle_the_military_staff
+			}
 		}
 		
 		bypass = {
@@ -478,7 +484,10 @@
 		}
 
 		available = {
+			OR = {
 			has_country_flag = return_to_calm
+			has_completed_focus = RUS_shuffle_the_military_staff
+			}
 		}
 		
 		bypass = {
@@ -559,6 +568,9 @@
 			swap_ideas = {
 				remove_idea = army_of_the_old_days
 				add_idea = army_of_the_old_days6
+			}
+			swap_ideas = {
+
 			}
 		}
 	}
@@ -2516,6 +2528,120 @@
 		}
 	}
 	focus = {
+		id = RUS_russia_is_back
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = -15
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_save_the_monarchy}
+		relative_position_id = RUS_save_the_monarchy
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = RUS_eurasian_project
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = secure_our_place
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_russia_is_back}
+		relative_position_id = RUS_russia_is_back
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aggressive_diplomacy_russia
+				days = 800
+			}
+		}
+	}
+	focus = {
+		id = RUS_preserve_russia_and_its_borders
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = aggressive_diplomacy_russia
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_russia_is_back}
+		relative_position_id = RUS_russia_is_back
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = secure_our_place
+				days = 800
+			}
+		}
+	}
+	focus = {
 		id = RUS_empower_the_duma
 		icon = GFX_focus_AFG_parliamentary_democracy
 		x = -1
@@ -2584,10 +2710,6 @@
 			add_popularity = {
 				ideology = ultra_nationalism
 				popularity = -0.1
-			}
-			swap_ideas = {
-				remove_idea = army_of_the_old_days
-				add_idea = russian_army_rebirth
 			}
 		}
 	}
@@ -2735,7 +2857,7 @@
 	focus = {
 		id = RUS_menshevik_victory
 		icon = GFX_focus_generic_social_democracy
-		x = -4
+		x = -7
 		y = 4
 
 		cost = 5
@@ -3005,7 +3127,7 @@
 	focus = {
 		id = RUS_kadets_victory
 		icon = GFX_goal_kadets_victory
-		x = 0
+		x = -3
 		y = 4
 
 		cost = 5
@@ -3503,7 +3625,7 @@
 	focus = {
 		id = RUS_late_industrialization
 		icon = GFX_focus_generic_armored_air_support
-		x = -20
+		x = -25
 		y = 0
 
 		cost = 5
