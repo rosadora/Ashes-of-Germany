@@ -970,7 +970,7 @@
 	focus = {
 		id = RUS_the_second_russian_civil_war
 		icon = GFX_focus_spr_crush_the_revolution
-		x = 11
+		x = 12
 		y = 00
 
 		cost = 8
@@ -1003,7 +1003,7 @@
 	focus = {
 		id = RUS_civil_war_plans
 		icon = GFX_goal_generic_position_armies
-		x = -3
+		x = 0
 		y = 1
 
 		cost = 2
@@ -1019,40 +1019,6 @@
 				has_government = fascism
 			}
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		prerequisite = {focus = RUS_the_second_russian_civil_war}
-		relative_position_id = RUS_the_second_russian_civil_war
-		mutually_exclusive = {focus = RUS_yellow_plan}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_command_power = 100
-		}
-	}
-	focus = {
-		id = RUS_yellow_plan
-		icon = GFX_SOV_capital_of_the_tsars_ccp_2d_sov_compatibility
-		x = 3
-		y = 1
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			OR = {
-				has_government = classical_liberalism 
-				has_government = social_liberalism
-				has_government = democratic
-			}
-		}
-
-		mutually_exclusive = {focus = RUS_civil_war_plans}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2496,7 +2462,7 @@
 	focus = {
 		id = RUS_the_second_russian_revolution
 		icon = GFX_focus_ARG_defense_and_democracy
-		x = -8
+		x = -6
 		y = 1
 
 		cost = 5
