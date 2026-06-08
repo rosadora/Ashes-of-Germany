@@ -3094,7 +3094,10 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			country_event = bavaria.7
+			add_popularity = {
+				popularity = -0.15
+				ideology = libertarian_socialism
+			}
 		}
 	}
 	focus = {

@@ -306,9 +306,47 @@ we_hebben_een_serieus_probleem = {
 	}
 }
 
+twenty_by_ten = {
+	id = 3
+	
+	possible = {
+		difficulty > 1
+		tag = KOR
+	}
+	
+	happened = {
+		OR = {
+			has_government = communism
+			has_government = classical_marxism 
+		}
+		all_owned_state = { 
+			infrastructure > 4
+		}
+	}
+}
+
 ###########################
 ## 5 HARDCORE ACHIEVEMENTS
 #############################
+
+beaten_and_always_beaten = {
+	id = 70
+	
+	possible = {
+		difficulty > 1
+		tag = PRU
+	}
+	
+	happened = {
+		fascism > 0.4
+		fascism < 0.5
+		OR = {
+			has_government = classical_marxism
+			has_government = communism 
+			has_government = libertarian_socialism 
+		}
+	}
+}
 
 beated_once_again_but_never_defeated = {
 	id = 7

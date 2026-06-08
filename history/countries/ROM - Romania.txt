@@ -45,7 +45,6 @@ set_war_support = 0.6
 recruit_character = ROM_gheorghe_tatarescu
 recruit_character = ROM_constantin_ion_parhon
 recruit_character = ROM_armand_calinescu
-recruit_character = ROM_corneliu_codreanu
 recruit_character = ROM_petre_dumitrescu
 recruit_character = ROM_ion_antonescu
 recruit_character = ROM_ioan_mihail_racovita
@@ -163,17 +162,92 @@ if = {
 
 set_convoys = 10
 
+create_country_leader = {
+	name = "Iuliu Maniu"
+	desc = "POLITICS_IULIU_MANIU_DESC"
+	picture = "gfx/leaders/ROM/Iuliu_Maniu.dds"
+	expire = "1960.1.16"
+	ideology = social_liberalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Nicolae L. Lupu"
+	desc = "POLITICS_Nicolae_Lupu_DESC"
+	picture = "gfx/leaders/ROM/Nicolae_Lupu.dds"
+	expire = "1960.1.16"
+	ideology = social_democracy_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Nicolae L. Lupu"
+	desc = "POLITICS_Nicolae_Lupu_DESC"
+	picture = "gfx/leaders/ROM/Nicolae_Lupu.dds"
+	expire = "1960.1.16"
+	ideology = classical_marxism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Octavian Goga"
+	desc = "POLITICS_Octavian_Goga_DESC"
+	picture = "gfx/leaders/ROM/Octavian_Goga.dds"
+	expire = "1960.1.16"
+	ideology = ultra_nationalism_category
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Octavian Goga"
+	desc = "POLITICS_Octavian_Goga_DESC"
+	picture = "gfx/leaders/ROM/Octavian_Goga.dds"
+	expire = "1960.1.16"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vasile Luca"
+	desc = "POLITICS_Vasile_Luca_DESC"
+	picture = "gfx/leaders/ROM/Vasile_Luca.dds"
+	expire = "1960.1.16"
+	ideology = marxism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vasile Luca"
+	desc = "POLITICS_Vasile_Luca_DESC"
+	picture = "gfx/leaders/ROM/Vasile_Luca.dds"
+	expire = "1960.1.16"
+	ideology = libertarian_socialism_category
+	traits = {
+	}
+}
+
 set_politics = {
-	ruling_party = democratic
+	ruling_party = classical_liberalism
 	last_election = "1933.12.20"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 60
-	fascism = 18
-	communism = 2
-	neutrality = 20
+	communism = 4
+	classical_marxism = 1
+	social_democracy = 4
+	social_liberalism = 14
+	classical_liberalism = 48
+	democratic = 3
+	fascism = 2
+	ultra_nationalism = 17
+	neutrality = 7
 }
 add_ideas = {
 	belgrade_pact
