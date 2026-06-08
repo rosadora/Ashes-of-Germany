@@ -307,6 +307,7 @@ gen_pick_a_side = {
 				has_completed_focus = why_we_fight
 				has_completed_focus = ideological_fanaticism
 				has_completed_focus = PRE_cross_the_rubicon
+				has_completed_focus = RUS_break_the_armor
 			}
 			OR = {
 				tag = HOL
@@ -340,6 +341,7 @@ gen_pick_a_side = {
 				tag = YUG
 				tag = MON
 				tag = PRE
+				tag = SOV
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -433,6 +435,7 @@ gen_pick_a_side = {
 				has_completed_focus = YUG_fascist_yugoslavia_fascist_dynasty
 				has_completed_focus = JAP_seek_allies_in_the_west
 				has_completed_focus = PRE_realpolitik
+				has_completed_focus = RUS_break_the_armor
 			}
 			OR = {
 				tag = HOL
@@ -466,6 +469,7 @@ gen_pick_a_side = {
 				tag = YUG
 				tag = MON
 				tag = PRE
+				tag = SOV
 			        }
 			is_in_faction = no
 			is_puppet = no
@@ -550,6 +554,7 @@ gen_pick_a_side = {
 				has_completed_focus = PAL_pick_a_side
 				has_completed_focus = YUG_a_world_to_liberate
 				has_completed_focus = PRE_realpolitik
+				has_completed_focus = RUS_break_the_armor
 			}
 			OR = {
 				tag = HOL
@@ -582,6 +587,7 @@ gen_pick_a_side = {
 				tag = ISR
 				tag = YUG
 				TAG = PRE
+				TAG = SOV
 			        }
 			is_in_faction = no
 			is_puppet = no

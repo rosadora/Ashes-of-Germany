@@ -2529,7 +2529,7 @@
 	}
 	focus = {
 		id = RUS_russia_is_back
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_RAJ_to_shake_the_world
 		x = -15
 		y = 1
 
@@ -2563,8 +2563,8 @@
 	}
 	focus = {
 		id = RUS_eurasian_project
-		icon = GFX_focus_ARG_defense_and_democracy
-		x = -2
+		icon = GFX_goal_generic_propaganda
+		x = -3
 		y = 1
 
 		cost = 5
@@ -2599,11 +2599,246 @@
 				idea = aggressive_diplomacy_russia
 				days = 800
 			}
+			IF = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+			create_faction_from_template = {
+             template = faction_template_defensive_democratic
+             name = "Eurasian Axis"
+             icon = GFX_faction_logo_generic_3
+            }
+		}
+	}
+	focus = {
+		id = RUS_finland_and_baltics
+		icon = GFX_focus_FIN_keepers_of_the_baltic_countries
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = secure_our_place
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_eurasian_project}
+		relative_position_id = RUS_eurasian_project
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			FIN = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			LAT = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			LIT = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			EST = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = RUS_fight_for_slavic_hegemony
+		icon = GFX_focus_generic_attack_poland
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = secure_our_place
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_finland_and_baltics}
+		prerequisite = {focus = RUS_central_asia_in_the_federation}
+		relative_position_id = RUS_eurasian_project
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			UKR = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			BLR = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = RUS_fight_for_the_caucasus
+		icon = GFX_focus_SOV_transcaucasian_republic
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = secure_our_place
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_finland_and_baltics}
+		prerequisite = {focus = RUS_central_asia_in_the_federation}
+		relative_position_id = RUS_eurasian_project
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			GEO = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = RUS_central_asia_in_the_federation
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = secure_our_place
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_eurasian_project}
+		relative_position_id = RUS_eurasian_project
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			KAZ = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			UZB = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			TMS = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			KYR = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
+			TAJ = {
+				country_event = {
+					id = gen.19
+					days = 1
+				}
+			}
 		}
 	}
 	focus = {
 		id = RUS_preserve_russia_and_its_borders
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_generic_air_defense
 		x = 2
 		y = 1
 
@@ -2638,6 +2873,294 @@
 			add_timed_idea = {
 				idea = secure_our_place
 				days = 800
+			}
+		}
+	}
+	focus = {
+		id = RUS_break_the_armor
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = aggressive_diplomacy_russia
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_preserve_russia_and_its_borders}
+		relative_position_id = RUS_preserve_russia_and_its_borders
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			unlock_decision_tooltip = gen_join_france
+			unlock_decision_tooltip = gen_join_allies
+			unlock_decision_tooltip = gen_join_prussia
+		}
+	}
+	focus = {
+		id = RUS_promote_cooperation_with_central_asia
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = aggressive_diplomacy_russia
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_preserve_russia_and_its_borders}
+		relative_position_id = RUS_preserve_russia_and_its_borders
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_opinion_modifier = {
+            target = KAZ
+            modifier = huge_increase
+           }
+		   KAZ = {
+			add_opinion_modifier = {
+            target = SOV
+            modifier = huge_increase
+           }
+		   }
+		   add_opinion_modifier = {
+            target = KYR
+            modifier = huge_increase
+           }
+		   KYR = {
+			add_opinion_modifier = {
+            target = SOV
+            modifier = huge_increase
+           }
+		   }
+		   add_opinion_modifier = {
+            target = TAJ
+            modifier = huge_increase
+           }
+		   TAJ = {
+			add_opinion_modifier = {
+            target = SOV
+            modifier = huge_increase
+           }
+		   }
+		   add_opinion_modifier = {
+            target = UZB
+            modifier = huge_increase
+           }
+		   UZB = {
+			add_opinion_modifier = {
+            target = SOV
+            modifier = huge_increase
+           }
+		   }
+		   add_opinion_modifier = {
+            target = TMS
+            modifier = huge_increase
+           }
+		   TMS = {
+			add_opinion_modifier = {
+            target = SOV
+            modifier = huge_increase
+           }
+		   }
+		   
+		}
+	}
+	focus = {
+		id = RUS_peace_on_the_west
+		icon = GFX_focus_hol_war_on_pacifism
+		x = -1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = aggressive_diplomacy_russia
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_promote_cooperation_with_central_asia}
+		prerequisite = {focus = RUS_break_the_armor}
+		relative_position_id = RUS_preserve_russia_and_its_borders
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = POL
+				}
+				POL = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = LIT
+				}
+				LIT = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = EST
+				}
+				EST = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = LAT
+				}
+				LAT = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = BLR
+				}
+				BLR = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = UKR
+				}
+				UKR = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = FIN
+				}
+				FIN = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = RUS_peace_on_the_east
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		x = 1
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = RUS_menshevik_victory
+				has_completed_focus = RUS_kadets_victory
+			}
+			NOT = {
+				has_idea = aggressive_diplomacy_russia
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		prerequisite = {focus = RUS_promote_cooperation_with_central_asia}
+		prerequisite = {focus = RUS_break_the_armor}
+		relative_position_id = RUS_preserve_russia_and_its_borders
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					country_exists = JAP
+				}
+				JAP = {
+					country_event = {
+						days = 1
+						id = gen.16
+					}
+				}
 			}
 		}
 	}
@@ -4096,7 +4619,18 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-         remove_ideas = famines
+         random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		 }
+		 random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		 }
 		}
 	}
 	focus = {

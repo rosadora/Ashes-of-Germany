@@ -19,10 +19,6 @@ country_event = {
 		add_stability = 0.05
 		set_country_flag = the_second_russian_revolution_flag
 		news_event = news.3042
-		set_politics = {
-			ruling_party = social_democracy
-			elections_allowed = yes
-		}
 	}
 
 	option = {
@@ -818,9 +814,9 @@ country_event = { #Election Day
 		ai_chance = {
 			base = 100
 		}
-		add_to_temp_variable = { RUS_kadets_support = party_popularity@social_liberalism }
-		add_to_temp_variable = { RUS_menshevik_support = party_popularity@social_democracy }
-		add_to_temp_variable = { RUS_octobrist_support = party_popularity@democratic }
+		set_variable  = { RUS_kadets_support = party_popularity@social_liberalism }
+		set_variable  = { RUS_menshevik_support = party_popularity@social_democracy }
+		set_variable  = { RUS_octobrist_support = party_popularity@democratic }
 		set_country_flag = elections_over
 	}
 }

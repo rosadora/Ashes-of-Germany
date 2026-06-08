@@ -367,3 +367,147 @@ country_event = { #Join the Balkan Shield - Negative
 		}
 	}
 }
+
+country_event = { #Ask Non-Aggression Pact
+	id = gen.16
+	title = gen.16.t
+	desc = gen.16.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.16.a
+		ai_chance = {
+			base = 70
+		}
+        FROM = {
+			country_event = {
+				id = gen.17
+				days = 1
+			}
+		}
+	}
+
+    option = {
+		name = gen.16.b
+		ai_chance = {
+			base = 30
+		}
+		FROM = {
+			country_event = {
+				id = gen.18
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Ask Non-Aggression Pact - Yes
+	id = gen.17
+	title = gen.17.t
+	desc = gen.17.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.17.a
+		ai_chance = {
+			base = 70
+		}
+		diplomatic_relation = {
+          country = FROM
+          relation = non_aggression_pact
+          active = no
+        }
+	}
+}
+
+country_event = { #Ask Non-Aggression Pact - No
+	id = gen.18
+	title = gen.18.t
+	desc = gen.18.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.18.a
+		ai_chance = {
+			base = 70
+		}
+	}
+}
+
+country_event = { #Our Place in Our Federation
+	id = gen.19
+	title = gen.19.t
+	desc = gen.19.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.19.a
+		ai_chance = {
+			base = 50
+		}
+        FROM = {
+			country_event = {
+				id = gen.20
+				days = 1
+			}
+		}
+	}
+
+    option = {
+		name = gen.19.b
+		ai_chance = {
+			base = 50
+		}
+		FROM = {
+			country_event = {
+				id = gen.21
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Our Place in Our Federation - Yes
+	id = gen.20
+	title = gen.20.t
+	desc = gen.20.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.20.a
+		ai_chance = {
+			base = 50
+		}
+		puppet = FROM
+	}
+}
+
+country_event = { #Our Place in Our Federation - No
+	id = gen.21
+	title = gen.21.t
+	desc = gen.21.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = gen.21.a
+		ai_chance = {
+			base = 50
+		}
+		create_wargoal = {
+         type = puppet_wargoal_focus
+         target = FROM
+        }
+	}
+}

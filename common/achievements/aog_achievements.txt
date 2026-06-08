@@ -103,17 +103,17 @@ a_federation_of_equals = {
 	}
 	
 	happened = {
-		has_completed_focus = RUS_eurasian_federation
-		owns_state = 10
-		owns_state = 202
-		owns_state = 206
-		owns_state = 11
-		owns_state = 808
-		owns_state = 812
-		owns_state = 111
-		owns_state = 231
-		owns_state = 742
-		owns_state = 408
+		has_completed_focus = RUS_eurasian_project
+		10 = {is_controlled_by_ROOT_or_ally = yes}
+		202 = {is_controlled_by_ROOT_or_ally = yes}
+		206 = {is_controlled_by_ROOT_or_ally = yes}
+		808 = {is_controlled_by_ROOT_or_ally = yes}
+		11 = {is_controlled_by_ROOT_or_ally = yes}
+		812 = {is_controlled_by_ROOT_or_ally = yes}
+		111 = {is_controlled_by_ROOT_or_ally = yes}
+		231 = {is_controlled_by_ROOT_or_ally = yes}
+		742 = {is_controlled_by_ROOT_or_ally = yes}
+		408 = {is_controlled_by_ROOT_or_ally = yes}
 	}
 }
 
