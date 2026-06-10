@@ -1,6 +1,24 @@
 ideas = {
 
 	country = {
+		sunset_on_italian_fascism = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tfv_can_conscription_crisis
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.6
+				army_defence_factor = -0.5
+			}
+		}
 		azione_antifascista = {
 			
 			allowed = {

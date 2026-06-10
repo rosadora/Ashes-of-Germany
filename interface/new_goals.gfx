@@ -1997,8 +1997,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_Idris_Senussi"
-	texturefile = "gfx/interface/goals/Idris_senussi_goal.dds"
+	name = "GFX_goal_focus_LBA_Idris_Senussi"
+	texturefile = "gfx/interface/goals/focus_LBA_Idris_Senussi.dds"
 	}
 
 	spriteType = {
@@ -2128,7 +2128,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_mussolini_goal_icon"
+		name = "GFX_goal_mussolini_icon3"
 		texturefile = "gfx/interface/goals/mussolini_icon3.dds"
 	}
 
@@ -2138,7 +2138,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_goal_blackshirts_ALT"
+		name = "GFX_goal_Blakshirt_ALT"
 		texturefile = "gfx/interface/goals/Blakshirt_ALT.dds"
 	}
 

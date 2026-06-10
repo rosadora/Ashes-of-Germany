@@ -158,6 +158,10 @@ country_event = { #The Civil War Starts
 		recruit_character = LBA_roberto_farinacci
 			load_oob = LBA_country_spawns
 		}
+		add_timed_idea = {
+				days = 300
+				idea = sunset_on_italian_fascism
+		}
 		}
 		LBA = {
 			change_tag_from = ITA
