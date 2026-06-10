@@ -1608,7 +1608,6 @@ focus_tree = {
 		prerequisite = { focus = LBA_get_european_support }
 	    prerequisite = {focus = LBA_state_catholicism }
 	    completion_reward = {
-			add_ideas = women_in_military
 			set_politics = {
 				ruling_party = classical_liberalism
 			}
@@ -1626,6 +1625,7 @@ focus_tree = {
 	    prerequisite = { focus = LBA_enforce_constitutional_reform }
 	    completion_reward = {
 			add_ideas = total_equality
+			add_ideas = women_in_military
 		 }
 	}
 
@@ -2134,14 +2134,7 @@ focus_tree = {
 		prerequisite = {focus = LBA_prussian_Francophobia}
 		will_lead_to_war_with = FRA
 	    completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = LBA_invasion_of_Tunisia
-					}
-				}
-				complete_national_focus = LBA_invasion_of_Tunisia
-			}
+			
 			every_country = {
 				limit = {
 					controls_state = 458
@@ -2155,6 +2148,14 @@ focus_tree = {
 			}
 			custom_effect_tooltip = LBA_fra_surrender_TT
 			hidden_effect = {
+				if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LBA_invasion_of_Tunisia
+					}
+				}
+				complete_national_focus = LBA_invasion_of_Tunisia
+			}
 				set_global_flag = aggressive_LBA
 				every_state = {
 					limit = {
