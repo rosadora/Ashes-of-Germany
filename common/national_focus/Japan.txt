@@ -5725,7 +5725,7 @@
 		}
 	}
 	focus = {
-		id = JAP_spiritual_mobilization
+		id = JAP_spiritual_mobilizationtfix
 		icon = GFX_focus_jap_spiritual_mobilization
 		x = -1
 		y = 1
@@ -5754,7 +5754,7 @@
 		}
 	}
 	focus = {
-		id = JAP_warrior_spirit
+		id = JAP_warrior_spirittfix
 		icon = GFX_focus_generic_japanese_imperial_glory
 		x = 1
 		y = 1
@@ -5797,8 +5797,8 @@
 		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 2
-		prerequisite = {focus = JAP_warrior_spirit}
-		prerequisite = {focus = JAP_spiritual_mobilization}
+		prerequisite = {focus = JAP_warrior_spirittfix}
+		prerequisite = {focus = JAP_spiritual_mobilizationtfix}
 		relative_position_id = JAP_seisen
 		cost = 5
 		ai_will_do = {
