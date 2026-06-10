@@ -258,6 +258,7 @@ focus_tree = {
 				retire_character = LBA_roberto_farinacci
 				set_country_flag = LBA_Opose_Mussolini
 				mark_focus_tree_layout_dirty = yes
+				clr_country_flag = Mussolini_Fled
 			}
 		 }
 	 }
@@ -277,6 +278,12 @@ focus_tree = {
 		x = -4
 		prerequisite = {
 			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		allow_branch = {
+			has_completed_focus = LBA_overthrow_Mussolini
+			NOT = {
+				has_country_flag = Mussolini_Fled
+			}
 		}
 		y = 1
 		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
@@ -350,14 +357,21 @@ focus_tree = {
 		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
 		cost = 5
 		allow_branch = {
-			OR = {
-				has_completed_focus = LBA_overthrow_Mussolini
+			NOT = {
+				has_country_flag = Mussolini_Fled
 			}
+			
 		}
 		available = {
 			controls_state = 450
 			controls_state = 448
+			NOT = {
+				has_country_flag = Mussolini_Fled
+			}
 		}
+
+		cancel_if_invalid = yes
+
 		ai_will_do = {
 			base = 5
 		}
@@ -671,391 +685,6 @@ focus_tree = {
 		 }
 	 }
 
-	 #NON MUSSOLINI BRANCH#
-
-	 focus = {
-		id = LBA_rally_around_the_crown
-		icon = GFX_Idris_Senussi
-		cost = 7
-		x = 0
-		y = 0
-		allow_branch = {
-			NOT = {
-				has_country_flag = Mussolini_Fled
-			}
-		}
-		available = {
-			NOT = {
-				has_country_flag = Mussolini_Fled
-			}
-		}
-		available = {
-			date > 1937.1.1
-		}
-		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			add_stability = 0.05
-			add_war_support = 0.05
-		 }
-	 }
-
-	 focus = {
-		id = LBA_celebrate_our_independance
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 3
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_the_first_industry
-		}
-
-		prerequisite = {
-			focus = LBA_develop_weapons
-		}
-
-		prerequisite = {
-			focus = LBA_develop_arms_industry
-		}
-
-		prerequisite = {
-			focus = LBA_the_arsenal_of_independance
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_war_support = 0.15
-			add_stability = 0.15
-			load_focus_tree = generic_focus
-		}
-	}
-	focus = {
-		id = LBA_develop_weapons
-		icon = GFX_focus_generic_little_entente
-		x = -3
-		y = 2
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_industrial_research
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = {
-				category = infantry_weapons 
-				bonus = 1
-				uses = 2
-			}
-		}
-	}
-	focus = {
-		id = LBA_the_arsenal_of_independance
-		icon = GFX_focus_ETH_freedom_at_gunpoint
-		x = 3
-		y = 2
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_develop_the_deserts
-		}
-
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = LBA_develop_arms_industry
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 1
-		y = 2
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_develop_the_deserts
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = arms_factory
-				}
-				add_extra_state_shared_building_slots = 3
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = arms_factory
-				}
-				add_extra_state_shared_building_slots = 3
-			}
-		}
-	}
-	focus = {
-		id = LBA_industrial_research
-		icon = GFX_goal_generic_construction2
-		x = -2
-		y = 1
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_rally_around_the_crown
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = {
-				category = industry 
-				bonus = 1
-				uses = 2
-			}
-		}
-	}
-	focus = {
-		id = LBA_the_first_industry
-		icon = GFX_goal_generic_construct_civ_factory
-		x = -1
-		y = 2
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_industrial_research
-		}
-
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = LBA_develop_the_deserts
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 2
-		y = 1
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		prerequisite = {
-			focus = LBA_rally_around_the_crown
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	#END OF NON-MUSSOLINI#
-
 	focus = {
 		id = LBA_develop_Trippoli_industries
 		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
@@ -1193,8 +822,8 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = AML
-				has_country_leader = {
-				character = LBA_benito_mussolini
+				NOT = {
+				has_country_flag = Mussolini_Fled
 			}
 			}
 		}
@@ -1207,12 +836,13 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			OR = {
-				has_completed_focus = LBA_overthrow_Mussolini
-				has_completed_focus = LBA_restoration_of_the_monarchy
+			NOT = {
+				has_country_flag = Mussolini_Fled
 			}
 			
 		}
+
+		cancel_if_invalid = yes
 
 
 		completion_reward = {
@@ -1221,7 +851,11 @@ focus_tree = {
 				days = 2
 			}
 			hidden_effect = {
-			449 = {
+				if = {
+					limit = {
+						has_completed_focus = LBA_overthrow_Mussolini
+					 }
+					 449 = {
 				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
 				remove_core_of = LBA
 			}
@@ -1241,11 +875,13 @@ focus_tree = {
 				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
 				remove_core_of = LBA
 			}
+				}
+			
 			}
 			
 			hidden_effect = {
 				if = {
-					limit = { ITA = {exists = yes} }
+					limit = { ITA = {exists = yes} has_completed_focus = LBA_overthrow_Mussolini }
 				}
 				ITA = {
 					country_event = {
@@ -1278,6 +914,14 @@ focus_tree = {
 			NOT = {
 				any_owned_state = {
 					has_dynamic_modifier =  Benito_Mussolini_Rebelious
+				}
+			}
+		}
+		offset = {
+			x = -1
+			trigger = {
+				NOT = {
+					has_completed_focus = LBA_overthrow_Mussolini
 				}
 			}
 		}
