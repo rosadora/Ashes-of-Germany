@@ -1025,6 +1025,7 @@ country_event = {
 			drop_cosmetic_tag = yes
 			remove_ideas = reformed_grand_council_of_fascism 
 			mark_focus_tree_layout_dirty = yes
+			clr_country_flag = Mussolini_Fled
 		}
 	}
 
