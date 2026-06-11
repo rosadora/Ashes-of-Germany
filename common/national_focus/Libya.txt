@@ -1327,12 +1327,14 @@ focus_tree = {
 						}
 					}
 					TUN = {
+				
+			}
+				}
 				country_event = {
 					id = LBA_events.10
 					days = 2
 				}
-			}
-				}
+
 			}
 
 			if = {

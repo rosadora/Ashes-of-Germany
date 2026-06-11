@@ -2043,7 +2043,7 @@
 		available = {
 			tungsten > 80
 			oil > 70
-			alumnium > 50
+			aluminium > 50
 			chromium > 100
 			rubber > 100
 			has_idea = autarky

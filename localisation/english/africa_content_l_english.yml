@@ -28,7 +28,8 @@
  ita_focus:0 "The Italian Focus Tree"
 
   #Fix for something else rq
-  COUNTRY_SELECTION_CHARACTER_DESC:0 ""
+ COUNTRY_SELECTION_CHARACTER_DESC:0 ""
+ COUNTRY_SELECTION_CHARACTER_DESC_NAME:0 ""
   #
 
  #CIVILWAR NAME#

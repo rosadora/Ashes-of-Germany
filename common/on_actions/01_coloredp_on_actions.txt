@@ -17,7 +17,9 @@ on_actions = {
 		effect = {
 				random_country  = { 
 					limit = { is_ai = no }
-					country_event = coloredp.1
+					country_event = {
+						id = coloredp.1
+					}
 				}
 			}
 	}

@@ -3372,7 +3372,7 @@
 				limit = {116 = {is_controlled_by = ENG}}
 				116 = {
 					add_building_construction = {
-						type = dockyard
+						type = naval_base
 						level = 3
 						province = 12003
 					}
