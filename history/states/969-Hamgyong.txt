@@ -8,6 +8,9 @@ state={
 		owner = JAP
 		buildings = {
 			infrastructure = 2
+			3981 = {
+			naval_base = 1
+			}
 		}
 		add_core_of = KOR
 		victory_points = {
@@ -15,9 +18,6 @@ state={
 		}
 		victory_points = {
 			6822 2 
-		}
-		3981 = {
-			naval_base = 1
 		}
 	}
 	manpower=2623615
