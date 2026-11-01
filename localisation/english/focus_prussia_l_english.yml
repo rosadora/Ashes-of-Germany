@@ -5573,9 +5573,9 @@
  ### National Liberation Comittee ###
  NLC_join_our_comrades:0 "Join our Comrades"
  ### JAPAN ###
- JAP_hanran:0 "Hanran!"
+ JAP_hanran:0 "Tsukiageru Sora ni!"
  JAP_hanran_desc:0 "It's our time to create a new World!"
- JAP_end_the_nationalist_fable:0 "End the Nationalist Fable"
+ JAP_end_the_nationalist_fable:0 "Destroy Propaganda Tools"
  JAP_end_the_nationalist_fable_desc:0 "The nationalist education and culture established during the Meiji era is a poison spread throughout Japanese society. "
  JAP_expropriate_zaibatsus:0 "Expropriate Zaibatsus"
  JAP_expropriate_zaibatsus_desc:0 "Japan's few large corporations have too much power over society and successive governments, and their expropriation is necessary for the success of the revolution."
@@ -5937,6 +5937,8 @@
  unlock_army_chief_hajime_sugiyama:0 "Unlocks §YArmy Chief§! : §YHajime Sugiyama§!"
  JAP_momotaro_tales:0 "Momotaro Tales"
  JAP_momotaro_tales_desc:0 "Momotaro is a famous character in Japan, and since few decades is used by the state to promote japanese militarism."
+ JAP_colonial_question:0 "Korea and the Empire"
+ JAP_colonial_question_desc:0 "How can a democratic country be this brutal? This is the question of a lot of intellectuals and of some parts of the society in the process of Westernization through colonialism. We have to face our own contradictions and make a choice about the fate of our territories on the Korean Peninsula."
  ### CROATIA ###
  CRO_has_give_up_yugoslavian_claims:0 "§RWe will give up our claims on Serbia and have claims on Bosnia!§!"
  CRO_recognize_rakosi:0 "Recognize Rakosi's Regime"

@@ -1164,3 +1164,193 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 	}
 }
+# Did we went to far? Colonial question.
+country_event = {
+	id = jap.43
+	title = jap.43.t
+	desc = jap.43.d
+	picture = GFX_report_event_japanese_reply
+
+	is_triggered_only = yes
+	
+	option = { #It's a matter of security, Korea is Japanese now, but we will integrate them fully into Japan
+		name = jap.43.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				OR = {
+					has_government = social_democracy
+			        has_government = social_liberalism
+				}
+			}
+		}
+		add_stability = -0.1
+		add_state_core = 978
+		add_state_core = 975
+		add_state_core = 977
+		add_state_core = 974
+		add_state_core = 973
+		add_state_core = 525
+		add_state_core = 971
+		add_state_core = 972
+		add_state_core = 527
+		add_state_core = 969
+		add_state_core = 970
+		news_event = news.3097
+	}
+
+	option = { #We should grant them some autonomy
+		name = jap.43.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				OR = {
+					has_government = classical_liberalism
+			        has_government = democratic
+				}
+			}
+		}
+		release_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_puppet
+			freedom_level=0.5
+		}
+		KOR = {
+			set_popularities = {
+	            fascism = 1
+	            ultra_nationalism = 2
+				neutrality = 5
+	            democratic = 1
+	            classical_liberalism = 18
+	            social_liberalism = 34
+	            social_democracy = 7
+	            classical_marxism = 11
+	            libertarian_socialism = 5
+	            communism = 16
+            }
+			inherit_technology = JAP
+		}
+		news_event = news.3098
+	}
+
+	option = { #We should grant them independance
+		name = jap.43.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = social_democracy
+			        has_government = social_liberalism
+				}
+			}
+		}
+		release = KOR
+		news_event = news.3099
+	}
+}
+# The Empire's Sunset
+country_event = {
+	id = jap.44
+	title = jap.44.t
+	desc = jap.44.d
+	picture = GFX_report_event_japanese_reply
+
+	is_triggered_only = yes
+	
+	option = { #Japan has fallen
+		name = jap.44.a
+		ai_chance = {
+			base = 10
+		}
+		add_popularity = {
+			popularity = -0.075
+			ideology = ultra_nationalism
+		}
+		add_popularity = {
+			popularity = -0.1
+			ideology = fascism
+		}
+		add_stability = -0.1
+		add_ideas = general_discontent
+		IF = {
+			limit = {
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+		    remove_state_core = 978
+		    remove_state_core = 975
+		    remove_state_core = 977
+		    remove_state_core = 974
+		    remove_state_core = 973
+		    remove_state_core = 525
+		    remove_state_core = 971
+		    remove_state_core = 972
+		    remove_state_core = 527
+		    remove_state_core = 969
+		    remove_state_core = 970
+			release = KOR
+		}
+		KYU = {
+			transfer_state = 528
+			inherit_technology = JAP
+		}
+		OKN = {
+			transfer_state = 526
+			inherit_technology = JAP
+		}
+		ANU = {
+			transfer_state = 536
+			transfer_state = 555
+			transfer_state = 537
+			transfer_state = 655
+			inherit_technology = JAP
+		}
+		transfer_units_fraction= {
+	     target = ANU
+	     size = 0.1
+	     stockpile_ratio = 0.1
+	     army_ratio = 0.1
+	     navy_ratio = 0.1
+	     air_ratio = 0.1
+        }
+		transfer_units_fraction= {
+	     target = OKN
+	     size = 0.1
+	     stockpile_ratio = 0.1
+	     army_ratio = 0.1
+	     navy_ratio = 0.1
+	     air_ratio = 0.1
+        }
+		transfer_units_fraction= {
+	     target = KYU
+	     size = 0.1
+	     stockpile_ratio = 0.1
+	     army_ratio = 0.1
+	     navy_ratio = 0.1
+	     air_ratio = 0.1
+        }
+		declare_war_on = {
+            target = KYU
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = ANU
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = OKN
+            type = annex_everything
+        }
+		start_civil_war = {
+           ideology = communism
+           size = 0.6
+           states = {
+            531 532 529
+           }
+        }
+	}
+}

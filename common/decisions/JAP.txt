@@ -468,6 +468,12 @@ JAP_1936_elections = {
 					days = 1 
 				}
 			}
+			JAP = {
+				country_event = {
+					id = jap.44
+					days = 10
+				}
+			}
 		}
 	}
 }

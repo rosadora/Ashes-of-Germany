@@ -1247,3 +1247,8 @@ HBC = {
 	color = rgb { 156 27 22 }
 	color_ui = rgb { 94 17 14 }
 }
+
+KYU = {
+	color = rgb { 131 161 201 }
+	color_ui = rgb { 131 161 201 }
+}

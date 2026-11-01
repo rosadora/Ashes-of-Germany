@@ -6900,9 +6900,54 @@
 		}
 	}
 	focus = {
+		id = JAP_colonial_question
+		icon = GFX_focus_JAP_ignite_the_korean_peninsula
+		x = -3
+		y = 1
+		prerequisite = {focus = JAP_attract_foreign_scientists}
+		relative_position_id = JAP_attract_foreign_scientists
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_civil_war = no
+			has_completed_focus = JAP_cooperation_for_democratization_guarantees
+			OR = {
+			has_government = democratic
+			has_government = social_democracy
+			has_government = social_liberalism
+			has_government = classical_liberalism
+			}
+			NOT = {
+				has_idea = fading_taisho
+			}
+			controls_state = 978
+			controls_state = 975
+			controls_state = 977
+			controls_state = 974
+			controls_state = 973
+			controls_state = 525
+			controls_state = 971
+			controls_state = 972
+			controls_state = 527
+			controls_state = 969
+			controls_state = 970
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = jap.43
+				days = 1
+			}
+		}
+	}
+	focus = {
 		id = JAP_friendship_across_pacific
 		icon = GFX_focus_generic_befriend_usa
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = {focus = JAP_attract_foreign_scientists}
 		mutually_exclusive = {focus = JAP_follow_monarchist_policies}
@@ -7130,7 +7175,7 @@
 	focus = {
 		id = JAP_follow_monarchist_policies
 		icon = GFX_focus_jap_spiritual_mobilization
-		x = 2
+		x = 3
 		y = 1
 		prerequisite = {focus = JAP_attract_foreign_scientists}
 		mutually_exclusive = {focus = JAP_friendship_across_pacific}

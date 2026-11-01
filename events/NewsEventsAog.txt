@@ -1752,3 +1752,45 @@ news_event = { #Socialist Revolution in Little Prussia
 		name = news.3096.a
 	}
 }
+news_event = { #Japan pushes for Korean Integration
+    id = news.3097
+	title = news.3097.t
+	desc = news.3097.d
+	picture = GFX_news_event_JAP_greater_east_asia_conference
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3097.a
+	}
+}
+news_event = { #Japan pushes for Korean Autonomy
+    id = news.3098
+	title = news.3098.t
+	desc = news.3098.d
+	picture = GFX_news_event_JAP_greater_east_asia_conference
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3098.a
+	}
+}
+news_event = { #Japan pushes for Korean Independance
+    id = news.3099
+	title = news.3099.t
+	desc = news.3099.d
+	picture = GFX_news_event_JAP_greater_east_asia_conference
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3099.a
+	}
+}

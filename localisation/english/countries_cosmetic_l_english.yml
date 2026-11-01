@@ -1730,3 +1730,10 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  PRE_PRG_communism:0 "Pregel Socialist Republic"
  PRE_PRG_libertarian_socialism:0 "Free Territory of Pregel"
 
+ KYU:0 "Kyushu"
+ KYU_DEF:0 "Kyushu"
+ KYU_ADJ:0 "Kyushu"
+ KYU_classical_marxism:0 "Revolutionary Kyushu"
+ KYU_communism:0 "Revolutionary Kyushu"
+ KYU_libertarian_socialism:0 "Revolutionary Kyushu"
+
