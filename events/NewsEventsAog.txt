@@ -1758,7 +1758,7 @@ news_event = { #Japan pushes for Korean Integration
 	desc = news.3097.d
 	picture = GFX_news_event_JAP_greater_east_asia_conference
 	
-	major = yes
+	major = no
 
 	is_triggered_only = yes
 	
@@ -1772,7 +1772,7 @@ news_event = { #Japan pushes for Korean Autonomy
 	desc = news.3098.d
 	picture = GFX_news_event_JAP_greater_east_asia_conference
 	
-	major = yes
+	major = no
 
 	is_triggered_only = yes
 	
@@ -1786,11 +1786,31 @@ news_event = { #Japan pushes for Korean Independance
 	desc = news.3099.d
 	picture = GFX_news_event_JAP_greater_east_asia_conference
 	
-	major = yes
+	major = no
 
 	is_triggered_only = yes
 	
 	option = {
 		name = news.3099.a
+	}
+}
+news_event = { #Japan's Sunset
+    id = news.3100
+	title = news.3100.t
+	desc = news.3100.d
+	picture = GFX_news_event_spr_spanish_civil_war
+	
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			play_song = senyu
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3100.a
 	}
 }

@@ -1635,6 +1635,12 @@
  jap.43.a:0 "Korea is too important, let's move into further integration"
  jap.43.b:0 "Grant them autonomy"
  jap.43.c:0 "Grant them independance"
+ jap.44.t:0 "The Sunset"
+ jap.44.d:0 "Can you see this light? What is coming? I don't really know, but Japan is in a big trouble."
+ jap.44.a:0 "Is this our last Banzai?"
+ news.3100.t:0 "Japan's Collapse"
+ news.3100.d:0 "Following it's defeat in the war with China, the Imperial power lose support from it's population and after several protests of the left wing and the rise of separatism, Japan collapsed into a civil war, and the authorities of the Emperor are in a very precarious situation right now."
+ news.3100.a:0 "Ok"
  ### MANCHURIA ###
  manchuria.1.t:0 "Seize East Hebei"
  manchuria.1.d:0 "While Japan is torn over its political future, we have an unprecedented opportunity to seize Eastern Hebei and Dalian."

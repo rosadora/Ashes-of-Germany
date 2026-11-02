@@ -1,6 +1,26 @@
 ideas = {
 
 	country = {
+		general_discontent = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = JAP_collapsing_government
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.2
+				consumer_goods_expected_value = 0.15
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			} 
+		}
 		resist_the_kurofune = {
 			
 			allowed = {

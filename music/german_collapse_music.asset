@@ -154,3 +154,9 @@ music = {
 	file = "zygis_i_vilniu.ogg"
 	volume = 1
 }
+
+music = {
+	name = "senyu"
+	file = "senyu.ogg"
+	volume = 1
+}

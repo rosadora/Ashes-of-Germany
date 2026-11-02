@@ -1737,3 +1737,11 @@ SWE_greater_nordic_reich_ADJ: "Swedish"
  KYU_communism:0 "Revolutionary Kyushu"
  KYU_libertarian_socialism:0 "Revolutionary Kyushu"
 
+ SHI:0 "Shikoku"
+ SHI_DEF:0 "Shikoku"
+ SHI_ADJ:0 "Shikoku"
+ SHI_classical_marxism:0 "Revolutionary Shikoku"
+ SHI_communism:0 "Revolutionary Shikoku"
+ SHI_libertarian_socialism:0 "Revolutionary Shikoku"
+
+

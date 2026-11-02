@@ -1265,6 +1265,8 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
+		news_event = news.3100
+		set_global_flag = japan_sunset
 		add_popularity = {
 			popularity = -0.075
 			ideology = ultra_nationalism
@@ -1298,6 +1300,10 @@ country_event = {
 			transfer_state = 528
 			inherit_technology = JAP
 		}
+		SHI = {
+			transfer_state = 530
+			inherit_technology = JAP
+		}
 		OKN = {
 			transfer_state = 526
 			inherit_technology = JAP
@@ -1319,22 +1325,34 @@ country_event = {
         }
 		transfer_units_fraction= {
 	     target = OKN
-	     size = 0.1
-	     stockpile_ratio = 0.1
-	     army_ratio = 0.1
-	     navy_ratio = 0.1
-	     air_ratio = 0.1
+	     size = 0.05
+	     stockpile_ratio = 0.05
+	     army_ratio = 0.05
+	     navy_ratio = 0.05
+	     air_ratio = 0.05
         }
 		transfer_units_fraction= {
 	     target = KYU
-	     size = 0.1
-	     stockpile_ratio = 0.1
-	     army_ratio = 0.1
-	     navy_ratio = 0.1
-	     air_ratio = 0.1
+	     size = 0.12
+	     stockpile_ratio = 0.12
+	     army_ratio = 0.12
+	     navy_ratio = 0.12
+	     air_ratio = 0.12
+        }
+		transfer_units_fraction= {
+	     target = SHI
+	     size = 0.07
+	     stockpile_ratio = 0.07
+	     army_ratio = 0.07
+	     navy_ratio = 0.07
+	     air_ratio = 0.07
         }
 		declare_war_on = {
             target = KYU
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = SHI
             type = annex_everything
         }
 		declare_war_on = {
@@ -1346,11 +1364,24 @@ country_event = {
             type = annex_everything
         }
 		start_civil_war = {
-           ideology = communism
+           ideology = classical_marxism
            size = 0.6
            states = {
             531 532 529
            }
+		   set_popularities = {
+	            fascism = 5
+	            ultra_nationalism = 5
+				neutrality = 5
+	            democratic = 10
+	            classical_liberalism = 5
+	            social_liberalism = 15
+	            social_democracy = 5
+	            classical_marxism = 35
+	            libertarian_socialism = 5
+	            communism = 10
+            }
         }
+		mark_focus_tree_layout_dirty = yes
 	}
 }

@@ -224,3 +224,12 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "senyu"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

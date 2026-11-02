@@ -1,8 +1,4 @@
-﻿capital = 282
-
-puppet = FER
-
-
+﻿capital = 528
 
 set_stability = 0.5
 set_war_support = 0.5
@@ -10,16 +6,6 @@ set_war_support = 0.5
 set_research_slots = 4
 set_fuel_ratio = 1.0
 add_ideas = {
-	fading_taisho
-	marginalized_korean_immigration
-	state_shintoism
-	limited_exports
-	limited_conscription
-	partial_economic_mobilisation
-	JAP_zaibatsus
-	JAP_duplicate_research_efforts
-	JAP_militarism
-	JAP_hirohito
 }
 
 

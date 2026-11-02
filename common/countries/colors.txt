@@ -1252,3 +1252,8 @@ KYU = {
 	color = rgb { 131 161 201 }
 	color_ui = rgb { 131 161 201 }
 }
+
+SHI = {
+	color = rgb { 255 179 56 }
+	color_ui = rgb { 255 179 56 }
+}
