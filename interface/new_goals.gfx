@@ -1987,12 +1987,228 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_goal_burn_the_world"
-	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	name = "GFX_goal_the_last_gambling"
+	texturefile = "gfx/interface/goals/the_last_gambling.dds"			
 	}
 
 	SpriteType = {
 	name = "GFX_goal_burn_the_world"
 	texturefile = "gfx/interface/goals/burn_the_world.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_focus_LBA_Idris_Senussi"
+	texturefile = "gfx/interface/goals/focus_LBA_Idris_Senussi.dds"
+	}
+
+	spriteType = {
+		name = "Finish_the_Opposition"
+		texturefile = "gfx/interface/goals/Finish_the_Opposition.dds"
+	}
+
+	spriteType = {
+		name = "Oppose_Mussolini_LBA"
+		texturefile = "gfx/interface/goals/Oppose_Mussolini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_FOCUS_rally_around_crown"
+		texturefile = "gfx/interface/goals/generic_rally_around_crown.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_constitutional_monarchy"
+		texturefile = "gfx/interface/goals/constitutional_monarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_dreams_of_united_africa"
+		texturefile = "gfx/interface/goals/dreams_of_unified_africa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_goal_beg_france_flag"
+		texturefile = "gfx/interface/goals/generic_beg_france_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_goal_attack_africa"
+		texturefile = "gfx/interface/goals/generic_attack_africa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Idris_Senussi"
+		texturefile = "gfx/interface/goals/focus_LBA_Idris_Senussi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_african_communism"
+		texturefile = "gfx/interface/goals/LBA_african_communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_spread_the_revolution"
+		texturefile = "gfx/interface/goals/LBA_spread_communism_Africa.dds"
+	}
+
+	spriteType = {
+		#I found a few good pics of Italo Balbo so ig ima add a path for him.#
+		name = "GFX_focus_Italo_Balbo"
+		texturefile = "gfx/interface/goals/Italo_Balbo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_Execute_Italo_Balbo"
+		texturefile = "gfx/interface/goals/LBA_execute_Italo_Balbo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_flag_raised"
+		texturefile = "gfx/interface/goals/Libya_Flag_Raised.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_attack_Libya"
+		texturefile = "gfx/interface/goals/generic_invade_libya.dds"
+	}
+
+	spriteType = {
+		name = "GFX_libya_Italy_goal"
+		texturefile = "gfx/interface/goals/libya_Italian_Rejoin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_LBA_ITA_flags_FASCIST"
+		texturefile = "gfx/interface/goals/LBA_ITA_FASCIST_FLAGS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ITA_flag_reaching"
+		texturefile = "gfx/interface/goals/ITA_flag_reaching.dds"
+	}
+
+	spriteType = {
+		name = "GFX_FOCUS_fascist_Libya"
+		texturefile = "gfx/interface/goals/fascism_in_libya.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_Rommel"
+		texturefile = "gfx/interface/goals/Rommel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_LBA_GER"
+		texturefile = "gfx/interface/goals/Ger_LBA_flags.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Prussian_Flag_Raised_GOAL"
+		texturefile = "gfx/interface/goals/Prussia_Flag_Raised.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Libyan_Flag_Raised_Neutrality"
+		texturefile = "gfx/interface/goals/LBA_raised_flag_neutrality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_attack_Egypt"
+		texturefile = "gfx/interface/goals/generic_attack_egypt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GOAL_enforce_constitutional_reform"
+		texturefile = "gfx/interface/goals/LBA_enforce_constitutional_reform.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_Tunisia_Question"
+		texturefile = "gfx/interface/goals/Tunisia_Question.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_mussolini_icon3"
+		texturefile = "gfx/interface/goals/mussolini_icon3.dds"
+	}
+
+	spriteType = {
+		name = "Generic_man_imprisoned"
+		texturefile = "gfx/interface/goals/generic_man_imprisoned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_Blakshirt_ALT"
+		texturefile = "gfx/interface/goals/Blakshirt_ALT.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ITA_Africa_emblem"
+		texturefile = "gfx/interface/goals/Africa_Italian_Emblem.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_goal_Italian_Dalmatia"
+		texturefile = "gfx/interface/goals/Italian_Dalmatia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_imprison_Italo_Balbo"
+		texturefile = "gfx/interface/goals/Imrpison_Italo_Balbo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_air_logistic"
+		texturefile = "gfx/interface/goals/generic_air_drop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_electrification"
+		texturefile = "gfx/interface/goals/construct_electrical_infrastructure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_generic_attack_sicily"
+		texturefile = "gfx/interface/goals/Generic_Attack_Sicily.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_research_logistics"
+		texturefile = "gfx/interface/goals/research_logistics_generic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_generic_defend_shores"
+		texturefile = "gfx/interface/goals/generic_fortified_shore.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_develop_desert"
+		texturefile = "gfx/interface/goals/develop_desert.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_Malta"
+		texturefile = "gfx/interface/goals/generic_malta.dds"
+	}
+
+	spriteType = {
+		name = "GFX_master_of_shores" #I only had a template for Ethiopia for the globe and idk how to make custom bits of the globe so ig its fine#
+		texturefile = "gfx/interface/goals/master_of_shores.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_quality_infantry"
+		texturefile = "gfx/interface/goals/generic_army_quality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_quantity_infantry"
+		texturefile = "gfx/interface/goals/generic_army_quantity.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_generic_investment"
+		texturefile = "gfx/interface/goals/generic_investment.dds"
 	}
 }

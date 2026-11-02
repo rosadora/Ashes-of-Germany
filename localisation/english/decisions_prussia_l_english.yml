@@ -23,6 +23,8 @@
  AOG_tic_tac_desc:0 "Pay no attention to this mission, which will be repeated over and over again throughout the game, as it's a necessary part of the game's mechanics."
  FIN_intervention_in_russian_civil_war:0 "The Second Russian Civil War"
  FIN_uraalin:0 "Uraalin"
+ strike_Denmark:0 "Strike North Schleswig"
+ strike_Denmark_desc:0 "Schleswig is a Danish state, but, historically, we have had ownership over it. In order for a truly united Germany, we must re-take the entirety of Schleswig, and reunite the German people!"
  ### PALESTINE ###
  PAL_the_colonial_conflict:0 "Tensions in Palestine"
  PAL_great_arab_revolt:0 "Great Arab Revolt"

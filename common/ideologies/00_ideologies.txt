@@ -7,6 +7,9 @@ ideologies = {
 			nazism = {
 			}
 
+			volkisch = {
+			}
+
 			gen_nazism = {
 			}
 
@@ -60,6 +63,9 @@ ideologies = {
 		types = {
 
 			ultra_nationalism_category  = {
+			}
+
+			colonial_nationalist = {
 			}
 		}
 
@@ -218,6 +224,10 @@ ideologies = {
 		types = {
 
 			classical_liberalism_category = {
+			}
+
+			libyan_democracy_category = {		
+				can_be_randomly_selected = no	
 			}
 
 		}
@@ -420,6 +430,10 @@ ideologies = {
 			}
 
 			anarcho_nihilism = {
+			}
+
+			ethiopian_commune = {
+				can_be_randomly_selected = no
 			}
 			
 		}

@@ -3072,7 +3072,11 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			create_faction = Revolutionaries
+			create_faction_from_template = {
+             template = faction_template_comintern
+             name = "Romanian Thought League"
+             icon = GFX_faction_logo_comintern
+            }
 			news_event = news.3050
 		}
 	}

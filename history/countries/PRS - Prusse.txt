@@ -846,4 +846,4 @@ if = {
 	}
 }
 
-create_faction = Reichspakt
+create_faction_from_template = faction_template_reichspakt

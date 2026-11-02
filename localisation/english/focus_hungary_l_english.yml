@@ -1,4 +1,8 @@
 ﻿l_english:
+ COLLECTION_COUNTRIES_EUROPE_SOCIALIST:0 "Number of Socialist Countries in Europe"
+ spread_revolutionary_ideas_across_europe_goal_name:0 "Spread Revolutionary Ideas Across Europe"
+ spread_revolutionary_ideas_across_europe_goal_desc:0 "The goal of a military alliance of all Socialist Countries in Europe is to spread the Revolution across the Continent. Nobody can be free when it's brother is suffering."
+ united_workers_of_europe:0 "United Workers of Europe"
  HUN_continue_the_red_terror:0 "§RContinue the Red Terror§!"
  HUN_continue_the_red_terror_desc:0 "For 15 years, the policy of terror is practiced by the power to repress the reactionary movements, it has shown its effects, positively and negatively, but it will prevail!"
  HUN_end_the_repression:0 "End the Repression"

@@ -7873,8 +7873,6 @@ form_arabia_category = {
 				original_tag = OMA
 				# Egypt
 				original_tag = EGY
-				# Libya
-				original_tag = LBA
 				# Jordan
 				original_tag = JOR
 				# Palestine
@@ -8542,7 +8540,6 @@ form_andalusia_category = {
 				original_tag = ALG
 				original_tag = TUN
 				original_tag = WES
-				original_tag = LBA
 				original_tag = RIF
 			}
 			has_dlc = "La Resistance"
@@ -12603,6 +12600,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 		}
 
@@ -12640,6 +12638,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 			NOT = { has_global_flag = form_horn_of_africa_flag }
 
@@ -12805,6 +12804,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 		}
 
@@ -12821,6 +12821,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 			
 			has_global_flag = form_horn_of_africa_flag
@@ -12867,6 +12868,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 		}
 
@@ -12883,12 +12885,12 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 			
 			has_global_flag = form_horn_of_africa_flag
 			NOT = { has_global_flag = integrate_the_south_flag }
 
-			has_dlc = "By Blood Alone"
 		}
 
 		available = {
@@ -12946,6 +12948,7 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 		}
 
@@ -12962,12 +12965,144 @@ form_horn_of_africa_africa_category = {
 				original_tag = SID # Sidamo
 				original_tag = GBA # Gambela
 				original_tag = BEG # Benishangul-Gumuz State
+				original_tag = DJI # Djibouti
 			}
 			
 			has_global_flag = form_horn_of_africa_flag
 			NOT = { has_global_flag = the_upper_nile_flag }
 
 			has_dlc = "By Blood Alone"
+		}
+
+		available = {
+			controls_state = 886 # Blue Nile
+			controls_state = 884 # Upper Nile
+		}
+
+		complete_effect = {
+		
+			# Blue Nile
+			886 = { add_core_of = ROOT }
+
+			# Upper Nile
+			884 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				
+				set_global_flag = the_upper_nile_flag
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+}
+
+
+	conquer_socotra = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+				original_tag = ETH # Ethiopia
+		}
+
+		visible = {
+			original_tag = ETH # Ethiopia
+			has_global_flag = form_horn_of_africa_flag
+			NOT = { has_global_flag = socotra_conquered_flag }
+		}
+
+		available = {
+			controls_state = 906 # Socotra
+		}
+
+		complete_effect = {
+		
+			# Socotra
+			906 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				
+				set_global_flag = socotra_conquered_flag
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+
+	integrate_the_south = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+
+				original_tag = ETH # Ethiopia
+			
+		}
+
+		visible = {
+				original_tag = ETH # Ethiopia
+			
+			has_global_flag = form_horn_of_africa_flag
+			NOT = { has_global_flag = integrate_the_south_flag }
+		}
+
+		available = {
+			controls_state = 903 # Garissa
+			controls_state = 547 # Nairobi
+			controls_state = 905 # Mombasa
+			controls_state = 904 # Nyanza-Rift Valley
+			controls_state = 548 # Uganda
+		}
+
+		complete_effect = {
+		
+			# Garissa
+			903 = { add_core_of = ROOT }
+
+			# Nairobi
+			547 = { add_core_of = ROOT }
+
+			# Mombasa
+			905 = { add_core_of = ROOT }
+
+			# Nyanza-Rift Valley
+			904 = { add_core_of = ROOT }
+
+			# Uganda
+			548 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				
+				set_global_flag = integrate_the_south_flag
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+
+	the_upper_nile = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+				original_tag = ETH # Ethiopia
+
+		visible = {
+				original_tag = ETH # Ethiopia	
+			has_global_flag = form_horn_of_africa_flag
+			NOT = { has_global_flag = the_upper_nile_flag }
 		}
 
 		available = {

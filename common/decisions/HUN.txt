@@ -119,6 +119,9 @@ HUN_reactionnary_unrest = {
 		  end_puppet = SLO
 		  end_puppet = CRO
 		  end_puppet = SER
+		  BAY = {
+		   set_faction_leader = yes
+		  }
 		  leave_faction = yes
 		  hidden_effect = {
 		  IF = {
@@ -308,6 +311,9 @@ HUN_reactionnary_unrest_natio_side = {
 
 		timeout_effect = {
 		 news_event = news.3054
+		 BAY = {
+		 set_faction_leader = yes
+		 }
 		 leave_faction = yes
 		 remove_ideas = home_of_the_revolution
 		 remove_ideas = weakened_reactionnary_opposition

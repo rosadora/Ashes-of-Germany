@@ -62,7 +62,7 @@
  STATE_61:0 "Mecklenburg"
  STATE_62:1 "Vorpommern"
  STATE_63:0 "Hinterpommern"
- STATE_64:0 "Brandenburg"
+ STATE_64:0 "Berlin"
  STATE_65:0 "Sachsen"
  STATE_66:0 "Niederschlesien"
  STATE_67:0 "Oberschlesien"
@@ -986,3 +986,4 @@
  STATE_977:0 "Gyeongsang"
  STATE_978:0 "Busan"
  STATE_979:0 "Tsushima"
+ STATE_980:0 "Brandenburg"

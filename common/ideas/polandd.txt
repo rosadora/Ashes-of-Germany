@@ -15,8 +15,45 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				stability_factor = 0.1
-				army_defence_factor = 0.1
+				stability_factor = 0.05
+				army_defence_factor = 0.05
+			} 
+		}
+		the_failed_coup = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_political_violence
+
+			removal_cost = -1
+			
+			modifier = { 
+				political_power_factor = -0.2
+			} 
+		}
+		deadlock_sejm = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_parliament_building
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.2
+				ultra_nationalism_drift = 0.01
+				communism_drift = 0.01
+				classical_marxism_drift = 0.01
 			} 
 		}
 	}

@@ -32,10 +32,6 @@ ideas = {
 				always = yes
 			}
 
-			cancel = {
-				has_global_flag = italian_civil_war_over
-			}
-
 			picture = SOV_stakhanovite_movement
 
 			removal_cost = -1
@@ -85,6 +81,238 @@ ideas = {
 				experience_gain_army_factor = -0.2
 				experience_gain_navy_factor = -0.2
 				experience_gain_air_factor = -0.2
+			}
+		}
+		revitalize_the_economy_NLC = {
+			allowed = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = eng_spirit_of_the_industrial_revolution
+
+			removal_cost = -1
+
+			modifier = {
+				cic_construction_boost = 0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+		reform_the_government_NLC = {
+			allowed = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.02
+				libertarian_socialism_drift = 0.02
+				classical_marxism_drift = 0.02
+				democratic_drift = -0.02
+				classical_liberalism_drift = -0.02
+				social_liberalism_drift = -0.02
+				ultra_nationalism_drift = -0.05
+				fascism_drift = -0.05
+			}
+		}
+		NLC_army_idea1 = {
+			allowed = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				supply_consumption_factor = -0.15
+			}
+		}
+		control_the_factories_NLC = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.25
+				line_change_production_efficiency_factor = 0.35
+				stability_factor = -0.25
+				consumer_goods_factor = -0.15
+			}
+		}
+		control_the_factories_NLC2 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.25
+				line_change_production_efficiency_factor = 0.35
+				consumer_goods_factor = -0.15
+			}
+		}
+		control_the_factories_NLC3 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_stability_factor = 0.1
+				industrial_capacity_factory = 0.3
+				line_change_production_efficiency_factor = 0.4
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.14
+			}
+		}
+		control_the_factories_NLC4 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				war_stability_factor = 0.1
+				industrial_capacity_factory = 0.3
+				line_change_production_efficiency_factor = 0.4
+				consumer_goods_factor = -0.15
+				production_speed_industrial_complex_factor = 0.15 #0.05
+				production_speed_arms_factory_factor = 0.25
+			}
+		}
+		control_the_factories_NLC5 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_spirit_of_the_industrial_revolution
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_stability_factor = 0.15
+				industrial_capacity_factory = 0.35
+				line_change_production_efficiency_factor = 0.5
+				consumer_goods_factor = -0.25
+				production_speed_industrial_complex_factor = 0.2 
+				production_speed_arms_factory_factor = 0.35
+			}
+		}
+		disgrunteled_landowners_NLC = {
+			allowed = {}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.07
+			}
+		}
+		the_three_year_plan_NLC = {
+			allowed = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_spirit_of_the_industrial_revolution
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.07
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		the_three_year_plan_NLC2 = {
+			allowed = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_spirit_of_the_industrial_revolution
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1 #-0.1
+				production_factory_max_efficiency_factor = 0.15 #0.05
+				consumer_goods_factor = 0.2 #0.15
+				production_speed_industrial_complex_factor = 0.15 #0.05
+				industrial_concern_cost_factor = -0.15 #-0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		dealing_with_the_people_NLC = {
+			allowed = {
+				
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.15
+				stability_weekly = -0.005
+			}
+		}
+		the_peoples_factories_NLC = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ARG_women_in_industry
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.25
+				line_change_production_efficiency_factor = 0.35
+				consumer_goods_factor = 0.1
 			}
 		}
     }

@@ -6,6 +6,7 @@ state={
 	resources={
 		steel=8 #was 11 #was: 11 was 19 # was: 60
 		aluminium=6 # was: 20
+		coal = 25
 	}
 	
 	state_category = city
@@ -22,6 +23,7 @@ state={
 			infrastructure = 3
 		}
 		add_core_of = SIL
+		add_core_of = POL
 	}
 
 	provinces={

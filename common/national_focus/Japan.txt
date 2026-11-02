@@ -2043,7 +2043,7 @@
 		available = {
 			tungsten > 80
 			oil > 70
-			alumnium > 50
+			aluminium > 50
 			chromium > 100
 			rubber > 100
 			has_idea = autarky
@@ -3927,7 +3927,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_political_power = 50
-		 create_faction = asian_international
+		 create_faction_from_template = faction_template_JAP_pan_asian_revolutuonary_front
 		}
 	}
 	focus = {
@@ -5725,7 +5725,7 @@
 		}
 	}
 	focus = {
-		id = JAP_spiritual_mobilization
+		id = JAP_spiritual_mobilizationtfix
 		icon = GFX_focus_jap_spiritual_mobilization
 		x = -1
 		y = 1
@@ -5754,7 +5754,7 @@
 		}
 	}
 	focus = {
-		id = JAP_warrior_spirit
+		id = JAP_warrior_spirittfix
 		icon = GFX_focus_generic_japanese_imperial_glory
 		x = 1
 		y = 1
@@ -5797,8 +5797,8 @@
 		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 2
-		prerequisite = {focus = JAP_warrior_spirit}
-		prerequisite = {focus = JAP_spiritual_mobilization}
+		prerequisite = {focus = JAP_warrior_spirittfix}
+		prerequisite = {focus = JAP_spiritual_mobilizationtfix}
 		relative_position_id = JAP_seisen
 		cost = 5
 		ai_will_do = {
@@ -5988,7 +5988,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			add_war_support = 0.075
-			create_faction = daitoa_kyoeiken
+			create_faction_from_template = faction_template_geacps_faction
 			IF = {
 				limit = {
 					has_idea = limited_conscription
@@ -6783,7 +6783,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			create_faction = asian_peace_initiative
+			create_faction_from_template = faction_template_JAP_the_old_alliance
 		 USA = {
 			country_event = {
 				id = jap.24

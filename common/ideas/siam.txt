@@ -1,0 +1,79 @@
+ideas = {
+
+	country = {
+		the_1932_revolution = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHL_liberal_party_in_power
+
+			removal_cost = -1
+			
+			modifier = { 
+				classical_liberalism_drift = 0.01
+				democratic_drift = 0.01
+				political_power_factor = -0.05
+				research_speed_factor = -0.05
+			} 
+		}
+		syncretic_governance = {
+			
+			allowed = {
+			}
+
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = ultra_nationalism
+					has_government = fascism 
+					has_government = democratic
+					has_government = classical_liberalism
+					has_government = social_liberalism
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+			
+			modifier = { 
+				stability_factor = -0.15
+				war_support_factor = -0.1
+			} 
+		}
+		anti_colonial_spirit = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+			 tag = FRA
+			 attack_bonus_against = 0.1
+			 defense_bonus_against = 0.1
+		    }
+
+			targeted_modifier = {
+			 tag = ENG
+			 attack_bonus_against = 0.1
+			 defense_bonus_against = 0.1
+		    }
+		}
+	}
+}

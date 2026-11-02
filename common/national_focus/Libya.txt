@@ -1,0 +1,4524 @@
+focus_tree = {
+	id = LBA_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = LBA
+		}
+	 }
+
+	 continuous_focus_position = {
+		x = -150
+		y = 1000
+	 }
+
+
+
+	 focus = {
+		id = LBA_under_Mussolini
+		icon = GFX_focus_ger_assassinate_mussolini
+		cost = 7
+		x = 11
+		y = 0
+		available = {
+			has_character = LBA_benito_mussolini
+		}
+		ai_will_do = {
+			factor = 95
+		}
+		allow_branch = {
+			has_country_flag = Mussolini_Fled
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_finish_the_opposition
+			}
+			x = -9
+			y = 0
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_overthrow_Mussolini
+			}
+			x = -9
+			y = 0
+		}
+		cancelable = no
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_cosmetic_tag = LBA_MUSSOLINI_FLED
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_embrace_Mussolini
+		icon = GFX_focus_SWI_embrace_panoramaheim
+		cost = 10
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = LBA_under_Mussolini
+		}
+		mutually_exclusive = {
+			focus = LBA_oppose_Mussolini
+		}
+		allow_branch = {
+			AND = {
+				NOT = {
+				has_completed_focus = LBA_oppose_Mussolini
+			}
+			has_country_flag = Mussolini_Fled
+			}
+			
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_embrace_Mussolini
+			}
+			x = 2
+			y = 0
+		}
+		relative_position_id = LBA_under_Mussolini
+		completion_reward = {
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_timed_idea = {
+				idea = oppose_mussolini_LBA_idea
+				days = 180
+			}
+			hidden_effect = {
+				AML = {
+					set_popularities = {
+						neutrality = 0.9
+						ultra_nationalism = 0.07
+						fascism = 0.01
+						communism = 0.02
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			add_war_support = 0.1
+		 }
+	 }
+
+	 focus = {
+		id = LBA_oppose_Mussolini
+		icon = Oppose_Mussolini_LBA
+		cost = 10
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = LBA_under_Mussolini
+		}
+		mutually_exclusive = {
+			focus = LBA_embrace_Mussolini
+		}
+		ai_will_do = {
+			base = 5
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_oppose_Mussolini
+			}
+			x = -2
+			y = 0
+		}
+		allow_branch = {
+			AND = {
+				NOT = {
+				has_completed_focus = LBA_embrace_Mussolini
+			}
+			has_country_flag = Mussolini_Fled
+			}
+			
+		}
+		relative_position_id = LBA_under_Mussolini
+		completion_reward = {
+			add_timed_idea = {
+				idea = oppose_mussolini_LBA_idea
+				days = 180
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.15
+				}
+
+				AML = {
+					set_popularities = {
+						fascism = 92
+						neutrality = 1
+						ultra_nationalism = 7
+					}
+
+					set_politics = {
+						ruling_party = fascism
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_prepare_for_uprising
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_oppose_Mussolini
+		prerequisite = {
+			focus = LBA_oppose_Mussolini
+		}
+		completion_reward = {
+			448 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				 add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				 }
+				add_extra_state_shared_building_slots = 4
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_raise_militia
+		icon = GFX_focus_SWE_revoke_militia_law
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_oppose_Mussolini
+		prerequisite = {
+			focus = LBA_oppose_Mussolini
+		}
+		completion_reward = {
+			custom_effect_tooltip = can_recruit_militias
+		 }
+	 }
+
+	 focus = {
+		id = LBA_overthrow_Mussolini
+		icon = GFX_focus_ITA_depose_mussolini
+		cost = 10
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_prepare_for_uprising
+		}
+		prerequisite = {
+			focus = LBA_raise_militia
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = LBA_prepare_for_uprising
+		completion_reward = {
+			hidden_effect = {
+			country_event = {
+				id = LBA_events.1
+				days = 2
+			}
+			retire_character = LBA_benito_mussolini
+			drop_cosmetic_tag = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			remove_ideas = flee_from_italy
+			hidden_effect = {
+				retire_character = LBA_roberto_farinacci
+				set_country_flag = LBA_Opose_Mussolini
+				mark_focus_tree_layout_dirty = yes
+				clr_country_flag = Mussolini_Fled
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_root_out_mussolinis_loyalists
+		icon = GFX_goal_stand_up_and_fight
+		cost = 7
+		available = {
+			NOT = {
+				has_war_with = AML
+			}
+			any_owned_state = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		x = -4
+		prerequisite = {
+			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		allow_branch = {
+			has_completed_focus = LBA_overthrow_Mussolini
+			NOT = {
+				has_country_flag = Mussolini_Fled
+			}
+		}
+		y = 1
+		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+		completion_reward = {
+			custom_effect_tooltip = destroy_mussolini_TT
+		 }
+	 }
+
+	 focus = {
+		id = LBA_starve_the_people
+		icon = GFX_focus_generic_farmland
+		cost = 7
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = LBA_embrace_Mussolini
+		}
+		relative_position_id = LBA_embrace_Mussolini
+		completion_reward = {
+			add_timed_idea = {
+				idea = starve_the_people
+				days = 180
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_denounce_Idris_Senussi
+		icon = GFX_goal_focus_LBA_Idris_Senussi
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_embrace_Mussolini
+		prerequisite = {
+			focus = LBA_embrace_Mussolini
+		}
+		completion_reward = {
+			add_stability = 0.05
+		 }
+	 }
+
+	 focus = {
+		id = LBA_finish_the_opposition
+		icon = GFX_focus_CZE_unify_the_fascist_parties
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = LBA_starve_the_people
+		prerequisite = {
+			focus = LBA_starve_the_people
+		}
+		prerequisite = {
+			focus = LBA_denounce_Idris_Senussi
+		}
+		completion_reward = {
+			remove_ideas = flee_from_italy
+			country_event = {
+				id = LBA_events.26
+				days = 3
+			}
+			custom_effect_tooltip = Libya_civilwar_tt
+			hidden_effect = {
+				set_country_flag = LBA_stay_with_Mussolini
+				mark_focus_tree_layout_dirty = yes
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_a_new_industry
+		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+		cost = 5
+		allow_branch = {
+			NOT = {
+				has_country_flag = Mussolini_Fled
+			}
+			
+		}
+		available = {
+			controls_state = 450
+			controls_state = 448
+			NOT = {
+				has_country_flag = Mussolini_Fled
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		ai_will_do = {
+			base = 5
+		}
+		x = 12
+		y = -1
+		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+		completion_reward = {
+			450= {
+				 add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				 }
+				 add_building_construction = {
+					type = infrastructure
+					level = 1
+				 }
+				add_extra_state_shared_building_slots = 3
+			}
+			448 = {
+				add_extra_state_shared_building_slots = 1
+				 add_building_construction = {
+					type = infrastructure
+					level = 1
+				 }
+			}
+		 }
+	 }
+	
+	 focus = {
+		id = LBA_prioritize_civilian_industries
+		icon = GFX_focus_generic_modernize_industry
+		cost = 7
+		x = -4
+		y = 1
+		relative_position_id = LBA_a_new_industry
+		mutually_exclusive = {
+			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			base = 5
+		}
+		prerequisite = {
+			focus = LBA_a_new_industry
+		}
+		completion_reward = {
+				450 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				}
+				448 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+			add_tech_bonus = {
+				category = industry 
+				bonus = 1
+				uses = 2
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_electrify_the_east_MON
+		icon = GFX_focus_generic_electrification
+		cost = 7
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		available = {
+			controls_state = 450
+			controls_state = 451
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			450 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		451 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_construct_steel_mills
+		icon = GFX_SOV_steel_casting_industry_ccp_2d_sov_compatibility
+		cost = 7
+		x = 3
+		y = 1
+		relative_position_id = LBA_prioritize_civilian_industries
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			base = 5
+		}
+		completion_reward = {
+				add_resource = {
+					type = steel
+					amount = 18
+					state = 448
+				}
+				hidden_effect = {
+					448 = {
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+				add_ideas = closed_economy
+		 }
+	 }
+
+	 focus = {
+		id = LBA_prioritize_military_industries
+		icon = GFX_focus_generic_reorient_production
+		x = 8
+		y = 0
+		cost = 7
+		ai_will_do = {
+			base = 5
+		}
+		mutually_exclusive = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		prerequisite = {
+			focus = LBA_a_new_industry
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_new_arms_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_prioritize_military_industries
+		prerequisite = {
+			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_develop_fortifications
+		icon = GFX_SOV_fortify_mongolian_border_ccp_2d_sov_compatibility
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_prioritize_military_industries
+		prerequisite = {
+			focus = LBA_prioritize_military_industries
+		}
+		ai_will_do = {
+			base = 5
+		}
+		completion_reward = {
+			451 = {
+				add_building_construction = {
+				type = bunker
+				level = 4
+				province = 10120
+          	  instant_build = yes
+			}
+			}
+			663 = {
+				add_building_construction = {
+				type = bunker
+				level = 4
+				province = 4060
+          	  instant_build = yes
+			}
+			}
+			448 = {
+							add_building_construction = {
+				type = bunker
+				level = 4
+				province = 12039
+          	  instant_build = yes
+			}
+			}
+			661 = {
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 10067
+          	  instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 7154
+          	  instant_build = yes
+			}
+			}
+		 }
+	 }
+
+	 focus = {
+		id = LBA_make_guns_more_efficiently
+		icon = GFX_focus_SWE_let_fly_all_guns
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_new_arms_factories
+		prerequisite = {
+			focus = LBA_new_arms_factories
+		}
+		prerequisite = {
+			focus = LBA_develop_fortifications
+		}
+		ai_will_do = {
+			base = 5
+		}
+		completion_reward = {
+			add_ideas = extensive_conscription
+			add_timed_idea = {
+				idea = make_guns_more_effectively
+				days =1015
+			}
+		}
+	 }
+
+	 focus = {
+		id = LBA_construct_Tripoli_University
+		icon = GFX_focus_research
+		cost = 10
+		x = 5
+		y = 1
+		ai_will_do = {
+			base = 5
+		}
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+			focus = LBA_prioritize_military_industries
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			add_research_slot = 1
+		 }
+	 }
+
+	focus = {
+		id = LBA_develop_Trippoli_industries
+		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+		cost = 10
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = LBA_electrification_of_Tripoli_MON
+		}
+		ai_will_do = {
+			base = 5
+		}
+		available = {
+			controls_state = 448
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			448 = {
+				 add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				 }
+				 add_extra_state_shared_building_slots = 3
+			}
+
+			add_victory_points = {
+					province = 1149
+					value = 5
+				 }
+
+		 }
+	}
+	focus = {
+		id = LBA_develop_eastern_cities
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 2
+		y = 2
+		relative_position_id = LBA_prioritize_civilian_industries
+		prerequisite = {
+			focus = LBA_electrify_the_east_MON
+		}
+		ai_will_do = {
+			base = 5
+		}
+		completion_reward = {
+			add_victory_points = {
+				province = 11954
+				value = 2
+			}
+			add_victory_points = {
+				province = 1130
+				value = 5
+			}
+			450 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			451 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_electrification_of_Tripoli_MON
+		icon = GFX_generic_electrification
+		cost = 7
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = LBA_prioritize_civilian_industries
+		}
+		ai_will_do = {
+			base = 5
+		}
+		available = {
+			controls_state = 448
+		}
+		relative_position_id = LBA_prioritize_civilian_industries
+		completion_reward = {
+			448 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_national_building_projects
+		icon = GFX_goal_generic_consumer_goods
+		cost = 7
+		x = 2
+		y = 0
+		prerequisite = {
+			focus = LBA_electrification_of_Tripoli_MON
+		}
+		ai_will_do = {
+			base = 5
+		}
+		prerequisite = {
+			focus = LBA_electrify_the_east_MON
+		}
+		relative_position_id = LBA_develop_Trippoli_industries
+		completion_reward = {
+			add_timed_idea = {
+				idea = national_building_projects_LBA
+				days = 1015
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_restoration_of_the_monarchy
+		icon = GFX_focus_generic_monarchy_2
+		cost = 7
+		x = 15
+		y = 0
+		available = {
+			NOT = {
+				has_war_with = AML
+			}
+		}
+
+		offset = {
+			trigger = {
+					has_completed_focus = LBA_under_Mussolini_2
+			}
+			x = 10
+		}
+
+		allow_branch = {
+			NOT = {
+				has_country_flag = Mussolini_Fled
+			}
+			
+		}
+
+		cancel_if_invalid = yes
+
+
+		completion_reward = {
+			news_event = {
+				id = LBA_events.2
+				days = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = LBA_overthrow_Mussolini
+					 }
+					 449 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			662 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			663 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			450 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+			451 = {
+				add_dynamic_modifier = {modifier = Benito_Mussolini_Rebelious}
+				remove_core_of = LBA
+			}
+				}
+			
+			}
+			
+			hidden_effect = {
+				if = {
+					limit = { ITA = {exists = yes} has_completed_focus = LBA_overthrow_Mussolini }
+				}
+				ITA = {
+					country_event = {
+						id = LBA_events.19
+						days = 2
+					}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							has_government = neutrality
+						}
+					}
+					set_politics = {
+						ruling_party = neutrality
+					}
+				}
+			}
+		 }
+	}
+
+	    focus = {
+        id = LBA_form_royal_guards
+        icon = GFX_goal_generic_small_arms
+		prerequisite = {
+			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		available = {
+			NOT = {
+				any_owned_state = {
+					has_dynamic_modifier =  Benito_Mussolini_Rebelious
+				}
+			}
+		}
+		offset = {
+			x = -1
+			trigger = {
+				NOT = {
+					has_completed_focus = LBA_overthrow_Mussolini
+				}
+			}
+		}
+		relative_position_id = LBA_restoration_of_the_monarchy
+        x = -2
+        y = 2
+        cost = 10
+		completion_reward = {
+			division_template = {
+				name = "Senussian Royal Guard"
+				priority = 2
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+		
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 448 } #Tunis
+				create_unit = {
+					division = "name = \"Senussian Royal Guard\" division_template = \"Senussian Royal Guard\" start_experience_factor = 1.0" 
+					owner = LBA
+				}
+				create_unit = {
+					division = "name = \"Senussian Royal Guard\" division_template = \"Senussian Royal Guard\" start_experience_factor = 1.0" 
+					owner = LBA
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_constitutional_monarchy
+        icon = GFX_goal_generic_constitutional_monarchy
+        relative_position_id = LBA_convince_the_king_towards_democracy
+		prerequisite = {
+			focus = LBA_draft_a_constitution
+		}
+        x = -2
+        y = 0
+        cost = 10
+		completion_reward = {
+			add_timed_idea = {
+				idea = LBA_constitutional_monarchy_idea
+				days = 365
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_join_the_French
+        icon = GFX_focus_chi_reach_out_to_france
+        relative_position_id = LBA_draft_a_constitution
+        y = 1
+		x = 4
+        cost = 7
+		prerequisite = {
+			focus = LBA_draft_a_constitution
+		}
+
+		available = {
+			NOT = {
+				FRA = {
+					has_completed_focus = FRA_lift_the_law_of_exil
+				}
+				has_completed_focus = LBA_communist_revolution
+			}
+			FRA = {
+				is_faction_leader = yes
+			}
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = {
+				id = generic.2
+				days = 3
+				}
+			}
+		}
+    }
+    focus = {
+        id = LBA_Berlin_Mission
+        icon = GFX_goal_reichspakt
+        relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+        y = 1
+		x = -6
+        cost = 7
+		prerequisite = {
+			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		available = {
+			PRS = {
+				is_faction_leader = yes
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = PRS
+				modifier = LBA_PRS_ally_focus
+			}
+			PRS = {
+				add_opinion_modifier = {
+				target = LBA
+				modifier = LBA_PRS_ally_focus
+				}
+			}
+		}
+    }
+
+    focus = {
+        id = LBA_request_French_north_africa
+        icon = GFX_generic_goal_beg_france_flag
+        relative_position_id = LBA_join_the_French
+        y = 1
+		x=-1
+        cost = 10
+		prerequisite = {
+			focus = LBA_join_the_French
+		}
+
+		available = {
+			is_in_faction_with = FRA
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = LBA_events.3
+					days = 4
+				}
+			}
+		}
+    }
+    focus = {
+        id = LBA_ally_the_kaiser
+        icon = GFX_goal_under_the_kaiser
+        relative_position_id =LBA_Berlin_Mission
+        y = 1
+		x = 1
+        cost = 7
+		prerequisite = {
+			focus = LBA_Berlin_Mission	
+			}
+		available = {
+			PRS = {
+				is_faction_leader = yes
+			}
+			is_in_faction = no
+			NOT = {
+				has_completed_focus = LBA_Italo_Balbos_Coup
+			}
+		}
+		mutually_exclusive = {
+			focus = LBA_ally_the_British_Crown
+		}
+		bypass = {
+			is_in_faction_with = PRS
+		}
+		completion_reward = {
+			PRS = {
+				country_event = {
+					id = generic.2
+					days = 7
+				}
+			}
+		}
+    }
+
+	focus = {
+    	id = LBA_draft_a_constitution
+    	icon = GFX_focus_POL_complete_april_constitution
+    	relative_position_id = LBA_reconcile_the_Italians
+    	x = 5
+    	y = 1
+		cost = 7
+		available = {
+			has_country_flag = reconcile_ILF
+		}
+		mutually_exclusive = {
+				focus = LBA_rejoin_Italy
+				focus = LBA_Italo_Balbos_Coup
+				focus = LBA_get_communist_support
+			}
+    	prerequisite = { focus = LBA_reconcile_the_Italians }
+    	completion_reward = {
+			add_ideas = LBA_drafting_the_constitution
+		 }
+	}
+
+	focus = {
+	    id = LBA_convince_the_king_towards_democracy
+	    icon = GFX_goal_support_democracy
+	    relative_position_id = LBA_draft_a_constitution
+	    x = 0
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_draft_a_constitution }
+	    completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.12
+			}
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.12
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.12
+			}
+			add_stability = 0.15
+			add_war_support = -0.15
+		 }
+	}
+
+	focus = {
+	    id = LBA_boost_democratic_parties
+	    icon = GFX_focus_AFG_parliamentary_democracy
+	    relative_position_id = LBA_draft_a_constitution
+	    x = 2
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_draft_a_constitution }
+	    completion_reward = {
+			add_timed_idea = {
+				idea =LBA_convincing_democrats
+				days = 365
+			} 
+		 }
+	}
+
+	focus = {
+	    id = LBA_get_communist_support
+	    icon = GFX_goal_support_communism
+	    relative_position_id = LBA_reconcile_the_Italians
+	    x = 0
+	    y = 1
+		cost = 7
+		available = {
+			has_country_flag = reconcile_NLC
+		}
+		mutually_exclusive = {
+				focus = LBA_rejoin_Italy
+				focus = LBA_draft_a_constitution
+				focus = LBA_Italo_Balbos_Coup
+			}
+	    prerequisite = { focus = LBA_reconcile_the_Italians}
+	    completion_reward = {
+			add_timed_idea = {
+				idea = LBA_communist_support_rising
+				days = 365
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_state_catholicism
+	    icon = GFX_goal_state_catholicism_focus
+	    relative_position_id = LBA_convince_the_king_towards_democracy
+	    x = -1
+	    y = 1
+		cost = 7
+		prerequisite = { focus = LBA_convince_the_king_towards_democracy }
+		prerequisite = { focus = LBA_constitutional_monarchy }
+	    completion_reward = {
+			add_ideas = catholic_state
+		 }
+	}
+
+	focus = {
+	    id = LBA_get_european_support
+	    icon = GFX_focus_generic_the_council_of_europe
+	    relative_position_id = LBA_boost_democratic_parties
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_boost_democratic_parties }
+		prerequisite = { focus = LBA_convince_the_king_towards_democracy }
+	    completion_reward = {
+			ENG = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			FRA = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			POL = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+			SPR = {
+				country_event = {
+					id = LBA_events.14
+					days = 2
+				}
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_enforce_constitutional_reform
+	    icon = GFX_GOAL_enforce_constitutional_reform
+	    relative_position_id = LBA_state_catholicism
+	    x = 1
+	    y = 1
+		cost = 7
+		prerequisite = { focus = LBA_get_european_support }
+	    prerequisite = {focus = LBA_state_catholicism }
+	    completion_reward = {
+			set_politics = {
+				ruling_party = classical_liberalism
+			}
+			remove_ideas = LBA_drafting_the_constitution
+		 }
+	}
+
+	focus = {
+	    id = LBA_women_rights
+	    icon = GFX_goal_womens_rights
+	    relative_position_id = LBA_enforce_constitutional_reform
+	    x = -1
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_enforce_constitutional_reform }
+	    completion_reward = {
+			add_ideas = total_equality
+			add_ideas = women_in_military
+		 }
+	}
+
+	focus = {
+	    id = LBA_modernize_the_industries
+	    icon = GFX_goal_generic_construct_civ_factory
+	    relative_position_id = LBA_enforce_constitutional_reform
+	    x = 1
+	    y = 1
+		cost = 5
+	    prerequisite = { focus = LBA_enforce_constitutional_reform }
+	    completion_reward = {
+			add_tech_bonus = {
+				category = industry 
+				bonus = 1
+				uses = 2
+			}
+			448 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			451 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			450 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_request_tunis
+	    icon = GFX_goal_Tunisia_Question
+	    relative_position_id = LBA_enforce_constitutional_reform
+	    x = 0
+	    y = 2
+		cost = 7
+		available = {
+			has_manpower > 150000
+			is_in_faction_with = FRA
+		}
+		bypass = {
+			any_state = {
+				is_core_of = TUN
+				is_controlled_by = LBA
+			}
+		}
+	    prerequisite = { focus = LBA_women_rights }
+		prerequisite = { focus = LBA_modernize_the_industries }
+	    completion_reward = { 
+			if = {
+				limit = {
+					TUN = {
+						NOT = {
+							is_puppet_of = FRA
+						}
+					}
+					TUN = {
+				
+			}
+				}
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+
+			}
+
+			if = {
+				limit = {
+					TUN = {
+						is_puppet_of = FRA
+					}
+				}
+				FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+	    id = LBA_consolodate_Idris_Senussis_Rule
+	    icon = GFX_Idris_Senussi
+	    relative_position_id = LBA_restoration_of_the_monarchy
+		cost = 7
+	    x = 0
+	    y = 1
+	    prerequisite = { focus = LBA_restoration_of_the_monarchy }
+	    completion_reward = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.15
+			}
+			add_timed_idea = {
+				idea = LBA_Consolidate_Idris_Senussis_Rule_IDEA
+				days = 730
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_contact_the_British_Crown
+	    icon = GFX_goal_tfv_strengthen_commonwealth_ties
+	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+	    x = 0
+	    y = 1
+		cost = 7
+	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
+	    completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = visit_to_london
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = visit_to_london
+				}
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_execute_Italo_Balbo
+	    icon = GFX_focus_Execute_Italo_Balbo
+	    relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+	    x = 2
+	    y = 1
+		cost = 7
+		mutually_exclusive = {
+			focus = LBA_rehabilitate_Italo_Balbo
+		}
+	    prerequisite = { focus = LBA_consolodate_Idris_Senussis_Rule }
+	    completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.05
+			add_political_power = 120
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_an_eternal_Italian_enemy
+		icon = GFX_focus_attack_italy
+		prerequisite = {
+			focus = LBA_execute_Italo_Balbo
+		}
+		relative_position_id = LBA_execute_Italo_Balbo
+		cost = 7
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = LBA_an_eternal_italian_enemy
+		 }
+	}
+
+	#Im wanting to make a secret path for Italo Balbo but might not get to it#
+
+	focus = {
+		id = LBA_rehabilitate_Italo_Balbo
+		icon = GFX_focus_Italo_Balbo
+		cost = 7
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = LBA_consolodate_Idris_Senussis_Rule
+		}
+		mutually_exclusive = {
+			focus = LBA_execute_Italo_Balbo
+		}
+		relative_position_id = LBA_consolodate_Idris_Senussis_Rule
+		completion_reward = {
+			recruit_character = LBA_italo_balbo
+			add_political_power = -50
+		 }
+	}
+
+	focus = {
+	    id = LBA_request_Prussian_guns
+	    icon = GFX_goal_deutsches_heer
+	    relative_position_id = LBA_Berlin_Mission
+	    y = 1
+		x = -1
+		cost = 7
+		available = {
+			is_in_faction_with = PRS
+		}
+		prerequisite = { focus = LBA_Berlin_Mission }
+	    completion_reward = {
+			PRS = {
+				country_event = {
+					id = LBA_events.6
+					days = 14
+				}
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_invasion_of_Tunisia
+	    icon = GFX_focus_attack_france
+	    relative_position_id = LBA_dreams_Of_Libyan_Empire
+	    x = -1
+	    y = 1
+		cost = 7
+		available = {
+			has_manpower > 100000
+		}
+		bypass = {
+			controls_state = 458
+			controls_state = 665
+		}
+		will_lead_to_war_with = FRA
+	    prerequisite = { focus = LBA_dreams_Of_Libyan_Empire }
+	    completion_reward = {
+			every_country = {
+				limit = {
+					controls_state = 458
+				}
+				LBA = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			custom_effect_tooltip = LBA_fra_surrender_TT
+			hidden_effect = {
+				set_global_flag = aggressive_LBA
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_proclaim_Libyan_empire
+		icon = GFX_LBA_flag_raised
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_invasion_of_Tunisia
+		prerequisite = {
+			focus = LBA_invasion_of_Tunisia
+		}
+		available = {
+			owns_state = 458
+		}
+		completion_reward = {
+			set_cosmetic_tag = LIBYAN_EMPIRE
+			452 = {
+				add_claim_by = LBA
+			}
+			every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				add_claim_by = LBA
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_reconcile_the_Italians
+	    icon = GFX_focus_befriend_italy
+	    relative_position_id = LBA_contact_the_British_Crown
+	    x = 4
+	    y = 1
+		cost = 7
+		available = {
+			has_global_flag = italian_civil_war_over
+		}
+	    prerequisite = { focus = LBA_rehabilitate_Italo_Balbo}
+	    completion_reward = {
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 ITA = {
+					country_event = {
+					id = LBA_events.17
+					days = 2
+				 }	
+				 }
+				 set_country_flag = reconcile_ITA
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				ILF = {
+					country_event = {
+					id = LBA_events.17
+					days = 2
+				 }	
+				 }
+				 set_country_flag = reconcile_ILF
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 NLC = {
+					country_event = {
+					id = LBA_events.17
+					days = 2
+				 }	
+				 }
+				 set_country_flag = reconcile_NLC
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_rejoin_Italy
+		icon = GFX_libya_Italy_goal
+		cost = 30
+		cancelable = no
+		x = 14
+		y = 1
+		prerequisite = {
+			focus = LBA_reconcile_the_Italians
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = LBA_Italo_Balbos_Coup
+			focus = LBA_draft_a_constitution
+			focus = LBA_get_communist_support
+		}
+		ai_will_do = {
+			base = 100
+		}
+		relative_position_id = LBA_reconcile_the_Italians
+		completion_reward = {
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 ITA = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }	
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				ILF = {
+					annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 NLC = {
+						annex_country = {
+						target = LBA
+						transfer_troops = yes
+					}
+				 }
+			}
+		 }
+	}
+
+	focus = {
+	    id = LBA_the_african_Prussia
+	    icon = GFX_focus_GER_prussian_legacy
+	    relative_position_id = LBA_ally_the_kaiser
+	    x = -1
+	    y = 1
+		cost = 7
+	    available = {
+			has_manpower > 150000
+		}
+		prerequisite = {
+			focus = LBA_request_Prussian_guns
+		}
+		prerequisite = { focus = LBA_ally_the_kaiser}
+	    completion_reward = {
+			add_ideas = LBA_the_african_Prussia_idea
+			add_political_power = 120
+		 }
+		}
+
+		focus = {
+		    id = LBA_adopt_Prussian_doctrine
+		    icon = GFX_goal_army_upgrade
+		    prerequisite = { focus = LBA_the_african_Prussia }
+		    relative_position_id = LBA_the_african_Prussia
+		    x = -1
+		    y = 1
+		    cost = 7
+			completion_reward = {
+				add_doctrine_cost_reduction = {
+	  		    cost_reduction = 0.75
+	  		    uses = 1
+			      category = cat_mobile_warfare
+         }
+			}
+		}
+
+		focus = {
+			id = LBA_prussian_Francophobia
+			icon = GFX_goal_elite_corps
+			cost = 7
+			x = 1
+			y = 1
+			    prerequisite = { focus = LBA_adopt_Prussian_doctrine }
+			prerequisite = {focus = LBA_Prussian_Protectorate}
+			relative_position_id = LBA_adopt_Prussian_doctrine
+			completion_reward = {
+					add_ideas = Libyan_francophobia
+					add_opinion_modifier = {
+       				target = FRA
+       			     modifier = francophobia
+         	   }
+			FRA = {
+				add_opinion_modifier = {
+             target = LBA
+             modifier = francophobia
+            }
+			}
+			 }
+		}
+
+		focus = {
+		    id = LBA_Erwin_Rommel #idk what else to do for an advisor here
+		    icon = GFX_focus_Rommel
+		    prerequisite = { focus = LBA_Prussian_Protectorate }
+		    relative_position_id = LBA_the_african_Prussia
+		    x = 2
+		    y = 2
+		    cost = 7
+			bypass = {
+				NOT = {
+					is_in_faction_with = PRS
+				}
+			}
+			completion_reward = {
+				PRS = {
+					retire_character = PRS_erwin_rommel
+				}
+				recruit_character = LBA_erwin_rommel
+			}
+		}
+
+		focus = {
+		    id = LBA_Prussian_Logistics
+		    icon = GFX_focus_generic_reinforcing_the_supply_network
+		    prerequisite = { focus = LBA_adopt_Prussian_doctrine }
+		    relative_position_id = LBA_adopt_Prussian_doctrine
+		    x = -1
+		    y = 1
+		    cost = 7
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = LBA_the_african_Prussia_idea
+					add_idea = LBA_the_african_Prussia_idea2
+				}
+				add_timed_idea = {
+					idea = LBA_less_attrition
+					days = 1000
+				}
+			}
+		}
+
+		focus = {
+		id = LBA_invasion_of_Tunisia_2
+	    icon = GFX_focus_attack_france
+	    relative_position_id = LBA_adopt_Prussian_doctrine
+	    x = 1
+	    y = 2
+		cost = 10
+		available = {
+			has_manpower > 100000
+		}
+		bypass = {
+			controls_state = 458
+			controls_state = 665
+		}
+		prerequisite = {focus = LBA_prussian_Francophobia}
+		will_lead_to_war_with = FRA
+	    completion_reward = {
+			
+			every_country = {
+				limit = {
+					controls_state = 458
+				}
+				LBA = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			custom_effect_tooltip = LBA_fra_surrender_TT
+			hidden_effect = {
+				if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LBA_invasion_of_Tunisia
+					}
+				}
+				complete_national_focus = LBA_invasion_of_Tunisia
+			}
+				set_global_flag = aggressive_LBA
+				every_state = {
+					limit = {
+						is_core_of = TUN
+					}
+					add_core_of = LBA
+				}
+			}
+		 }
+		}
+
+		focus = {
+		    id = LBA_Prussian_Protectorate
+		    icon = GFX_Prussian_Flag_Raised_GOAL
+		    prerequisite = { focus = LBA_the_african_Prussia }
+		    relative_position_id = LBA_the_african_Prussia
+		    x = 1
+		    y = 1
+		    cost = 7
+			bypass = {
+				NOT = {
+					is_in_faction_with = PRS
+				}
+			}
+			available = {
+				is_in_faction_with = PRS
+			}
+			completion_reward = {
+				PRS = {
+					country_event = {
+						id = LBA_events.20
+					}
+				}
+			}
+		}
+
+		focus = {
+		    id = LBA_ally_the_British_Crown
+		    icon = GFX_focus_eng_god_save_the_king
+		    prerequisite = { focus = LBA_contact_the_British_Crown }
+		    relative_position_id = LBA_contact_the_British_Crown
+			mutually_exclusive = {focus = LBA_ally_the_kaiser}
+		    x = -1
+		    y = 1
+		    cost = 10
+			available = {
+				NOT = {
+					has_completed_focus = LBA_Italo_Balbos_Coup
+				}
+				ENG = {
+					is_faction_leader = yes
+				}
+				is_in_faction = no
+			}
+			bypass = {
+			is_in_faction_with = ENG
+		}
+			completion_reward = {
+				ENG = {
+					country_event = {
+						id = generic.2
+						days = 3
+					}
+					add_ideas = LBA_absolute_monarchy
+				}
+			}
+		}
+
+		focus = {
+		    id = LBA_submit_to_Britain
+		    icon = GFX_focus_eng_the_sun_never_sets
+		    prerequisite = { focus = LBA_ally_the_British_Crown }
+		    relative_position_id = LBA_ally_the_British_Crown
+		    x = -1
+		    y = 1
+			mutually_exclusive = {
+				focus = LBA_maintain_our_independance
+			}
+			available = {
+				is_in_faction_with = ENG
+			}
+		    cost = 10
+			completion_reward = {
+				ENG = {
+					puppet = LBA
+				}
+				add_political_power = -150
+			}
+		}
+
+		focus = {
+		    id = LBA_maintain_our_independance
+		    icon = GFX_Libyan_Flag_Raised_Neutrality
+		    prerequisite = { focus = LBA_ally_the_British_Crown }
+		    relative_position_id = LBA_ally_the_British_Crown
+		    x = 1
+		    y = 1
+			mutually_exclusive = {
+				focus = LBA_submit_to_Britain
+			}
+		    cost = 10
+
+			completion_reward = {
+				add_political_power = 150
+				add_opinion_modifier = {
+					target = ENG
+					modifier = maintain_our_independance
+				}
+				ENG = {
+					add_opinion_modifier = {
+						target = LBA
+						modifier = maintain_our_independance
+					}
+				}
+			}
+		}
+
+		focus = {
+		    id = LBA_asume_Egyptian_Control
+		    icon = GFX_generic_attack_Egypt
+		    prerequisite = { focus = LBA_submit_to_Britain }
+		    relative_position_id = LBA_submit_to_Britain
+		    x = -1
+		    y = 1
+			mutually_exclusive = {
+				focus = LBA_British_Economic_Dependance
+			}
+		    cost = 10
+			completion_reward = {
+				if = {
+					limit = {
+						EGY = {
+							is_puppet_of = ENG
+						}
+					}
+					ENG = {
+					country_event = {
+						id = LBA_events.23
+						days = 2
+					}
+				}
+				}
+
+				if = {
+					limit = {
+						EGY = {
+							all_core_state = {
+								is_controlled_by = ENG
+							}
+						}
+					 }
+					 ENG = {
+					country_event = {
+						id = LBA_events.23
+						days = 2
+					}
+				}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							EGY = {
+								is_puppet_of = ENG
+							}
+						}
+					}
+					EGY = {
+					country_event = {
+						id = LBA_events.23
+						days = 2
+					}
+				}
+				}
+			}
+		}
+
+		focus = {
+		    id = LBA_British_Economic_Dependance
+		    icon = GFX_focus_generic_british_trade
+		    prerequisite = { focus = LBA_submit_to_Britain focus = LBA_maintain_our_independance }
+		    relative_position_id = LBA_submit_to_Britain
+		    x = 1
+		    y = 1
+			mutually_exclusive = {
+				focus = LBA_asume_Egyptian_Control
+			}
+		    cost = 10
+			completion_reward = {
+				add_timed_idea = {
+					idea = Libyan_ENG_economic_Dependance
+					days = 1000
+				}
+				448 = {
+					add_building_construction = {
+						type = dockyard
+						level = 2
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+					add_extra_state_shared_building_slots = 5
+				}
+			}
+		}
+
+
+		focus = {
+		    id = LBA_towards_a_Libyan_navy
+		    icon = GFX_goal_generic_construct_naval_dockyard
+		    prerequisite = { focus = LBA_British_Economic_Dependance focus = LBA_asume_Egyptian_Control }
+		    relative_position_id = LBA_submit_to_Britain
+		    x = 0
+		    y = 2
+		    cost = 10
+			completion_reward = {
+				448 = {
+					add_building_construction = {
+						type = dockyard
+						level = 3
+					}
+					add_extra_state_shared_building_slots = 3
+					hidden_effect = {
+						set_state_category = metropolis
+					}
+				}
+				
+			}
+		}
+
+		focus = {
+		    id = LBA_Italo_Balbos_Coup
+		    icon = GFX_focus_generic_fascist_troops
+		    prerequisite = { focus = LBA_reconcile_the_Italians }
+		    relative_position_id = LBA_reconcile_the_Italians
+			mutually_exclusive = {
+				focus = LBA_rejoin_Italy
+				focus = LBA_draft_a_constitution
+				focus = LBA_get_communist_support
+			}
+		    x = 12
+		    y = 1
+		    cost = 10
+			available = {
+				NOT = {
+					OR = {
+						has_completed_focus = LBA_ally_the_British_Crown
+						has_completed_focus = LBA_ally_the_kaiser
+					}
+				}
+				has_country_flag = reconcile_ITA
+			}
+			completion_reward = {
+				set_politics = {
+					ruling_party = ultra_nationalism
+				}
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.15
+				}
+				remove_ideas = LBA_absolute_monarchy
+				hidden_effect = {
+					news_event = {
+					id = LBA_events.18
+					days = 2
+				}
+				}
+
+				custom_effect_tooltip = not_intended_path
+			}
+		}
+
+		focus = {
+		    id = LBA_rapprochment_with_Mussolini
+		    icon = GFX_focus_ger_assassinate_mussolini
+		    prerequisite = { focus = LBA_Italo_Balbos_Coup }
+		    relative_position_id = LBA_Italo_Balbos_Coup
+		    x = -1
+		    y = 1
+		    cost = 10
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = visit_to_Rome
+				}
+				ITA = {
+					add_opinion_modifier = {
+						target = LBA
+						modifier = visit_to_Rome
+					}
+				}
+			}
+		}
+
+		focus = {
+		    id = LBA_libyanize_the_Policies
+		    icon = GFX_FOCUS_fascist_Libya
+		    prerequisite = { focus = LBA_Italo_Balbos_Coup }
+		    relative_position_id = LBA_Italo_Balbos_Coup
+		    x = 1
+		    y = 1
+		    cost = 5
+			completion_reward = {
+				add_political_power = 100
+				add_stability = 0.09
+				add_war_support = 0.09
+			}
+		}
+
+		focus = {
+		    id = LBA_alliance_with_Italy
+		    icon = GFX_LBA_ITA_flags_FASCIST
+		    prerequisite = { focus = LBA_rapprochment_with_Mussolini }
+		    relative_position_id = LBA_Italo_Balbos_Coup
+		    x = -1
+		    y = 2
+		    cost = 10
+			mutually_exclusive = {
+				focus = LBA_distance_from_italy
+			}
+			available = {
+				ITA = {
+					is_faction_leader = yes
+					has_character = ITA_benito_mussolini
+				}
+			}
+			bypass = {
+			is_in_faction_with = ITA
+		}
+			completion_reward = {
+				ITA = {
+					country_event = {
+						id = generic.2
+						days = 3
+					}
+				}
+			}
+		}
+		focus = {
+		    id = LBA_distance_from_italy
+		    icon = GFX_ITA_flag_reaching
+		    prerequisite = { focus = LBA_libyanize_the_Policies }
+		    relative_position_id = LBA_Italo_Balbos_Coup
+			mutually_exclusive = {
+				focus = LBA_alliance_with_Italy
+			}
+		    x = 1
+		    y = 2
+		    cost = 10
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = distance_from_Italy
+				}
+				ITA = {
+					add_opinion_modifier = {
+						target = LBA
+						modifier = distance_from_Italy
+					}
+				}
+			}
+		}
+
+	#COMMUNIST#
+
+	#Icons are Placeholders as of right now#
+
+	focus = {
+		id = LBA_communist_revolution
+		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_get_communist_support
+		}
+		available = {
+			communism > 0.4
+		}
+		relative_position_id = LBA_get_communist_support
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+		 }
+	}
+
+	focus = {
+	id = LBA_follow_Russian_communism
+    icon = GFX_goal_propaganda_poster
+    cost = 10
+    relative_position_id = LBA_communist_revolution
+    x = -2
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_African_Communism
+	}
+	available = {
+		USR = {
+			exists = yes
+			is_faction_leader = yes
+		}
+	}
+    prerequisite = { focus = LBA_communist_revolution }
+    completion_reward = {
+        add_stability = -0.03
+        add_war_support = 0.05
+        add_political_power = 75
+ 	   }
+	}
+
+	focus = {
+	    id = LBA_African_Communism
+	    icon = GFX_LBA_african_communism
+	    cost = 10
+	    relative_position_id = LBA_communist_revolution
+	    x =2
+	    y = 1
+		mutually_exclusive = {
+			focus = LBA_follow_Russian_communism
+		}
+	    prerequisite = { focus = LBA_communist_revolution }
+	    completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_join_the_USR
+	    icon = GFX_focus_chi_mission_to_the_soviet_union
+	    cost = 10
+	    relative_position_id = LBA_follow_Russian_communism
+	    x = 0
+	    y = 1
+		available = {
+			USR = {
+				is_faction_leader = yes
+			}
+		}
+	    prerequisite = { focus = LBA_follow_Russian_communism }
+	    completion_reward = {
+	        USR = {
+				country_event = {
+					id = generic.2
+					days = 6
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_question_of_Idris_Senussi
+	    icon = GFX_Idris_Senussi
+	    cost = 10
+	    relative_position_id = LBA_follow_Russian_communism
+	    x = 2
+	    y = 1
+	    prerequisite = { focus = LBA_follow_Russian_communism focus = LBA_African_Communism}
+	    completion_reward = {
+			country_event = {
+				id = LBA_events.16
+				days = 2
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_spread_the_revolution
+	    icon = GFX_LBA_spread_the_revolution
+	    cost = 10
+	    relative_position_id = LBA_communist_revolution
+	    x = 2
+	    y = 2
+	    prerequisite = { focus = LBA_African_Communism }
+	    completion_reward = {
+			IF = {
+				limit = { NOT = { is_faction_leader = yes } }
+				IF = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_ETH_african_union_faction
+					add_faction_initiative = 1
+				}
+				ELSE = {
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_ETH_african_union_faction
+				}
+			}
+			ETH = {
+				country_event = {
+					id = generic.5
+					days = 2
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_request_Soviet_Guns
+	    icon = GFX_focus_fra_loyalty_trotzky
+	    cost = 10
+	    relative_position_id = LBA_question_of_Idris_Senussi
+	    x = -1
+	    y = 1
+	    prerequisite = {
+	        focus = LBA_join_the_USR
+	    }
+		prerequisite = {
+			focus = LBA_question_of_Idris_Senussi
+		}
+	    completion_reward = {
+	        USR = {
+				country_event = {
+					id = LBA_events.6
+					days = 3
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = LBA_revolution_by_force
+	    icon = GFX_focus_focus_fra_revolution_utmost
+	    cost = 10
+	    relative_position_id = LBA_spread_the_revolution
+	    x = -1
+	    y = 1
+	    prerequisite = {
+	        focus = LBA_spread_the_revolution
+	    }
+		prerequisite = {
+			 focus = LBA_question_of_Idris_Senussi
+		}
+	    completion_reward = {
+			 every_country = {
+        limit = {
+            is_on_same_continent_as = LBA
+            NOT = { tag = ROOT }
+        }
+		LBA = {
+			create_wargoal = {
+            type = annex_everything
+            target = PREV
+      	  }
+		}
+    }
+	    }
+	}
+
+	focus = {
+	    id = LBA_the_african_shield
+	    icon = GFX_goal_generic_defence
+	    cost = 10
+	    relative_position_id = LBA_question_of_Idris_Senussi
+	    x = 0
+	    y = 2
+	    prerequisite = {
+	        focus = LBA_request_Soviet_Guns
+	        focus = LBA_revolution_by_force
+	    }
+	    completion_reward = {
+	        add_war_support = 0.10
+	        add_ideas = LBA_the_african_shield
+	    }
+	}
+	focus = {
+		id = LBA_dreams_Of_Libyan_Empire
+		icon = GFX_focus_IRQ_liberate_north_africa
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_an_eternal_Italian_enemy
+		}
+		relative_position_id = LBA_an_eternal_Italian_enemy
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = TUN
+					}
+				}
+				add_claim_by = LBA
+			}
+		 }
+	}
+
+	#Mussolini Paths#
+
+	focus = {
+		id = LBA_under_Mussolini_2
+		icon = GFX_focus_ITA_capo_supremo
+		cost = 10
+		x = 14
+		y = 0
+		available = {			
+			NOT = {
+				has_war_with = AML
+			}
+		}
+		allow_branch = {
+			has_completed_focus = LBA_finish_the_opposition
+		}
+
+		available = {
+			has_country_leader = {
+				character = LBA_benito_mussolini
+			}
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = LBA_restoration_of_the_monarchy
+			}
+			x = -6
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					 }
+					set_power_balance = {
+					id = LBA_power_balance
+					left_side = ITA_mussolini_side
+					right_side = ITA_balbo_side
+					}
+				}
+
+				set_global_flag = aggressive_LBA
+				
+				mark_focus_tree_layout_dirty = yes
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_rebuild_the_Fascist_party
+		icon = GFX_goal_support_fascism
+		cost = 7
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		relative_position_id = LBA_under_Mussolini_2
+		completion_reward = {
+			add_timed_idea = {
+				idea = rebuild_the_fascist_party_idea
+				days = 365
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+						has_completed_focus = LBA_smuggle_Italo_Balbo
+					}
+				 }
+				 complete_national_focus = LBA_assasinate_Italo_Balbo_2
+			}
+			set_party_name = {
+				ideology = fascism
+				name = "PNF-Duce Wing"
+				long_name = "Partito Nazionale Fascista"
+			}
+			set_party_name = {
+				ideology = ultra_nationalism
+				name = "PNF-Lega dei Veterani"
+				long_name = "PNF-Lega dei Veterani"
+			}
+
+			custom_effect_tooltip = DEN_unlocks_bop_decisions_tt
+		 }
+	}
+	
+	focus = {
+		id = LBA_smuggle_Italo_Balbo
+		icon = GFX_focus_Italo_Balbo
+		prerequisite = {
+			focus = LBA_rebuild_the_camicie_nere
+		}
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_rebuild_the_camicie_nere
+		mutually_exclusive = {
+			focus = LBA_assasinate_Italo_Balbo_2
+		}
+		available = {
+			always = no
+		}
+		
+		allow_branch = {
+			has_completed_focus = LBA_finish_the_opposition
+			NOT = {
+				has_completed_focus = LBA_assasinate_Italo_Balbo_2
+			}
+		}
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			add_political_power = -150
+
+				country_event = {
+					id = LBA_events.33
+					days = 2
+				}
+							set_global_flag = aggressive_LBA
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Divisione di Fanteria"
+					disband = yes
+				}
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_rebuild_the_camicie_nere
+		icon = GFX_focus_ITA_blackshirts
+		cost = 7
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		x = 3
+		y = 1
+		relative_position_id = LBA_under_Mussolini_2
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+						has_completed_focus = LBA_execute_Italo_Balbo2
+					}
+				 }
+				 complete_national_focus = LBA_smuggle_Italo_Balbo
+			}
+			add_ideas = camicie_nere
+				custom_effect_tooltip = DEN_unlocks_bop_decisions_tt
+		 }
+	}
+
+	focus = {
+		id = LBA_assasinate_Italo_Balbo_2
+		icon = GFX_imprison_Italo_Balbo
+		cost = 7
+		x = -3
+		y = 2
+		
+		relative_position_id = LBA_under_Mussolini_2
+		prerequisite = {
+			focus = LBA_rebuild_the_Fascist_party
+		}
+		mutually_exclusive = {
+			focus = LBA_smuggle_Italo_Balbo
+		}
+		available = {
+			always = no
+		}
+		allow_branch = {
+			has_completed_focus = LBA_finish_the_opposition
+			NOT = {
+				has_completed_focus = LBA_smuggle_Italo_Balbo
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+			hidden_effect = {
+					ITA = {
+				retire_character = ITA_italo_balbo
+			}
+			mark_focus_tree_layout_dirty = yes
+			}
+		
+		 }
+	}
+
+	focus = {
+		id = LBA_return_to_Italy
+		icon = GFX_focus_generic_italy_propaganda
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = LBA_use_Prussian_contacts
+		prerequisite = {
+			focus = LBA_use_Prussian_contacts
+			focus = LBA_British_economic_support
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_core_of = LBA
+			}
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = ITA
+					type = annex_everything
+				 }
+			}
+			if = {
+				limit = {
+					ILF = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = ILF
+					type = annex_everything
+				 }
+			}
+			if = {
+				limit = {
+					NLC = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = NLC
+					type = annex_everything
+				 }
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_push_to_the_Suez
+		icon = GFX_generic_attack_Egypt
+		cost = 7
+		x = 2
+		y = 1
+		relative_position_id = LBA_return_to_Italy
+		prerequisite = {
+			focus = LBA_return_to_Italy
+		}
+		available = {
+			controls_state = 2
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = EGY
+				}
+				add_claim_by = LBA
+			}
+			if = {
+				limit = {
+					EGY = {
+						exists = yes
+					}
+				 }
+				 create_wargoal = {
+					target = EGY
+					type = annex_everything
+				 }
+			}
+			if = {
+				limit = {
+					EGY = {
+						exists = no
+					}
+				 }
+				 create_wargoal = {
+					target = ENG
+					type = annex_everything
+				 }
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_Tunisian_Question_1
+		icon = GFX_goal_Tunisia_Question
+		cost = 7
+		x = -2
+		y = 1
+		relative_position_id = LBA_return_to_Italy
+		prerequisite = {
+			focus = LBA_return_to_Italy
+		}
+		available = {
+			controls_state = 2
+		}
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_claim_Dalmatia
+		icon = GFX_generic_goal_Italian_Dalmatia
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_return_to_Italy
+		}
+		available = {
+			controls_state = 2
+		}
+		relative_position_id = LBA_return_to_Italy
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CRO
+				type = annex_everything
+			}
+			103 = {
+				add_claim_by = LBA
+			}
+			if = {
+				limit = {
+					853 = {
+						NOT = {
+							is_claimed_by = LBA
+						}
+					}
+				 }
+				 853 = {
+					add_claim_by = LBA
+				 }
+			}
+			if = {
+				limit = {
+					163 = {
+						NOT = {
+							is_claimed_by = LBA
+						}
+					}
+				 }
+				 163 = {
+					add_claim_by = LBA
+				 }
+			}
+			if = {
+				limit = {
+					736 = {
+						NOT = {
+							is_claimed_by = LBA
+						}
+					}
+				 }
+				 736 = {
+					add_claim_by = LBA
+				 }
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_proclaim_Italian_empire
+		icon = GFX_focus_ITA_greater_italy
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_claim_Dalmatia
+		prerequisite = {
+			focus = LBA_claim_Dalmatia
+		}
+		prerequisite = {
+			focus = LBA_push_to_the_Suez
+		}
+		prerequisite = {
+			focus = LBA_Tunisian_Question_1
+		}
+		completion_reward = {
+			set_capital = {
+				state = 2
+			}
+			set_cosmetic_tag = ITA_italian_empire
+			load_focus_tree = ita_focus
+		 }
+	}
+
+	focus = {
+		id = LBA_recreate_the_grand_council
+    	icon = GFX_focus_POL_complete_april_constitution
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = LBA_under_Mussolini_2
+		mutually_exclusive = {
+			focus = LBA_ensure_no_opposition
+		}
+		available = {
+			or = {
+				NOT = {
+				has_completed_focus = LBA_disband_the_council
+			}
+			NOT = {
+				has_completed_focus = LBA_smuggle_Italo_Balbo
+			}
+			}
+			
+		}
+		completion_reward = {
+			hidden_effect = {
+				recruit_character = LBA_grand_council
+			}
+			add_ideas = reformed_grand_council_of_fascism 
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				 }	
+				add_power_balance_value = {
+				id = LBA_power_balance
+				value = 0.15
+				}
+			}
+		
+			custom_effect_tooltip = grand_council_formation_LBA
+		 }
+	}
+
+	focus = {
+		id = LBA_ensure_no_opposition
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_under_Mussolini_2
+		prerequisite = {
+			focus = LBA_under_Mussolini_2
+		}
+		mutually_exclusive = {
+			focus = LBA_recreate_the_grand_council
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.006
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				 }
+				add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.3
+			}
+			}
+			
+		 }
+	}
+
+focus = {
+    id = LBA_construct_the_Via_Balbia_2
+    icon = GFX_focus_generic_railroad
+    relative_position_id = LBA_mussolini_triumphant
+    x = -2
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_mussolini_triumphant }
+    completion_reward = {
+		if = {
+			limit = {
+				EGY = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = EGY
+				modifier = Via_Balbia_Construction
+			}
+			EGY = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			ENG = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = Via_Balbia_Construction
+			}
+		}
+
+		if = {
+			limit = {
+				TUN = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = TUN
+				modifier = Via_Balbia_Construction
+			}
+			TUN = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			FRA = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = Via_Balbia_Construction
+			}
+		}
+		build_railway = {
+			level = 2
+			path = { 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 7164 }
+			start_province = 11921
+			target_province = 7164
+		}
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = train_tech
+			}
+	 }
+}
+	focus = {
+		id = LBA_disband_the_council
+		icon = Generic_man_imprisoned
+		cost = 7
+		relative_position_id = LBA_mussolini_triumphant
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = LBA_mussolini_triumphant
+		}
+		bypass = {
+			NOT = {
+				has_character = LBA_grand_council
+			}
+		}
+		completion_reward = {
+			retire_character = LBA_grand_council
+			remove_ideas = reformed_grand_council_of_fascism
+		}
+	}
+
+	focus = {
+		id = LBA_empower_Camicie_Nere
+		icon = GFX_goal_Blakshirt_ALT
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_finish_electrification_in_Tripoli_FASCISM
+		prerequisite = {
+			focus = LBA_finish_electrification_in_Tripoli_FASCISM
+			focus = LBA_desert_development
+		}
+		available = {
+			has_completed_focus = LBA_smuggle_Italo_Balbo
+			has_government = ultra_nationalism
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = camicie_nere
+				add_idea = camicie_nere_LBA
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_integrate_the_Camicie_Nere
+		icon = GFX_goal_generic_major_alliance
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LBA_empower_Camicie_Nere
+		}
+		available = {
+			has_government = ultra_nationalism
+		}
+		relative_position_id = LBA_empower_Camicie_Nere
+		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = camicie_nere_LBA
+					add_idea = camicie_nere_LBA_2
+				}
+			}
+			custom_effect_tooltip = camicie_nere_integrated
+		 }
+	}
+
+	focus = {
+		id = LBA_reform_Italian_african_administrative_force
+		icon = GFX_goal_ITA_Africa_emblem
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = LBA_modernize_aircraft
+		prerequisite = {
+			focus = LBA_modernize_aircraft
+			focus = LBA_re-organize_the_army
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = reformed_colonial_thought
+				days = 365
+			}
+		 }
+	}
+
+	focus = {
+		id = LBA_a_libyan_airforce
+		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = LBA_reform_Italian_african_administrative_force
+		}
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = LBA_reform_Italian_african_administrative_force
+		completion_reward = {
+			air_experience = 30
+			add_ideas = LBA_air_force_balbo_1
+		 }
+	}
+
+	focus = {
+		id = LBA_ensure_no_counter_coup
+		icon = GFX_focus_ITA_depose_mussolini
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = LBA_breach_Italian_Ties
+		prerequisite = {
+			focus = LBA_breach_Italian_Ties
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+			add_stability = 0.05
+			news_event = {
+				id = LBA_events.28
+				days = 3
+			}
+		 }
+	}
+
+
+focus = {
+    id = LBA_breach_Italian_Ties
+    icon = GFX_focus_attack_italy
+	relative_position_id = LBA_smuggle_Italo_Balbo
+    x = 0
+    y = 1
+	cost = 10
+	allow_branch = {
+		has_completed_focus = LBA_smuggle_Italo_Balbo
+	}
+	prerequisite = { focus = LBA_smuggle_Italo_Balbo }
+	available = {
+			has_government = ultra_nationalism
+		}
+
+    completion_reward = {
+		add_political_power = 125
+		add_stability = -0.05
+		if = {
+			limit = {
+				ITA = {
+					exists = yes
+				}
+			 }
+			 ITA = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = breach_italian_ties
+				}
+			 }
+			 LBA = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = breach_italian_ties
+				}
+			 }
+		}
+
+		if = {
+			limit = {
+				ILF = {
+					exists = yes
+				}
+			 }
+			 ILF = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = breach_italian_ties
+				}
+			 }
+			 LBA = {
+				add_opinion_modifier = {
+					target = ILF
+					modifier = breach_italian_ties
+				}
+			 }
+		}
+
+		if = {
+			limit = {
+				NLC = {
+					exists = yes
+				}
+			 }
+			 NLC = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = breach_italian_ties
+				}
+			 }
+			 LBA = {
+				add_opinion_modifier = {
+					target = NLC
+					modifier = breach_italian_ties
+				}
+			 }
+		}
+	 }
+}
+
+focus = {
+    id = LBA_construct_the_Via_Balbia
+    icon = GFX_focus_generic_railroad
+    relative_position_id = LBA_breach_Italian_Ties
+    x = -3
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_breach_Italian_Ties }
+    completion_reward = {
+		if = {
+			limit = {
+				EGY = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = EGY
+				modifier = Via_Balbia_Construction
+			}
+			EGY = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			ENG = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = Via_Balbia_Construction
+			}
+		}
+
+		if = {
+			limit = {
+				TUN = {
+					exists = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = TUN
+				modifier = Via_Balbia_Construction
+			}
+			TUN = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+		}
+		else = {
+			FRA = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = Via_Balbia_Construction
+				}
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = Via_Balbia_Construction
+			}
+		}
+		build_railway = {
+			level = 2
+			path = { 11921 10026 7005 11957 12039 1189 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 4136 10120 7079 9989 11967 10061 11910 1071 4145 7164 }
+			start_province = 11921
+			target_province = 7164
+		}
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = train_tech
+			}
+	 }
+}
+
+focus = {
+    id = LBA_finish_electrification_in_Tripoli_FASCISM
+    icon = GFX_generic_electrification
+    relative_position_id = LBA_construct_the_Via_Balbia
+    x = -1
+    y = 1
+	cost = 7
+	available = {
+		controls_state = 448
+	}
+	bypass = {
+		NOT = {
+			owns_state = 448
+		}
+	}
+    prerequisite = { focus = LBA_construct_the_Via_Balbia }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+	 }
+}
+
+focus = {
+    id = LBA_desert_development
+    icon = GFX_focus_generic_develop_libya
+    relative_position_id = LBA_construct_the_Via_Balbia
+    x = 1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_construct_the_Via_Balbia }
+    completion_reward = {
+		if = {
+			limit = { 
+				controls_state = 661
+			}
+			661 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		if = {
+			limit = { 
+				controls_state = 661
+			}
+			662 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		if = {
+			limit = { 
+				controls_state = 661
+			}
+			663 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_electrify_the_east
+    icon = GFX_focus_generic_electrification
+    relative_position_id = LBA_finish_electrification_in_Tripoli_FASCISM
+    x = -1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_finish_electrification_in_Tripoli_FASCISM }
+    completion_reward = {
+		450 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		451 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+		
+	 }
+}
+
+focus = {
+    id = LBA_develop_desert_logistics
+    icon = GFX_focus_PER_desert_training
+    relative_position_id = LBA_desert_development
+    x = 1
+    y = 1
+	cost = 7
+	mutually_exclusive = {
+		focus = LBA_focus_on_air_logistics
+	}
+    prerequisite = { focus = LBA_desert_development }
+    completion_reward = {
+		add_timed_idea = {
+			idea = LBA_less_attrition
+			days = 760
+	 }
+}
+}
+
+focus = {
+    id = LBA_electrify_the_deserts
+    icon = GFX_goal_generic_develop_desert
+    relative_position_id = LBA_electrify_the_east
+    x = 0
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_electrify_the_east }
+    completion_reward = {
+		449 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		661 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		662 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		663 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+	 }
+}
+
+focus = {
+	id = LBA_Bengsai_research
+	icon = GFX_focus_generic_navy_research_bonus
+	cost = 7
+	relative_position_id = LBA_electrify_the_deserts
+	x = 1
+	y = 1
+	prerequisite = {
+		focus = LBA_integrate_the_Camicie_Nere
+	}
+	prerequisite = {
+		focus = LBA_electrify_the_deserts
+	}
+	completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = naval_facility
+				level = 1
+				province = 1149
+			}
+		}
+		add_research_slot = 1
+	 }
+}
+
+focus = {
+	id = LBA_develop_Tripoli_university
+	icon = GFX_focus_research
+	cost = 7
+	x = 1
+	y = 1
+	relative_position_id = LBA_integrate_the_Camicie_Nere
+	prerequisite = {
+		focus = LBA_integrate_the_Camicie_Nere
+	}
+	prerequisite = {
+		focus = LBA_national_logistic_programs
+	}
+	completion_reward = {
+		add_research_slot = 1
+	 }
+}
+
+focus = {
+    id = LBA_national_logistic_programs
+    icon = GFX_goal_generic_research_logistics
+    relative_position_id = LBA_develop_desert_logistics
+    x = 0
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_develop_desert_logistics }
+    completion_reward = {
+		add_tech_bonus = {
+			uses = 1
+			category = train_tech
+			bonus = 0.5
+		}
+		450 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 11954
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		451 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 1130
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	 }
+}
+
+
+focus = {
+    id = LBA_modernize_the_Castel_Benito
+    icon = GFX_goal_generic_build_airforce
+    relative_position_id = LBA_breach_Italian_Ties
+    x = 3
+    y = 1
+	cost = 7
+	available = {
+		controls_state = 448
+	}
+	bypass = {
+		NOT = {
+				controls_state = 448
+		}
+	}
+    prerequisite = { focus = LBA_breach_Italian_Ties }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_modernize_aircraft
+    icon = GFX_focus_generic_air_research_boost
+    relative_position_id = LBA_modernize_the_Castel_Benito
+    x = -1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_modernize_the_Castel_Benito }
+    completion_reward = {
+		add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				category = air_doctrine
+			}
+
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = light_air
+			}
+
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = medium_air
+			}
+
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = heavy_air
+			}
+	 }
+}
+
+focus = {
+    id = LBA_re-organize_the_army
+    icon = GFX_focus_chi_army_reform
+    relative_position_id = LBA_modernize_the_Castel_Benito
+    x = 1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_modernize_the_Castel_Benito }
+    completion_reward = {
+		army_experience = 25
+		add_tech_bonus = {
+			uses = 1
+			category = infantry_weapons
+			bonus = 0.5
+		}
+	 }
+}
+
+focus = {
+    id = LBA_focus_on_air_logistics
+    icon = GFX_generic_air_logistic
+    relative_position_id = LBA_modernize_aircraft
+    x = -1
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_develop_desert_logistics
+	}
+	cost = 7
+    prerequisite = { focus = LBA_modernize_aircraft }
+    completion_reward = {
+		add_tech_bonus = {
+				uses = 1
+				bonus = 0.75
+				category = transport_planes_cat
+			}
+	 }
+}
+
+focus = {
+   id = LBA_a_Libyan_navy
+    icon = GFX_goal_generic_navy_cruiser
+	relative_position_id = LBA_re-organize_the_army
+    x = 1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_re-organize_the_army }
+       completion_reward = {
+		add_tech_bonus = {
+				category = naval_doctrine
+				uses = 2
+				bonus = 0.75
+			}
+
+			navy_experience = 25
+		
+	 }
+}
+
+focus = {
+    id = LBA_modernize_eastern_airfields
+    icon = GFX_SOV_modernize_aircraft_facilities_ccp_2d_sov_compatibility
+    relative_position_id = LBA_focus_on_air_logistics
+    x = 0
+    y = 1
+	cost = 7
+	bypass = {
+		NOT = {
+			controls_state = 450
+			controls_state = 451
+		}
+	}
+    prerequisite = { focus = LBA_focus_on_air_logistics  }
+    completion_reward = {
+		if = {
+			limit = {
+				controls_state = 450
+			}
+			450 = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+			}
+		}
+		}
+
+		if = {
+			limit = {
+				controls_state = 450
+			}
+			451 = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+			}
+		}
+		}
+		
+
+		
+	 }
+}
+
+focus = {
+    id = LBA_request_Malta
+    icon = GFX_goal_generic_Malta
+    relative_position_id = LBA_a_Libyan_navy
+	cost = 7
+    x = 0
+    y = 1
+    prerequisite = { focus = LBA_a_Libyan_navy }
+    completion_reward = {
+		116 = {
+			add_claim_by = LBA
+		}
+		every_country = {
+			limit = {
+				owns_state = 116
+			}
+			if = {
+				limit = {
+					is_puppet = yes
+				 }
+				 OVERLORD = {
+					country_event = {
+				id = LBA_events.35
+				days = 3
+			}
+				 }
+			}
+			else = {
+				country_event = {
+				id = LBA_events.35
+				days = 3
+			}
+			}
+			
+		}
+	 }
+}
+
+focus = {
+    id = LBA_focus_on_airforce
+    icon = GFX_goal_generic_build_airforce
+    relative_position_id = LBA_modernize_eastern_airfields
+    x = 1
+    y = 1
+	cost = 10
+    prerequisite = { focus = LBA_modernize_eastern_airfields }
+	prerequisite = {
+	 focus = LBA_a_libyan_airforce
+	}
+	mutually_exclusive = {
+		focus = LBA_focus_on_navy
+	}
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = LBA_air_force_balbo_1
+			add_idea = LBA_air_force_balbo_2
+		}
+		air_experience = 25
+	 }
+}
+
+focus = {
+    id = LBA_focus_on_navy
+    icon = GFX_goal_generic_navy_battleship
+    relative_position_id = LBA_request_Malta
+    x = -1
+    y = 1
+	cost = 10
+	prerequisite = {
+	 focus = LBA_a_libyan_airforce
+	}
+	mutually_exclusive = {
+		focus = LBA_focus_on_airforce
+	}
+    prerequisite = { focus = LBA_request_Malta }
+    completion_reward = {
+		add_ideas = LBA_naval_focus
+	 }
+}
+
+focus = {
+    id = LBA_the_master_of_the_land
+    icon = GFX_goal_generic_army_doctrines
+    relative_position_id = LBA_focus_on_airforce
+    x = 1
+    y = 1
+	cost = 10
+    prerequisite = { focus = LBA_focus_on_airforce focus = LBA_focus_on_navy }
+    completion_reward = {
+		add_ideas = LBA_master_of_the_lands
+		army_experience = 25
+	 }
+}
+
+#Planning for this segment to be "Never Again a shore" as of right now#
+
+
+focus = {
+    id = LBA_never_again_a_shore
+    icon = GFX_goal_generic_defend_shores
+    relative_position_id = LBA_integrate_the_Camicie_Nere
+	cost = 7
+    x = 3
+    y = 1
+	available = {
+		has_government = ultra_nationalism
+	}
+    prerequisite = { focus = LBA_a_libyan_airforce }
+	prerequisite = { focus = LBA_integrate_the_Camicie_Nere }
+	prerequisite = { focus = LBA_modernize_eastern_airfields focus = LBA_national_logistic_programs }
+    completion_reward = {
+		add_ideas = LBA_never_again_a_shore_idea
+	 }
+}
+
+focus = {
+    id = LBA_request_Tunisa
+    icon = GFX_goal_Tunisia_Question
+    relative_position_id = LBA_never_again_a_shore
+    x = -1
+    y = 1
+	cost = 7
+    prerequisite = { focus = LBA_never_again_a_shore}
+    completion_reward = {
+		if = {
+				limit = {
+					TUN = {
+						NOT = {
+							is_puppet_of = FRA
+						}
+					}
+					TUN = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+			}
+				}
+			}
+
+			if = {
+				limit = {
+					TUN = {
+						is_puppet_of = FRA
+					}
+				}
+				FRA = {
+				country_event = {
+					id = LBA_events.10
+					days = 2
+				}
+				}
+			}
+	 }
+}
+
+focus = {
+    id = LBA_invade_Sicily
+    icon = GFX_generic_attack_sicily
+    relative_position_id = LBA_never_again_a_shore
+    x = 1
+    y = 1
+	bypass = {
+		owns_state = 115
+	}
+	cost = 7
+    prerequisite = { focus = LBA_never_again_a_shore}
+    completion_reward = {
+		every_country = {
+			limit = {
+				owns_state = 115
+			}
+			LBA = {
+				create_wargoal = {
+					target = PREV
+					type = take_state_focus
+					
+				}
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_master_of_shores
+    icon = GFX_master_of_shores
+    relative_position_id = LBA_request_Tunisa
+    x = 1
+    y = 1
+	cost = 10
+	available = {
+		controls_state = 115
+		controls_state = 458
+		controls_state = 665
+	}
+    prerequisite = { focus = LBA_request_Tunisa focus = LBA_invade_Sicily }
+    completion_reward = {
+		set_cosmetic_tag = LBA_master_of_shores
+		add_political_power = 120
+		115 = {
+			add_core_of = LBA
+		}
+		458 = {
+			add_core_of = LBA
+		}
+		665 = {
+			add_core_of = LBA
+		}
+
+		every_state = {
+			limit = {
+				is_coastal = yes
+			}
+			add_claim_by = LBA
+		}
+	 }
+}
+
+
+
+focus = {
+    id = LBA_mussolini_triumphant
+	icon = GFX_goal_mussolini_icon3
+    relative_position_id = LBA_assasinate_Italo_Balbo_2
+    x = 0
+    y = 1
+
+	allow_branch = {
+		has_completed_focus =  LBA_assasinate_Italo_Balbo_2
+	}
+
+	cost = 7
+	
+	prerequisite = {
+		focus = LBA_assasinate_Italo_Balbo_2
+	}
+	completion_reward = {
+			add_ideas = mussolini_triumphant_idea
+			mark_focus_tree_layout_dirty = yes
+		 }
+}
+
+focus = {
+    id = LBA_invite_the_IRI
+    icon = GFX_focus_ETH_invite_italian_settlers
+	cost = 7
+    relative_position_id = LBA_mussolini_triumphant
+    x = -4
+    y = 1
+    prerequisite = { focus = LBA_mussolini_triumphant }
+    completion_reward = {
+		add_ideas = the_iri
+	 }
+}
+
+focus = {
+    id = LBA_electrification_of_Tripoli
+    icon = GFX_generic_electrification
+	cost = 7
+    relative_position_id = LBA_invite_the_IRI
+    x = -1
+    y = 1
+	available = {
+		controls_state = 448
+	}
+    prerequisite = { focus = LBA_invite_the_IRI }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_evaluate_libyan_workforce
+    icon = GFX_focus_generic_public_works
+    relative_position_id = LBA_invite_the_IRI
+    x = 1
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_invite_the_IRI }
+    completion_reward = {
+		country_event = {
+			id = LBA_events.40
+			days = 3
+		}
+	 }
+}
+
+focus = {
+    id = LBA_electrify_the_east_Mus
+    icon = GFX_focus_generic_electrification
+    relative_position_id = LBA_electrification_of_Tripoli
+    x = -1
+    y = 1
+	cost = 7
+	available = {
+		controls_state = 450
+		controls_state = 451
+	}
+    prerequisite = { focus = LBA_electrification_of_Tripoli }
+    completion_reward = {
+		450 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		451 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+	 }
+}
+
+focus = {
+    id = LBA_empower_the_IRI
+    icon = GFX_goal_generic_investment
+    relative_position_id = LBA_invite_the_IRI
+	cost = 7
+    x = 0
+    y = 2
+    prerequisite = { focus = LBA_evaluate_libyan_workforce }
+	prerequisite = { focus = LBA_electrification_of_Tripoli }
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = the_iri
+			add_idea = the_iri3
+		}
+	 }
+}
+
+focus = {
+    id = LBA_develop_tripoli_industries
+    icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+    relative_position_id = LBA_evaluate_libyan_workforce
+    x = 1
+    y = 1
+	cost = 7
+	bypass = {
+		NOT = {
+			controls_state = 448
+		}
+	}
+    prerequisite = { focus = LBA_evaluate_libyan_workforce }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+			}
+			add_extra_state_shared_building_slots = 2
+		}
+	 }
+}
+
+focus = {
+    id = LBA_electrify_the_deserts2
+    icon = GFX_goal_generic_develop_desert
+    relative_position_id = LBA_electrify_the_east_Mus
+    x = 1
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_empower_the_IRI }
+	prerequisite = {
+		focus = LBA_electrify_the_east_Mus
+	}
+    completion_reward = {
+		449 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		661 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		662 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+
+		663 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = energy_infrastructure
+				level = 1
+			}
+
+			add_extra_state_shared_building_slots = 1
+		}
+	 }
+}
+
+focus = {
+    id = LBA_modernize_the_Castel_Benito2
+    icon = GFX_goal_generic_build_airforce
+    relative_position_id = LBA_empower_the_IRI
+    x = 1
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_develop_tripoli_industries }
+	prerequisite = {
+		focus = LBA_empower_the_IRI
+	}
+	available = {
+		controls_state = 448
+	}
+	bypass = {
+		NOT = {
+				controls_state = 448
+		}
+	}
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_develop_Tripoli_shipyards
+    icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+    relative_position_id = LBA_develop_tripoli_industries
+    x = 1
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_develop_tripoli_industries }
+    completion_reward = {
+		448 = {
+			add_building_construction = {
+				type = dockyard
+				level = 2
+			}
+			add_extra_state_shared_building_slots = 2
+		}
+	 }
+}
+
+focus = {
+    id = LBA_develop_Tripoli_university_MUS
+    icon = GFX_focus_research
+    relative_position_id = LBA_electrify_the_deserts2
+    x = 2
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_electrify_the_deserts2 focus = LBA_develop_Tripoli_shipyards }
+	prerequisite = {
+		focus = LBA_modernize_the_Castel_Benito2
+	}
+    completion_reward = {
+		add_research_slot = 1
+	 }
+}
+
+focus = {
+    id = LBA_a_Libyan_economy
+    icon = GFX_focus_AFG_a_modern_economy
+    relative_position_id = LBA_develop_Tripoli_university_MUS
+    x = 0
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_develop_Tripoli_university_MUS }
+    completion_reward = {
+		add_ideas = LBA_a_Libyan_economy_idea
+	 }
+}
+
+focus = {
+    id = LBA_callout_to_the_world
+    icon = GFX_focus_generic_italy_propaganda
+    relative_position_id = LBA_mussolini_triumphant
+	cost = 7
+    x = 4
+    y = 1
+    prerequisite = { focus = LBA_mussolini_triumphant }
+    completion_reward = {
+		every_country = {
+			limit = {
+				NOT ={
+					tag = LBA
+				}
+				OR = {
+					has_government = fascism
+					has_government = ultra_nationalism
+				}
+			}
+
+			country_event = {
+				id = LBA_events.38
+				days = 1
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_Mission_to_Berlin
+    icon = GFX_focus_ger_return_of_the_kaiser
+    relative_position_id = LBA_callout_to_the_world
+	cost = 7
+    x = -1
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_Use_british_contacts
+	}
+	available = {
+		PRS = {
+			is_faction_leader = yes
+		}
+	}
+    prerequisite = { focus = LBA_callout_to_the_world }
+    completion_reward = {
+		add_opinion_modifier = {
+			target = PRS
+			modifier = visit_to_Berlin
+		}
+		PRS = {
+			add_opinion_modifier = {
+			target = LBA
+			modifier = visit_to_Berlin
+		}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_Use_british_contacts
+    icon = GFX_goal_tfv_strengthen_commonwealth_ties
+    relative_position_id = LBA_callout_to_the_world
+    x = 1
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_Mission_to_Berlin
+	}
+	available = {
+		ENG = {
+			is_faction_leader = yes
+		}
+	}
+    prerequisite = { focus = LBA_callout_to_the_world }
+    completion_reward = {
+		add_opinion_modifier = {
+				target = ENG
+				modifier = visit_to_london
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = LBA
+					modifier = visit_to_london
+				}
+			}
+	 }
+}
+
+focus = {
+    id = LBA_join_the_Prussians
+    icon = GFX_focus_GER_prussian_legacy
+    relative_position_id = LBA_Mission_to_Berlin
+    x = -1
+	cost = 7
+    y = 1
+	available = {
+		PRS = {
+			is_faction_leader = yes
+		}
+	}
+    prerequisite = { focus = LBA_Mission_to_Berlin }
+    completion_reward = {
+		PRS = {
+			country_event = {
+				id = generic.2
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_exploit_foreign_sympathizers
+    icon = GFX_focus_generic_fascist_troops
+    relative_position_id = LBA_Mission_to_Berlin
+    x = 1
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_Mission_to_Berlin focus = LBA_Use_british_contacts }
+    completion_reward = {
+		hidden_effect = {
+			every_country = {
+			limit = {
+				has_country_flag = Mussolini_Sympathies
+			}
+			country_event = {
+				days = 1
+				id = LBA_events.42
+			}
+		}
+		}
+
+		custom_effect_tooltip = LBA_Mussolini_Manpower
+		
+	 }
+}
+
+focus = {
+    id = LBA_join_the_British
+    icon = GFX_focus_chi_british_cooperation
+    relative_position_id = LBA_Use_british_contacts
+    x = 1
+	cost = 7
+    y = 1
+	available = {
+		ENG = {
+			is_faction_leader = yes
+		}
+	}
+    prerequisite = { focus = LBA_Use_british_contacts }
+    completion_reward = {
+		ENG = {
+			country_event = {
+				id = generic.2
+			}
+		}
+	 }
+}
+
+focus = {
+    id = LBA_use_Prussian_contacts
+    icon = GFX_goal_deutsches_heer
+    relative_position_id = LBA_join_the_Prussians
+	cost = 7
+    x = 1
+    y = 1
+	available = {
+		is_in_faction_with = PRS
+	}
+    prerequisite = { focus = LBA_join_the_Prussians }
+	prerequisite = {
+		focus = LBA_exploit_foreign_sympathizers
+	}
+    completion_reward = {
+		PRS = {
+				country_event = {
+					id = LBA_events.41
+					days = 3
+				}
+			}
+	 }
+}
+
+
+focus = {
+    id = LBA_British_economic_support
+    icon = GFX_focus_generic_british_trade
+    relative_position_id = LBA_join_the_British
+    x = -1
+	cost = 7
+    y = 1
+    prerequisite = { focus = LBA_join_the_British }
+	prerequisite = {
+		focus = LBA_exploit_foreign_sympathizers
+	}
+    completion_reward = {
+		add_timed_idea = {
+			idea = Libyan_ENG_economic_support
+			days = 730
+		}
+				448 = {
+					add_building_construction = {
+						type = dockyard
+						level = 1
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+					add_extra_state_shared_building_slots = 4
+				}
+
+				450 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+	 }
+}
+
+focus = {
+    id = LBA_rally_the_Blackshirts
+    icon = GFX_goal_Blakshirt_ALT
+    relative_position_id = LBA_mussolini_triumphant
+	prerequisite = {
+		focus = LBA_mussolini_triumphant
+	}
+	cost = 7
+    x = 0
+    y = 1
+    completion_reward = {
+		add_stability = -0.15
+		add_ideas = LBA_rally_blackshirts
+	 }
+}
+
+focus = {
+    id = LBA_quality_over_quantity
+    icon = GFX_goal_quality_infantry
+	cost = 7
+    relative_position_id = LBA_rally_the_Blackshirts
+    x = -1
+    y = 1
+	mutually_exclusive = {
+		focus = LBA_quantity_over_quality
+	}
+    prerequisite = { focus = LBA_rally_the_Blackshirts}
+    completion_reward = {
+		add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+	 }
+}
+
+focus = {
+    id = LBA_quantity_over_quality
+    icon = GFX_goal_quantity_infantry
+    relative_position_id = LBA_rally_the_Blackshirts
+    x = 1
+    y = 1
+	cost = 7
+	mutually_exclusive = {
+		focus = LBA_quality_over_quantity
+	}
+    prerequisite = { focus = LBA_rally_the_Blackshirts}
+    completion_reward = {
+		448 = {
+			create_unit = {
+                  division = "name = \"Blackshirts\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+				create_unit = {
+                  division = "name = \"Blackshirts\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+		}
+
+		450 = {
+			create_unit = {
+                  division = "name = \"Blackshirts\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+		}
+	 }
+}
+
+focus = {
+    id = LBA_disband_the_blackshirts
+    icon = GFX_focus_SWE_neither_death_nor_dishonor
+    relative_position_id = LBA_quality_over_quantity
+    x = 1
+	cost = 7
+    y = 1
+	available = {
+		has_war = no
+	}
+    prerequisite = { focus = LBA_quality_over_quantity focus = LBA_quantity_over_quality }
+    completion_reward = {
+		add_stability = 0.15
+		remove_ideas = LBA_rally_blackshirts
+	 }
+}
+	
+}

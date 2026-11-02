@@ -214,6 +214,9 @@ country_event = {
 	 traits = {
 	 }
      }
+	 BAY = {
+		 set_faction_leader = yes
+		 }
 	 leave_faction = yes
 	 remove_ideas = moderate_resistance
 	 remove_ideas = red_terror

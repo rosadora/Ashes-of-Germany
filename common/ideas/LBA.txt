@@ -1,0 +1,762 @@
+ideas = {
+	country = {
+		flee_from_italy = {
+			
+			allowed = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_shadow_of_mussolini
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+				weekly_manpower = 250
+				ultra_nationalism_drift = 0.02
+				stability_weekly = -0.002
+			}
+		}
+
+		morale_boost_ITA = {
+			allowed = {
+				always = yes
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			targeted_modifier = {
+				tag = ITA
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+
+		}
+
+		oppose_mussolini_LBA_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+			picture = generic_fascism_banned
+
+			removal_cost = -1
+
+			rule = {
+				can_join_factions = no
+			}
+
+			modifier = {
+				fascism_drift = -0.02
+				ultra_nationalism_drift = -0.03
+				democratic_drift = 0.02
+				neutrality_drift = 0.02
+				communism_drift = 0.02
+				social_democracy_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_marxism_drift = 0.01
+			}
+		}
+
+		starve_the_people = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				
+			}
+			picture = RAJ_state_of_famine_country
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = -0.3
+				monthly_population = -0.3
+				stability_weekly = 0.005
+			}
+		}
+
+		national_building_projects_LBA = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				
+			}
+			picture = SOV_third_five_year_plan_civilian
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.25
+			}
+		}
+
+		make_guns_more_effectively = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_volunteer_defence_corps
+
+			removal_cost = -1
+			
+			equipment_bonus = { infantry_equipment = { instant = yes build_cost_ic = -0.25 } } 
+		}
+
+		LBA_constitutional_monarchy_idea = {
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GFX_idea_constitutional_monarchy
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.01
+				social_democracy_drift = 0.02
+				social_liberalism_drift = 0.02
+				neutrality_drift = 0.01
+			}
+
+		}
+
+		LBA_absolute_monarchy = {
+			allowed = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchist_uprising
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.08
+				ultra_nationalism_drift = 0.02
+			}
+		}
+
+		LBA_drafting_the_constitution = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.003
+				political_power_factor = -0.05
+			}
+		}
+
+		LBA_convincing_democrats = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_weekly = -0.005
+				democratic_drift = 0.02
+				social_democracy_drift = 0.02
+				social_liberalism_drift = 0.01
+				political_power_gain = -0.50
+			}
+		}
+
+		LBA_communist_support_rising = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.005
+				communism_drift = 0.03
+				classical_marxism_drift = 0.03
+			}
+		}
+
+		LBA_the_african_shield = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ETH_joint_african_development_program
+
+			modifier = {
+				defence = 0.15
+			}
+		}
+	LBA_Consolidate_Idris_Senussis_Rule_IDEA = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+
+		picture = GFX_idea_LBA_Idris_Senussi
+
+		removal_cost = -1
+
+		modifier = {
+			stability_weekly = 0.005
+			democratic_drift = -0.01
+			social_democracy_drift = -0.02
+			social_liberalism_drift = -0.02
+			fascism_drift = 0.01
+			ultra_nationalism_drift = 0.01
+			communism_drift = -0.02
+			classical_marxism_drift = 0.01
+			neutrality_drift = 0.03
+		}
+		}
+
+		LBA_the_african_Prussia_idea = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1	
+
+		picture = GER_fan_prussian_militarism
+
+		modifier = {
+			ground_attack_factor = 0.15
+			defence = 0.15
+			justify_war_goal_time = -0.25
+			political_power_gain = 0.15
+		}
+		}
+
+		LBA_the_african_Prussia_idea2 = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1	
+
+		picture = GER_fan_prussian_militarism
+
+		modifier = {
+			ground_attack_factor = 0.15
+			defence = 0.15
+			justify_war_goal_time = -0.25
+			political_power_gain = 0.15
+			attrition = -0.15
+			heat_attrition = -0.15
+			supply_consumption_factor = -0.15
+			land_doctrine_cost_factor = -0.15
+		}
+		}
+
+		LBA_an_eternal_italian_enemy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = LBA_generic_attack_enemy_IDEA
+
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = ILF
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = NLC
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+
+		LBA_less_attrition = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_supply_depot
+
+			modifier = {
+				supply_consumption_factor = -0.05
+				heat_attrition_factor = -0.35
+			}
+		}
+
+		Libyan_francophobia = {
+			
+			allowed = {
+				is_in_faction_with = PRS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_political_violence
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = FRA 
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+
+		Libyan_ENG_economic_Dependance = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = ARG_british_influences
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.5
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		Libyan_ENG_economic_support = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = ARG_british_influences
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				hidden_modifier = {
+					democratic_drift = 0.02
+					social_democracy_drift = 0.02
+					classical_liberalism_drift = 0.02
+				}
+			}
+		}
+
+		rebuild_the_fascist_party_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = ast_abandon_the_westminster_system_fascism
+
+			modifier = {
+				fascism_drift = 0.03
+				ultra_nationalism_drift = 0.02
+				stability_weekly = 0.003
+				war_support_weekly = 0.003
+			}
+		}
+
+		reformed_grand_council_of_fascism = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_fascism_drift_2
+			
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				stability_weekly = 0.003
+			}
+		}
+
+		military_dictatorship_LBA = {
+				allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_fascism_drift_2
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.003
+				war_support_weekly = -0.003
+				fascism_drift = 0.05
+				neutrality_drift = 0.03
+			}
+		}
+
+		mussolini_triumphant_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = ITA_shadow_of_mussolini
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				fascism_drift = 0.05
+			}
+		}
+		
+		camicie_nere_LBA = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_camicie_nere
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.01
+				conscription_factor = 0.30
+				army_attack_factor = 0.15
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				ultra_nationalism_drift = 0.02
+				hidden_modifier = {
+					resistance_growth = -0.75
+				}
+			}
+		}
+		
+
+		reformed_colonial_thought = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_aoi
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth = -0.5
+				required_garrison_factor = -0.35
+				ultra_nationalism_drift = 0.02
+			}
+		}
+
+		towards_a_meditteranean_bastion_idea = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = GFX_idea_meditteranean
+
+			removal_cost = -1
+
+			modifier = {
+				ultra_nationalism_drift = 0.02
+				required_garrison_factor = -0.75
+				improve_relations_maintain_cost_factor = -0.75
+			}
+		}
+		LBA_never_again_a_shore_idea = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = GER_wage_war_on_capitalism
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ITA
+				improve_relations_maintain_cost_factor = 0.95
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+		}
+
+		LBA_air_force_balbo_1 = {
+			allowed = {
+				has_government = ultra_nationalism
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_aircraft_support
+
+			removal_cost = -1
+			modifier = {
+				air_accidents_factor = -0.15
+				air_ace_generation_chance_factor = 0.15
+				production_cost_air_base_factor = -0.15
+			}
+		}
+
+		LBA_air_force_balbo_2 = {
+			allowed = {
+				has_government = ultra_nationalism
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_aircraft_support
+
+			removal_cost = -1
+			modifier = {
+				air_accidents_factor = -0.15
+				air_ace_generation_chance_factor = 0.15
+				production_cost_air_base_factor = -0.15
+				air_attack_factor = 0.15
+				air_defence_factor = 0.15
+				air_superiority_efficiency = 0.25
+				air_range_factor = 0.15
+			}
+		}
+
+		LBA_naval_focus = {
+			allowed = {
+				has_government = ultra_nationalism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_navy_bonus
+			removal_cost = -1
+
+			modifier = {
+				naval_accidents_chance = -0.95
+				naval_attrition = -0.35
+				naval_hit_chance = 0.35
+				naval_defense_factor = 0.35
+				naval_damage_factor = 0.35
+				production_cost_dockyard_factor = -0.75
+				production_speed_dockyard_factor = -0.75
+			}
+		}
+
+		LBA_master_of_the_lands = {
+			allowed = {
+				has_government = ultra_nationalism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = FRA_army_of_aggression_focus
+			removal_cost = -1
+
+			modifier = {
+				heat_attrition = -0.35
+				supply_consumption_factor = -0.25
+				ground_attack_factor = 0.65
+				army_defence_factor = 0.65
+				required_garrison_factor = -0.15
+				experience_gain_infantry_combat_factor = 0.35
+			}
+		}
+
+		LBA_rally_blackshirts = {
+			allowed = {
+				has_government = fascism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_fascist_workers
+			removal_cost = -1
+
+			modifier = {
+				heat_attrition = -0.15
+				supply_consumption_factor = -0.15
+				required_garrison_factor = -0.15
+				weekly_manpower = 100
+				stability_weekly = -0.002
+			}
+		}
+
+		LBA_a_Libyan_economy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GER_recovering_economy
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.75
+				stability_weekly = 0.003
+				war_support_weekly = 0.003
+				fascism_drift = 0.03
+				ultra_nationalism_drift = 0.02
+			}
+		}
+	}
+	hidden_ideas = {
+		camicie_nere_LBA_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_camicie_nere
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.02
+				conscription_factor = 0.30
+				army_attack_factor = 0.20
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				ultra_nationalism_drift = 0.03
+				heat_attrition_factor = -0.5
+				weekly_manpower = 250
+				hidden_modifier = {
+					resistance_growth = -0.75
+				}
+			}
+		}
+	}
+}

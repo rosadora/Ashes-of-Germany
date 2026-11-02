@@ -670,7 +670,11 @@
 		 set_rule = {
 			can_create_factions = yes
 		 }
-		 create_faction = democratic_alliance_for_peace
+		 create_faction_from_template = {
+             template = faction_template_generic_dominance
+             name = "Democratic Alliance for Peace"
+             icon = GFX_faction_logo_generic_democratic
+            }
 		}
 	}
 	focus = {
@@ -2525,7 +2529,11 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		  remove_ideas = military_restrictions
-		  create_faction = grossdeutschland_axe
+		  create_faction_from_template = {
+             template = faction_template_axis
+             name = "Einflusssphäre Großdeutschlands"
+             icon = GFX_faction_logo_axis
+            }
 		  FRA = {
 			  country_event = wurttemberg.138
 		  }

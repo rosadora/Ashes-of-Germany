@@ -1,0 +1,74 @@
+	### FACTION ASSETS ###
+
+spriteTypes = {
+
+	#########################
+	##### Faction Logos #####
+	#########################
+
+	spriteType = {
+		name = "GFX_faction_icon_united_workers_of_europe"
+		texturefile = "gfx/interface/faction_logos/faction_icon_united_workers_of_europe.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_logo_united_workers_of_europe"
+		texturefile = "gfx/interface/faction_logos/faction_logo_united_workers_of_europe.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_logo_central_european"
+		texturefile = "gfx/interface/faction_logos/faction_logo_central_european.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_balkan_shield"
+		texturefile = "gfx/interface/faction_logos/faction_icon_balkan_shield.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_reichspakt"
+		texturefile = "gfx/interface/faction_logos/faction_icon_reichspakt.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_intermarium"
+		texturefile = "gfx/interface/faction_logos/faction_icon_intermarium.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_asian_international"
+		texturefile = "gfx/interface/faction_logos/faction_icon_asian_international.dds"
+		noOfFrames = 2
+	}
+
+	### Faction Logos - Miniatures ###
+	spriteType = {
+		name = "GFX_faction_icon_united_workers_of_europe_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_united_workers_of_europe_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_logo_united_workers_of_europe_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_logo_united_workers_of_europe_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_logo_central_european_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_logo_central_european_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_balkan_shield_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_balkan_shield_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_reichspakt_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_reichspakt_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_intermarium_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_intermarium_miniature.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_icon_asian_international_miniature"
+		texturefile = "gfx/interface/faction_logos/faction_icon_asian_international_miniature.dds"
+	}
+}

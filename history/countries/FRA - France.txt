@@ -1197,6 +1197,6 @@ set_autonomy = {
     autonomy_state = autonomy_integrated_puppet
 }
 
-create_faction = central_european_friendship_treaty
+create_faction_from_template = faction_template_central_european_friendship_treaty
 add_to_faction = RCO
 add_to_faction = SPF

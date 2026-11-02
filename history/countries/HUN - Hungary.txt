@@ -91,7 +91,7 @@ if = {
 	}
 }
 
-create_faction = united_workers_of_europe
+create_faction_from_template = faction_template_united_workers_of_europe
 add_to_faction = AUS
 add_to_faction = BAY
 add_to_faction = SLO

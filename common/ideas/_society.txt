@@ -37,6 +37,8 @@ ideas = {
 				monthly_population = 0.2
 				stability_factor = 0.1
 				democratic_drift = 0.02
+				classical_liberalism_drift = 0.02
+				social_liberalism_drift = 0.01
 			}
 
 			cancel_if_invalid = no

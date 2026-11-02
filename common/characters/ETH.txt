@@ -245,7 +245,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = anarchist_communism  
+			ideology = ethiopian_commune  
 			expire = "1965.1.1.1"
 			traits = { anarcho_communist_council }
 			id = -1

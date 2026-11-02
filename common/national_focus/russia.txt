@@ -1583,7 +1583,11 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			create_faction = greater_russia
+			create_faction_from_template = {
+             template = faction_template_generic_dominance
+             name = "Greater Russia"
+             icon = GFX_faction_logo_generic_15
+            }
 		}
 	}
 	focus = {
@@ -2875,10 +2879,11 @@
 
 		completion_reward = {
 			add_threat = 7
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction = eurasian_federation
+			create_faction_from_template = {
+             template = faction_template_generic_dominance
+             name = "Eurasian Federation"
+             icon = GFX_faction_logo_generic_democratic
+            }
 			set_cosmetic_tag = RUS_EUR
 			add_stability = 0.1
 			add_political_power = 150

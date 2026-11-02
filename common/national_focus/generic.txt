@@ -1749,6 +1749,12 @@ focus_tree = {
 	
 		available_if_capitulated = yes
 
+		allow_branch = {
+			NOT = {
+				tag = AML
+			}
+		}
+
 		available = {
 			NOT = {
 				original_tag = JAP
@@ -1783,7 +1789,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				factor = 0
+				factor = 10
+				AND = {
+					tag = ETH
+					has_government = communism
+				}
+				
+			}	
+			modifier = {
+				factor = 1
 				OR = {
 					AND = {
 						is_historical_focus_on = yes
@@ -1872,7 +1886,15 @@ focus_tree = {
 					is_major = yes
 					has_government = communism
 				}
-			}			
+			}		
+			modifier = {
+				factor = 10
+				AND = {
+					tag = ETH
+					has_government = communism
+				}
+				
+			}	
 			modifier = {
 				factor = 0
 				AND = {
@@ -2333,11 +2355,32 @@ focus_tree = {
 				ideology = libertarian_socialism
 				popularity = 0.4
 			}
-			start_civil_war = {
-             ruling_party = libertarian_socialism
-             ideology = fascism
-             size = 0.4
+			if = {
+				limit = {
+					NOT = {
+						tag = ETH
+					}
+				 }
+				 start_civil_war = {
+          		ruling_party = libertarian_socialism
+         	    ideology = fascism
+          	   size = 0.4
             }
+			}
+
+			if = {
+				limit = {
+					tag = ETH
+				 }
+				 country_event = {
+					id = LBA_events.34
+					hours = 37
+				 }
+				 set_politics = {
+					ruling_party = libertarian_socialism
+				 }
+			}
+			
 		}
 	}
 	focus = {
@@ -2409,8 +2452,11 @@ focus_tree = {
 				ideology = classical_marxism
 				popularity = 0.4
 			}
+			set_politics = {
+				ruling_party = classical_marxism
+			}
 			start_civil_war = {
-             ruling_party = classical_marxism
+             ruling_party = communism
              ideology = fascism
              size = 0.4
             }
@@ -2481,6 +2527,9 @@ focus_tree = {
 			add_popularity = {
 				ideology = communism
 				popularity = 0.4
+			}
+			set_politics = {
+				ruling_party = communism
 			}
 			start_civil_war = {
              ruling_party = communism

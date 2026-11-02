@@ -1,0 +1,12 @@
+LBA_bop_decisions = {
+	icon = GFX_decision_category_ITA_missiolinis
+
+	priority = 50
+
+	allowed = {
+	}
+
+	visible = {
+		has_completed_focus = LBA_under_Mussolini_2
+	}
+}

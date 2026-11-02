@@ -42,6 +42,33 @@
 			hidden_effect = {
 				news_event = news.3063
 			}
+			PRS = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			HAN = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			SHL = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			SAX = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			MEK = {
+				every_core_state = {
+					add_core_of = BAY
+				}
+			}
+			add_state_core = 50
+			add_state_core = 935
 		}
 	}
 	focus = {
@@ -312,8 +339,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_state_core = 50
-			add_state_core = 935
 			create_wargoal = {
 				type = annex_everything
 				target = WUR
@@ -528,31 +553,6 @@
 			create_wargoal = {
 				type = annex_everything
 				target = MEK
-			}
-			PRS = {
-				every_core_state = {
-					add_core_of = BAY
-				}
-			}
-			HAN = {
-				every_core_state = {
-					add_core_of = BAY
-				}
-			}
-			SHL = {
-				every_core_state = {
-					add_core_of = BAY
-				}
-			}
-			SAX = {
-				every_core_state = {
-					add_core_of = BAY
-				}
-			}
-			MEK = {
-				every_core_state = {
-					add_core_of = BAY
-				}
 			}
 		}
 	}

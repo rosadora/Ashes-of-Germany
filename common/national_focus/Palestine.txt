@@ -1419,6 +1419,14 @@
 			is_puppet = no
 		}
 		bypass = {
+			OR = {
+				AML = {
+					exists = yes
+				}
+				LBA = {
+					exists = yes
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no

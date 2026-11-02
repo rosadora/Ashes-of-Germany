@@ -45,6 +45,42 @@ characters = {
 		}
 	}
 
+	ITA_benito_mussolini_2 = {
+		name = ITA_benito_mussolini
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_benito_mussolini
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		country_leader = {
+			ideology = ultra_nationalism_category
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+			visible = {
+				has_completed_focus = ITA_capo_supremo
+			}
+		}
+	}
+
 	ITA_grand_council = {
 		name = ITA_grand_council
 		portraits = {
@@ -312,11 +348,11 @@ characters = {
 		name = ITA_italo_balbo
 		portraits = {
 			army = {
-				small = GFX_portrait_ITA_italo_balbo_small
-				large = GFX_portrait_ITA_italo_balbo
+				small = GFX_portrait_Italo_Balbo_small
+				large = GFX_portrait_italo_balbo_large
 			}
 			civilian = {
-				large = GFX_portrait_ITA_italo_balbo_civilian
+				large = GFX_portrait_italo_balbo_large
 			}
 		}
 
@@ -346,7 +382,7 @@ characters = {
 		
 		field_marshal = {
 			traits = { career_officer politically_connected trait_reckless media_personality }
-			skill = 1
+			skill = 2
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1

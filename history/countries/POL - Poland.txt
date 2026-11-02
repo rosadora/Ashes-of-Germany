@@ -1,5 +1,8 @@
 ﻿capital = 10
 
+
+create_faction_from_template = faction_template_intermarium
+
 puppet = UKR 
 puppet = BLR
 set_autonomy = {

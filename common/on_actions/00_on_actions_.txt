@@ -202,9 +202,6 @@ on_actions = {
 		set_rule = {
 			can_send_volunteers = yes
 		}
-		set_rule = {
-			can_join_factions = no
-		}
 	}
    every_country = {
     country_event = {
@@ -1021,6 +1018,124 @@ on_actions = {
 						}
 					}
             }
+		}
+	}
+
+	on_daily = {
+
+		effect = {
+			if = {
+				limit = {
+					ETH = {
+						has_government = libertarian_socialism
+					}
+				 }
+				 add_ideas = ETH_anarchist_commune_idea
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						NOT = {
+							tag = ETH
+						}
+						has_idea = ETH_anarchist_commune_idea
+					}
+				}
+				PREV = {
+					remove_ideas = ETH_anarchist_commune_idea
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					ETH = {
+						NOT = {
+
+								has_government = libertarian_socialism
+						}
+					
+					}
+				 }
+				 remove_ideas = ETH_anarchist_commune_idea
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { 
+					ETH = {
+						has_war_with = ITA
+						controls_state = 908
+						date < 1938.1.1
+					}
+				 }
+				 ITA = {
+					country_event = {
+						id = LBA_events.9
+						days = 2
+					}
+				 }
+			}
+		}
+
+		effect = {
+			if = {
+
+			limit = {
+				AML = {
+					is_puppet_of = LBA
+				}
+			}
+
+			LBA = {
+				annex_country = {
+					target = AML
+					transfer_troops = yes
+				}
+			}
+		}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					AML = {
+						exists = no
+					}
+				 }
+				 every_state = {
+					limit = {
+						is_core_of = AML
+					}
+					remove_core_of = AML
+				 }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						458 = {
+							is_controlled_by = LBA
+						}
+						FRA = {
+							has_war_with = LBA
+						}
+						has_global_flag = aggressive_LBA
+					}
+				}
+				LBA = {
+					country_event = {
+						id = LBA_events.13
+					}
+				}
+			}
 		}
 	}
 }

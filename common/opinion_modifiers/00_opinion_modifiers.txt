@@ -34,6 +34,45 @@ opinion_modifiers = {
 		value = -100
 	}
 
+	LBA_PRS_ally_focus = {
+		value = 50
+	}
+
+	visit_to_london = {
+		value = 50
+		months = 24
+	}
+
+	distance_from_Italy = {
+		value = -50
+		months = 24
+	}
+
+	visit_to_Rome = {
+		value = 50
+		months = 24
+	}
+
+	visit_to_Berlin = {
+		value = 50
+		months = 24
+	}
+
+	breach_italian_ties = {
+		Value = -75
+		months = 72
+	}
+
+	Via_Balbia_Construction = {
+		value = 30
+		months = 24
+	}
+
+	maintain_our_independance = {
+		value = -25
+		months = 12
+	}
+
 	holds_our_cores = {
 		value = -30
 	}

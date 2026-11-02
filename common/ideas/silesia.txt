@@ -1,0 +1,25 @@
+ideas = {
+
+	country = {
+		home_of_nationalities = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = COG_the_invisible_roof
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = 0.075
+				conscription = 0.02
+				weekly_manpower = 100
+			}
+		}
+	}
+}

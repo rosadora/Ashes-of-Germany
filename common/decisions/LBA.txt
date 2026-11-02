@@ -1,0 +1,435 @@
+LBA_raise_militias = {
+	LBA_border_militias={
+		icon = GFX_decision_category_ITA_colonial_management
+
+		allowed = {
+			tag = AML
+		}
+		visible = {
+			has_war_with = LBA
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 10
+		days_re_enable = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 0
+
+		complete_effect = {
+			450 = {
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+				create_unit = {
+                  division = "name = \"Divisiona di Italia\" division_template = \"Uomini di Mussolini\" start_experience_factor = 0.5"
+                  owner = AML
+                }
+			}
+
+			#Uomini di Mussolini
+		}
+	}
+}
+
+LBA_troops_from_italy = {
+	LBA_troop_spawns = {
+		icon = GFX_decision_category_ITA_colonial_management
+
+		allowed = {
+			NOT = {
+				has_war_with = AML
+			}
+		}
+		visible = {
+			has_character = LBA_benito_mussolini
+		}
+		available = {
+			NOT = {
+				has_war_with = AML
+			}
+		}
+		priority = 1
+		days_remove = 10
+		days_re_enable = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 0
+
+		remove_effect = {
+			448 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+			450 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+			451 = {
+				create_unit = {
+                  division = "name = \"Divisione di Libya\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.1"
+                  owner = LBA
+                }
+			}
+		}
+	}
+}
+
+LBA_root_out_Mussolini_Loyalists = {
+	LBA_root_out_loyalists1 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			449 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+
+
+		remove_effect = {
+			449 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists2 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			662 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+
+
+		remove_effect = {
+			662 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists3 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			450 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 100
+
+		remove_effect = {
+			450 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists4 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			663 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+
+		remove_effect = {
+			663 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+
+	LBA_root_out_loyalists5 = {
+		icon = GFX_Benito_Mussolini_Imprisoned
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			451 = {
+				has_dynamic_modifier = Benito_Mussolini_Rebelious
+			}
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+		days_remove = 30
+		days_re_enable = 120
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 100
+
+		remove_effect = {
+			451 = {
+				remove_dynamic_modifier = {
+				modifier = Benito_Mussolini_Rebelious
+				}
+				add_core_of = LBA
+			}
+		}
+	}
+}
+
+LBA_bop_decisions = {
+	LBA_empower_mussolini = {
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_completed_focus = LBA_rebuild_the_Fascist_party
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 50
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.1
+			}
+		}
+	}
+
+	LBA_empower_Italo_Balbo = {
+		icon = GFX_decision_icon_Italo_Balbo_BOP
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_completed_focus = LBA_rebuild_the_camicie_nere
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 50
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = 0.1
+			}
+		}
+	}
+
+	LBA_disband_the_Grand_council = {
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_character = LBA_grand_council
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 75
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.25
+			}
+			retire_character = LBA_grand_council
+			if = {
+				limit = { has_idea = reformed_grand_council_of_fascism }
+				remove_ideas = reformed_grand_council_of_fascism
+			}
+		}
+	}
+
+	raid_against_Italo_Balbo = {
+		icon = GFX_Benito_Mussolini_libyan_resurgence
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_completed_focus = LBA_ensure_no_opposition
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 15
+
+		cost = 75
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = -0.25
+			}
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.06
+			}
+		}
+	}
+
+	orchestrate_attack_in_Tripoli = {
+		icon = GFX_decision_icon_Italo_Balbo_BOP
+		allowed = {
+			tag = LBA
+		}
+		visible = {
+			has_completed_focus = LBA_rebuild_the_Fascist_party
+		}
+		available = {
+			always = yes
+		}
+		priority = 1
+
+		days_remove = 15
+		days_re_enable = 180
+
+		cost = 100
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = LBA_power_balance
+				value = 0.35
+			}
+		}
+	}
+}
