@@ -511,7 +511,7 @@
 		id = NLC_the_Italian_Commune
 		icon = GFX_focus_ITA_the_italian_republic
 		cost = 7
-		x = 30
+		x = 32
 		y = 0
 		allow_branch = {
 			has_global_flag = italian_civil_war_over
@@ -544,7 +544,7 @@
 			focus = NLC_the_Italian_Commune
 		}
 		relative_position_id = NLC_the_Italian_Commune
-		x = -8
+		x = -10
 		y = 1
 		completion_reward = {
 			add_ideas = revitalize_the_economy_NLC
@@ -576,14 +576,14 @@
 			158 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 				}
 			}
 			159 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -618,14 +618,14 @@
 			117 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 				}
 			}
 			849 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -753,6 +753,21 @@ focus = {
 }
 
 focus = {
+	id = NLC_deal_with_the_famine
+	icon = GFX_focus_generic_workers_and_farmers_rise
+	cost = 10
+	x = -3
+	y = 1
+	prerequisite = {
+		focus = NLC_three_year_plan1
+	}
+	relative_position_id = NLC_three_year_plan1
+	completion_reward = {
+		remove_ideas = widespread_starvation_NLC
+	 }
+}
+
+focus = {
     id = NLC_privatize_foreign_companies
     icon = GFX_focus_mex_privatisation
     relative_position_id = NLC_three_year_plan1
@@ -826,6 +841,9 @@ focus = {
 		}
 	}
     prerequisite = { focus = NLC_deal_with_peoples_resistance }
+	prerequisite = {
+		focus = NLC_deal_with_the_famine
+	}
     completion_reward = {
 		add_stability = -0.07
 		swap_ideas = {
@@ -1047,64 +1065,496 @@ focus = {
 
 
 focus = {
-    id = NLC_14
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    id = NLC_establish_workers_unions
+    icon = GFX_goal_support_from_unions
     relative_position_id = NLC_the_peoples_factories
     x = 2
     y = 1
+	cost = 10
     prerequisite = { focus = NLC_the_peoples_factories }
-    completion_reward = { }
+    completion_reward = { 
+		add_ideas = worker_unions_NLC
+	}
 }
 
 focus = {
-    id = NLC_15
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_14
+    id = NLC_worker_healthcare
+    icon = GFX_focus_generic_public_works
+    relative_position_id = NLC_establish_workers_unions
     x = -1
     y = 1
-    prerequisite = { focus = NLC_14 }
-    completion_reward = { }
+	cost = 7
+    prerequisite = { focus = NLC_establish_workers_unions }
+    completion_reward = {
+		add_ideas = worker_healthcare_NLC
+	 }
 }
 
 focus = {
-    id = NLC_16
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_14
+    id = NLC_bolster_the_northern_factories
+    icon = GFX_goal_generic_construct_civ_factory
+    relative_position_id = NLC_establish_workers_unions
     x = 1
     y = 1
-    prerequisite = { focus = NLC_14 }
-    completion_reward = { }
+	cost = 7
+    prerequisite = { focus = NLC_establish_workers_unions }
+    completion_reward = {
+		add_timed_idea = {
+			idea = funding_factories_NLC
+			days = 365
+		}
+		117 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_dynamic_modifier = {
+				modifier = funded_factories_NLC
+				days = 365
+			}
+		}
+		849 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_dynamic_modifier = {
+				modifier = funded_factories_NLC
+				days = 365
+			}
+		}
+		156 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+			add_dynamic_modifier = {
+				modifier = funded_factories_NLC
+				days = 365
+			}
+		}
+		115 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+			add_dynamic_modifier = {
+				modifier = funded_factories_NLC
+				days = 365
+			}
+		}
+	 }
 }
 
 focus = {
-    id = NLC_17
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_15
+    id = NLC_national_healthcare
+    icon = GFX_focus_generic_field_hostpital
+    relative_position_id = NLC_worker_healthcare
     x = -1
     y = 1
-    prerequisite = { focus = NLC_15 }
-    completion_reward = { }
+	cost = 7
+    prerequisite = { focus = NLC_worker_healthcare }
+    completion_reward = {
+		swap_ideas = {
+			add_idea = worker_healthcare_NLC2
+			remove_idea = worker_healthcare_NLC
+		}
+	 }
+}
+
+#focus = {
+#    id = NLC_lgbtia_rights
+#    icon = GFX_goal_lgbtia_rights
+#    relative_position_id = NLC_worker_healthcare
+#    x = 1
+#    y = 1
+#	cost = 5
+#    prerequisite = { focus = NLC_worker_healthcare }
+#	prerequisite = { focus = NLC_bolster_the_northern_factories }
+#    completion_reward = {
+#			add_ideas = lgbt_rights
+#			add_stability = 0.07
+#		}
+#}
+
+focus = {
+	id = NLC_five_year_plan
+	icon = GFX_goal_five_years_plan
+	prerequisite = {
+		focus = NLC_worker_healthcare
+	}
+	prerequisite = {
+		focus = NLC_bolster_the_northern_factories
+	}
+	cost = 10
+	x = 1
+	y = 1
+	relative_position_id = NLC_worker_healthcare
+	completion_reward = {
+		add_timed_idea = {
+			idea = five_year_plan_NLC
+			days = 1820
+		}
+	 }
+}
+
+
+focus = {
+    id = NLC_the_italian_economy
+    icon = GFX_focus_AFG_a_modern_economy
+    relative_position_id = NLC_five_year_plan
+    x = -1
+	cost = 7
+    y = 1
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+    prerequisite = { focus = NLC_five_year_plan }
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = the_peoples_factories_NLC
+			add_idea = the_italian_economy_NLC
+		}
+	 }
 }
 
 focus = {
-    id = NLC_18
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_15
+    id = NLC_fund_civ_factory_production
+    icon = GFX_goal_generic_construct_civilian
+    relative_position_id = NLC_five_year_plan
     x = 1
     y = 1
-    prerequisite = { focus = NLC_15 }
-	prerequisite = { focus = NLC_16 }
-    completion_reward = { }
+	cost = 7
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+    prerequisite = { focus = NLC_five_year_plan }
+    completion_reward = {
+		add_timed_idea = {
+			idea = funding_civilian_factories_NLC
+			days = 365
+		}
+	 }
 }
 
 focus = {
-    id = NLC_19
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_16
+    id = NLC_develop_the_national_infrastructure
+    icon = GFX_goal_generic_construct_infrastructure
+    relative_position_id = NLC_the_italian_economy
+    x = -1
+    y = 1
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+	cost = 7
+    prerequisite = { focus = NLC_the_italian_economy }
+    completion_reward = {
+		every_state = {
+			limit = {
+				is_core_of = NLC
+				is_controlled_by = NLC
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		add_stability = 0.1
+	 }
+}
+
+focus = {
+    id = NLC_increase_farmland_production
+    icon = GFX_focus_generic_farmland
+    relative_position_id = NLC_the_italian_economy
     x = 1
     y = 1
-    prerequisite = { focus = NLC_16 }
-    completion_reward = { }
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+	cost = 7
+    prerequisite = { focus = NLC_the_italian_economy }
+	prerequisite = {
+		focus = NLC_fund_civ_factory_production
+	}
+    completion_reward = {
+		add_timed_idea = {
+			idea = the_sothern_farms_NLC
+			days = 730
+		}
+		remove_ideas = widespread_starvation_NLC
+	 }
+}
+
+focus = {
+    id = NLC_clear_the_northern_forrests
+    icon = GFX_focus_CHL_expand_the_forestry
+    relative_position_id = NLC_fund_civ_factory_production
+    x = 1
+    y = 1
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+	cost = 7
+    prerequisite = { focus = NLC_fund_civ_factory_production }
+    completion_reward = {
+		158 = {
+			add_extra_state_shared_building_slots = 3
+		}
+		159 = {
+			add_extra_state_shared_building_slots = 3
+		}
+		160 = {
+			add_extra_state_shared_building_slots = 3
+		}
+		161 = {
+			add_extra_state_shared_building_slots = 3
+		}
+		add_timed_idea = {
+			idea = funding_deforesting
+			days = 70
+		}
+	 }
+}
+
+focus = {
+    id = NLC_develop_the_railroads
+    icon = GFX_focus_generic_railroad
+    relative_position_id = NLC_develop_the_national_infrastructure
+    x = 0
+    y = 1
+	cost = 7
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+    prerequisite = { focus = NLC_develop_the_national_infrastructure }
+	prerequisite = {
+		 focus = NLC_clear_the_northern_forrests
+	}
+    completion_reward = {
+		add_tech_bonus = {
+				name = ITA_railway_innovations
+				ahead_reduction = 1.5
+				bonus = 0.5
+				uses = 1
+				category = train_tech
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			#Roma - La Spezia
+			build_railway = {
+				path = { 9904 11751 6862 6875 11833 6946 6973 }
+			}
+
+			#Roma - Bologna
+			build_railway = {
+				path = { 11751 6862 9750 9879 9907 1616 6985 6606 }
+			}
+
+			#Roma - Napoli
+			build_railway = {
+				path = { 9904 11846 923 9826 819 }
+			}
+	 }
+}
+
+focus = {
+    id = NLC_increase_economic_funding
+    icon = GFX_focus_CHI_planned_economy
+    relative_position_id = NLC_increase_farmland_production
+    x = 0
+    y = 1
+	cost = 10
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+    prerequisite = { focus = NLC_develop_the_national_infrastructure }
+	prerequisite = {
+		focus = NLC_increase_farmland_production
+	}
+	prerequisite = {
+		focus = NLC_clear_the_northern_forrests
+	}
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = the_italian_economy_NLC
+			add_idea = the_italian_economy_NLC2
+		}
+	 }
+}
+
+focus = {
+    id = NLC_militarize_the_economy
+    icon = GFX_focus_generic_military_industry
+    relative_position_id = NLC_clear_the_northern_forrests
+    x = 0
+    y = 1
+	cost = 8
+	available = {
+		has_idea = five_year_plan_NLC
+	}
+    prerequisite = { focus = NLC_clear_the_northern_forrests }
+	prerequisite = {
+		focus = NLC_clear_the_northern_forrests
+	}
+    completion_reward = {
+		add_timed_idea = {
+			idea = militarized_economy_NLC
+			days = 720
+		}
+	 }
+}
+
+focus = {
+    id = NLC_civillian_ideals_in_economy
+    icon = GFX_goal_agrarian_economy
+    relative_position_id = NLC_develop_the_railroads
+    x = 1
+    y = 1
+	cost = 10
+    prerequisite = { focus = NLC_develop_the_railroads }
+	prerequisite = {
+		focus = NLC_increase_economic_funding 
+	}
+    completion_reward = {
+		if = {
+			limit = { 
+				has_idea = the_italian_economy_NLC2
+			 }
+			 swap_ideas = {
+				remove_idea = the_italian_economy_NLC2
+				add_idea = the_italian_economy_NLC4
+			 }
+		}
+		if = {
+			limit = {
+				has_idea = the_italian_economy_NLC3
+			 }
+			 swap_ideas = {
+				remove_idea = the_italian_economy_NLC3
+				add_idea = the_italian_economy_NLC5
+			 }
+		}
+	 }
+}
+
+focus = {
+    id = NLC_military_ideals_in_economy
+    icon = GFX_focus_generic_advanced_military_studies
+    relative_position_id = NLC_militarize_the_economy
+    x = -1
+    y = 1
+	cost = 10
+    prerequisite = {focus = NLC_militarize_the_economy }
+	prerequisite = {
+		focus = NLC_increase_economic_funding
+	}
+    completion_reward = {
+		add_ideas = war_economy
+		if = {
+			limit = { 
+				has_idea = the_italian_economy_NLC2
+			 }
+			 swap_ideas = {
+				remove_idea = the_italian_economy_NLC2
+				add_idea = the_italian_economy_NLC3
+			 }
+		}
+		if = {
+			limit = {
+				has_idea = the_italian_economy_NLC4
+			 }
+			 swap_ideas = {
+				remove_idea = the_italian_economy_NLC4
+				add_idea = the_italian_economy_NLC5
+			 }
+		}
+	 }
+}
+
+focus = {
+    id = NLC_a_true_Italian_economy
+    icon = GFX_goal_continuous_non_factory_construct
+    relative_position_id = NLC_civillian_ideals_in_economy
+    x = 1
+    y = 1
+	cost = 8
+    prerequisite = { focus = NLC_military_ideals_in_economy }
+	prerequisite = {
+		focus = NLC_civillian_ideals_in_economy
+	}
+	available = {
+		num_of_factories > 100
+	}
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = the_italian_economy_NLC5
+			add_idea = the_italian_economy_NLC6
+		}
+	 }
+}
+
+focus = {
+    id = NLC_build_the_breadbasket
+    icon = GFX_focus_generic_modernize_industry
+    relative_position_id = NLC_bolster_the_northern_factories
+    x = 1
+    y = 1
+	cost = 7
+    prerequisite = { focus = NLC_bolster_the_northern_factories }
+    completion_reward = { 
+		117 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				
+			}
+			849 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				
+			}
+			156 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				
+			}
+			115 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+	}
 }
 
 
@@ -1129,6 +1579,24 @@ focus = {
 	}
 
 	focus = {
+		id = NLC_head_of_council_vote
+		icon = GFX_goal_communist_vote
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+			NOT = {
+				has_idea = reform_the_government_NLC
+			}
+		}
+		prerequisite = {
+			focus = NLC_begin_reforming_the_government
+		}
+		relative_position_id = NLC_begin_reforming_the_government
+		completion_reward = { }
+	}
+
+	focus = {
 		id = NLC_revitalize_the_army
 		icon = GFX_goal_army_upgrade
 		cost = 7
@@ -1136,7 +1604,7 @@ focus = {
 			focus = NLC_the_Italian_Commune
 		}
 		relative_position_id = NLC_the_Italian_Commune
-		x = 8
+		x = 10
 		y = 1
 		completion_reward = {
 			add_ideas = NLC_army_idea1

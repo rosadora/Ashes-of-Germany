@@ -38,6 +38,11 @@ country_event = { #The Civil War Starts
 			add_state_core = 114
 			inherit_technology = ITA
 			load_oob = ILF_civil_war
+			country_event = {
+				id = ilf.13
+				days = 7
+			}
+			add_ideas = illegitimate_government_CIVILWAR
 		}
 		transfer_units_fraction= {
 	     target = ILF
@@ -70,6 +75,7 @@ country_event = { #The Civil War Starts
             type = annex_everything
             }
 			load_oob = NLC_template
+			add_ideas = illegitimate_government_CIVILWAR
 		}
 		LBA = {
 			transfer_state = 448

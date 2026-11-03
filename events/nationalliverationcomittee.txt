@@ -1,0 +1,24 @@
+add_namespace = nlc
+
+country_event = {
+	id = nlc.1
+	title = nlc.1.t
+	desc = nlc.1.d
+	picture = GFX_report_event_generic_rally2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		NLC = {
+			annex_country = {
+				target = SPM
+			}
+		}
+	}
+
+	option = {
+		name = nlc.1.a
+	}
+}

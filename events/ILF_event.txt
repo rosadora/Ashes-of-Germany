@@ -320,3 +320,59 @@ country_event = { #French Alliance? Negative Answer.
 		}
 	}
 }
+country_event = {
+	id = ilf.13
+	title = ilf.13.t
+	desc = ilf.13.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+	immediate = {
+		SPM = {
+			transfer_state = 114
+			set_politics = {
+				ruling_party = classical_marxism
+			}
+			set_popularities = {
+				communism = 30
+				classical_marxism = 35
+				fascism = 15
+				neutrality = 10
+				democratic = 5
+				social_democracy = 5
+			}
+		}
+
+		news_event = {
+			id = news.3090
+			days = 3
+		}
+	}
+
+	option = {
+		name = "ilf.13.a"
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	option = {
+		name = "ilf.13.b"
+		ai_chance = {
+			base = 75
+		}
+		declare_war_on = {
+			target = SPM
+			type = annex_everything
+		}
+		hidden_effect = {
+			NLC = {
+				country_event = {
+					id = nlc.1
+					days = 15
+				}
+			}
+		}
+	}
+}

@@ -84,22 +84,6 @@
                   division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
                   owner = ILF
                 }
-				create_unit = {
-                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
-                  owner = ILF
-                }
-				create_unit = {
-                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
-                  owner = ILF
-                }
-				create_unit = {
-                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
-                  owner = ILF
-                }
-				create_unit = {
-                  division = "name = \"Divisione di Fanteria\" division_template = \"Divisione di Fanteria\" start_experience_factor = 0.5"
-                  owner = ILF
-                }
 			}
 		}
 	}

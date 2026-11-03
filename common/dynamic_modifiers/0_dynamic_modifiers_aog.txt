@@ -138,3 +138,11 @@ pastoral_society = {
 	monthly_population =  MON_pastoral_pop
 	
 }
+
+funded_factories_NLC = {
+	icon = GFX_civ_factory
+	enable = {
+		always = yes
+	}
+	state_production_speed_buildings_factor = 0.35
+}

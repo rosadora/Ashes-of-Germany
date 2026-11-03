@@ -821,6 +821,29 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ITA_retake_sardinia
+		icon = GFX_focus_BEL_government_resigns
+		cost = 5
+		x =-3
+		y = 1
+		prerequisite = {
+			focus = ITA_mare_nostrum
+		}
+		relative_position_id = ITA_mare_nostrum
+		allow_branch = {
+			SPM = {
+				exists = yes
+			}
+			has_global_flag = italian_civil_war_over
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = SPM
+				type = annex_everything
+			}
+		 }
+	}
+	focus = {
 		id = ITA_third_war_in_ethiopia
 		icon = GFX_focus_generic_attack_ethiopia
 		x = 1

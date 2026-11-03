@@ -2,8 +2,8 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "ethiopia_be_happy.ogg"
-	volume = 0.90
+	file = "bella_ciao.ogg"
+	volume = 0.99
 }
 
 # General Peace:

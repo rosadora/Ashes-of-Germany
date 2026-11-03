@@ -1,0 +1,37 @@
+characters = {
+	#Didnt know what to do so we got a marxist guy XD#
+SPM_boris_shaposhnikov = {
+		name = SOV_boris_shaposhnikov
+		portraits = {
+			army = {
+				small = "GFX_idea_boris_shaposhnikov"
+				large = "GFX_portrait_SOV_boris_shaposhnikov"
+			}
+			civilian = { 
+			    large = "GFX_portrait_SOV_boris_shaposhnikov"
+		 }
+	    }
+        country_leader = {
+			ideology = classical_marxism_category
+			traits = { veteran_communist }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = marxism
+			traits = { veteran_communist }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			traits = { career_officer trait_cautious }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 0
+			visible = { has_government = communism }
+		}
+}
+}

@@ -11,6 +11,8 @@ division_template = {
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
 	}
 	support = { 
 		engineer = { x = 0 y = 0 }
@@ -30,36 +32,6 @@ units = {
 		start_experience_factor = 0.6
 		start_equipment_factor = 1
 	}
-    division = { #napoli
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 819 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-    division = { #napoli
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 819 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-    division = { #foggia
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 883
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
 	division = { #foggia
 		division_name = {
 			is_name_ordered = yes
@@ -80,22 +52,12 @@ units = {
 		start_experience_factor = 0.6
 		start_equipment_factor = 1
 	}
-	division = { #taranto
+	division = { #Napoli
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		} 
-		location = 11837
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #taranto
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 11837 
+		location = 819
 		division_template = "Brigata della Resistenza"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1
@@ -160,132 +122,12 @@ units = {
 		start_experience_factor = 0.6
 		start_equipment_factor = 1
 	}
-	division = { #palermo
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 10074 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #palermo
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 10074 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #cagliari
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 11773 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #cagliari
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 11773 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #sassari
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 9772 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-    division = { #napoli
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 819 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-    division = { #napoli
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 819 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-    division = { #napoli
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 819 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-    division = { #foggia
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 883
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #foggia
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 883 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #bari
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 9784 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
 	division = { #taranto
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		} 
 		location = 11837
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #taranto
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 11837 
 		division_template = "Brigata della Resistenza"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1
@@ -306,16 +148,6 @@ units = {
 			name_order = 1
 		} 
 		location = 9990 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #messina
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 4159 
 		division_template = "Brigata della Resistenza"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1
@@ -346,36 +178,6 @@ units = {
 			name_order = 1
 		} 
 		location = 10074 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #palermo
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 10074 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #palermo
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 10074 
-		division_template = "Brigata della Resistenza"
-		start_experience_factor = 0.6
-		start_equipment_factor = 1
-	}
-	division = { #cagliari
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		} 
-		location = 11773 
 		division_template = "Brigata della Resistenza"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1

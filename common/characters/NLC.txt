@@ -1,0 +1,29 @@
+characters = {
+	NLC_antonio_gramsci = {
+		name = ITA_antonio_gramsci
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_antonio_gramsci
+			}
+		}
+
+		#COUNTRY LEADER ROLE IS GIVEN LATER
+	}
+
+	NLC_ferruccio_parri = {
+		name = ITA_ferruccio_parri
+		portraits = {
+			civilian = {
+				large = GFX_portrait_italy_ferruccio_parri
+			}
+		}
+
+		country_leader = {
+			ideology = socialism
+			traits = { resistance_leader }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+}
