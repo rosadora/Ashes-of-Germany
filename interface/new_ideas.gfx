@@ -336,6 +336,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ideology_asanumism_category"
+		texturefile = "gfx/interface/ideologies/asanumism_category.dds"
+	}
+
+	spriteType = {
 		name = "GFX_ideology_volkisch"
 		texturefile = "gfx/interface/ideologies/volkisch.dds"
 	}

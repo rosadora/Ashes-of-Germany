@@ -21,6 +21,160 @@ ideas = {
 				war_support_factor = -0.15
 			} 
 		}
+		general_discontent2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = JAP_collapsing_government
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				consumer_goods_expected_value = 0.15
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			} 
+		}
+		general_discontent3 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = JAP_collapsing_government
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.075
+				consumer_goods_expected_value = 0.125
+				stability_factor = -0.125
+				war_support_factor = -0.125
+			} 
+		}
+		amaterasu_coming_out_of_the_cave = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = JAP_amaterasus_weapons_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.025
+				consumer_goods_expected_value = 0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			} 
+		}
+		amaterasu_coming_out_of_the_cave2 = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = JAP_amaterasus_weapons_idea
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.025
+				consumer_goods_expected_value = 0.075
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			} 
+		}
+		urban_defense = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_mountain_defensive_training
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.075
+			} 
+		}
+		moutainous_defense = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_mountain_defensive_training
+
+			removal_cost = -1
+			
+			modifier = {
+				terrain_penalty_reduction = 0.3
+				enemy_attrition = 0.1
+				attrition_for_controller = -0.1
+			} 
+		}
+		kokumin_giyu_sentotai = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_japanese_conflict
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.07
+				experience_gain_army_factor = -0.2
+			} 
+		}
+		tenno_heika_banzai = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = JAP_advance_one_hundred_million_fireballs
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				experience_loss_factor = 0.1
+				experience_gain_army = -0.1
+			} 
+		}
 		resist_the_kurofune = {
 			
 			allowed = {
@@ -1526,10 +1680,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
 			
 			removal_cost = -1
 
@@ -1713,7 +1863,7 @@ ideas = {
 			picture = jap_hirohito
 			
 			modifier = {
-				stability_factor = 0.5
+				stability_factor = 0.2
 			}
 		}
 

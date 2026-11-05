@@ -5811,6 +5811,11 @@
 			every_state = {
 				add_claim_by = JAP
 			}
+			add_to_variable = {
+		     var = JAP_army_attack_factor_kokutai
+		     value = 0.05
+		     tooltip = JAP_army_attack_factor_gain_05
+		    }
 		}
 	}
 	focus = {
@@ -5839,6 +5844,11 @@
 		available_if_capitulated = yes
 		completion_reward = {
 		 add_ideas = seisen
+		 add_to_variable = {
+		     var = JAP_army_attack_factor_kokutai
+		     value = 0.025
+		     tooltip = JAP_army_attack_factor_gain_025
+		    }
 		}
 	}
 	focus = {
@@ -6088,6 +6098,16 @@
 			id = news.3087
 			days = 1
 		 }
+		 add_to_variable = {
+		 var = JAP_stability_factor_kokutai
+		 value = 0.1
+		 tooltip = add_10_to_kokutai_stab
+		 }
+		 add_to_variable = {
+		 var = JAP_political_power_kokutai
+		 value = -0.1
+		 tooltip = remove_10_to_kokutai_political_power
+		 }
 		 remove_ideas = JAP_hirohito
 		}
 	}
@@ -6112,6 +6132,11 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			remove_ideas = fading_taisho
+			add_to_variable = {
+		 var = JAP_political_power_kokutai
+		 value = 0.1
+		 tooltip = add_10_to_kokutai_political_power
+		 }
 		}
 	}
 	focus = {
@@ -6257,7 +6282,7 @@
 	}
 	focus = {
 		id = JAP_strengthen_the_kokutai
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_focus_JAP_embrace_kokutai
 		x = 0
 		y = 2
 		prerequisite = {focus = JAP_empower_zaibatsus focus = JAP_challenge_zaibatsus}
@@ -6290,6 +6315,16 @@
 					instant_build = yes
 				}
 			}
+			add_to_variable = {
+		     var = JAP_army_attack_factor_kokutai
+		     value = 0.025
+		     tooltip = JAP_army_attack_factor_gain_025
+		    }
+			add_to_variable = {
+		     var = JAP_arms_factory_prod_kokutai
+		     value = 0.05
+		     tooltip = JAP_arms_factory_prod_gain_05
+		    }
 		}
 	}
 	focus = {
@@ -6315,6 +6350,11 @@
 				remove_idea = state_shintoism
 				add_idea = state_shintoism2
 			}
+			add_to_variable = {
+		     var = JAP_stability_factor_kokutai
+		     value = 0.05
+		     tooltip = add_5_to_kokutai_stab
+		    }
 		}
 	}
 	focus = {
@@ -6364,11 +6404,16 @@
 				remove_idea = marginalized_korean_immigration
 				add_idea = cheap_korean_labor
 			}
+			add_to_variable = {
+		     var = JAP_stability_factor_kokutai
+		     value = 0.05
+		     tooltip = add_5_to_kokutai_stab
+		    }
 		}
 	}
 	focus = {
 		id = JAP_the_last_battle_for_the_emperor
-		icon = GFX_focus_JAP_advance_one_hundred_million_fireballs
+		icon = GFX_focus_JAP_rely_on_infantry_charges
 		x = 0
 		y = 5
 		relative_position_id = JAP_showa_restoration
@@ -6393,8 +6438,409 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = marginalized_korean_immigration
-				add_idea = cheap_korean_labor
+				remove_idea = general_discontent
+				add_idea = general_discontent2
+			}
+			add_timed_idea = {
+				idea = tenno_heika_banzai
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = JAP_democratic_showa
+		icon = GFX_focus_jap_pacific_guardian
+		x = -8
+		y = 8
+		relative_position_id = JAP_showa_restoration
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			is_puppet_of = USA
+			OR = {
+				NOT = {
+				has_government = social_liberalism
+				has_government = classical_liberalism
+				has_government = democratic
+				has_government = social_democracy
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -100
+		}
+	}
+	focus = {
+		id = JAP_establish_a_ration_agency
+		icon = GFX_focus_SIA_thai_rice_company
+		x = -1
+		y = 1
+		relative_position_id = JAP_democratic_showa
+		prerequisite = {focus = JAP_democratic_showa}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_to_variable = {
+             var = JAP_monthly_pop_post_war
+             value = 0.1
+			 tooltip = JAP_monthly_pop_post_war_10
+            }
+			add_to_variable = {
+             var = JAP_classical_marxism_drift_post_war
+             value = -0.01
+			 tooltip = JAP_classical_marxist_drift_01tic
+            }
+			add_to_variable = {
+             var = JAP_communist_drift_post_war
+             value = -0.01
+			 tooltip = JAP_communist_drift_01tic
+            }
+		}
+	}
+	focus = {
+		id = JAP_redirect_army_spending
+		icon = GFX_focus_ETH_peacekeeping_forces
+		x = 1
+		y = 1
+		relative_position_id = JAP_democratic_showa
+		prerequisite = {focus = JAP_democratic_showa}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = civilian_economy
+			add_ideas = volunteer_only
+			add_to_variable = {
+             var = JAP_building_construction_post_war
+             value = 0.1
+			 tooltip = JAP_building_construction_post_war_10
+            }
+			add_to_variable = {
+             var = JAP_consumer_goods_post_war
+             value = -0.075
+			 tooltip = JAP_consumer_goods_post_war_075
+            }
+			add_to_variable = {
+             var = JAP_research_post_war
+             value = 0.075
+			 tooltip = JAP_research_post_war_075
+            }
+		}
+	}
+	focus = {
+		id = JAP_merge_liberal_forces
+		icon = GFX_focus_JAP_form_the_ldp
+		x = 0
+		y = 2
+		relative_position_id = JAP_democratic_showa
+		prerequisite = {focus = JAP_redirect_army_spending}
+		prerequisite = {focus = JAP_establish_a_ration_agency}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = {
+				id = jap.46
+				days = 2
+			}
+			set_party_name = {
+              ideology = classical_liberalism
+              long_name = JAP_liberal_democratic_party_long
+              name = JAP_liberal_democratic_party
+            }
+			set_party_name = {
+              ideology = democratic
+              long_name = JAP_liberal_democratic_party_long
+              name = JAP_liberal_democratic_party
+            }
+			create_country_leader = {
+            name = "Ichiro Hatoyama"
+            desc = ""
+	        picture = "gfx/leaders/JAP/Ichiro_Hatoyama.dds"
+            expire = "1965.1.1"
+            ideology = classical_liberalism_category
+            traits = {
+            }
+		    }
+			create_country_leader = {
+            name = "Ichiro Hatoyama"
+            desc = ""
+	        picture = "gfx/leaders/JAP/Ichiro_Hatoyama.dds"
+            expire = "1965.1.1"
+            ideology = conservatism
+            traits = {
+            }
+		    }
+			add_to_variable = {
+             var = JAP_classical_marxism_drift_post_war
+             value = -0.01
+			 tooltip = JAP_classical_marxist_drift_01tic
+            }
+			add_to_variable = {
+             var = JAP_communist_drift_post_war
+             value = -0.01
+			 tooltip = JAP_communist_drift_01tic
+            }
+		}
+	}
+	focus = {
+		id = JAP_kokumin_giyu_sentotai
+		icon = GFX_focus_JAP_joshi_teishin_tai
+		x = -2
+		y = 1
+		relative_position_id = JAP_the_last_battle_for_the_emperor
+		prerequisite = {focus = JAP_the_last_battle_for_the_emperor}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_global_flag = japan_sunset
+			OR = {
+				NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = kokumin_giyu_sentotai
+			unlock_decision_tooltip = JAP_disband_the_civilian_corps
+		}
+	}
+	focus = {
+		id = JAP_total_mobilization_of_the_economy
+		icon = GFX_focus_JAP_army_weapons_administration_hq
+		x = 0
+		y = 1
+		relative_position_id = JAP_the_last_battle_for_the_emperor
+		prerequisite = {focus = JAP_the_last_battle_for_the_emperor}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_global_flag = japan_sunset
+			OR = {
+				NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				}
+			}
+			controls_state = 282
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			282 = {
+			remove_building = {
+              type = industrial_complex
+              level = 3
+	        }
+			add_building_construction = {
+              type = arms_factory
+              level = 3
+	        }
+			}
+		}
+	}
+	focus = {
+		id = JAP_we_were_to_weak
+		icon = GFX_focus_JAP_supreme_council_for_direction_of_war
+		x = 2
+		y = 1
+		relative_position_id = JAP_the_last_battle_for_the_emperor
+		prerequisite = {focus = JAP_the_last_battle_for_the_emperor}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_global_flag = japan_sunset
+			OR = {
+				NOT = {
+				has_government = classical_marxism
+				has_government = libertarian_socialism
+				has_government = communism
+				}
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				popularity = 0.25
+				ideology = fascism
+			}
+			add_popularity = {
+				popularity = -0.25
+				ideology = ultra_nationalism
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			swap_ideas = {
+				remove_idea = general_discontent2
+				add_idea = general_discontent3
+			}
+		}
+	}
+	focus = {
+		id = JAP_retreat_in_the_alps
+		icon = GFX_focus_generic_mountain_fortification
+		x = 2
+		y = 2
+		relative_position_id = JAP_the_last_battle_for_the_emperor
+		prerequisite = {focus = JAP_we_were_to_weak}
+		prerequisite = {focus = JAP_total_mobilization_of_the_economy}
+		prerequisite = {focus = JAP_kokumin_giyu_sentotai}
+		mutually_exclusive = {focus = JAP_defend_each_town}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = moutainous_defense
+				days = 100
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = JAP_defend_each_town
+		icon = GFX_focus_JAP_supremacy_of_will
+		x = -2
+		y = 2
+		relative_position_id = JAP_the_last_battle_for_the_emperor
+		prerequisite = {focus = JAP_we_were_to_weak}
+		prerequisite = {focus = JAP_total_mobilization_of_the_economy}
+		prerequisite = {focus = JAP_kokumin_giyu_sentotai}
+		mutually_exclusive = {focus = JAP_retreat_in_the_alps}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = urban_defense
+				days = 100
+			}
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = JAP_unleash_the_sun
+		icon = GFX_goal_amaterasu_out
+		x = 0
+		y = 3
+		relative_position_id = JAP_the_last_battle_for_the_emperor
+		prerequisite = {focus = JAP_defend_each_town focus = JAP_retreat_in_the_alps}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = general_discontent3
+				add_idea = amaterasu_coming_out_of_the_cave
+			}
+		}
+	}
+	focus = {
+		id = JAP_rebuild_imperial_authority
+		icon = GFX_focus_JAP_integrate_the_government_general
+		x = 0
+		y = 1
+		relative_position_id = JAP_unleash_the_sun
+		prerequisite = {focus = JAP_unleash_the_sun}
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			all_core_state = {
+				is_controlled_by = JAP
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = amaterasu_coming_out_of_the_cave
+				add_idea = amaterasu_coming_out_of_the_cave2
 			}
 		}
 	}
@@ -6670,6 +7116,16 @@
 			idea = ban_on_paramilitary_organizations
 			days = 100
 		 }
+		 add_to_variable = {
+			      var = JAP_stability_factor_kokutai
+			      value = -0.05
+			      tooltip = remove_05_to_kokutai_stab
+		    }
+		 add_to_variable = {
+			      var = JAP_army_attack_factor_kokutai
+			      value = -0.05
+			      tooltip = remove_05_to_kokutai_attack
+		    }
 		 custom_effect_tooltip = JAP_disastrous_consequences
 		 hidden_effect = {
 		 country_event = {

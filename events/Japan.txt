@@ -1258,7 +1258,18 @@ country_event = {
 	desc = jap.44.d
 	picture = GFX_report_event_japanese_reply
 
-	is_triggered_only = yes
+	trigger = {
+		tag = JAP
+		has_dynamic_modifier = {
+         modifier = kokutai
+         scope = JAP
+        }
+		check_variable = {
+         JAP_stability_factor_kokutai < 0
+        }
+	}
+
+	fire_only_once = yes
 	
 	option = { #Japan has fallen
 		name = jap.44.a
@@ -1277,6 +1288,17 @@ country_event = {
 		}
 		add_stability = -0.1
 		add_ideas = general_discontent
+		add_dynamic_modifier = { modifier = japan_post_war_economics }
+		set_variable = { JAP_building_slots_post_war = -0.4 }
+		set_variable = { JAP_building_construction_post_war = -0.4 }
+		set_variable = { JAP_research_post_war = -0.25 }
+		set_variable = { JAP_local_resource_post_war = -0.4 }
+		set_variable = { JAP_consumer_goods_post_war = 0.25 }
+		set_variable = { JAP_dockyard_prod_post_war = -0.5 }
+		set_variable = { JAP_arms_factory_prod_post_war = -0.2 }
+		set_variable = { JAP_monthly_pop_post_war = -0.8 }
+		set_variable = { JAP_classical_marxism_drift_post_war = 0.05 }
+		set_variable = { JAP_communist_drift_post_war = 0.02 }
 		IF = {
 			limit = {
 				any_owned_state = {
@@ -1383,5 +1405,317 @@ country_event = {
             }
         }
 		mark_focus_tree_layout_dirty = yes
+	}
+}
+# American Occupation
+country_event = {
+	id = jap.45
+	title = jap.45.t
+	desc = jap.45.d
+	picture = GFX_report_event_usa_macarthur_speech
+
+	trigger = {
+		original_tag = JAP
+		is_puppet_of = USA
+	}
+
+	fire_only_once = yes
+	
+	option = { #The Country is nothing but Ashes
+		name = jap.45.a
+		ai_chance = {
+			base = 10
+		}
+		add_dynamic_modifier = { modifier = japan_post_war_economics }
+		set_variable = { JAP_building_slots_post_war = -0.4 }
+		set_variable = { JAP_building_construction_post_war = -0.4 }
+		set_variable = { JAP_research_post_war = -0.25 }
+		set_variable = { JAP_local_resource_post_war = -0.4 }
+		set_variable = { JAP_consumer_goods_post_war = 0.25 }
+		set_variable = { JAP_dockyard_prod_post_war = -0.5 }
+		set_variable = { JAP_arms_factory_prod_post_war = -0.2 }
+		set_variable = { JAP_monthly_pop_post_war = -0.8 }
+		set_variable = { JAP_classical_marxism_drift_post_war = 0.05 }
+		set_variable = { JAP_communist_drift_post_war = 0.02 }
+	}
+}
+
+# United Front of Left Forces ?
+country_event = {
+	id = jap.46
+	title = jap.46.t
+	desc = jap.46.d
+	picture = GFX_report_event_SOV_negotiations_japan_bukharin
+
+	is_triggered_only = yes
+	
+	option = { #Formation of the JLP
+		name = jap.46.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+            var = JAP_social_democracy_drift_post_war
+            value = 0.04
+			tooltip = JAP_social_democratic_drift_04tic
+        }
+		add_to_variable = {
+            var = JAP_classical_marxism_drift_post_war
+            value = 0.03
+			tooltip = JAP_classical_marxist_drift_03tic
+        }
+		set_party_name = {
+              ideology = classical_marxism
+              long_name = JAP_japan_liberation_party_party_long
+              name = JAP_japan_liberation_party_party
+            }
+		set_party_name = {
+            ideology = social_democracy
+            long_name = JAP_japan_liberation_party_party_long
+            name = JAP_japan_liberation_party_party
+        }
+		set_party_name = {
+              ideology = communism
+              long_name = JAP_japan_liberation_party_party_long
+              name = JAP_japan_liberation_party_party
+            }
+		create_country_leader = {
+            name = "Inejirō Asanuma"
+            desc = ""
+	        picture = "gfx/leaders/JAP/Inejiro_Asanuma.dds"
+            expire = "1965.1.1"
+            ideology = asanumism_category
+            traits = {
+				controversial_figure
+            }
+		}
+	}
+
+	option = { #Formation of the JSP and JCP
+		name = jap.46.a
+		ai_chance = {
+			base = 10
+		}
+		set_party_name = {
+              ideology = communism
+              long_name = JAP_jcp_long
+              name = JAP_jcp
+            }
+		set_party_name = {
+              ideology = classical_marxism
+              long_name = JAP_jcp_long
+              name = JAP_jcp
+            }
+		set_party_name = {
+            ideology = social_democracy
+            long_name = JAP_jsp_long
+            name = JAP_jsp_jcp
+        }
+	}
+}
+# Japan conquers a new state
+country_event = {
+	id = jap.47
+	title = jap.47.t
+	desc = jap.47.d
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+	
+	option = { #Banzai
+		name = jap.47.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = 0.01
+		    tooltip = add_1_to_kokutai_stab
+		}
+	}
+}
+# Japan loses control of a state
+country_event = {
+	id = jap.48
+	title = jap.48.t
+	desc = jap.48.d
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+	
+	option = { #Banzai
+		name = jap.48.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.05
+		    tooltip = remove_05_to_kokutai_stab
+		}
+	}
+}
+# Japan loses control of Tokyo
+country_event = {
+	id = jap.49
+	title = jap.49.t
+	desc = jap.49.d
+	picture = GFX_report_event_JAP_army_occupation
+
+	trigger = {
+		original_tag = JAP
+		has_idea = kokutai
+		NOT = {
+			controls_state = 282
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = { #The Eastern Capital has fallen
+		name = jap.49.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.2
+		    tooltip = remove_20_to_kokutai_stab
+		}
+	}
+}
+# Japan has 100 000 casualties
+country_event = {
+	id = jap.50
+	title = jap.50.t
+	desc = jap.50.d
+	picture = GFX_report_event_JAP_army_occupation
+
+	trigger = {
+		original_tag = JAP
+		has_idea = kokutai
+		casualties > 100000
+	}
+
+	fire_only_once = yes
+	
+	option = { #We need to pay more attention
+		name = jap.50.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.05
+		    tooltip = remove_5_to_kokutai_stab
+		}
+	}
+}
+# Japan has 500 000 casualties
+country_event = {
+	id = jap.51
+	title = jap.51.t
+	desc = jap.51.d
+	picture = GFX_report_event_JAP_army_occupation
+
+	trigger = {
+		original_tag = JAP
+		has_idea = kokutai
+		casualties > 500000
+	}
+
+	fire_only_once = yes
+	
+	option = { #War will be over soon
+		name = jap.51.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.1
+		    tooltip = remove_10_to_kokutai_stab
+		}
+	}
+}
+# Japan has 1 000 000 casualties
+country_event = {
+	id = jap.52
+	title = jap.52.t
+	desc = jap.52.d
+	picture = GFX_report_event_JAP_army_occupation
+
+	trigger = {
+		original_tag = JAP
+		has_idea = kokutai
+		casualties > 1000000
+	}
+
+	fire_only_once = yes
+	
+	option = { #It is for our survival
+		name = jap.52.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.15
+		    tooltip = remove_15_to_kokutai_stab
+		}
+	}
+}
+# Japan has 2 000 000 casualties
+country_event = {
+	id = jap.53
+	title = jap.53.t
+	desc = jap.53.d
+	picture = GFX_report_event_JAP_army_occupation
+
+	trigger = {
+		original_tag = JAP
+		has_idea = kokutai
+		casualties > 2000000
+	}
+
+	fire_only_once = yes
+	
+	option = { #It is for our survival
+		name = jap.53.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.20
+		    tooltip = remove_20_to_kokutai_stab
+		}
+	}
+}
+# Japan has 5 000 000 casualties
+country_event = {
+	id = jap.54
+	title = jap.54.t
+	desc = jap.54.d
+	picture = GFX_report_event_JAP_army_occupation
+
+	trigger = {
+		original_tag = JAP
+		has_idea = kokutai
+		casualties > 5000000
+	}
+
+	fire_only_once = yes
+	
+	option = { #It is for our survival
+		name = jap.54.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.3
+		    tooltip = remove_30_to_kokutai_stab
+		}
 	}
 }

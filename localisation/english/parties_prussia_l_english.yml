@@ -395,4 +395,16 @@
  SOV_fascism_ultra:0 "PPP"
  SOV_fascism_ultra_long:0 "Partiya Poryadka i Progressa (Party of Order and Progress)"
 
+ JAP_liberal_democratic_party:0 "LDP"
+ JAP_liberal_democratic_party_long:0 "Jiyū Minshū-tō (Liberal Democratic Party)"
+
+ JAP_japan_liberation_party_party:0 "JLP"
+ JAP_japan_liberation_party_party_long:0 "Zennihon Kaihō-tō (Japan's Liberation Party)"
+
+ JAP_jcp:0 "JCP"
+ JAP_jcp_long:0 "Nihon Kyōsan-tō (Japanese Communist Party)"
+
+ JAP_jsp:0 "JSP"
+ JAP_jsp_long:0 "Nihon Shakai-tō (Japanese Communist Party)"
+
 

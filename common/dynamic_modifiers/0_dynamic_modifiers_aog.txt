@@ -112,3 +112,32 @@ pastoral_society = {
 	monthly_population =  MON_pastoral_pop
 	
 }
+
+japan_post_war_economics = {
+	icon = GFX_idea_JAP_pro_japanese_sentiments
+
+	enable = { always = yes }
+
+	production_speed_buildings_factor = JAP_building_construction_post_war
+	global_building_slots_factor = JAP_building_slots_post_war
+	local_resources_factor = JAP_local_resource_post_war
+	research_speed_factor = JAP_research_post_war
+	consumer_goods_expected_value = JAP_consumer_goods_post_war
+	industrial_capacity_dockyard = JAP_dockyard_prod_post_war
+	industrial_capacity_factory = JAP_arms_factory_prod_post_war
+	monthly_population = JAP_monthly_pop_post_war
+	classical_marxism_drift = JAP_classical_marxism_drift_post_war
+	communism_drift = JAP_communist_drift_post_war
+}
+
+kokutai = {
+	icon = GFX_idea_JAP_kokutai_idea
+
+	enable = { always = yes }
+
+	stability_factor = JAP_stability_factor_kokutai
+	political_power_gain = JAP_political_power_kokutai
+	army_attack_factor = JAP_army_attack_factor_kokutai
+	industrial_capacity_dockyard = JAP_dockyard_prod_kokutai
+	industrial_capacity_factory = JAP_arms_factory_prod_kokutai
+}

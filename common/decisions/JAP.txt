@@ -469,10 +469,19 @@ JAP_1936_elections = {
 				}
 			}
 			JAP = {
-				country_event = {
-					id = jap.44
-					days = 10
+				IF = {
+					limit = {
+						OR = {
+							has_government = ultra_nationalism
+							has_government = fascism
+						}
+					}
 				}
+				add_to_variable = {
+		          var = JAP_stability_factor_kokutai
+		          value = -0.2
+		          tooltip = remove_20_to_kokutai_stab
+		        }
 			}
 		}
 	}
@@ -1140,6 +1149,44 @@ JAP_balance_of_power_category = {
             target = SIA
             type = puppet_wargoal_focus
          }
+        }
+    }
+}
+
+JAP_government_policies_category = {
+	JAP_disband_the_civilian_corps = {
+
+		icon = GFX_decision_jap_pacific_guardian
+        allowed = {
+            tag = JAP
+        }
+        visible = {
+			has_idea = kokumin_giyu_sentotai
+        }
+		available = {
+			has_idea = kokumin_giyu_sentotai
+		}
+        priority = 1000
+
+		cost = 50
+
+		days_remove = 10
+        fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				NOT = {
+					has_war = no
+				}
+			}
+		}
+
+		cost = 50
+
+        complete_effect = {
+         remove_ideas = kokumin_giyu_sentotai
         }
     }
 }

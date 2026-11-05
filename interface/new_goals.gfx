@@ -5,7 +5,12 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_goal_under_the_kaiser"
 	texturefile = "gfx/interface/goals/under_the_kaiser.dds"			
-	}	
+	}
+
+	SpriteType = {
+	name = "GFX_goal_amaterasu_out"
+	texturefile = "gfx/interface/goals/amaterasu_out.dds"			
+	}
 
 	SpriteType = {
 	name = "GFX_goal_under_willikens"

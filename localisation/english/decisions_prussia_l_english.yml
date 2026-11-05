@@ -96,6 +96,8 @@
  JAP_ally_mongolia:0 "Ally Mongolia"
  JAP_ally_siam:0 "Ally Siam"
  JAP_ally_korea:0 "Ally Korea"
+ JAP_government_policies_category:0 "Government Policies"
+ JAP_disband_the_civilian_corps:0 "Disband the Civilian Corps"
  ### france ###
  FRA_french_politics:0 "French Politics"
  FRA_give_damas_to_syria:0 "Transfer Damas to Syria"

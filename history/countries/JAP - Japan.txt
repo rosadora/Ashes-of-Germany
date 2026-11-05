@@ -9,6 +9,14 @@ set_war_support = 0.8
 
 set_research_slots = 4
 set_fuel_ratio = 1.0
+
+add_dynamic_modifier = { modifier = kokutai }
+set_variable = { JAP_stability_factor_kokutai = 0.3 }
+set_variable = { JAP_political_power_kokutai = 0.05 }
+set_variable = { JAP_army_attack_factor_kokutai = 0.02 }
+set_variable = { JAP_dockyard_prod_kokutai = 0.025 }
+set_variable = { JAP_arms_factory_prod_kokutai = 0.025 }
+
 add_ideas = {
 	fading_taisho
 	marginalized_korean_immigration

@@ -30,3 +30,17 @@ JAP_balance_of_power_category = {
 	visible = {
 	}
 }
+
+JAP_government_policies_category = {
+
+	icon = GFX_decision_category_jap_pacific_guardian
+
+	priority = 50
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+}

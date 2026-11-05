@@ -322,6 +322,9 @@ ideologies = {
 
 			social_democracy_category = {
 			}
+
+			asanumism_category = {
+			}
 			
 		}
 

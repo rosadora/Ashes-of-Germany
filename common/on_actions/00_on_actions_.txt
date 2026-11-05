@@ -22,6 +22,51 @@ on_actions = {
 	}
 	on_state_control_changed = {
 		effect = {
+			IF = {
+				limit = {
+					original_tag = JAP 
+					has_dynamic_modifier = kokutai
+					FROM.FROM = {
+						NOT = {
+							has_state_flag = has_been_conquered_by_japan
+						}
+					}
+				}
+				FROM.FROM = {
+			set_state_flag = has_been_conquered_by_japan
+				}
+			country_event = {
+				id = jap.47
+				days = 2
+			}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			IF = {
+				limit = {
+					JAP = {
+						has_dynamic_modifier = kokutai
+					}
+					FROM.FROM = {
+						is_owned_by = JAP
+					}
+				}
+				FROM.FROM = {
+			clr_state_flag = has_been_conquered_by_japan
+				}
+				JAP = {
+			country_event = {
+				id = jap.48
+				days = 2
+			}
+				}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
 			if = {
 		limit = {
 			HUN = {
