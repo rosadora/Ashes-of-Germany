@@ -328,6 +328,8 @@
  NLC_classical_liberalism_DEF:1 "the Italian Liberation Front"
  NLC_social_liberalism:1 "Italian Liberation Front"
  NLC_social_liberalism_DEF:1 "the Italian Liberation Front"
+ NLC_social_democracy:1 "Comitato di Liberazione Nazionale"
+ NLC_social_democracy_DEF:1 "the Comitato di Liberazione Nazionale"
  NLC_neutrality:0 "Italian Kingdom"
  NLC_neutrality_DEF:0 "the Italian Kingdom"
  NLC_communism:1 "Comitato di Liberazione Nazionale"

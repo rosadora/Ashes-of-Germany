@@ -7,7 +7,23 @@ characters = {
 			}
 		}
 
-		#COUNTRY LEADER ROLE IS GIVEN LATER
+		country_leader = {
+			ideology = classical_marxism_category
+			traits = {
+				communist_revolutionary
+			}
+			expire = 1965.1.1.1
+			id = -1
+		}
+
+		country_leader = {
+			ideology = marxism
+			traits = {
+				communist_revolutionary
+			}
+			expire = 1965.1.1.1
+			id = -1
+		}
 	}
 
 	NLC_ferruccio_parri = {
@@ -19,7 +35,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = socialism
+			ideology = social_democracy_category
 			traits = { resistance_leader }
 			expire = "1965.1.1.1"
 			id = -1

@@ -2211,4 +2211,9 @@ spriteTypes = {
 		name = "GFX_goal_generic_investment"
 		texturefile = "gfx/interface/goals/generic_investment.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_feruccio_parri"
+		texturefile = "GFX/interface/goals/feruccio_parri_goal.dds"
+	}
 }

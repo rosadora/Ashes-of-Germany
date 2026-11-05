@@ -27,7 +27,8 @@ create_country_leader = {
 	}
 }
 
-
+recruit_character = NLC_antonio_gramsci
+recruit_character = NLC_ferruccio_parri
 
 
 set_politics = {

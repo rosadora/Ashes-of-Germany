@@ -379,7 +379,7 @@
 			add_stability = -0.05
 		   add_equipment_to_stockpile = {
               type = infantry_equipment
-              amount = 10000
+              amount = 5000
               producer = ILF
             }
 		}

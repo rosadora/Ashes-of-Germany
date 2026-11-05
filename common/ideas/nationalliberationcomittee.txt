@@ -613,5 +613,76 @@ ideas = {
 				stability_factor = -0.15
 			}
 		}
+
+		peasant_councils_NLC = {
+			allowed = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = POL_looming_peasants_strike
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				out_of_supply_factor = -0.15
+			}
+		}
+
+		a_revolution_half_won_NLC = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = revolt_legacy
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				recruitable_population_factor = -0.025
+				war_support_factor = -0.15
+			}
+		}
+
+		a_revolution_half_won_NLC2 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = revolt_legacy
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+		}
+
+		a_revolution_half_won_NLC3 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = revolt_legacy
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.075
+				war_support_factor = -0.075
+			}
+		}
     }
 }

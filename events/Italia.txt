@@ -256,6 +256,7 @@ country_event = { #Italian Civil War Is Over
 	}
 
 	immediate = {
+		add_ideas = a_revolution_half_won_NLC
 	}
 
 	fire_only_once = yes

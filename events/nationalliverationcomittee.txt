@@ -22,3 +22,38 @@ country_event = {
 		name = nlc.1.a
 	}
 }
+
+country_event = {
+	id = nlc.2
+	title = nlc.2.t
+	desc = nlc.2.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+	}
+
+	option = {
+		name = nlc.2.a
+		promote_character = NLC_antonio_gramsci
+		complete_national_focus = NLC_gramsci_as_leader
+	}
+
+	option = {
+		name = nlc.2.b
+		promote_character = NLC_ferruccio_parri
+		set_politics = {
+			ruling_party = social_democracy
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.15
+		}
+		complete_national_focus = NLC_Ferruccio_Parri_as_leader
+	}
+}
