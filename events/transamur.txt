@@ -1,0 +1,43 @@
+﻿###########################
+# Transamur Events
+###########################
+add_namespace = transamur
+
+country_event = {
+	id = transamur.1
+	title = transamur.1.t
+	desc = transamur.1.d
+	picture = GFX_report_event_sanation_left_victory
+
+	is_triggered_only = yes
+
+	option = {
+		name = transamur.1.a
+		ai_chance = {
+			base = 30
+		}
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+		add_popularity = {
+			popularity = 0.1
+			ideology = social_democracy
+		}
+	}
+
+	option = {
+		name = transamur.1.a
+		ai_chance = {
+			base = 30
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		add_popularity = {
+			popularity = 0.1
+			ideology = neutrality
+		}
+	}
+}

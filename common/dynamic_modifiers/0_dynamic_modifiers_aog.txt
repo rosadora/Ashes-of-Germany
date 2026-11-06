@@ -140,4 +140,7 @@ kokutai = {
 	army_attack_factor = JAP_army_attack_factor_kokutai
 	industrial_capacity_dockyard = JAP_dockyard_prod_kokutai
 	industrial_capacity_factory = JAP_arms_factory_prod_kokutai
+	research_speed_factor = JAP_research_speed_kokutai
+	resistance_target_on_our_occupied_states  = JAP_resistance_kokutai
+	compliance_gain  = JAP_compliance_kokutai
 }

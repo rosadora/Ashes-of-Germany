@@ -1101,6 +1101,11 @@ ideas = {
 
 			available = {
 				has_war = yes
+				OR = {
+					has_government = classical_marxism
+					has_government = communism 
+					has_government = libertarian_socialism
+				}
 			}
 
 			picture = generic_disjointed_gov

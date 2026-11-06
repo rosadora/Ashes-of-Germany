@@ -4935,11 +4935,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			PRS = {
 				is_puppet = no
@@ -4977,11 +4972,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			OR = {
 				country_exists = USR 
@@ -5052,11 +5042,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			has_army_manpower = {
 				size > 600000
@@ -5111,11 +5096,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			has_army_manpower = {
 				size > 1000000
@@ -5148,11 +5128,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			has_army_manpower = {
 				size > 1200000
@@ -5182,11 +5157,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			has_army_manpower = {
 				size > 1200000
@@ -5282,11 +5252,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			MAN = {
 				is_puppet_of = JAP
@@ -5328,11 +5293,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -5357,11 +5317,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			has_army_manpower = {
 				size > 1000000
@@ -5411,11 +5366,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			has_tech = excavation1
 			564 = {
@@ -5483,11 +5433,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			562 = {
 				is_controlled_by_ROOT_or_ally = yes
@@ -5548,11 +5493,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			219 = {
 				is_controlled_by_ROOT_or_ally = yes
@@ -5585,11 +5525,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -5774,11 +5709,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 			335 = {
 				is_controlled_by_ROOT_or_ally = yes
@@ -5816,6 +5746,11 @@
 		     value = 0.05
 		     tooltip = JAP_army_attack_factor_gain_05
 		    }
+			add_to_variable = {
+		     var = JAP_stability_factor_kokutai
+		     value = 0.3
+		     tooltip = add_30_to_kokutai_stab
+		    }
 		}
 	}
 	focus = {
@@ -5830,11 +5765,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -5863,11 +5793,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -5892,11 +5817,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -5933,11 +5853,6 @@
 		}
 		available = {
 			is_special_project_completed = sp:sp_rocket_interceptor
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -5972,11 +5887,6 @@
 			factor = 2
 		}
 		available = {
-			OR = {
-				has_government = ultra_nationalism
-				has_government = neutrality 
-				has_government = fascism
-			}
 			is_puppet = no
 		}
 		bypass = {
@@ -6302,18 +6212,6 @@
 			swap_ideas = {
 				remove_idea = JAP_militarism
 				add_idea = JAP_militarism_shogunate
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_to_variable = {
 		     var = JAP_army_attack_factor_kokutai
@@ -6864,7 +6762,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = -100
 			add_popularity = {
 				ideology = communism 
 				popularity = -0.075
@@ -6873,6 +6771,11 @@
 				ideology = classical_marxism 
 				popularity = -0.1
 			}
+			add_to_variable = {
+		     var = JAP_political_power_kokutai
+		     value = 0.1
+		     tooltip = add_10_to_kokutai_political_power
+		    }
 		}
 	}
 	focus = {
@@ -7050,6 +6953,16 @@
 			remove_idea = state_shintoism
 			add_idea = pluralism
 		 }
+		 add_to_variable = {
+			      var = JAP_stability_factor_kokutai
+			      value = -0.1
+			      tooltip = remove_10_to_kokutai_stab
+		    }
+			add_to_variable = {
+			      var = JAP_research_speed_kokutai
+			      value = 0.05
+			      tooltip = add_05_to_kokutai_resarch
+		    }
 		}
 	}
 	focus = {
@@ -7080,6 +6993,11 @@
 			remove_idea = marginalized_korean_immigration
 			add_idea = coexistence_with_koreans
 		 }
+		 add_to_variable = {
+			      var = JAP_compliance_kokutai
+			      value = 0.01
+			      tooltip = add_01_to_compliance_kokutai
+		    }
 		}
 	}
 	focus = {
@@ -7194,6 +7112,11 @@
 			remove_idea = fading_taisho
 			add_idea = fading_taisho3
 		 }
+		 add_to_variable = {
+			      var = JAP_stability_factor_kokutai
+			      value = 0.05
+			      tooltip = add_5_to_kokutai_stab
+		    }
 		}
 	}
 	focus = {
@@ -7355,8 +7278,12 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		 add_stability = 0.1
 		 add_political_power = 75
+		 add_to_variable = {
+			      var = JAP_stability_factor_kokutai
+			      value = 0.1
+			      tooltip = add_10_to_kokutai_stab
+		    }
 		}
 	}
 	focus = {
@@ -7392,7 +7319,7 @@
 		icon = GFX_focus_JAP_ignite_the_korean_peninsula
 		x = -3
 		y = 1
-		prerequisite = {focus = JAP_attract_foreign_scientists}
+		prerequisite = {focus = JAP_attract_foreign_scientists focus = JAP_exploit_korean_cheap_labour}
 		relative_position_id = JAP_attract_foreign_scientists
 		cost = 5
 		ai_will_do = {
@@ -7400,13 +7327,6 @@
 		}
 		available = {
 			has_civil_war = no
-			has_completed_focus = JAP_cooperation_for_democratization_guarantees
-			OR = {
-			has_government = democratic
-			has_government = social_democracy
-			has_government = social_liberalism
-			has_government = classical_liberalism
-			}
 			NOT = {
 				has_idea = fading_taisho
 			}

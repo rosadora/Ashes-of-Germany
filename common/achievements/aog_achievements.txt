@@ -248,11 +248,14 @@ inishie_no_okite_wa_iwao_yori_katashi = {
 	}
 	
 	happened = {
+		custom_trigger_tooltip = {
+				tooltip = JAP_has_kokutai_100_stability
 		check_variable = { 
 			var = JAP_stability_factor_kokutai
 			value = 100
 			compare = greater_than_or_equals
 	    }
+		}
 	}
 }
 

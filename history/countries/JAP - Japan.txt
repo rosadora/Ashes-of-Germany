@@ -16,6 +16,9 @@ set_variable = { JAP_political_power_kokutai = 0.05 }
 set_variable = { JAP_army_attack_factor_kokutai = 0.02 }
 set_variable = { JAP_dockyard_prod_kokutai = 0.025 }
 set_variable = { JAP_arms_factory_prod_kokutai = 0.025 }
+set_variable = { JAP_research_speed_kokutai = -0.025 }
+set_variable = { JAP_resistance_kokutai = 0.05 }
+set_variable = { JAP_compliance_kokutai = -0.01 }
 
 add_ideas = {
 	fading_taisho

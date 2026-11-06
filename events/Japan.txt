@@ -1176,7 +1176,7 @@ country_event = {
 	option = { #It's a matter of security, Korea is Japanese now, but we will integrate them fully into Japan
 		name = jap.43.a
 		ai_chance = {
-			base = 10
+			base = 1
 			modifier = {
 				factor = 10
 				OR = {
@@ -1198,12 +1198,17 @@ country_event = {
 		add_state_core = 969
 		add_state_core = 970
 		news_event = news.3097
+		add_to_variable = {
+			var = JAP_stability_factor_kokutai
+			value = 0.05
+			tooltip = add_05_to_kokutai_stab
+		}
 	}
 
 	option = { #We should grant them some autonomy
 		name = jap.43.b
 		ai_chance = {
-			base = 10
+			base = 1
 			modifier = {
 				factor = 10
 				OR = {
@@ -1232,15 +1237,60 @@ country_event = {
             }
 			inherit_technology = JAP
 		}
+		IF = {
+			limit = {
+				JAP = {
+					OR = {
+						has_government = ultra_nationalism
+						has_government = fascism
+					}
+				}
+			}
+			KOR = {
+				create_country_leader = {
+	             name = "Jirō Minami"
+	             desc = ""
+	             picture = "gfx/leaders/KOR/Jiro_Minami.dds"
+	             expire = "1965.1.1"
+	             ideology = ultra_nationalism_category
+	             traits = {
+	             }
+                }
+				create_country_leader = {
+	             name = "Jirō Minami"
+	             desc = ""
+	             picture = "gfx/leaders/KOR/Jiro_Minami.dds"
+	             expire = "1965.1.1"
+	             ideology = fascism_ideology
+	             traits = {
+	             }
+                }
+				set_party_name = {
+                  ideology = ultra_nationalism
+                  long_name = KOR_jap_authority_long
+                  name = KOR_jap_authority
+                }
+				set_party_name = {
+                  ideology = fascism
+                  long_name = KOR_jap_authority_long
+                  name = KOR_jap_authority
+                }
+				}
+		}
 		news_event = news.3098
+		    add_to_variable = {
+			    var = JAP_compliance_kokutai
+			    value = 0.01
+			    tooltip = add_01_to_compliance_kokutai
+		    }
 	}
 
 	option = { #We should grant them independance
 		name = jap.43.c
 		ai_chance = {
-			base = 10
+			base = 0
 			modifier = {
-				factor = 2
+				factor = 1
 				OR = {
 					has_government = social_democracy
 			        has_government = social_liberalism
@@ -1249,6 +1299,11 @@ country_event = {
 		}
 		release = KOR
 		news_event = news.3099
+		add_to_variable = {
+			    var = JAP_compliance_kokutai
+			    value = 0.01
+			    tooltip = add_01_to_compliance_kokutai
+		    }
 	}
 }
 # The Empire's Sunset
@@ -1260,22 +1315,14 @@ country_event = {
 
 	trigger = {
 		tag = JAP
-		has_dynamic_modifier = {
-         modifier = kokutai
-         scope = JAP
-        }
+		has_dynamic_modifier = kokutai
 		check_variable = {
          JAP_stability_factor_kokutai < 0
         }
 	}
 
-	fire_only_once = yes
-	
-	option = { #Japan has fallen
-		name = jap.44.a
-		ai_chance = {
-			base = 10
-		}
+	immediate = {
+		hidden_effect = {
 		news_event = news.3100
 		set_global_flag = japan_sunset
 		add_popularity = {
@@ -1405,6 +1452,46 @@ country_event = {
             }
         }
 		mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = { #Japan has fallen
+	   name = jap.44.a
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = { #Play as Kyushu
+	   name = jap.44.b
+		ai_chance = {
+			base = 0
+		}
+		KYU = {
+		change_tag_from = JAP
+		}
+	}
+
+	option = { #Play as Shikoku
+	   name = jap.44.c
+		ai_chance = {
+			base = 0
+		}
+		SHI = {
+		change_tag_from = JAP
+		}
+	}
+
+	option = { #Play as Ainu
+	   name = jap.44.e
+		ai_chance = {
+			base = 0
+		}
+		ANU = {
+		change_tag_from = JAP
+		}
 	}
 }
 # American Occupation
@@ -1550,8 +1637,8 @@ country_event = {
 		}
 		add_to_variable = {
 		    var = JAP_stability_factor_kokutai
-		    value = -0.05
-		    tooltip = remove_05_to_kokutai_stab
+		    value = -0.01
+		    tooltip = remove_1_to_kokutai_stab
 		}
 	}
 }
@@ -1564,7 +1651,7 @@ country_event = {
 
 	trigger = {
 		original_tag = JAP
-		has_idea = kokutai
+		has_dynamic_modifier = kokutai
 		NOT = {
 			controls_state = 282
 		}
@@ -1593,7 +1680,7 @@ country_event = {
 
 	trigger = {
 		original_tag = JAP
-		has_idea = kokutai
+		has_dynamic_modifier = kokutai
 		casualties > 100000
 	}
 
@@ -1620,7 +1707,7 @@ country_event = {
 
 	trigger = {
 		original_tag = JAP
-		has_idea = kokutai
+		has_dynamic_modifier = kokutai
 		casualties > 500000
 	}
 
@@ -1647,7 +1734,7 @@ country_event = {
 
 	trigger = {
 		original_tag = JAP
-		has_idea = kokutai
+		has_dynamic_modifier = kokutai
 		casualties > 1000000
 	}
 
@@ -1674,7 +1761,7 @@ country_event = {
 
 	trigger = {
 		original_tag = JAP
-		has_idea = kokutai
+		has_dynamic_modifier = kokutai
 		casualties > 2000000
 	}
 
@@ -1701,7 +1788,7 @@ country_event = {
 
 	trigger = {
 		original_tag = JAP
-		has_idea = kokutai
+		has_dynamic_modifier = kokutai
 		casualties > 5000000
 	}
 
@@ -1716,6 +1803,116 @@ country_event = {
 		    var = JAP_stability_factor_kokutai
 		    value = -0.3
 		    tooltip = remove_30_to_kokutai_stab
+		}
+	}
+}
+# Japan has capitulated a minor country
+country_event = {
+	id = jap.55
+	title = jap.55.t
+	desc = jap.55.d
+	picture = GFX_report_event_JAP_communists_arrested
+
+	is_triggered_only = yes
+	
+	option = { #Good day for the empire
+		name = jap.55.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = 0.03
+		    tooltip = add_03_to_kokutai_stab
+		}
+	}
+}
+# Japan has capitulated a major country
+country_event = {
+	id = jap.56
+	title = jap.56.t
+	desc = jap.56.d
+	picture = GFX_report_event_JAP_communists_arrested
+
+	is_triggered_only = yes
+	
+	option = { #Triumph for the empire
+		name = jap.56.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = 0.1
+		    tooltip = add_10_to_kokutai_stab
+		}
+	}
+}
+# Lack of War Support
+country_event = {
+	id = jap.57
+	title = jap.57.t
+	desc = jap.57.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = { #We need to change that
+		name = jap.57.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.01
+		    tooltip = remove_1_to_kokutai_stab
+		}
+	}
+}
+# Kokutai Abandonned
+country_event = {
+	id = jap.58
+	title = jap.58.t
+	desc = jap.58.d
+	picture = GFX_report_event_JAP_workers_celebrating
+
+	trigger = {
+		has_dynamic_modifier = kokutai
+		OR = {
+			has_government = communism
+			has_government = classical_marxism
+			has_government = libertarian_socialism
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = { #Down with the Kokutai, Japan is Red
+		name = jap.58.a
+		ai_chance = {
+			base = 10
+		}
+		remove_dynamic_modifier = { modifier = kokutai }
+	}
+}
+# Japan loses control of a core state
+country_event = {
+	id = jap.59
+	title = jap.59.t
+	desc = jap.59.d
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+	
+	option = { #Sunset is near
+		name = jap.59.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_variable = {
+		    var = JAP_stability_factor_kokutai
+		    value = -0.05
+		    tooltip = remove_05_to_kokutai_stab
 		}
 	}
 }

@@ -1,4 +1,73 @@
 on_actions = {
+	on_new_term_election = {
+		effect = {
+			IF = {
+			limit = {
+				tag = FER 
+			}
+			country_event = {
+				id = transamur.1
+				days = 1
+			}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			IF = {
+				limit = {
+					tag = ROOT
+					JAP = {
+						has_dynamic_modifier = kokutai
+						has_war_with = ROOT
+					}
+					ROOT = {
+						is_major = no
+					}
+				}
+				JAP = {
+				country_event = {
+					id = jap.55
+					days = 1
+				}
+				}
+			}
+			IF = {
+				limit = {
+					tag = ROOT
+					JAP = {
+						has_dynamic_modifier = kokutai
+						has_war_with = ROOT
+					}
+					ROOT = {
+						is_major = yes
+					}
+				}
+				JAP = {
+				country_event = {
+					id = jap.56
+					days = 1
+				}
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			IF = {
+				limit = {
+					tag = JAP 
+					has_dynamic_modifier = kokutai
+					has_war_support < 0.5
+					has_war = yes
+				}
+				country_event = {
+					id = jap.57
+					days = 1
+				}
+			}
+		}
+	}
 	on_monthly = {
 		effect = {
 			every_country = {
@@ -26,14 +95,6 @@ on_actions = {
 				limit = {
 					original_tag = JAP 
 					has_dynamic_modifier = kokutai
-					FROM.FROM = {
-						NOT = {
-							has_state_flag = has_been_conquered_by_japan
-						}
-					}
-				}
-				FROM.FROM = {
-			set_state_flag = has_been_conquered_by_japan
 				}
 			country_event = {
 				id = jap.47
@@ -51,14 +112,31 @@ on_actions = {
 					}
 					FROM.FROM = {
 						is_owned_by = JAP
+						NOT = {
+							is_core_of = JAP
+						}
 					}
-				}
-				FROM.FROM = {
-			clr_state_flag = has_been_conquered_by_japan
 				}
 				JAP = {
 			country_event = {
 				id = jap.48
+				days = 2
+			}
+				}
+			}
+			IF = {
+				limit = {
+					JAP = {
+						has_dynamic_modifier = kokutai
+					}
+					FROM.FROM = {
+						is_owned_by = JAP
+						is_core_of = JAP
+					}
+				}
+				JAP = {
+			country_event = {
+				id = jap.59
 				days = 2
 			}
 				}

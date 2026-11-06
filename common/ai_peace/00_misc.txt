@@ -141,18 +141,6 @@ peace_ai_desires = {
 
     ### The above trigger looks extremely harsh. In reality, this means the AI is more inclined to step through nearby land without bunny hopping and potentially leaving gaps.
 
-    democracy_force_government_on_austria = {
-        peace_action_type = force_government
-        enable = {
-            is_historical_focus_on = yes
-            is_major = yes
-            ROOT = { has_government = democratic }
-            ROOT.FROM = { tag = AUS }
-            ROOT.FROM.FROM.FROM = { is_core_of = AUS }
-        }
-        ai_desire = 100
-    }
-
     fascist_majors_on_a_mission = {
         peace_action_type = take_states
         enable = {
@@ -215,7 +203,7 @@ peace_ai_desires = {
                 is_unlikely_country_tag = yes
             }
         }
-        ai_desire = -50  # 50 percent lower desire (slightly more keen to puppet than to liberate)
+        ai_desire = 10  # 50 percent lower desire (slightly more keen to puppet than to liberate)
     }
 
 
@@ -464,64 +452,24 @@ peace_ai_desires = {
     liberate_on_non_core = {
         peace_action_type = liberate
         enable = {
-            ROOT = { has_government = democratic }
             ROOT.FROM.FROM.FROM = {
                 NOT = { is_core_of = ROOT.FROM.FROM }
             }
         }
 
-        ai_desire = 20
-    }
-
-
-    try_and_take_neighbors_when_forcing_gov = { #Leaving here; this has unintended consequences, but we need it for SOV
-        peace_action_type = { force_government puppet }
-        enable = {
-            ROOT = { has_government = democratic }
-            ROOT.FROM.FROM = { original_tag = SOV }
-            ROOT.FROM.FROM.FROM = {
-                any_neighbor_state = {
-                    OR = {
-                        pc_is_state_claimed_by = ROOT.FROM
-                        pc_is_state_claimed_by = ROOT
-                    }
-                }
-            }
-        }
-
-        ai_desire = 50
-    }
-
-    dont_take_land_if_sov_government_is_forced = {
-        peace_action_type = { take_states puppet }
-        enable = {
-            ROOT = { has_government = democratic }
-            ROOT.FROM.FROM = {
-                original_tag = SOV
-                pc_is_forced_government = yes
-            }
-            ROOT.FROM.FROM.FROM = {
-                NOT = { is_claimed_by = ROOT.FROM }
-            }
-        }
-
-        ai_desire = -50
+        ai_desire = -5
     }
 
 
     liberate_if_already_exists = {
         peace_action_type = liberate
         enable = {
-            ROOT = { has_government = democratic }
-            ROOT.FROM = {
-                pc_is_liberated = yes
-            }
             ROOT.FROM.FROM.FROM = {
                 is_core_of = ROOT.FROM
             }
         }
 
-        ai_desire = 100
+        ai_desire = -5
     }
 
 
@@ -634,18 +582,6 @@ peace_ai_desires = {
     }
 
 
-    dont_resurrect_hitler = {
-        peace_action_type = liberate
-        enable = {
-            ROOT.FROM = {
-                original_tag = GER
-                has_government = fascism
-            }
-        }
-        ai_desire = -100
-    }
-
-
     dont_take_states_for_wrong_ideology_allies = {
         peace_action_type = take_states
         enable = {
@@ -659,23 +595,6 @@ peace_ai_desires = {
             }
         }
         ai_desire = -20
-    }
-
-
-    fascism_take_states_germany_sov = {
-        peace_action_type = take_states
-        enable = {
-            ROOT = {
-                tag = ROOT.FROM
-            }
-            ROOT = {
-                has_government = fascism
-            }
-            ROOT.FROM.FROM = {
-                tag = SOV
-            }
-        }
-        ai_desire = 25
     }
 
 
@@ -789,37 +708,6 @@ peace_ai_desires = {
             }
         }
         ai_desire = 70 #Acceptable values
-    }
-
-    allies_dont_liberate_on_sov = {
-        peace_action_type = { liberate puppet }
-        enable = {
-            ROOT = {
-                OR = {
-                    has_government = democratic
-                    has_government = neutrality
-                }
-            }
-            ROOT.FROM.FROM = {
-                tag = SOV
-                is_major = yes
-            }
-        }
-        ai_desire = -50
-    }
-
-    allies_force_gov_on_sov = {
-        peace_action_type = force_government
-        enable = {
-            ROOT = {
-                has_government = democratic
-            }
-            ROOT.FROM.FROM = {
-                tag = SOV
-                is_major = yes
-            }
-        }
-        ai_desire = 30
     }
 
     civil_war_participants_dont_accept_each_other = {

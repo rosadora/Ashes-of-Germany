@@ -289,10 +289,6 @@ southern_expansion = {
 	}
 	enable = {
 		OR = {
-			has_government = fascism 
-			has_government = ultra_nationalism
-		}
-		OR = {
 			country_exists = HOL
 			country_exists = ENG
 		}
@@ -321,9 +317,10 @@ northern_expansion = {
 		original_tag = JAP
 	}
 	enable = {
-		OR = {
-			has_government = fascism 
-			has_government = ultra_nationalism
+		NOT = {
+			has_government = communism 
+			has_government = classical_marxism
+			has_government = libertarian_socialism
 		}
 	}
 

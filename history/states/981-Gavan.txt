@@ -1,0 +1,18 @@
+state={
+	id=981
+	name="STATE_981"
+	history={
+		owner = FER
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = FER
+		add_core_of = SOV
+	}
+	provinces={
+		1267 1325 1343 1397 4404 4841 6774 7249 7309 7868 9589 9604 9733 9749 11575 11719 12136 
+	}
+	manpower=110000
+	buildings_max_level_factor=1
+	local_supplies=0
+}
