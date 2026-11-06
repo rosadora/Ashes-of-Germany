@@ -57,3 +57,31 @@ country_event = {
 		complete_national_focus = NLC_Ferruccio_Parri_as_leader
 	}
 }
+
+country_event = {
+	id = nlc.3
+	title = nlc.3.t
+	desc = nlc.3.d
+	picture = GFX_report_event_tur_ataturk_inonu_parliament
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Execute Him!"
+		add_political_power = 150
+	}
+
+	option = {
+		name = "Imprison Him!"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+
+	option = {
+		name = "Let him Leave"
+		add_stability = 0.1
+		add_political_power = 50
+	}
+
+}

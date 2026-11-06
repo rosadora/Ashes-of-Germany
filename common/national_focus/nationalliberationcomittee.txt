@@ -1644,31 +1644,302 @@ focus = {
 		id = NLC_establish_peasant_councils
 		icon = GFX_focus_ITA_peasants_rise
 		cost = 10
-		x = 3
+		x = -3
 		y = 1
 		relative_position_id = NLC_gramsci_as_leader
 		prerequisite = {
 			focus = NLC_gramsci_as_leader
 		}
-		mutually_exclusive = {
-			focus = NLC_exile_dissidents
-		}
 		completion_reward = {
 			add_ideas = peasant_councils_NLC
 		 }
 	}
+	focus = {
+    id = NLC_union_between_factories_and_farmers
+    icon = GFX_focus_eng_concessions_to_the_trade_unions
+    x = 0
+    y = 1
+	cost = 10
+    relative_position_id = NLC_establish_peasant_councils
+    prerequisite = { focus = NLC_establish_peasant_councils }
+    completion_reward = {
+		add_ideas = union_between_factories_and_farmers_NLC1
+	 }
+}
+
+focus = {
+    id = NLC_non_discriminary_factories
+    icon = GFX_goal_womens_rights
+    relative_position_id = NLC_union_between_factories_and_farmers
+    x = -1
+    y = 1
+	cost = 7
+    prerequisite = { focus = NLC_union_between_factories_and_farmers }
+    completion_reward = {
+		add_ideas = total_equality
+		add_political_power = 120
+	 }
+}
+
+focus = {
+    id = NLC_restore_democratic_ideals
+    icon = GFX_focus_generic_social_democracy
+    relative_position_id = NLC_union_between_factories_and_farmers
+    x = 1
+    y = 1
+	cost = 7
+    prerequisite = { focus = NLC_union_between_factories_and_farmers }
+    completion_reward = {
+		add_ideas = legalized_opposition_NLC
+	 }
+}
+
+focus = {
+    id = NLC_disband_the_council
+    icon = GFX_focus_SWI_dissolve_the_federal_council
+    relative_position_id = NLC_non_discriminary_factories
+    x = -2
+    y = 2
+	cost = 10
+	mutually_exclusive = {
+		focus = NLC_empower_the_council
+	}
+    prerequisite = { focus = NLC_non_discriminary_factories }
+    completion_reward = {
+		remove_ideas = the_communist_council
+	 }
+}
+
+focus = {
+    id = NLC_deal_with_fascist_opposition
+    icon = GFX_focus_generic_anti_fascist_diplomacy
+    relative_position_id = NLC_non_discriminary_factories
+    x = 1
+    y = 1
+	cost = 10
+    prerequisite = { focus = NLC_non_discriminary_factories focus = NLC_restore_democratic_ideals }
+    completion_reward = {
+		remove_ideas = fascist_opposition_NLC
+	 }
+}
+
+focus = {
+    id = NLC_empower_the_council
+    icon = GFX_focus_ITA_communist_leadership
+    relative_position_id = NLC_restore_democratic_ideals
+    x = 2
+    y = 2
+	cost = 10
+	mutually_exclusive = {
+		focus = NLC_disband_the_council
+	}
+    prerequisite = { focus = NLC_restore_democratic_ideals }
+    completion_reward = {
+		swap_ideas = {
+			add_idea = the_communist_council2
+			remove_idea = the_communist_council
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Antonio Gramsci"
+				traits = {
+				communist_revolutionary
+				undermined_by_council_gramsci
+			}
+			expire = 1965.1.1.1
+				picture = GFX_portrait_ITA_antonio_gramsci
+				ideology = classical_marxism_category
+			}
+
+			create_country_leader = {
+				name = "Antonio Gramsci"
+				traits = {
+				communist_revolutionary
+				undermined_by_council_gramsci
+			}
+			expire = 1965.1.1.1
+				picture = GFX_portrait_ITA_antonio_gramsci
+				ideology = marxism
+			}
+		}
+	 }
+}
+
+focus = {
+    id = NLC_8
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_disband_the_council
+    x = 0
+    y = 1
+    prerequisite = { focus = NLC_disband_the_council }
+    prerequisite = {
+        focus = NLC_deal_with_fascist_opposition
+    }
+    completion_reward = { }
+}
+
+focus = {
+	id = NLC_14
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_8
+    x = -1
+    y = 1
+    prerequisite = { focus = NLC_8 }
+    completion_reward = { }
+}
+
+
+focus = {
+	id = NLC_15
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_deal_with_Gramsci
+    x = 1
+    y = 1
+    prerequisite = { focus = NLC_deal_with_Gramsci }
+    completion_reward = { }
+}
+
+
+focus = {
+	id = NLC_16
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_14
+    x = -1
+    y = 1
+    prerequisite = { focus = NLC_14 }
+    completion_reward = { }
+}
+
+
+focus = {
+	id = NLC_17
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_15
+    x = 1
+    y = 1
+    prerequisite = { focus = NLC_15 }
+    completion_reward = { }
+}
+
+
+focus = {
+	id = NLC_18
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_14
+    x = 1
+    y = 1
+    prerequisite = { focus = NLC_14 }
+	prerequisite = {
+		focus = NLC_11
+	}
+    completion_reward = { }
+}
+
+
+focus = {
+	id = NLC_19
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_15
+    x = -1
+    y = 1
+    prerequisite = { focus = NLC_15 }
+	prerequisite = {
+		focus = NLC_12
+	}
+    completion_reward = { }
+}
+
+focus = {
+    id = NLC_9
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_12
+    x = -1
+    y = 1
+    prerequisite = { focus = NLC_12 }
+    completion_reward = { }
+}
+
+focus = {
+    id = NLC_deal_with_Gramsci
+    icon = GFX_goal_deal_with_Gramsci
+    relative_position_id = NLC_empower_the_council
+    x = 0
+    y = 1
+	cost = 10
+    prerequisite = { focus = NLC_empower_the_council }
+    prerequisite = {
+        focus = NLC_deal_with_fascist_opposition
+    }
+    completion_reward = {
+		custom_effect_tooltip = deposition_of_gramsci_TT
+		hidden_effect = {
+			country_event = {
+				id = nlc.3
+				days = 3
+			}
+			remove_ideas = the_communist_council
+			create_country_leader = {
+			name = "Comitato di Liberazione Nazionale"
+			desc = "POLITICS_OTTO_WELS_DESC"
+			picture = "gfx/leaders/NLC/portrait_ITA_cln.dds"
+			expire = "1960.1.16"
+			ideology = classical_marxism_category
+			traits = {
+			}
+		}
+
+		create_country_leader = {
+			name = "Comitato di Liberazione Nazionale"
+			desc = "POLITICS_OTTO_WELS_DESC"
+			picture = "gfx/leaders/NLC/portrait_ITA_cln.dds"
+			expire = "1960.1.16"
+			ideology = marxism
+			traits = {
+			}
+		}
+		}
+		
+	 }
+}
+
+focus = {
+    id = NLC_11
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_8
+    x = 1
+    y = 1
+    prerequisite = { focus = NLC_8 }
+    completion_reward = { }
+}
+
+focus = {
+    id = NLC_12
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_deal_with_Gramsci
+    x = -1
+    y = 1
+    prerequisite = { focus = NLC_deal_with_Gramsci }
+    completion_reward = { }
+}
+
+focus = {
+    id = NLC_13
+    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+    relative_position_id = NLC_11
+    x = 1
+    y = 1
+    prerequisite = { focus = NLC_11 }
+    completion_reward = { }
+}
 
 	focus = {
 		id = NLC_exile_dissidents
 		icon = GFX_focus_generic_government_in_exile
 		cost = 10
-		x = -3
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = NLC_gramsci_as_leader
-		}
-		mutually_exclusive = {
-			focus = NLC_establish_peasant_councils
 		}
 		relative_position_id = NLC_gramsci_as_leader
 		completion_reward = {
@@ -1686,7 +1957,7 @@ focus = {
 		id = NLC_deal_with_resistance1
 		icon = GFX_goal_resistance
 		cost = 4
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = {
 			focus = NLC_exile_dissidents
@@ -1715,13 +1986,22 @@ focus = {
 		id = NLC_deal_with_resistance2
 		icon = GFX_focus_ARG_keep_it_in_the_party
 		cost = 4
-		x = -2
+		x = -1
 		y = 1
 		prerequisite = {
 			focus = NLC_exile_dissidents
 		}
 		relative_position_id = NLC_exile_dissidents
 		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = classical_marxism
+				popularity = 0.05
+			}
 			if = {
 				limit = {
 					has_idea = a_revolution_half_won_NLC2
@@ -1739,297 +2019,6 @@ focus = {
 			}
 		 }
 	}
-
-
-	
-focus = {
-    id = NLC_2
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    x = 0
-    y = 1
-	relative_position_id = NLC_exile_dissidents
-    prerequisite = { focus = NLC_exile_dissidents }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_3
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_2
-    x = -1
-    y = 1
-    prerequisite = { focus = NLC_2 }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_4
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_2
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_2 }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_5
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_3
-    x = -1
-    y = 1
-    prerequisite = { focus = NLC_3 }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_6
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_3
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_3  }
-	prerequisite = {
-		focus = NLC_4
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_7
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_4
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_4 }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_8
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_5
-    x = 0
-    y = 1
-    prerequisite = { focus = NLC_5 }
-	prerequisite = {
-		focus = NLC_6
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_9
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_6
-    x = 0
-    y = 1
-    prerequisite = { focus = NLC_5 }
-	prerequisite = {
-		focus = NLC_6
-	}
-	prerequisite = {
-		focus = NLC_7
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_10
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_7
-    x = 0
-    y = 1
-    prerequisite = { focus = NLC_7 }
-	prerequisite = {
-		focus = NLC_6
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_11
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_8
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_8 }
-	prerequisite = {
-		focus = NLC_9
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_12
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_10
-    x = -1
-    y = 1
-    prerequisite = { focus = NLC_10 }
-	prerequisite = {
-		focus = NLC_9
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_13
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_11
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_11 }
-	prerequisite = {
-		focus = NLC_12
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_reconcile_with_the_people
-    icon = GFX_focus_GER_the_peoples_victory
-    x = 0
-    y = 1
-	cost = 10
-	relative_position_id = NLC_establish_peasant_councils
-    prerequisite = {focus = NLC_establish_peasant_councils }
-    completion_reward = {
-		remove_ideas = a_revolution_half_won_NLC
-	 }
-}
-
-focus = {
-    id = NLC_15
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_reconcile_with_the_people
-    x = -1
-    y = 1
-    prerequisite = { focus = NLC_reconcile_with_the_people }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_16
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_reconcile_with_the_people
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_reconcile_with_the_people }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_17
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_15
-    x = -1
-    y = 1
-    prerequisite = { focus = NLC_15 }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_18
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_15
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_15 }
-	prerequisite = {
-		focus = NLC_16
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_19
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_16
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_16 }
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_20
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_17
-    x = 0
-    y = 1
-    prerequisite = { focus = NLC_17 }
-	prerequisite = {
-		focus = NLC_18
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_21
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_18
-    x = 0
-    y = 1
-    prerequisite = { focus = NLC_17  }
-	prerequisite = {
-		 focus = NLC18
-	}
-	prerequisite = {
-		focus = NLC_19
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_22
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_19
-    x = 0
-    y = 1
-    prerequisite = { focus = NLC_19 }
-	prerequisite = {
-		focus = NLC_18
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_23
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_20
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_20 }
-	prerequisite = {
-		focus = NLC_21
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_24
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_22
-    x = -1
-    y = 1
-    prerequisite = { focus = NLC_22 }
-	prerequisite = {
-		focus = NLC_21
-	}
-    completion_reward = { }
-}
-
-focus = {
-    id = NLC_25
-    icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
-    relative_position_id = NLC_23
-    x = 1
-    y = 1
-    prerequisite = { focus = NLC_23 focus = NLC_24 }
-    completion_reward = { }
-}
-
 
 
 	focus = {

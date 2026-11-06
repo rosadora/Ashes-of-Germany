@@ -1693,6 +1693,8 @@
  flee_from_italy_desc:0 "The Italian Leader, Mussolini, has fled from the Italian Peninsula to Libya."
  sunset_on_italian_fascism:0 "Fascism's Sunset"
  ### NLC ###
+ deposition_of_gramsci_TT:0 "Antonio Gramsci will be deposed as the head of the council upon completing this focus!"
+ the_commune_NLC:0 "The Italian Commune"
  illegitimate_government_CIVILWAR:0 "Illegitimate Government"
  revitalize_the_economy_NLC:0 "Revitalizing the Economy"
  revitalize_the_economy_NLC_desc:0 ""
@@ -1735,3 +1737,9 @@
  a_revolution_half_won_NLC3:0 "A Revolution Half Won"
  a_revolution_half_won_NLC3_desc:0 "Although the revolution was won on the military front, this dosent mean we have won on the side of the people."
  peasant_councils_NLCL:0 "Peasant Councils"
+ union_between_factories_and_farmers_NLC1:0 "Union Between Factories and Farmers"
+ legalized_opposition_NLC:0 "Legalized Opposition"
+ fascist_opposition_NLC:0 "Underground Fascist Opposition"
+ fascist_opposition_NLC_desc:0 "Although beaten millitarily, the fascists in the nation still resist communist rule."
+ the_communist_council:0 "The Communist Commune"
+ the_communist_council2:0 "Empowered Communist Council"

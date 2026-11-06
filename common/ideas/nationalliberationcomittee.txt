@@ -684,5 +684,101 @@ ideas = {
 				war_support_factor = -0.075
 			}
 		}
+
+		union_between_factories_and_farmers_NLC1 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_heavy
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				out_of_supply_factor = -0.25
+			}
+		}
+
+		legalized_opposition_NLC = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.01
+				social_democracy_drift = 0.01
+				social_liberalism_drift = 0.01
+				classical_liberalism_drift = 0.01
+				stability_factor = 0.15
+			}
+		}
+
+		fascist_opposition_NLC = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_fascism_drift_bonus
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.02
+				ultra_nationalism_drift = 0.02
+				stability_factor = -0.15
+			}
+		}
+
+		the_communist_council = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.01
+				classical_marxism_drift = 0.01
+				stability_factor = 0.05
+			}
+		}
+
+		the_communist_council2 = {
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.03
+				classical_marxism_drift = 0.03
+				stability_factor = 0.1
+			}
+		}
     }
 }

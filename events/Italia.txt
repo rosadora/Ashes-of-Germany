@@ -256,7 +256,11 @@ country_event = { #Italian Civil War Is Over
 	}
 
 	immediate = {
-		add_ideas = a_revolution_half_won_NLC
+		hidden_effect = {
+			add_ideas = a_revolution_half_won_NLC
+			add_ideas = fascist_opposition_NLC
+			add_ideas = the_communist_council
+		}
 	}
 
 	fire_only_once = yes
